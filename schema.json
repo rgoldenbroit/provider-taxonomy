@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/ai-provider-taxonomy/schema.json",
+  "title": "AI Provider Taxonomy",
+  "description": "Schema for tracking AI model-provider products against stable capabilities. The capability is the anchor; products are 0..n per capability per provider.",
+  "type": "object",
+  "required": ["capabilities", "products"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "description": "Optional dataset-level metadata (description, as_of date, etc.).",
+      "additionalProperties": true
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "The stable taxonomy rows. These rarely change.",
+      "items": { "$ref": "#/$defs/capability" }
+    },
+    "products": {
+      "type": "array",
+      "description": "Concrete products that fulfill capabilities. These change constantly.",
+      "items": { "$ref": "#/$defs/product" }
+    }
+  },
+  "$defs": {
+    "capability": {
+      "type": "object",
+      "required": ["id", "tier", "name", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "kebab-case stable key, e.g. 'agentic-coding'." },
+        "tier": {
+          "type": "string",
+          "enum": ["model", "end_user_product", "developer_platform", "uncategorized"],
+          "description": "Which layer of the stack this capability sits in."
+        },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Other names people search for; helps an LLM map a fuzzy query to the right row."
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "required": [
+        "id", "name", "kind", "provider", "capability_ids", "primary_capability_id",
+        "relation_within_capability", "status", "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "kebab-case unique key, e.g. 'google-gemini-cli'." },
+        "name": { "type": "string", "description": "Display name. Use '(none)' for a modeled absence." },
+        "kind": {
+          "type": "string",
+          "enum": ["model_family", "model", "product", "feature", "platform", "protocol", "service_tier"],
+          "description": "Granularity of this node. 'feature'=a capability inside a product (set parent_id); 'model_family'=a tiered group of models; 'service_tier'=a plan/tier. This is what lets the taxonomy hold everything from a model family down to a single feature."
+        },
+        "parent_id": {
+          "type": "string",
+          "description": "Optional. The node this one belongs to (feature -> product, model -> model_family, sub-product -> product). Enables hierarchy and the feature level."
+        },
+        "review_status": {
+          "type": "string",
+          "enum": ["confirmed", "candidate", "needs_review", "rejected"],
+          "description": "Discovery-pipeline state. Newly discovered items land as 'candidate' or 'needs_review' (optionally under the 'unclassified' capability) until a human/agent confirms and assigns a capability. Defaults to 'confirmed' when omitted."
+        },
+        "provider": { "type": "string", "examples": ["Anthropic", "OpenAI", "Google"] },
+        "capability_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "All capabilities this product touches. >1 entry signals a scope mismatch (the product spans rows)."
+        },
+        "primary_capability_id": {
+          "type": "string",
+          "description": "The single capability this product is best classified under."
+        },
+        "relation_within_capability": {
+          "type": "string",
+          "enum": ["direct", "partial", "broader", "none"],
+          "description": "How the product's scope compares to the capability. 'direct'=clean fit; 'partial'=covers only a slice; 'broader'=does more than this capability; 'none'=absence record."
+        },
+        "surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["web", "desktop", "mobile", "terminal", "ide", "extension", "cloud", "api"]
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "preview", "beta", "deprecated", "sunset", "merged", "renamed", "absent"],
+          "description": "Lifecycle state. 'sunset'=being retired; 'merged'=folded into another product; 'absent'=provider deliberately has no offering."
+        },
+        "predecessor_id": { "type": "string", "description": "Product this one replaced (optional)." },
+        "successor_id": { "type": "string", "description": "Product replacing this one (optional)." },
+        "scope_note": {
+          "type": "string",
+          "description": "Free text capturing nuance the structured fields can't: scope mismatch, migration caveats, bundling quirks."
+        },
+        "lifecycle": {
+          "type": "array",
+          "description": "Dated change events. This is how the app shows history and detects what is in flux.",
+          "items": { "$ref": "#/$defs/lifecycle_event" }
+        },
+        "source": { "$ref": "#/$defs/source" }
+      }
+    },
+    "lifecycle_event": {
+      "type": "object",
+      "required": ["date", "event", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "date": { "type": "string", "format": "date", "description": "ISO YYYY-MM-DD. Use the date of the change OR the date a future change takes effect." },
+        "event": {
+          "type": "string",
+          "description": "Short verb tag, e.g. launched, updated, renamed, deprecated, sunset, merged, discontinued, scope_expanded, consolidation_announced."
+        },
+        "note": { "type": "string" },
+        "source_url": { "type": "string", "description": "Where this specific event was confirmed (optional)." }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["url", "last_verified", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string", "description": "Primary reference for the record's current state." },
+        "last_verified": { "type": "string", "format": "date", "description": "When a human/agent last confirmed this record. Drives staleness warnings." },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "How sure we are the record is current. Lower confidence = re-verify sooner."
+        }
+      }
+    }
+  }
+}

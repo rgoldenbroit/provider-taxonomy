@@ -1,0 +1,15 @@
+{
+  "Anthropic agentic-coding products 2026-06": [
+    {"url": "https://www.anthropic.com/claude-code", "title": "Claude Code", "snippet": "Anthropic's dedicated agentic coding tool for the terminal and IDE."}
+  ],
+  "OpenAI agentic-coding products 2026-06": [
+    {"url": "https://openai.com/index/codex", "title": "Codex", "snippet": "OpenAI's coding agent, expanding into a general agent platform."},
+    {"url": "https://openai.com/index/codex-cli", "title": "Codex CLI", "snippet": "Terminal client in the Codex family."}
+  ],
+  "Google agentic-coding products 2026-06": [
+    {"url": "https://antigravity.google", "title": "Antigravity 2.0", "snippet": "Agent-first development platform."},
+    {"url": "https://antigravity.google/cli", "title": "Antigravity CLI", "snippet": "Go rewrite that replaces Gemini CLI."},
+    {"url": "https://jules.google", "title": "Jules", "snippet": "Asynchronous coding agent."},
+    {"url": "https://developers.googleblog.com/gemini-cli", "title": "Gemini CLI", "snippet": "Being retired for consumer tiers."}
+  ]
+}

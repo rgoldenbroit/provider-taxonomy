@@ -1,0 +1,971 @@
+{
+  "_meta": {
+    "description": "Live grounded catalog \u2014 seed capabilities + pipeline-verified products.",
+    "as_of": "2026-06-16",
+    "conforms_to": "schema.json"
+  },
+  "capabilities": [
+    {
+      "id": "flagship-model",
+      "tier": "model",
+      "name": "Flagship model",
+      "description": "Each provider's most capable general-purpose model.",
+      "aliases": [
+        "frontier model",
+        "top model",
+        "best model"
+      ]
+    },
+    {
+      "id": "consumer-chat-assistant",
+      "tier": "end_user_product",
+      "name": "Consumer chat assistant",
+      "description": "Primary conversational app for end users across web, desktop, and mobile.",
+      "aliases": [
+        "chatbot",
+        "assistant app",
+        "AI chat"
+      ]
+    },
+    {
+      "id": "agentic-coding",
+      "tier": "end_user_product",
+      "name": "Agentic coding",
+      "description": "Autonomous or assisted software development across terminal, IDE, and cloud surfaces.",
+      "aliases": [
+        "AI coding agent",
+        "coding assistant",
+        "agentic IDE",
+        "vibe coding"
+      ]
+    },
+    {
+      "id": "remote-agent-control",
+      "tier": "end_user_product",
+      "name": "Remote / async agent control",
+      "description": "Starting, monitoring, and directing an agent (esp. a coding agent) from a remote device or asynchronously.",
+      "aliases": [
+        "mobile control",
+        "async agent",
+        "remote control",
+        "cloud agent"
+      ]
+    },
+    {
+      "id": "browser-computer-use-agent",
+      "tier": "end_user_product",
+      "name": "Browser / computer-use agent",
+      "description": "An agent that drives a browser or computer on the user's behalf to complete multi-step web tasks.",
+      "aliases": [
+        "web agent",
+        "browser agent",
+        "computer use",
+        "operator"
+      ]
+    },
+    {
+      "id": "knowledge-work-research",
+      "tier": "end_user_product",
+      "name": "Knowledge-work / research agent",
+      "description": "Non-developer agent for documents, analysis, and research grounded in user sources.",
+      "aliases": [
+        "office agent",
+        "research assistant",
+        "notebook",
+        "workspace agent"
+      ]
+    },
+    {
+      "id": "agent-building-sdk",
+      "tier": "developer_platform",
+      "name": "Agent-building SDK / framework",
+      "description": "Developer toolkit for building, orchestrating, and deploying custom agents.",
+      "aliases": [
+        "agent framework",
+        "agent SDK"
+      ]
+    },
+    {
+      "id": "enterprise-agent-platform",
+      "tier": "developer_platform",
+      "name": "Enterprise agent platform / deployment",
+      "description": "Managed platform for building, deploying, governing, and running agents and models at enterprise scale.",
+      "aliases": [
+        "managed platform",
+        "model deployment",
+        "agent governance",
+        "cloud AI platform"
+      ]
+    },
+    {
+      "id": "image-video-generation",
+      "tier": "end_user_product",
+      "name": "Image / video generation",
+      "description": "First-party models or products that generate images or video.",
+      "aliases": [
+        "media generation",
+        "generative media",
+        "text-to-video",
+        "text-to-image"
+      ]
+    },
+    {
+      "id": "unclassified",
+      "tier": "uncategorized",
+      "name": "Unclassified (intake)",
+      "description": "Holding bucket for newly discovered offerings/features not yet mapped to a capability. The discovery pipeline lands items here as candidates; triage assigns the real capability.",
+      "aliases": [
+        "intake",
+        "triage",
+        "uncategorized"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "anthropic-claude-fable-5",
+      "name": "Claude Fable 5",
+      "kind": "model",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "flagship-model"
+      ],
+      "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Fable 5 is presented as an Anthropic model, fitting the flagship-model capability directly as a general-purpose model offering. As a base model it belongs only to flagship-model; downstream uses (chat, coding, "
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-gpt-5-5-pro",
+      "name": "GPT-5.5 Pro",
+      "kind": "model",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "flagship-model"
+      ],
+      "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). GPT-5.5 Pro is OpenAI's most capable general-purpose model variant, a base flagship model. As a model, it belongs only to flagship-model; downstream uses (chat, coding, etc.) are separate products built on it and are "
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/index/introducing-gpt-5-5/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-gemini-3-5-pro",
+      "name": "Gemini 3.5 Pro",
+      "kind": "model",
+      "provider": "Google",
+      "capability_ids": [
+        "flagship-model"
+      ],
+      "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "preview",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini 3.5 Pro is Google's most capable general-purpose flagship model, accessed via API and used as the base for downstream products. As a base model it maps directly to flagship-model only; downstream uses like chat"
+        }
+      ],
+      "source": {
+        "url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-web-desktop-mobile",
+      "name": "Claude (web/desktop/mobile)",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "consumer-chat-assistant"
+      ],
+      "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "desktop",
+        "mobile"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude's web/desktop/mobile apps are Anthropic's primary conversational assistant for end users, matching consumer-chat-assistant directly. It is the user-facing chat product, not a base model, so no flagship-model at"
+        }
+      ],
+      "source": {
+        "url": "https://www.anthropic.com/claude",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "openai-chatgpt",
+      "name": "ChatGPT",
+      "kind": "product",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "consumer-chat-assistant"
+      ],
+      "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "desktop",
+        "mobile"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). ChatGPT is OpenAI's flagship consumer conversational application available across web, desktop, and mobile, which maps directly to the consumer-chat-assistant capability. While ChatGPT now bundles features like image "
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/chatgpt/overview/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-gemini-app",
+      "name": "Gemini app",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "consumer-chat-assistant"
+      ],
+      "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "mobile",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Gemini app is Google's primary consumer-facing conversational assistant available across web and mobile, directly matching consumer-chat-assistant. It is a standalone product (not a model), so it maps directly to "
+        }
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Gemini_(chatbot)",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-code",
+      "name": "Claude Code",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code is Anthropic's agentic coding tool that operates primarily in the terminal (with IDE integrations), autonomously editing code, running commands, and managing development tasks. This is a direct match for a"
+        }
+      ],
+      "source": {
+        "url": "https://www.anthropic.com/claude-code",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "openai-codex",
+      "name": "Codex",
+      "kind": "product",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud",
+        "web"
+      ],
+      "status": "active",
+      "review_status": "needs_review",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 needs_review (grounding 1.00, classification 1.00). OpenAI Codex is an agentic software-engineering product spanning a CLI, IDE extension, and cloud environment, directly fitting agentic-coding. It also supports starting and monitoring coding tasks asynchronously/re"
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/codex/",
+        "last_verified": "2026-06-15",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "google-antigravity-cli",
+      "name": "Antigravity CLI",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity CLI is Google's command-line interface to its Antigravity agentic development platform, providing autonomous/assisted software development from the terminal \u2014 a direct fit for agentic-coding. As a CLI it o"
+        }
+      ],
+      "source": {
+        "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "google-jules",
+      "name": "Jules",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "agentic-coding",
+        "remote-agent-control"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Jules is Google's autonomous coding agent that works asynchronously in a cloud VM, cloning a repo, planning, and making code changes / opening PRs. This is a direct agentic-coding product. It is also genuinely a remot"
+        }
+      ],
+      "source": {
+        "url": "https://jules.google",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-computer-use",
+      "name": "Claude Computer Use",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "browser-computer-use-agent"
+      ],
+      "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "beta",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Computer Use is Anthropic's API capability that lets Claude perceive a screen and control a computer (move cursor, click, type) to complete multi-step tasks on the user's behalf \u2014 a direct match for the browser"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "openai-operator",
+      "name": "Operator",
+      "kind": "product",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "browser-computer-use-agent"
+      ],
+      "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web"
+      ],
+      "status": "merged",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Operator is OpenAI's agent that drives a web browser on the user's behalf to complete multi-step tasks (booking, ordering, form-filling), making it a direct fit for the browser/computer-use agent capability. It is a s"
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/index/introducing-operator/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-gemini-computer-use",
+      "name": "Gemini Computer Use",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "browser-computer-use-agent"
+      ],
+      "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini Computer Use is Google's model/capability that lets an agent drive a browser/computer UI to complete multi-step tasks, exposed via the Gemini API. It maps squarely and directly to the browser/computer-use agent"
+        }
+      ],
+      "source": {
+        "url": "https://www.digitalapplied.com/blog/computer-use-agents-2026-claude-openai-gemini-matrix",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-cowork",
+      "name": "Claude Cowork",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "knowledge-work-research"
+      ],
+      "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "desktop"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Cowork is presented as Anthropic's collaborative knowledge-work agent for documents, analysis, and research workflows grounded in user sources\u2014aligning directly with the knowledge-work-research capability. It i"
+        }
+      ],
+      "source": {
+        "url": "https://elephas.app/resources/notebooklm-vs-claude-cowork",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-chatgpt-deep-research",
+      "name": "ChatGPT Deep Research",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "knowledge-work-research"
+      ],
+      "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "desktop",
+        "mobile"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). ChatGPT Deep Research is an agentic research feature within ChatGPT that autonomously browses and synthesizes multi-source web information into structured reports \u2014 a direct fit for the knowledge-work/research agent c"
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/index/introducing-deep-research/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      },
+      "parent_id": "openai-chatgpt"
+    },
+    {
+      "id": "google-notebooklm",
+      "name": "NotebookLM",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "knowledge-work-research"
+      ],
+      "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "mobile"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). NotebookLM is Google's research/knowledge-work product that grounds analysis, summarization, and Q&A in user-provided sources (documents, PDFs, etc.), with features like Audio Overviews. It is a standalone non-develop"
+        }
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/NotebookLM",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-agent-sdk",
+      "name": "Claude Agent SDK",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "agent-building-sdk"
+      ],
+      "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api",
+        "terminal"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Claude Agent SDK (formerly Claude Code SDK) is Anthropic's developer toolkit for building, orchestrating, and deploying custom agents on top of Claude, providing the same harness that powers Claude Code (tool use,"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/api/agent-sdk/overview",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "openai-openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "kind": "product",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "agent-building-sdk"
+      ],
+      "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The OpenAI Agents SDK is a developer toolkit/framework for building, orchestrating, and deploying custom agents (handoffs, guardrails, tools, tracing), which directly matches the agent-building-sdk capability. It is a"
+        }
+      ],
+      "source": {
+        "url": "https://openai.github.io/openai-agents-python/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-agent-development-kit-adk",
+      "name": "Agent Development Kit (ADK)",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "agent-building-sdk"
+      ],
+      "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google's Agent Development Kit (ADK) is an open-source developer framework/toolkit for building, orchestrating, and deploying custom AI agents \u2014 a direct match for the agent-building-sdk capability. It is consumed by "
+        }
+      ],
+      "source": {
+        "url": "https://google.github.io/adk-docs/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-gemini-enterprise-agent-platform",
+      "name": "Gemini Enterprise Agent Platform",
+      "kind": "platform",
+      "provider": "Google",
+      "capability_ids": [
+        "enterprise-agent-platform"
+      ],
+      "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "web",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini Enterprise is Google's managed platform for building, deploying, governing, and running agents at enterprise scale, which maps directly to the enterprise-agent-platform capability. It is a standalone platform o"
+        }
+      ],
+      "source": {
+        "url": "https://cloud.google.com/products/agent-builder",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-on-third-party-platforms",
+      "name": "Claude on third-party platforms",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "enterprise-agent-platform"
+      ],
+      "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). \"Claude on third-party platforms\" refers to Anthropic's Claude models being made available through managed enterprise cloud platforms (e.g., Amazon Bedrock, Google Vertex AI, Microsoft Foundry). This is an enterprise "
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/api/claude-on-vertex-ai",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-sora",
+      "name": "Sora",
+      "kind": "product",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "image-video-generation"
+      ],
+      "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "web",
+        "mobile",
+        "api"
+      ],
+      "status": "sunset",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Sora is OpenAI's first-party text-to-video generation product/app, directly fulfilling the image/video generation capability. It is offered as a standalone product (web and mobile app, plus API access), not a base mod"
+        }
+      ],
+      "source": {
+        "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-veo",
+      "name": "Veo",
+      "kind": "product",
+      "provider": "Google",
+      "capability_ids": [
+        "image-video-generation"
+      ],
+      "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api",
+        "web",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Veo is Google's first-party video generation model, directly matching the image/video generation capability. It produces video from text/image prompts, accessible via API and Google's products. It is a generation mode"
+        }
+      ],
+      "source": {
+        "url": "https://deepmind.google/models/veo/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-antigravity-2-0",
+      "name": "Antigravity 2.0",
+      "kind": "platform",
+      "provider": "Google",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "preview",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity 2.0 is Google's agentic development platform (an agent-first IDE/coding surface), squarely an agentic-coding product. It directly fills that capability rather than partially or broadly. No strong evidence "
+        }
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Google_Antigravity",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-remote-control",
+      "name": "Claude Code Remote Control",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "remote-agent-control"
+      ],
+      "primary_capability_id": "remote-agent-control",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "mobile",
+        "web"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code Remote Control is a feature of Claude Code (parent: anthropic-claude-code) that lets users start, monitor, and direct Claude Code coding-agent sessions remotely/asynchronously from a mobile or web device. "
+        }
+      ],
+      "source": {
+        "url": "https://www.unite.ai/openclaw-vs-claude-code-remote-control-agents/",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      },
+      "parent_id": "anthropic-claude-code"
+    },
+    {
+      "id": "openai-codex-cloud",
+      "name": "Codex Cloud",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "remote-agent-control"
+      ],
+      "primary_capability_id": "remote-agent-control",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "web",
+        "mobile"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex Cloud is OpenAI's cloud-based deployment of the Codex coding agent, letting users delegate, monitor, and direct coding tasks asynchronously from web/mobile \u2014 the defining trait of remote/async agent control. It "
+        }
+      ],
+      "source": {
+        "url": "https://www.firecrawl.dev/blog/best-ai-coding-agents",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      },
+      "parent_id": "openai-codex"
+    },
+    {
+      "id": "openai-agentkit",
+      "name": "AgentKit",
+      "kind": "platform",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "enterprise-agent-platform"
+      ],
+      "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "broader",
+      "surfaces": [
+        "web",
+        "api",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). AgentKit is OpenAI's toolkit for building, deploying, and running agents \u2014 including the visual Agent Builder, ChatKit for embedding agents, Connector Registry, and evaluation tooling. It functions as a managed platfo"
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/index/introducing-agentkit",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-no-image-video-generation",
+      "name": "(none)",
+      "kind": "product",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "image-video-generation"
+      ],
+      "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "none",
+      "surfaces": [],
+      "status": "absent",
+      "review_status": "confirmed",
+      "scope_note": "Anthropic ships no first-party image or video generation model; the Claude family is text- and code-only.",
+      "lifecycle": [
+        {
+          "date": "2026-06-16",
+          "event": "triaged",
+          "note": "Modeled absence \u2014 operator-verified."
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+        "last_verified": "2026-06-16",
+        "confidence": "medium"
+      }
+    }
+  ]
+}

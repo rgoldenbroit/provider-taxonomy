@@ -1,0 +1,292 @@
+{
+  "_meta": {
+    "description": "Few-shot example dataset for an AI-provider taxonomy tracker. Built from scratch, current as of 2026-06-15. Records are chosen to teach edge cases and granularity patterns, not to be exhaustive.",
+    "as_of": "2026-06-15",
+    "conforms_to": "schema.json",
+    "version": 2
+  },
+
+  "capabilities": [
+    { "id": "flagship-model", "tier": "model", "name": "Flagship model", "description": "Each provider's most capable general-purpose model.", "aliases": ["frontier model", "top model", "best model"] },
+    { "id": "consumer-chat-assistant", "tier": "end_user_product", "name": "Consumer chat assistant", "description": "Primary conversational app for end users across web, desktop, and mobile.", "aliases": ["chatbot", "assistant app", "AI chat"] },
+    { "id": "agentic-coding", "tier": "end_user_product", "name": "Agentic coding", "description": "Autonomous or assisted software development across terminal, IDE, and cloud surfaces.", "aliases": ["AI coding agent", "coding assistant", "agentic IDE", "vibe coding"] },
+    { "id": "remote-agent-control", "tier": "end_user_product", "name": "Remote / async agent control", "description": "Starting, monitoring, and directing an agent (esp. a coding agent) from a remote device or asynchronously.", "aliases": ["mobile control", "async agent", "remote control", "cloud agent"] },
+    { "id": "browser-computer-use-agent", "tier": "end_user_product", "name": "Browser / computer-use agent", "description": "An agent that drives a browser or computer on the user's behalf to complete multi-step web tasks.", "aliases": ["web agent", "browser agent", "computer use", "operator"] },
+    { "id": "knowledge-work-research", "tier": "end_user_product", "name": "Knowledge-work / research agent", "description": "Non-developer agent for documents, analysis, and research grounded in user sources.", "aliases": ["office agent", "research assistant", "notebook", "workspace agent"] },
+    { "id": "agent-building-sdk", "tier": "developer_platform", "name": "Agent-building SDK / framework", "description": "Developer toolkit for building, orchestrating, and deploying custom agents.", "aliases": ["agent framework", "agent SDK"] },
+    { "id": "enterprise-agent-platform", "tier": "developer_platform", "name": "Enterprise agent platform / deployment", "description": "Managed platform for building, deploying, governing, and running agents and models at enterprise scale.", "aliases": ["managed platform", "model deployment", "agent governance", "cloud AI platform"] },
+    { "id": "image-video-generation", "tier": "end_user_product", "name": "Image / video generation", "description": "First-party models or products that generate images or video.", "aliases": ["media generation", "generative media", "text-to-video", "text-to-image"] },
+    { "id": "unclassified", "tier": "uncategorized", "name": "Unclassified (intake)", "description": "Holding bucket for newly discovered offerings/features not yet mapped to a capability. The discovery pipeline lands items here as candidates; triage assigns the real capability.", "aliases": ["intake", "triage", "uncategorized"] }
+  ],
+
+  "products": [
+    {
+      "id": "anthropic-claude-model-family", "name": "Claude model family", "kind": "model_family",
+      "provider": "Anthropic", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct", "surfaces": ["api", "web", "desktop", "mobile"], "status": "active",
+      "scope_note": "Tiered family. Children show the MODEL_FAMILY -> MODEL hierarchy: how to model tiers without flattening them.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "anthropic-claude-opus-4-8", "name": "Claude Opus 4.8", "kind": "model", "parent_id": "anthropic-claude-model-family",
+      "provider": "Anthropic", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct", "surfaces": ["api", "web", "desktop", "mobile"], "status": "active",
+      "scope_note": "Flagship tier. A newer Fable 5 sits in a tier above Opus.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "anthropic-claude-sonnet-4-6", "name": "Claude Sonnet 4.6", "kind": "model", "parent_id": "anthropic-claude-model-family",
+      "provider": "Anthropic", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "partial", "surfaces": ["api", "web", "desktop", "mobile"], "status": "active",
+      "scope_note": "Balanced tier (not the flagship), hence relation 'partial' to the flagship-model capability.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "anthropic-claude-haiku-4-5", "name": "Claude Haiku 4.5", "kind": "model", "parent_id": "anthropic-claude-model-family",
+      "provider": "Anthropic", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "partial", "surfaces": ["api", "web", "desktop", "mobile"], "status": "active",
+      "scope_note": "Fast/cheap tier.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "openai-gpt-5-4", "name": "GPT-5.4", "kind": "model",
+      "provider": "OpenAI", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct", "surfaces": ["api", "web", "desktop", "mobile"], "status": "active",
+      "scope_note": "Coding-tuned variants (GPT-5.4 for Codex, Codex-Spark) ship on a separate cadence. A model_family node could be added to mirror the Claude pattern.",
+      "lifecycle": [ { "date": "2026-03-05", "event": "launched", "note": "GPT-5.4 for Codex released.", "source_url": "https://en.wikipedia.org/wiki/Codex_(AI_agent)" } ],
+      "source": { "url": "https://openai.com", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "google-gemini-3-5-pro", "name": "Gemini 3.5 Pro", "kind": "model",
+      "provider": "Google", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model",
+      "relation_within_capability": "direct", "surfaces": ["api", "web", "mobile"], "status": "active",
+      "scope_note": "Gemini 3.5 Flash is the fast / agentic-coding tier; Gemini Omni is the newer video model.",
+      "lifecycle": [ { "date": "2026-05-19", "event": "announced", "note": "Gemini 3.5 family and Omni unveiled at Google I/O 2026.", "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/" } ],
+      "source": { "url": "https://deepmind.google/models/gemini/", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+
+    {
+      "id": "anthropic-claude-apps", "name": "Claude (web/desktop/mobile)", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct", "surfaces": ["web", "desktop", "mobile"], "status": "active",
+      "scope_note": "", "lifecycle": [], "source": { "url": "https://claude.ai", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "openai-chatgpt", "name": "ChatGPT", "kind": "product",
+      "provider": "OpenAI", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct", "surfaces": ["web", "desktop", "mobile"], "status": "active",
+      "scope_note": "PENDING CONSOLIDATION: slated to merge with Codex and the Atlas browser into a single desktop 'superapp'; no firm date.",
+      "lifecycle": [ { "date": "2026-03-19", "event": "consolidation_announced", "note": "ChatGPT, Codex, and Atlas to combine into one superapp.", "source_url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)" } ],
+      "source": { "url": "https://chatgpt.com", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-gemini-app", "name": "Gemini app", "kind": "product",
+      "provider": "Google", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant",
+      "relation_within_capability": "direct", "surfaces": ["web", "mobile"], "status": "active",
+      "scope_note": "Being repositioned from chat assistant toward an always-on, task-capable personal agent (Gemini Agent).",
+      "lifecycle": [], "source": { "url": "https://gemini.google.com", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+
+    {
+      "id": "anthropic-claude-code", "name": "Claude Code", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct", "surfaces": ["terminal", "ide", "desktop", "mobile"], "status": "active",
+      "scope_note": "Dedicated coding agent. Narrower than OpenAI Codex, which has expanded into general agent tasks. Has child features (see Remote Control).",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude-code", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "anthropic-claude-code-remote-control", "name": "Claude Code Remote Control", "kind": "feature", "parent_id": "anthropic-claude-code",
+      "provider": "Anthropic", "capability_ids": ["remote-agent-control"], "primary_capability_id": "remote-agent-control",
+      "relation_within_capability": "direct", "surfaces": ["mobile", "web"], "status": "preview",
+      "scope_note": "FEATURE-OF-A-PRODUCT pattern: an encrypted bridge to drive a local Claude Code session from the Claude mobile app/web; code stays on the local machine. Research preview. Tracked because remote/async agent control is comparable across providers.",
+      "lifecycle": [ { "date": "2026-02-25", "event": "launched", "note": "Shipped as a research preview (Max/Pro).", "source_url": "https://www.nxcode.io/resources/news/claude-code-remote-control-mobile-terminal-handoff-guide-2026" } ],
+      "source": { "url": "https://www.builder.io/blog/claude-code-mobile-phone", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "openai-codex", "name": "Codex", "kind": "product",
+      "provider": "OpenAI", "capability_ids": ["agentic-coding", "agent-building-sdk"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "broader", "surfaces": ["cloud", "desktop", "ide"], "status": "active",
+      "scope_note": "SCOPE MISMATCH: pivoting from a coding tool into a general-purpose agent platform, so it spans more than agentic coding. Has family members (Codex CLI, Codex desktop).",
+      "lifecycle": [ { "date": "2026-04-14", "event": "scope_expanded", "note": "'Codex For Almost Everything' repositions it as a general agent platform.", "source_url": "https://codex.danielvaughan.com/2026/04/17/codex-for-almost-everything-pivot-to-general-agent-platform/" } ],
+      "source": { "url": "https://openai.com/codex", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "openai-codex-cli", "name": "Codex CLI", "kind": "product", "parent_id": "openai-codex",
+      "provider": "OpenAI", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct", "surfaces": ["terminal"], "status": "active",
+      "scope_note": "SUB-PRODUCT pattern: terminal client in the Codex family (parent_id -> Codex). Operates independently for now despite the superapp consolidation.",
+      "lifecycle": [], "source": { "url": "https://openai.com/codex", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "openai-codex-cloud-remote", "name": "Codex Cloud (remote/async runs)", "kind": "feature", "parent_id": "openai-codex",
+      "provider": "OpenAI", "capability_ids": ["remote-agent-control"], "primary_capability_id": "remote-agent-control",
+      "relation_within_capability": "partial", "surfaces": ["cloud", "web"], "status": "active", "review_status": "candidate",
+      "scope_note": "CANDIDATE (discovery pipeline): Codex Cloud runs async tasks that can be kicked off and checked remotely. Whether a direct mobile 'remote control' equivalent to Claude Code's exists is unconfirmed — needs verification before promotion to 'confirmed'.",
+      "lifecycle": [], "source": { "url": "https://openai.com/codex", "last_verified": "2026-06-15", "confidence": "low" }
+    },
+    {
+      "id": "google-antigravity", "name": "Antigravity 2.0", "kind": "product",
+      "provider": "Google", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct", "surfaces": ["desktop", "ide", "cloud"], "status": "active",
+      "scope_note": "Agent-first development platform (desktop app + SDK). Connects to AI Studio, Firebase, Android, and the Gemini Enterprise Agent Platform.",
+      "lifecycle": [ { "date": "2026-05-19", "event": "launched", "note": "Antigravity 2.0 announced at Google I/O 2026.", "source_url": "https://thenextweb.com/news/google-antigravity-2-desktop-cli-sdk-io-2026" } ],
+      "source": { "url": "https://antigravity.google", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-antigravity-cli", "name": "Antigravity CLI", "kind": "product",
+      "provider": "Google", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct", "surfaces": ["terminal"], "status": "active", "predecessor_id": "google-gemini-cli",
+      "scope_note": "Go rewrite that replaces Gemini CLI.",
+      "lifecycle": [ { "date": "2026-05-19", "event": "launched", "note": "Replaces Gemini CLI; migration encouraged.", "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" } ],
+      "source": { "url": "https://antigravity.google", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-jules", "name": "Jules", "kind": "product",
+      "provider": "Google", "capability_ids": ["agentic-coding", "remote-agent-control"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "partial", "surfaces": ["cloud"], "status": "active",
+      "scope_note": "MULTI-CAPABILITY: an asynchronous coding agent (a slice of agentic-coding) that is also Google's analog for remote/async agent control.",
+      "lifecycle": [ { "date": "2026-05-19", "event": "updated", "note": "Jules V2 (Project Jitro) presented at I/O 2026.", "source_url": "https://www.aibuilderclub.com/blog/google-kills-gemini-cli-june-18-2026" } ],
+      "source": { "url": "https://jules.google", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "google-gemini-cli", "name": "Gemini CLI", "kind": "product",
+      "provider": "Google", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "direct", "surfaces": ["terminal"], "status": "sunset", "successor_id": "google-antigravity-cli",
+      "scope_note": "SUNSET: being retired for individual/consumer tiers; enterprise Gemini Code Assist access is retained.",
+      "lifecycle": [
+        { "date": "2026-05-19", "event": "deprecated", "note": "Migration to Antigravity CLI announced at I/O 2026.", "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" },
+        { "date": "2026-06-18", "event": "sunset", "note": "Stops serving requests for AI Pro, Ultra, and free-tier users.", "source_url": "https://nerdleveltech.com/google-antigravity-2-agentic-coding-platform" }
+      ],
+      "source": { "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+
+    {
+      "id": "anthropic-claude-in-chrome", "name": "Claude in Chrome", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct", "surfaces": ["extension", "web"], "status": "beta",
+      "scope_note": "Browsing agent (beta).",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "openai-atlas", "name": "Atlas", "kind": "product",
+      "provider": "OpenAI", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct", "surfaces": ["desktop", "web"], "status": "active",
+      "scope_note": "AI browser; slated to fold into the unified ChatGPT/Codex superapp.",
+      "lifecycle": [], "source": { "url": "https://openai.com", "last_verified": "2026-06-15", "confidence": "low" }
+    },
+    {
+      "id": "google-project-mariner", "name": "Project Mariner", "kind": "product",
+      "provider": "Google", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct", "surfaces": ["web", "extension"], "status": "merged", "successor_id": "google-gemini-agent",
+      "scope_note": "DISCONTINUED as a standalone product; capabilities folded into Gemini Agent and Chrome auto-browse.",
+      "lifecycle": [ { "date": "2026-05-04", "event": "discontinued", "note": "Shut down as standalone; tech absorbed into Gemini Agent + Chrome auto-browse.", "source_url": "https://www.androidheadlines.com/2026/05/google-shuts-down-project-mariner-ai-agent.html" } ],
+      "source": { "url": "https://deepmind.google/models/project-mariner/", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-gemini-agent", "name": "Gemini Agent", "kind": "product",
+      "provider": "Google", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent",
+      "relation_within_capability": "direct", "surfaces": ["web", "mobile"], "status": "active", "predecessor_id": "google-project-mariner",
+      "scope_note": "Absorbed Project Mariner's web-task capabilities; can perform tasks such as archiving emails and booking hotels.",
+      "lifecycle": [], "source": { "url": "https://gemini.google.com", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+
+    {
+      "id": "anthropic-claude-cowork", "name": "Claude Cowork", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct", "surfaces": ["desktop"], "status": "active",
+      "scope_note": "Agentic knowledge-work app for non-developers; can use Claude in Excel/PowerPoint/Chrome as tools.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "google-notebooklm", "name": "NotebookLM", "kind": "product",
+      "provider": "Google", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct", "surfaces": ["web", "mobile"], "status": "active",
+      "scope_note": "Research/notebook assistant grounded in user-provided sources.",
+      "lifecycle": [], "source": { "url": "https://notebooklm.google", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "openai-chatgpt-workspace-agents", "name": "Workspace Agents (in ChatGPT)", "kind": "feature", "parent_id": "openai-chatgpt",
+      "provider": "OpenAI", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "partial", "surfaces": ["web", "desktop"], "status": "active",
+      "scope_note": "FEATURE-OF-A-PRODUCT: natural-language knowledge-work agents living inside ChatGPT, recommended as the no-code successor to the retired Agent Builder.",
+      "lifecycle": [], "source": { "url": "https://openai.com/index/introducing-agentkit/", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+
+    {
+      "id": "anthropic-claude-agent-sdk", "name": "Claude Agent SDK", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct", "surfaces": ["api"], "status": "active",
+      "scope_note": "Pairs with MCP (Model Context Protocol), the interop standard Anthropic created and that all three providers now support.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "openai-agents-sdk", "name": "Agents SDK", "kind": "product",
+      "provider": "OpenAI", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct", "surfaces": ["api"], "status": "active",
+      "scope_note": "Code-first path. The no-code Agent Builder and Evals (part of AgentKit) are winding down - available until 2026-11-30.",
+      "lifecycle": [ { "date": "2026-06-03", "event": "related_deprecation", "note": "Agent Builder & Evals winding down; Agents SDK recommended for code workflows.", "source_url": "https://openai.com/index/introducing-agentkit/" } ],
+      "source": { "url": "https://openai.com/index/introducing-agentkit/", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-adk", "name": "Agent Development Kit (ADK)", "kind": "product",
+      "provider": "Google", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk",
+      "relation_within_capability": "direct", "surfaces": ["api"], "status": "active",
+      "scope_note": "Multi-language agent framework (ADK 1.0). Also bundled inside the Gemini Enterprise Agent Platform.",
+      "lifecycle": [ { "date": "2026-05-19", "event": "updated", "note": "ADK 1.0 presented at I/O 2026.", "source_url": "https://www.aibuilderclub.com/blog/google-kills-gemini-cli-june-18-2026" } ],
+      "source": { "url": "https://google.github.io/adk-docs/", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+
+    {
+      "id": "google-vertex-ai", "name": "Vertex AI", "kind": "platform",
+      "provider": "Google", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "direct", "surfaces": ["cloud", "api"], "status": "renamed", "successor_id": "google-gemini-enterprise-agent-platform",
+      "scope_note": "RENAME LINEAGE: the long-standing enterprise ML/AI platform, renamed to Gemini Enterprise Agent Platform in April 2026. Kept as a record so the old name resolves to the new one.",
+      "lifecycle": [ { "date": "2026-04-22", "event": "renamed", "note": "Rebranded as Gemini Enterprise Agent Platform at Cloud Next '26.", "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development" } ],
+      "source": { "url": "https://en.wikipedia.org/wiki/Gemini_Enterprise_Agent_Platform", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-gemini-enterprise-agent-platform", "name": "Gemini Enterprise Agent Platform", "kind": "platform",
+      "provider": "Google", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "direct", "surfaces": ["cloud", "api"], "status": "active", "predecessor_id": "google-vertex-ai",
+      "scope_note": "Build/scale/govern/optimize agents; evolution of Vertex AI. Includes Agent Studio (low-code), Agent Gateway, ADK, and Model Garden (200+ models, incl. Claude). Note brand ambiguity vs. 'Gemini Enterprise' (the workplace front-door).",
+      "lifecycle": [ { "date": "2026-04-22", "event": "launched", "note": "Announced at Cloud Next '26 as the evolution of Vertex AI.", "source_url": "https://cloud.google.com/products/gemini-enterprise-agent-platform" } ],
+      "source": { "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "google-gemini-enterprise", "name": "Gemini Enterprise (workplace)", "kind": "platform",
+      "provider": "Google", "capability_ids": ["knowledge-work-research", "enterprise-agent-platform"], "primary_capability_id": "knowledge-work-research",
+      "relation_within_capability": "direct", "surfaces": ["web"], "status": "active",
+      "scope_note": "BRAND AMBIGUITY: 'Gemini Enterprise' is the workplace front-door agentic system, distinct from the similarly named 'Gemini Enterprise Agent Platform' (the developer platform). Same brand family, two capabilities - a case the schema must disambiguate.",
+      "lifecycle": [], "source": { "url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "anthropic-claude-on-cloud-platforms", "name": "Claude on third-party platforms", "kind": "feature",
+      "provider": "Anthropic", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform",
+      "relation_within_capability": "partial", "surfaces": ["cloud", "api"], "status": "active",
+      "scope_note": "CROSS-PROVIDER DEPLOYMENT: Anthropic has no first-party enterprise agent platform of its own. Claude models are offered INSIDE competitors' platforms - Google's Gemini Enterprise Agent Platform (Model Garden) and AWS Bedrock. A provider can be present in a capability only via others' infrastructure.",
+      "lifecycle": [], "source": { "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+
+    {
+      "id": "anthropic-image-video", "name": "(none)", "kind": "product",
+      "provider": "Anthropic", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "none", "surfaces": [], "status": "absent",
+      "scope_note": "ABSENCE RECORD: Anthropic has no first-party image or video generation product. Modeled explicitly so the app renders a sourced gap rather than a missing/null cell.",
+      "lifecycle": [], "source": { "url": "https://www.anthropic.com", "last_verified": "2026-06-15", "confidence": "high" }
+    },
+    {
+      "id": "openai-sora", "name": "Sora", "kind": "product",
+      "provider": "OpenAI", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "direct", "surfaces": ["web", "mobile", "api"], "status": "active",
+      "scope_note": "Video generation. DALL-E covers image generation under the same provider.",
+      "lifecycle": [], "source": { "url": "https://openai.com/sora", "last_verified": "2026-06-15", "confidence": "medium" }
+    },
+    {
+      "id": "google-veo", "name": "Veo", "kind": "product",
+      "provider": "Google", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation",
+      "relation_within_capability": "direct", "surfaces": ["api", "web"], "status": "active",
+      "scope_note": "Video generation (Veo 3 in the API). Imagen covers image generation; Gemini Omni is the newer video model.",
+      "lifecycle": [], "source": { "url": "https://deepmind.google/models/veo/", "last_verified": "2026-06-15", "confidence": "medium" }
+    }
+  ]
+}

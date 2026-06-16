@@ -1,0 +1,71 @@
+{
+  "discover:Anthropic:agentic-coding": {
+    "offerings": [
+      {"name": "Claude Code", "provider": "Anthropic", "kind": "product", "surfaces": ["terminal", "ide", "desktop", "mobile"], "source_url": "https://www.anthropic.com/claude-code", "evidence_quote": "Claude Code is Anthropic's dedicated agentic coding tool.", "summary": "Dedicated coding agent for the terminal and IDE; narrower than a general agent platform."}
+    ]
+  },
+  "discover:OpenAI:agentic-coding": {
+    "offerings": [
+      {"name": "Codex", "provider": "OpenAI", "kind": "product", "surfaces": ["cloud", "desktop", "ide"], "source_url": "https://openai.com/index/codex", "evidence_quote": "Codex is OpenAI's coding agent.", "summary": "Coding agent expanding into a general-purpose agent platform."},
+      {"name": "Codex CLI", "provider": "OpenAI", "kind": "product", "surfaces": ["terminal"], "source_url": "https://openai.com/index/codex-cli", "evidence_quote": "Codex CLI is the terminal client in the Codex family.", "summary": "Terminal client in the Codex family."}
+    ]
+  },
+  "discover:Google:agentic-coding": {
+    "offerings": [
+      {"name": "Antigravity 2.0", "provider": "Google", "kind": "product", "surfaces": ["desktop", "ide", "cloud"], "source_url": "https://antigravity.google", "evidence_quote": "Antigravity 2.0 is Google's agent-first development platform, announced at Google I/O 2026.", "summary": "Agent-first development platform (desktop app + SDK)."},
+      {"name": "Antigravity CLI", "provider": "Google", "kind": "product", "surfaces": ["terminal"], "source_url": "https://antigravity.google/cli", "evidence_quote": "Antigravity CLI is a Go rewrite that replaces Gemini CLI.", "summary": "Go rewrite that replaces Gemini CLI."},
+      {"name": "Jules", "provider": "Google", "kind": "product", "surfaces": ["cloud"], "source_url": "https://jules.google", "evidence_quote": "Jules is Google's asynchronous coding agent.", "summary": "Asynchronous coding agent; also Google's analog for remote/async agent control."},
+      {"name": "Gemini CLI", "provider": "Google", "kind": "product", "surfaces": ["terminal"], "source_url": "https://developers.googleblog.com/gemini-cli", "evidence_quote": "Gemini CLI is being retired for individual and consumer tiers and replaced by Antigravity CLI.", "summary": "Terminal coding agent being retired for consumer tiers."}
+    ]
+  },
+
+  "triage:openai-codex-cloud-remote": {
+    "capability_ids": ["remote-agent-control"],
+    "primary_capability_id": "remote-agent-control",
+    "relation_within_capability": "partial",
+    "kind": "feature",
+    "parent_id": "openai-codex",
+    "surfaces": ["cloud", "web"],
+    "confidence": "medium",
+    "rationale": "Codex Cloud runs async tasks startable/checkable remotely — a slice of remote/async agent control, as a feature of Codex."
+  },
+  "judge:openai-codex-cloud-remote": {
+    "supported": true,
+    "confidence": "high",
+    "found_quote": "Codex Cloud runs asynchronous coding tasks that can be started and checked remotely.",
+    "rationale": "The page directly describes Codex Cloud's remote async runs."
+  },
+
+  "triage:anthropic-claude-code": {
+    "capability_ids": ["agentic-coding"],
+    "primary_capability_id": "agentic-coding",
+    "relation_within_capability": "direct",
+    "kind": "product",
+    "surfaces": ["terminal", "ide", "desktop", "mobile"],
+    "confidence": "high",
+    "rationale": "Dedicated terminal/IDE coding agent — a direct fit for agentic coding."
+  },
+  "judge:anthropic-claude-code": {
+    "supported": true, "confidence": "high",
+    "found_quote": "Claude Code is Anthropic's dedicated agentic coding tool.",
+    "rationale": "Page states the product and provider directly."
+  },
+  "triage:google-jules": {
+    "capability_ids": ["agentic-coding", "remote-agent-control"],
+    "primary_capability_id": "agentic-coding",
+    "relation_within_capability": "partial",
+    "kind": "product",
+    "surfaces": ["cloud"],
+    "confidence": "medium",
+    "rationale": "Async coding agent (a slice of agentic coding) that also serves remote/async control."
+  },
+  "judge:google-jules": {
+    "supported": true, "confidence": "high",
+    "found_quote": "Jules is Google's asynchronous coding agent.",
+    "rationale": "Page names Jules and its provider."
+  },
+  "judge:openai-fakeforge": {
+    "supported": false, "confidence": "high", "found_quote": "",
+    "rationale": "The page is about Codex, not a product named FakeForge."
+  }
+}

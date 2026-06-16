@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Provider Taxonomy</title>
+<style>
+  :root {
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --line:#2a2f3a;
+    --ink:#e7e9ee; --muted:#9aa3b2; --faint:#6b7280;
+    --green:#3fb950; --amber:#d29922; --red:#f85149; --blue:#58a6ff; --purple:#bc8cff; --grey:#7d8590;
+    --anthropic:#d9a066; --openai:#10a37f; --google:#4f86ff;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; }
+  header { padding:14px 20px; border-bottom:1px solid var(--line); background:var(--panel); position:sticky; top:0; z-index:5; }
+  .title { font-size:18px; font-weight:650; } .title small { color:var(--muted); font-weight:400; margin-left:8px; }
+  .banner { margin-top:10px; padding:8px 12px; border-radius:8px; font-size:13px; }
+  .banner.ok { background:rgba(63,185,80,.12); border:1px solid rgba(63,185,80,.4); }
+  .banner.bad { background:rgba(248,81,73,.12); border:1px solid rgba(248,81,73,.4); }
+  .banner ul { margin:6px 0 0; padding-left:18px; } .banner code { color:var(--muted); }
+  .metrics { display:flex; flex-wrap:wrap; gap:14px; margin-top:10px; font-size:12px; color:var(--muted); }
+  .metrics b { color:var(--ink); }
+  nav { display:flex; gap:4px; padding:8px 16px 0; background:var(--panel); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:4;}
+  nav button { background:none; border:none; color:var(--muted); padding:8px 14px; cursor:pointer; border-bottom:2px solid transparent; font-size:13px; }
+  nav button.active { color:var(--ink); border-bottom-color:var(--blue); }
+  main { padding:18px 20px 80px; max-width:1500px; margin:0 auto; }
+  .row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  select { background:var(--panel2); color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:6px 8px; }
+  .muted { color:var(--muted); } .faint { color:var(--faint); } .small { font-size:12px; }
+
+  /* pivot grid */
+  .pivot { display:grid; gap:12px; margin-top:14px; }
+  .colhead { font-weight:600; padding:6px 8px; border-bottom:1px solid var(--line); position:sticky; top:96px; background:var(--bg); }
+  .cell { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:8px; min-height:54px; }
+  .cell.empty { border-style:dashed; color:var(--faint); display:flex; align-items:center; justify-content:center; }
+
+  .card { background:var(--panel2); border:1px solid var(--line); border-radius:9px; padding:8px 10px; margin:6px 0; cursor:pointer; }
+  .card:hover { border-color:var(--blue); }
+  .card .name { font-weight:600; }
+  .card.child { margin-left:16px; border-left:2px solid var(--line); }
+  .card.absent { border-style:dashed; opacity:.85; cursor:default; }
+  .chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:5px; }
+  .chip { font-size:11px; padding:1px 7px; border-radius:999px; border:1px solid var(--line); color:var(--muted); }
+  .badge { font-size:11px; padding:1px 7px; border-radius:6px; font-weight:600; }
+  .b-active{background:rgba(63,185,80,.16);color:var(--green);} .b-preview,.b-beta{background:rgba(210,153,34,.16);color:var(--amber);}
+  .b-deprecated,.b-sunset,.b-merged,.b-renamed{background:rgba(248,81,73,.14);color:var(--red);}
+  .b-absent{background:rgba(125,133,144,.16);color:var(--grey);}
+  .rel{font-size:11px;padding:1px 7px;border-radius:6px;border:1px solid var(--line);}
+  .rel-direct{color:var(--green);} .rel-partial{color:var(--blue);} .rel-broader{color:var(--purple);} .rel-none{color:var(--grey);}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;vertical-align:middle;margin-right:4px;}
+  .c-high{background:var(--green);} .c-medium{background:var(--amber);} .c-low{background:var(--red);}
+  .stale{color:var(--amber);} .flux{color:var(--purple);}
+  .pill{font-size:11px;padding:1px 7px;border-radius:6px;background:var(--panel);border:1px solid var(--line);color:var(--muted);}
+  .note { color:var(--muted); font-size:12px; margin-top:5px; }
+  .crosshome{font-size:11px;color:var(--amber);margin-top:4px;}
+  .parentlink{font-size:11px;color:var(--muted);margin-top:4px;}
+
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; font-size:12px; }
+  tr.clickable:hover { background:var(--panel); cursor:pointer; }
+
+  .lineage { display:flex; align-items:center; gap:8px; flex-wrap:wrap; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:8px 10px; margin:8px 0; }
+  .arrow { color:var(--muted); }
+  .node { background:var(--panel2); border:1px solid var(--line); border-radius:6px; padding:3px 8px; cursor:pointer; }
+
+  /* drawer */
+  #drawer { position:fixed; top:0; right:0; height:100%; width:min(460px,92vw); background:var(--panel); border-left:1px solid var(--line); transform:translateX(100%); transition:transform .18s; overflow:auto; z-index:20; padding:18px; }
+  #drawer.open { transform:none; }
+  #drawer h2 { margin:0 0 2px; font-size:18px; }
+  #drawer .close { float:right; cursor:pointer; color:var(--muted); font-size:20px; }
+  .kv { display:grid; grid-template-columns:120px 1fr; gap:4px 10px; margin:12px 0; font-size:13px; }
+  .kv .k { color:var(--muted); }
+  .timeline { border-left:2px solid var(--line); margin:8px 0; padding-left:12px; }
+  .ev { margin:8px 0; } .ev .d { color:var(--muted); font-size:12px; } .ev.future .d { color:var(--amber); }
+  .overlay { position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:15; display:none; } .overlay.open{display:block;}
+
+  /* hero tagline + how-it-works */
+  .tagline { margin-top:6px; color:var(--muted); font-size:13px; max-width:920px; }
+  .tagline a { white-space:nowrap; }
+  .about { max-width:980px; }
+  .about .lead { font-size:15px; color:var(--ink); margin:6px 0 16px; line-height:1.6; }
+  .about h3 { margin:20px 0 8px; font-size:14px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .flow { display:flex; align-items:stretch; gap:8px; flex-wrap:wrap; }
+  .flow .arrow { align-self:center; color:var(--faint); }
+  .stage { flex:1 1 0; min-width:160px; background:var(--panel2); border:1px solid var(--line); border-radius:9px; padding:10px 11px; }
+  .stage-h { font-weight:650; margin-bottom:4px; color:var(--ink); }
+  .gategrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="title">AI Provider Taxonomy <small id="asof"></small></div>
+  <div class="tagline">A self-maintaining map of what Anthropic, OpenAI &amp; Google ship across every AI capability — each offering discovered from the live web, grounded to its source, and gated before it ships. <a href="#" onclick="showAbout(event)">How it works &rarr;</a></div>
+  <div id="banner"></div>
+  <div class="metrics" id="metrics"></div>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<aside id="drawer"></aside>
+
+<script>
+const APP = {"data": {"_meta": {"description": "Live grounded catalog — seed capabilities + pipeline-verified products.", "as_of": "2026-06-16", "conforms_to": "schema.json"}, "capabilities": [{"id": "flagship-model", "tier": "model", "name": "Flagship model", "description": "Each provider's most capable general-purpose model.", "aliases": ["frontier model", "top model", "best model"]}, {"id": "consumer-chat-assistant", "tier": "end_user_product", "name": "Consumer chat assistant", "description": "Primary conversational app for end users across web, desktop, and mobile.", "aliases": ["chatbot", "assistant app", "AI chat"]}, {"id": "agentic-coding", "tier": "end_user_product", "name": "Agentic coding", "description": "Autonomous or assisted software development across terminal, IDE, and cloud surfaces.", "aliases": ["AI coding agent", "coding assistant", "agentic IDE", "vibe coding"]}, {"id": "remote-agent-control", "tier": "end_user_product", "name": "Remote / async agent control", "description": "Starting, monitoring, and directing an agent (esp. a coding agent) from a remote device or asynchronously.", "aliases": ["mobile control", "async agent", "remote control", "cloud agent"]}, {"id": "browser-computer-use-agent", "tier": "end_user_product", "name": "Browser / computer-use agent", "description": "An agent that drives a browser or computer on the user's behalf to complete multi-step web tasks.", "aliases": ["web agent", "browser agent", "computer use", "operator"]}, {"id": "knowledge-work-research", "tier": "end_user_product", "name": "Knowledge-work / research agent", "description": "Non-developer agent for documents, analysis, and research grounded in user sources.", "aliases": ["office agent", "research assistant", "notebook", "workspace agent"]}, {"id": "agent-building-sdk", "tier": "developer_platform", "name": "Agent-building SDK / framework", "description": "Developer toolkit for building, orchestrating, and deploying custom agents.", "aliases": ["agent framework", "agent SDK"]}, {"id": "enterprise-agent-platform", "tier": "developer_platform", "name": "Enterprise agent platform / deployment", "description": "Managed platform for building, deploying, governing, and running agents and models at enterprise scale.", "aliases": ["managed platform", "model deployment", "agent governance", "cloud AI platform"]}, {"id": "image-video-generation", "tier": "end_user_product", "name": "Image / video generation", "description": "First-party models or products that generate images or video.", "aliases": ["media generation", "generative media", "text-to-video", "text-to-image"]}, {"id": "unclassified", "tier": "uncategorized", "name": "Unclassified (intake)", "description": "Holding bucket for newly discovered offerings/features not yet mapped to a capability. The discovery pipeline lands items here as candidates; triage assigns the real capability.", "aliases": ["intake", "triage", "uncategorized"]}], "products": [{"id": "anthropic-claude-fable-5", "name": "Claude Fable 5", "kind": "model", "provider": "Anthropic", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model", "relation_within_capability": "direct", "surfaces": ["api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Fable 5 is presented as an Anthropic model, fitting the flagship-model capability directly as a general-purpose model offering. As a base model it belongs only to flagship-model; downstream uses (chat, coding, "}], "source": {"url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "last_verified": "2026-06-15", "confidence": "medium"}}, {"id": "openai-gpt-5-5-pro", "name": "GPT-5.5 Pro", "kind": "model", "provider": "OpenAI", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model", "relation_within_capability": "direct", "surfaces": ["api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). GPT-5.5 Pro is OpenAI's most capable general-purpose model variant, a base flagship model. As a model, it belongs only to flagship-model; downstream uses (chat, coding, etc.) are separate products built on it and are "}], "source": {"url": "https://openai.com/index/introducing-gpt-5-5/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-gemini-3-5-pro", "name": "Gemini 3.5 Pro", "kind": "model", "provider": "Google", "capability_ids": ["flagship-model"], "primary_capability_id": "flagship-model", "relation_within_capability": "direct", "surfaces": ["api"], "status": "preview", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini 3.5 Pro is Google's most capable general-purpose flagship model, accessed via API and used as the base for downstream products. As a base model it maps directly to flagship-model only; downstream uses like chat"}], "source": {"url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-web-desktop-mobile", "name": "Claude (web/desktop/mobile)", "kind": "product", "provider": "Anthropic", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant", "relation_within_capability": "direct", "surfaces": ["web", "desktop", "mobile"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude's web/desktop/mobile apps are Anthropic's primary conversational assistant for end users, matching consumer-chat-assistant directly. It is the user-facing chat product, not a base model, so no flagship-model at"}], "source": {"url": "https://www.anthropic.com/claude", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "openai-chatgpt", "name": "ChatGPT", "kind": "product", "provider": "OpenAI", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant", "relation_within_capability": "direct", "surfaces": ["web", "desktop", "mobile"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). ChatGPT is OpenAI's flagship consumer conversational application available across web, desktop, and mobile, which maps directly to the consumer-chat-assistant capability. While ChatGPT now bundles features like image "}], "source": {"url": "https://openai.com/chatgpt/overview/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-gemini-app", "name": "Gemini app", "kind": "product", "provider": "Google", "capability_ids": ["consumer-chat-assistant"], "primary_capability_id": "consumer-chat-assistant", "relation_within_capability": "direct", "surfaces": ["web", "mobile", "api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Gemini app is Google's primary consumer-facing conversational assistant available across web and mobile, directly matching consumer-chat-assistant. It is a standalone product (not a model), so it maps directly to "}], "source": {"url": "https://en.wikipedia.org/wiki/Gemini_(chatbot)", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-code", "name": "Claude Code", "kind": "product", "provider": "Anthropic", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding", "relation_within_capability": "direct", "surfaces": ["terminal", "ide", "api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code is Anthropic's agentic coding tool that operates primarily in the terminal (with IDE integrations), autonomously editing code, running commands, and managing development tasks. This is a direct match for a"}], "source": {"url": "https://www.anthropic.com/claude-code", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "openai-codex", "name": "Codex", "kind": "product", "provider": "OpenAI", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding", "relation_within_capability": "direct", "surfaces": ["terminal", "ide", "cloud", "web"], "status": "active", "review_status": "needs_review", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → needs_review (grounding 1.00, classification 1.00). OpenAI Codex is an agentic software-engineering product spanning a CLI, IDE extension, and cloud environment, directly fitting agentic-coding. It also supports starting and monitoring coding tasks asynchronously/re"}], "source": {"url": "https://openai.com/codex/", "last_verified": "2026-06-15", "confidence": "low"}}, {"id": "google-antigravity-cli", "name": "Antigravity CLI", "kind": "product", "provider": "Google", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding", "relation_within_capability": "direct", "surfaces": ["terminal"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity CLI is Google's command-line interface to its Antigravity agentic development platform, providing autonomous/assisted software development from the terminal — a direct fit for agentic-coding. As a CLI it o"}], "source": {"url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/", "last_verified": "2026-06-15", "confidence": "medium"}}, {"id": "google-jules", "name": "Jules", "kind": "product", "provider": "Google", "capability_ids": ["agentic-coding", "remote-agent-control"], "primary_capability_id": "agentic-coding", "relation_within_capability": "direct", "surfaces": ["web", "cloud"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Jules is Google's autonomous coding agent that works asynchronously in a cloud VM, cloning a repo, planning, and making code changes / opening PRs. This is a direct agentic-coding product. It is also genuinely a remot"}], "source": {"url": "https://jules.google", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-computer-use", "name": "Claude Computer Use", "kind": "product", "provider": "Anthropic", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent", "relation_within_capability": "direct", "surfaces": ["api"], "status": "beta", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Computer Use is Anthropic's API capability that lets Claude perceive a screen and control a computer (move cursor, click, type) to complete multi-step tasks on the user's behalf — a direct match for the browser"}], "source": {"url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "openai-operator", "name": "Operator", "kind": "product", "provider": "OpenAI", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent", "relation_within_capability": "direct", "surfaces": ["web"], "status": "merged", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Operator is OpenAI's agent that drives a web browser on the user's behalf to complete multi-step tasks (booking, ordering, form-filling), making it a direct fit for the browser/computer-use agent capability. It is a s"}], "source": {"url": "https://openai.com/index/introducing-operator/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-gemini-computer-use", "name": "Gemini Computer Use", "kind": "product", "provider": "Google", "capability_ids": ["browser-computer-use-agent"], "primary_capability_id": "browser-computer-use-agent", "relation_within_capability": "direct", "surfaces": ["api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini Computer Use is Google's model/capability that lets an agent drive a browser/computer UI to complete multi-step tasks, exposed via the Gemini API. It maps squarely and directly to the browser/computer-use agent"}], "source": {"url": "https://www.digitalapplied.com/blog/computer-use-agents-2026-claude-openai-gemini-matrix", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-cowork", "name": "Claude Cowork", "kind": "product", "provider": "Anthropic", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research", "relation_within_capability": "direct", "surfaces": ["web", "desktop"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Cowork is presented as Anthropic's collaborative knowledge-work agent for documents, analysis, and research workflows grounded in user sources—aligning directly with the knowledge-work-research capability. It i"}], "source": {"url": "https://elephas.app/resources/notebooklm-vs-claude-cowork", "last_verified": "2026-06-15", "confidence": "medium"}}, {"id": "openai-chatgpt-deep-research", "name": "ChatGPT Deep Research", "kind": "feature", "provider": "OpenAI", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research", "relation_within_capability": "direct", "surfaces": ["web", "desktop", "mobile"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). ChatGPT Deep Research is an agentic research feature within ChatGPT that autonomously browses and synthesizes multi-source web information into structured reports — a direct fit for the knowledge-work/research agent c"}], "source": {"url": "https://openai.com/index/introducing-deep-research/", "last_verified": "2026-06-15", "confidence": "high"}, "parent_id": "openai-chatgpt"}, {"id": "google-notebooklm", "name": "NotebookLM", "kind": "product", "provider": "Google", "capability_ids": ["knowledge-work-research"], "primary_capability_id": "knowledge-work-research", "relation_within_capability": "direct", "surfaces": ["web", "mobile"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). NotebookLM is Google's research/knowledge-work product that grounds analysis, summarization, and Q&A in user-provided sources (documents, PDFs, etc.), with features like Audio Overviews. It is a standalone non-develop"}], "source": {"url": "https://en.wikipedia.org/wiki/NotebookLM", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-agent-sdk", "name": "Claude Agent SDK", "kind": "product", "provider": "Anthropic", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk", "relation_within_capability": "direct", "surfaces": ["api", "terminal"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Claude Agent SDK (formerly Claude Code SDK) is Anthropic's developer toolkit for building, orchestrating, and deploying custom agents on top of Claude, providing the same harness that powers Claude Code (tool use,"}], "source": {"url": "https://docs.anthropic.com/en/api/agent-sdk/overview", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "openai-openai-agents-sdk", "name": "OpenAI Agents SDK", "kind": "product", "provider": "OpenAI", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk", "relation_within_capability": "direct", "surfaces": ["api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The OpenAI Agents SDK is a developer toolkit/framework for building, orchestrating, and deploying custom agents (handoffs, guardrails, tools, tracing), which directly matches the agent-building-sdk capability. It is a"}], "source": {"url": "https://openai.github.io/openai-agents-python/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-agent-development-kit-adk", "name": "Agent Development Kit (ADK)", "kind": "product", "provider": "Google", "capability_ids": ["agent-building-sdk"], "primary_capability_id": "agent-building-sdk", "relation_within_capability": "direct", "surfaces": ["api", "cloud"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Google's Agent Development Kit (ADK) is an open-source developer framework/toolkit for building, orchestrating, and deploying custom AI agents — a direct match for the agent-building-sdk capability. It is consumed by "}], "source": {"url": "https://google.github.io/adk-docs/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-gemini-enterprise-agent-platform", "name": "Gemini Enterprise Agent Platform", "kind": "platform", "provider": "Google", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform", "relation_within_capability": "direct", "surfaces": ["cloud", "web", "api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini Enterprise is Google's managed platform for building, deploying, governing, and running agents at enterprise scale, which maps directly to the enterprise-agent-platform capability. It is a standalone platform o"}], "source": {"url": "https://cloud.google.com/products/agent-builder", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-claude-on-third-party-platforms", "name": "Claude on third-party platforms", "kind": "feature", "provider": "Anthropic", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform", "relation_within_capability": "partial", "surfaces": ["cloud", "api"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). \"Claude on third-party platforms\" refers to Anthropic's Claude models being made available through managed enterprise cloud platforms (e.g., Amazon Bedrock, Google Vertex AI, Microsoft Foundry). This is an enterprise "}], "source": {"url": "https://docs.anthropic.com/en/api/claude-on-vertex-ai", "last_verified": "2026-06-15", "confidence": "medium"}}, {"id": "openai-sora", "name": "Sora", "kind": "product", "provider": "OpenAI", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation", "relation_within_capability": "direct", "surfaces": ["web", "mobile", "api"], "status": "sunset", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Sora is OpenAI's first-party text-to-video generation product/app, directly fulfilling the image/video generation capability. It is offered as a standalone product (web and mobile app, plus API access), not a base mod"}], "source": {"url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-veo", "name": "Veo", "kind": "product", "provider": "Google", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation", "relation_within_capability": "direct", "surfaces": ["api", "web", "cloud"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Veo is Google's first-party video generation model, directly matching the image/video generation capability. It produces video from text/image prompts, accessible via API and Google's products. It is a generation mode"}], "source": {"url": "https://deepmind.google/models/veo/", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "google-antigravity-2-0", "name": "Antigravity 2.0", "kind": "platform", "provider": "Google", "capability_ids": ["agentic-coding"], "primary_capability_id": "agentic-coding", "relation_within_capability": "direct", "surfaces": ["ide", "desktop"], "status": "preview", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity 2.0 is Google's agentic development platform (an agent-first IDE/coding surface), squarely an agentic-coding product. It directly fills that capability rather than partially or broadly. No strong evidence "}], "source": {"url": "https://en.wikipedia.org/wiki/Google_Antigravity", "last_verified": "2026-06-15", "confidence": "medium"}}, {"id": "anthropic-claude-code-remote-control", "name": "Claude Code Remote Control", "kind": "feature", "provider": "Anthropic", "capability_ids": ["remote-agent-control"], "primary_capability_id": "remote-agent-control", "relation_within_capability": "direct", "surfaces": ["mobile", "web"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code Remote Control is a feature of Claude Code (parent: anthropic-claude-code) that lets users start, monitor, and direct Claude Code coding-agent sessions remotely/asynchronously from a mobile or web device. "}], "source": {"url": "https://www.unite.ai/openclaw-vs-claude-code-remote-control-agents/", "last_verified": "2026-06-15", "confidence": "high"}, "parent_id": "anthropic-claude-code"}, {"id": "openai-codex-cloud", "name": "Codex Cloud", "kind": "feature", "provider": "OpenAI", "capability_ids": ["remote-agent-control"], "primary_capability_id": "remote-agent-control", "relation_within_capability": "direct", "surfaces": ["cloud", "web", "mobile"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Codex Cloud is OpenAI's cloud-based deployment of the Codex coding agent, letting users delegate, monitor, and direct coding tasks asynchronously from web/mobile — the defining trait of remote/async agent control. It "}], "source": {"url": "https://www.firecrawl.dev/blog/best-ai-coding-agents", "last_verified": "2026-06-15", "confidence": "high"}, "parent_id": "openai-codex"}, {"id": "openai-agentkit", "name": "AgentKit", "kind": "platform", "provider": "OpenAI", "capability_ids": ["enterprise-agent-platform"], "primary_capability_id": "enterprise-agent-platform", "relation_within_capability": "broader", "surfaces": ["web", "api", "cloud"], "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [{"date": "2026-06-15", "event": "triaged", "note": "Auto-triage → confirmed (grounding 1.00, classification 0.67). AgentKit is OpenAI's toolkit for building, deploying, and running agents — including the visual Agent Builder, ChatKit for embedding agents, Connector Registry, and evaluation tooling. It functions as a managed platfo"}], "source": {"url": "https://openai.com/index/introducing-agentkit", "last_verified": "2026-06-15", "confidence": "high"}}, {"id": "anthropic-no-image-video-generation", "name": "(none)", "kind": "product", "provider": "Anthropic", "capability_ids": ["image-video-generation"], "primary_capability_id": "image-video-generation", "relation_within_capability": "none", "surfaces": [], "status": "absent", "review_status": "confirmed", "scope_note": "Anthropic ships no first-party image or video generation model; the Claude family is text- and code-only.", "lifecycle": [{"date": "2026-06-16", "event": "triaged", "note": "Modeled absence — operator-verified."}], "source": {"url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "last_verified": "2026-06-16", "confidence": "medium"}}]}, "today": "2026-06-16", "intervals": {"high": 90, "medium": 45, "low": 21}, "metrics": {"products": 28, "capabilities": 10, "schema_conformance": 1.0, "schema_issues": 0, "provenance_completeness": 1.0, "staleness_coverage": 1.0, "stale_count": 0, "review_status": {"confirmed": 27, "needs_review": 1}, "confidence": {"medium": 6, "high": 21, "low": 1}}, "staleness": {"anthropic-claude-fable-5": -44, "openai-gpt-5-5-pro": -89, "google-gemini-3-5-pro": -89, "anthropic-claude-web-desktop-mobile": -89, "openai-chatgpt": -89, "google-gemini-app": -89, "anthropic-claude-code": -89, "openai-codex": -20, "google-antigravity-cli": -44, "google-jules": -89, "anthropic-claude-computer-use": -89, "openai-operator": -89, "google-gemini-computer-use": -89, "anthropic-claude-cowork": -44, "openai-chatgpt-deep-research": -89, "google-notebooklm": -89, "anthropic-claude-agent-sdk": -89, "openai-openai-agents-sdk": -89, "google-agent-development-kit-adk": -89, "google-gemini-enterprise-agent-platform": -89, "anthropic-claude-on-third-party-platforms": -44, "openai-sora": -89, "google-veo": -89, "google-antigravity-2-0": -44, "anthropic-claude-code-remote-control": -89, "openai-codex-cloud": -89, "openai-agentkit": -89, "anthropic-no-image-video-generation": -45}, "validation": {"valid": true, "issues": []}};
+const D = APP.data, today = APP.today, stale = APP.staleness, V = APP.validation, M = APP.metrics;
+const caps = D.capabilities, prods = D.products;
+const capById = Object.fromEntries(caps.map(c=>[c.id,c]));
+const prodById = Object.fromEntries(prods.map(p=>[p.id,p]));
+const providers = [...new Set(prods.map(p=>p.provider))].sort();
+const byCap = {}; prods.forEach(p => (p.capability_ids||[]).forEach(c => (byCap[c] ||= []).push(p)));
+const FLUX_STATUS = new Set(["sunset","deprecated","merged","renamed","preview","beta"]);
+const FLUX_EVENTS = new Set(["consolidation_announced","scope_expanded","related_deprecation","deprecated","discontinued"]);
+const esc = s => (s==null?"":String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- banner + metrics ---------- */
+document.getElementById('asof').textContent = "as of " + (D._meta?.as_of || today);
+const b = document.getElementById('banner');
+if (V.valid) { b.className='banner ok'; b.innerHTML = `&#10003; valid &mdash; ${caps.length} capabilities &middot; ${prods.length} products &middot; ${providers.length} providers`; }
+else { b.className='banner bad'; b.innerHTML = `&#10007; ${V.issues.length} validation issue(s)<ul>` +
+  V.issues.slice(0,20).map(i=>`<li><code>${esc(i.kind)}:${esc(i.rule)}</code> ${esc(i.record_id||'')} ${esc(i.path)} &mdash; ${esc(i.message)}</li>`).join('') + `</ul>`; }
+document.getElementById('metrics').innerHTML = [
+  ['schema conformance', M.schema_conformance.toFixed(2)],
+  ['provenance', M.provenance_completeness.toFixed(2)],
+  ['fresh (staleness)', M.staleness_coverage.toFixed(2)],
+  ['stale', M.stale_count],
+  ['review', Object.entries(M.review_status).map(([k,v])=>`${k}:${v}`).join(' ')],
+].map(([k,v])=>`<span>${k} <b>${esc(v)}</b></span>`).join('');
+
+/* ---------- helpers ---------- */
+function statusBadge(p){ return `<span class="badge b-${p.status}">${p.status}</span>`; }
+function relTag(p){ return `<span class="rel rel-${p.relation_within_capability}">${p.relation_within_capability}</span>`; }
+function confDot(p){ const c=(p.source||{}).confidence||'low'; return `<span class="dot c-${c}" title="confidence ${c}"></span>`; }
+function staleFlag(p){ const o=stale[p.id]; return (o!=null&&o>0)?`<span class="stale small" title="overdue ${o}d">&#9203; stale ${o}d</span>`:''; }
+function isFlux(p){
+  if (FLUX_STATUS.has(p.status)) return true;
+  return (p.lifecycle||[]).some(e => e.date>today || FLUX_EVENTS.has(e.event));
+}
+function fluxFlag(p){ return isFlux(p)?`<span class="flux small" title="in flux">&#9888; in flux</span>`:''; }
+function surfaces(p){ return (p.surfaces||[]).map(s=>`<span class="chip">${s}</span>`).join(''); }
+
+function card(p, cap, opts={}){
+  if (p.status==='absent'){
+    return `<div class="card absent"><div class="name muted">(none) ${statusBadge(p)}</div>
+      <div class="note">${esc(p.scope_note||'No first-party offering.')} <a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">source</a></div></div>`;
+  }
+  const cross = (p.primary_capability_id && cap && p.primary_capability_id!==cap)
+    ? `<div class="crosshome">primary home: ${esc(capById[p.primary_capability_id]?.name||p.primary_capability_id)}</div>` : '';
+  const parentLink = (opts.showParent && p.parent_id && prodById[p.parent_id])
+    ? `<div class="parentlink">feature of: ${esc(prodById[p.parent_id].name)}</div>` : '';
+  return `<div class="card ${opts.child?'child':''}" onclick="openDrawer('${p.id}')">
+    <div class="row"><span class="name">${esc(p.name)}</span> ${confDot(p)}${statusBadge(p)}${relTag(p)}</div>
+    <div class="chips"><span class="chip">${p.kind}</span>${surfaces(p)}</div>
+    <div class="row small">${staleFlag(p)} ${fluxFlag(p)}</div>
+    ${cross}${parentLink}
+  </div>`;
+}
+
+/* render a provider's offerings within a capability, nesting children that share the cell */
+function cell(cap, provider){
+  const items = (byCap[cap]||[]).filter(p=>p.provider===provider);
+  if (!items.length) return `<div class="cell empty">&mdash;</div>`;
+  const ids = new Set(items.map(p=>p.id));
+  const tops = items.filter(p => !(p.parent_id && ids.has(p.parent_id)));
+  let html = '';
+  for (const p of tops){
+    html += card(p, cap, {showParent:true});
+    for (const ch of items.filter(c=>c.parent_id===p.id)) html += card(ch, cap, {child:true});
+  }
+  return `<div class="cell">${html}</div>`;
+}
+
+/* ---------- views ---------- */
+const main = document.getElementById('main');
+
+function viewPivot(){
+  const tiers = [...new Set(caps.map(c=>c.tier))];
+  let html = `<div class="muted small">Capability &times; provider. A comparison is a query: pick a capability row and read across providers. Hierarchy nests within a cell; a feature mapped to another capability appears there with a back-link.</div>`;
+  const cols = `200px ${providers.map(()=>'1fr').join(' ')}`;
+  html += `<div class="pivot" style="grid-template-columns:${cols}">`;
+  html += `<div class="colhead">capability</div>` + providers.map(p=>`<div class="colhead">${esc(p)}</div>`).join('');
+  for (const tier of tiers){
+    for (const c of caps.filter(x=>x.tier===tier)){
+      html += `<div class="cell" style="background:transparent;border:none">
+        <div style="font-weight:600">${esc(c.name)}</div>
+        <div class="faint small">${esc(c.tier)}</div>
+        <div class="muted small">${esc(c.description)}</div></div>`;
+      html += providers.map(pr=>cell(c.id, pr)).join('');
+    }
+  }
+  html += `</div>`;
+  main.innerHTML = html;
+}
+
+function viewProviders(){
+  let html = '';
+  for (const pr of providers){
+    const ps = prods.filter(p=>p.provider===pr && p.status!=='absent');
+    const byPrimary = {}; ps.forEach(p => (byPrimary[p.primary_capability_id] ||= []).push(p));
+    html += `<h3>${esc(pr)} <span class="faint small">${ps.length} offerings</span></h3>`;
+    for (const [capId, list] of Object.entries(byPrimary)){
+      html += `<div class="muted small" style="margin-top:8px">${esc(capById[capId]?.name||capId)}</div>`;
+      html += `<div class="row">` + list.map(p=>`<span class="node" onclick="openDrawer('${p.id}')">${esc(p.name)} ${relTag(p)}</span>`).join('') + `</div>`;
+    }
+  }
+  main.innerHTML = html;
+}
+
+function viewLineage(){
+  const chains = prods.filter(p=>p.successor_id).map(p=>{
+    const seq=[p]; let cur=p; const seen=new Set([p.id]);
+    while(cur.successor_id && prodById[cur.successor_id] && !seen.has(cur.successor_id)){ cur=prodById[cur.successor_id]; seq.push(cur); seen.add(cur.id);} return seq;
+  });
+  let html = `<h3>Rename / sunset / merge lineage</h3><div class="muted small">Old names still resolve to their successor.</div>`;
+  for (const seq of chains){
+    html += `<div class="lineage">` + seq.map((p,i)=>`${i?'<span class="arrow">&rarr;</span>':''}<span class="node" onclick="openDrawer('${p.id}')">${esc(p.name)} ${statusBadge(p)}</span>`).join('') + `</div>`;
+  }
+  const flux = prods.filter(isFlux);
+  html += `<h3 style="margin-top:18px">In flux <span class="faint small">${flux.length}</span></h3>`;
+  html += `<table><tr><th>product</th><th>provider</th><th>status</th><th>why</th></tr>` +
+    flux.map(p=>{ const why = FLUX_STATUS.has(p.status)?`status ${p.status}`:((p.lifecycle||[]).find(e=>e.date>today)?`future event ${(p.lifecycle.find(e=>e.date>today)).date}`:`event ${(p.lifecycle.find(e=>FLUX_EVENTS.has(e.event))||{}).event}`);
+      return `<tr class="clickable" onclick="openDrawer('${p.id}')"><td>${esc(p.name)}</td><td>${esc(p.provider)}</td><td>${statusBadge(p)}</td><td class="muted small">${esc(why)}</td></tr>`; }).join('') + `</table>`;
+  main.innerHTML = html;
+}
+
+function viewStaleness(){
+  const rows = prods.map(p=>({p, o:stale[p.id]})).filter(r=>r.o!=null).sort((a,b)=>b.o-a.o);
+  let html = `<div class="muted small">Re-verify intervals by confidence: high ${APP.intervals.high}d &middot; medium ${APP.intervals.medium}d &middot; low ${APP.intervals.low}d. "today" = ${today}.</div>`;
+  html += `<table><tr><th>overdue</th><th>product</th><th>provider</th><th>confidence</th><th>last verified</th></tr>` +
+    rows.map(({p,o})=>`<tr class="clickable ${o>0?'':''}" onclick="openDrawer('${p.id}')">
+      <td class="${o>0?'stale':'faint'}">${o>0?('+'+o+'d'):o+'d'}</td>
+      <td>${esc(p.name)}</td><td>${esc(p.provider)}</td>
+      <td>${confDot(p)}${(p.source||{}).confidence||''}</td>
+      <td class="muted small">${esc((p.source||{}).last_verified)}</td></tr>`).join('') + `</table>`;
+  html = `<h3>Re-verify soonest first</h3>` + html;
+  main.innerHTML = html;
+}
+
+function viewIntake(){
+  const order = ['candidate','needs_review','rejected'];
+  const groups = {}; prods.forEach(p=>{ const r=p.review_status; if(order.includes(r)) (groups[r] ||= []).push(p); });
+  let html = `<div class="muted small">Discovery lands items here. Triage assigns a capability, sets the scope relation, and promotes to confirmed once the trust gates pass.</div>`;
+  if (!Object.keys(groups).length) html += `<p class="faint">No items awaiting review.</p>`;
+  for (const r of order){
+    if (!groups[r]) continue;
+    html += `<h3>${r.replace('_',' ')} <span class="faint small">${groups[r].length}</span></h3>`;
+    html += `<table><tr><th>product</th><th>provider</th><th>primary capability</th><th>confidence</th><th>source</th></tr>` +
+      groups[r].map(p=>`<tr class="clickable" onclick="openDrawer('${p.id}')"><td>${esc(p.name)}</td><td>${esc(p.provider)}</td>
+        <td>${esc(capById[p.primary_capability_id]?.name||p.primary_capability_id)}</td>
+        <td>${confDot(p)}${(p.source||{}).confidence||''}</td>
+        <td><a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">link</a></td></tr>`).join('') + `</table>`;
+  }
+  main.innerHTML = html;
+}
+
+function viewAbout(){
+  const stages = [
+    ['1 · Discover','Sweep the live web (Tavily) per capability for offerings the catalog is missing.'],
+    ['2 · Ground','An independent judge must find the claim quoted verbatim on its source page — no training-knowledge guesses.'],
+    ['3 · Triangulate','Re-check existence and lifecycle status against a second, independent source. Disagreement is flagged, not silently resolved.'],
+    ['4 · Classify','Map each offering to a capability axis; fold access surfaces (an "X SDK / CLI") into their parent instead of inventing a node.'],
+    ['5 · Audit &amp; Gate','Red-team the whole catalog and block deploy on any schema break, eval failure, or critical finding.'],
+  ];
+  const gates = [
+    ['Schema gate','Every record must conform to the JSON Schema or it is rejected outright.'],
+    ['Grounding gate','The supporting quote must actually appear on the cited page.'],
+    ['Classification gate','Independent classification samples must agree before a mapping is trusted.'],
+    ['Deploy gate','Ships only if evals pass and there are zero critical audit findings.'],
+  ];
+  main.innerHTML = `<div class="about">
+    <p class="lead">This catalog maintains itself. Offerings are discovered from the live web, every claim is grounded against its source and cross-checked against an independent second source, and nothing ships unless it clears a deploy gate. The other tabs show the <em>output</em> of that pipeline — every product here cleared it.</p>
+    <h3>The pipeline</h3>
+    <div class="flow">` +
+      stages.map((s,i)=>`${i?'<span class="arrow">&rarr;</span>':''}<div class="stage"><div class="stage-h">${s[0]}</div><div class="muted small">${s[1]}</div></div>`).join('') +
+    `</div>
+    <h3>Trust gates</h3>
+    <div class="gategrid">` +
+      gates.map(g=>`<div class="card" style="cursor:default"><div class="name">${g[0]}</div><div class="note">${g[1]}</div></div>`).join('') +
+    `</div>
+    <h3>By the numbers</h3>
+    <div class="metrics">
+      <span><b>${caps.length}</b> capabilities</span>
+      <span><b>${prods.length}</b> products</span>
+      <span><b>${providers.length}</b> providers</span>
+      <span>schema conformance <b>${M.schema_conformance.toFixed(2)}</b></span>
+      <span>provenance <b>${M.provenance_completeness.toFixed(2)}</b></span>
+    </div>
+    <p class="muted small" style="margin-top:16px">Python engine on Vertex AI Claude · single-file zero-dependency viewer · grounded, evaluated against gold-set + adversarial suites, and gated before every deploy.</p>
+  </div>`;
+}
+
+/* ---------- drawer ---------- */
+function openDrawer(id){
+  const p = prodById[id]; if(!p) return;
+  const dr = document.getElementById('drawer');
+  const equivalents = (byCap[p.primary_capability_id]||[]).filter(q=>q.id!==p.id && q.provider!==p.provider);
+  const pred = p.predecessor_id && prodById[p.predecessor_id], succ = p.successor_id && prodById[p.successor_id];
+  const lifecycle = (p.lifecycle||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  dr.innerHTML = `
+    <span class="close" onclick="closeDrawer()">&times;</span>
+    <h2>${esc(p.name)}</h2>
+    <div class="row">${confDot(p)}${statusBadge(p)}${relTag(p)} <span class="pill">${p.kind}</span> ${staleFlag(p)} ${fluxFlag(p)}</div>
+    <div class="kv">
+      <span class="k">provider</span><span>${esc(p.provider)}</span>
+      <span class="k">primary</span><span>${esc(capById[p.primary_capability_id]?.name||p.primary_capability_id)}</span>
+      <span class="k">capabilities</span><span>${(p.capability_ids||[]).map(c=>esc(capById[c]?.name||c)).join(', ')}</span>
+      <span class="k">surfaces</span><span>${(p.surfaces||[]).join(', ')||'&mdash;'}</span>
+      <span class="k">review</span><span>${esc(p.review_status||'confirmed')}</span>
+      ${p.parent_id?`<span class="k">parent</span><span><a onclick="openDrawer('${p.parent_id}')">${esc(prodById[p.parent_id]?.name||p.parent_id)}</a></span>`:''}
+      <span class="k">source</span><span><a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">${esc((p.source||{}).url)}</a><br><span class="faint small">verified ${esc((p.source||{}).last_verified)} &middot; ${esc((p.source||{}).confidence)} confidence</span></span>
+    </div>
+    ${p.scope_note?`<div class="note">${esc(p.scope_note)}</div>`:''}
+    ${(pred||succ)?`<h3 class="small muted" style="margin-top:14px">lineage</h3><div class="lineage">
+        ${pred?`<span class="node" onclick="openDrawer('${pred.id}')">${esc(pred.name)}</span><span class="arrow">&rarr;</span>`:''}
+        <span class="node" style="border-color:var(--blue)">${esc(p.name)}</span>
+        ${succ?`<span class="arrow">&rarr;</span><span class="node" onclick="openDrawer('${succ.id}')">${esc(succ.name)}</span>`:''}</div>`:''}
+    ${lifecycle.length?`<h3 class="small muted" style="margin-top:14px">history</h3><div class="timeline">${lifecycle.map(e=>`
+        <div class="ev ${e.date>today?'future':''}"><div class="d">${esc(e.date)} &middot; ${esc(e.event)}${e.date>today?' (scheduled)':''}</div>
+        <div>${esc(e.note)} ${e.source_url?`<a href="${esc(e.source_url)}" target="_blank" rel="noopener">src</a>`:''}</div></div>`).join('')}</div>`:''}
+    ${equivalents.length?`<h3 class="small muted" style="margin-top:14px">cross-provider equivalents (${esc(capById[p.primary_capability_id]?.name)})</h3>
+        ${equivalents.map(q=>`<div class="card" onclick="openDrawer('${q.id}')"><div class="row"><span class="name">${esc(q.name)}</span> <span class="pill">${esc(q.provider)}</span>${statusBadge(q)}${relTag(q)}</div></div>`).join('')}`:''}
+  `;
+  dr.classList.add('open'); document.getElementById('overlay').classList.add('open');
+}
+function closeDrawer(){ document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
+
+/* ---------- nav ---------- */
+const VIEWS = [['Pivot',viewPivot],['Providers',viewProviders],['Lineage & history',viewLineage],['Staleness',viewStaleness],['Intake',viewIntake],['How it works',viewAbout]];
+const nav = document.getElementById('nav');
+const navButtons = {};
+VIEWS.forEach(([label,fn])=>{ const btn=document.createElement('button'); btn.textContent=label;
+  btn.onclick=()=>selectView(label); navButtons[label]=[btn,fn]; nav.appendChild(btn); });
+function selectView(label){ Object.values(navButtons).forEach(([b])=>b.classList.remove('active'));
+  const [btn,fn]=navButtons[label]; btn.classList.add('active'); fn(); }
+function showAbout(e){ if(e) e.preventDefault(); selectView('How it works'); window.scrollTo(0,0); }
+selectView('Pivot');
+</script>
+</body>
+</html>

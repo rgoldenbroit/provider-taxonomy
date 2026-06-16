@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Local env + secrets (project id / region live here; ADC handles auth)
+.env
+.env.local
+.env.*.local
+
+# Operational store (run logs, metrics, fetched-source cache) — regenerable
+ops/
+.cache/
+
+*.log
+.DS_Store
+
+# Engine outputs (regenerable, for review)
+data/candidates.json
+data/proposed.json
+data/auto.json

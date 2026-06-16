@@ -1,0 +1,34 @@
+{
+  "https://www.anthropic.com/claude-code": {
+    "status": 200,
+    "text": "Claude Code is Anthropic's dedicated agentic coding tool. It runs in the terminal and IDE, drives multi-step software development tasks, and is narrower in scope than a general-purpose agent platform."
+  },
+  "https://openai.com/index/codex": {
+    "status": 200,
+    "text": "Codex is OpenAI's coding agent. As of 2026 it is being repositioned as a general-purpose agent platform, so it spans more than agentic coding. It runs in the cloud, desktop, and IDE."
+  },
+  "https://openai.com/index/codex-cli": {
+    "status": 200,
+    "text": "Codex CLI is the terminal client in the Codex family. It operates independently in the terminal and is part of OpenAI's Codex lineup."
+  },
+  "https://antigravity.google": {
+    "status": 200,
+    "text": "Antigravity 2.0 is Google's agent-first development platform, announced at Google I/O 2026. It ships as a desktop app plus an SDK and connects to AI Studio and Firebase."
+  },
+  "https://antigravity.google/cli": {
+    "status": 200,
+    "text": "Antigravity CLI is a Go rewrite that replaces Gemini CLI. It runs in the terminal and is the recommended migration target for Gemini CLI users."
+  },
+  "https://jules.google": {
+    "status": 200,
+    "text": "Jules is Google's asynchronous coding agent. It runs in the cloud and is also Google's analog for remote and async agent control."
+  },
+  "https://developers.googleblog.com/gemini-cli": {
+    "status": 200,
+    "text": "Gemini CLI is being retired for individual and consumer tiers and replaced by Antigravity CLI. Enterprise Gemini Code Assist access is retained."
+  },
+  "https://openai.com/codex": {
+    "status": 200,
+    "text": "Codex Cloud runs asynchronous coding tasks that can be started and checked remotely. It is part of OpenAI's Codex platform and lets developers kick off and monitor runs without a local session."
+  }
+}
