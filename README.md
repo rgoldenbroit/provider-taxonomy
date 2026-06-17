@@ -4,7 +4,7 @@
 
 🔗 **Live demo:** https://provider-seed-viewer-240942176969.us-east5.run.app
 
-![Capability × provider pivot](docs/pivot.png)
+![Overview — the AI provider landscape at a glance](docs/overview.png)
 
 The hard part of a catalog like this isn't *displaying* the data — it's keeping it **true** while the ecosystem changes weekly. This repo is an engine that maintains the catalog itself (discover → ground → triangulate → classify → audit → gate) plus a single-file viewer that renders the result. Architecture first, then how to run it, then the data model that makes it work.
 
@@ -14,7 +14,11 @@ The hard part of a catalog like this isn't *displaying* the data — it's keepin
 - **Every claim is grounded.** A record is admitted only if an independent judge finds the claim quoted *verbatim* on its cited page, then a **second, independent** source confirms existence and lifecycle status. Disagreement is surfaced, not silently resolved.
 - **A deploy gate, not vibes.** The whole catalog is red-teamed before publish; any schema break, eval regression, or critical finding blocks the deploy.
 - **Capability-anchored model.** Products churn; capabilities don't. A "comparison" is a *query* over a stable spine, not stored data — so a rename touches one field and the taxonomy holds.
-- **Zero-dependency viewer.** One self-contained HTML file (no framework, no build step beyond data injection): capability pivot, provider drill-down, rename/sunset lineage, staleness queue, discovery intake, and an in-app "How it works".
+- **Zero-dependency viewer.** One self-contained HTML file (no framework, no build step beyond data injection): an at-a-glance coverage overview, a search/filter/compare explorer, an in-app "How it works", and an "under the hood" panel exposing the live trust metrics. Light/dark, mobile-friendly.
+
+**Explore** — pick a capability to compare providers side by side; click any offering for its cross-provider rivals:
+
+![Explore — compare providers side by side](docs/explore.png)
 
 ## Architecture
 
@@ -71,7 +75,7 @@ Auth is keyless (ADC locally, Workload Identity Federation in CI) — there are 
 
 - `taxonomy/` — engine: `validate` · `discover` · `triage` · `trust` (the three gates) · `audit` (triangulation critic + deploy gate) · `autobuild` (loop-until-dry discovery) · `metrics`/`staleness` · `evals/` · `vertex_client` (Vertex + offline stub) · `retrieval/` (fixtures + httpx fetch + Tavily).
 - `data/` — `taxonomy.json` (working store) · `fixtures/` (deterministic offline searches/pages/LLM responses).
-- `viewer/` — `template.html` + `build.py` → `taxonomy.html` (capability pivot · provider drill-down · cross-provider equivalence · lineage/history · staleness · intake · how-it-works).
+- `viewer/` — `template.html` + `build.py` → `taxonomy.html`, a single-file light/dark viewer with four sections: **Overview** (coverage-at-a-glance), **Explore** (search · filter · compare, with cross-provider equivalence), **How it works** (the pipeline + trust gates), and **Under the hood** (live trust metrics · re-verify queue · intake · lineage).
 - `scripts/` — `ground.py` (rebuild the verified catalog) · `fill_gaps.py` (incremental gap-fill).
 - `ops/` — run logs, eval-metrics time series, fetched-page cache (regenerable).
 

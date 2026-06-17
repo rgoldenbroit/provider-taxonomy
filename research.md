@@ -1,132 +1,70 @@
-# Research — AI Provider Taxonomy system
+# Research — UX review of the AI Provider Taxonomy viewer
 
-## 0. Scope revision (what changed and why)
+*(Supersedes the original build-phase research, which is preserved in git history at the initial commit. This doc is the active research focus: diagnosing the current UX and steering an improvement plan.)*
 
-The first cut framed this as a **single-file static viewer** of the seed data. Your direction expands it into a **self-maintaining taxonomy system**:
+## What I reviewed
 
-- a **discovery function outside the seed** (the seed is a grounding *example*, not the universe),
-- **almost entirely automated**, using an **LLM/agent to triage** finds into the taxonomy,
-- a UI to **drill into a provider** and to **click a feature and see the cross-provider equivalents**,
-- **reliability and trust as the first-class concern, grounded in quantitative metrics**,
-- **content integrity guarded by evals**, both during development and in ongoing maintenance.
+Every surface of the deployed viewer (`viewer/template.html`, live at the Cloud Run URL), against the stated goals:
+Pivot · Providers · Lineage & history · Staleness · Intake · How it works · the detail drawer. Cross-checked against the original goals in the build research and against the three portfolio goals you named: **look great · offer practical help · demonstrate ability.**
 
-Consequence: the single static file is no longer the whole app — it becomes the **viewer**. A separate **engine** does discovery, triage, validation, and evals. `plan.md` is now stale and will be rewritten after this is approved.
+## The goals, restated
 
-## 1. Vision (restated)
+- **Primary audience (assumed): a portfolio visitor** — recruiter, hiring manager, or peer engineer who lands for 30–90 seconds. They want to (a) instantly grasp what this is and why it's impressive, (b) interact with something satisfying, (c) sense the engineering depth.
+- **Secondary audience: someone with a real question** — "what's OpenAI's answer to Claude Code?", "who ships a browser agent?", "what got sunset recently?"
+- The original build goals were **engine-first**: discovery, triage, trust gates, evals. The viewer was specced as a faithful window onto *all* of that engine state.
 
-A system that keeps an always-current, **trustworthy** map of AI-provider products/features organized by a stable capability taxonomy. It:
-1. **Discovers** new/changed offerings across providers automatically (web search + fetch).
-2. **Triages** each find with an LLM/agent: classify into capability, set scope-relation and hierarchy, dedup, link lineage, score confidence.
-3. **Gates** everything on trust: nothing enters as `confirmed` unless it passes schema, grounding, and classification checks; otherwise it waits as `candidate`/`needs_review`.
-4. **Presents** it: capability pivot, provider drill-down, feature-equivalence-across-providers, lineage, staleness, and the triage/review queue.
-5. **Proves itself** with quantitative evals on every run, using the seed as the gold set.
+## Core diagnosis
 
-`examples.json` = canonical **seed + gold set**; all new records conform to `schema.json`.
+**The viewer is an operator's console wearing a product's clothes.** It was built to expose the maintenance engine, so its information architecture mirrors the engine's internals — not a visitor's intent. Concretely, of six top-level tabs, only one (**Pivot**) serves the primary audience well:
 
-## 2. Data model (the part that constrains everything — condensed)
+| Tab | Who it's actually for | Verdict |
+|---|---|---|
+| **Pivot** (capability × provider) | Everyone — this is the core idea, made visible | **Keep & elevate.** The strongest asset. |
+| **Providers** | Browsers | Redundant — same data as Pivot, transposed; adds little. |
+| **Lineage & history** | Maintainers | Half-empty: the "rename/sunset/merge" section has **no chains** in current data; only the "in flux" table populates. Reads as scaffolding. |
+| **Staleness** | **Operators only** | A re-verify queue ("overdue −89d"). A visitor does not care which rows are due for re-checking. |
+| **Intake** | **Operators only** | A triage queue showing 1 candidate. Pure back-office. |
+| **How it works** | Everyone (new) | Good — but it's the *last* tab, so the engineering story is the easiest thing to miss. |
 
-Capability is the stable anchor; products are 0..n per capability per provider; a comparison is a *query*, not stored data. Load-bearing fields the system must produce and the UI must render:
-- `kind` (`model_family|model|product|feature|platform|protocol|service_tier`) + `parent_id` → hierarchy (family→model, product→feature/sub-product).
-- `relation_within_capability` (`direct|partial|broader|none`) → scope fit vs. the capability.
-- `capability_ids[]` (len>1 = spans capabilities) + `primary_capability_id` → home row.
-- `status` (`active|preview|beta|deprecated|sunset|merged|renamed|absent`) + `predecessor_id`/`successor_id` → lineage; `absent` = sourced gap (`name:"(none)"`).
-- `review_status` (`confirmed|candidate|needs_review|rejected`) → the discovery pipeline state.
-- `source{url,last_verified,confidence}` + `lifecycle[]` (dated, sourced events) → provenance, freshness, history.
+So the IA conflates the person *maintaining* the taxonomy with the person *consuming* it. The maintainer's tools dominate the navigation; the consumer's "wow" and "useful task" are underserved.
 
-## 3. Edge-case acceptance bar (unchanged, still binding)
+## Specific problems (ranked by impact on the goals)
 
-The 16 cases the README/seed demonstrate remain the acceptance bar — now for **two** things: the viewer must render them, and the **triage engine must reproduce them** when fed the raw facts. (Clean trio; one-to-many; broader/partial scope mismatch; sunset+successor with future-dated event; merged; pending consolidation; absence; confidence gradient; feature-of-product; sub-product; rename lineage; brand ambiguity; cross-provider deployment; model-family hierarchy; discovery candidate.) Detailed list retained from the prior draft and used as eval fixtures (§8).
+1. **Operator-centric IA.** 5 of 6 tabs are back-office or redundant. No clear "main thing," no hierarchy, no obvious starting point. A visitor doesn't know where to look.
+2. **No wow, no delight.** It's a competent dark data-table. No hero moment, no signature visual (e.g. an at-a-glance coverage map), no interactive satisfaction — no **search**, no **filter**, no **compare**, no hover richness, no motion. The pivot, the best asset, is presented flatly.
+3. **The most useful task is buried.** "Compare provider X vs Y on capability Z" / "find the equivalent of product P" is the real practical value. The drawer's **cross-provider equivalents** is the killer feature — but it's hidden behind a click and undiscoverable, and there's no way to *focus* the pivot (no search/filter/compare).
+4. **Engine internals leak into the consumer UI.** Confidence dots, the header's `confirmed:27 needs_review:1`, the schema/provenance/staleness metric bar, and raw triage notes in the drawer ("grounding 1.00, classification 1.00"). These *prove rigor* — an asset for the "demonstrate ability" goal — but presented raw they read as clutter. They belong in a narrated trust story, not bleeding onto every screen.
+5. **Thin / half-empty views** (Lineage's main section, Intake's 1 row, Staleness all-fresh) make a finished system feel like scaffolding.
+6. **Aesthetic is generic and unmemorable.** GitHub-dark is professional but says nothing; provider brand colors are defined in CSS yet barely used as structure; typography is purely functional; no light mode; mobile (where many LinkedIn clicks land) is an unverified 4-column grid likely to be cramped.
 
-## 4. Architecture (revised)
+## What's genuinely good (keep)
 
-Four components:
+- The **capability-anchored pivot** — the core concept, correctly the default.
+- The **cross-provider equivalents** in the drawer — needs promotion, not replacement.
+- The **lifecycle timeline** (renders future *scheduled* events) — a nice detail.
+- The new **How it works** view — the right idea; just positioned and styled as an afterthought.
+- The underlying rigor (gates/evals) — the differentiator; needs *narration*, not exposure.
 
-1. **Canonical data store — JSON, git-tracked, append-only.**
-   `examples.json` (seed/gold) + a working `taxonomy.json` the engine grows. Changes are expressed as new `lifecycle` events and `review_status`/field transitions, never silent overwrites.
-   *Decision (you invited my judgment): JSON, not a DB.* Trust = auditability; a diffable text store makes every discovery/triage decision a reviewable diff (ideally a PR), which a database hides behind opaque mutations. The dataset is small and high-value; the schema is explicitly designed to be append-only. This is the strongest substrate for "trust is paramount."
+## The strategic fork (this is what I need your call on)
 
-2. **Operational store — SQLite or JSONL (telemetry, not source of truth).**
-   Discovery run logs, fetched-source cache, and the **eval-metrics time series**. Kept *out* of the canonical file so the trust anchor stays clean and diffable. Metrics-over-time wants a queryable store; provenance wants a diffable one — so they're separated.
+"Improve the UX" forks three ways, and the right plan depends entirely on which you want:
 
-3. **Engine — Python CLI/agent.** Subcommands:
-   - `discover` — per `provider × capability` web sweep → raw candidates with source URLs.
-   - `triage` — LLM/agent classifies, dedups, links lineage, scores confidence, sets `review_status`.
-   - `validate` — schema-subset + referential-integrity checks (fail loudly).
-   - `eval` — computes the trust metrics (§7) and the gold-set regression (§8); writes a report.
-   Uses `WebSearch`/`WebFetch` for grounding and an LLM for extraction/triage.
+1. **Portfolio-first** — collapse the operator views, lead with a polished overview + one killer interactive view (compare/search), turn the engineering into a *narrated* feature, add delight. Optimizes *look great* + *demonstrate ability*; practical help is a demo.
+2. **Product-first** — make it the best "AI-provider capability tracker": strong search/filter/compare, a "what changed recently" feed, broaden coverage, keep operator views but make them shine. Optimizes *practical help*; portfolio value follows from it being genuinely good.
+3. **Layered (my lean)** — a polished consumer **front door** (hero overview + a signature interactive compare/search) with the engine/trust/operator views demoted to a clearly-labelled **"under the hood"** area. Serves all three goals: front door = *look great*, compare/search = *practical help*, narrated engine = *demonstrate ability* — and it reframes the existing operator work as **evidence of rigor** instead of deleting it.
 
-4. **Viewer — single self-contained HTML file (keeps your earlier preference).**
-   Reads the produced JSON. Surfaces: capability pivot · provider drill-down · **feature-equivalence** (pick a feature/capability → the row of provider equivalents with relation tags) · lineage/history · staleness · triage/review queue showing each record's confidence, sources, and gate results. Zero-dep, opens on `file://`.
+## My recommended direction (for your approval)
 
-   *(Optional later: a thin local server so "Discover now" can be triggered from the UI. Not v1.)*
+**Direction 3 (layered), with a deliberate visual upgrade.** Roughly:
+- A **front door**: a real hero, an at-a-glance coverage visual, and immediate orientation.
+- One **signature interactive view**: focused compare/search over the pivot, with cross-provider equivalence promoted to a first-class, discoverable action.
+- **Demote** Staleness/Intake/Lineage into a single "under the hood / how it's maintained" area that *shows off* the trust machinery as a feature.
+- A **design pass**: brand-color structure, typography/spacing, motion, mobile-first responsiveness, and possibly a light mode.
 
-## 5. Discovery pipeline (front half — now in scope)
+## Open questions blocking the plan
 
-The capability taxonomy *is* the search plan. For each `(provider, capability)`:
-1. Query the web for the provider's current offering(s) in that capability.
-2. Extract candidate products/features + the **source URL** that substantiates each.
-3. **Dedup** against existing `product.id`s, including **rename detection** (don't re-add Vertex AI as new when it became Gemini Enterprise Agent Platform).
-4. Emit `review_status:"candidate"` nodes with `source`, a best-guess `primary_capability_id` (or the reserved `unclassified` bucket), and confidence `low` until triage.
+1. **Audience priority** — portfolio visitor, real practitioner, or both equally?
+2. **What you dislike most** — so I weight the fixes to your gut, not just my diagnosis.
+3. **Appetite** — a focused re-architecture of the front door (keeping the engine views as "under the hood"), a lighter polish pass, or a full redesign?
 
-Almost fully automated. Human involvement is *optional* and bounded to approving promotions that the trust gates didn't auto-clear.
-
-## 6. Triage (LLM/agent — now in scope)
-
-Per candidate, the agent decides: capability(ies) + `primary_capability_id`; `relation_within_capability`; `kind` + `parent_id` (hierarchy/feature/sub-product); `surfaces`; lineage links; and a confidence grounded in evidence + self-agreement. It then sets `review_status`:
-- `confirmed` — passes all three gates above the auto-confirm bar,
-- `needs_review` — grounded but low classification agreement,
-- `rejected` — fails the grounding gate (no source substantiates it) → kept (not deleted) so it isn't rediscovered.
-
-## 7. Trust & reliability framework (the heart of the ask)
-
-Every record passes three **gates**; each emits a number, so trust is quantitative, not vibes:
-
-| Gate | Question | Metric | Fail behavior |
-|---|---|---|---|
-| **Schema** | Conforms to `schema.json` + referential integrity? | conformance (must be 100%) | reject |
-| **Grounding** | Does a *fetched* source actually substantiate the claim? | grounding rate (% of records whose `source.url`, when fetched, an independent LLM-judge confirms supports it) | hold as `candidate`/`rejected`, never auto-confirm |
-| **Classification** | Is the capability/relation assignment stable? | self-consistency across N LLM samples; agreement vs. gold where it overlaps | `needs_review` if low |
-
-**Anti-hallucination (the core trust guarantee):** a discovered product is admitted *only if* its `source.url` fetches and a **separate** LLM-judge confirms the page substantiates the product's existence and key attributes. No verifiable source → not admitted. The discoverer never gets to self-certify.
-
-**Dataset-level metrics** (computed every run, stored as a time series):
-- grounding rate, provenance completeness (every product ≥1 source; every claim-bearing lifecycle event has a `source_url`),
-- schema/integrity conformance (target 100%),
-- classification accuracy vs. gold (precision/recall per capability),
-- dedup precision/recall (incl. rename cases),
-- staleness coverage (% within the confidence-based re-verify window: high=90d/med=45d/low=21d),
-- confidence calibration (do `low`-confidence records actually get corrected more often?),
-- estimated hallucination rate (admitted records later found ungrounded).
-
-## 8. Evals — development *and* ongoing maintenance
-
-The seed is a labeled **gold set**, which makes real evals possible:
-- **Hold-out reconstruction:** remove N seed records, run `discover`+`triage`, measure recovery + correct classification (capability, relation, hierarchy, lineage). This is the dev-time integrity test and the regression guard.
-- **Adversarial / hallucination:** inject a plausible-but-fake product with a bogus/irrelevant URL; the grounding gate must reject it. Tracks false-admit rate.
-- **Dedup/rename:** feed a rename event; pipeline must link, not duplicate.
-- **Regression gate:** every run emits a metrics report; if grounding rate, conformance, or classification accuracy drop below thresholds, candidate→confirmed promotion is blocked and the run is flagged. This is how ongoing maintenance stays honest.
-- Stale records are re-verified on a schedule; metrics tracked over time in the operational store so drift is visible.
-
-## 9. Constraints / non-negotiables
-
-- `examples.json` + `schema.json` are canonical; every emitted record conforms and is referential-integrity-clean.
-- Append-only history (lifecycle events); never silent overwrite.
-- **Never admit ungrounded content** — no record without a fetched, verified source.
-- The engine needs network + an LLM; the **viewer does not** (reads produced JSON, opens offline).
-- Don't log whole responses/configs/secrets — specific fields only (global rule).
-
-## 10. Decisions I made on your behalf (correct me if wrong)
-
-1. **Storage:** JSON canonical (diffable, auditable) + SQLite/JSONL for telemetry/metrics. Not a DB for canonical data — auditability beats query convenience when trust is the point.
-2. **Form factor:** Python **engine** (discover/triage/validate/eval) + static **single-file viewer**. Keeps your single-file preference for *browsing*; the automated work lives in the engine.
-3. **Auto-confirm bar:** records auto-confirm only above a high grounding+agreement threshold; everything else lands as `needs_review` for a human. Safer default given "trust is paramount."
-
-## 11. Open questions (genuinely block or steer the build)
-
-- **Q1 — LLM access (blocker for the engine).** How should the engine call a model here? Options: (a) Anthropic API key in env; (b) Vertex AI Claude (the `scaffold-gcp-app` pattern); (c) build the engine model-agnostic behind a small client interface and stub the LLM in dev so the whole pipeline runs end-to-end without creds, with the real client dropped in later. I lean **(c)** — it lets me build and *eval* the harness deterministically now, and it's the most testable. Do you have creds you want used, or should I go stub-first?
-- **Q2 — Prove-the-loop scope.** Run the first end-to-end discover→triage→eval on **one capability** (I'd pick `agentic-coding`, the richest edge-case cluster) before fanning out to all providers × all capabilities? I lean **yes** — get the trust loop + gold-set eval green on one slice, then scale.
-- **Q3 — Viewer now or after the engine?** Build the engine + trust/eval first (the substance of your ask) and the viewer second, or interleave? I lean **engine-first**, with a minimal viewer stub early so you can see results, then enrich it.
-
-## 12. Out of scope for v1
-
-Multi-user/auth/hosting; real-time streaming discovery (v1 = on-demand/scheduled batch runs); UI-triggered discovery (needs the optional local server); write-back to the seed from the viewer (the engine owns writes, as reviewable diffs).
+→ Once you answer, I'll write a concrete `plan.md` (phased, with mockups for the new views) and stop for your approval before changing anything.
