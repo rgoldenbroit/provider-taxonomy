@@ -109,6 +109,26 @@ class StubLLM(LLMClient):
         return "offline-stub"
 
 
+class ReplayLLM(LLMClient):
+    """Serves structured calls purely from the evidence ledger — no Vertex, no creds.
+    Used by ``taxo verify`` so a reproducible-build check runs anywhere (e.g. CI)."""
+
+    def __init__(self, ledger, model: str):
+        self._ledger = ledger
+        self.model = model
+
+    def structured(self, *, system: str, prompt: str, schema: dict, label: str | None = None) -> Any:
+        from .ledger import LedgerMiss, llm_key
+        key = llm_key(model=self.model, system=system, prompt=prompt, schema=schema)
+        hit = self._ledger.get("llm", key)
+        if hit is None:
+            raise LedgerMiss(f"llm/{key} not in ledger (replay — no live calls)")
+        return hit["value"]
+
+    def ping(self) -> str:
+        return "replay"
+
+
 # --------------------------------------------------------------------------- #
 # Vertex AI Claude                                                             #
 # --------------------------------------------------------------------------- #
@@ -238,6 +258,8 @@ def build_ledger(cfg: Settings | None = None):
 
 def get_llm(cfg: Settings | None = None, *, responses: dict[str, Any] | None = None) -> LLMClient:
     cfg = cfg or settings()
+    if getattr(cfg, "ledger_mode", "off") == "replay":
+        return ReplayLLM(build_ledger(cfg), cfg.model)   # pure ledger reads → no Vertex/creds (CI-safe)
     if cfg.offline:
         return StubLLM(responses=responses)
     return VertexLLM(project_id=cfg.project_id, region=cfg.region, model=cfg.model,

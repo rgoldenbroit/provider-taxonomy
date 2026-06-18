@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The engine is offline-first: tests run against fixtures with a stub LLM — no
+      # credentials, no network. Determinism is the whole point.
+      - name: Run test suite (offline)
+        run: TAXO_OFFLINE=1 python tests/run_all.py
+
+      # Reproducible-build check: replay the committed evidence ledger and assert the
+      # published catalog is byte-identical to what the evidence re-derives. Pure ledger
+      # reads — no Vertex, no creds, no network.
+      - name: Verify reproducible build (replay the evidence ledger)
+        run: python -m taxonomy.cli verify

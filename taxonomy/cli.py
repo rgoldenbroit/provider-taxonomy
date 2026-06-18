@@ -343,6 +343,41 @@ def cmd_config(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_verify(args: argparse.Namespace) -> int:
+    """Reproducible-build check: replay the committed evidence ledger and assert the
+    published catalog is byte-identical to what the evidence re-derives. No creds needed."""
+    import copy
+
+    from .config import _LEDGER_DIR
+    from .ledger import REPLAY, Ledger, LedgerMiss
+    from .replay import catalog_hash, reverify_catalog
+    from .retrieval.http_fetch import HttpFetch
+    from .vertex_client import ReplayLLM
+
+    catalog = load_dataset(args.dataset)
+    h_committed = catalog_hash(catalog)
+    ledger = Ledger(_LEDGER_DIR, REPLAY)
+    if not ledger.root.exists():
+        print("VERIFY: FAIL — no evidence/ ledger found to replay.")
+        return 1
+    llm, retrieval = ReplayLLM(ledger, settings().model), HttpFetch(ledger=ledger)
+    try:
+        replayed = copy.deepcopy(catalog)
+        reverify_catalog(replayed, llm, retrieval, ledger)
+    except LedgerMiss as exc:
+        print(f"VERIFY: FAIL — evidence missing from the ledger ({exc}).")
+        return 1
+    h_replay = catalog_hash(replayed)
+    print(f"committed catalog : {h_committed}")
+    print(f"replayed catalog  : {h_replay}")
+    print(f"evidence ledger   : {ledger.stats()}")
+    if h_committed == h_replay:
+        print("VERIFY: PASS — the published catalog is exactly what the committed evidence reproduces.")
+        return 0
+    print("VERIFY: FAIL — catalog does not match a replay of the evidence (hand-edited or stale).")
+    return 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="taxo", description="AI-provider taxonomy engine.")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
@@ -390,6 +425,10 @@ def build_parser() -> argparse.ArgumentParser:
     p_gate = sub.add_parser("gate", help="deploy gate: block unless schema+evals+audit pass (exit 1 on block)")
     p_gate.add_argument("--dataset", default=None)
     p_gate.set_defaults(func=cmd_gate)
+
+    p_verify = sub.add_parser("verify", help="reproducible-build check: replay the evidence ledger and assert the catalog matches")
+    p_verify.add_argument("--dataset", default=None)
+    p_verify.set_defaults(func=cmd_verify)
 
     p_auto = sub.add_parser("autobuild", help="autonomously build the catalog (Tavily discovery, loop-until-dry)")
     p_auto.add_argument("--capabilities", nargs="*", default=None, help="subset of capability ids (default: all)")

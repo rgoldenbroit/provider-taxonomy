@@ -1,5 +1,8 @@
 # AI Provider Taxonomy
 
+[![CI](https://github.com/rgoldenbroit/provider-taxonomy/actions/workflows/ci.yml/badge.svg)](https://github.com/rgoldenbroit/provider-taxonomy/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **A self-maintaining catalog of what Anthropic, OpenAI & Google ship across every AI capability** — each offering discovered from the live web, grounded to its source, cross-checked against an independent second source, and gated before it ships.
 
 🔗 **Live demo:** https://provider-seed-viewer-240942176969.us-east5.run.app
@@ -13,6 +16,7 @@ The hard part of a catalog like this isn't *displaying* the data — it's keepin
 - **It maintains itself.** A discovery pipeline sweeps the live web per capability, an LLM triages each find, and only records that clear quantitative trust gates are admitted — no hand-curation in the loop.
 - **Every claim is grounded.** A record is admitted only if an independent judge finds the claim quoted *verbatim* on its cited page, then a **second, independent** source confirms existence and lifecycle status. Disagreement is surfaced, not silently resolved.
 - **A deploy gate, not vibes.** The whole catalog is red-teamed before publish; any schema break, eval regression, or critical finding blocks the deploy.
+- **Reproducible & auditable — a "lockfile for facts."** Every page fetch and LLM call is recorded in a committed evidence ledger; `taxo verify` replays it (no creds, no network) and asserts the published catalog is byte-identical to what the evidence re-derives — checked in CI. Each record carries a receipt: the verbatim source quote, the source tier, every gate's score, and the model. Confidence is *derived* from source quality, not asserted. See [`OPERATIONS.md`](OPERATIONS.md).
 - **Capability-anchored model.** Products churn; capabilities don't. A "comparison" is a *query* over a stable spine, not stored data — so a rename touches one field and the taxonomy holds.
 - **Zero-dependency viewer.** One self-contained HTML file (no framework, no build step beyond data injection): an at-a-glance coverage overview, a search/filter/compare explorer, an in-app "How it works", and an "under the hood" panel exposing the live trust metrics. Light/dark, mobile-friendly.
 
