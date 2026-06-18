@@ -24,6 +24,26 @@ OUTPUT = Path(__file__).resolve().parent / "taxonomy.html"
 _MARKER = "/*__APP_DATA__*/{}"
 
 
+def _load_provenance() -> dict:
+    """Per-record receipts from the evidence ledger (the 'why we believe this' trail)."""
+    prov_dir = REPO_ROOT / "evidence" / "provenance"
+    receipts: dict[str, dict] = {}
+    if not prov_dir.exists():
+        return receipts
+    for f in prov_dir.rglob("*.json"):
+        try:
+            rec = json.loads(f.read_text(encoding="utf-8")).get("value") or {}
+        except (json.JSONDecodeError, OSError):
+            continue  # a malformed/unreadable receipt must not break the build
+        if rec.get("record_id"):
+            receipts[rec["record_id"]] = {
+                k: rec.get(k) for k in
+                ("source_tier", "supported", "found_quote", "source_url", "model",
+                 "verified_at", "review_status", "confidence", "lifecycle_status")
+            }
+    return receipts
+
+
 def build(data_path: str | None = None) -> tuple[Path, list]:
     data = load_dataset(data_path)
     issues = validate(data)
@@ -33,6 +53,7 @@ def build(data_path: str | None = None) -> tuple[Path, list]:
         "today": today,
         "intervals": INTERVALS,
         "metrics": dataset_metrics(data),
+        "provenance": _load_provenance(),
         "staleness": {p["id"]: days_overdue(p, today) for p in data.get("products", [])},
         "validation": {
             "valid": not issues,

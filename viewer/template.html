@@ -133,6 +133,9 @@
   #drawer .close { float:right; cursor:pointer; color:var(--muted); font-size:22px; line-height:1; }
   .kv { display:grid; grid-template-columns:120px 1fr; gap:5px 10px; margin:12px 0; font-size:13px; }
   .kv .k { color:var(--muted); }
+  .receipt { background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 12px; margin:8px 0; }
+  .receipt .quote { margin:8px 0; padding:6px 0 6px 12px; border-left:3px solid var(--accent); color:var(--ink); font-style:italic; font-size:13px; }
+  .tier-official{ color:var(--green); } .tier-reputable{ color:var(--blue); } .tier-low{ color:var(--amber); }
   .timeline { border-left:2px solid var(--line); margin:8px 0; padding-left:12px; }
   .ev { margin:8px 0; } .ev .d { color:var(--muted); font-size:12px; } .ev.future .d { color:var(--amber); }
   .overlay { position:fixed; inset:0; background:rgba(10,12,20,.42); backdrop-filter:blur(1px); z-index:15; display:none; } .overlay.open{ display:block; }
@@ -223,6 +226,8 @@ function toggleTheme(){
 /* ---------- data ---------- */
 const APP = /*__APP_DATA__*/{};
 const D = APP.data, today = APP.today, stale = APP.staleness, V = APP.validation, M = APP.metrics;
+const PROV = APP.provenance || {};
+const hostOf = u => { try { return new URL(u).hostname; } catch(e) { return u||''; } };  // (e) URL parse failure → raw string
 const caps = D.capabilities, prods = D.products;
 const capById = Object.fromEntries(caps.map(c=>[c.id,c]));
 const prodById = Object.fromEntries(prods.map(p=>[p.id,p]));
@@ -547,6 +552,24 @@ function axisCompareSection(p){
   return `<h3 class="small muted" style="margin-top:16px">Same axis, other providers — ${esc(cap?.name||axis)}</h3>${rows}`;
 }
 
+/* "why we believe this" — the provenance receipt from the evidence ledger */
+function receiptSection(p){
+  const r = PROV[p.id];
+  if (!r) return '';
+  const tier = r.source_tier || 'low';
+  const sub = r.supported
+    ? `<span style="color:var(--green)">substantiated</span>`
+    : `<span style="color:var(--amber)">unconfirmed by source</span>`;
+  return `<h3 class="small muted" style="margin-top:16px">Why we believe this</h3>
+    <div class="receipt">
+      <div class="row small"><span class="tier-${esc(tier)}" style="font-weight:600">${esc(tier)} source</span>
+        <span class="faint">·</span> ${sub} <span class="faint">·</span> verified ${esc(r.verified_at||'')}</div>
+      ${r.found_quote?`<div class="quote">&ldquo;${esc(r.found_quote)}&rdquo;</div>`:''}
+      <div class="muted small">from <a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(hostOf(r.source_url))}</a>
+        <span class="faint">· judged by ${esc(r.model||'?')} · confidence derived from source tier</span></div>
+    </div>`;
+}
+
 /* ---------- drawer ---------- */
 function openDrawer(id){
   const p = prodById[id]; if(!p) return;
@@ -567,6 +590,7 @@ function openDrawer(id){
       <span class="k">source</span><span><a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">${esc((p.source||{}).url)}</a><br><span class="faint small">verified ${esc((p.source||{}).last_verified)} &middot; ${esc((p.source||{}).confidence)} confidence</span></span>
     </div>
     ${p.scope_note?`<div class="note">${esc(p.scope_note)}</div>`:''}
+    ${receiptSection(p)}
     ${(pred||succ)?`<h3 class="small muted" style="margin-top:14px">lineage</h3><div class="lineage">
         ${pred?`<span class="node" onclick="openDrawer('${pred.id}')">${esc(pred.name)}</span><span class="arrow">&rarr;</span>`:''}
         <span class="node" style="border-color:var(--accent)">${esc(p.name)}</span>
