@@ -39,13 +39,16 @@ class TavilySearch:
             raise RetrievalError(f"Tavily request failed: {exc}") from exc
         return resp.json()
 
-    def search(self, query: str, *, max_results: int = 8) -> list[SearchResult]:
+    def search(self, query: str, *, max_results: int = 8,
+               include_domains: list[str] | None = None) -> list[SearchResult]:
         payload = {
             "api_key": self.api_key,
             "query": query,
             "max_results": max_results,
             "search_depth": self.search_depth,
         }
+        if include_domains:
+            payload["include_domains"] = include_domains   # scope to a provider's official docs
         data = self._post(payload)
         return [
             SearchResult(url=r["url"], title=r.get("title", ""), snippet=(r.get("content") or "")[:300])

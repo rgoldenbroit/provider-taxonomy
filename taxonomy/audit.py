@@ -40,7 +40,7 @@ SEVERITY_ORDER = {"critical": 0, "warning": 1, "info": 2}
 @dataclass(frozen=True)
 class Finding:
     severity: str   # critical | warning | info
-    kind: str       # schema | existence | status | source | staleness | completeness | single_source | node_worthiness
+    kind: str       # schema | existence | status | source | staleness | completeness | single_source | unconfirmed | node_worthiness | coverage_gap
     record_id: str | None
     message: str
 
@@ -67,7 +67,15 @@ def _mechanical_findings(catalog: dict) -> list[Finding]:
 
 
 def _triangulate(record: dict, llm, retrieval) -> Finding | None:
-    """Verify existence + status against an INDEPENDENT second source."""
+    """Confirm an offering against an INDEPENDENT second source.
+
+    Failure to confirm is 'unconfirmed' (a WARNING), never 'doesn't exist': a single
+    page's silence is weak evidence, and the primary source already grounded the record
+    at triage. Inferring non-existence from one source's silence is the same error as
+    inferring absence from an empty cell. Only an OFFICIAL source asserting a real
+    lifecycle CHANGE (sunset/merged/…) is escalated to critical."""
+    if record.get("status") == "absent":
+        return None  # a modeled absence has no existence to triangulate
     name, provider = record.get("name"), record.get("provider")
     primary_host = urlparse((record.get("source") or {}).get("url", "")).netloc
     try:
@@ -83,6 +91,7 @@ def _triangulate(record: dict, llm, retrieval) -> Finding | None:
         page = retrieval.fetch(second.url)
     except RetrievalError:
         return Finding("warning", "single_source", record["id"], f"second source unfetchable: {second.url}")
+    second_official = source_authority(second.url) == "official"
 
     prompt = (f"CLAIM: {provider} has an offering '{name}', currently '{record.get('status')}'.\n\n"
               f"INDEPENDENT PAGE (from {second.url}):\n{page.text[:8000]}\n\n"
@@ -90,12 +99,16 @@ def _triangulate(record: dict, llm, retrieval) -> Finding | None:
     judge = llm.structured(system=_JUDGE_SYSTEM, prompt=prompt, schema=JUDGE_SCHEMA,
                            label=f"audit:{record['id']}")
     if not judge.get("supported"):
-        return Finding("critical", "existence", record["id"],
-                       f"independent source {urlparse(second.url).netloc} does not substantiate '{name}'")
+        # 2nd source is silent → unconfirmed, NOT disproven (the primary already grounded it)
+        return Finding("warning", "unconfirmed", record["id"],
+                       f"not confirmed by independent source {urlparse(second.url).netloc} "
+                       f"(primary grounded it; one page's silence isn't disproof)")
     observed = judge.get("lifecycle_status")
     if observed and observed not in ("unknown", record.get("status")):
         lifecycle_change = {"sunset", "deprecated", "merged", "renamed"}
-        severity = "critical" if {observed, record.get("status")} & lifecycle_change else "warning"
+        # escalate only when an OFFICIAL source asserts a real lifecycle change
+        severity = ("critical" if second_official and {observed, record.get("status")} & lifecycle_change
+                    else "warning")
         return Finding(severity, "status", record["id"],
                        f"status mismatch: record says '{record.get('status')}', "
                        f"{urlparse(second.url).netloc} indicates '{observed}'")
@@ -121,6 +134,33 @@ def _node_worthiness_findings(catalog: dict, llm) -> list[Finding]:
     return findings
 
 
+def _coverage_findings(catalog: dict) -> list[Finding]:
+    """Machine-flag every asymmetric cell: a provider with no record on an axis where
+    a peer is present, and no grounded *absence* either → it's UNKNOWN, a verification
+    target. This is the "checking" done by the engine, not by a human reading the grid."""
+    findings: list[Finding] = []
+    providers = sorted({p["provider"] for p in catalog.get("products", [])})
+    present: dict[str, set[str]] = {}
+    absent: dict[str, set[str]] = {}
+    for p in catalog.get("products", []):
+        if p.get("status") == "absent":
+            absent.setdefault(p["primary_capability_id"], set()).add(p["provider"])
+        else:
+            for cap in p.get("capability_ids", []):
+                present.setdefault(cap, set()).add(p["provider"])
+    for c in catalog.get("capabilities", []):
+        cap = c["id"]
+        pres = present.get(cap, set())
+        if cap == "unclassified" or not pres:
+            continue   # a wholly-empty axis isn't an asymmetry; nobody claims coverage
+        for prov in providers:
+            if prov in pres or prov in absent.get(cap, set()):
+                continue   # present, or a grounded absence — both are resolved
+            findings.append(Finding("info", "coverage_gap", None,
+                f"[{cap}] not yet verified for {prov} (present: {', '.join(sorted(pres))}) — verification target"))
+    return findings
+
+
 def _completeness_findings(catalog: dict, llm) -> list[Finding]:
     findings: list[Finding] = []
     cap_name = {c["id"]: c["name"] for c in catalog.get("capabilities", [])}
@@ -138,6 +178,7 @@ def audit_catalog(catalog: dict, llm=None, retrieval=None, *,
                   triangulate: bool = True, completeness: bool = True,
                   node_worthiness: bool = True) -> list[Finding]:
     findings = _mechanical_findings(catalog)
+    findings += _coverage_findings(catalog)   # deterministic; the engine flags asymmetric/unknown cells
     if llm is not None and triangulate and retrieval is not None:
         for p in catalog.get("products", []):
             f = _triangulate(p, llm, retrieval)

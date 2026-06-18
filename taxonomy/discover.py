@@ -132,7 +132,7 @@ def _extract_prompt(provider: str, capability: dict, pages: list) -> str:
               f"CAPABILITY: {capability['name']} — {capability['description']}",
               "PAGES:"]
     for page in pages:
-        blocks.append(f"\n[source_url: {page.url}]\n{page.text}")
+        blocks.append(f"\n[source_url: {page.url}]\n{page.text[:16000]}")  # cap: a giant page must not blow context
     blocks.append("\nReturn the offerings as structured JSON.")
     return "\n".join(blocks)
 

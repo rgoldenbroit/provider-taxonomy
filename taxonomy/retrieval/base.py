@@ -36,7 +36,8 @@ def content_hash(text: str) -> str:
 
 class RetrievalProvider(ABC):
     @abstractmethod
-    def search(self, query: str, *, max_results: int = 8) -> list[SearchResult]:
+    def search(self, query: str, *, max_results: int = 8,
+               include_domains: list[str] | None = None) -> list[SearchResult]:
         ...
 
     @abstractmethod
@@ -51,8 +52,9 @@ class CompositeRetrieval(RetrievalProvider):
         self._searcher = searcher
         self._fetcher = fetcher
 
-    def search(self, query: str, *, max_results: int = 8) -> list[SearchResult]:
-        return self._searcher.search(query, max_results=max_results)
+    def search(self, query: str, *, max_results: int = 8,
+               include_domains: list[str] | None = None) -> list[SearchResult]:
+        return self._searcher.search(query, max_results=max_results, include_domains=include_domains)
 
     def fetch(self, url: str) -> FetchedPage:
         return self._fetcher.fetch(url)

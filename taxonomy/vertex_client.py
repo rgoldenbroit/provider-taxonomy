@@ -120,9 +120,23 @@ def _first_text(message: Any) -> str:
     return ""
 
 
+def _is_transient(exc: Exception) -> bool:
+    """Worth retrying: timeouts, dropped connections, 429/5xx. NOT 400s (e.g. context
+    overflow) or auth errors, which should fail fast."""
+    import anthropic  # lazy: offline path never imports the SDK
+    import httpx
+    if isinstance(exc, (httpx.TimeoutException, httpx.TransportError,
+                        anthropic.APITimeoutError, anthropic.APIConnectionError)):
+        return True
+    if isinstance(exc, anthropic.APIStatusError):
+        return getattr(exc, "status_code", None) in (408, 409, 425, 429, 500, 502, 503, 504)
+    return False
+
+
 class VertexLLM(LLMClient):
     def __init__(self, *, project_id: str | None, region: str, model: str,
-                 fallback_model: str | None = None, max_tokens: int = 8000):
+                 fallback_model: str | None = None, max_tokens: int = 8000,
+                 max_retries: int = 3, backoff: float = 2.0):
         if not project_id:
             raise LLMError("ANTHROPIC_VERTEX_PROJECT_ID is not set; cannot reach Vertex.")
         try:
@@ -137,6 +151,8 @@ class VertexLLM(LLMClient):
         self.model = model
         self.fallback_model = fallback_model
         self.max_tokens = max_tokens
+        self._max_retries = max_retries
+        self._backoff = backoff
 
     # Structured output via a forced tool call, not output_config.format: the
     # structured_outputs feature is commonly blocked by the Vertex partner-model
@@ -159,8 +175,18 @@ class VertexLLM(LLMClient):
             }]
             kwargs["tool_choice"] = {"type": "tool", "name": self._TOOL_NAME}
 
-        with self._client.messages.stream(**kwargs) as stream:
-            message = stream.get_final_message()
+        message = None
+        for attempt in range(self._max_retries + 1):
+            try:
+                with self._client.messages.stream(**kwargs) as stream:
+                    message = stream.get_final_message()
+                break
+            except Exception as exc:  # retry transient infra failures; re-raise everything else
+                if attempt < self._max_retries and _is_transient(exc):
+                    import time
+                    time.sleep(self._backoff * (2 ** attempt))
+                    continue
+                raise
 
         if getattr(message, "stop_reason", None) == "refusal":
             # Vertex has no server-side fallback — retry once on the fallback model.

@@ -24,6 +24,7 @@ from .vertex_client import LLMClient
 
 _AS_OF_DATE = "2026-06-15"
 _N_SAMPLES = 3
+_MAX_PAGE_CHARS = 20000   # cap page text in the judge prompt; a pathological page must not blow the context window
 _REVIEWABLE = ("candidate", "needs_review")
 _VALID_SURFACES = {"web", "desktop", "mobile", "terminal", "ide", "extension", "cloud", "api"}
 
@@ -187,7 +188,7 @@ def _judge_grounding(record: dict, retrieval: RetrievalProvider, llm: LLMClient)
     prompt = (
         f"CLAIM: {record.get('provider')} offers {record.get('name')} "
         f"({record.get('scope_note', '')}).\n\n"
-        f"PAGE (fetched from {url}):\n{page.text}\n\n"
+        f"PAGE (fetched from {url}):\n{page.text[:_MAX_PAGE_CHARS]}\n\n"
         "Does the page substantiate the claim? Return structured JSON."
     )
     judge = llm.structured(system=_JUDGE_SYSTEM, prompt=prompt,

@@ -58,8 +58,9 @@ class HttpFetch(RetrievalProvider):
         self.timeout = timeout
         self.user_agent = user_agent
 
-    def search(self, query: str, *, max_results: int = 8) -> list[SearchResult]:
-        raise NotImplementedError("live search is the Vertex web_search tool (Phase 2)")
+    def search(self, query: str, *, max_results: int = 8,
+               include_domains: list[str] | None = None) -> list[SearchResult]:
+        raise NotImplementedError("HttpFetch is fetch-only; use Tavily for search")
 
     def _cache_path(self, url: str) -> Path:
         return self.cache_dir / f"{hashlib.sha256(url.encode()).hexdigest()}.json"

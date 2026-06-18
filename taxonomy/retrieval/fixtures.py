@@ -29,7 +29,8 @@ class FixtureRetrieval(RetrievalProvider):
         self._searches = _load(root / "searches.json")
         self._pages = _load(root / "pages.json")
 
-    def search(self, query: str, *, max_results: int = 8) -> list[SearchResult]:
+    def search(self, query: str, *, max_results: int = 8,
+               include_domains: list[str] | None = None) -> list[SearchResult]:   # fixtures ignore domain scoping
         results = self._searches.get(query)
         if results is None:
             raise RetrievalMissing(f"no fixture search recorded for query {query!r}")

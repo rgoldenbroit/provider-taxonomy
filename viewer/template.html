@@ -100,6 +100,7 @@
   .note { color:var(--muted); font-size:12.5px; margin-top:6px; }
   .crosshome { font-size:11px; color:var(--amber); margin-top:4px; }
   .parentlink { font-size:11px; color:var(--muted); margin-top:4px; }
+  .featurehint { font-size:11px; color:var(--accent); margin-top:5px; font-weight:600; }
 
   /* ---------- tables ---------- */
   .tablewrap { overflow-x:auto; }
@@ -159,6 +160,9 @@
   .cov-pill { display:inline-flex; align-items:center; gap:6px; font-size:12px; padding:4px 9px; border-radius:999px; border:1px solid var(--line); background:var(--panel); cursor:pointer; box-shadow:var(--shadow); transition:transform .12s,border-color .12s,box-shadow .12s; }
   .cov-pill:hover { border-color:var(--accent); transform:translateY(-1px); box-shadow:var(--shadow-lift); }
   .cov-pill.absent { border-style:dashed; color:var(--faint); cursor:default; background:none; box-shadow:none; }
+  .cov-pill.unknown { border-style:dashed; border-color:color-mix(in srgb,var(--amber) 45%,var(--line)); color:var(--amber); background:none; box-shadow:none; cursor:help; }
+  .cell.empty.unknown { border-style:dashed; border-color:color-mix(in srgb,var(--amber) 40%,var(--line)); color:var(--amber); font-size:12px; }
+  .legmark { display:inline-block; width:13px; text-align:center; margin-right:4px; font-weight:700; }
 
   /* ---------- explore toolbar ---------- */
   .toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; }
@@ -266,15 +270,19 @@ function card(p, cap, opts={}){
     <div class="chips"><span class="pill-kind">${p.kind}</span>${surfaces(p)}</div>
     <div class="row small">${staleFlag(p)} ${fluxFlag(p)}</div>
     ${cross}${parentLink}
+    ${(()=>{const n=prods.filter(q=>q.parent_id===p.id).length; return n?`<div class="featurehint">${n} feature${n>1?'s':''} &rsaquo;</div>`:'';})()}
   </div>`;
 }
 
 /* render a provider's offerings within a capability, nesting children that share the cell.
    `only` (optional Set of ids) filters to matching offerings — used by Explore. */
 function cell(cap, provider, only){
-  let items = (byCap[cap]||[]).filter(p=>p.provider===provider);
-  if (only) items = items.filter(p=>only.has(p.id));
-  if (!items.length) return `<div class="cell empty">&mdash;</div>`;
+  const all = (byCap[cap]||[]).filter(p=>p.provider===provider);
+  const items = only ? all.filter(p=>only.has(p.id)) : all;
+  if (!items.length)
+    return all.length                                   // records exist but filtered out → "—"; none at all → unknown
+      ? `<div class="cell empty">&mdash;</div>`
+      : `<div class="cell empty unknown" title="not yet verified — not a claim that this provider lacks it">? not verified</div>`;
   const ids = new Set(items.map(p=>p.id));
   const tops = items.filter(p => !(p.parent_id && ids.has(p.parent_id)));
   let html = '';
@@ -428,7 +436,8 @@ function covPill(p){
 }
 function covCell(cap, provider){
   const items = (byCap[cap]||[]).filter(p=>p.provider===provider);
-  if (!items.length) return `<div class="cov-cell"><span class="faint small">&mdash;</span></div>`;
+  if (!items.length)   // no record at all → unknown, NOT a claim of absence
+    return `<div class="cov-cell"><span class="cov-pill unknown" title="not yet verified — not a claim that this provider lacks it">? not verified</span></div>`;
   const ids = new Set(items.map(p=>p.id));
   const tops = items.filter(p => !(p.parent_id && ids.has(p.parent_id)));   // children show in the drawer
   return `<div class="cov-cell">${tops.map(covPill).join('')}</div>`;
@@ -465,10 +474,11 @@ function viewOverview(){
       <i><span class="pdot" style="background:var(--green)"></span>active</i>
       <i><span class="pdot" style="background:var(--amber)"></span>preview</i>
       <i><span class="pdot" style="background:var(--red)"></span>sunset</i>
-      <i><span class="pdot" style="background:var(--grey)"></span>none</i>
+      <i><span class="legmark" style="color:var(--grey)">&#9711;</span>none (verified)</i>
+      <i><span class="legmark" style="color:var(--amber)">?</span>not verified</i>
     </div>
   </div>
-  <div class="muted small" style="margin:2px 0 4px">Each pill is a shipping offering, coloured by lifecycle status. Click any to see it and its cross-provider rivals.</div>
+  <div class="muted small" style="margin:2px 0 4px">Each pill is a shipping offering, coloured by lifecycle status. <strong>Empty cells read <span style="color:var(--amber)">? not verified</span></strong> — still being checked, <em>not</em> a confirmed "none". Click any offering for its cross-provider rivals.</div>
   ${cov}`;
 }
 
@@ -508,11 +518,39 @@ function viewAbout(){
   </div>`;
 }
 
+/* features under a product, grouped by axis */
+function featuresSection(p){
+  const kids = prods.filter(q => q.parent_id === p.id);
+  if (!kids.length) return '';
+  const byAxis = {}; kids.forEach(k => (byAxis[k.primary_capability_id] ||= []).push(k));
+  let html = `<h3 class="small muted" style="margin-top:16px">Features (${kids.length})</h3>`;
+  for (const axis of Object.keys(byAxis)){
+    html += `<div class="muted small" style="margin-top:6px">${esc(capById[axis]?.name||axis)}</div>`;
+    html += byAxis[axis].map(k=>`<div class="card" style="border-left-color:${provVar(k.provider)}" onclick="openDrawer('${k.id}')"><div class="row"><span class="name">${esc(k.name)}</span> ${statusBadge(k)}${relTag(k)}</div></div>`).join('');
+  }
+  return html;
+}
+/* honest cross-provider comparison on this offering's axis: present / unknown / grounded-none per provider */
+function axisCompareSection(p){
+  const axis = p.primary_capability_id, cap = capById[axis];
+  let rows = '';
+  for (const prov of providers){
+    if (prov === p.provider) continue;
+    const present = (byCap[axis]||[]).filter(q=>q.provider===prov && q.status!=='absent' && q.id!==p.id);
+    if (present.length){
+      rows += present.map(q=>`<div class="card" style="border-left-color:${provVar(prov)}" onclick="openDrawer('${q.id}')"><div class="row"><span class="name">${esc(q.name)}</span> <span class="pill-kind">${esc(prov)}</span>${statusBadge(q)}${relTag(q)}</div></div>`).join('');
+    } else {
+      const isAbsent = (byCap[axis]||[]).some(q=>q.provider===prov && q.status==='absent');
+      rows += `<div class="card" style="border-left-color:${provVar(prov)};cursor:default"><div class="row"><span class="name muted">${esc(prov)}</span> ${isAbsent?'<span class="badge b-absent">&#9711; none</span>':'<span class="cov-pill unknown">? not verified</span>'}</div></div>`;
+    }
+  }
+  return `<h3 class="small muted" style="margin-top:16px">Same axis, other providers — ${esc(cap?.name||axis)}</h3>${rows}`;
+}
+
 /* ---------- drawer ---------- */
 function openDrawer(id){
   const p = prodById[id]; if(!p) return;
   const dr = document.getElementById('drawer');
-  const equivalents = (byCap[p.primary_capability_id]||[]).filter(q=>q.id!==p.id && q.provider!==p.provider);
   const pred = p.predecessor_id && prodById[p.predecessor_id], succ = p.successor_id && prodById[p.successor_id];
   const lifecycle = (p.lifecycle||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
   dr.innerHTML = `
@@ -536,8 +574,8 @@ function openDrawer(id){
     ${lifecycle.length?`<h3 class="small muted" style="margin-top:14px">history</h3><div class="timeline">${lifecycle.map(e=>`
         <div class="ev ${e.date>today?'future':''}"><div class="d">${esc(e.date)} &middot; ${esc(e.event)}${e.date>today?' (scheduled)':''}</div>
         <div>${esc(e.note)} ${e.source_url?`<a href="${esc(e.source_url)}" target="_blank" rel="noopener">src</a>`:''}</div></div>`).join('')}</div>`:''}
-    ${equivalents.length?`<h3 class="small muted" style="margin-top:14px">cross-provider equivalents (${esc(capById[p.primary_capability_id]?.name)})</h3>
-        ${equivalents.map(q=>`<div class="card" style="border-left-color:${provVar(q.provider)}" onclick="openDrawer('${q.id}')"><div class="row"><span class="name">${esc(q.name)}</span> <span class="pill-kind">${esc(q.provider)}</span>${statusBadge(q)}${relTag(q)}</div></div>`).join('')}`:''}
+    ${featuresSection(p)}
+    ${axisCompareSection(p)}
   `;
   dr.classList.add('open'); document.getElementById('overlay').classList.add('open');
 }

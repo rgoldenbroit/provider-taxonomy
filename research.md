@@ -1,70 +1,50 @@
-# Research — UX review of the AI Provider Taxonomy viewer
+# Research — reliable coverage without manual intervention
 
-*(Supersedes the original build-phase research, which is preserved in git history at the initial commit. This doc is the active research focus: diagnosing the current UX and steering an improvement plan.)*
+*(Supersedes the feature-depth research; the feature work continues, but on top of this reliability fix.)*
 
-## What I reviewed
+## The problem (you surfaced it; it's the central one)
 
-Every surface of the deployed viewer (`viewer/template.html`, live at the Cloud Run URL), against the stated goals:
-Pivot · Providers · Lineage & history · Staleness · Intake · How it works · the detail drawer. Cross-checked against the original goals in the build research and against the three portfolio goals you named: **look great · offer practical help · demonstrate ability.**
+Two failures, one root cause:
+1. **A grounding miss is rendered identically to a real absence.** Antigravity shows empty for managed agents → reads as "Google doesn't do managed agents." But it clearly does (`ai.google.dev/gemini-api/docs/custom-agents`). The system **infers absence from silence**.
+2. **It needed a human to notice the MCP gap and ask for a "second pass."** A self-maintaining catalog that must be *prompted* to be complete isn't self-maintaining.
 
-## The goals, restated
+Root cause: the engine has only two states — *found* / *not-found* — and treats not-found as absent. Discovery is single-shot (one query → one source), so misses are common, and nothing automatically retries the gaps.
 
-- **Primary audience (assumed): a portfolio visitor** — recruiter, hiring manager, or peer engineer who lands for 30–90 seconds. They want to (a) instantly grasp what this is and why it's impressive, (b) interact with something satisfying, (c) sense the engineering depth.
-- **Secondary audience: someone with a real question** — "what's OpenAI's answer to Claude Code?", "who ships a browser agent?", "what got sunset recently?"
-- The original build goals were **engine-first**: discovery, triage, trust gates, evals. The viewer was specced as a faithful window onto *all* of that engine state.
+## Three concrete root causes
 
-## Core diagnosis
+1. **No "unknown" state.** present vs absent only; "not yet verified" collapses into absent → misrepresentation.
+2. **Single-shot, product-narrow discovery.** One query, one source. My Google miss is the tell: I searched *"Antigravity managed agents"* — but managed agents is a **Gemini API** feature, not an Antigravity-the-IDE feature, and I never searched Google's official docs. Wrong parent + wrong source = false absence.
+3. **No built-in completeness loop.** The "second pass" was manual; gaps don't auto-trigger deeper verification.
 
-**The viewer is an operator's console wearing a product's clothes.** It was built to expose the maintenance engine, so its information architecture mirrors the engine's internals — not a visitor's intent. Concretely, of six top-level tabs, only one (**Pivot**) serves the primary audience well:
+## The design — three principles
 
-| Tab | Who it's actually for | Verdict |
-|---|---|---|
-| **Pivot** (capability × provider) | Everyone — this is the core idea, made visible | **Keep & elevate.** The strongest asset. |
-| **Providers** | Browsers | Redundant — same data as Pivot, transposed; adds little. |
-| **Lineage & history** | Maintainers | Half-empty: the "rename/sunset/merge" section has **no chains** in current data; only the "in flux" table populates. Reads as scaffolding. |
-| **Staleness** | **Operators only** | A re-verify queue ("overdue −89d"). A visitor does not care which rows are due for re-checking. |
-| **Intake** | **Operators only** | A triage queue showing 1 candidate. Pure back-office. |
-| **How it works** | Everyone (new) | Good — but it's the *last* tab, so the engineering story is the easiest thing to miss. |
+### 1. Never infer absence from silence (three-state model)
+- **present** — a grounded feature record.
+- **absent** — a grounded *absence* record: positively verified the provider doesn't offer it.
+- **unknown** — not yet verified. A **distinct** visual state ("not yet verified — not a confirmed absence"), never shown as a clean blank/"none". Stays in the work queue.
 
-So the IA conflates the person *maintaining* the taxonomy with the person *consuming* it. The maintainer's tools dominate the navigation; the consumer's "wow" and "useful task" are underserved.
+Absence must be **earned with evidence**, exactly like presence. An empty cell defaults to *unknown*, never *absent*.
 
-## Specific problems (ranked by impact on the goals)
+### 2. Robust-by-construction discovery (axis-first · official-source-first · multi-query)
+- **Axis-first, not product-first.** For each (provider × axis), find the offering *wherever it lives* and attach it to the correct parent (Google managed agents → Gemini API, not Antigravity). The cross-provider comparison is still by axis.
+- **Official docs first.** Scoped queries against the provider's own domains (`docs.anthropic.com`, `platform/developers.openai.com`, `ai.google.dev`/`cloud.google.com`) plus general web, in several phrasings. Ground against the authoritative source — this is what finds `custom-agents`.
 
-1. **Operator-centric IA.** 5 of 6 tabs are back-office or redundant. No clear "main thing," no hierarchy, no obvious starting point. A visitor doesn't know where to look.
-2. **No wow, no delight.** It's a competent dark data-table. No hero moment, no signature visual (e.g. an at-a-glance coverage map), no interactive satisfaction — no **search**, no **filter**, no **compare**, no hover richness, no motion. The pivot, the best asset, is presented flatly.
-3. **The most useful task is buried.** "Compare provider X vs Y on capability Z" / "find the equivalent of product P" is the real practical value. The drawer's **cross-provider equivalents** is the killer feature — but it's hidden behind a click and undiscoverable, and there's no way to *focus* the pivot (no search/filter/compare).
-4. **Engine internals leak into the consumer UI.** Confidence dots, the header's `confirmed:27 needs_review:1`, the schema/provenance/staleness metric bar, and raw triage notes in the drawer ("grounding 1.00, classification 1.00"). These *prove rigor* — an asset for the "demonstrate ability" goal — but presented raw they read as clutter. They belong in a narrated trust story, not bleeding onto every screen.
-5. **Thin / half-empty views** (Lineage's main section, Intake's 1 row, Staleness all-fresh) make a finished system feel like scaffolding.
-6. **Aesthetic is generic and unmemorable.** GitHub-dark is professional but says nothing; provider brand colors are defined in CSS yet barely used as structure; typography is purely functional; no light mode; mobile (where many LinkedIn clicks land) is an unverified 4-column grid likely to be cramped.
+### 3. The completeness loop is built in (no human "second pass")
+- After the first sweep, a completeness critic **auto-targets** every **unknown** cell and every **asymmetric** cell (peers present, this provider not) with deeper, official-docs-scoped queries — **looped until a full round finds nothing new** (loop-until-dry).
+- A cell only settles to **absent** after the loop exhausts *and* there's positive evidence of non-offering; otherwise it stays **unknown** (low confidence, re-verify scheduled). The retry is intrinsic, not prompted.
 
-## What's genuinely good (keep)
+## The gate enforces honesty automatically (the "checking" becomes machine-run)
+- Audit **blocks** any cell shown as a clean absence without a grounded absence record → kills the misrepresentation at the gate.
+- Audit flags **asymmetric coverage** (peers have it, this provider is unknown) → an automatic verification target fed back into the loop, not a human task.
+- Ships with unknowns **honestly marked**; never ships a false absence.
 
-- The **capability-anchored pivot** — the core concept, correctly the default.
-- The **cross-provider equivalents** in the drawer — needs promotion, not replacement.
-- The **lifecycle timeline** (renders future *scheduled* events) — a nice detail.
-- The new **How it works** view — the right idea; just positioned and styled as an afterthought.
-- The underlying rigor (gates/evals) — the differentiator; needs *narration*, not exposure.
+## Builds on what already exists (evolution, not rebuild)
+`rank.completeness_critic`, `autobuild`'s gap-chasing loop, `audit.py`'s triangulation + official-source authority, the absent-record convention, and the staleness re-verify schedule. This wires them into one reliable loop with an explicit *unknown* state.
 
-## The strategic fork (this is what I need your call on)
+## What changes vs the prior plan
+- **Add the `unknown` state** (data + UI) — the misrepresentation fix, and the highest-priority change.
+- **Replace single-shot `ground_features`** with axis-first, official-source-first, multi-query discovery + the completeness loop.
+- **Gate** flags false-absences and asymmetric gaps.
+- **Keep the 14 grounded-present features** (verified true); the loop fills the rest or marks them honestly *unknown*.
 
-"Improve the UX" forks three ways, and the right plan depends entirely on which you want:
-
-1. **Portfolio-first** — collapse the operator views, lead with a polished overview + one killer interactive view (compare/search), turn the engineering into a *narrated* feature, add delight. Optimizes *look great* + *demonstrate ability*; practical help is a demo.
-2. **Product-first** — make it the best "AI-provider capability tracker": strong search/filter/compare, a "what changed recently" feed, broaden coverage, keep operator views but make them shine. Optimizes *practical help*; portfolio value follows from it being genuinely good.
-3. **Layered (my lean)** — a polished consumer **front door** (hero overview + a signature interactive compare/search) with the engine/trust/operator views demoted to a clearly-labelled **"under the hood"** area. Serves all three goals: front door = *look great*, compare/search = *practical help*, narrated engine = *demonstrate ability* — and it reframes the existing operator work as **evidence of rigor** instead of deleting it.
-
-## My recommended direction (for your approval)
-
-**Direction 3 (layered), with a deliberate visual upgrade.** Roughly:
-- A **front door**: a real hero, an at-a-glance coverage visual, and immediate orientation.
-- One **signature interactive view**: focused compare/search over the pivot, with cross-provider equivalence promoted to a first-class, discoverable action.
-- **Demote** Staleness/Intake/Lineage into a single "under the hood / how it's maintained" area that *shows off* the trust machinery as a feature.
-- A **design pass**: brand-color structure, typography/spacing, motion, mobile-first responsiveness, and possibly a light mode.
-
-## Open questions blocking the plan
-
-1. **Audience priority** — portfolio visitor, real practitioner, or both equally?
-2. **What you dislike most** — so I weight the fixes to your gut, not just my diagnosis.
-3. **Appetite** — a focused re-architecture of the front door (keeping the engine views as "under the hood"), a lighter polish pass, or a full redesign?
-
-→ Once you answer, I'll write a concrete `plan.md` (phased, with mockups for the new views) and stop for your approval before changing anything.
+→ This revises `plan.md`. On approval I'll rewrite the plan around these three principles and stop again before building.

@@ -110,6 +110,85 @@
       ]
     },
     {
+      "id": "managed-agent-runtime",
+      "tier": "developer_platform",
+      "name": "Managed agent runtime",
+      "description": "Provider-hosted execution of agents: the provider runs the agent loop and sandboxes its tools, instead of you self-hosting.",
+      "aliases": [
+        "managed agents",
+        "hosted agents",
+        "agent runtime"
+      ]
+    },
+    {
+      "id": "mcp-connectors",
+      "tier": "developer_platform",
+      "name": "MCP & connectors",
+      "description": "Model Context Protocol support: hosted MCP servers, connector registries, and managed tool connectors.",
+      "aliases": [
+        "MCP",
+        "Model Context Protocol",
+        "connectors",
+        "hosted MCP"
+      ]
+    },
+    {
+      "id": "agent-memory",
+      "tier": "developer_platform",
+      "name": "Agent memory",
+      "description": "Persistent, cross-session memory an agent can read and write across runs.",
+      "aliases": [
+        "memory",
+        "persistent memory",
+        "agent memory"
+      ]
+    },
+    {
+      "id": "code-execution-sandbox",
+      "tier": "developer_platform",
+      "name": "Code execution & sandbox",
+      "description": "Server-side code execution in an isolated sandbox for agent actions.",
+      "aliases": [
+        "sandbox",
+        "code interpreter",
+        "code execution"
+      ]
+    },
+    {
+      "id": "agent-evals-observability",
+      "tier": "developer_platform",
+      "name": "Agent evals & observability",
+      "description": "Tracing, evaluation, and monitoring of agent runs.",
+      "aliases": [
+        "evals",
+        "observability",
+        "tracing",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "guardrails-safety",
+      "tier": "developer_platform",
+      "name": "Guardrails & safety",
+      "description": "Policy and safety controls on an agent's inputs, outputs, and actions.",
+      "aliases": [
+        "guardrails",
+        "safety controls",
+        "policy"
+      ]
+    },
+    {
+      "id": "subagents-orchestration",
+      "tier": "developer_platform",
+      "name": "Subagents & orchestration",
+      "description": "Spawning and coordinating multiple agents / subagents within a single task.",
+      "aliases": [
+        "subagents",
+        "multi-agent",
+        "orchestration"
+      ]
+    },
+    {
       "id": "unclassified",
       "tier": "uncategorized",
       "name": "Unclassified (intake)",
@@ -860,7 +939,7 @@
         "mobile",
         "web"
       ],
-      "status": "active",
+      "status": "preview",
       "review_status": "confirmed",
       "scope_note": "",
       "lifecycle": [
@@ -871,9 +950,9 @@
         }
       ],
       "source": {
-        "url": "https://www.unite.ai/openclaw-vs-claude-code-remote-control-agents/",
+        "url": "https://docs.anthropic.com/en/docs/claude-code/remote-control",
         "last_verified": "2026-06-15",
-        "confidence": "high"
+        "confidence": "medium"
       },
       "parent_id": "anthropic-claude-code"
     },
@@ -903,9 +982,9 @@
         }
       ],
       "source": {
-        "url": "https://www.firecrawl.dev/blog/best-ai-coding-agents",
+        "url": "https://developers.openai.com/codex/cloud",
         "last_verified": "2026-06-15",
-        "confidence": "high"
+        "confidence": "medium"
       },
       "parent_id": "openai-codex"
     },
@@ -964,6 +1043,651 @@
       "source": {
         "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
         "last_verified": "2026-06-16",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-managed-agent-runtime",
+      "name": "Claude Code managed agents",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "managed-agent-runtime"
+      ],
+      "primary_capability_id": "managed-agent-runtime",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "beta",
+      "review_status": "confirmed",
+      "parent_id": "anthropic-claude-code",
+      "scope_note": "# Claude Managed Agents: complete guide to building production AI agents (2026). ### Claude Managed Agents is now in public beta. On April 8, 2026, Anthropic launched **Claude Managed Agents** in public beta. If you [build with AI](http://theaicorner1.substack.com/p/how-to-build-",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Managed Agents is Anthropic's provider-hosted execution offering where Anthropic runs the agent loop and sandboxes tools rather than the developer self-hosting \u2014 a direct fit for managed-agent-runtime. It is pr"
+        }
+      ],
+      "source": {
+        "url": "https://anthropic.com/news/finance-agents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-mcp-connectors",
+      "name": "Claude Code MCP & connectors",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "anthropic-claude-code",
+      "scope_note": "1.   [01 Verification Update](https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol#verification-update). 2.   [02 Verified Adoption Snapshot](https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol#verified-adopti",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering is Claude Code's Model Context Protocol support and connector integrations, which maps directly to the mcp-connectors capability. It is a feature/sub-product of the Claude Code product (parent: anthropic"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-agent-memory",
+      "name": "Claude Code memory",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "agent-memory"
+      ],
+      "primary_capability_id": "agent-memory",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "anthropic-claude-code",
+      "scope_note": "# Anthropic brings persistent memory to Claude Managed Agents in public beta. Claude Managed Agents memory stores interface showing Scout Memory active session in the Claude Console. ***The Claude Console showing an active memory store for a Scout inbox agent, with user preferenc",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering provides persistent, cross-session memory stores for Claude Managed Agents, directly matching agent-memory. It is a feature of the managed agent runtime (memory stores shown in the Claude Console for man"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-code-execution-sandbox",
+      "name": "Claude Code sandbox",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "code-execution-sandbox"
+      ],
+      "primary_capability_id": "code-execution-sandbox",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "anthropic-claude-code",
+      "scope_note": "We recently built Claude Code auto mode, which [automates safer approvals](https://www.anthropic.com/engineering/claude-code-auto-mode) in order to reduce this approval fatigue. At Anthropic, we\u2019ve seen Claude models [\u201chelpfully\u201d escape a sandbox](https://red.anthropic.com/2026/m",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code sandbox is the isolated execution environment in which Claude Code runs agent-initiated commands/code, tied to auto mode for safer approvals. This is squarely a code execution & sandbox feature of the Clau"
+        }
+      ],
+      "source": {
+        "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-subagents-orchestration",
+      "name": "Claude Code subagents",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "anthropic-claude-code",
+      "scope_note": "Claude code multi-agent orchestration. # Multi-agent orchestration for Claude Code in 2026. When your task complexity exceeds what a single Claude Code session can handle, try your hand at a multi-agent orchestrator: Claude's built-in Agent Teams, Gas Town, and Multiclaude. Runni",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code subagents is a multi-agent orchestration feature of Claude Code, enabling spawning and coordinating multiple subagents within a task. This maps directly to subagents-orchestration. It is a feature/sub-prod"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/pt/docs/claude-code/sub-agents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-codex-managed-agent-runtime",
+      "name": "Codex managed agents",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "managed-agent-runtime"
+      ],
+      "primary_capability_id": "managed-agent-runtime",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "preview",
+      "review_status": "confirmed",
+      "parent_id": "openai-codex",
+      "scope_note": "# Amazon Bedrock now offers OpenAI models, Codex, and Managed Agents (Limited Preview). AWS and OpenAI are expanding their partnership to bring frontier\u00a0intelligence to the\u00a0infrastructure millions of organizations already trust. Today,\u00a0we\u2019re\u00a0bringing those together\u00a0with\u00a0three new",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex managed agents on Amazon Bedrock are provider/platform-hosted execution of Codex coding agents \u2014 the agent loop and tooling are run as a managed runtime rather than self-hosted, fitting managed-agent-runtime dir"
+        }
+      ],
+      "source": {
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/bedrock-openai-models-codex-managed-agents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-codex-agent-memory",
+      "name": "Codex memory",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "agent-memory"
+      ],
+      "primary_capability_id": "agent-memory",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "openai-codex",
+      "scope_note": "# Adding Persistent Memory to OpenAI Codex with Hindsight. ## The Problem: Codex Has No Persistent Memory\u200b. It's capable and fast \u2014 but it has no memory. You re-establish this context at the start of every session, either by explaining it directly or by pointing at an `AGENTS.md`",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering (via Hindsight) adds persistent, cross-session memory to OpenAI Codex, solving the problem of re-establishing context every session. That is squarely the agent-memory capability \u2014 persistent memory an ag"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex/memories",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-codex-code-execution-sandbox",
+      "name": "Codex sandbox",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "code-execution-sandbox"
+      ],
+      "primary_capability_id": "code-execution-sandbox",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "openai-codex",
+      "scope_note": "# OpenAI Codex Guide \u2014 AI Coding Agent in ChatGPT (2026). **OpenAI Codex (2026) is an autonomous cloud-based coding agent built directly into ChatGPT.** You describe a task in plain English, Codex clones your GitHub repository into a sandboxed environment, writes code across mult",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Codex sandbox is the isolated server-side environment where the Codex agent clones the repo and executes code. This is precisely the code-execution-sandbox capability \u2014 provider-hosted isolated execution for agent"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex/concepts/sandboxing",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-codex-guardrails-safety",
+      "name": "Codex guardrails",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "guardrails-safety"
+      ],
+      "primary_capability_id": "guardrails-safety",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "openai-codex",
+      "scope_note": "OpenAI\u2019s Codex safety post turns coding-agent adoption into a control system: sandboxing, approvals, network policy, credentials, and telemetry. OpenAI's May 8, 2026 safety post turns OpenAI Codex into an enterprise control question: where can the agent act, when must it ask, whi",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This is a safety/control framework for the Codex coding agent \u2014 sandboxing, approvals, network policy, credentials, and telemetry \u2014 which is precisely the guardrails-safety capability (policy and safety controls on an"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-codex-subagents-orchestration",
+      "name": "Codex subagents",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "openai-codex",
+      "scope_note": "A practical breakdown of OpenAI Codex subagents in 2026: what OpenAI actually shipped, how to use them, where they create real wins, where they only add noise, and how they affect limits, credits, and speed. Editorial cover for a blog about OpenAI Codex subagents and parallel age",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex subagents is a feature of OpenAI Codex that lets the coding agent spawn and coordinate multiple subagents to work on tasks in parallel within a single task \u2014 a direct match for the subagents-orchestration capabi"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex/subagents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "google-antigravity-code-execution-sandbox",
+      "name": "Antigravity sandbox",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "code-execution-sandbox"
+      ],
+      "primary_capability_id": "code-execution-sandbox",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "desktop",
+        "ide"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "google-antigravity-2-0",
+      "scope_note": "Google\u2019s highest security setting for its agents runs command operations through a sandbox and throttles network access, but is still vulnerable to prompt injection. CANADA - 2026/04/08: In this photo illustration, the Google Antigravity logo is seen displayed on a smartphone scr",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Antigravity sandbox is a security feature of Google's Antigravity agent platform that runs command/code operations through an isolated sandbox and throttles network access \u2014 a direct fit for code-execution-sandbox"
+        }
+      ],
+      "source": {
+        "url": "https://discuss.ai.google.dev/c/antigravity/64",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "google-antigravity-guardrails-safety",
+      "name": "Antigravity guardrails",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "guardrails-safety"
+      ],
+      "primary_capability_id": "guardrails-safety",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "google-antigravity-2-0",
+      "scope_note": "# Policy settings do not apply. In AntiGravity user settings i have enabled everywhere, where its possible that the model auto proceeds. My deny list is also empty. My problem is, it still asks for input on my side. It also covers browser and tmp permissions. | \"Always run\" permi",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity guardrails refers to the permission/policy controls (allow lists, deny lists, auto-proceed settings, browser and tmp permissions, \"Always run\" approvals) governing what the Antigravity agent is allowed to "
+        }
+      ],
+      "source": {
+        "url": "https://discuss.ai.google.dev/t/policy-settings-do-not-apply/136027",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-antigravity-subagents-orchestration",
+      "name": "Antigravity subagents",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "google-antigravity-2-0",
+      "scope_note": "# Agent Orchestration in Antigravity: Multi-Agent Setup & Workflows. Run frontend, backend, testing, and DevOps agents simultaneously. AgentKit 2.0 introduced 16 specialized agents \u2014 here's how to orchestrate them effectively. Antigravity's Agent Manager lets you spawn, monitor, ",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity subagents is the multi-agent orchestration feature of Google Antigravity (Agent Manager spawning/monitoring/coordinating specialized frontend, backend, testing, DevOps agents within a task). This maps dire"
+        }
+      ],
+      "source": {
+        "url": "https://discuss.ai.google.dev/t/antigravity-sub-agents/114381",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "google-jules-agent-memory",
+      "name": "Jules memory",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "agent-memory"
+      ],
+      "primary_capability_id": "agent-memory",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "web"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "parent_id": "google-jules",
+      "scope_note": "# Google Just Validated What We Built: Why Jitro Proves AI Agents Need Persistent Memory. Google's Project Jitro (Jules V2) is building a persistent agentic workspace with goals, insights, and history. Google is building a persistent workspace for its coding agent. That workspace",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Jules memory (Project Jitro / Jules V2) is a persistent agentic workspace storing goals, insights, and history for Google's Jules coding agent \u2014 i.e., persistent cross-session memory the agent reads and writes across "
+        }
+      ],
+      "source": {
+        "url": "https://developers.googleblog.com/jules-gemini-3",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "google-google-managed-agents-managed-agent-runtime",
+      "name": "Google managed agents",
+      "kind": "platform",
+      "provider": "Google",
+      "capability_ids": [
+        "managed-agent-runtime"
+      ],
+      "primary_capability_id": "managed-agent-runtime",
+      "relation_within_capability": "broader",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "preview",
+      "review_status": "confirmed",
+      "scope_note": "# Agents overview Stay organized with collections Save and categorize content based on your preferences. Build, deploy, and manage AI agents that use reasoning and tools to perform complex enterprise tasks, such as automating workflows, discovering information across multiple sys",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). Google's managed agents offering lets enterprises build, deploy, and manage reasoning/tool-using agents that Google hosts and runs \u2014 the core of a managed agent runtime (provider runs the agent loop). It is broader th"
+        }
+      ],
+      "source": {
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-openai-mcp-connectors-mcp-connectors",
+      "name": "OpenAI MCP & connectors",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "preview",
+      "review_status": "confirmed",
+      "scope_note": "# MCP Connector Interest Form | OpenAI. *   Foundation(opens in a new window). Log inTry ChatGPT(opens in a new window). # MCP connector interest form. We\u2019re exploring an easy way for developers to use MCP (Model Context Protocol) to build their own search connectors, which can c",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This is OpenAI's MCP (Model Context Protocol) support \u2014 an interest form for developers to build search connectors using MCP. It maps squarely and only to the mcp-connectors capability (connector registries / managed "
+        }
+      ],
+      "source": {
+        "url": "https://openai.com/form/mcp-connector-interest-form",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-google-mcp-connectors-mcp-connectors",
+      "name": "Google MCP & connectors",
+      "kind": "service_tier",
+      "provider": "Google",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "# 50+ fully managed MCP servers now available for Google Cloud services. At Google Cloud Next \u201826, we announced that more than 50 Google-managed Model Context Protocol (MCP) servers are generally available or in preview, with more on the way. Google-managed Managed Context Protoc",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google offers 50+ fully managed Model Context Protocol (MCP) servers for Google Cloud services, generally available or in preview. This is a direct, dedicated MCP & connectors offering \u2014 hosted MCP servers and managed"
+        }
+      ],
+      "source": {
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-managed-mcp-servers-are-available-for-everyone",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-anthropic-evals-observability-agent-evals-observability",
+      "name": "Anthropic evals & observability",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "agent-evals-observability"
+      ],
+      "primary_capability_id": "agent-evals-observability",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "For example, [Claude Code](https://claude.com/product/claude-code) is a flexible agent harness, and we used its core primitives through the [Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview) to build our [long-running agent harness](https://www.anthropic.com/engi",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Anthropic's evals & observability tooling supports tracing, evaluating, and monitoring agent runs, mapping directly to the agent-evals-observability capability. It is presented as part of the Claude developer platform"
+        }
+      ],
+      "source": {
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "last_verified": "2026-06-15",
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "openai-openai-evals-observability-agent-evals-observability",
+      "name": "OpenAI evals & observability",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "agent-evals-observability"
+      ],
+      "primary_capability_id": "agent-evals-observability",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api",
+        "cloud",
+        "web"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "*   [Models](https://developers.openai.com/api/docs/models). *   [Agents SDK](https://developers.openai.com/api/docs/guides/agents). *   [Latest: GPT-5.5](https://developers.openai.com/api/docs/guides/latest-model). *   [Text generation](https://developers.openai.com/api/docs/gui",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). OpenAI's evals & observability offering provides tracing, evaluation, and monitoring of model/agent runs through the OpenAI platform \u2014 a direct match for agent-evals-observability. It is a developer-facing platform fe"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "google-google-evals-observability-agent-evals-observability",
+      "name": "Google evals & observability",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "agent-evals-observability"
+      ],
+      "primary_capability_id": "agent-evals-observability",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "cloud",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "In the rapidly evolving landscape of AI, building and deploying agents. AI agents can drift, hallucinate, and regress. They can also fail in ways that are different from non-agentic software. *Agent observability* refers to the methods for gaining insights into the. internal stat",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google's evals & observability offering centers on agent observability \u2014 tracing, evaluating, and monitoring agent runs to detect drift, hallucination, and regression. This maps directly to agent-evals-observability. "
+        }
+      ],
+      "source": {
+        "url": "https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability",
+        "last_verified": "2026-06-15",
+        "confidence": "high"
+      }
+    },
+    {
+      "id": "anthropic-anthropic-guardrails-guardrails-safety",
+      "name": "Anthropic guardrails",
+      "kind": "feature",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "guardrails-safety"
+      ],
+      "primary_capability_id": "guardrails-safety",
+      "relation_within_capability": "direct",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "We use cookies to deliver and improve our services, analyze site usage, and if you agree, to customize or personalize your experience and market our services to you. In this threat model, you're protecting your users from instructions embedded in content that Claude reads on thei",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Anthropic guardrails describes safety/policy controls to protect users from injected instructions in content Claude reads (prompt-injection threat model). This is squarely a guardrails-and-safety capability covering i"
+        }
+      ],
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+        "last_verified": "2026-06-15",
         "confidence": "medium"
       }
     }

@@ -1,109 +1,67 @@
-# Plan — UX re-architecture of the viewer
+# Plan — reliable, self-checking coverage
 
-*(Supersedes the original build plan, preserved in git history at the initial commit.)*
+*(Supersedes the feature-grounding plan. Built on the three principles in `research.md`: never infer absence from silence · robust-by-construction discovery · the completeness loop is built in.)*
 
-**Direction (from your answers):** portfolio-first but genuinely useful · re-architect the front door (keep engine views, demote them) · lighter "designed-product" aesthetic · fix the three gripes — *doesn't look impressive*, *hard to find/do anything*, *too much operator clutter*.
-
-**Hard constraints (unchanged):** single self-contained HTML file, zero dependencies, offline-capable, same data contract (`build.py` injects `APP` JSON into `template.html`). No framework. All 77 tests stay green; nothing in the engine changes. This is a `viewer/template.html` rewrite plus a re-skin.
+**Keep:** the 7 feature-axes (Phase A, done) and the 14 grounded-present features (verified true). **Fix:** how the *absence* of a record is represented and how gaps get resolved — automatically.
 
 ---
 
-## 1. New information architecture
+## Phase 1 — The `unknown` state (stops the misrepresentation; ships safely alone)
 
-Six operator-shaped tabs → **four intent-shaped sections**:
+**Principle:** an empty cell means *not yet verified*, never *not offered*. Absence must be a grounded record.
 
-| New section | Replaces | Job |
-|---|---|---|
-| **Overview** (home/front door) | — (new) | The wow + 5-second orientation. Hero, at-a-glance coverage matrix, headline stats, CTAs. |
-| **Explore** | Pivot + Providers | The useful tool. Search + filters + capability comparison, with cross-provider equivalence promoted to first-class. |
-| **How it works** | How it works | The engineering story, narrated and styled as a feature (pipeline + trust gates + live metrics as *proof*). |
-| **Under the hood** | Staleness + Intake + Lineage + metrics | "How the catalog keeps itself honest." Operator/trust views consolidated here, reframed as evidence of rigor — out of the main flow, but a click away to show depth. |
+- **Data convention (no schema change):** three states derived from records —
+  - **present** = a feature record (status ≠ absent),
+  - **absent** = a grounded absence record (`status:"absent"`, with a source),
+  - **unknown** = neither.
+- **Viewer:** the coverage matrix, Explore, and drawer render `unknown` as a distinct, neutral **"? not verified"** marker (tooltip: "no confirmed offering or absence yet — not a claim that it's missing"), clearly different from grounded **"none"**. Add it to the legend. (The original 9 capabilities have no empty cells, so `?` only appears on the new feature axes — exactly where verification is still in progress.)
+- **Result:** Antigravity/managed-agents immediately reads "not yet verified," not "Google doesn't do this." Honest the moment it ships, even before better discovery.
 
-Global chrome loses the operator clutter: the `confirmed:27 needs_review:1` counts and the raw `schema/provenance/staleness` metric bar leave the always-on header and move into *How it works* / *Under the hood*.
+*Checkpoint: rebuild + screenshot; this is independently shippable.*
 
----
+## Phase 2 — Reliable discovery (axis-first · official-source-first · multi-query)
 
-## 2. The two new screens (mockups for your reaction)
+**Principle:** make misses rare by construction, and attach features to the correct parent.
 
-**Overview — hero + signature coverage matrix**
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│  ◆ AI Provider Taxonomy              Overview  Explore  How it works  ··· │
-├────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│   The AI provider landscape, kept honest.                                │
-│   A self-maintaining map of what Anthropic, OpenAI & Google ship —       │
-│   discovered from the live web, grounded to source, gated before ship.   │
-│                                                                          │
-│   [ Explore the catalog → ]   [ How it works ]                           │
-│                                                                          │
-│   28 offerings · 9 capabilities · 3 providers · 100% source-grounded     │
-├────────────────────────────────────────────────────────────────────────┤
-│   COVERAGE AT A GLANCE                       ● active ◐ preview ○ none    │
-│                        Anthropic      OpenAI       Google                 │
-│     Flagship model        ●              ●            ●                   │
-│     Chat assistant        ●              ●            ●                   │
-│     Agentic coding        ●              ●            ● ● ●               │
-│     Browser agent         ●              ●            ●                   │
-│     Image / video         ○              ◐ sunset     ●                   │
-│         hover a cell → product name · click → detail + rivals            │
-└────────────────────────────────────────────────────────────────────────┘
-```
+- **`include_domains` on Tavily search** (the API supports it) → scope queries to a provider's official docs. Official domains reused from `audit.py` (`docs.anthropic.com`, `developers/platform.openai.com`, `ai.google.dev`/`cloud.google.com`, …).
+- **`discover_axis(provider, axis)`** (new): for each (provider × axis), run several queries — **official-docs-scoped first**, then general phrasings — gather candidates, and ground presence against the most authoritative source. The classifier attaches the **correct parent** (Google managed agents → Gemini API, not Antigravity), adding the parent product if it isn't catalogued yet.
+- Replaces single-shot `ground_features`. Re-run for the 7 axes; the Google-managed-agents / OpenAI-&-Google-MCP misses resolve because we now read the official docs.
 
-**Explore — search / filter / compare**
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│  ⌕ search "codex"…           Provider ▾   Capability ▾   Status ▾        │
-├────────────────────────────────────────────────────────────────────────┤
-│  Agentic coding                                        [ side-by-side ]  │
-│                                                                          │
-│   Anthropic              OpenAI                Google                     │
-│   ┌────────────────┐     ┌────────────────┐    ┌────────────────┐        │
-│   │ Claude Code  ● │     │ Codex        ● │    │ Antigravity  ● │        │
-│   │ terminal · ide │     │ terminal·cloud │    │ ide · desktop  │        │
-│   │ rivals: Codex, │     │ rivals: Claude │    │ +2 more here   │        │
-│   │ Antigravity →  │     │ Code, Anti.. → │    │ Jules, …       │        │
-│   └────────────────┘     └────────────────┘    └────────────────┘        │
-│                                                                          │
-│   click a card → drawer: full cross-provider line-up + lifecycle + source│
-└────────────────────────────────────────────────────────────────────────┘
-```
+*Checkpoint: the grounded coverage matrix — show what's now present vs still unknown.*
 
-The drawer stays (it's good) but: cross-provider equivalents move to the *top* of it, and raw triage notes ("grounding 1.00…") get tucked under a collapsed "provenance" disclosure rather than shown inline.
+## Phase 3 — The completeness loop (no human "second pass")
+
+**Principle:** gaps re-verify themselves until exhausted.
+
+- After the sweep, a **completeness critic auto-targets** every **unknown** cell and every **asymmetric** cell (≥1 peer present, this provider unknown) with deeper, official-docs-scoped queries — **looped until a full round adds nothing new** (loop-until-dry, `max_rounds` cap).
+- **Resolution after exhaustion:** positive evidence of non-offering → write a **grounded absence** record; otherwise leave **unknown** (low confidence, re-verify scheduled by the existing staleness mechanism). Absence is never the default.
+- Reuses `rank.completeness_critic` + `autobuild`'s loop; the retry is intrinsic to the pipeline, never prompted.
+
+*Checkpoint: coverage after the loop — present / grounded-absent / still-unknown counts.*
+
+## Phase 4 — Honesty gate (the checking becomes machine-run)
+
+- **`_absence_integrity`** (new audit check): flag any cell the viewer would show as a clean absence that lacks a grounded absence record → blocks the misrepresentation at the gate.
+- **`_asymmetry`** (new): peers present, this provider unknown → an automatic verification target (warning), fed back into the loop rather than onto a human.
+- Wire both into `audit_catalog` + `gate`. Unknowns ship (honestly marked); **false absences cannot**.
+
+## Phase 5 — Feature UX + ship
+
+- Product drawer gains a **"Features"** section (child features by axis); opening a feature shows its **cross-provider comparison** on its axis, with present / unknown / absent shown honestly per provider.
+- Product cards hint "N features ›".
+- Run the full reliable pipeline for the 7 axes → audit → gate → rebuild → re-screenshot → redeploy → commit → push to `main`.
 
 ---
 
-## 3. Visual direction — "lighter, designed-product"
+## Why this answers "without manual intervention and checking"
+- **No misrepresentation:** unknown ≠ absent, enforced in data, UI, and gate.
+- **Coverage is automatic:** official-source-first multi-query + a loop that re-targets its own gaps until dry — the "second pass" is the pipeline, not you.
+- **Accuracy is self-checked:** the gate blocks false absences and surfaces asymmetric gaps mechanically; you review a gated result, you don't hunt for misses.
 
-- **Theme:** light by default (warm off-white `#fbfbf9` bg, ink `#1a1c20` text), with a **dark toggle** that reuses today's palette so nothing is lost.
-- **Accent:** one primary (indigo `#5b5bd6`) for actions/active state; **provider colors as structure** — Anthropic clay `#cc785c`, OpenAI teal `#0a8a6e`, Google blue `#4f86ff` — used on column heads, card left-borders, and the coverage legend.
-- **Type:** a proper scale (hero 32–40px, section 20px, body 14–15px), system font stack, generous line-height and whitespace.
-- **Surfaces:** soft cards (1px border + subtle shadow), 12px radius, clear hover lift.
-- **Motion:** hover transitions, smooth section changes, the existing drawer slide.
-- **Status as color, not jargon:** active/preview/sunset/absent read as a small consistent dot+label system, legend shown once.
-- **Mobile-first:** the coverage matrix and Explore grid collapse to stacked, provider-labelled cards under ~720px (the current 4-col grid does not survive a phone).
+## Guards / scope
+- No schema change (unknown is "no record"; absence uses the existing `absent` status).
+- Engine changes are additive; existing records and the 9 product-capabilities are untouched.
+- First cluster stays agentic-coding for the feature axes; platform/API fan-out is a later pass.
+- Cost: Phases 2–3 are the heavier live runs (multi-query + loop); I'll run them in the background and checkpoint each.
 
----
-
-## 4. Phased implementation (one phase at a time; I stop between phases if you want)
-
-- **Phase 1 — Design system + shell.** New CSS foundation (palette, type, spacing, light/dark), responsive scaffolding, and the 4-section nav shell. Re-point existing views into it so the build never breaks. *Checkpoint: rebuild, 77 tests green, screenshot.*
-- **Phase 2 — Overview front door.** Hero + signature coverage matrix + stats + CTAs.
-- **Phase 3 — Explore.** Search + filters (provider/capability/status) + capability comparison + promoted equivalence; fold Providers in.
-- **Phase 4 — Under the hood + de-clutter.** Consolidate Staleness/Intake/Lineage/metrics into one reframed section; strip operator counts/metric-bar from global chrome; restyle *How it works*.
-- **Phase 5 — Polish + ship.** Motion, mobile QA, empty-state handling, re-capture `docs/` screenshots, update README hero, rebuild + redeploy.
-
-**Effort:** Phases 1–3 are the bulk (the visible win); 4–5 are consolidation and polish. All in vanilla JS/CSS in the one file.
-
-**Risks / watch-items:** (a) keeping the single-file/offline contract while adding search/filter state — fine in vanilla JS; (b) the light theme must still carry the absent/"(none)" and flux states — I'll port every status into the new system; (c) no data field is lost — operator detail relocates, never disappears.
-
----
-
-## 5. What I am NOT doing (unless you say so)
-
-- Not touching the engine, schema, trust gates, or evals.
-- Not adding a framework or build step.
-- Not broadening data coverage (separate effort).
-- Not pushing to GitHub or redeploying until you approve.
-
-→ **Approve this and I'll start with Phase 1.** Tell me if you want to react to the mockups, change the IA, or adjust the visual direction first.
+→ **Approve and I start Phase 1** (the unknown-state fix — small, high-value, independently shippable). I'll checkpoint after each phase.
