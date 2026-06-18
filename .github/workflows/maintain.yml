@@ -1,0 +1,84 @@
+name: Self-maintain
+
+# Scheduled maintenance loop: re-verify every record against its source (capturing fresh
+# evidence), re-grade by source tier, prove the rebuild is reproducible, write a changelog,
+# commit the diff + evidence, and redeploy. Requires live credentials (see OPERATIONS.md →
+# "Enabling the self-maintaining loop"); until they're configured it no-ops cleanly.
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"     # weekly, Mondays 09:00 UTC
+  workflow_dispatch:          # manual "Run" button
+
+permissions:
+  contents: write            # commit the refreshed catalog + evidence
+  id-token: write            # GCP Workload Identity Federation (keyless auth)
+
+env:
+  ANTHROPIC_VERTEX_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+  CLOUD_ML_REGION: ${{ vars.CLOUD_ML_REGION }}
+  VERTEX_MODEL: ${{ vars.VERTEX_MODEL }}
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: guard
+        run: |
+          if [ -n "${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}" ] && [ -n "${{ secrets.TAVILY_API_KEY }}" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Self-maintaining loop not configured (missing WIF/Tavily secrets) — skipping. See OPERATIONS.md."
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Authenticate to GCP (Workload Identity Federation — keyless)
+        if: steps.guard.outputs.go == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Install live dependencies
+        if: steps.guard.outputs.go == 'true'
+        run: pip install -e '.[vertex]'
+
+      - name: Re-verify (record mode → fresh evidence) → verify → eval → changelog → build
+        if: steps.guard.outputs.go == 'true'
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          TAXO_OFFLINE: "0"
+        run: |
+          set -euo pipefail
+          cp data/taxonomy.json /tmp/old.json
+          TAXO_LEDGER=record TAXO_AS_OF="$(date +%F)" python scripts/reverify.py
+          python -m taxonomy.cli verify                       # reproducible: replay == catalog
+          TAXO_OFFLINE=1 python -m taxonomy.cli eval          # gold-set + adversarial gates
+          python -m taxonomy.cli changelog --old /tmp/old.json
+          python -m taxonomy.cli build
+
+      - name: Commit the refreshed catalog + evidence (if anything changed)
+        if: steps.guard.outputs.go == 'true'
+        run: |
+          if [ -n "$(git status --porcelain data/ evidence/ viewer/taxonomy.html CHANGELOG.md)" ]; then
+            git config user.name  "provider-taxonomy-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/ evidence/ viewer/taxonomy.html CHANGELOG.md
+            git commit -m "self-maintain: re-verified catalog ($(date +%F))"
+            git push
+          else
+            echo "no changes this run"
+          fi
+
+      - name: Redeploy the viewer (optional — needs Cloud Run deploy perms on the SA)
+        if: steps.guard.outputs.go == 'true' && vars.AUTO_DEPLOY == 'true'
+        run: |
+          gcloud run deploy provider-seed-viewer --source viewer \
+            --region "${CLOUD_ML_REGION:-us-east5}" --allow-unauthenticated --quiet

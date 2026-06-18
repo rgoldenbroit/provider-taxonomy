@@ -30,19 +30,22 @@ from taxonomy.vertex_client import build_ledger, get_llm  # noqa: E402
 
 
 def main() -> int:
+    import os
     cfg = settings()
     if cfg.offline or cfg.ledger_mode not in ("record", "replay"):
         print("reverify needs: TAXO_OFFLINE=0 and TAXO_LEDGER=record (or replay)", file=sys.stderr)
         return 1
+    as_of = os.environ.get("TAXO_AS_OF", AS_OF)   # the scheduled loop stamps the run date
     catalog = json.loads(DEFAULT_DATA_PATH.read_text(encoding="utf-8"))
+    catalog.setdefault("_meta", {})["as_of"] = as_of
     llm, retrieval, ledger = get_llm(cfg), get_retrieval(cfg), build_ledger(cfg)
-    print(f"re-verify ({cfg.ledger_mode}) — {len(catalog['products'])} records\n")
+    print(f"re-verify ({cfg.ledger_mode}, as_of {as_of}) — {len(catalog['products'])} records\n")
     counts: Counter[str] = Counter()
     for rec in catalog["products"]:
         if rec.get("status") == "absent":
             counts["absent"] += 1
             continue
-        review = reverify_record(rec, llm, retrieval, ledger, AS_OF)   # re-ground + re-grade + receipt
+        review = reverify_record(rec, llm, retrieval, ledger, as_of)   # re-ground + re-grade + receipt
         counts[review] += 1
         tier = source_tier((rec.get("source") or {}).get("url"), rec.get("provider"))
         print(f"  {review:12} [{tier:9}] {rec['id']:48}")

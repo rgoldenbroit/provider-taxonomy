@@ -44,6 +44,16 @@ def _load_provenance() -> dict:
     return receipts
 
 
+def _load_json(rel: str) -> dict:
+    p = REPO_ROOT / rel
+    if p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+
 def build(data_path: str | None = None) -> tuple[Path, list]:
     data = load_dataset(data_path)
     issues = validate(data)
@@ -54,6 +64,7 @@ def build(data_path: str | None = None) -> tuple[Path, list]:
         "intervals": INTERVALS,
         "metrics": dataset_metrics(data),
         "provenance": _load_provenance(),
+        "changelog": _load_json("data/changelog.json"),
         "staleness": {p["id"]: days_overdue(p, today) for p in data.get("products", [])},
         "validation": {
             "valid": not issues,

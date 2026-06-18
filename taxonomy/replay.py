@@ -56,6 +56,7 @@ def reverify_record(rec: dict, llm, retrieval, ledger, as_of: str = AS_OF) -> st
 
 
 def reverify_catalog(catalog: dict, llm, retrieval, ledger, as_of: str = AS_OF) -> Counter:
+    catalog.setdefault("_meta", {})["as_of"] = as_of   # the verification date travels with the catalog
     counts: Counter[str] = Counter()
     for rec in catalog["products"]:
         if rec.get("status") == "absent":

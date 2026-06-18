@@ -361,9 +361,10 @@ def cmd_verify(args: argparse.Namespace) -> int:
         print("VERIFY: FAIL — no evidence/ ledger found to replay.")
         return 1
     llm, retrieval = ReplayLLM(ledger, settings().model), HttpFetch(ledger=ledger)
+    as_of = (catalog.get("_meta") or {}).get("as_of")   # reproduce with the catalog's own date
     try:
         replayed = copy.deepcopy(catalog)
-        reverify_catalog(replayed, llm, retrieval, ledger)
+        reverify_catalog(replayed, llm, retrieval, ledger, as_of) if as_of else reverify_catalog(replayed, llm, retrieval, ledger)
     except LedgerMiss as exc:
         print(f"VERIFY: FAIL — evidence missing from the ledger ({exc}).")
         return 1
@@ -376,6 +377,31 @@ def cmd_verify(args: argparse.Namespace) -> int:
         return 0
     print("VERIFY: FAIL — catalog does not match a replay of the evidence (hand-edited or stale).")
     return 1
+
+
+def cmd_changelog(args: argparse.Namespace) -> int:
+    """Diff two catalogs → data/changelog.json (for the viewer) + CHANGELOG.md (human)."""
+    import json as _json
+    from pathlib import Path
+
+    from .changelog import diff_catalogs, is_empty, prepend_markdown, to_markdown
+    from .schema import REPO_ROOT
+
+    old = _json.loads(Path(args.old).read_text(encoding="utf-8"))
+    new = load_dataset(args.new)
+    diff = diff_catalogs(old, new)
+    date = args.date or (new.get("_meta") or {}).get("as_of") or "unknown"
+    (REPO_ROOT / "data" / "changelog.json").write_text(
+        _json.dumps({"date": date, **diff}, indent=2) + "\n", encoding="utf-8")
+    if is_empty(diff):
+        print("changelog: no catalog changes")
+        return 0
+    cl = REPO_ROOT / "CHANGELOG.md"
+    cl.write_text(prepend_markdown(cl.read_text(encoding="utf-8") if cl.exists() else None,
+                                   to_markdown(diff, date)), encoding="utf-8")
+    print(f"changelog [{date}]: +{len(diff['added'])} added · -{len(diff['removed'])} removed "
+          f"· ~{len(diff['changed'])} changed")
+    return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -429,6 +455,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_verify = sub.add_parser("verify", help="reproducible-build check: replay the evidence ledger and assert the catalog matches")
     p_verify.add_argument("--dataset", default=None)
     p_verify.set_defaults(func=cmd_verify)
+
+    p_changelog = sub.add_parser("changelog", help="diff two catalogs → data/changelog.json + CHANGELOG.md")
+    p_changelog.add_argument("--old", required=True, help="path to the prior catalog")
+    p_changelog.add_argument("--new", default=None, help="new catalog (default: data/taxonomy.json)")
+    p_changelog.add_argument("--date", default=None, help="changelog date (default: new catalog's as_of)")
+    p_changelog.set_defaults(func=cmd_changelog)
 
     p_auto = sub.add_parser("autobuild", help="autonomously build the catalog (Tavily discovery, loop-until-dry)")
     p_auto.add_argument("--capabilities", nargs="*", default=None, help="subset of capability ids (default: all)")

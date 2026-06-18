@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Live grounded catalog \u2014 seed capabilities + pipeline-verified products.",
-    "as_of": "2026-06-16",
+    "as_of": "2026-06-18",
     "conforms_to": "schema.json"
   },
   "capabilities": [

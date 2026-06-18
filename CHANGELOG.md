@@ -1,0 +1,34 @@
+# Changelog
+
+_What the self-maintaining loop changed, newest first._
+
+## 2026-06-18
+- ✏️ **Claude Fable 5** (Anthropic) — confidence medium→high
+- ✏️ **Gemini 3.5 Pro** (Google) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **Gemini app** (Google) — confidence high→medium
+- ✏️ **Codex** (OpenAI) — confidence low→medium
+- ✏️ **Antigravity CLI** (Google) — confidence medium→high
+- ✏️ **Gemini Computer Use** (Google) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **Claude Cowork** (Anthropic) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **NotebookLM** (Google) — confidence high→medium
+- ✏️ **OpenAI Agents SDK** (OpenAI) — confidence high→medium
+- ✏️ **Agent Development Kit (ADK)** (Google) — confidence high→medium
+- ✏️ **Claude on third-party platforms** (Anthropic) — confidence medium→high
+- ✏️ **Claude Code Remote Control** (Anthropic) — confidence medium→high
+- ✏️ **Codex Cloud** (OpenAI) — confidence medium→high
+- ✏️ **Claude Code managed agents** (Anthropic) — confidence medium→high
+- ✏️ **Claude Code MCP & connectors** (Anthropic) — confidence medium→high
+- ✏️ **Claude Code memory** (Anthropic) — confidence medium→high
+- ✏️ **Claude Code subagents** (Anthropic) — confidence medium→high
+- ✏️ **Codex managed agents** (OpenAI) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **Codex memory** (OpenAI) — confidence medium→high
+- ✏️ **Codex sandbox** (OpenAI) — confidence medium→high
+- ✏️ **Codex guardrails** (OpenAI) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **Codex subagents** (OpenAI) — confidence medium→high
+- ✏️ **Antigravity sandbox** (Google) — confidence medium→high
+- ✏️ **Antigravity subagents** (Google) — confidence medium→high
+- ✏️ **Jules memory** (Google) — confidence medium→high
+- ✏️ **Google managed agents** (Google) — confidence medium→high
+- ✏️ **Anthropic evals & observability** (Anthropic) — confidence medium→high
+- ✏️ **Anthropic guardrails** (Anthropic) — confidence medium→high
+

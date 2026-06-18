@@ -418,10 +418,25 @@ function metricsHtml(){
   ].map(([k,v])=>`<span>${k} <b>${esc(v)}</b></span>`).join('') + `</div>`;
 }
 
+function changelogHtml(){
+  const c = APP.changelog || {};
+  if (!c.date) return '';
+  const total = (c.added||[]).length + (c.removed||[]).length + (c.changed||[]).length;
+  let rows = '';
+  (c.added||[]).forEach(a=>rows+=`<div class="small">&#10133; ${esc(a.name)} <span class="muted">(${esc(a.provider)})</span></div>`);
+  (c.removed||[]).forEach(r=>rows+=`<div class="small">&#10134; ${esc(r.name)} <span class="muted">(${esc(r.provider)})</span></div>`);
+  (c.changed||[]).forEach(ch=>{ const f=Object.entries(ch.fields||{}).map(([k,v])=>`${esc(k)} ${esc(v[0])}&rarr;${esc(v[1])}`).join(', ');
+     rows+=`<div class="small">&#9999;&#65039; ${esc(ch.name)} <span class="muted">(${esc(ch.provider)}) — ${f}</span></div>`; });
+  return `<h3>Last update — ${esc(c.date)} <span class="faint small">${total} change${total===1?'':'s'}</span></h3>
+    <div class="muted small" style="margin-bottom:6px">What the maintenance pass changed since the prior build.</div>
+    <div style="display:grid;gap:3px">${rows || '<div class="faint small">No changes in the last run.</div>'}</div>`;
+}
+
 /* "Under the hood" — operator/trust views consolidated, reframed as proof of rigor */
 function viewUnderHood(){
   return `<div class="section-intro">How the catalog keeps itself honest. The same trust machinery described in <a onclick="showAbout(event)">How it works</a>, shown live — quantitative metrics, the re-verify queue, the discovery intake, and lifecycle changes.</div>`
-    + `<h3>Trust metrics</h3>` + metricsHtml()
+    + changelogHtml()
+    + `<h3 style="margin-top:22px">Trust metrics</h3>` + metricsHtml()
     + `<div style="margin-top:18px">` + viewStaleness() + `</div>`
     + `<div style="margin-top:22px">` + viewIntake() + `</div>`
     + `<div style="margin-top:22px">` + viewLineage() + `</div>`;

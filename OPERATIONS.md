@@ -50,3 +50,50 @@ cannot reach `confirmed`.
 python -m taxonomy.cli build     # data/taxonomy.json → viewer/taxonomy.html
 gcloud run deploy provider-seed-viewer --source viewer --region us-east5 --allow-unauthenticated --quiet
 ```
+
+## Enabling the self-maintaining loop (`.github/workflows/maintain.yml`)
+
+The loop re-verifies every record against its source weekly (and on demand), captures fresh
+evidence, proves the rebuild is reproducible (`verify`), writes a changelog, commits the diff,
+and optionally redeploys. It runs **keyless** via GCP Workload Identity Federation — no
+service-account JSON in the repo. Until the secrets below exist it **skips cleanly** (no red CI).
+
+One-time setup (`PROJECT`, `REPO=rgoldenbroit/provider-taxonomy`):
+
+```sh
+# 1. A service account the loop runs as (Vertex calls; add run.admin if AUTO_DEPLOY).
+gcloud iam service-accounts create taxo-maintainer --project "$PROJECT"
+SA="taxo-maintainer@$PROJECT.iam.gserviceaccount.com"
+gcloud projects add-iam-policy-binding "$PROJECT" --member="serviceAccount:$SA" --role="roles/aiplatform.user"
+
+# 2. A Workload Identity pool + GitHub provider, restricted to this repo.
+gcloud iam workload-identity-pools create github --project "$PROJECT" --location global
+gcloud iam workload-identity-pools providers create-oidc github --project "$PROJECT" \
+  --location global --workload-identity-pool github \
+  --issuer-uri="https://token.actions.githubusercontent.com" \
+  --attribute-mapping="google.subject=assertion.sub,attribute.repository=assertion.repository" \
+  --attribute-condition="assertion.repository=='$REPO'"
+POOL=$(gcloud iam workload-identity-pools describe github --project "$PROJECT" --location global --format="value(name)")
+
+# 3. Let the GitHub repo impersonate the SA.
+gcloud iam service-accounts add-iam-policy-binding "$SA" --project "$PROJECT" \
+  --role roles/iam.workloadIdentityUser \
+  --member "principalSet://iam.googleapis.com/$POOL/attribute.repository/$REPO"
+```
+
+Then in the GitHub repo (Settings → Secrets and variables → Actions):
+
+| Secret | Value |
+|---|---|
+| `GCP_WORKLOAD_IDENTITY_PROVIDER` | `<POOL>/providers/github` (from step 2) |
+| `GCP_SERVICE_ACCOUNT` | `taxo-maintainer@<PROJECT>.iam.gserviceaccount.com` |
+| `TAVILY_API_KEY` | your Tavily key |
+
+| Variable | Value |
+|---|---|
+| `GCP_PROJECT_ID` | `<PROJECT>` |
+| `CLOUD_ML_REGION` | `global` |
+| `VERTEX_MODEL` | `claude-opus-4-8` |
+| `AUTO_DEPLOY` | `true` to redeploy each run (SA also needs `roles/run.admin`), else omit |
+
+Trigger it from the **Actions** tab (workflow_dispatch) to test, or wait for the weekly cron.
