@@ -1,0 +1,12 @@
+{
+  "key": "685092f6e7d25dc303d8d0de54212a7c5284666a7e36c517824868270bd4f4fc",
+  "label": "judge:anthropic-claude-code-remote-control",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Continue a local Claude Code session from your phone, tablet, or any browser using Remote Control. Works with claude.ai/code and the Claude mobile app.",
+    "lifecycle_status": "preview",
+    "rationale": "The page is dedicated to Claude Code Remote Control, describing it in detail as an Anthropic offering. It explicitly states \"Remote Control is in research preview and available on all plans,\" indicating a preview lifecycle stage.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "572aa60bf9a2b4d079983c54dca4907f7fe45a745eb9fc679796610b4e73c8af",
+  "label": "judge:google-veo",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Veo \u2014 Our leading video generation model",
+    "lifecycle_status": "active",
+    "rationale": "The page is Google DeepMind's Veo product page, describing Veo (currently Veo 3.1) as Google's leading video generation model with native audio, available to try in Gemini and Google Flow.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "7826684baf91b677bf0ff80f7cd6efb769d1cc8203d28990a60355ec0e5949b0",
+  "label": "judge:anthropic-claude-code-subagents-orchestration",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagentes s\u00e3o assistentes de IA especializados que lidam com tipos espec\u00edficos de tarefas. Use um quando uma tarefa secund\u00e1ria inundaria sua conversa principal com resultados de pesquisa, logs ou conte\u00fados de arquivo que voc\u00ea n\u00e3o referenciar\u00e1 novamente",
+    "lifecycle_status": "active",
+    "rationale": "The page is Anthropic's Claude Code documentation page titled \"Criar subagentes personalizados\" (Create custom subagents). It extensively describes Claude Code subagents \u2014 specialized AI assistants that handle specific task types, run in their own context window, and can be configured for multi-step orchestration. The claim that Anthropic offers Claude Code subagents is directly substantiated. The page describes them as currently available features (e.g., creating via /agents, built-in subagents like Explore, Plan, general-purpose), indicating active status. Note: the claim's parenthetical mentions third-party orchestrators like \"Gas Town\" and \"Multiclaude,\" which are not on this page, but the core offering \u2014 Claude Code subagents \u2014 is fully described.",
+    "supported": true
+  }
+}

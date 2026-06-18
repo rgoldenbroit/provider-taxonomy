@@ -1,0 +1,19 @@
+{
+  "key": "anthropic-claude-code",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code",
+    "page_content_hash": "1583159c940ad7139a1212aa7b6571e896fbdc4b590a15d557235344861bfa41",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Anthropic",
+    "record_id": "anthropic-claude-code",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://www.anthropic.com/claude-code",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

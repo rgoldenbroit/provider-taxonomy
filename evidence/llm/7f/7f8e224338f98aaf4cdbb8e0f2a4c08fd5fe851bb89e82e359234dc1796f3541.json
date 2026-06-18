@@ -1,0 +1,12 @@
+{
+  "key": "7f8e224338f98aaf4cdbb8e0f2a4c08fd5fe851bb89e82e359234dc1796f3541",
+  "label": "judge:openai-codex-code-execution-sandbox",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The sandbox is the boundary that lets Codex act autonomously without giving it unrestricted access to your machine. When Codex runs local commands in the Codex app, IDE extension, or CLI, those commands run inside a constrained environment instead of running with full access by default.",
+    "lifecycle_status": "active",
+    "rationale": "The page is an official OpenAI Codex documentation page dedicated to sandboxing. It describes the Codex sandbox in detail \u2014 how it constrains commands, the sandbox modes (read-only, workspace-write, danger-full-access), and configuration. This directly substantiates the claim that OpenAI offers a Codex sandbox. It is presented as a current, available feature applied automatically in default permissions mode.",
+    "supported": true
+  }
+}

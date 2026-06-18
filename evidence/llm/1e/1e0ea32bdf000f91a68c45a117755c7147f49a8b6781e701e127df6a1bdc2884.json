@@ -1,0 +1,12 @@
+{
+  "key": "1e0ea32bdf000f91a68c45a117755c7147f49a8b6781e701e127df6a1bdc2884",
+  "label": "judge:google-antigravity-cli",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "we're unifying our efforts into Google Antigravity, our premier agent-first development platform, which includes a powerful server-side harness and a brand-new terminal experience: Antigravity CLI.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Antigravity CLI as Google's new terminal experience and states \"Starting today, Antigravity CLI is available to everyone,\" confirming the offering exists and is generally available.",
+    "supported": true
+  }
+}

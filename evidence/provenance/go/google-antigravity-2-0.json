@@ -1,0 +1,19 @@
+{
+  "key": "google-antigravity-2-0",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Preview release 2.0.1 [2] / 19 May 2026 ; 29 days ago ( 19 May 2026 )",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Antigravity 2.0",
+    "page_content_hash": "a82f066acd745c078b5e3893743f0c4ecbd2b320448762fa098c6ff7d70b5058",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "record_id": "google-antigravity-2-0",
+    "review_status": "confirmed",
+    "source_tier": "reputable",
+    "source_url": "https://en.wikipedia.org/wiki/Google_Antigravity",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

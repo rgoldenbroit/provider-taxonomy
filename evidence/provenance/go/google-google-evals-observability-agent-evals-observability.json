@@ -1,0 +1,19 @@
+{
+  "key": "google-google-evals-observability-agent-evals-observability",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent observability refers to the methods for gaining insights into the internal state and behavior of software agents, particularly AI-powered agents such as those built using Large Language Models (LLMs).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Google evals & observability",
+    "page_content_hash": "5719d93f545b83bf020023ca855aaef7c42cbe7fa04fb9586abb8f49c9158a1c",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "record_id": "google-google-evals-observability-agent-evals-observability",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

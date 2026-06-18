@@ -1,0 +1,12 @@
+{
+  "key": "e7e528fdd932163f74dbad8e0d6e72bb44fcd3f418ae3e12aebb45f9ea772ebe",
+  "label": "judge:anthropic-claude-code-agent-memory",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Claude also builds auto memory as it works, saving learnings like build commands and debugging insights across sessions without you writing anything.",
+    "lifecycle_status": "active",
+    "rationale": "The claim's specific framing (Claude Managed Agents, Scout Memory, public beta, Claude Console) does not appear on the page. However, the core offering \u2014 Claude Code memory, i.e. persistent memory across sessions \u2014 is clearly described via the \"auto memory\" feature and CLAUDE.md persistent instructions. The page substantiates that Claude Code offers memory that persists across sessions, presented as a current feature.",
+    "supported": true
+  }
+}

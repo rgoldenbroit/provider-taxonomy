@@ -1,0 +1,19 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox",
+  "value": {
+    "confidence": "high",
+    "found_quote": "As a first step to mitigate incautious approvals, we shipped an OS-level sandbox (Seatbelt on macOS, bubblewrap on Linux) that hardens the boundary: reads are allowed, writes are allowed inside the workspace, but network is denied by default. Within the sandbox, the agent runs largely without interruption. The result was an 84% reduction in permission prompts, and we open-sourced the runtime, so the boundary is auditable.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code sandbox",
+    "page_content_hash": "353cac7ffd2d351d9c6757869d71ead297698b33f8a9ffc08b9beffcf3d9c2f3",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "record_id": "anthropic-claude-code-code-execution-sandbox",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

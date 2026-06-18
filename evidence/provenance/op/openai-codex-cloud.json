@@ -1,0 +1,19 @@
+{
+  "key": "openai-codex-cloud",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With Codex cloud, Codex can work on tasks in the background (including in parallel) using its own cloud environment.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Codex Cloud",
+    "page_content_hash": "34ba892a687045d9d8d2aade6f6f34e88b798c760af374f6cc5e1e23fcb9c45f",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "record_id": "openai-codex-cloud",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/cloud",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

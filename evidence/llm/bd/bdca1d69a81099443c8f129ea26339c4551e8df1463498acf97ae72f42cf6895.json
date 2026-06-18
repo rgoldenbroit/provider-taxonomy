@@ -1,0 +1,12 @@
+{
+  "key": "bdca1d69a81099443c8f129ea26339c4551e8df1463498acf97ae72f42cf6895",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "As a Claude Managed Agent, the same template runs autonomously on the Claude Platform, for work that spans a whole book of deals or a nightly schedule.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly describes \"Claude Managed Agents\" as an Anthropic offering on the Claude Platform, available as cookbooks and running autonomously. It states they are in public beta (\"or as Managed Agents in the Claude Platform (in public beta) for programmatic use\"). The claim references Claude Managed Agents in public beta, which the page substantiates. Note the page associates them with Claude Code/Cowork rather than the exact phrasing \"Claude Code managed agents,\" but it clearly substantiates the existence of the offering and its public beta status.",
+    "supported": true
+  }
+}

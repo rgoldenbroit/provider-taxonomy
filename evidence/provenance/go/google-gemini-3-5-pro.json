@@ -1,0 +1,19 @@
+{
+  "key": "google-gemini-3-5-pro",
+  "value": {
+    "confidence": "low",
+    "found_quote": "Gemini 3.5 Pro was announced at Google I/O on May 19, 2026 but is still in limited Vertex preview, with GA expected in June 2026.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Gemini 3.5 Pro",
+    "page_content_hash": "252a5535bad811906085ba9228cecf12aefd129f2a39a0a80de4ebdcc42a22ac",
+    "primary_capability_id": "flagship-model",
+    "provider": "Google",
+    "record_id": "google-gemini-3-5-pro",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

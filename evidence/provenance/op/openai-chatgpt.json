@@ -1,0 +1,19 @@
+{
+  "key": "openai-chatgpt",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ChatGPT \u2014 Get answers. Find inspiration. Be more productive. Now with GPT-5.5, our most capable and efficient frontier model for professional work.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "ChatGPT",
+    "page_content_hash": "2ea271fee50ca05b7b5094d91c8757475de6c0c9687652c8c0048b8b33005c26",
+    "primary_capability_id": "consumer-chat-assistant",
+    "provider": "OpenAI",
+    "record_id": "openai-chatgpt",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://openai.com/chatgpt/overview/",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

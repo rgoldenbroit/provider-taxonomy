@@ -1,0 +1,19 @@
+{
+  "key": "google-antigravity-cli",
+  "value": {
+    "confidence": "high",
+    "found_quote": "we're unifying our efforts into Google Antigravity, our premier agent-first development platform, which includes a powerful server-side harness and a brand-new terminal experience: Antigravity CLI.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Antigravity CLI",
+    "page_content_hash": "b295267f815c27ffb4ed826c56186250f36ec79898cc067d5a8d94efbe538534",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "record_id": "google-antigravity-cli",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

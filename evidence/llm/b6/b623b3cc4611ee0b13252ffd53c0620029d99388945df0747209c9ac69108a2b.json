@@ -1,0 +1,12 @@
+{
+  "key": "b623b3cc4611ee0b13252ffd53c0620029d99388945df0747209c9ac69108a2b",
+  "label": "judge:anthropic-claude-web-desktop-mobile",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Download the desktop app: macOS ... Windows ... Try Claude on mobile: Apple ... Google Play",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude as available via web (the page itself with \"Ask Claude\"/\"Try Claude\"), a downloadable desktop app for macOS and Windows, and mobile apps via Apple and Google Play. This substantiates the claim that Anthropic offers Claude across web/desktop/mobile.",
+    "supported": true
+  }
+}

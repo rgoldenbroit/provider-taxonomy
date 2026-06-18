@@ -1,0 +1,12 @@
+{
+  "key": "7c7566efde8d65d7b55e9bca962a47b6b0e37277c26e02704d0a646d1ba3d4c6",
+  "label": "judge:openai-openai-evals-observability-agent-evals-observability",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Integrations and observability ... Evaluate agent workflows ... Evals Getting started Working with evals Prompt optimizer External models Best practices Graders",
+    "lifecycle_status": "active",
+    "rationale": "The page's navigation explicitly lists \"Evals\" (Getting started, Working with evals, Graders, etc.) and \"Integrations and observability\" / \"Evaluate agent workflows\" under the Agents SDK. The cookbook itself builds an agent improvement loop using OpenAI traces and evals, substantiating that OpenAI offers evals & observability capabilities.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "97ac9ec256d926c426c89deb1686e0917749b00a58efbe5f2255a60213d77c62",
+  "label": "judge:google-jules-agent-memory",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "We added support for environment variables and improved how memory carries through a session.",
+    "lifecycle_status": "active",
+    "rationale": "The claim is that Google offers Jules memory. The page describes Jules as Google's autonomous coding agent and explicitly mentions a memory feature: \"We added support for environment variables and improved how memory carries through a session.\" This substantiates that Jules has memory capabilities. Note the page does not mention \"Project Jitro,\" \"Jules V2,\" or a \"persistent agentic workspace with goals, insights, and history\" \u2014 those framing details from the claim are not present \u2014 but the core offering (Jules with session memory) is described, and it is presented as a shipped, available improvement.",
+    "supported": true
+  }
+}

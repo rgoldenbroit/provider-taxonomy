@@ -136,7 +136,7 @@ def _is_transient(exc: Exception) -> bool:
 class VertexLLM(LLMClient):
     def __init__(self, *, project_id: str | None, region: str, model: str,
                  fallback_model: str | None = None, max_tokens: int = 8000,
-                 max_retries: int = 3, backoff: float = 2.0):
+                 max_retries: int = 3, backoff: float = 2.0, ledger=None):
         if not project_id:
             raise LLMError("ANTHROPIC_VERTEX_PROJECT_ID is not set; cannot reach Vertex.")
         try:
@@ -153,6 +153,7 @@ class VertexLLM(LLMClient):
         self.max_tokens = max_tokens
         self._max_retries = max_retries
         self._backoff = backoff
+        self._ledger = ledger   # optional evidence ledger for record/replay (default: none → live each call)
 
     # Structured output via a forced tool call, not output_config.format: the
     # structured_outputs feature is commonly blocked by the Vertex partner-model
@@ -195,7 +196,7 @@ class VertexLLM(LLMClient):
             raise LLMRefusal(f"model {model} refused the request")
         return message
 
-    def structured(self, *, system: str, prompt: str, schema: dict, label: str | None = None) -> Any:
+    def _structured_live(self, *, system: str, prompt: str, schema: dict) -> Any:
         message = self._invoke(system=system, prompt=prompt, schema=schema, model=self.model)
         for block in getattr(message, "content", []):
             if getattr(block, "type", None) == "tool_use" and block.name == self._TOOL_NAME:
@@ -205,6 +206,15 @@ class VertexLLM(LLMClient):
             return json.loads(text)
         except json.JSONDecodeError as exc:
             raise LLMError("model did not return a structured tool call") from exc
+
+    def structured(self, *, system: str, prompt: str, schema: dict, label: str | None = None) -> Any:
+        if self._ledger is not None and self._ledger.active:
+            from .ledger import llm_key  # lazy: only the ledgered path needs it
+            key = llm_key(model=self.model, system=system, prompt=prompt, schema=schema)
+            return self._ledger.cached("llm", key,
+                                       lambda: self._structured_live(system=system, prompt=prompt, schema=schema),
+                                       meta={"label": label, "model": self.model})
+        return self._structured_live(system=system, prompt=prompt, schema=schema)
 
     def ping(self) -> str:
         with self._client.messages.stream(
@@ -216,8 +226,19 @@ class VertexLLM(LLMClient):
         return _first_text(message).strip() or "(empty)"
 
 
+def build_ledger(cfg: Settings | None = None):
+    """Construct the evidence ledger from config (None when mode is 'off')."""
+    cfg = cfg or settings()
+    if getattr(cfg, "ledger_mode", "off") == "off":
+        return None
+    from .config import _LEDGER_DIR
+    from .ledger import Ledger
+    return Ledger(_LEDGER_DIR, mode=cfg.ledger_mode)
+
+
 def get_llm(cfg: Settings | None = None, *, responses: dict[str, Any] | None = None) -> LLMClient:
     cfg = cfg or settings()
     if cfg.offline:
         return StubLLM(responses=responses)
-    return VertexLLM(project_id=cfg.project_id, region=cfg.region, model=cfg.model)
+    return VertexLLM(project_id=cfg.project_id, region=cfg.region, model=cfg.model,
+                     ledger=build_ledger(cfg))

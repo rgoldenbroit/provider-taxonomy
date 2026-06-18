@@ -13,6 +13,7 @@ from dataclasses import dataclass
 
 from .discover import _KIND_ENUM, _SURFACE_ENUM
 from .retrieval.base import RetrievalError, RetrievalProvider
+from .sources import derive_confidence, source_tier
 from .trust import (
     GateResult,
     TrustReport,
@@ -218,15 +219,34 @@ def _apply_classification(record: dict, decision: dict) -> dict:
     return updated
 
 
-def _confidence_for(decision_status: str, classify_confidence: str) -> str:
-    if decision_status == "confirmed":
-        return classify_confidence or "medium"
-    return "low"
+def _write_receipt(ledger, rec, report, judge, page, status, evidence, decision, llm) -> None:
+    """Persist the full derivation of a fact to the evidence ledger (the trust receipt)."""
+    receipt = {
+        "record_id": rec["id"], "name": rec["name"], "provider": rec["provider"],
+        "primary_capability_id": rec["primary_capability_id"],
+        "source_url": (rec.get("source") or {}).get("url"),
+        "page_content_hash": getattr(page, "content_hash", None),
+        "evidence_claim": evidence,
+        "judge": None if not judge else {
+            "supported": bool(judge.get("supported")),
+            "found_quote": judge.get("found_quote"),
+            "lifecycle_status": judge.get("lifecycle_status"),
+            "confidence": judge.get("confidence"),
+        },
+        "gates": {g.name: {"passed": g.passed, "score": round(g.score, 3), "detail": g.detail}
+                  for g in (report.schema, report.grounding, report.classification)},
+        "classification_rationale": (decision.get("rationale") or "")[:300],
+        "decision": status,
+        "model": getattr(llm, "model", "stub"),
+        "verified_at": _AS_OF_DATE,
+    }
+    ledger.put("provenance", rec["id"], receipt)
 
 
 def triage_one(record: dict, *, dataset: dict, llm: LLMClient,
                retrieval: RetrievalProvider, n_samples: int = _N_SAMPLES,
-               evidence: str | None = None, pinned_capability: str | None = None) -> TriageOutcome:
+               evidence: str | None = None, pinned_capability: str | None = None,
+               ledger=None) -> TriageOutcome:
     samples = [classify(record, dataset, llm, pinned_capability) for _ in range(n_samples)]
     decision = samples[0]
     updated = _apply_classification(record, decision)
@@ -243,14 +263,22 @@ def triage_one(record: dict, *, dataset: dict, llm: LLMClient,
     )
     status = report.decision()
 
+    # source-quality admission: a lone low-quality source can't reach 'confirmed'
+    tier = source_tier((updated.get("source") or {}).get("url"), updated.get("provider"))
+    if status == "confirmed" and tier == "low":
+        status = "needs_review"
+
     updated["review_status"] = status
     source = updated.setdefault("source", {})
     source["last_verified"] = _AS_OF_DATE
-    source["confidence"] = _confidence_for(status, decision.get("confidence", "low"))
+    source["confidence"] = "low" if status == "rejected" else derive_confidence(tier)
     note = f"Auto-triage → {status} (grounding {report.grounding.score:.2f}, " \
            f"classification {report.classification.score:.2f}). {decision.get('rationale', '')}"
     updated.setdefault("lifecycle", []).append(
         {"date": _AS_OF_DATE, "event": "triaged", "note": note[:280]})
+
+    if ledger is not None and getattr(ledger, "active", False):
+        _write_receipt(ledger, updated, report, judge, page, status, evidence, decision, llm)
 
     return TriageOutcome(record=updated, report=report, decision=status)
 

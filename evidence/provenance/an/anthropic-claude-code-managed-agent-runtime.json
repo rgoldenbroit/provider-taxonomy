@@ -1,0 +1,19 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime",
+  "value": {
+    "confidence": "high",
+    "found_quote": "As a Claude Managed Agent, the same template runs autonomously on the Claude Platform, for work that spans a whole book of deals or a nightly schedule.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code managed agents",
+    "page_content_hash": "d479f6f284a767e9221db1ae331288c56be60b72e53ba4ed70360e9e234e51f8",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "record_id": "anthropic-claude-code-managed-agent-runtime",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://anthropic.com/news/finance-agents",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

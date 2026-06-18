@@ -1,0 +1,19 @@
+{
+  "key": "openai-sora",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Sora web and app experiences were discontinued on April 26, 2026. The Sora API will be discontinued on September 24, 2026.",
+    "lifecycle_status": "sunset",
+    "model": "claude-opus-4-8",
+    "name": "Sora",
+    "page_content_hash": "78334af546c55f010f99b3b0f356389b1414b9c5c62548ed3d9e644bb1c62fe8",
+    "primary_capability_id": "image-video-generation",
+    "provider": "OpenAI",
+    "record_id": "openai-sora",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

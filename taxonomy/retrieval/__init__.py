@@ -27,9 +27,10 @@ def get_retrieval(cfg: Settings | None = None) -> RetrievalProvider:
 
         return FixtureRetrieval()
 
+    from ..vertex_client import build_ledger
     from .http_fetch import HttpFetch  # grounding-fetch is always in-engine httpx
 
-    fetcher = HttpFetch()
+    fetcher = HttpFetch(ledger=build_ledger(cfg))   # page snapshots → committed evidence when ledger is on
     if cfg.tavily_api_key:  # live web search → real discovery instead of an operator shortlist
         from .base import CompositeRetrieval
         from .tavily import TavilySearch

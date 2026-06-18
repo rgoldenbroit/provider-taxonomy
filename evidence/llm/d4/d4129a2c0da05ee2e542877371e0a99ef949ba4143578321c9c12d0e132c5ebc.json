@@ -1,0 +1,12 @@
+{
+  "key": "d4129a2c0da05ee2e542877371e0a99ef949ba4143578321c9c12d0e132c5ebc",
+  "label": "judge:google-google-managed-agents-managed-agent-runtime",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Managed Agents API on Agent Platform (Managed code): A config-driven, REST-first API for building autonomous agents inside a fully managed sandbox environment for actions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes the Managed Agents API on Agent Platform and the broader ability to build, deploy, and manage AI agents that use reasoning and tools for enterprise tasks like automating workflows and discovering information across systems. The page header states \"Preview. This feature is subject to the 'Pre-GA Offerings Terms'\", indicating preview lifecycle status.",
+    "supported": true
+  }
+}

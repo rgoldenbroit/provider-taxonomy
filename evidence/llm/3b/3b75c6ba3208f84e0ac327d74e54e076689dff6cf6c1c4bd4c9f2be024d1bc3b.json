@@ -1,0 +1,12 @@
+{
+  "key": "3b75c6ba3208f84e0ac327d74e54e076689dff6cf6c1c4bd4c9f2be024d1bc3b",
+  "label": "judge:google-google-mcp-connectors-mcp-connectors",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "At Google Cloud Next \u201826, we announced that more than 50 Google-managed Model Context Protocol (MCP) servers are generally available or in preview, with more on the way.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes Google-managed MCP servers, stating that more than 50 are generally available or in preview, matching the claim. Title also reads \"50+ fully managed MCP servers now available for Google Cloud services,\" indicating active/GA availability (with some in preview).",
+    "supported": true
+  }
+}

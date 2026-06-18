@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 
 from .rank import completeness_critic
 from .retrieval.base import RetrievalError
+from .sources import source_tier
 from .staleness import days_overdue, is_stale, today_for
 from .triage import JUDGE_SCHEMA, _JUDGE_SYSTEM, admissibility
 from .validate import validate
@@ -57,9 +58,9 @@ def _mechanical_findings(catalog: dict) -> list[Finding]:
     today = today_for(catalog)
     for p in catalog.get("products", []):
         url = (p.get("source") or {}).get("url", "")
-        if p.get("status") != "absent" and source_authority(url) != "official":
+        if p.get("status") != "absent" and source_tier(url, p.get("provider")) == "low":
             findings.append(Finding("warning", "source", p["id"],
-                                    f"non-official source: {urlparse(url).netloc}"))
+                                    f"low-quality source: {urlparse(url).netloc}"))
         if is_stale(p, today):
             findings.append(Finding("warning", "staleness", p["id"],
                                     f"stale: {days_overdue(p, today)}d past re-verify window"))

@@ -16,22 +16,14 @@ from __future__ import annotations
 
 from .discover import _kebab
 from .retrieval.base import RetrievalError
+from .sources import OFFICIAL_DOMAINS, source_tier  # canonical source-tier definitions
 from .triage import triage_one
 
 _AS_OF = "2026-06-17"
 
-# A provider's own documentation/announcement domains — the authoritative sources.
-OFFICIAL_DOMAINS = {
-    "Anthropic": ["docs.anthropic.com", "anthropic.com"],
-    "OpenAI": ["platform.openai.com", "developers.openai.com", "openai.com",
-               "help.openai.com", "cookbook.openai.com"],
-    "Google": ["ai.google.dev", "cloud.google.com", "developers.googleblog.com",
-               "blog.google", "firebase.google.com"],
-}
-
 
 def _is_official(url: str, provider: str) -> bool:
-    return any(d in (url or "") for d in OFFICIAL_DOMAINS.get(provider, []))
+    return source_tier(url, provider) == "official"
 
 
 def _candidate(provider: str, axis_id: str, name: str, url: str, summary: str) -> dict:

@@ -1,0 +1,12 @@
+{
+  "key": "99d73f51d3df426dbd4339b754f15d8aad39ea3cc5efcbb5cd8d07a2a10da443",
+  "label": "judge:google-antigravity-code-execution-sandbox",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "About the Google Antigravity category",
+    "lifecycle_status": "active",
+    "rationale": "The claim concerns Google Antigravity (the agentic IDE/platform). The page is a Google AI Developers Forum category dedicated entirely to \"Google Antigravity,\" with numerous topics about Antigravity IDE 2.0, agents running terminal commands, quotas, models, etc. This substantiates that Google offers/provides Antigravity as an active product. However, the page does not mention the specific \"sandbox\" security setting, throttling network access, or prompt-injection vulnerability details described in the claim \u2014 those specifics are not present on the page. The core offering (Google Antigravity) is clearly described, so the existence of the offering is supported, but the security-feature specifics are not corroborated here.",
+    "supported": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "key": "google-jules",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Jules - An Autonomous Coding Agent",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Jules",
+    "page_content_hash": "8fdb31ebd8597c5f07d314ff1b11855d05383c27e5f4b9513dcd5123456d4dbc",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "record_id": "google-jules",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://jules.google",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

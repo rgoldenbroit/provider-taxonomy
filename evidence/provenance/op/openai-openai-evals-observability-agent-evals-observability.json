@@ -1,0 +1,19 @@
+{
+  "key": "openai-openai-evals-observability-agent-evals-observability",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Integrations and observability ... Evaluate agent workflows ... Evals Getting started Working with evals Prompt optimizer External models Best practices Graders",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "OpenAI evals & observability",
+    "page_content_hash": "f8ebcb23a67c257f41d113565f29daced348c454b364ec8dae34c1b52174daf6",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "record_id": "openai-openai-evals-observability-agent-evals-observability",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "key": "google-notebooklm",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "NotebookLM (Google NotebookLM; LM short for \"Language Model\") is an online research and note-taking retrieval-augmented generation tool developed by Google Labs that uses artificial intelligence (AI), specifically Google Gemini, to assist users in interacting with their documents.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "NotebookLM",
+    "page_content_hash": "db7cb98fdf134a97203893ffebca55c487b42e2d813034307775736eaf7811fa",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Google",
+    "record_id": "google-notebooklm",
+    "review_status": "confirmed",
+    "source_tier": "reputable",
+    "source_url": "https://en.wikipedia.org/wiki/NotebookLM",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

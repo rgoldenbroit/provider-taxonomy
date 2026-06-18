@@ -1,0 +1,19 @@
+{
+  "key": "google-gemini-computer-use",
+  "value": {
+    "confidence": "low",
+    "found_quote": "Google's Gemini Computer Use, grown from Project Mariner, optimizes for browser workflows where DOM awareness and web-native actions outperform generic screen scraping.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Gemini Computer Use",
+    "page_content_hash": "465dda5f59a46ca551cf8775591ade8fb36a7fb3f5286978279b77536f64bc70",
+    "primary_capability_id": "browser-computer-use-agent",
+    "provider": "Google",
+    "record_id": "google-gemini-computer-use",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://www.digitalapplied.com/blog/computer-use-agents-2026-claude-openai-gemini-matrix",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

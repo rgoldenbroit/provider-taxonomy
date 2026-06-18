@@ -1,0 +1,19 @@
+{
+  "key": "openai-codex-agent-memory",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Memories let Codex carry useful context from earlier threads into future work. After you enable memories, Codex can remember stable preferences, recurring workflows, tech stacks, project conventions, and known pitfalls so you don\u2019t need to repeat the same context in every thread.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Codex memory",
+    "page_content_hash": "cbf9b6512c6d7ffd3867de470dc1ec5a7a19f321df922eea500a6f842d68ed35",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "record_id": "openai-codex-agent-memory",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/memories",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}

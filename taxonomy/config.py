@@ -27,6 +27,9 @@ def _load_dotenv() -> None:
         os.environ.setdefault(key.strip(), value.strip())
 
 
+_LEDGER_DIR = REPO_ROOT / "evidence"
+
+
 @dataclass(frozen=True)
 class Settings:
     project_id: str | None
@@ -34,6 +37,7 @@ class Settings:
     model: str
     offline: bool
     tavily_api_key: str | None = None  # enables live web search (discovery)
+    ledger_mode: str = "off"           # off | record | replay — evidence ledger for reproducibility
 
     @property
     def mode(self) -> str:
@@ -43,10 +47,14 @@ class Settings:
 def settings() -> Settings:
     _load_dotenv()
     offline = os.environ.get("TAXO_OFFLINE", "1").strip().lower() in ("1", "true", "yes")
+    ledger_mode = os.environ.get("TAXO_LEDGER", "off").strip().lower()
+    if ledger_mode not in ("off", "record", "replay"):
+        ledger_mode = "off"
     return Settings(
         project_id=os.environ.get("ANTHROPIC_VERTEX_PROJECT_ID"),
         region=os.environ.get("CLOUD_ML_REGION", "us-east5"),
         model=os.environ.get("VERTEX_MODEL", "claude-opus-4-8"),
         offline=offline,
         tavily_api_key=os.environ.get("TAVILY_API_KEY") or None,
+        ledger_mode=ledger_mode,
     )

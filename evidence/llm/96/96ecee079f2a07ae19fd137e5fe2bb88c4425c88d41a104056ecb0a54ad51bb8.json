@@ -1,0 +1,12 @@
+{
+  "key": "96ecee079f2a07ae19fd137e5fe2bb88c4425c88d41a104056ecb0a54ad51bb8",
+  "label": "judge:anthropic-claude-fable-5",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Fable 5 (claude-fable-5) is Anthropic's most capable widely released model.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Claude Fable 5 as Anthropic's most capable widely released model, with API IDs, pricing, and a general availability date of June 9, 2026, confirming Anthropic offers it. The page states it is generally available across multiple platforms, indicating active status.",
+    "supported": true
+  }
+}

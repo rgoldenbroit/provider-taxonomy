@@ -1,0 +1,12 @@
+{
+  "key": "e7c5edb3626e47a5b0ac79631ebecc0f1e13a8d5d0f8ea6461705f30fe07d96b",
+  "label": "judge:anthropic-claude-cowork",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Cowork is Anthropic's AI agent platform, launched in January 2026 as a major evolution beyond traditional chat interfaces.",
+    "lifecycle_status": "active",
+    "rationale": "The page repeatedly describes Claude Cowork as Anthropic's AI agent platform/tool, launched January 2026, with detailed features and pricing, confirming Anthropic offers it. The page presents it as currently available (e.g., \"currently available exclusively for macOS\"), indicating active status.",
+    "supported": true
+  }
+}

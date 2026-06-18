@@ -1,67 +1,36 @@
-# Plan — reliable, self-checking coverage
+# Plan — trustworthiness + reproducibility (then #1/#2/#3)
 
-*(Supersedes the feature-grounding plan. Built on the three principles in `research.md`: never infer absence from silence · robust-by-construction discovery · the completeness loop is built in.)*
+*(Supersedes the reliability plan, preserved in git. Anchored on the "lockfile for facts" thesis in `research.md`: trust and reproducibility are one problem — a durable, content-addressed evidence trail.)*
 
-**Keep:** the 7 feature-axes (Phase A, done) and the 14 grounded-present features (verified true). **Fix:** how the *absence* of a record is represented and how gaps get resolved — automatically.
-
----
-
-## Phase 1 — The `unknown` state (stops the misrepresentation; ships safely alone)
-
-**Principle:** an empty cell means *not yet verified*, never *not offered*. Absence must be a grounded record.
-
-- **Data convention (no schema change):** three states derived from records —
-  - **present** = a feature record (status ≠ absent),
-  - **absent** = a grounded absence record (`status:"absent"`, with a source),
-  - **unknown** = neither.
-- **Viewer:** the coverage matrix, Explore, and drawer render `unknown` as a distinct, neutral **"? not verified"** marker (tooltip: "no confirmed offering or absence yet — not a claim that it's missing"), clearly different from grounded **"none"**. Add it to the legend. (The original 9 capabilities have no empty cells, so `?` only appears on the new feature axes — exactly where verification is still in progress.)
-- **Result:** Antigravity/managed-agents immediately reads "not yet verified," not "Google doesn't do this." Honest the moment it ships, even before better discovery.
-
-*Checkpoint: rebuild + screenshot; this is independently shippable.*
-
-## Phase 2 — Reliable discovery (axis-first · official-source-first · multi-query)
-
-**Principle:** make misses rare by construction, and attach features to the correct parent.
-
-- **`include_domains` on Tavily search** (the API supports it) → scope queries to a provider's official docs. Official domains reused from `audit.py` (`docs.anthropic.com`, `developers/platform.openai.com`, `ai.google.dev`/`cloud.google.com`, …).
-- **`discover_axis(provider, axis)`** (new): for each (provider × axis), run several queries — **official-docs-scoped first**, then general phrasings — gather candidates, and ground presence against the most authoritative source. The classifier attaches the **correct parent** (Google managed agents → Gemini API, not Antigravity), adding the parent product if it isn't catalogued yet.
-- Replaces single-shot `ground_features`. Re-run for the 7 axes; the Google-managed-agents / OpenAI-&-Google-MCP misses resolve because we now read the official docs.
-
-*Checkpoint: the grounded coverage matrix — show what's now present vs still unknown.*
-
-## Phase 3 — The completeness loop (no human "second pass")
-
-**Principle:** gaps re-verify themselves until exhausted.
-
-- After the sweep, a **completeness critic auto-targets** every **unknown** cell and every **asymmetric** cell (≥1 peer present, this provider unknown) with deeper, official-docs-scoped queries — **looped until a full round adds nothing new** (loop-until-dry, `max_rounds` cap).
-- **Resolution after exhaustion:** positive evidence of non-offering → write a **grounded absence** record; otherwise leave **unknown** (low confidence, re-verify scheduled by the existing staleness mechanism). Absence is never the default.
-- Reuses `rank.completeness_critic` + `autobuild`'s loop; the retry is intrinsic to the pipeline, never prompted.
-
-*Checkpoint: coverage after the loop — present / grounded-absent / still-unknown counts.*
-
-## Phase 4 — Honesty gate (the checking becomes machine-run)
-
-- **`_absence_integrity`** (new audit check): flag any cell the viewer would show as a clean absence that lacks a grounded absence record → blocks the misrepresentation at the gate.
-- **`_asymmetry`** (new): peers present, this provider unknown → an automatic verification target (warning), fed back into the loop rather than onto a human.
-- Wire both into `audit_catalog` + `gate`. Unknowns ship (honestly marked); **false absences cannot**.
-
-## Phase 5 — Feature UX + ship
-
-- Product drawer gains a **"Features"** section (child features by axis); opening a feature shows its **cross-provider comparison** on its axis, with present / unknown / absent shown honestly per provider.
-- Product cards hint "N features ›".
-- Run the full reliable pipeline for the 7 axes → audit → gate → rebuild → re-screenshot → redeploy → commit → push to `main`.
+**Decisions (confirmed):** commit the evidence bundle into the repo (self-contained reproducibility); backfill provenance for the existing records (no partial receipts). Achievable target = **replay-determinism** (`taxo build --replay` reproduces from the ledger, like `npm ci` from a lockfile) — not bit-reproducibility on re-derivation.
 
 ---
 
-## Why this answers "without manual intervention and checking"
-- **No misrepresentation:** unknown ≠ absent, enforced in data, UI, and gate.
-- **Coverage is automatic:** official-source-first multi-query + a loop that re-targets its own gaps until dry — the "second pass" is the pipeline, not you.
-- **Accuracy is self-checked:** the gate blocks false absences and surfaces asymmetric gaps mechanically; you review a gated result, you don't hunt for misses.
+## Phase 1 — Evidence ledger + dual cache (reproducibility backbone)
+`taxonomy/ledger.py`: a content-addressed store with modes **record** (live calls run, results stored), **replay** (no live calls; a miss is an error), **off** (legacy). Two spaces: `page` (fetched snapshots) and `llm` (`hash(model+system+prompt+schema) → response`). Wire into `VertexLLM.structured` and `HttpFetch.fetch` (opt-in via config, default off → existing behavior unchanged). Committed under `evidence/`.
+*Checkpoint: tests green; a record→replay round-trip reproduces a result deterministically, offline.*
 
-## Guards / scope
-- No schema change (unknown is "no record"; absence uses the existing `absent` status).
-- Engine changes are additive; existing records and the 9 product-capabilities are untouched.
-- First cluster stays agentic-coding for the feature axes; platform/API fan-out is a later pass.
-- Cost: Phases 2–3 are the heavier live runs (multi-query + loop); I'll run them in the background and checkpoint each.
+## Phase 2 — Provenance receipts (the trust trail)
+During triage, write a per-record receipt to `evidence/provenance/<id>.json` (OUTSIDE the catalog — no schema change): query · candidate sources · chosen source + page-snapshot hash · judge `supported` + verbatim quote · classification agreement · gate scores · model id · run id · verified_at.
 
-→ **Approve and I start Phase 1** (the unknown-state fix — small, high-value, independently shippable). I'll checkpoint after each phase.
+## Phase 3 — Tiered admission + derived confidence (accuracy; = rec #3)
+Source tiers: official > reputable-secondary > unknown/low (allow/block heuristics kill junk domains). Admission: **confirmed requires official OR ≥2 independent reputable corroborations**; a lone low-tier source → needs_review/unknown. **Confidence computed** from tier + corroboration + recency. Then a **recorded canonical rebuild**: re-run the catalog through the instrumented pipeline in record mode → a fully-evidenced, higher-quality catalog + committed ledger (demotes the 14 unconfirmed, fixes weak names/sources).
+
+## Phase 4 — `verify` command + reproducible-build CI (= rec #2)
+Catalog carries a build manifest (input commit · ledger hash · model id · engine version · eval metrics · **output content-hash**). `taxo verify` replays the ledger and asserts the catalog hash matches. CI (GitHub Actions): run the 80 tests + `taxo verify` on push → green "tests + reproducible build" badge. Add LICENSE + runbook.
+
+## Phase 5 — Receipts in the UI (visible trust)
+Each record's drawer gains a "Why we believe this" panel: the verbatim quote from the actual page, source + tier, gates cleared, corroboration count, verified date — read from the provenance ledger.
+
+## Phase 6 — Self-maintaining loop (= rec #1)
+Scheduled GitHub Action runs the pipeline on a rotating capability in record mode, appends to the ledger, commits the diff, and emits a **"what changed" changelog** (falls out of the ledger). Site shows a real "last built / last changed" signal. This is now reproducible + auditable by construction.
+
+---
+
+## Guards
+- Ledger is **opt-in** (config `LEDGER_MODE`, default off) → existing offline tests/behavior unchanged.
+- Provenance lives outside the catalog → **no schema change**.
+- Replay-determinism is the explicit, stated target (not re-derivation determinism).
+- Each phase ships behind tests; live recorded rebuild (Phase 3) is the only heavy run and is checkpointed.
+
+→ Starting Phase 1 now; checkpoint after each phase.

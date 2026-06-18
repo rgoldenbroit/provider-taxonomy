@@ -1,0 +1,19 @@
+{
+  "key": "openai-chatgpt-deep-research",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "ChatGPT Deep Research",
+    "page_content_hash": "d1301e0c1ff411f7c05306ae6682cf3efa9489689de9263d56b94de6c9231889",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "OpenAI",
+    "record_id": "openai-chatgpt-deep-research",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://openai.com/index/introducing-deep-research/",
+    "supported": true,
+    "verified_at": "2026-06-18"
+  }
+}
