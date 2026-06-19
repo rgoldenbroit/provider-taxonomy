@@ -2,18 +2,20 @@
   "key": "google-google-managed-agents-managed-agent-runtime",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Managed Agents API on Agent Platform (Managed code): A config-driven, REST-first API for building autonomous agents inside a fully managed sandbox environment for actions.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Google managed agents",
-    "page_content_hash": "e14b1ad672747181c8c4e0ba336c2b3ebf8c9f99434969b1d61e640884a5e302",
+    "page_content_hash": "e5b4b688d004bc1b903eb32c26652781e38acfe6f6be648121f98266f9a7bcea",
     "primary_capability_id": "managed-agent-runtime",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-google-managed-agents-managed-agent-runtime",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

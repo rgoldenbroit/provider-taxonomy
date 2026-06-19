@@ -2,18 +2,20 @@
   "key": "anthropic-claude-fable-5",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Claude Fable 5 (claude-fable-5) is Anthropic's most capable widely released model.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Fable 5",
-    "page_content_hash": "1da4de694b251f4ee38f2b6e5f4db54cda8711d7ef3ec6a51475c7941de6b0d1",
+    "page_content_hash": "245c173d3222e591bcedad15432c555eb8604b50d47b74bbb47bb1e890fcb12d",
     "primary_capability_id": "flagship-model",
     "provider": "Anthropic",
+    "reconfirmed": true,
     "record_id": "anthropic-claude-fable-5",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

@@ -86,8 +86,13 @@ class HttpFetch(RetrievalProvider):
                     raise LedgerMiss(f"page/{key} not in ledger (replay — no live fetch)")
                 data = hit["value"]
             else:                                              # record: re-fetch fresh so a new run sees drift
-                data = self._live_fetch(url)
-                self._ledger.put("page", key, data, meta={"url": url})
+                fresh = self._live_fetch(url)
+                if fresh["status"] == 200 and (fresh.get("text") or "").strip():
+                    self._ledger.put("page", key, fresh, meta={"url": url})   # good fetch → update
+                    data = fresh
+                else:                                          # blocked/empty (e.g. 403 on a CI IP) →
+                    prior = self._ledger.get("page", key)      # keep the last good snapshot, don't clobber it
+                    data = prior["value"] if prior else fresh
             return FetchedPage(url=url, status=data["status"], text=data["text"],
                                content_hash=content_hash(data["text"]))
 

@@ -2,18 +2,20 @@
   "key": "anthropic-claude-web-desktop-mobile",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Download the desktop app: macOS ... Windows ... Try Claude on mobile: Apple ... Google Play",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (web/desktop/mobile)",
-    "page_content_hash": "cb2a0f4e973fd075a3edd30be833a7149b68f115c38faa9907a0ea7bc88576cb",
+    "page_content_hash": "5e15232d4fa5048ab4597e234e75b253754bc6871e65b658a7d58de3422800e8",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
+    "reconfirmed": true,
     "record_id": "anthropic-claude-web-desktop-mobile",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/claude",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

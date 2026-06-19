@@ -2,6 +2,7 @@
   "key": "google-agent-development-kit-adk",
   "value": {
     "confidence": "medium",
+    "fetch_ok": true,
     "found_quote": "ADK is the open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Available in Python, TypeScript, Go, Java, and Kotlin.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
@@ -9,11 +10,12 @@
     "page_content_hash": "be904bbde2f70f9018382b9150ec612919635b66e6c9df3f5592c9d0622ad19d",
     "primary_capability_id": "agent-building-sdk",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-agent-development-kit-adk",
     "review_status": "confirmed",
     "source_tier": "reputable",
     "source_url": "https://google.github.io/adk-docs/",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

@@ -2,18 +2,20 @@
   "key": "google-antigravity-subagents-orchestration",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Antigravity is architected as an agent-first platform, meaning the Agent Manager (Mission Control) automatically delegates specific tasks to specialized Sub-agents to optimize performance and context usage. For example, when a task requires web research or documentation lookup, the system invokes the Browser Subagent; for command-line operations, it uses the Terminal Subagent.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity subagents",
-    "page_content_hash": "038967e4ba3b200860c29998ca831450a3acace0169e859a161fdd30b4880690",
+    "page_content_hash": "879b7cf0e819ed656a0019ad0819f67eb110887c9a8de8ca629c934b0b12a12e",
     "primary_capability_id": "subagents-orchestration",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-antigravity-subagents-orchestration",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/t/antigravity-sub-agents/114381",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

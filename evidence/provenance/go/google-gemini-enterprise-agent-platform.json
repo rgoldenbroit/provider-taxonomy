@@ -2,6 +2,7 @@
   "key": "google-gemini-enterprise-agent-platform",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Gemini Enterprise Agent Platform is Google Cloud's comprehensive platform for developers to build, scale, govern and optimize agents.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
@@ -9,11 +10,12 @@
     "page_content_hash": "cf4c2166c9b5e0ba0a483041c97f7cbe3dd07bc64de495fbf2a4b2838f73897d",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-gemini-enterprise-agent-platform",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://cloud.google.com/products/agent-builder",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

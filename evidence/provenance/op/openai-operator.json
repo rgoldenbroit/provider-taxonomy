@@ -2,18 +2,20 @@
   "key": "openai-operator",
   "value": {
     "confidence": "high",
-    "found_quote": "Introducing Operator",
-    "lifecycle_status": "preview",
+    "fetch_ok": true,
+    "found_quote": "Introducing Operator ... A research preview of an agent that can use its own browser to perform tasks for you. Available to Pro users in the U.S.",
+    "lifecycle_status": "merged",
     "model": "claude-opus-4-8",
     "name": "Operator",
-    "page_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "page_content_hash": "9f66163cb6287045c49564293fa0202f101b960db41f32bc1a1c27efe51d2f36",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "OpenAI",
+    "reconfirmed": true,
     "record_id": "openai-operator",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://openai.com/index/introducing-operator/",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

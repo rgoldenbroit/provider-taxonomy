@@ -2,18 +2,20 @@
   "key": "google-antigravity-guardrails-safety",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "In AntiGravity user settings i have enabled everywhere, where its possible that the model auto proceeds. My deny list is also empty. My problem is, it still asks for input on my side.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity guardrails",
-    "page_content_hash": "55b08e3eed9285f54b08b93f02d27b2a75b2a1a3267fe6776be2a450874554ba",
+    "page_content_hash": "23309ed4097aafcc5b06821e41fab22caf5c4958bb094632e6a641f9c1fba111",
     "primary_capability_id": "guardrails-safety",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-antigravity-guardrails-safety",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/t/policy-settings-do-not-apply/136027",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

@@ -2,18 +2,20 @@
   "key": "anthropic-anthropic-evals-observability-agent-evals-observability",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "For example, Claude Code is a flexible agent harness, and we used its core primitives through the Agent SDK to build our long-running agent harness.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Anthropic evals & observability",
-    "page_content_hash": "cebf8fa059a8b561a3f63a9e4dc359527e936c6314bd10cde0b5a226a8addfc1",
+    "page_content_hash": "41e9d7027f9e3c72348c31264a997a698d0706ad04cc2ae74f22f5078279eb8a",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Anthropic",
+    "reconfirmed": true,
     "record_id": "anthropic-anthropic-evals-observability-agent-evals-observability",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

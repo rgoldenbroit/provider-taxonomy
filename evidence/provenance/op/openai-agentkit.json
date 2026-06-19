@@ -1,19 +1,21 @@
 {
   "key": "openai-agentkit",
   "value": {
-    "confidence": "low",
-    "found_quote": "",
-    "lifecycle_status": "unknown",
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Today we\u2019re launching AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents.",
+    "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "AgentKit",
-    "page_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "page_content_hash": "a76cf55cfea05d3525996fb9e444ac609e02065153d46a790a485efcf5856fec",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "OpenAI",
+    "reconfirmed": true,
     "record_id": "openai-agentkit",
-    "review_status": "needs_review",
+    "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://openai.com/index/introducing-agentkit",
-    "supported": false,
-    "verified_at": "2026-06-19"
+    "supported": true,
+    "verified_at": "2026-06-18"
   }
 }

@@ -2,6 +2,7 @@
   "key": "anthropic-claude-code-agent-memory",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Claude also builds auto memory as it works, saving learnings like build commands and debugging insights across sessions without you writing anything.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
@@ -9,11 +10,12 @@
     "page_content_hash": "97120e015378d109662b24b81da6ebb02d5863b6cef54565e0892746d215bd88",
     "primary_capability_id": "agent-memory",
     "provider": "Anthropic",
+    "reconfirmed": true,
     "record_id": "anthropic-claude-code-agent-memory",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/overview",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

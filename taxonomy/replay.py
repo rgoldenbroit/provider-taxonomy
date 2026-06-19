@@ -24,33 +24,35 @@ def reverify_record(rec: dict, llm, retrieval, ledger, as_of: str = AS_OF) -> st
     """Re-ground one record, re-grade it by source tier, and (if a ledger is active)
     write its provenance receipt. Returns the resulting review_status."""
     page, judge = _judge_grounding(rec, retrieval, llm)   # fetch + judge (both via the ledger when active)
+    fetch_ok = (page is not None and getattr(page, "status", 0) == 200
+                and bool((getattr(page, "text", "") or "").strip()))
     supported = bool(judge and judge.get("supported"))
+    reconfirmed = fetch_ok and supported
     tier = source_tier((rec.get("source") or {}).get("url"), rec.get("provider"))
-    if not supported:
-        review, conf = "needs_review", "low"
-    else:
-        review = rec.get("review_status", "confirmed")
-        if review == "confirmed" and tier == "low":
-            review = "needs_review"            # a lone low-quality source can't stay 'confirmed'
-        conf = derive_confidence(tier)
-        if review == "needs_review":
-            conf = "low" if tier == "low" else "medium"   # not 'high' while under review
+    src = rec.setdefault("source", {})
+    review = rec.get("review_status", "confirmed")   # CONSERVATIVE: keep the prior verdict by default
+
+    if reconfirmed:
         observed = _clean_enum(judge.get("lifecycle_status"))
         if observed and observed != "unknown":
-            rec["status"] = observed
-    rec["review_status"] = review
-    src = rec.setdefault("source", {})
-    src["confidence"], src["last_verified"] = conf, as_of
+            rec["status"] = observed                  # captures real lifecycle changes (sunset/merged/…)
+        src["last_verified"] = as_of                  # only refresh the date when we actually re-confirmed
+        if review == "confirmed":
+            src["confidence"] = derive_confidence(tier)
+    # else: blocked/silent this run → keep verdict + confidence + (now-stale) date; the receipt flags it.
+    # A single failed/silent re-check is NOT treated as drift — only an affirmative lifecycle change is.
+
     if ledger is not None and getattr(ledger, "active", False):
         ledger.put("provenance", rec["id"], {
             "record_id": rec["id"], "name": rec["name"], "provider": rec["provider"],
             "primary_capability_id": rec["primary_capability_id"],
             "source_url": src.get("url"), "source_tier": tier,
             "page_content_hash": getattr(page, "content_hash", None),
-            "supported": supported, "found_quote": (judge or {}).get("found_quote"),
+            "fetch_ok": fetch_ok, "supported": supported, "reconfirmed": reconfirmed,
+            "found_quote": (judge or {}).get("found_quote"),
             "lifecycle_status": (judge or {}).get("lifecycle_status"),
-            "review_status": review, "confidence": conf,
-            "model": getattr(llm, "model", "?"), "verified_at": as_of,
+            "review_status": review, "confidence": src.get("confidence"),
+            "model": getattr(llm, "model", "?"), "verified_at": src.get("last_verified"),
         })
     return review
 

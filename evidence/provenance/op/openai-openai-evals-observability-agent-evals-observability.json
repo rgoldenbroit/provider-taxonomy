@@ -2,18 +2,20 @@
   "key": "openai-openai-evals-observability-agent-evals-observability",
   "value": {
     "confidence": "high",
-    "found_quote": "This notebook builds an improvement flywheel for an agent. We start with real traces, add human and model feedback, turn that feedback into evals, and use the resulting evidence to propose the next harness changes for Codex to implement.",
+    "fetch_ok": true,
+    "found_quote": "Integrations and observability ... Evaluate agent workflows ... Evals Getting started Working with evals Prompt optimizer External models Best practices Graders",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "OpenAI evals & observability",
-    "page_content_hash": "52d75d383b279b9363ded3b2246bb0928efd4fb324e790c23a7e731228ef6ef0",
+    "page_content_hash": "f8ebcb23a67c257f41d113565f29daced348c454b364ec8dae34c1b52174daf6",
     "primary_capability_id": "agent-evals-observability",
     "provider": "OpenAI",
+    "reconfirmed": true,
     "record_id": "openai-openai-evals-observability-agent-evals-observability",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

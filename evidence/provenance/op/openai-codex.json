@@ -1,19 +1,21 @@
 {
   "key": "openai-codex",
   "value": {
-    "confidence": "low",
-    "found_quote": "",
-    "lifecycle_status": "unknown",
+    "confidence": "medium",
+    "fetch_ok": true,
+    "found_quote": "Codex: A coding agent that helps you build and ship with AI\u2014powered by ChatGPT.",
+    "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Codex",
-    "page_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "page_content_hash": "e54427fcf0d60ae463447ec0159a0c32abb8df3b92684a1204d5f21d1a3506ac",
     "primary_capability_id": "agentic-coding",
     "provider": "OpenAI",
+    "reconfirmed": true,
     "record_id": "openai-codex",
     "review_status": "needs_review",
     "source_tier": "official",
     "source_url": "https://openai.com/codex/",
-    "supported": false,
-    "verified_at": "2026-06-19"
+    "supported": true,
+    "verified_at": "2026-06-18"
   }
 }

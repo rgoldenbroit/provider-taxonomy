@@ -2,6 +2,7 @@
   "key": "google-veo",
   "value": {
     "confidence": "high",
+    "fetch_ok": true,
     "found_quote": "Veo \u2014 Our leading video generation model",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
@@ -9,11 +10,12 @@
     "page_content_hash": "fc288b8faf45f13638b0ee9612ade4278aa084bf975db1a6d0f29c5ad81dc136",
     "primary_capability_id": "image-video-generation",
     "provider": "Google",
+    "reconfirmed": true,
     "record_id": "google-veo",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://deepmind.google/models/veo/",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-18"
   }
 }

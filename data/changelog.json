@@ -1,27 +1,23 @@
 {
-  "date": "2026-06-19",
+  "date": "2026-06-18",
   "added": [],
   "removed": [],
   "changed": [
     {
-      "id": "openai-gpt-5-5-pro",
-      "name": "GPT-5.5 Pro",
-      "provider": "OpenAI",
+      "id": "anthropic-claude-fable-5",
+      "name": "Claude Fable 5",
+      "provider": "Anthropic",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "high",
-          "low"
+          "medium",
+          "high"
         ]
       }
     },
     {
-      "id": "openai-chatgpt",
-      "name": "ChatGPT",
-      "provider": "OpenAI",
+      "id": "google-gemini-3-5-pro",
+      "name": "Gemini 3.5 Pro",
+      "provider": "Google",
       "fields": {
         "review_status": [
           "confirmed",
@@ -38,13 +34,9 @@
       "name": "Gemini app",
       "provider": "Google",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "medium",
-          "low"
+          "high",
+          "medium"
         ]
       }
     },
@@ -54,19 +46,49 @@
       "provider": "OpenAI",
       "fields": {
         "confidence": [
+          "low",
+          "medium"
+        ]
+      }
+    },
+    {
+      "id": "google-antigravity-cli",
+      "name": "Antigravity CLI",
+      "provider": "Google",
+      "fields": {
+        "confidence": [
           "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "google-gemini-computer-use",
+      "name": "Gemini Computer Use",
+      "provider": "Google",
+      "fields": {
+        "review_status": [
+          "confirmed",
+          "needs_review"
+        ],
+        "confidence": [
+          "high",
           "low"
         ]
       }
     },
     {
-      "id": "openai-operator",
-      "name": "Operator",
-      "provider": "OpenAI",
+      "id": "anthropic-claude-cowork",
+      "name": "Claude Cowork",
+      "provider": "Anthropic",
       "fields": {
-        "status": [
-          "merged",
-          "preview"
+        "review_status": [
+          "confirmed",
+          "needs_review"
+        ],
+        "confidence": [
+          "medium",
+          "low"
         ]
       }
     },
@@ -75,34 +97,114 @@
       "name": "NotebookLM",
       "provider": "Google",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "medium",
-          "low"
+          "high",
+          "medium"
         ]
       }
     },
     {
-      "id": "google-antigravity-2-0",
-      "name": "Antigravity 2.0",
+      "id": "openai-openai-agents-sdk",
+      "name": "OpenAI Agents SDK",
+      "provider": "OpenAI",
+      "fields": {
+        "confidence": [
+          "high",
+          "medium"
+        ]
+      }
+    },
+    {
+      "id": "google-agent-development-kit-adk",
+      "name": "Agent Development Kit (ADK)",
       "provider": "Google",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "medium",
-          "low"
+          "high",
+          "medium"
         ]
       }
     },
     {
-      "id": "openai-agentkit",
-      "name": "AgentKit",
+      "id": "anthropic-claude-on-third-party-platforms",
+      "name": "Claude on third-party platforms",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-claude-code-remote-control",
+      "name": "Claude Code Remote Control",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-cloud",
+      "name": "Codex Cloud",
+      "provider": "OpenAI",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-claude-code-managed-agent-runtime",
+      "name": "Claude Code managed agents",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-claude-code-mcp-connectors",
+      "name": "Claude Code MCP & connectors",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-claude-code-agent-memory",
+      "name": "Claude Code memory",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-claude-code-subagents-orchestration",
+      "name": "Claude Code subagents",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-managed-agent-runtime",
+      "name": "Codex managed agents",
       "provider": "OpenAI",
       "fields": {
         "review_status": [
@@ -110,8 +212,56 @@
           "needs_review"
         ],
         "confidence": [
-          "high",
+          "medium",
           "low"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-agent-memory",
+      "name": "Codex memory",
+      "provider": "OpenAI",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-code-execution-sandbox",
+      "name": "Codex sandbox",
+      "provider": "OpenAI",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-guardrails-safety",
+      "name": "Codex guardrails",
+      "provider": "OpenAI",
+      "fields": {
+        "review_status": [
+          "confirmed",
+          "needs_review"
+        ],
+        "confidence": [
+          "medium",
+          "low"
+        ]
+      }
+    },
+    {
+      "id": "openai-codex-subagents-orchestration",
+      "name": "Codex subagents",
+      "provider": "OpenAI",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
         ]
       }
     },
@@ -120,28 +270,64 @@
       "name": "Antigravity sandbox",
       "provider": "Google",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "high",
-          "low"
+          "medium",
+          "high"
         ]
       }
     },
     {
-      "id": "openai-openai-mcp-connectors-mcp-connectors",
-      "name": "OpenAI MCP & connectors",
-      "provider": "OpenAI",
+      "id": "google-antigravity-subagents-orchestration",
+      "name": "Antigravity subagents",
+      "provider": "Google",
       "fields": {
-        "review_status": [
-          "confirmed",
-          "needs_review"
-        ],
         "confidence": [
-          "high",
-          "low"
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "google-jules-agent-memory",
+      "name": "Jules memory",
+      "provider": "Google",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "google-google-managed-agents-managed-agent-runtime",
+      "name": "Google managed agents",
+      "provider": "Google",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-anthropic-evals-observability-agent-evals-observability",
+      "name": "Anthropic evals & observability",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "id": "anthropic-anthropic-guardrails-guardrails-safety",
+      "name": "Anthropic guardrails",
+      "provider": "Anthropic",
+      "fields": {
+        "confidence": [
+          "medium",
+          "high"
         ]
       }
     }
