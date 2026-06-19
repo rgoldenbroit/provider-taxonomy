@@ -2,6 +2,18 @@
 
 _What the self-maintaining loop changed, newest first._
 
+## 2026-06-19
+- ✏️ **GPT-5.5 Pro** (OpenAI) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **ChatGPT** (OpenAI) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **Gemini app** (Google) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **Codex** (OpenAI) — confidence medium→low
+- ✏️ **Operator** (OpenAI) — status merged→preview
+- ✏️ **NotebookLM** (Google) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **Antigravity 2.0** (Google) — review_status confirmed→needs_review, confidence medium→low
+- ✏️ **AgentKit** (OpenAI) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **Antigravity sandbox** (Google) — review_status confirmed→needs_review, confidence high→low
+- ✏️ **OpenAI MCP & connectors** (OpenAI) — review_status confirmed→needs_review, confidence high→low
+
 ## 2026-06-18
 - ✏️ **Claude Fable 5** (Anthropic) — confidence medium→high
 - ✏️ **Gemini 3.5 Pro** (Google) — review_status confirmed→needs_review, confidence high→low

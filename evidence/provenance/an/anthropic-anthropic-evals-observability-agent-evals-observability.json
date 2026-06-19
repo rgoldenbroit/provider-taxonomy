@@ -6,7 +6,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Anthropic evals & observability",
-    "page_content_hash": "41e9d7027f9e3c72348c31264a997a698d0706ad04cc2ae74f22f5078279eb8a",
+    "page_content_hash": "cebf8fa059a8b561a3f63a9e4dc359527e936c6314bd10cde0b5a226a8addfc1",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Anthropic",
     "record_id": "anthropic-anthropic-evals-observability-agent-evals-observability",
@@ -14,6 +14,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

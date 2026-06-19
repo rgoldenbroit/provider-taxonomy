@@ -1,0 +1,12 @@
+{
+  "key": "c591af182a997d678a76bd9f303c758e9f598e3e95a584112aa564ff60876bb1",
+  "label": "judge:openai-agentkit",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The provided page content is empty \u2014 there is no fetched text to verify the claim against. Since the page contains no mention of AgentKit (or any content at all), the claim cannot be substantiated from the source.",
+    "supported": false
+  }
+}

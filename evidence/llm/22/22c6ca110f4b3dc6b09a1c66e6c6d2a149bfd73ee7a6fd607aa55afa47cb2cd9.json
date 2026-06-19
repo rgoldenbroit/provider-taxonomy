@@ -1,0 +1,12 @@
+{
+  "key": "22c6ca110f4b3dc6b09a1c66e6c6d2a149bfd73ee7a6fd607aa55afa47cb2cd9",
+  "label": "judge:openai-codex-managed-agent-runtime",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Lastly, Amazon Bedrock Managed Agents, powered by OpenAI, makes it fast to deploy production-ready OpenAI-powered agents on AWS.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes both Codex on Amazon Bedrock (bringing the OpenAI coding agent into AWS environments) and Amazon Bedrock Managed Agents powered by OpenAI, all in limited preview. This substantiates the claim that OpenAI offers Codex and managed agents (via the AWS/OpenAI partnership on Bedrock). The page explicitly states all three offerings are 'in limited preview.'",
+    "supported": true
+  }
+}

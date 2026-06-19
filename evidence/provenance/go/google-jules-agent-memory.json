@@ -6,7 +6,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Jules memory",
-    "page_content_hash": "d9da5ce303ce3751645d305f200ad903cc239776e15da541a93d68c1e80a77ab",
+    "page_content_hash": "957bdd0b341bed626d6a6aee951b82905bb95e855af51520e2ffa91634b79bf6",
     "primary_capability_id": "agent-memory",
     "provider": "Google",
     "record_id": "google-jules-agent-memory",
@@ -14,6 +14,6 @@
     "source_tier": "official",
     "source_url": "https://developers.googleblog.com/jules-gemini-3",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

@@ -1,19 +1,19 @@
 {
   "key": "openai-gpt-5-5-pro",
   "value": {
-    "confidence": "high",
-    "found_quote": "Update on April 24, 2026: GPT\u20115.5 and GPT\u20115.5 Pro are now available in the API.",
-    "lifecycle_status": "active",
+    "confidence": "low",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
     "model": "claude-opus-4-8",
     "name": "GPT-5.5 Pro",
-    "page_content_hash": "be26ebf6496fcfa0c9244112cbe5fb3aba3e907b8bdc471c1e3ee77f76156c1f",
+    "page_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "primary_capability_id": "flagship-model",
     "provider": "OpenAI",
     "record_id": "openai-gpt-5-5-pro",
-    "review_status": "confirmed",
+    "review_status": "needs_review",
     "source_tier": "official",
     "source_url": "https://openai.com/index/introducing-gpt-5-5/",
-    "supported": true,
-    "verified_at": "2026-06-18"
+    "supported": false,
+    "verified_at": "2026-06-19"
   }
 }

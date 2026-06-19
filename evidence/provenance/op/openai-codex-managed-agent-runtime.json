@@ -2,11 +2,11 @@
   "key": "openai-codex-managed-agent-runtime",
   "value": {
     "confidence": "low",
-    "found_quote": "Today, we\u2019re bringing those together with three new offerings on Amazon Bedrock, all in limited preview: the latest OpenAI models, Codex, and Managed Agents powered by OpenAI.",
+    "found_quote": "Lastly, Amazon Bedrock Managed Agents, powered by OpenAI, makes it fast to deploy production-ready OpenAI-powered agents on AWS.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Codex managed agents",
-    "page_content_hash": "ed01382247f55897c33fdbbe230c1fd5c998b50124986f7062476cfc65ca4e45",
+    "page_content_hash": "a4f66f2185dbd3b88b985fe594778c48fec19eedcdc524efb99ae689c545b593",
     "primary_capability_id": "managed-agent-runtime",
     "provider": "OpenAI",
     "record_id": "openai-codex-managed-agent-runtime",
@@ -14,6 +14,6 @@
     "source_tier": "low",
     "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/04/bedrock-openai-models-codex-managed-agents",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

@@ -6,7 +6,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity CLI",
-    "page_content_hash": "b295267f815c27ffb4ed826c56186250f36ec79898cc067d5a8d94efbe538534",
+    "page_content_hash": "348959bf63d8dbdcda5e2a6861d9bb707601b36139cfd382eae3ce6c9363f38e",
     "primary_capability_id": "agentic-coding",
     "provider": "Google",
     "record_id": "google-antigravity-cli",
@@ -14,6 +14,6 @@
     "source_tier": "official",
     "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

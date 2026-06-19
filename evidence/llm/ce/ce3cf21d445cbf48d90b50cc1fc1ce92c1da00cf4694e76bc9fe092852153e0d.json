@@ -1,0 +1,12 @@
+{
+  "key": "ce3cf21d445cbf48d90b50cc1fc1ce92c1da00cf4694e76bc9fe092852153e0d",
+  "label": "judge:openai-sora",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "What to know about the Sora discontinuation",
+    "lifecycle_status": "sunset",
+    "rationale": "The page title explicitly references Sora as an OpenAI offering, substantiating its existence. However, the page describes the Sora discontinuation, indicating the offering is being shut down (sunset) rather than active.",
+    "supported": true
+  }
+}

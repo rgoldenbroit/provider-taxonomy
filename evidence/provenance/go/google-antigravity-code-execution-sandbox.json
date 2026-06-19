@@ -1,19 +1,19 @@
 {
   "key": "google-antigravity-code-execution-sandbox",
   "value": {
-    "confidence": "high",
-    "found_quote": "About the Google Antigravity category",
+    "confidence": "low",
+    "found_quote": "",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity sandbox",
-    "page_content_hash": "bc412ea02cd3f765e3cc82da56278e78ccbb7b0b8135a351a92d98a409393956",
+    "page_content_hash": "4d07b9255f0e60922acde6260050e287ac828fee88d3f979394c592bac95557d",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "Google",
     "record_id": "google-antigravity-code-execution-sandbox",
-    "review_status": "confirmed",
+    "review_status": "needs_review",
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/c/antigravity/64",
-    "supported": true,
-    "verified_at": "2026-06-18"
+    "supported": false,
+    "verified_at": "2026-06-19"
   }
 }

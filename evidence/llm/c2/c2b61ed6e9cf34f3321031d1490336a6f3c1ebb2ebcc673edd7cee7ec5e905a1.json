@@ -1,0 +1,12 @@
+{
+  "key": "c2b61ed6e9cf34f3321031d1490336a6f3c1ebb2ebcc673edd7cee7ec5e905a1",
+  "label": "judge:google-antigravity-subagents-orchestration",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity is architected as an agent-first platform, meaning the Agent Manager (Mission Control) automatically delegates specific tasks to specialized Sub-agents to optimize performance and context usage. For example, when a task requires web research or documentation lookup, the system invokes the Browser Subagent; for command-line operations, it uses the Terminal Subagent.",
+    "lifecycle_status": "active",
+    "rationale": "The page (a Google AI Developers Forum thread) describes that Antigravity's Agent Manager / Mission Control automatically delegates tasks to specialized built-in Sub-agents (e.g., Browser Subagent, Terminal Subagent), with the main model focusing on high-level reasoning while specialized models handle execution in parallel. This substantiates that Google's Antigravity offers subagents. Note: the page distinguishes these built-in/automatic subagents from user-creatable custom subagents (which users are requesting as a future feature), but the named offering \u2014 Antigravity subagents \u2014 is described as currently existing. The claim's specific framing (AgentKit 2.0, 16 specialized agents) is not on the page, but the core offering of Antigravity subagents is substantiated.",
+    "supported": true
+  }
+}

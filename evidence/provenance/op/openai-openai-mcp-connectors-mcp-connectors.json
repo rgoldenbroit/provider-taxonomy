@@ -1,19 +1,19 @@
 {
   "key": "openai-openai-mcp-connectors-mcp-connectors",
   "value": {
-    "confidence": "high",
-    "found_quote": "We\u2019re exploring an easy way for developers to use MCP (Model Context Protocol) to build their own search connectors, which can connect directly to deep research today, and will support other use cases in the future.",
-    "lifecycle_status": "preview",
+    "confidence": "low",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
     "model": "claude-opus-4-8",
     "name": "OpenAI MCP & connectors",
-    "page_content_hash": "5a123f9335ecf1147f8590a2f52f0941630dbc23b02b99492a9177593a0ba4da",
+    "page_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "primary_capability_id": "mcp-connectors",
     "provider": "OpenAI",
     "record_id": "openai-openai-mcp-connectors-mcp-connectors",
-    "review_status": "confirmed",
+    "review_status": "needs_review",
     "source_tier": "official",
     "source_url": "https://openai.com/form/mcp-connector-interest-form",
-    "supported": true,
-    "verified_at": "2026-06-18"
+    "supported": false,
+    "verified_at": "2026-06-19"
   }
 }

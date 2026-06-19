@@ -1,0 +1,12 @@
+{
+  "key": "34244fa4a49083bf051153d5ac1a483fa6999426d9d803102805f6cf15bff6ac",
+  "label": "judge:google-antigravity-code-execution-sandbox",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "active",
+    "rationale": "The page is a forum category listing for Google Antigravity, confirming the product exists. However, it contains no mention of a \"sandbox,\" \"highest security setting,\" command operations through a sandbox, network throttling, or prompt injection vulnerability. The specific claim about the Antigravity sandbox security feature is not described anywhere on this page, so it cannot be substantiated.",
+    "supported": false
+  }
+}

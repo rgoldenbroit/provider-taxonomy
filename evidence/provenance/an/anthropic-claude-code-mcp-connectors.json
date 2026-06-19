@@ -6,7 +6,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Code MCP & connectors",
-    "page_content_hash": "bcf4243eb87eeb524300fddf57caacefd20b952907bb6f5f5da9f76df08e29c1",
+    "page_content_hash": "5fd1ac971f42c3816a9fbb80dba116b8143fc8d99aa031a297839759d7dc9ae3",
     "primary_capability_id": "mcp-connectors",
     "provider": "Anthropic",
     "record_id": "anthropic-claude-code-mcp-connectors",
@@ -14,6 +14,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

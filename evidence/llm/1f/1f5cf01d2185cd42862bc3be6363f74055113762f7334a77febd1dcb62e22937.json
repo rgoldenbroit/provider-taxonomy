@@ -1,0 +1,12 @@
+{
+  "key": "1f5cf01d2185cd42862bc3be6363f74055113762f7334a77febd1dcb62e22937",
+  "label": "judge:openai-codex-cloud",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With Codex cloud, Codex can work on tasks in the background (including in parallel) using its own cloud environment.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex web/cloud as an OpenAI offering that lets Codex work on tasks in the background using its own cloud environment, with setup instructions and included plan access. This substantiates the claim that OpenAI offers Codex Cloud, presented as currently available.",
+    "supported": true
+  }
+}

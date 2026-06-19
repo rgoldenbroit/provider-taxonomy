@@ -1,0 +1,12 @@
+{
+  "key": "4275b5758a776daa55a732e52d4f77f33584d47c1204b501732ce03496de1fff",
+  "label": "judge:openai-openai-mcp-connectors-mcp-connectors",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page content is empty \u2014 no text from the page was provided. Since the page contains no mention of the offering (or any content at all), the claim cannot be substantiated from the page.",
+    "supported": false
+  }
+}

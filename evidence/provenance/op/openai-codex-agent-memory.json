@@ -6,7 +6,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Codex memory",
-    "page_content_hash": "cbf9b6512c6d7ffd3867de470dc1ec5a7a19f321df922eea500a6f842d68ed35",
+    "page_content_hash": "3ea68c2a268ebdb6bbb2691d5dd96ff5bf4d2975688534c9a2fc06cf0c16d338",
     "primary_capability_id": "agent-memory",
     "provider": "OpenAI",
     "record_id": "openai-codex-agent-memory",
@@ -14,6 +14,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/memories",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }
