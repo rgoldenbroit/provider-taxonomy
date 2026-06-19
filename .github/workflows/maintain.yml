@@ -80,5 +80,6 @@ jobs:
       - name: Redeploy the viewer (optional — needs Cloud Run deploy perms on the SA)
         if: steps.guard.outputs.go == 'true' && vars.AUTO_DEPLOY == 'true'
         run: |
+          # Cloud Run region is us-east5 (distinct from the Vertex region in CLOUD_ML_REGION).
           gcloud run deploy provider-seed-viewer --source viewer \
-            --region "${CLOUD_ML_REGION:-us-east5}" --allow-unauthenticated --quiet
+            --region us-east5 --allow-unauthenticated --quiet

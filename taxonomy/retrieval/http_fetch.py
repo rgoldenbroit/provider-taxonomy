@@ -77,9 +77,17 @@ class HttpFetch(RetrievalProvider):
         return {"url": url, "status": resp.status_code, "text": html_to_text(resp.text)}
 
     def fetch(self, url: str) -> FetchedPage:
-        if self._ledger is not None and self._ledger.active:   # snapshot into the committed evidence ledger
-            from ..ledger import page_key
-            data = self._ledger.cached("page", page_key(url), lambda: self._live_fetch(url), meta={"url": url})
+        if self._ledger is not None and self._ledger.active:
+            from ..ledger import REPLAY, LedgerMiss, page_key
+            key = page_key(url)
+            if self._ledger.mode == REPLAY:                    # read the recorded snapshot; no network
+                hit = self._ledger.get("page", key)
+                if hit is None:
+                    raise LedgerMiss(f"page/{key} not in ledger (replay — no live fetch)")
+                data = hit["value"]
+            else:                                              # record: re-fetch fresh so a new run sees drift
+                data = self._live_fetch(url)
+                self._ledger.put("page", key, data, meta={"url": url})
             return FetchedPage(url=url, status=data["status"], text=data["text"],
                                content_hash=content_hash(data["text"]))
 
