@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Anthropic guardrails",
-    "page_content_hash": "4bc23b3fc510038bf655725a89f176e7b5d636d3dd607a0d9c041c02b90f25b0",
+    "page_content_hash": "b46b25b506da0ef0931a7317bcb8ef59d8e8dad0eca5ee9090630a19fbd96d91",
     "primary_capability_id": "guardrails-safety",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "89ecf59980482404f9bccd7a2c7e4dd8f789e78657e7925955e9028f5101b89c",
+  "label": "judge:google-antigravity-guardrails-safety",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "In AntiGravity user settings i have enabled everywhere, where its possible that the model auto proceeds. My deny list is also empty. My problem is, it still asks for input on my side.",
+    "lifecycle_status": "active",
+    "rationale": "The page is a Google Antigravity forum thread describing user-configurable policy/permission settings \u2014 auto-proceed, deny lists, \"Always run\" permissions, terminal command auto execution, and permission dialogs (Allow, Accept, Run). These constitute the guardrails/policy settings referenced in the claim. The page describes these as existing features of Antigravity (though the thread is reporting bugs in their behavior), substantiating that Google's Antigravity has such guardrail/policy controls.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "a0d05455c7d272388b4d621efac43396bd74061d21cf8f77a3244e6f4454bb16",
+  "label": "judge:openai-codex-guardrails-safety",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The claim concerns a specific \"Codex guardrails\" safety post (dated May 8, 2026) describing sandboxing, approvals, network policy, credentials, and telemetry as an enterprise control system. The fetched page is the Codex product landing/navigation page. While the navigation lists related items (e.g., \"Sandboxing,\" \"Permissions,\" \"Agent approvals & security,\" \"Cyber Safety,\" \"Governance,\" and a separate \"Guardrails\" item under the Agents SDK), the page body does not describe a \"Codex guardrails\" safety post or the asserted control-system framing, nor does it mention a May 8, 2026 post. The page content is generic Codex marketing copy. There is no verbatim text on the page substantiating the specific claimed offering/safety post.",
+    "supported": false
+  }
+}

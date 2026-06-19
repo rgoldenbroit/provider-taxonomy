@@ -1,0 +1,12 @@
+{
+  "key": "fecae9b32ca2a2aa45f0abb262ab799f592df36f8f09c505710830e86258b8ec",
+  "label": "judge:anthropic-claude-computer-use",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and mouse/keyboard control for autonomous desktop interaction.",
+    "lifecycle_status": "beta",
+    "rationale": "The page is Anthropic's official documentation describing the computer use tool, which lets Claude interact with desktop environments. It explicitly states \"Computer use is in beta and requires a beta header,\" confirming both the offering's existence and its lifecycle stage.",
+    "supported": true
+  }
+}

@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Codex sandbox",
-    "page_content_hash": "75f6fd9b1ea2601deeb0085ab310c248db0fb6eb768706ae9688f7cb2ed78a13",
+    "page_content_hash": "b4e63b444286e1a07e4f6404f0bfc2816279c63e7b15b3f801bb9759255766f2",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "OpenAI",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/concepts/sandboxing",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

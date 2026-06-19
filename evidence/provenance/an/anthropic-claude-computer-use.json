@@ -7,7 +7,7 @@
     "lifecycle_status": "beta",
     "model": "claude-opus-4-8",
     "name": "Claude Computer Use",
-    "page_content_hash": "f128a58ecf395967f25c2453d15090e777f6bfbf75b3eab1af3a24a97df59dbf",
+    "page_content_hash": "22b5ab99ece0a54b02c9070d7f5923f64871f95750c0c3607f14b5bb7be36695",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

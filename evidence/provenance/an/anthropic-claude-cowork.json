@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Cowork",
-    "page_content_hash": "4f0ab3d2a69d5077e8f77ac442b7d8755125d32d27a20f7f52c191d21addcfda",
+    "page_content_hash": "21f8ff5f389f58367a0659360d4cc78577da6c09220e7b4e627c656f41ca6d22",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "low",
     "source_url": "https://elephas.app/resources/notebooklm-vs-claude-cowork",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }

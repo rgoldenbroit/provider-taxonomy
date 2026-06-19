@@ -1,0 +1,12 @@
+{
+  "key": "bb7a4c5f33bef4a041c669fe27fbd308599f97e351f32f2d28b8e313c7251593",
+  "label": "judge:anthropic-claude-code-mcp-connectors",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol (MCP), an open source standard for AI-tool integrations. MCP servers give Claude Code access to your tools, databases, and APIs.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Anthropic's official Claude Code documentation describing MCP support and connectors (\"Browse reviewed connectors in the Anthropic Directory\"). It thoroughly documents Claude Code's MCP integration as a current feature, substantiating the claim. The cited blog URLs in the claim are irrelevant; the fetched page itself confirms the offering.",
+    "supported": true
+  }
+}

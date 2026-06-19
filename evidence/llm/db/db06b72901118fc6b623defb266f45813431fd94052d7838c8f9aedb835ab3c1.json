@@ -1,0 +1,12 @@
+{
+  "key": "db06b72901118fc6b623defb266f45813431fd94052d7838c8f9aedb835ab3c1",
+  "label": "judge:openai-openai-evals-observability-agent-evals-observability",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "This notebook builds an improvement flywheel for an agent. We start with real traces, add human and model feedback, turn that feedback into evals, and use the resulting evidence to propose the next harness changes for Codex to implement.",
+    "lifecycle_status": "active",
+    "rationale": "The page is an OpenAI cookbook example demonstrating evals and observability for agents. The navigation includes an \"Evals\" section (Getting started, Working with evals, Graders, etc.) and \"Integrations and observability\" / \"Evaluate agent workflows\" under the Agents SDK. The notebook itself builds an improvement loop using traces, evals, and Codex, with sections like \"Turn that feedback into evals\" and \"Integrations and observability.\" This substantiates that OpenAI offers evals and observability capabilities.",
+    "supported": true
+  }
+}

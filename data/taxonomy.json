@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Live grounded catalog \u2014 seed capabilities + pipeline-verified products.",
-    "as_of": "2026-06-18",
+    "as_of": "2026-06-19",
     "conforms_to": "schema.json"
   },
   "capabilities": [
@@ -226,7 +226,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -255,7 +255,7 @@
       ],
       "source": {
         "url": "https://openai.com/index/introducing-gpt-5-5/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -284,7 +284,7 @@
       ],
       "source": {
         "url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "low"
       }
     },
@@ -315,7 +315,7 @@
       ],
       "source": {
         "url": "https://www.anthropic.com/claude",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -346,7 +346,7 @@
       ],
       "source": {
         "url": "https://openai.com/chatgpt/overview/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -377,7 +377,7 @@
       ],
       "source": {
         "url": "https://en.wikipedia.org/wiki/Gemini_(chatbot)",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -408,7 +408,7 @@
       ],
       "source": {
         "url": "https://www.anthropic.com/claude-code",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -440,7 +440,7 @@
       ],
       "source": {
         "url": "https://openai.com/codex/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -469,7 +469,7 @@
       ],
       "source": {
         "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -500,7 +500,7 @@
       ],
       "source": {
         "url": "https://jules.google",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -529,7 +529,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -558,7 +558,7 @@
       ],
       "source": {
         "url": "https://openai.com/index/introducing-operator/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -587,7 +587,7 @@
       ],
       "source": {
         "url": "https://www.digitalapplied.com/blog/computer-use-agents-2026-claude-openai-gemini-matrix",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "low"
       }
     },
@@ -617,7 +617,7 @@
       ],
       "source": {
         "url": "https://elephas.app/resources/notebooklm-vs-claude-cowork",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "low"
       }
     },
@@ -648,7 +648,7 @@
       ],
       "source": {
         "url": "https://openai.com/index/introducing-deep-research/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       },
       "parent_id": "openai-chatgpt"
@@ -679,7 +679,7 @@
       ],
       "source": {
         "url": "https://en.wikipedia.org/wiki/NotebookLM",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -709,7 +709,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/api/agent-sdk/overview",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -738,7 +738,7 @@
       ],
       "source": {
         "url": "https://openai.github.io/openai-agents-python/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -768,7 +768,7 @@
       ],
       "source": {
         "url": "https://google.github.io/adk-docs/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -799,7 +799,7 @@
       ],
       "source": {
         "url": "https://cloud.google.com/products/agent-builder",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -829,7 +829,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/api/claude-on-vertex-ai",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -860,7 +860,7 @@
       ],
       "source": {
         "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -891,7 +891,7 @@
       ],
       "source": {
         "url": "https://deepmind.google/models/veo/",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -921,7 +921,7 @@
       ],
       "source": {
         "url": "https://en.wikipedia.org/wiki/Google_Antigravity",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "medium"
       }
     },
@@ -951,7 +951,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/claude-code/remote-control",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       },
       "parent_id": "anthropic-claude-code"
@@ -983,7 +983,7 @@
       ],
       "source": {
         "url": "https://developers.openai.com/codex/cloud",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       },
       "parent_id": "openai-codex"
@@ -1015,7 +1015,7 @@
       ],
       "source": {
         "url": "https://openai.com/index/introducing-agentkit",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1073,7 +1073,7 @@
       ],
       "source": {
         "url": "https://anthropic.com/news/finance-agents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1105,7 +1105,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1136,7 +1136,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1167,7 +1167,7 @@
       ],
       "source": {
         "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1198,7 +1198,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/pt/docs/claude-code/sub-agents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1229,7 +1229,7 @@
       ],
       "source": {
         "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/bedrock-openai-models-codex-managed-agents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "low"
       }
     },
@@ -1260,7 +1260,7 @@
       ],
       "source": {
         "url": "https://developers.openai.com/codex/memories",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1290,7 +1290,7 @@
       ],
       "source": {
         "url": "https://developers.openai.com/codex/concepts/sandboxing",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1354,7 +1354,7 @@
       ],
       "source": {
         "url": "https://developers.openai.com/codex/subagents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1416,7 +1416,7 @@
       ],
       "source": {
         "url": "https://discuss.ai.google.dev/t/policy-settings-do-not-apply/136027",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1447,7 +1447,7 @@
       ],
       "source": {
         "url": "https://discuss.ai.google.dev/t/antigravity-sub-agents/114381",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1478,7 +1478,7 @@
       ],
       "source": {
         "url": "https://developers.googleblog.com/jules-gemini-3",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1508,7 +1508,7 @@
       ],
       "source": {
         "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1537,7 +1537,7 @@
       ],
       "source": {
         "url": "https://openai.com/form/mcp-connector-interest-form",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1567,7 +1567,7 @@
       ],
       "source": {
         "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-managed-mcp-servers-are-available-for-everyone",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1597,7 +1597,7 @@
       ],
       "source": {
         "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1628,7 +1628,7 @@
       ],
       "source": {
         "url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1658,7 +1658,7 @@
       ],
       "source": {
         "url": "https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     },
@@ -1687,7 +1687,7 @@
       ],
       "source": {
         "url": "https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
-        "last_verified": "2026-06-18",
+        "last_verified": "2026-06-19",
         "confidence": "high"
       }
     }

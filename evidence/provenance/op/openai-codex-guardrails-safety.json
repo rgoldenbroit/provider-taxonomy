@@ -7,7 +7,7 @@
     "lifecycle_status": "unknown",
     "model": "claude-opus-4-8",
     "name": "Codex guardrails",
-    "page_content_hash": "6aee3ff07d7286172b0a95e40ca49abffe81570bc597c2bd33190aa94ee08a69",
+    "page_content_hash": "660243aaf452eb7a27a5395d412bd6fad1885e86a2df29089e69f86052c8006a",
     "primary_capability_id": "guardrails-safety",
     "provider": "OpenAI",
     "reconfirmed": false,

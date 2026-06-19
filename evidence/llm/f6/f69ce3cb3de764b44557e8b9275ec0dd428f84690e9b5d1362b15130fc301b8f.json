@@ -1,0 +1,12 @@
+{
+  "key": "f69ce3cb3de764b44557e8b9275ec0dd428f84690e9b5d1362b15130fc301b8f",
+  "label": "judge:anthropic-claude-code",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser. Build, debug, and ship with natural language.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Anthropic's official Claude Code product page, describing it as an available AI coding agent with pricing plans, download options, and current feature announcements, confirming it is an active offering.",
+    "supported": true
+  }
+}

@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser. Build, debug, and ship with natural language.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Code",
-    "page_content_hash": "1583159c940ad7139a1212aa7b6571e896fbdc4b590a15d557235344861bfa41",
+    "page_content_hash": "57cb0a1a8e7d2e5eefff5af9780c1759e731a98bc2a9cd0543dc57706b42a217",
     "primary_capability_id": "agentic-coding",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/claude-code",
     "supported": true,
-    "verified_at": "2026-06-18"
+    "verified_at": "2026-06-19"
   }
 }
