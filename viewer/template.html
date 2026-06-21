@@ -125,6 +125,12 @@
   .b-scaffold { background:color-mix(in srgb,var(--purple) 13%,transparent); color:var(--purple);
     border:1px dashed color-mix(in srgb,var(--purple) 45%,transparent); }
   .celltree { margin-top:6px; }
+  /* inline function breakdown on the Overview matrix (spans the full grid width) */
+  .covbreak { grid-column:1 / -1; margin:2px 0 8px; }
+  .catbr.accent { border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); background:var(--accent-soft); }
+  .catbr.accent > summary { color:var(--accent); }
+  .ovtreegrid { display:grid; gap:12px; margin:8px 0 4px; align-items:start; }
+  @media (max-width:820px){ .ovtreegrid { grid-template-columns:1fr !important; } }
 
   /* ---------- tables ---------- */
   .tablewrap { overflow-x:auto; }
@@ -513,6 +519,11 @@ function viewOverview(){
     for (const c of caps.filter(x=>x.tier===tier && x.id!=='unclassified')){
       cov += `<div class="cov-caph"><div class="capname">${esc(c.name)}</div><div class="faint small">${esc(c.tier)}</div></div>`;
       cov += providers.map(pr=>covCell(c.id, pr)).join('');
+      if (catsByFunction[c.id]){   // a function with a deeper breakdown → expand it inline, full width
+        cov += `<div class="covbreak"><details class="catbr accent" id="ovbreak-${esc(c.id)}"><summary>Drill into the ${esc(c.name)} breakdown &mdash; category &rarr; feature &rarr; sub-feature</summary>
+          <div class="catdesc muted small">Each provider's offering, broken down. Expand any feature for its sub-features.</div>
+          ${functionBreakdownHtml(c.id)}</details></div>`;
+      }
     }
   }
   cov += `</div></div>`;
@@ -522,6 +533,7 @@ function viewOverview(){
     <p class="hero-sub">A self-maintaining map of what Anthropic, OpenAI &amp; Google ship across every AI capability — discovered from the live web, grounded to its source, and gated before it ships.</p>
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="selectView('Explore')">Explore the catalog &rarr;</button>
+      <button class="btn" onclick="exploreFunction('agentic-coding')">Agentic Coding breakdown &rarr;</button>
       <button class="btn" onclick="showAbout()">How it works</button>
     </div>
     <div class="hero-stats"><b>${offerings}</b> offerings &middot; <b>${capCount}</b> capabilities &middot; <b>${providers.length}</b> providers &middot; <b>${grounded}%</b> source-grounded</div>
@@ -616,6 +628,20 @@ function featuresSection(p){
   const tree = featureTreeHtml(p);
   if (!tree) return '';
   return `<h3 class="small muted" style="margin-top:16px">Breakdown (${countDescendants(p.id)})</h3>${tree}`;
+}
+/* per-provider compare grid for one function, each cell drilling into its tree.
+   Shared by the Overview inline breakdown and the Explore compare path. */
+function functionBreakdownHtml(capId){
+  const cols = `repeat(${providers.length}, minmax(0,1fr))`;
+  return `<div class="ovtreegrid" style="grid-template-columns:${cols}">`
+    + providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('')
+    + providers.map(pr=>cell(capId, pr, null, {tree:true})).join('')
+    + `</div>`;
+}
+/* jump to Explore pre-filtered to a function (used by the hero CTA) */
+function exploreFunction(capId){
+  exploreState.q=''; exploreState.provider=''; exploreState.capability=capId; exploreState.status='';
+  selectView('Explore');
 }
 /* honest cross-provider comparison on this offering's axis: present / unknown / grounded-none per provider */
 function axisCompareSection(p){
