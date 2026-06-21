@@ -79,7 +79,7 @@ Auth is keyless (ADC locally, Workload Identity Federation in CI) — there are 
 
 - `taxonomy/` — engine: `validate` · `discover` · `triage` · `trust` (the three gates) · `audit` (triangulation critic + deploy gate) · `autobuild` (loop-until-dry discovery) · `metrics`/`staleness` · `evals/` · `vertex_client` (Vertex + offline stub) · `retrieval/` (fixtures + httpx fetch + Tavily).
 - `data/` — `taxonomy.json` (working store) · `fixtures/` (deterministic offline searches/pages/LLM responses).
-- `viewer/` — `template.html` + `build.py` → `taxonomy.html`, a single-file light/dark viewer with four sections: **Overview** (coverage-at-a-glance), **Explore** (search · filter · compare, with cross-provider equivalence), **How it works** (the pipeline + trust gates), and **Under the hood** (live trust metrics · re-verify queue · intake · lineage).
+- `viewer/` — `template.html` + `build.py` → `taxonomy.html`, a single-file light/dark viewer with four sections: **Overview** (coverage-at-a-glance), **Explore** (search · filter · compare, with cross-provider equivalence and a collapsible `category → feature → sub-feature` breakdown per provider), **How it works** (the pipeline + trust gates), and **Under the hood** (live trust metrics · re-verify queue · intake · lineage). The drawer renders any node's full breakdown tree.
 - `scripts/` — `ground.py` (rebuild the verified catalog) · `fill_gaps.py` (incremental gap-fill).
 - `ops/` — run logs, eval-metrics time series, fetched-page cache (regenerable).
 
@@ -87,7 +87,7 @@ Auth is keyless (ADC locally, Workload Identity Federation in CI) — there are 
 
 # The data model
 
-The engine above is only as good as the schema it maintains. Two entity types — `capability` and `product` — defined in `schema.json`, with a hand-curated, fully-conformant seed in `examples.json`.
+The engine above is only as good as the schema it maintains. Two core entity types — `capability` and `product` — plus an optional `category` (per-function IA grouping), defined in `schema.json`, with a hand-curated, fully-conformant seed in `examples.json`.
 
 ## The one idea that makes this work
 
@@ -111,16 +111,20 @@ A "comparison" is then a **query**, not stored data: pick a capability, group it
 | A provider deliberately offers nothing | An explicit `status: "absent"` record, so the UI shows a *sourced gap*, not a null. |
 | The ecosystem changes faster than you can verify | `source.last_verified` + `source.confidence` drive staleness warnings. |
 | A capability lives *inside* a product, not as its own product | `kind: "feature"` + `parent_id` pointing at the parent product. |
+| A feature has its own internal structure | A deeper `parent_id` chain: a `feature` (sub-feature) parented to another `feature`. Nesting is unbounded. |
+| A function's features want grouping for navigation | Optional `categories[]` — per-function, provider-agnostic groupings of feature-axes (the abstract spine). |
+| Structure exists but isn't ground-verified yet | `review_status: "scaffold"` — hand-added shape; the reproducible-build replay skips it until the maintenance loop grounds it. |
 | Something new is discovered but not yet classified | `review_status: "candidate"` (optionally `primary_capability_id: "unclassified"`) until triage confirms it. |
 
-## Granularity: model family → product → feature
+## Granularity: model family → product → category → feature → sub-feature
 
-The taxonomy holds offerings at any level using two fields: `kind` and `parent_id`.
+The taxonomy holds offerings at any depth using `kind` + `parent_id` for the **concrete** tree, and an optional `categories[]` array for the **abstract spine** (`function → category → feature-axis`).
 
 - `kind` says what the node *is*: `model_family`, `model`, `product`, `feature`, `platform`, `protocol`, or `service_tier`.
-- `parent_id` points at the node it belongs to: a `feature` → its `product`, a `model` → its `model_family`, a sub-product → its parent product.
+- `parent_id` points at the node it belongs to: a `feature` → its `product`, a deeper `feature` (sub-feature) → its parent feature, a `model` → its `model_family`, a sub-product → its parent product. The chain can go as deep as the offering's real structure.
+- `categories[]` (optional) groups and orders a function's feature-axes for drill-down — e.g. for **Agentic Coding**: *Agent Management*, *Context & Memory*, *Execution & Safety*, *Quality & Ops*. Each category lists the `feature_axis_ids` (capability ids) it presents. Categories are pure IA — they never move the cross-cutting feature-axes, they just curate one function's view.
 
-This lets **Claude Code Remote Control** (a feature of Claude Code) or **Codex CLI** (a member of the Codex family) sit in the same dataset as top-level products and models without pretending they're standalone.
+This lets **Claude Code subagents** (a feature of Claude Code) drill into **Definition files / Tool scoping / Model per subagent** (sub-features), grouped under the *Agent Management* category — and the viewer renders the whole `category → feature → sub-feature` tree as a collapsible breakdown, compared side by side across providers. Sub-features added as structural scaffold carry `review_status: "scaffold"` until grounded.
 
 **When does a feature earn its own node?** Only when it represents a capability worth comparing across providers. Every product has dozens of small features; tracking them all is unbounded and useless. Remote Control earns a node because async/remote agent control is a real cross-provider axis (Google's Jules, OpenAI's Codex Cloud); a cosmetic toggle does not. **Rule of thumb: if it doesn't map to a capability another provider could also fill, it's a `scope_note`, not a node.** The engine enforces this automatically — an "X SDK / CLI" that merely exposes an already-listed product is folded into that product as an access surface rather than admitted as a new node.
 

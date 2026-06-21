@@ -64,5 +64,11 @@ def reverify_catalog(catalog: dict, llm, retrieval, ledger, as_of: str = AS_OF) 
         if rec.get("status") == "absent":
             counts["absent"] += 1
             continue
+        # Structural scaffold (e.g. a hand-added sub-feature) is not yet ground-verified
+        # and carries no ledger evidence. The reproducible-build check reproduces the
+        # *grounded* catalog; scaffold passes through unchanged until the loop grounds it.
+        if rec.get("review_status") == "scaffold":
+            counts["scaffold"] += 1
+            continue
         counts[reverify_record(rec, llm, retrieval, ledger, as_of)] += 1
     return counts

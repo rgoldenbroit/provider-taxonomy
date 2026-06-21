@@ -103,6 +103,67 @@ def test_empty_capability_ids():
     assert _has(validate(d), kind="integrity", rule="invariant", path_contains="capability_ids")
 
 
+def _a_capability(d: dict) -> str:
+    return d["capabilities"][0]["id"]
+
+
+def test_valid_categories_accepted():
+    d = _seed()
+    fn = _a_capability(d)
+    d["categories"] = [{
+        "id": "cat/one", "function_id": fn, "name": "One",
+        "description": "A grouping.", "order": 1, "feature_axis_ids": [fn],
+    }]
+    assert validate(d) == []
+
+
+def test_scaffold_review_status_accepted():
+    d = _seed()
+    d["products"][1]["review_status"] = "scaffold"
+    assert validate(d) == []
+
+
+def test_category_unknown_function_id():
+    d = _seed()
+    d["categories"] = [{"id": "cat/x", "function_id": "ghost-fn",
+                        "name": "X", "description": "d"}]
+    assert _has(validate(d), kind="integrity", rule="ref_resolution",
+                path_contains="function_id")
+
+
+def test_category_unknown_feature_axis():
+    d = _seed()
+    fn = _a_capability(d)
+    d["categories"] = [{"id": "cat/x", "function_id": fn, "name": "X",
+                        "description": "d", "feature_axis_ids": ["ghost-axis"]}]
+    assert _has(validate(d), kind="integrity", rule="ref_resolution",
+                path_contains="feature_axis_ids")
+
+
+def test_duplicate_category_id():
+    d = _seed()
+    fn = _a_capability(d)
+    cat = {"id": "cat/dup", "function_id": fn, "name": "X", "description": "d"}
+    d["categories"] = [cat, copy.deepcopy(cat)]
+    assert _has(validate(d), kind="integrity", rule="uniqueness", path_contains="categories")
+
+
+def test_category_bad_additional_property():
+    d = _seed()
+    fn = _a_capability(d)
+    d["categories"] = [{"id": "cat/x", "function_id": fn, "name": "X",
+                        "description": "d", "bogus": 1}]
+    assert _has(validate(d), kind="schema", rule="additionalProperties", msg_contains="bogus")
+
+
+def test_parent_id_cycle_detected():
+    d = _seed()
+    a, b = d["products"][0]["id"], d["products"][1]["id"]
+    d["products"][0]["parent_id"] = b
+    d["products"][1]["parent_id"] = a  # a -> b -> a
+    assert _has(validate(d), kind="integrity", rule="invariant", msg_contains="cycle")
+
+
 def _run_standalone() -> int:
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failed = 0

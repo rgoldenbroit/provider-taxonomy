@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Live grounded catalog \u2014 seed capabilities + pipeline-verified products.",
+    "description": "Live grounded catalog — seed capabilities + pipeline-verified products.",
     "as_of": "2026-06-19",
     "conforms_to": "schema.json"
   },
@@ -221,7 +221,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Fable 5 is presented as an Anthropic model, fitting the flagship-model capability directly as a general-purpose model offering. As a base model it belongs only to flagship-model; downstream uses (chat, coding, "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Fable 5 is presented as an Anthropic model, fitting the flagship-model capability directly as a general-purpose model offering. As a base model it belongs only to flagship-model; downstream uses (chat, coding, "
         }
       ],
       "source": {
@@ -250,7 +250,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). GPT-5.5 Pro is OpenAI's most capable general-purpose model variant, a base flagship model. As a model, it belongs only to flagship-model; downstream uses (chat, coding, etc.) are separate products built on it and are "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). GPT-5.5 Pro is OpenAI's most capable general-purpose model variant, a base flagship model. As a model, it belongs only to flagship-model; downstream uses (chat, coding, etc.) are separate products built on it and are "
         }
       ],
       "source": {
@@ -279,7 +279,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini 3.5 Pro is Google's most capable general-purpose flagship model, accessed via API and used as the base for downstream products. As a base model it maps directly to flagship-model only; downstream uses like chat"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini 3.5 Pro is Google's most capable general-purpose flagship model, accessed via API and used as the base for downstream products. As a base model it maps directly to flagship-model only; downstream uses like chat"
         }
       ],
       "source": {
@@ -310,7 +310,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude's web/desktop/mobile apps are Anthropic's primary conversational assistant for end users, matching consumer-chat-assistant directly. It is the user-facing chat product, not a base model, so no flagship-model at"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude's web/desktop/mobile apps are Anthropic's primary conversational assistant for end users, matching consumer-chat-assistant directly. It is the user-facing chat product, not a base model, so no flagship-model at"
         }
       ],
       "source": {
@@ -341,7 +341,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). ChatGPT is OpenAI's flagship consumer conversational application available across web, desktop, and mobile, which maps directly to the consumer-chat-assistant capability. While ChatGPT now bundles features like image "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). ChatGPT is OpenAI's flagship consumer conversational application available across web, desktop, and mobile, which maps directly to the consumer-chat-assistant capability. While ChatGPT now bundles features like image "
         }
       ],
       "source": {
@@ -372,7 +372,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Gemini app is Google's primary consumer-facing conversational assistant available across web and mobile, directly matching consumer-chat-assistant. It is a standalone product (not a model), so it maps directly to "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Gemini app is Google's primary consumer-facing conversational assistant available across web and mobile, directly matching consumer-chat-assistant. It is a standalone product (not a model), so it maps directly to "
         }
       ],
       "source": {
@@ -403,7 +403,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code is Anthropic's agentic coding tool that operates primarily in the terminal (with IDE integrations), autonomously editing code, running commands, and managing development tasks. This is a direct match for a"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code is Anthropic's agentic coding tool that operates primarily in the terminal (with IDE integrations), autonomously editing code, running commands, and managing development tasks. This is a direct match for a"
         }
       ],
       "source": {
@@ -435,7 +435,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 needs_review (grounding 1.00, classification 1.00). OpenAI Codex is an agentic software-engineering product spanning a CLI, IDE extension, and cloud environment, directly fitting agentic-coding. It also supports starting and monitoring coding tasks asynchronously/re"
+          "note": "Auto-triage → needs_review (grounding 1.00, classification 1.00). OpenAI Codex is an agentic software-engineering product spanning a CLI, IDE extension, and cloud environment, directly fitting agentic-coding. It also supports starting and monitoring coding tasks asynchronously/re"
         }
       ],
       "source": {
@@ -464,7 +464,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity CLI is Google's command-line interface to its Antigravity agentic development platform, providing autonomous/assisted software development from the terminal \u2014 a direct fit for agentic-coding. As a CLI it o"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity CLI is Google's command-line interface to its Antigravity agentic development platform, providing autonomous/assisted software development from the terminal — a direct fit for agentic-coding. As a CLI it o"
         }
       ],
       "source": {
@@ -495,7 +495,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Jules is Google's autonomous coding agent that works asynchronously in a cloud VM, cloning a repo, planning, and making code changes / opening PRs. This is a direct agentic-coding product. It is also genuinely a remot"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Jules is Google's autonomous coding agent that works asynchronously in a cloud VM, cloning a repo, planning, and making code changes / opening PRs. This is a direct agentic-coding product. It is also genuinely a remot"
         }
       ],
       "source": {
@@ -524,7 +524,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Computer Use is Anthropic's API capability that lets Claude perceive a screen and control a computer (move cursor, click, type) to complete multi-step tasks on the user's behalf \u2014 a direct match for the browser"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Computer Use is Anthropic's API capability that lets Claude perceive a screen and control a computer (move cursor, click, type) to complete multi-step tasks on the user's behalf — a direct match for the browser"
         }
       ],
       "source": {
@@ -553,7 +553,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Operator is OpenAI's agent that drives a web browser on the user's behalf to complete multi-step tasks (booking, ordering, form-filling), making it a direct fit for the browser/computer-use agent capability. It is a s"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Operator is OpenAI's agent that drives a web browser on the user's behalf to complete multi-step tasks (booking, ordering, form-filling), making it a direct fit for the browser/computer-use agent capability. It is a s"
         }
       ],
       "source": {
@@ -582,7 +582,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini Computer Use is Google's model/capability that lets an agent drive a browser/computer UI to complete multi-step tasks, exposed via the Gemini API. It maps squarely and directly to the browser/computer-use agent"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini Computer Use is Google's model/capability that lets an agent drive a browser/computer UI to complete multi-step tasks, exposed via the Gemini API. It maps squarely and directly to the browser/computer-use agent"
         }
       ],
       "source": {
@@ -612,7 +612,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Cowork is presented as Anthropic's collaborative knowledge-work agent for documents, analysis, and research workflows grounded in user sources\u2014aligning directly with the knowledge-work-research capability. It i"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Cowork is presented as Anthropic's collaborative knowledge-work agent for documents, analysis, and research workflows grounded in user sources—aligning directly with the knowledge-work-research capability. It i"
         }
       ],
       "source": {
@@ -643,7 +643,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). ChatGPT Deep Research is an agentic research feature within ChatGPT that autonomously browses and synthesizes multi-source web information into structured reports \u2014 a direct fit for the knowledge-work/research agent c"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). ChatGPT Deep Research is an agentic research feature within ChatGPT that autonomously browses and synthesizes multi-source web information into structured reports — a direct fit for the knowledge-work/research agent c"
         }
       ],
       "source": {
@@ -674,7 +674,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). NotebookLM is Google's research/knowledge-work product that grounds analysis, summarization, and Q&A in user-provided sources (documents, PDFs, etc.), with features like Audio Overviews. It is a standalone non-develop"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). NotebookLM is Google's research/knowledge-work product that grounds analysis, summarization, and Q&A in user-provided sources (documents, PDFs, etc.), with features like Audio Overviews. It is a standalone non-develop"
         }
       ],
       "source": {
@@ -704,7 +704,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Claude Agent SDK (formerly Claude Code SDK) is Anthropic's developer toolkit for building, orchestrating, and deploying custom agents on top of Claude, providing the same harness that powers Claude Code (tool use,"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Claude Agent SDK (formerly Claude Code SDK) is Anthropic's developer toolkit for building, orchestrating, and deploying custom agents on top of Claude, providing the same harness that powers Claude Code (tool use,"
         }
       ],
       "source": {
@@ -733,7 +733,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The OpenAI Agents SDK is a developer toolkit/framework for building, orchestrating, and deploying custom agents (handoffs, guardrails, tools, tracing), which directly matches the agent-building-sdk capability. It is a"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The OpenAI Agents SDK is a developer toolkit/framework for building, orchestrating, and deploying custom agents (handoffs, guardrails, tools, tracing), which directly matches the agent-building-sdk capability. It is a"
         }
       ],
       "source": {
@@ -763,7 +763,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google's Agent Development Kit (ADK) is an open-source developer framework/toolkit for building, orchestrating, and deploying custom AI agents \u2014 a direct match for the agent-building-sdk capability. It is consumed by "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Google's Agent Development Kit (ADK) is an open-source developer framework/toolkit for building, orchestrating, and deploying custom AI agents — a direct match for the agent-building-sdk capability. It is consumed by "
         }
       ],
       "source": {
@@ -794,7 +794,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Gemini Enterprise is Google's managed platform for building, deploying, governing, and running agents at enterprise scale, which maps directly to the enterprise-agent-platform capability. It is a standalone platform o"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Gemini Enterprise is Google's managed platform for building, deploying, governing, and running agents at enterprise scale, which maps directly to the enterprise-agent-platform capability. It is a standalone platform o"
         }
       ],
       "source": {
@@ -824,7 +824,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). \"Claude on third-party platforms\" refers to Anthropic's Claude models being made available through managed enterprise cloud platforms (e.g., Amazon Bedrock, Google Vertex AI, Microsoft Foundry). This is an enterprise "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). \"Claude on third-party platforms\" refers to Anthropic's Claude models being made available through managed enterprise cloud platforms (e.g., Amazon Bedrock, Google Vertex AI, Microsoft Foundry). This is an enterprise "
         }
       ],
       "source": {
@@ -855,7 +855,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Sora is OpenAI's first-party text-to-video generation product/app, directly fulfilling the image/video generation capability. It is offered as a standalone product (web and mobile app, plus API access), not a base mod"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Sora is OpenAI's first-party text-to-video generation product/app, directly fulfilling the image/video generation capability. It is offered as a standalone product (web and mobile app, plus API access), not a base mod"
         }
       ],
       "source": {
@@ -886,7 +886,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Veo is Google's first-party video generation model, directly matching the image/video generation capability. It produces video from text/image prompts, accessible via API and Google's products. It is a generation mode"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Veo is Google's first-party video generation model, directly matching the image/video generation capability. It produces video from text/image prompts, accessible via API and Google's products. It is a generation mode"
         }
       ],
       "source": {
@@ -916,7 +916,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity 2.0 is Google's agentic development platform (an agent-first IDE/coding surface), squarely an agentic-coding product. It directly fills that capability rather than partially or broadly. No strong evidence "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity 2.0 is Google's agentic development platform (an agent-first IDE/coding surface), squarely an agentic-coding product. It directly fills that capability rather than partially or broadly. No strong evidence "
         }
       ],
       "source": {
@@ -946,7 +946,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code Remote Control is a feature of Claude Code (parent: anthropic-claude-code) that lets users start, monitor, and direct Claude Code coding-agent sessions remotely/asynchronously from a mobile or web device. "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code Remote Control is a feature of Claude Code (parent: anthropic-claude-code) that lets users start, monitor, and direct Claude Code coding-agent sessions remotely/asynchronously from a mobile or web device. "
         }
       ],
       "source": {
@@ -978,7 +978,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex Cloud is OpenAI's cloud-based deployment of the Codex coding agent, letting users delegate, monitor, and direct coding tasks asynchronously from web/mobile \u2014 the defining trait of remote/async agent control. It "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Codex Cloud is OpenAI's cloud-based deployment of the Codex coding agent, letting users delegate, monitor, and direct coding tasks asynchronously from web/mobile — the defining trait of remote/async agent control. It "
         }
       ],
       "source": {
@@ -1010,7 +1010,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). AgentKit is OpenAI's toolkit for building, deploying, and running agents \u2014 including the visual Agent Builder, ChatKit for embedding agents, Connector Registry, and evaluation tooling. It functions as a managed platfo"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 0.67). AgentKit is OpenAI's toolkit for building, deploying, and running agents — including the visual Agent Builder, ChatKit for embedding agents, Connector Registry, and evaluation tooling. It functions as a managed platfo"
         }
       ],
       "source": {
@@ -1037,7 +1037,7 @@
         {
           "date": "2026-06-16",
           "event": "triaged",
-          "note": "Modeled absence \u2014 operator-verified."
+          "note": "Modeled absence — operator-verified."
         }
       ],
       "source": {
@@ -1068,7 +1068,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Managed Agents is Anthropic's provider-hosted execution offering where Anthropic runs the agent loop and sandboxes tools rather than the developer self-hosting \u2014 a direct fit for managed-agent-runtime. It is pr"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Managed Agents is Anthropic's provider-hosted execution offering where Anthropic runs the agent loop and sandboxes tools rather than the developer self-hosting — a direct fit for managed-agent-runtime. It is pr"
         }
       ],
       "source": {
@@ -1100,7 +1100,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering is Claude Code's Model Context Protocol support and connector integrations, which maps directly to the mcp-connectors capability. It is a feature/sub-product of the Claude Code product (parent: anthropic"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). This offering is Claude Code's Model Context Protocol support and connector integrations, which maps directly to the mcp-connectors capability. It is a feature/sub-product of the Claude Code product (parent: anthropic"
         }
       ],
       "source": {
@@ -1131,7 +1131,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering provides persistent, cross-session memory stores for Claude Managed Agents, directly matching agent-memory. It is a feature of the managed agent runtime (memory stores shown in the Claude Console for man"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). This offering provides persistent, cross-session memory stores for Claude Managed Agents, directly matching agent-memory. It is a feature of the managed agent runtime (memory stores shown in the Claude Console for man"
         }
       ],
       "source": {
@@ -1157,12 +1157,12 @@
       "status": "active",
       "review_status": "confirmed",
       "parent_id": "anthropic-claude-code",
-      "scope_note": "We recently built Claude Code auto mode, which [automates safer approvals](https://www.anthropic.com/engineering/claude-code-auto-mode) in order to reduce this approval fatigue. At Anthropic, we\u2019ve seen Claude models [\u201chelpfully\u201d escape a sandbox](https://red.anthropic.com/2026/m",
+      "scope_note": "We recently built Claude Code auto mode, which [automates safer approvals](https://www.anthropic.com/engineering/claude-code-auto-mode) in order to reduce this approval fatigue. At Anthropic, we’ve seen Claude models [“helpfully” escape a sandbox](https://red.anthropic.com/2026/m",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code sandbox is the isolated execution environment in which Claude Code runs agent-initiated commands/code, tied to auto mode for safer approvals. This is squarely a code execution & sandbox feature of the Clau"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code sandbox is the isolated execution environment in which Claude Code runs agent-initiated commands/code, tied to auto mode for safer approvals. This is squarely a code execution & sandbox feature of the Clau"
         }
       ],
       "source": {
@@ -1193,7 +1193,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Claude Code subagents is a multi-agent orchestration feature of Claude Code, enabling spawning and coordinating multiple subagents within a task. This maps directly to subagents-orchestration. It is a feature/sub-prod"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Claude Code subagents is a multi-agent orchestration feature of Claude Code, enabling spawning and coordinating multiple subagents within a task. This maps directly to subagents-orchestration. It is a feature/sub-prod"
         }
       ],
       "source": {
@@ -1219,12 +1219,12 @@
       "status": "preview",
       "review_status": "needs_review",
       "parent_id": "openai-codex",
-      "scope_note": "# Amazon Bedrock now offers OpenAI models, Codex, and Managed Agents (Limited Preview). AWS and OpenAI are expanding their partnership to bring frontier\u00a0intelligence to the\u00a0infrastructure millions of organizations already trust. Today,\u00a0we\u2019re\u00a0bringing those together\u00a0with\u00a0three new",
+      "scope_note": "# Amazon Bedrock now offers OpenAI models, Codex, and Managed Agents (Limited Preview). AWS and OpenAI are expanding their partnership to bring frontier intelligence to the infrastructure millions of organizations already trust. Today, we’re bringing those together with three new",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex managed agents on Amazon Bedrock are provider/platform-hosted execution of Codex coding agents \u2014 the agent loop and tooling are run as a managed runtime rather than self-hosted, fitting managed-agent-runtime dir"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Codex managed agents on Amazon Bedrock are provider/platform-hosted execution of Codex coding agents — the agent loop and tooling are run as a managed runtime rather than self-hosted, fitting managed-agent-runtime dir"
         }
       ],
       "source": {
@@ -1250,12 +1250,12 @@
       "status": "active",
       "review_status": "confirmed",
       "parent_id": "openai-codex",
-      "scope_note": "# Adding Persistent Memory to OpenAI Codex with Hindsight. ## The Problem: Codex Has No Persistent Memory\u200b. It's capable and fast \u2014 but it has no memory. You re-establish this context at the start of every session, either by explaining it directly or by pointing at an `AGENTS.md`",
+      "scope_note": "# Adding Persistent Memory to OpenAI Codex with Hindsight. ## The Problem: Codex Has No Persistent Memory​. It's capable and fast — but it has no memory. You re-establish this context at the start of every session, either by explaining it directly or by pointing at an `AGENTS.md`",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This offering (via Hindsight) adds persistent, cross-session memory to OpenAI Codex, solving the problem of re-establishing context every session. That is squarely the agent-memory capability \u2014 persistent memory an ag"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). This offering (via Hindsight) adds persistent, cross-session memory to OpenAI Codex, solving the problem of re-establishing context every session. That is squarely the agent-memory capability — persistent memory an ag"
         }
       ],
       "source": {
@@ -1280,12 +1280,12 @@
       "status": "active",
       "review_status": "confirmed",
       "parent_id": "openai-codex",
-      "scope_note": "# OpenAI Codex Guide \u2014 AI Coding Agent in ChatGPT (2026). **OpenAI Codex (2026) is an autonomous cloud-based coding agent built directly into ChatGPT.** You describe a task in plain English, Codex clones your GitHub repository into a sandboxed environment, writes code across mult",
+      "scope_note": "# OpenAI Codex Guide — AI Coding Agent in ChatGPT (2026). **OpenAI Codex (2026) is an autonomous cloud-based coding agent built directly into ChatGPT.** You describe a task in plain English, Codex clones your GitHub repository into a sandboxed environment, writes code across mult",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Codex sandbox is the isolated server-side environment where the Codex agent clones the repo and executes code. This is precisely the code-execution-sandbox capability \u2014 provider-hosted isolated execution for agent"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Codex sandbox is the isolated server-side environment where the Codex agent clones the repo and executes code. This is precisely the code-execution-sandbox capability — provider-hosted isolated execution for agent"
         }
       ],
       "source": {
@@ -1312,12 +1312,12 @@
       "status": "active",
       "review_status": "needs_review",
       "parent_id": "openai-codex",
-      "scope_note": "OpenAI\u2019s Codex safety post turns coding-agent adoption into a control system: sandboxing, approvals, network policy, credentials, and telemetry. OpenAI's May 8, 2026 safety post turns OpenAI Codex into an enterprise control question: where can the agent act, when must it ask, whi",
+      "scope_note": "OpenAI’s Codex safety post turns coding-agent adoption into a control system: sandboxing, approvals, network policy, credentials, and telemetry. OpenAI's May 8, 2026 safety post turns OpenAI Codex into an enterprise control question: where can the agent act, when must it ask, whi",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This is a safety/control framework for the Codex coding agent \u2014 sandboxing, approvals, network policy, credentials, and telemetry \u2014 which is precisely the guardrails-safety capability (policy and safety controls on an"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). This is a safety/control framework for the Codex coding agent — sandboxing, approvals, network policy, credentials, and telemetry — which is precisely the guardrails-safety capability (policy and safety controls on an"
         }
       ],
       "source": {
@@ -1349,7 +1349,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Codex subagents is a feature of OpenAI Codex that lets the coding agent spawn and coordinate multiple subagents to work on tasks in parallel within a single task \u2014 a direct match for the subagents-orchestration capabi"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Codex subagents is a feature of OpenAI Codex that lets the coding agent spawn and coordinate multiple subagents to work on tasks in parallel within a single task — a direct match for the subagents-orchestration capabi"
         }
       ],
       "source": {
@@ -1375,12 +1375,12 @@
       "status": "active",
       "review_status": "confirmed",
       "parent_id": "google-antigravity-2-0",
-      "scope_note": "Google\u2019s highest security setting for its agents runs command operations through a sandbox and throttles network access, but is still vulnerable to prompt injection. CANADA - 2026/04/08: In this photo illustration, the Google Antigravity logo is seen displayed on a smartphone scr",
+      "scope_note": "Google’s highest security setting for its agents runs command operations through a sandbox and throttles network access, but is still vulnerable to prompt injection. CANADA - 2026/04/08: In this photo illustration, the Google Antigravity logo is seen displayed on a smartphone scr",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). The Antigravity sandbox is a security feature of Google's Antigravity agent platform that runs command/code operations through an isolated sandbox and throttles network access \u2014 a direct fit for code-execution-sandbox"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). The Antigravity sandbox is a security feature of Google's Antigravity agent platform that runs command/code operations through an isolated sandbox and throttles network access — a direct fit for code-execution-sandbox"
         }
       ],
       "source": {
@@ -1411,7 +1411,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity guardrails refers to the permission/policy controls (allow lists, deny lists, auto-proceed settings, browser and tmp permissions, \"Always run\" approvals) governing what the Antigravity agent is allowed to "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity guardrails refers to the permission/policy controls (allow lists, deny lists, auto-proceed settings, browser and tmp permissions, \"Always run\" approvals) governing what the Antigravity agent is allowed to "
         }
       ],
       "source": {
@@ -1437,12 +1437,12 @@
       "status": "active",
       "review_status": "confirmed",
       "parent_id": "google-antigravity-2-0",
-      "scope_note": "# Agent Orchestration in Antigravity: Multi-Agent Setup & Workflows. Run frontend, backend, testing, and DevOps agents simultaneously. AgentKit 2.0 introduced 16 specialized agents \u2014 here's how to orchestrate them effectively. Antigravity's Agent Manager lets you spawn, monitor, ",
+      "scope_note": "# Agent Orchestration in Antigravity: Multi-Agent Setup & Workflows. Run frontend, backend, testing, and DevOps agents simultaneously. AgentKit 2.0 introduced 16 specialized agents — here's how to orchestrate them effectively. Antigravity's Agent Manager lets you spawn, monitor, ",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Antigravity subagents is the multi-agent orchestration feature of Google Antigravity (Agent Manager spawning/monitoring/coordinating specialized frontend, backend, testing, DevOps agents within a task). This maps dire"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Antigravity subagents is the multi-agent orchestration feature of Google Antigravity (Agent Manager spawning/monitoring/coordinating specialized frontend, backend, testing, DevOps agents within a task). This maps dire"
         }
       ],
       "source": {
@@ -1473,7 +1473,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Jules memory (Project Jitro / Jules V2) is a persistent agentic workspace storing goals, insights, and history for Google's Jules coding agent \u2014 i.e., persistent cross-session memory the agent reads and writes across "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Jules memory (Project Jitro / Jules V2) is a persistent agentic workspace storing goals, insights, and history for Google's Jules coding agent — i.e., persistent cross-session memory the agent reads and writes across "
         }
       ],
       "source": {
@@ -1503,7 +1503,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). Google's managed agents offering lets enterprises build, deploy, and manage reasoning/tool-using agents that Google hosts and runs \u2014 the core of a managed agent runtime (provider runs the agent loop). It is broader th"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 0.67). Google's managed agents offering lets enterprises build, deploy, and manage reasoning/tool-using agents that Google hosts and runs — the core of a managed agent runtime (provider runs the agent loop). It is broader th"
         }
       ],
       "source": {
@@ -1527,12 +1527,12 @@
       ],
       "status": "preview",
       "review_status": "confirmed",
-      "scope_note": "# MCP Connector Interest Form | OpenAI. *   Foundation(opens in a new window). Log inTry ChatGPT(opens in a new window). # MCP connector interest form. We\u2019re exploring an easy way for developers to use MCP (Model Context Protocol) to build their own search connectors, which can c",
+      "scope_note": "# MCP Connector Interest Form | OpenAI. *   Foundation(opens in a new window). Log inTry ChatGPT(opens in a new window). # MCP connector interest form. We’re exploring an easy way for developers to use MCP (Model Context Protocol) to build their own search connectors, which can c",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). This is OpenAI's MCP (Model Context Protocol) support \u2014 an interest form for developers to build search connectors using MCP. It maps squarely and only to the mcp-connectors capability (connector registries / managed "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). This is OpenAI's MCP (Model Context Protocol) support — an interest form for developers to build search connectors using MCP. It maps squarely and only to the mcp-connectors capability (connector registries / managed "
         }
       ],
       "source": {
@@ -1557,12 +1557,12 @@
       ],
       "status": "active",
       "review_status": "confirmed",
-      "scope_note": "# 50+ fully managed MCP servers now available for Google Cloud services. At Google Cloud Next \u201826, we announced that more than 50 Google-managed Model Context Protocol (MCP) servers are generally available or in preview, with more on the way. Google-managed Managed Context Protoc",
+      "scope_note": "# 50+ fully managed MCP servers now available for Google Cloud services. At Google Cloud Next ‘26, we announced that more than 50 Google-managed Model Context Protocol (MCP) servers are generally available or in preview, with more on the way. Google-managed Managed Context Protoc",
       "lifecycle": [
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google offers 50+ fully managed Model Context Protocol (MCP) servers for Google Cloud services, generally available or in preview. This is a direct, dedicated MCP & connectors offering \u2014 hosted MCP servers and managed"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Google offers 50+ fully managed Model Context Protocol (MCP) servers for Google Cloud services, generally available or in preview. This is a direct, dedicated MCP & connectors offering — hosted MCP servers and managed"
         }
       ],
       "source": {
@@ -1592,7 +1592,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Anthropic's evals & observability tooling supports tracing, evaluating, and monitoring agent runs, mapping directly to the agent-evals-observability capability. It is presented as part of the Claude developer platform"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Anthropic's evals & observability tooling supports tracing, evaluating, and monitoring agent runs, mapping directly to the agent-evals-observability capability. It is presented as part of the Claude developer platform"
         }
       ],
       "source": {
@@ -1623,7 +1623,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 0.67). OpenAI's evals & observability offering provides tracing, evaluation, and monitoring of model/agent runs through the OpenAI platform \u2014 a direct match for agent-evals-observability. It is a developer-facing platform fe"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 0.67). OpenAI's evals & observability offering provides tracing, evaluation, and monitoring of model/agent runs through the OpenAI platform — a direct match for agent-evals-observability. It is a developer-facing platform fe"
         }
       ],
       "source": {
@@ -1653,7 +1653,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Google's evals & observability offering centers on agent observability \u2014 tracing, evaluating, and monitoring agent runs to detect drift, hallucination, and regression. This maps directly to agent-evals-observability. "
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Google's evals & observability offering centers on agent observability — tracing, evaluating, and monitoring agent runs to detect drift, hallucination, and regression. This maps directly to agent-evals-observability. "
         }
       ],
       "source": {
@@ -1682,7 +1682,7 @@
         {
           "date": "2026-06-15",
           "event": "triaged",
-          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Anthropic guardrails describes safety/policy controls to protect users from injected instructions in content Claude reads (prompt-injection threat model). This is squarely a guardrails-and-safety capability covering i"
+          "note": "Auto-triage → confirmed (grounding 1.00, classification 1.00). Anthropic guardrails describes safety/policy controls to protect users from injected instructions in content Claude reads (prompt-injection threat model). This is squarely a guardrails-and-safety capability covering i"
         }
       ],
       "source": {
@@ -1690,6 +1690,375 @@
         "last_verified": "2026-06-19",
         "confidence": "high"
       }
+    },
+    {
+      "id": "anthropic-claude-code-subagents-orchestration-definition-files",
+      "name": "Definition files",
+      "kind": "feature",
+      "parent_id": "anthropic-claude-code-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-subagents-orchestration-tool-scoping",
+      "name": "Tool scoping",
+      "kind": "feature",
+      "parent_id": "anthropic-claude-code-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-subagents-orchestration-model-per-subagent",
+      "name": "Model per subagent",
+      "kind": "feature",
+      "parent_id": "anthropic-claude-code-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-codex-subagents-orchestration-definition-files",
+      "name": "Definition files",
+      "kind": "feature",
+      "parent_id": "openai-codex-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://developers.openai.com/codex/",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-codex-subagents-orchestration-tool-scoping",
+      "name": "Tool scoping",
+      "kind": "feature",
+      "parent_id": "openai-codex-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://developers.openai.com/codex/",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-codex-subagents-orchestration-model-per-subagent",
+      "name": "Model per subagent",
+      "kind": "feature",
+      "parent_id": "openai-codex-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://developers.openai.com/codex/",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "google-antigravity-subagents-orchestration-definition-files",
+      "name": "Definition files",
+      "kind": "feature",
+      "parent_id": "google-antigravity-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Google",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://antigravity.google/docs",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "google-antigravity-subagents-orchestration-tool-scoping",
+      "name": "Tool scoping",
+      "kind": "feature",
+      "parent_id": "google-antigravity-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Google",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://antigravity.google/docs",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "google-antigravity-subagents-orchestration-model-per-subagent",
+      "name": "Model per subagent",
+      "kind": "feature",
+      "parent_id": "google-antigravity-subagents-orchestration",
+      "review_status": "scaffold",
+      "provider": "Google",
+      "capability_ids": [
+        "subagents-orchestration"
+      ],
+      "primary_capability_id": "subagents-orchestration",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "ide",
+        "desktop"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://antigravity.google/docs",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-mcp-connectors-local-stdio-servers",
+      "name": "Local (stdio) servers",
+      "kind": "feature",
+      "parent_id": "anthropic-claude-code-mcp-connectors",
+      "review_status": "scaffold",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "api"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "anthropic-claude-code-mcp-connectors-remote-http-servers",
+      "name": "Remote (HTTP/SSE) servers",
+      "kind": "feature",
+      "parent_id": "anthropic-claude-code-mcp-connectors",
+      "review_status": "scaffold",
+      "provider": "Anthropic",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "api"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-openai-mcp-connectors-mcp-connectors-local-stdio-servers",
+      "name": "Local (stdio) servers",
+      "kind": "feature",
+      "parent_id": "openai-openai-mcp-connectors-mcp-connectors",
+      "review_status": "scaffold",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://platform.openai.com/docs/mcp",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-openai-mcp-connectors-mcp-connectors-remote-http-servers",
+      "name": "Remote (HTTP/SSE) servers",
+      "kind": "feature",
+      "parent_id": "openai-openai-mcp-connectors-mcp-connectors",
+      "review_status": "scaffold",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "mcp-connectors"
+      ],
+      "primary_capability_id": "mcp-connectors",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "api"
+      ],
+      "status": "active",
+      "scope_note": "Structural sub-feature placeholder — not yet ground-verified; pending grounding by the maintenance loop.",
+      "source": {
+        "url": "https://platform.openai.com/docs/mcp",
+        "last_verified": "2026-06-19",
+        "confidence": "low"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "agentic-coding/surfaces",
+      "function_id": "agentic-coding",
+      "name": "Surfaces",
+      "description": "Where the coding agent runs and how you reach it.",
+      "order": 1,
+      "feature_axis_ids": []
+    },
+    {
+      "id": "agentic-coding/agent-management",
+      "function_id": "agentic-coding",
+      "name": "Agent Management",
+      "description": "Defining, specializing, and orchestrating agents.",
+      "order": 2,
+      "feature_axis_ids": [
+        "subagents-orchestration",
+        "managed-agent-runtime"
+      ]
+    },
+    {
+      "id": "agentic-coding/context-memory",
+      "function_id": "agentic-coding",
+      "name": "Context & Memory",
+      "description": "What the agent remembers and what it can reach.",
+      "order": 3,
+      "feature_axis_ids": [
+        "agent-memory",
+        "mcp-connectors"
+      ]
+    },
+    {
+      "id": "agentic-coding/execution-safety",
+      "function_id": "agentic-coding",
+      "name": "Execution & Safety",
+      "description": "Running code and keeping it inside guardrails.",
+      "order": 4,
+      "feature_axis_ids": [
+        "code-execution-sandbox",
+        "guardrails-safety"
+      ]
+    },
+    {
+      "id": "agentic-coding/quality-ops",
+      "function_id": "agentic-coding",
+      "name": "Quality & Ops",
+      "description": "Evaluating, observing, and running agents remotely.",
+      "order": 5,
+      "feature_axis_ids": [
+        "agent-evals-observability",
+        "remote-agent-control"
+      ]
     }
   ]
 }

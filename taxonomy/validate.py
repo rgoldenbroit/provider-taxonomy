@@ -194,6 +194,46 @@ def _check_integrity(data: dict) -> list[Issue]:
             issues.append(Issue("integrity", "invariant", f"{path}.relation_within_capability",
                                 "status 'absent' requires relation_within_capability 'none'", pid))
 
+    # parent_id cycle guard — nesting can now go deeper than one level (sub-features),
+    # so a self- or mutual-reference would otherwise loop forever in any tree walker.
+    parent_of = {p.get("id"): p.get("parent_id") for p in products
+                 if isinstance(p, dict) and isinstance(p.get("id"), str)}
+    for start in parent_of:
+        seen_chain: set[str] = set()
+        cur: str | None = start
+        while isinstance(cur, str) and cur in parent_of:
+            if cur in seen_chain:
+                issues.append(Issue("integrity", "invariant", f"products[{start}].parent_id",
+                                    f"parent_id chain forms a cycle at {cur!r}", start))
+                break
+            seen_chain.add(cur)
+            cur = parent_of.get(cur)
+
+    # Categories (optional) — per-function groupings of feature-axes; refs must resolve.
+    categories = data.get("categories", [])
+    if isinstance(categories, list):
+        cat_ids: set[str] = set()
+        for i, cat in enumerate(categories):
+            if not isinstance(cat, dict):
+                continue
+            cid = cat.get("id")
+            path = f"categories[{i}]"
+            if isinstance(cid, str):
+                if cid in cat_ids:
+                    issues.append(Issue("integrity", "uniqueness", f"{path}.id",
+                                        f"duplicate category id {cid!r}", cid))
+                cat_ids.add(cid)
+            fn = cat.get("function_id")
+            if isinstance(fn, str) and fn not in cap_ids:
+                issues.append(Issue("integrity", "ref_resolution", f"{path}.function_id",
+                                    f"references unknown capability {fn!r}", cid))
+            axes = cat.get("feature_axis_ids")
+            if isinstance(axes, list):
+                for ax in axes:
+                    if ax not in cap_ids:
+                        issues.append(Issue("integrity", "ref_resolution", f"{path}.feature_axis_ids",
+                                            f"references unknown capability {ax!r}", cid))
+
     return issues
 
 

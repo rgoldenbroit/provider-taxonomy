@@ -574,7 +574,7 @@
       ],
       "status": "active",
       "review_status": "candidate",
-      "scope_note": "CANDIDATE (discovery pipeline): Codex Cloud runs async tasks that can be kicked off and checked remotely. Whether a direct mobile 'remote control' equivalent to Claude Code's exists is unconfirmed \u2014 needs verification before promotion to 'confirmed'.",
+      "scope_note": "CANDIDATE (discovery pipeline): Codex Cloud runs async tasks that can be kicked off and checked remotely. Whether a direct mobile 'remote control' equivalent to Claude Code's exists is unconfirmed — needs verification before promotion to 'confirmed'.",
       "lifecycle": [],
       "source": {
         "url": "https://openai.com/codex",
@@ -1133,6 +1133,60 @@
         "last_verified": "2026-06-15",
         "confidence": "medium"
       }
+    }
+  ],
+  "categories": [
+    {
+      "id": "agentic-coding/surfaces",
+      "function_id": "agentic-coding",
+      "name": "Surfaces",
+      "description": "Where the coding agent runs and how you reach it.",
+      "order": 1,
+      "feature_axis_ids": []
+    },
+    {
+      "id": "agentic-coding/agent-management",
+      "function_id": "agentic-coding",
+      "name": "Agent Management",
+      "description": "Defining, specializing, and orchestrating agents.",
+      "order": 2,
+      "feature_axis_ids": [
+        "subagents-orchestration",
+        "managed-agent-runtime"
+      ]
+    },
+    {
+      "id": "agentic-coding/context-memory",
+      "function_id": "agentic-coding",
+      "name": "Context & Memory",
+      "description": "What the agent remembers and what it can reach.",
+      "order": 3,
+      "feature_axis_ids": [
+        "agent-memory",
+        "mcp-connectors"
+      ]
+    },
+    {
+      "id": "agentic-coding/execution-safety",
+      "function_id": "agentic-coding",
+      "name": "Execution & Safety",
+      "description": "Running code and keeping it inside guardrails.",
+      "order": 4,
+      "feature_axis_ids": [
+        "code-execution-sandbox",
+        "guardrails-safety"
+      ]
+    },
+    {
+      "id": "agentic-coding/quality-ops",
+      "function_id": "agentic-coding",
+      "name": "Quality & Ops",
+      "description": "Evaluating, observing, and running agents remotely.",
+      "order": 5,
+      "feature_axis_ids": [
+        "agent-evals-observability",
+        "remote-agent-control"
+      ]
     }
   ]
 }

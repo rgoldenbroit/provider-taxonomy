@@ -102,6 +102,30 @@
   .parentlink { font-size:11px; color:var(--muted); margin-top:4px; }
   .featurehint { font-size:11px; color:var(--accent); margin-top:5px; font-weight:600; }
 
+  /* ---------- collapsible breakdown tree (category → feature → sub-feature) ---------- */
+  .catbr { border:1px solid var(--line); border-radius:10px; margin:8px 0; background:var(--panel); box-shadow:var(--shadow); }
+  .catbr > summary { cursor:pointer; padding:8px 11px; font-weight:650; letter-spacing:-.01em;
+    list-style:none; display:flex; align-items:center; gap:8px; }
+  .catbr > summary::-webkit-details-marker { display:none; }
+  .catbr > summary::before { content:"\25B8"; color:var(--faint); transition:transform .15s; display:inline-block; }
+  .catbr[open] > summary::before { transform:rotate(90deg); }
+  .catdesc { padding:0 12px 8px 28px; }
+  .treekids { margin-left:13px; border-left:1px solid var(--line-soft); padding-left:9px; }
+  .treebr, .treeleaf { margin:3px 0; }
+  .treebr > summary { cursor:pointer; list-style:none; display:flex; align-items:center; gap:6px;
+    padding:4px 6px; border-radius:7px; }
+  .treebr > summary:hover { background:var(--panel2); }
+  .treebr > summary::-webkit-details-marker { display:none; }
+  .treebr > summary::before { content:"\25B8"; color:var(--faint); font-size:11px; transition:transform .15s; display:inline-block; }
+  .treebr[open] > summary::before { transform:rotate(90deg); }
+  .treeleaf { padding:4px 6px 4px 19px; }   /* align with summaries that have a chevron */
+  .treehead { display:inline-flex; align-items:center; gap:6px; border-left:3px solid var(--line);
+    padding-left:8px; flex-wrap:wrap; }
+  .treename { font-weight:600; }
+  .b-scaffold { background:color-mix(in srgb,var(--purple) 13%,transparent); color:var(--purple);
+    border:1px dashed color-mix(in srgb,var(--purple) 45%,transparent); }
+  .celltree { margin-top:6px; }
+
   /* ---------- tables ---------- */
   .tablewrap { overflow-x:auto; }
   table { width:100%; border-collapse:collapse; margin-top:10px; }
@@ -233,6 +257,14 @@ const capById = Object.fromEntries(caps.map(c=>[c.id,c]));
 const prodById = Object.fromEntries(prods.map(p=>[p.id,p]));
 const providers = [...new Set(prods.map(p=>p.provider))].sort();
 const byCap = {}; prods.forEach(p => (p.capability_ids||[]).forEach(c => (byCap[c] ||= []).push(p)));
+/* ---- deeper taxonomy: categories (abstract spine) + parent_id tree (concrete fill) ---- */
+const cats = D.categories || [];
+const catsByFunction = {};   // function (capability) id → ordered categories
+cats.forEach(c => (catsByFunction[c.function_id] ||= []).push(c));
+Object.values(catsByFunction).forEach(list => list.sort((a,b)=>(a.order||0)-(b.order||0)));
+const childrenOf = id => prods.filter(q => q.parent_id === id);
+const isScaffold = p => p.review_status === 'scaffold';
+function countDescendants(id){ return childrenOf(id).reduce((n,c)=>n+1+countDescendants(c.id), 0); }
 const FLUX_STATUS = new Set(["sunset","deprecated","merged","renamed","preview","beta"]);
 const FLUX_EVENTS = new Set(["consolidation_announced","scope_expanded","related_deprecation","deprecated","discontinued"]);
 const esc = s => (s==null?"":String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -281,7 +313,7 @@ function card(p, cap, opts={}){
 
 /* render a provider's offerings within a capability, nesting children that share the cell.
    `only` (optional Set of ids) filters to matching offerings — used by Explore. */
-function cell(cap, provider, only){
+function cell(cap, provider, only, opts={}){
   const all = (byCap[cap]||[]).filter(p=>p.provider===provider);
   const items = only ? all.filter(p=>only.has(p.id)) : all;
   if (!items.length)
@@ -294,6 +326,10 @@ function cell(cap, provider, only){
   for (const p of tops){
     html += card(p, cap, {showParent:true});
     for (const ch of items.filter(c=>c.parent_id===p.id)) html += card(ch, cap, {child:true});
+    if (opts.tree){                                     // drill into the category → feature → sub-feature tree
+      const t = featureTreeHtml(p);
+      if (t) html += `<div class="celltree">${t}</div>`;
+    }
   }
   return `<div class="cell">${html}</div>`;
 }
@@ -323,16 +359,18 @@ function exploreResultsHtml(){
   if (!matches.length)
     return `<div class="empty-state">No offerings match these filters.<br><a onclick="clearExplore()">Clear filters</a></div>`;
   const compare = capList.length===1;
+  const treeFn = compare && !!catsByFunction[capList[0].id];   // a function with a deeper breakdown
   const cols = `200px ${provs.map(()=>'1fr').join(' ')}`;
   let html = `<div class="muted small" style="margin:6px 0 2px">${matches.length} offering${matches.length===1?'':'s'} · ${capList.length} capabilit${capList.length===1?'y':'ies'}`
     + (compare ? ` · comparing providers side by side` : '')
+    + (treeFn ? ` · expand any offering for its category → feature → sub-feature breakdown` : '')
     + (exActive() ? ` · <a onclick="clearExplore()">clear filters</a>` : '') + `</div>`;
   html += `<div class="pivotwrap"><div class="pivot" style="grid-template-columns:${cols}">`;
   html += `<div class="colhead">capability</div>` +
     provs.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
   for (const c of capList){
     html += `<div class="caphead"><div class="capname">${esc(c.name)}</div><div class="muted small">${esc(c.description)}</div></div>`;
-    html += provs.map(pr=>cell(c.id, pr, matchIds)).join('');
+    html += provs.map(pr=>cell(c.id, pr, matchIds, {tree: treeFn})).join('');
   }
   html += `</div></div>`;
   return html;
@@ -538,17 +576,46 @@ function viewAbout(){
   </div>`;
 }
 
-/* features under a product, grouped by axis */
-function featuresSection(p){
-  const kids = prods.filter(q => q.parent_id === p.id);
+/* ---- collapsible breakdown tree: category → feature → sub-feature ---- */
+function scaffoldBadge(p){
+  return isScaffold(p) ? `<span class="badge b-scaffold" title="structural placeholder — not yet ground-verified">scaffold</span>` : '';
+}
+/* one node: a leaf if it has no children, else a collapsible <details> with its sub-tree */
+function treeRow(p){
+  const kids = childrenOf(p.id);
+  const name = `<a class="treename" onclick="event.preventDefault();event.stopPropagation();openDrawer('${p.id}')">${esc(p.name)}</a>`;
+  const head = `<span class="treehead" style="border-left-color:${provVar(p.provider)}">${name} ${confDot(p)}${statusBadge(p)}${relTag(p)}${scaffoldBadge(p)}</span>`;
+  if (!kids.length) return `<div class="treeleaf">${head}</div>`;
+  return `<details class="treebr"><summary>${head} <span class="faint small">${kids.length}</span></summary>
+    <div class="treekids">${kids.map(treeRow).join('')}</div></details>`;
+}
+/* a product's descendants, grouped by category when its function defines them */
+function featureTreeHtml(p){
+  const kids = childrenOf(p.id);
   if (!kids.length) return '';
-  const byAxis = {}; kids.forEach(k => (byAxis[k.primary_capability_id] ||= []).push(k));
-  let html = `<h3 class="small muted" style="margin-top:16px">Features (${kids.length})</h3>`;
-  for (const axis of Object.keys(byAxis)){
-    html += `<div class="muted small" style="margin-top:6px">${esc(capById[axis]?.name||axis)}</div>`;
-    html += byAxis[axis].map(k=>`<div class="card" style="border-left-color:${provVar(k.provider)}" onclick="openDrawer('${k.id}')"><div class="row"><span class="name">${esc(k.name)}</span> ${statusBadge(k)}${relTag(k)}</div></div>`).join('');
+  const groups = catsByFunction[p.primary_capability_id] || [];
+  if (!groups.length) return kids.map(treeRow).join('');
+  let html = '', used = new Set();
+  for (const c of groups){
+    const axes = new Set(c.feature_axis_ids||[]);
+    const inCat = kids.filter(k => axes.has(k.primary_capability_id));
+    if (!inCat.length) continue;
+    inCat.forEach(k=>used.add(k.id));
+    html += `<details class="catbr" open><summary>${esc(c.name)} <span class="faint small">${inCat.length}</span></summary>
+      ${c.description?`<div class="catdesc muted small">${esc(c.description)}</div>`:''}
+      <div class="treekids">${inCat.map(treeRow).join('')}</div></details>`;
   }
+  const rest = kids.filter(k=>!used.has(k.id));
+  if (rest.length)
+    html += `<details class="catbr" open><summary>Other <span class="faint small">${rest.length}</span></summary>
+      <div class="treekids">${rest.map(treeRow).join('')}</div></details>`;
   return html;
+}
+/* drawer section: the full breakdown for a node */
+function featuresSection(p){
+  const tree = featureTreeHtml(p);
+  if (!tree) return '';
+  return `<h3 class="small muted" style="margin-top:16px">Breakdown (${countDescendants(p.id)})</h3>${tree}`;
 }
 /* honest cross-provider comparison on this offering's axis: present / unknown / grounded-none per provider */
 function axisCompareSection(p){

@@ -21,9 +21,31 @@
       "type": "array",
       "description": "Concrete products that fulfill capabilities. These change constantly.",
       "items": { "$ref": "#/$defs/product" }
+    },
+    "categories": {
+      "type": "array",
+      "description": "Optional. Per-function information-architecture groupings of feature-axes (capabilities). Purely structural and provider-agnostic; groups + orders existing capabilities for one function's drill-down view. Absence means a function renders ungrouped (as before).",
+      "items": { "$ref": "#/$defs/category" }
     }
   },
   "$defs": {
+    "category": {
+      "type": "object",
+      "required": ["id", "function_id", "name", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "description": "kebab-case stable key, scoped to its function, e.g. 'agentic-coding/agent-management'." },
+        "function_id": { "type": "string", "description": "The capability id this category groups feature-axes within (the 'function')." },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "order": { "type": "integer", "description": "Display order within the function (ascending)." },
+        "feature_axis_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capability ids (feature-axes) presented under this category for this function. May be empty when the category is derived from another field (e.g. 'Surfaces' from the surfaces enum)."
+        }
+      }
+    },
     "capability": {
       "type": "object",
       "required": ["id", "tier", "name", "description"],
@@ -65,8 +87,8 @@
         },
         "review_status": {
           "type": "string",
-          "enum": ["confirmed", "candidate", "needs_review", "rejected"],
-          "description": "Discovery-pipeline state. Newly discovered items land as 'candidate' or 'needs_review' (optionally under the 'unclassified' capability) until a human/agent confirms and assigns a capability. Defaults to 'confirmed' when omitted."
+          "enum": ["confirmed", "candidate", "needs_review", "rejected", "scaffold"],
+          "description": "Discovery-pipeline state. Newly discovered items land as 'candidate' or 'needs_review' (optionally under the 'unclassified' capability) until a human/agent confirms and assigns a capability. 'scaffold'=structural placeholder added by hand (e.g. a sub-feature), not yet ground-verified; the reproducible-build replay skips it until the maintenance loop grounds it. Defaults to 'confirmed' when omitted."
         },
         "provider": { "type": "string", "examples": ["Anthropic", "OpenAI", "Google"] },
         "capability_ids": {

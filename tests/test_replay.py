@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from taxonomy.replay import catalog_hash, reverify_record  # noqa: E402
+from taxonomy.replay import catalog_hash, reverify_catalog, reverify_record  # noqa: E402
 from taxonomy.retrieval.base import FetchedPage, RetrievalProvider, content_hash  # noqa: E402
 from taxonomy.vertex_client import StubLLM  # noqa: E402
 
@@ -68,6 +68,32 @@ class _Blocked(RetrievalProvider):
 
     def fetch(self, url):
         return FetchedPage(url=url, status=403, text="", content_hash=content_hash(""))
+
+
+class _Exploding(RetrievalProvider):
+    """Any fetch is a hard error — proves a record was NOT ground-verified."""
+
+    def search(self, q, *, max_results=8, include_domains=None):
+        return []
+
+    def fetch(self, url):
+        raise AssertionError(f"scaffold record must not be grounded (fetched {url})")
+
+
+def test_reverify_catalog_skips_scaffold_without_grounding():
+    # A scaffold node carries no ledger evidence; replay must skip it AND leave the
+    # catalog byte-identical, so `taxo verify` stays green when scaffold is present.
+    catalog = {"_meta": {"as_of": "2026-06-18"}, "products": [{
+        "id": "sf", "name": "Sub-feature", "kind": "feature", "provider": "Anthropic",
+        "parent_id": "p", "capability_ids": ["agentic-coding"],
+        "primary_capability_id": "agentic-coding", "relation_within_capability": "partial",
+        "review_status": "scaffold", "status": "active",
+        "source": {"url": "https://docs.anthropic.com/x", "last_verified": "2026-06-18", "confidence": "low"},
+    }]}
+    before = catalog_hash(catalog)
+    counts = reverify_catalog(catalog, _judge_llm(), _Exploding(), ledger=None, as_of="2026-06-18")
+    assert counts["scaffold"] == 1
+    assert catalog_hash(catalog) == before   # unchanged → reproducible-build hash holds
 
 
 def test_reverify_keeps_prior_verdict_when_source_unreachable():
