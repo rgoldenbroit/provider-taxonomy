@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Gemini 3.5 Pro",
-    "page_content_hash": "dbd77a2198a7cae57cc7cf0f6be4e80340551464bff27f5cdf47e5d180736ee0",
+    "page_content_hash": "51da7bfb0896bcd6eff7fa3a9c6fed60dede8c7351c292754b71090adef8a7bd",
     "primary_capability_id": "flagship-model",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "low",
     "source_url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-21"
   }
 }

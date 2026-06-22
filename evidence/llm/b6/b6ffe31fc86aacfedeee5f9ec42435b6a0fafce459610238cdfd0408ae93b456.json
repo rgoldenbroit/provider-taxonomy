@@ -1,0 +1,12 @@
+{
+  "key": "b6ffe31fc86aacfedeee5f9ec42435b6a0fafce459610238cdfd0408ae93b456",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-filesystem-isolation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "As a first step to mitigate incautious approvals, we shipped an OS-level sandbox (Seatbelt on macOS, bubblewrap on Linux) that hardens the boundary: reads are allowed, writes are allowed inside the workspace, but network is denied by default.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude Code's OS-level sandbox that constrains filesystem access for executed commands\u2014reads allowed, writes restricted to the workspace\u2014matching the claim of filesystem isolation. It also references \"filesystem boundaries\" and an open-sourced auditable runtime, indicating an active offering.",
+    "supported": true
+  }
+}

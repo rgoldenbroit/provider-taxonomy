@@ -1,0 +1,12 @@
+{
+  "key": "40e39ab39afd10c65d505b34a2626cebaa9bc3c32f1d56f9f2010dd45d8a7c53",
+  "label": "judge:anthropic-claude-code-mcp-connectors-remote-http-servers",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Option 1: Add a remote HTTP server HTTP servers are the recommended option for connecting to remote MCP servers. This is the most widely supported transport for cloud-based services. ... Option 2: Add a remote SSE server The SSE (Server-Sent Events) transport is deprecated. Use HTTP servers instead, where available.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes connecting Claude Code to remote MCP servers over both HTTP and SSE transports. HTTP is described as the recommended, current option (active). SSE is described as deprecated but still usable. The overall capability of connecting to remote HTTP/SSE servers is substantiated and active.",
+    "supported": true
+  }
+}

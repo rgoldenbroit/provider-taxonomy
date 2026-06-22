@@ -1,0 +1,9 @@
+{
+  "key": "a856d305e6fc6ca10785300a7b56c3d5232c690ca2f36dba2cdf7af75a015b4a",
+  "url": "https://community.openai.com/t/codex-vscode-extension-agent-full-access-always-asks-for-approval/1355908/28",
+  "value": {
+    "status": 200,
+    "text": "Codex VSCode Extension - Agent (full access) always asks for approval - #28 by EricGT - Codex - OpenAI Developer Community\nOpenAI Developer Community\nCodex VSCode Extension - Agent (full access) always asks for approval\nCodex\ncodex\n,\nbugs\nEricGT\nMarch 3, 2026, 11:07am\n28\nThis GitHub OpenAI Codex discussion is worth reviewing.\nAlthough it does not directly address the issues with the VS Code Codex extension, it likely represents part of the underlying foundation required to support a more robust solution.\nI recommend reading the entire thread, as several important details are embedded within some of the replies.\nGitHub\nHelp test experimental Windows sandbox \u00b7 openai codex \u00b7 Discussion #6065\nHi folks, we have more Windows improvements coming your way, and we'd love help testing. If you use the CLI on native windows, you can enable a highly experimental filesystem and network sandbox. O...\nshow post in topic\nRelated topics\nTopic\nReplies\nViews\nActivity\nCodex CLI on Windows update fails\nCodex\ncodex-cli\n7\n2450\nMay 21, 2026\nCodex CLI and IDE Prompting for Approval to Edit Files\nCodex CLI\n3\n10955\nSeptember 17, 2025\nVS Code OpenAI Codex keeps asking permission\nCodex\n1\n1109\nJanuary 28, 2026\nBug: Codex Desktop App Doesn\u2019t Load, Stuck on Logo Screen\nCodex\ncodex\n,\ncodex-app\n31\n7012\nMay 14, 2026\nCodex Auto-Editing Files Without Permission in VS Code\nCodex\n9\n945\nApril 18, 2026\nHome\nCategories\nGuidelines\nTerms of Service\nPrivacy Policy\nPowered by\nDiscourse\n, best viewed with JavaScript enabled",
+    "url": "https://community.openai.com/t/codex-vscode-extension-agent-full-access-always-asks-for-approval/1355908/28"
+  }
+}

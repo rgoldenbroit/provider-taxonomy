@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-local-stdio-servers",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Option 3: Add a local stdio server ... Stdio servers run as local processes on your machine. They're ideal for tools that need direct system access or custom scripts.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Local (stdio) servers",
+    "page_content_hash": "af3a642709cde24a1eb13cc557d9defbc77a3ce9d3d158054a37eaf7bde87374",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-local-stdio-servers",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

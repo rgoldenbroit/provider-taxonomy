@@ -1,0 +1,12 @@
+{
+  "key": "38181dfca55ebfb04ed34ccf4dfde5377182dc93baf7ffeae839a4c7c672a688",
+  "label": "judge:google-gemini-app",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The models integrate into the Google ecosystem through the Gemini mobile app, which functions as an overlay assistant on Android devices, and through the Vertex AI platform for third-party developers.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the Gemini app developed by Google, including its launch on Android and iOS in February 2024 and its continued use, e.g., Gemini 3 Pro being made immediately available across the Gemini app. This substantiates the claim.",
+    "supported": true
+  }
+}

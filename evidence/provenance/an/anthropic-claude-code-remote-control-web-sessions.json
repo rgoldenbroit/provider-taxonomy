@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-control-web-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure at claude.ai/code. Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Web sessions",
+    "page_content_hash": "7f15bc55859fbf70773ee50ef970dec6f825101d48d385c88f4f9bcf477f1c0e",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-control-web-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

@@ -1,115 +1,87 @@
-# Research — Deepening the taxonomy (category + sub-feature levels) with collapsible UI
+# Research — Filling in the Agentic Coding content (grounded)
 
-## Goal
+## Goal & locked decisions
 
-Make the taxonomy **go levels deeper** and render it with a **collapsible UI**, using
-`docs/agentic-coding-taxonomy.md` as a *shape* reference only. The reference's content is
-explicitly **not** treated as fact — only its information architecture
-(`function → product → category → feature → sub-feature` + per-provider alignment) informs the design.
+Now that the structure (5 categories + scaffold sub-features) is right, **populate the Agentic Coding
+function with real, grounded content** through the existing trust pipeline. Decisions (Q&A):
+- **Scope:** complete the **5 current categories** (Surfaces · Agent Management · Context & Memory · Execution & Safety · Quality & Ops) across **Claude Code · Codex · Antigravity** (+ Jules where it's the relevant offering).
+- **Method:** **Hybrid** — engine discovery (Tavily, official-docs-scoped) for feature/coverage breadth + operator-curated **sub-feature** depth from official docs; the pipeline grounds everything.
+- **Grounding:** **run live now** (Vertex global · `claude-opus-4-8` · Tavily). Admit-only-what-grounds.
 
-Decisions locked via Q&A:
-- **Model:** Hybrid — abstract spine (`function → category → feature-axis`) + concrete per-provider fill (`product → feature → sub-feature` via `parent_id`).
-- **Scope:** Pilot on the **Agentic Coding** function; design to generalize.
-- **Data/trust:** **Structure-only scaffold**, marked unverified; the maintenance loop grounds it later. No fabricated facts.
-- **UI:** Upgrade the **drawer + Explore** in place (no new top-level tab).
+## How "filling in" works here (not hand-typed facts)
 
-## Current architecture (verified against code)
+A record becomes content only by clearing the pipeline that produced the existing 48 grounded records:
+1. **Candidate** node authored with an official `source.url` (operator-curated for sub-features; Tavily-discovered for feature cells).
+2. **`triage_one(record, dataset, llm, retrieval, evidence=, pinned_capability=)`** fetches the cited page, an LLM **grounding judge must find the claim quoted on it**, classifies, and returns an `Outcome{decision: confirmed|needs_review|rejected, record, report.grounding.score}`. Confidence is **derived from source tier** (`sources.py`), not asserted.
+3. Admit only `confirmed`/`needs_review`; **rejected/ungrounded cells stay empty or `scaffold`** — an honest "not verified", never fabricated.
+4. **Evidence capture:** `scripts/reverify.py` in `TAXO_LEDGER=record` re-grounds every (non-scaffold) record, writing page+LLM+**provenance receipt** into `evidence/` → the catalog becomes **replay-reproducible**.
+5. `taxo verify` (replay) asserts byte-identical; `audit`/`eval`/`gate`; `build`; deploy.
 
-**Data model** (`schema.json`): two arrays.
-- `capabilities` — stable, provider-agnostic axes. `tier ∈ {model, end_user_product, developer_platform, uncategorized}`. The "feature axes" (`subagents-orchestration`, `mcp-connectors`, `agent-memory`, `code-execution-sandbox`, `guardrails-safety`, `agent-evals-observability`, `managed-agent-runtime`, `remote-agent-control`) are **already** modeled here as `developer_platform` capabilities. They are **cross-cutting** (not owned by one function).
-- `products` — concrete per-provider nodes. `kind ∈ {model_family, model, product, feature, platform, protocol, service_tier}`; `parent_id` gives hierarchy; a concrete `feature` maps a product to a feature-axis via `primary_capability_id`.
+## Current coverage map (the gap to close)
 
-**Current depth = 1** (feature → product). No `category` grouping; no sub-features. Example today:
-`agentic-coding` (capability) → `Claude Code` (product) → `Claude Code subagents` (feature, `primary_capability_id=subagents-orchestration`).
+Per category → feature-axis → provider (`feature` nodes), from `data/taxonomy.json`:
 
-**Schema reality:** `parent_id` is a free reference; arbitrary-depth nesting is **already schema-legal**. `validate.py` only checks ref-resolution + uniqueness (no depth/cycle limit). So "deeper" is mostly a **data + UI** change.
+| Axis (category) | Anthropic | OpenAI | Google | Sub-features today |
+|---|---|---|---|---|
+| subagents-orchestration (Agent Mgmt) | ✅ confirmed | ✅ confirmed | ✅ confirmed | 3 scaffold × 3 providers (Definition files · Tool scoping · Model per subagent) |
+| managed-agent-runtime (Agent Mgmt) | ✅ confirmed | ⚠️ needs_review | ❌ **missing** | none |
+| agent-memory (Context & Mem) | ✅ | ✅ | ✅ (Jules) | none |
+| mcp-connectors (Context & Mem) | ✅ + 2 scaffold | ✅ + 2 scaffold | ❌ **missing-as-feature** (a Google MCP record exists but isn't a `feature` under a product) | 2 scaffold × 2 providers |
+| code-execution-sandbox (Exec & Safety) | ✅ | ✅ | ✅ | none |
+| guardrails-safety (Exec & Safety) | ✅ | ⚠️ needs_review | ✅ | none |
+| agent-evals-observability (Quality & Ops) | ✅ | ✅ | ✅ | none |
+| remote-agent-control (Quality & Ops) | ✅ | ✅ | ❌ **missing** (Jules *is* Google's async/remote agent — a classification gap, not a real absence) | none |
 
-**Viewer** (`viewer/template.html` → `build.py` inlines the dataset → `viewer/taxonomy.html`). Zero-dependency single file. Four tabs: Overview (coverage matrix), Explore (search/filter/side-by-side compare), How it works, Under the hood. The drawer's `featuresSection()` renders a **flat** feature list grouped by axis. Nothing collapses.
+**Three workstreams fall out:**
+- **A — Fill missing feature cells:** Google managed-agents, Google MCP (reconcile the existing record into a `feature`), Google remote-control (map Jules). `scripts/ground_features.py` already iterates this exact CLUSTER (incl. `google-antigravity-2-0`, `google-jules`) × 7 AXES and **skips existing** → running it live attempts precisely the empty cells.
+- **B — Reconfirm the 2 `needs_review`:** Codex managed agents, Codex guardrails (re-ground → confirm or keep flagged).
+- **C — Curate + ground sub-features** for every axis that has none, per provider (operator-curated from official docs, then judged). Also ground the 13 existing scaffold sub-features (flip `scaffold` → `confirmed`/`needs_review` with evidence).
 
-**Trust machinery (the app's identity — must not regress):**
-- Every product carries `source {url, last_verified, confidence}` + a provenance receipt.
-- `taxo verify` = **reproducible-build gate** (`cli.cmd_verify` → `replay.reverify_catalog`): deep-copies `data/taxonomy.json`, re-grounds **every `products` entry** from the committed `evidence/` ledger, and asserts a **byte-identical** catalog hash. It **skips `status=="absent"`**; any product missing ledger evidence raises `LedgerMiss` → FAIL. **Currently PASSES** (48 grounded records = 48 pages/48 provenance; 43 confirmed + 6 needs_review non-absent + 1 absent).
-- CI (`.github/workflows/ci.yml`) runs offline tests + `taxo verify`.
+## Tooling
 
-## Gap vs the reference
-
-The reference adds two structural levels the app lacks:
-1. **Category** — an IA grouping of feature-axes *within a function* (e.g. "Surfaces", "Agent Management"). Provider-agnostic.
-2. **Sub-feature** — a concrete level **below** a feature (e.g. `Subagents → Definition files / Tool scoping / Model per agent`), per provider.
-
-Plus the UX ask: **collapsible** rendering of the deeper tree, with per-provider comparison preserved.
-
-> Note: the reference's "Surfaces" category (CLI/IDE/web/mobile) largely duplicates the existing `surfaces` enum field, and the app *deliberately folds* access surfaces into their parent product (`autobuild._fold_surface`). So "Surfaces" is represented as a category over existing data, not as new per-surface nodes — consistent with the existing folding rule.
-
-## Proposed model changes (additive, backward-compatible)
-
-### 1. `categories` — new optional top-level array (abstract spine)
-```json
-{ "id": "agentic-coding/agent-management",
-  "function_id": "agentic-coding",         // → a capability id (the "function")
-  "name": "Agent Management",
-  "description": "Defining, specializing, and orchestrating agents.",
-  "order": 2,
-  "feature_axis_ids": ["subagents-orchestration", "managed-agent-runtime"] }  // → capability ids
-```
-- Purely structural / provider-agnostic — analogous to `capabilities` (which are also hand-authored and ungrounded). Groups + orders existing feature-axes *for one function's view*; keeps feature-axes cross-cutting.
-- A concrete feature's category is **derived** (`primary_capability_id` → which category lists that axis). No per-product `category` field needed → data stays DRY.
-
-Pilot category set for `agentic-coding` (built over **existing real** feature-axes, no fabricated facts):
-| Category | Feature-axes grouped |
-|---|---|
-| Surfaces | (derived from the `surfaces` field) |
-| Agent Management | subagents-orchestration, managed-agent-runtime |
-| Context & Memory | agent-memory, mcp-connectors |
-| Execution & Safety | code-execution-sandbox, guardrails-safety |
-| Quality & Ops | agent-evals-observability, remote-agent-control |
-
-### 2. `sub-feature` nodes — concrete, via existing `parent_id`
-Sub-features are `products` with `kind="feature"`, `parent_id` = a concrete feature node (one level deeper than today). Depth is derived from the parent chain — **no new `kind`** needed. Each maps to the same `primary_capability_id` as its parent feature.
-
-### 3. `scaffold` — new `review_status` value (the trust-honest hinge)
-Sub-feature scaffold nodes are **structure, not yet ground-verified**. They get `review_status:"scaffold"`, a real official-doc `source.url`, `confidence:"low"`, `last_verified=as_of`, and a `scope_note` saying so.
-- `replay.reverify_catalog` **skips `review_status=="scaffold"`** exactly as it already skips `status=="absent"` → no ledger evidence required → **`taxo verify` stays byte-identical and green**.
-- This is a deliberate, honest refinement: the reproducible-build check reproduces the *grounded* catalog; explicitly-unverified scaffold passes through unchanged. The maintenance loop later grounds a scaffold node → it flips to `needs_review`/`confirmed` with real evidence (intended lifecycle).
-
-## Reproducibility constraint — why this design is safe (the key analysis)
-
-- `categories` (new top-level array): `reverify_catalog` only iterates `products`, so categories pass through replay **untouched** → hash identical. Safe. ✔
-- Sub-feature **scaffold** products: skipped by the new `review_status=="scaffold"` guard → no evidence needed, passed through unchanged → hash identical. ✔
-- Why not reuse `needs_review`? The 6 existing `needs_review` records **have** evidence and are currently replayed; skipping them would silently drop them from the reproducibility guarantee. A dedicated `scaffold` state keeps "confirmed-but-evidence-missing" a real FAIL. ✔
-- Why not `status:"absent"`? Wrong semantics (deliberate non-offering) + forces `relation="none"`. ✔
-
-## Dependency impact map
-
-| File | Change | Why |
+| Step | Tool | Notes |
 |---|---|---|
-| `schema.json` | add `categories` `$def` + optional top-level `categories`; add `"scaffold"` to `review_status` enum | new structures must validate |
-| `taxonomy/validate.py` | integrity checks for categories (id unique, `function_id` resolves to a capability, `feature_axis_ids` resolve); optional `parent_id` cycle guard now nesting is deeper | catch real data bugs the schema can't |
-| `taxonomy/replay.py` | `reverify_catalog` skips `review_status=="scaffold"` | keep `taxo verify` green + honest |
-| `data/taxonomy.json` | add `categories` (agentic-coding) + scaffold sub-feature nodes (pilot) | the catalog the viewer renders |
-| `examples.json` (seed/gold) | add the same `categories` only (NOT scaffold nodes) | keep seed structurally consistent + valid; keep gold set pristine for evals |
-| `viewer/template.html` | collapsible `category → feature → sub-feature` tree in the **drawer**; category-grouped drill-down in **Explore**; `scaffold`/unverified badge styling | the UX ask |
-| `viewer/build.py` | none required (passes `data` wholesale; categories ride along) — confirm | — |
-| `README.md` | document the deeper taxonomy + collapsible UI | docs accuracy |
-| `tests/` | add: schema accepts `categories`; validator rejects bad category refs; replay skips scaffold (verify stays byte-identical); viewer embeds categories | regression cover |
+| Fill feature cells (A) | `scripts/ground_features.py` (exists) | live; idempotent; admit-only-what-grounds. Run as-is. |
+| Reconfirm needs_review (B) | `scripts/reverify.py` (record) | re-grounds + re-grades the 2 records. |
+| Ground sub-features (C) | **new `scripts/ground_subfeatures.py`** | modeled on `ground_features.py`, one level deeper: `parent_id`=a feature node, `pinned_capability`=parent's axis, curated `(feature, provider) → [sub-feature name, search kw, official url]` list. Converts existing scaffold ids in place + appends new ones. |
+| Evidence + reproducibility | `scripts/reverify.py` `TAXO_LEDGER=record` → `taxo verify` (replay) | captures receipts; proves byte-identical. |
+| Ship | `taxo audit`/`eval`/`gate` → `taxo build` → `gcloud run deploy` | the established gate + deploy. |
 
-**Verified non-issues:**
-- `metrics.dataset_metrics`: `provenance_completeness = with_source/n` counts a `source.url` (not a receipt) → scaffold nodes with a doc URL **don't** drag it; `schema_conformance` stays 1.0 if valid. ✔
-- Audit gate (`audit.gate`) blocks only on **critical** findings; `_node_worthiness_findings` emits warning/info and is LLM/online-only (skipped in CI); `_coverage_findings` emits info. Sub-features won't block the gate. ✔
-- Evals (`gold.py`/`adversarial.py`, `test_evals.py`) use `load_seed()` (examples.json) — untouched by scaffold nodes. ✔
-- `test_viewer.py` builds from `load_dataset()` and asserts `validation.valid` + product-count match — satisfied by valid additions. ✔
-- `test_validate.py::test_seed_is_valid` validates examples.json — `categories` optional ⇒ still valid. ✔
+## Sub-feature curation (workstream C) — proposed shape
+
+~2 sub-features per `(axis × provider)` where official docs support them (admit only what grounds). Illustrative targets (final list confirmed at plan):
+- **subagents** → Definition files · Tool scoping · Model per subagent (the existing 13 scaffold).
+- **managed-agent-runtime** → Hosted execution · Parallel/queued tasks.
+- **mcp-connectors** → Local (stdio) servers · Remote (HTTP/SSE) servers (+ Google once the feature cell exists).
+- **agent-memory** → Project memory file · Cross-session/persistent memory.
+- **code-execution-sandbox** → Network policy · Filesystem isolation.
+- **guardrails-safety** → Permission/approval modes · Allow/deny rules.
+- **agent-evals-observability** → Tracing/logs · Eval harness.
+- **remote-agent-control** → Async task hand-off · Status/notifications.
+
+Each curated entry carries an **official-domain** URL (`docs.anthropic.com` · `developers.openai.com`/`platform.openai.com` · `antigravity.google`/`ai.google.dev` — all official-tier per `sources.py`). The judge verifies the quote actually appears; ungrounded ones are dropped, not faked.
+
+## Surfaces category (special-cased)
+
+`agentic-coding/surfaces` has **empty `feature_axis_ids`** — surfaces aren't feature nodes; the engine deliberately folds CLI/IDE/web/mobile into the product's **`surfaces`** field (`autobuild._fold_surface`). So "completing Surfaces" = verifying each product's `surfaces[]` is accurate/complete (and modelling CI/GitHub as a surface where real). Rendered as a read-only "Surfaces" row in the breakdown, not as groundable sub-features.
+
+## Live stack & reproducibility (verified)
+
+- `taxo config`: project `second-impact-444322-p8` · region **global** · model `claude-opus-4-8` · **Tavily configured**. `.env.local` pins `TAXO_OFFLINE=1`; override per-command (`TAXO_OFFLINE=0 .venv/bin/python …`). ADC logged in locally.
+- **Vertex gotchas (must honor):** global endpoint only for Opus 4.8; `structured_outputs`/`web_search`/`web_fetch` org-blocked → forced tool calls + HttpFetch for page retrieval; judge grounds **strictly on the fetched page** (its cutoff predates 2026).
+- **Reproducibility flow:** ground (live, mutates catalog) → `reverify.py --record` (writes `evidence/`) → `taxo verify` replay = byte-identical. The `as_of` date written by reverify must equal `_meta.as_of`; I'll pin a single date (2026-06-21) for this pass.
 
 ## Risks & mitigations
-- **R1 — verify gate breaks.** Mitigated by the `scaffold`-skip design above + a new test asserting verify stays byte-identical with scaffold nodes present.
-- **R2 — `CHANGELOG.md` is loop-generated** (`taxo changelog`); manual edits can be clobbered. → Don't hand-edit CHANGELOG; let the next loop diff pick up the additions (they'll show as "added"). Document the rev in README instead.
-- **R3 — scope creep to all 17 capabilities.** → Pilot only `agentic-coding`; categories are optional per-function so other functions render exactly as today.
-- **R4 — UI complexity in a single file.** → Use native `<details>/<summary>` for collapse (no JS state), styled to match the design tokens.
+- **R1 — live fetch 403 / thin docs.** Admit-only-what-grounds means a blocked/silent page → cell left empty (honest), never fabricated. Local IP (not a datacenter) avoids the CI 403 issue.
+- **R2 — cost / volume.** Workstream C is the bulk (~2 calls per sub-feature). Bounded by the curated list; I'll report counts and let you calibrate at plan.
+- **R3 — scaffold-skip interaction.** `reverify(record)` skips `review_status=="scaffold"`, so scaffold sub-features get **no** evidence until grounded. Workstream C must flip them out of `scaffold` (via `triage_one`) **before** the record pass, else they stay unverified. Sequencing matters.
+- **R4 — `as_of` drift breaks verify.** Pin one date across ground + reverify + `_meta`.
+- **R5 — classification over-reach** (e.g. mapping Jules to remote-control). Pin `kind`+axis (operator-known); let the judge set only relation/surfaces — per the engine's existing discipline.
 
-## Out of scope (this revision)
-- Live grounding of the scaffold sub-features (the maintenance loop owns that).
-- Categories for functions other than Agentic Coding.
-- Schema-level enforcement of category↔feature-axis completeness (advisory only for now).
+## Out of scope
+- Categories beyond the 5 current ones; sibling-surface products (Gemini CLI, Codex CLI/cloud) as standalone nodes; functions other than Agentic Coding.
 
-## Open questions
-None blocking — the four design forks are resolved. One confirmation I'll seek at plan-approval: the **exact pilot sub-feature list** (I'll propose ~3 per feature for 2–3 marquee features, sourced to official docs) before writing data.
+## Open questions (confirm at plan)
+1. The **sub-feature curation list + per-(axis×provider) count** (the table above is the proposed start).
+2. **Failure policy on `needs_review`:** keep-and-flag (current behavior) vs hold from the tree until confirmed.
+3. Whether to model **CI/GitHub** as a surface now or defer.

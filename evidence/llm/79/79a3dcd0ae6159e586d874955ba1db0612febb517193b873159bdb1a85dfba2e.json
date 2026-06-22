@@ -1,0 +1,12 @@
+{
+  "key": "79a3dcd0ae6159e586d874955ba1db0612febb517193b873159bdb1a85dfba2e",
+  "label": "judge:openai-codex-agent-memory-project-memory",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex custom instructions doc to read: Custom instructions with AGENTS.md \u2013 Codex | OpenAI Developers",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex allowing storage of instructions per repo and globally, and explicitly references \"Custom instructions with AGENTS.md \u2013 Codex | OpenAI Developers,\" substantiating that OpenAI's Codex persists project context via an AGENTS.md file. No lifecycle limitation is mentioned, so it is presented as active.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "3ebe1cb3dbbb268345afe9cfdd16b643063779707fe285466a4a8b1a5c5a448e",
+  "label": "judge:openai-codex-subagents-orchestration-definition-files",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hooks\nAGENTS.md\nMCP\nPlugins",
+    "lifecycle_status": "active",
+    "rationale": "The page's Codex configuration navigation lists \"AGENTS.md\" as a dedicated documentation section alongside other config topics (Rules, Hooks, MCP). This substantiates that Codex uses an AGENTS.md file as part of its configuration/project instructions. The page presents it as a current feature with no indication of deprecation.",
+    "supported": true
+  }
+}

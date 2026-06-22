@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity guardrails",
-    "page_content_hash": "d9789194b6e674aab54b925dff0d8fa584221647b81ee542824ac2b63aed8cef",
+    "page_content_hash": "0bb25e5251728c2208ec00ad5f2b492fb3788ad2f042f9f79dde0bb89fd2f83f",
     "primary_capability_id": "guardrails-safety",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/t/policy-settings-do-not-apply/136027",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-21"
   }
 }

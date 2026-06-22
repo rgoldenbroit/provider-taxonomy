@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "NotebookLM",
-    "page_content_hash": "db7cb98fdf134a97203893ffebca55c487b42e2d813034307775736eaf7811fa",
+    "page_content_hash": "fd05759c7dd8798a3662de5e10027bb80a9ea9c0f2d7cd9a7a4003543d7ce743",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "reputable",
     "source_url": "https://en.wikipedia.org/wiki/NotebookLM",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-21"
   }
 }

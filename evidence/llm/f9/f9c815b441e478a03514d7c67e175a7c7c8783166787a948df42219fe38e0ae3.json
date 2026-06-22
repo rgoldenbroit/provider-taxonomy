@@ -1,0 +1,12 @@
+{
+  "key": "f9c815b441e478a03514d7c67e175a7c7c8783166787a948df42219fe38e0ae3",
+  "label": "judge:openai-agentkit",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today we\u2019re launching AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's announcement of AgentKit, explicitly describing it as a launched set of tools for building agents. Note: while a June 3, 2026 update says Agent Builder and Evals (components) are being wound down, AgentKit overall is described as launched/available, with ChatKit and new Evals capabilities generally available.",
+    "supported": true
+  }
+}

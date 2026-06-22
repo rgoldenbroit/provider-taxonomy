@@ -1,0 +1,12 @@
+{
+  "key": "36af23d83b5c3db746e447d0e8ea7176931890042ac32390cde22f9721752962",
+  "label": "judge:google-antigravity-agent-memory",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Its context management system centers on three pillars: Skills for reusable capability, Knowledge Items for persistent memory, and Artifacts for transparent documentation of its work.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Google Antigravity's context management system, explicitly stating it centers on three pillars: Skills for reusable capability, Knowledge Items for persistent memory, and Artifacts. This directly matches the claim. The page presents Antigravity as a currently available agent-first IDE built by Google DeepMind.",
+    "supported": true
+  }
+}

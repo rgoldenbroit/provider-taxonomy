@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Google evals & observability",
-    "page_content_hash": "5719d93f545b83bf020023ca855aaef7c42cbe7fa04fb9586abb8f49c9158a1c",
+    "page_content_hash": "d162816268bd7995a5fc662161e235aba959748ddebb9757a3c68f3ea7f8820d",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability",
     "supported": true,
-    "verified_at": "2026-06-19"
+    "verified_at": "2026-06-21"
   }
 }

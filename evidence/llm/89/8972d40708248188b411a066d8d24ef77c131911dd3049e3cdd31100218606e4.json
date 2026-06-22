@@ -1,0 +1,12 @@
+{
+  "key": "8972d40708248188b411a066d8d24ef77c131911dd3049e3cdd31100218606e4",
+  "label": "judge:google-gemini-3-5-pro",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Gemini 3.5 Pro was announced at Google I/O on May 19, 2026 but is still in limited Vertex preview, with GA expected in June 2026.",
+    "lifecycle_status": "preview",
+    "rationale": "The page extensively describes Gemini 3.5 Pro as a Google DeepMind model announced at Google I/O 2026, currently in limited Vertex preview with GA targeted for June 2026. This substantiates the claim that Google offers Gemini 3.5 Pro, though the page makes clear it is in preview, not yet generally available.",
+    "supported": true
+  }
+}

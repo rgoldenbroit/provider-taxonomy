@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-cloud-cloud-tasks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Codex(Cloud) Agent Cloud doing autonomously PR",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Cloud task delegation",
+    "page_content_hash": "3ee5cc6a6462f8ac86223ce75e80af04cece75a460fe0d10b357d4fb499a588a",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-cloud-cloud-tasks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://community.openai.com/c/codex/codex-cli/39?page=1",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

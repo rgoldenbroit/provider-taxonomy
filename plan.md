@@ -1,71 +1,44 @@
-# Plan — Deeper taxonomy (category + sub-feature) + collapsible UI
+# Plan — Fill in Agentic Coding content (grounded, live)
 
-*(Supersedes the reproducibility plan, preserved in git. Anchored on `research.md`: Hybrid model, pilot on Agentic Coding, structure-only scaffold, drawer+Explore UI.)*
+*(Supersedes the deeper-taxonomy plan, preserved in git. Anchored on `research.md`: complete the 5
+categories across Claude Code/Codex/Antigravity, hybrid population, live grounding now.)*
 
-**Guardrail for every phase:** `taxo verify` must stay GREEN (byte-identical replay) and the offline test
-suite must stay GREEN. Run `python3 -m taxonomy.cli verify` + `python3 tests/run_all.py` after each phase.
+**Decisions (recs accepted):** proposed sub-feature curation table · `needs_review` = keep-and-flag ·
+CI/GitHub surface = defer. **Pinned `as_of` = 2026-06-21** (written by the final record pass).
 
----
-
-## Phase 1 — Schema + validator foundation (no data yet)
-**Files:** `schema.json`, `taxonomy/validate.py`, `tests/test_validate.py`
-1. `schema.json`: add a `categories` `$def` (`id`, `function_id`, `name`, `description`, `order`, `feature_axis_ids[]`, all `additionalProperties:false`) and an optional top-level `categories` array. Add `"scaffold"` to the product `review_status` enum.
-2. `validate.py` `_check_integrity`: add category checks — unique `id`; `function_id` resolves to a capability id; every `feature_axis_ids` entry resolves to a capability id. Add a `parent_id` **cycle/self-reference guard** (now that nesting goes deeper) → integrity issue on a cycle.
-3. Tests: `categories` accepted when valid; bad `function_id`/`feature_axis_ids` → `ref_resolution`; duplicate category id → `uniqueness`; `parent_id` cycle → integrity. `test_seed_is_valid` still passes (categories optional).
-
-**Exit:** `tests/run_all.py` green; `taxo validate` clean on current data (unchanged).
-
-## Phase 2 — Replay/verify scaffold-skip (keep the gate honest)
-**Files:** `taxonomy/replay.py`, `tests/test_replay.py`
-1. `reverify_catalog`: skip records with `review_status=="scaffold"` (mirror the existing `status=="absent"` skip; count them as `"scaffold"`). They pass through unchanged → hash unaffected.
-2. Test: inject a `scaffold` node into a copy of the current catalog, run `reverify_catalog` with the replay ledger, assert the catalog hash is unchanged vs. the same catalog with the node passed through (i.e. scaffold is not grounded, no `LedgerMiss`).
-
-**Exit:** `taxo verify` still PASS on current data; new test green.
-
-## Phase 3 — Data: categories + pilot scaffold sub-features
-**Files:** `examples.json` (categories only), `data/taxonomy.json` (categories + scaffold nodes)
-1. Add `categories` for `agentic-coding` to **both** files (identical block):
-
-   | id | name | order | feature_axis_ids |
-   |---|---|---|---|
-   | `agentic-coding/surfaces` | Surfaces | 1 | _(empty — derived from `surfaces` field)_ |
-   | `agentic-coding/agent-management` | Agent Management | 2 | `subagents-orchestration`, `managed-agent-runtime` |
-   | `agentic-coding/context-memory` | Context & Memory | 3 | `agent-memory`, `mcp-connectors` |
-   | `agentic-coding/execution-safety` | Execution & Safety | 4 | `code-execution-sandbox`, `guardrails-safety` |
-   | `agentic-coding/quality-ops` | Quality & Ops | 5 | `agent-evals-observability`, `remote-agent-control` |
-
-2. Add **scaffold sub-feature nodes** to `data/taxonomy.json` only (each: `kind:"feature"`, `parent_id`→ existing feature, `primary_capability_id`= parent's axis, `relation_within_capability:"partial"`, `review_status:"scaffold"`, `status:"active"`, `source{official-doc url, last_verified=as_of, confidence:"low"}`, `scope_note:"Structural placeholder — pending grounding by the maintenance loop."`).
-
-   **Proposed pilot list (≈13 nodes) — confirm before writing:**
-   - **Subagents** (under `*-subagents-orchestration` for all 3 providers): `Definition files`, `Tool scoping`, `Model per subagent` → 3 × 3 = 9 nodes. Demonstrates sub-feature-level cross-provider compare (mirrors the reference's Sub agents example).
-   - **MCP & connectors** (under Anthropic + OpenAI MCP features): `Local (stdio) servers`, `Remote (HTTP/SSE) servers` → 2 × 2 = 4 nodes.
-
-   Source URLs point at the providers' official docs (anthropic.com/openai.com/google) as grounding *targets*; names are kept generic/structural, not asserted specifics.
-
-**Exit:** `taxo validate` clean; `taxo verify` PASS; metrics unchanged materially (provenance still counts source urls).
-
-## Phase 4 — Collapsible UI (drawer + Explore)
-**Files:** `viewer/template.html`, then regenerate `viewer/taxonomy.html`
-1. Add JS helpers: `categoriesFor(functionId)`, `categoryOf(featureAxisId)`, `childrenOf(id)` (recursive), and a `treeNode(p, depth)` renderer using native `<details>/<summary>` (no JS state) — collapsed by default below the feature level.
-2. **Drawer** (`featuresSection`): replace the flat list with a collapsible **category → feature → sub-feature** tree for the product. Each node shows status/relation/confidence; **scaffold** nodes get a distinct "structural · unverified" badge and a muted style. Keep `axisCompareSection` (cross-provider) intact.
-3. **Explore**: when a single capability that has categories is selected (e.g. agentic-coding), group the per-provider compare cells by category (collapsible category headers). Otherwise unchanged.
-4. **Styles:** `<details>` summary chevron, indentation per depth, `.b-scaffold` badge using existing tokens; light/dark parity.
-5. Rebuild: `python3 -m taxonomy.cli build`.
-
-**Exit:** `test_viewer.py` green (valid + count match); manual check the tree expands/collapses in `viewer/taxonomy.html`; categories present in the embedded blob.
-
-## Phase 5 — Docs + final gate
-**Files:** `README.md`, full verification
-1. README: document the deeper taxonomy (category + sub-feature) and the collapsible UI; note scaffold/unverified semantics + how the loop grounds them. (Do **not** hand-edit `CHANGELOG.md` — it's loop-generated.)
-2. Final run: `taxo validate` → `python3 tests/run_all.py` → `taxo eval` (offline) → `taxo verify` → `taxo build`. All must pass / PASS.
-3. Summarize what changed; surface anything noticed outside scope (don't fix).
-
-**Deploy:** redeploy is the user's call (per memory: `gcloud run deploy provider-seed-viewer --source viewer --region us-east5 …`). Not done automatically.
+**Invariant:** admit-only-what-grounds. An ungrounded/blocked cell is left empty or `scaffold` — never fabricated. End state must be: `taxo verify` byte-identical + `taxo gate` PASS.
 
 ---
 
-## Confirm before Phase 3
-- The **pilot sub-feature list** above (Subagents ×3 providers + MCP ×2 providers). Add/trim any?
+## Phase A — Live smoke-test + fill missing feature cells
+1. Smoke-test the live stack with one cheap call: `TAXO_OFFLINE=0 .venv/bin/python -m taxonomy.cli ping` (or `search`). Abort if Vertex/Tavily aren't reachable.
+2. Run `TAXO_OFFLINE=0 .venv/bin/python scripts/ground_features.py` — idempotent; targets the empty cells (Google managed-agents, Google MCP, Google remote-control, etc.). Admit only grounded.
+3. Reconcile classification gaps the script can't (pin `kind`+axis, judge sets relation only):
+   - Google MCP: fold the existing non-`feature` MCP record into a `feature` under the right product, or let ground_features create the Antigravity/Jules MCP cell.
+   - Google remote-control: ensure **Jules** fills the `remote-agent-control` cell (it *is* the async agent).
 
-## Sequencing note
-Phases 1→2 are pure infra (safe, test-backed). Phase 3 adds data. Phase 4 is UI. Each phase is independently reviewable and leaves the repo green. I'll implement **one phase at a time** and pause after each for your review.
+## Phase B — Reconfirm the 2 `needs_review`
+- Codex managed agents, Codex guardrails: re-grounded by the Phase-D record pass; if they reconfirm → `confirmed`, else keep-and-flag (no downgrade of real records — conservative reverify).
+
+## Phase C — Curate + ground sub-features (the bulk)
+1. Write **`scripts/ground_subfeatures.py`** (modeled on `ground_features.py`, one level deeper): a curated `SUBFEATURES` list of `(parent_feature_id, provider, [(name, search_kw, official_url)])`; for each, build a `kind:"feature"` candidate with `parent_id`=the feature, `pinned_capability`=parent's axis, and ground via `triage_one`. **Flip the 13 existing `scaffold` ids in place** (same id) to the grounded decision; append new ones. Admit only `confirmed`/`needs_review`; drop rejected.
+2. Curated targets (~2 per axis×provider where docs support it — from `research.md`): subagents (Definition files/Tool scoping/Model per subagent), managed-runtime, mcp, memory, sandbox, guardrails, evals, remote-control. Official-domain URLs only.
+3. Run live; report per-cell decision + grounding score + admit/drop counts.
+
+## Phase D — Evidence capture + reproducibility
+1. `TAXO_OFFLINE=0 TAXO_LEDGER=record .venv/bin/python scripts/reverify.py` with **`as_of=2026-06-21`** → re-grounds every non-`scaffold` record, writes `evidence/` pages+LLM+provenance receipts, sets `_meta.as_of`. (Scaffold-skip means Phase C must have flipped sub-features out of `scaffold` first — sequencing enforced.)
+2. `python3 -m taxonomy.cli verify` (replay, no creds) → **must be byte-identical**.
+
+## Phase E — Gate + ship
+1. `taxo validate` → `python3 tests/run_all.py` → `taxo eval` → `taxo audit`/`taxo gate` (must PASS; 0 critical).
+2. `taxo build`; headless-Chrome render check (zero JS errors; new content shows in the Overview inline tree + Explore + drawer).
+3. `gcloud run deploy provider-seed-viewer --source viewer --region us-east5 --allow-unauthenticated --quiet`; confirm live == local hash.
+4. `git add -A && commit && push`; update project memory.
+
+---
+
+## Execution notes
+- All live runs: `.venv/bin/python` + `TAXO_OFFLINE=0` (system python3 lacks the `anthropic` SDK).
+- Cost: concentrated in Phase C (~2 calls/sub-feature). I'll report running counts; if a provider's docs don't substantiate a sub-feature, it's dropped (empty cell), not invented.
+- If the live stack is unreachable (auth/quota), I stop and report — I won't fake grounding or commit ungrounded records as confirmed.
+- I'll proceed through all phases without stopping (per "go ahead"), reporting at the end + deploying.

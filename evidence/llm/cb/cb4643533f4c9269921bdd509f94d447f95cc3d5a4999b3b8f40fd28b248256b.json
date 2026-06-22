@@ -1,0 +1,12 @@
+{
+  "key": "cb4643533f4c9269921bdd509f94d447f95cc3d5a4999b3b8f40fd28b248256b",
+  "label": "judge:google-antigravity-managed-agent-runtime",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Managed Agents extends that harness one step further. With a single Gemini API call, a developer can spin up an agent that reasons, executes code and browses the web inside an isolated, ephemeral Linux environment that Google operates.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Google's Antigravity platform expansion and the introduction of Managed Agents in the Gemini API, which let developers build, define and run hosted agents on Google infrastructure. It explicitly states Managed Agents is rolling out in preview, with enterprise support in private preview.",
+    "supported": true
+  }
+}

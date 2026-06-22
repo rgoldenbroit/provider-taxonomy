@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 # A provider's own documentation / blog / announcement domains — authoritative.
 OFFICIAL_DOMAINS = {
-    "Anthropic": ["docs.anthropic.com", "anthropic.com"],
+    "Anthropic": ["docs.anthropic.com", "anthropic.com", "code.claude.com", "claude.com"],
     "OpenAI": ["platform.openai.com", "developers.openai.com", "openai.com",
                "help.openai.com", "cookbook.openai.com"],
     "Google": ["ai.google.dev", "discuss.ai.google.dev", "cloud.google.com",

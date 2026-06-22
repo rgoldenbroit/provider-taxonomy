@@ -3,19 +3,19 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "",
+    "found_quote": "[CRITICAL][BUG] Gemini in Sandbox Fails to Run or Acess env Variables, orphaned AppContainer IDs that break Discord, Antigravity 2.0, and other Electron apps",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity sandbox",
-    "page_content_hash": "447617883060947241c54291af41a1076e67041df6ee8b14babf62b83defa238",
+    "page_content_hash": "5deaf7ea39c955be537699cfbd6ba692439304522ce5a494554d85fda5b742f3",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "Google",
-    "reconfirmed": false,
+    "reconfirmed": true,
     "record_id": "google-antigravity-code-execution-sandbox",
     "review_status": "confirmed",
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/c/antigravity/64",
-    "supported": false,
-    "verified_at": "2026-06-18"
+    "supported": true,
+    "verified_at": "2026-06-21"
   }
 }

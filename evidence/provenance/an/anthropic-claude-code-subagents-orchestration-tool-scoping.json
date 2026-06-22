@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-tool-scoping",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "tools | No | Tools the subagent can use. Inherits all tools if omitted. To preload Skills into context, use the skills field rather than listing Skill here",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool scoping",
+    "page_content_hash": "e904c7f2ee22b27e9faa1b15ac8c96950c795afec6ad36e9d32b80d22e7d0a7b",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-tool-scoping",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

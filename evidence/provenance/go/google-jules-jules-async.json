@@ -1,0 +1,21 @@
+{
+  "key": "google-jules-jules-async",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Jules is an asynchronous, agentic coding assistant that integrates directly with your existing repositories. It clones your codebase into a secure Google Cloud virtual machine (VM), understands the full context of your project... Jules operates asynchronously, allowing you to focus on other tasks while it works in the background.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Jules async control",
+    "page_content_hash": "15db2471e9ba7ce9ca3ff1428d8b73cdacf90501c3642f74b7d0775edf891e17",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-jules-jules-async",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/jules",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-network-policy",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you use the CLI on native windows, you can enable a highly experimental filesystem and network sandbox.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Network policy",
+    "page_content_hash": "652f4fe354229f2829f2cb3857db783d986ed0517edd17505b35074e12b2ce3d",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-network-policy",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://community.openai.com/t/codex-vscode-extension-agent-full-access-always-asks-for-approval/1355908/28",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "0de8b312395d6b16e77cdf05ea8c0398827cd1592a482413d97518d44f6adf04",
+  "label": "judge:anthropic-anthropic-guardrails-guardrails-safety-permission-modes",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto mode hands your permission prompts to a classifier. Safe edits and commands run without interrupting you; anything destructive or suspicious gets blocked and surfaced. It\u2019s the middle ground between approving every file write and running with \u2014dangerously-skip-permissions . Cycle to auto with Shift+Tab, or set it as your default: ... \"permissions\" : { \"defaultMode\" : \"auto\" } ... Permission modes guide",
+    "lifecycle_status": "active",
+    "rationale": "The page describes permission modes that control when actions require approval \u2014 Auto mode is \"the middle ground between approving every file write\" and there is an explicit \"Permission modes guide\" link, plus a defaultMode setting. This substantiates Claude Code offering permission modes.",
+    "supported": true
+  }
+}

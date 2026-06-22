@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-mcp-connectors-mcp-connectors-remote-http-servers",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When adding a custom MCP server as a connector in ChatGPT, the UI errors with \u201cError creating connector \u2014 Request timeout\u201d, even though the MCP server successfully handles all expected calls. ... Requests with Accept: text/event-stream",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Remote (HTTP/SSE) servers",
+    "page_content_hash": "6b3298fd40c789240559c88abe6eee0a7a1b2f50ff0e1f088233932124351b5f",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-mcp-connectors-mcp-connectors-remote-http-servers",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://community.openai.com/t/mcp-connector-creation-times-out-despite-successful-initialize-tools-list-openai-mcp-1-0-0/1369456",
+    "supported": true,
+    "verified_at": "2026-06-21"
+  }
+}

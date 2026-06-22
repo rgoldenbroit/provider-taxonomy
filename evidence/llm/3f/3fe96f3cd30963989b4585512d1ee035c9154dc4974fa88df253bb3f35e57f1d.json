@@ -1,0 +1,12 @@
+{
+  "key": "3fe96f3cd30963989b4585512d1ee035c9154dc4974fa88df253bb3f35e57f1d",
+  "label": "judge:openai-codex-code-execution-sandbox-filesystem-isolation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "If you use the CLI on native windows, you can enable a highly experimental filesystem and network sandbox.",
+    "lifecycle_status": "preview",
+    "rationale": "The page references a GitHub discussion about Codex's experimental filesystem and network sandbox, which substantiates the claim that Codex can execute in an isolated sandboxed environment. The page describes it as \"highly experimental,\" indicating a preview/beta lifecycle stage.",
+    "supported": true
+  }
+}
