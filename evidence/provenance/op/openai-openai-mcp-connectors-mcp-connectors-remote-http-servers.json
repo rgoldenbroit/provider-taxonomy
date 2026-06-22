@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://community.openai.com/t/mcp-connector-creation-times-out-despite-successful-initialize-tools-list-openai-mcp-1-0-0/1369456",
     "supported": true,
-    "verified_at": "2026-06-21"
+    "verified_at": "2026-06-22"
   }
 }

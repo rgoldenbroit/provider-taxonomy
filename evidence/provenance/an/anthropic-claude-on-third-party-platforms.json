@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude on third-party platforms",
-    "page_content_hash": "48b59d5d4f425563ada4ebd89cadf10ec5af585b9f95b585d1f01357b398a9de",
+    "page_content_hash": "04b4d304e3f858e84605b1ef5ff34f085d9a6875451d6bc9d015bc3caba5f54a",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/api/claude-on-vertex-ai",
     "supported": true,
-    "verified_at": "2026-06-21"
+    "verified_at": "2026-06-22"
   }
 }

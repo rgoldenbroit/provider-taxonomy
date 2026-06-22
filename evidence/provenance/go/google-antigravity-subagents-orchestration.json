@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity subagents",
-    "page_content_hash": "b206c08e123c39940962dccfb5e1e7630e3e9ddaf8f4c76abbbf9ea1be53f2af",
+    "page_content_hash": "0d64cc7d3d6ad21a85635dbe53b70ea5d9a11d856374400b3f5549487df19269",
     "primary_capability_id": "subagents-orchestration",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://discuss.ai.google.dev/t/antigravity-sub-agents/114381",
     "supported": true,
-    "verified_at": "2026-06-21"
+    "verified_at": "2026-06-22"
   }
 }
