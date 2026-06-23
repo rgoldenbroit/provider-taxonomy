@@ -162,11 +162,27 @@
   .gategrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
 
   /* ---------- drawer ---------- */
-  #drawer { position:fixed; top:0; right:0; height:100%; width:min(460px,92vw); background:var(--panel);
-    border-left:1px solid var(--line); box-shadow:var(--shadow-lift); transform:translateX(100%); transition:transform .2s; overflow:auto; z-index:20; padding:18px; }
-  #drawer.open { transform:none; }
-  #drawer h2 { margin:0 0 2px; font-size:19px; letter-spacing:-.02em; }
-  #drawer .close { float:right; cursor:pointer; color:var(--muted); font-size:22px; line-height:1; }
+  #drawer { position:fixed; inset:0; margin:auto; width:min(600px,93vw); max-height:86vh; height:fit-content;
+    background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-lift);
+    opacity:0; transform:scale(.97); pointer-events:none; transition:opacity .16s ease, transform .16s ease;
+    overflow:auto; z-index:20; padding:24px 26px; }
+  #drawer.open { opacity:1; transform:none; pointer-events:auto; }
+  #drawer h2 { margin:0 0 4px; font-size:21px; letter-spacing:-.02em; padding-right:24px; }
+  #drawer .close { position:absolute; top:16px; right:18px; cursor:pointer; color:var(--muted); font-size:24px; line-height:1; }
+  #drawer .close:hover { color:var(--ink); }
+  #drawer .lede { font-size:15px; line-height:1.55; color:var(--ink); margin:14px 0 2px; }
+  #drawer .includes { font-size:12.5px; line-height:1.5; color:var(--muted); margin:9px 0 2px; }
+  #drawer .sec { margin-top:20px; padding-top:16px; border-top:1px solid var(--line); }
+  #drawer .sec > h3 { margin:0 0 10px; font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
+  #drawer .cmp-row { display:grid; grid-template-columns:88px 1fr; gap:12px; align-items:baseline; padding:8px 0 8px 11px; border-left:3px solid var(--line); margin:7px 0; }
+  #drawer .cmp-prov { font-weight:640; font-size:13px; }
+  #drawer .cmp-feats { font-size:13px; line-height:1.5; color:var(--ink); }
+  #drawer .cmp-feats a { cursor:pointer; color:var(--ink); }
+  #drawer .cmp-feats a:hover { color:var(--accent); }
+  #drawer .docs { display:inline-block; margin-top:18px; font-size:13px; color:var(--accent); text-decoration:none; }
+  #drawer .docs:hover { text-decoration:underline; }
+  .capname.clickable { cursor:pointer; }
+  .capname.clickable:hover { color:var(--accent); }
   .kv { display:grid; grid-template-columns:120px 1fr; gap:5px 10px; margin:12px 0; font-size:13px; }
   .kv .k { color:var(--muted); }
   .receipt { background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 12px; margin:8px 0; }
@@ -382,7 +398,7 @@ function exploreResultsHtml(){
   html += `<div class="colhead">capability</div>` +
     provs.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
   for (const c of capList){
-    html += `<div class="caphead"><div class="capname">${esc(c.name)}</div><div class="muted small">${esc(c.description)}</div></div>`;
+    html += `<div class="caphead"><div class="capname clickable" onclick="openCapability('${c.id}')" title="What is ${esc(c.name)}? How providers compare">${esc(c.name)}</div><div class="muted small">${esc(c.description)}</div></div>`;
     html += provs.map(pr=>cell(c.id, pr, matchIds, {tree: treeFn})).join('');
   }
   html += `</div></div>`;
@@ -524,7 +540,7 @@ function viewOverview(){
     providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
   for (const tier of tiers){
     for (const c of caps.filter(x=>x.tier===tier && x.id!=='unclassified')){
-      cov += `<div class="cov-caph"><div class="capname">${esc(c.name)}</div><div class="faint small">${esc(c.tier)}</div></div>`;
+      cov += `<div class="cov-caph"><div class="capname clickable" onclick="openCapability('${c.id}')" title="What is ${esc(c.name)}? How providers compare">${esc(c.name)}</div><div class="faint small">${esc(c.tier)}</div></div>`;
       cov += providers.map(pr=>covCell(c.id, pr)).join('');
       if (catsByFunction[c.id]){   // a function with a deeper breakdown → expand it inline, full width
         cov += `<div class="covbreak"><details class="catbr accent" id="ovbreak-${esc(c.id)}"><summary>Drill into the ${esc(c.name)} breakdown &mdash; category &rarr; feature &rarr; sub-feature</summary>
@@ -630,12 +646,6 @@ function featureTreeHtml(p){
       <div class="treekids">${rest.map(treeRow).join('')}</div></details>`;
   return html;
 }
-/* drawer section: the full breakdown for a node */
-function featuresSection(p){
-  const tree = featureTreeHtml(p);
-  if (!tree) return '';
-  return `<h3 class="small muted" style="margin-top:16px">Breakdown (${countDescendants(p.id)})</h3>${tree}`;
-}
 /* per-provider compare grid for one function, each cell drilling into its tree.
    Shared by the Overview inline breakdown and the Explore compare path. */
 function functionBreakdownHtml(capId){
@@ -658,76 +668,69 @@ function exploreFunction(capId){
   exploreState.q=''; exploreState.provider=''; exploreState.capability=capId; exploreState.status='';
   selectView('Explore');
 }
-/* honest cross-provider comparison on this offering's axis: present / unknown / grounded-none per provider */
-function axisCompareSection(p){
+/* a provider's top-level offerings on an axis (exclude sub-features so the compare stays scannable) */
+function topFeatsOn(axis, prov, excludeId){
+  return (byCap[axis]||[]).filter(q=>q.provider===prov && q.status!=='absent' && q.id!==excludeId
+    && !(q.parent_id && prodById[q.parent_id] && prodById[q.parent_id].kind==='feature'));
+}
+function cmpRow(prov, feats, axis){
+  if (feats.length)
+    return `<div class="cmp-row" style="border-left-color:${provVar(prov)}"><span class="cmp-prov">${esc(prov)}</span>
+      <span class="cmp-feats">${feats.slice(0,10).map(q=>`<a onclick="openDrawer('${q.id}')">${esc(q.name)}</a>`).join(' &middot; ')}</span></div>`;
+  const isAbsent = (byCap[axis]||[]).some(q=>q.provider===prov && q.status==='absent');
+  return `<div class="cmp-row" style="border-left-color:${provVar(prov)}"><span class="cmp-prov">${esc(prov)}</span>
+    <span class="cmp-feats muted">${isAbsent?'&#9711; no offering':'? not verified'}</span></div>`;
+}
+/* "how it compares" for a single offering: how-they-differ synthesis, then the OTHER providers' offerings on this axis */
+function compareSection(p){
   const axis = p.primary_capability_id, cap = capById[axis];
-  let rows = '';
-  for (const prov of providers){
-    if (prov === p.provider) continue;
-    const present = (byCap[axis]||[]).filter(q=>q.provider===prov && q.status!=='absent' && q.id!==p.id);
-    if (present.length){
-      rows += present.map(q=>`<div class="card" style="border-left-color:${provVar(prov)}" onclick="openDrawer('${q.id}')"><div class="row"><span class="name">${esc(q.name)}</span> <span class="pill-kind">${esc(prov)}</span>${statusBadge(q)}${relTag(q)}</div></div>`).join('');
-    } else {
-      const isAbsent = (byCap[axis]||[]).some(q=>q.provider===prov && q.status==='absent');
-      rows += `<div class="card" style="border-left-color:${provVar(prov)};cursor:default"><div class="row"><span class="name muted">${esc(prov)}</span> ${isAbsent?'<span class="badge b-absent">&#9711; none</span>':'<span class="cov-pill unknown">? not verified</span>'}</div></div>`;
-    }
-  }
-  const note = cap?.comparison_note ? `<div class="insight"><b>How they differ</b> — ${esc(cap.comparison_note)}</div>` : '';
-  return `<h3 class="small muted" style="margin-top:16px">Same axis, other providers — ${esc(cap?.name||axis)}</h3>${note}${rows}`;
+  const note = cap?.comparison_note ? `<div class="insight">${esc(cap.comparison_note)}</div>` : '';
+  const rows = providers.filter(prov=>prov!==p.provider)
+    .map(prov=>cmpRow(prov, topFeatsOn(axis, prov, p.id), axis)).join('');
+  return `<h3 class="small muted">How it compares${cap?` &mdash; ${esc(cap.name)}`:''}</h3>${note}${rows}`;
 }
 
-/* "why we believe this" — the provenance receipt from the evidence ledger */
-function receiptSection(p){
-  const r = PROV[p.id];
-  if (!r) return '';
-  const tier = r.source_tier || 'low';
-  const sub = r.supported
-    ? `<span style="color:var(--green)">substantiated</span>`
-    : `<span style="color:var(--amber)">unconfirmed by source</span>`;
-  return `<h3 class="small muted" style="margin-top:16px">Why we believe this</h3>
-    <div class="receipt">
-      <div class="row small"><span class="tier-${esc(tier)}" style="font-weight:600">${esc(tier)} source</span>
-        <span class="faint">·</span> ${sub} <span class="faint">·</span> verified ${esc(r.verified_at||'')}</div>
-      ${r.found_quote?`<div class="quote">&ldquo;${esc(r.found_quote)}&rdquo;</div>`:''}
-      <div class="muted small">from <a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(hostOf(r.source_url))}</a>
-        <span class="faint">· judged by ${esc(r.model||'?')} · confidence derived from source tier</span></div>
-    </div>`;
-}
-
-/* ---------- drawer ---------- */
-function openDrawer(id){
-  const p = prodById[id]; if(!p) return;
+/* ---------- pop-out: understand first, then compare ---------- */
+function openModal(html){
   const dr = document.getElementById('drawer');
-  const pred = p.predecessor_id && prodById[p.predecessor_id], succ = p.successor_id && prodById[p.successor_id];
-  const lifecycle = (p.lifecycle||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
-  dr.innerHTML = `
-    <span class="close" onclick="closeDrawer()">&times;</span>
-    <h2>${esc(p.name)}</h2>
-    <div class="row">${confDot(p)}${statusBadge(p)}${relTag(p)} <span class="pill-kind">${p.kind}</span> ${staleFlag(p)} ${fluxFlag(p)}</div>
-    <div class="kv">
-      <span class="k">provider</span><span>${esc(p.provider)}</span>
-      <span class="k">primary</span><span>${esc(capById[p.primary_capability_id]?.name||p.primary_capability_id)}</span>
-      <span class="k">capabilities</span><span>${(p.capability_ids||[]).map(c=>esc(capById[c]?.name||c)).join(', ')}</span>
-      <span class="k">surfaces</span><span>${(p.surfaces||[]).join(', ')||'&mdash;'}</span>
-      <span class="k">review</span><span>${esc(p.review_status||'confirmed')}</span>
-      ${p.parent_id?`<span class="k">parent</span><span><a onclick="openDrawer('${p.parent_id}')">${esc(prodById[p.parent_id]?.name||p.parent_id)}</a></span>`:''}
-      <span class="k">source</span><span><a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">${esc((p.source||{}).url)}</a><br><span class="faint small">verified ${esc((p.source||{}).last_verified)} &middot; ${esc((p.source||{}).confidence)} confidence</span></span>
-    </div>
-    ${p.scope_note?`<div class="note">${esc(p.scope_note)}</div>`:''}
-    ${receiptSection(p)}
-    ${(pred||succ)?`<h3 class="small muted" style="margin-top:14px">lineage</h3><div class="lineage">
-        ${pred?`<span class="node" onclick="openDrawer('${pred.id}')">${esc(pred.name)}</span><span class="arrow">&rarr;</span>`:''}
-        <span class="node" style="border-color:var(--accent)">${esc(p.name)}</span>
-        ${succ?`<span class="arrow">&rarr;</span><span class="node" onclick="openDrawer('${succ.id}')">${esc(succ.name)}</span>`:''}</div>`:''}
-    ${lifecycle.length?`<h3 class="small muted" style="margin-top:14px">history</h3><div class="timeline">${lifecycle.map(e=>`
-        <div class="ev ${e.date>today?'future':''}"><div class="d">${esc(e.date)} &middot; ${esc(e.event)}${e.date>today?' (scheduled)':''}</div>
-        <div>${esc(e.note)} ${e.source_url?`<a href="${esc(e.source_url)}" target="_blank" rel="noopener">src</a>`:''}</div></div>`).join('')}</div>`:''}
-    ${featuresSection(p)}
-    ${axisCompareSection(p)}
-  `;
+  dr.innerHTML = `<span class="close" onclick="closeDrawer()">&times;</span>` + html;
+  dr.scrollTop = 0;
   dr.classList.add('open'); document.getElementById('overlay').classList.add('open');
 }
 function closeDrawer(){ document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); });
+
+/* a feature / product / service tier: what it is, then how it compares */
+function openDrawer(id){
+  const p = prodById[id]; if(!p) return;
+  const cap = capById[p.primary_capability_id];
+  const what = p.scope_note || (cap && cap.description) || '';
+  const subs = childrenOf(p.id).filter(k=>k.kind==='feature');
+  const includes = subs.length
+    ? `<div class="includes"><b>Includes:</b> ${subs.map(s=>esc(s.name)).join(' &middot; ')}</div>` : '';
+  const src = (p.source||{}).url;
+  openModal(`
+    <h2>${esc(p.name)}</h2>
+    <div class="row small muted" style="gap:7px;align-items:center;flex-wrap:wrap">${esc(p.provider)} <span class="faint">&middot;</span> ${statusBadge(p)} <span class="faint">&middot;</span> ${esc(cap?cap.name:p.primary_capability_id)}</div>
+    ${what?`<div class="lede">${esc(what)}</div>`:''}
+    ${includes}
+    <div class="sec">${compareSection(p)}</div>
+    ${src?`<a class="docs" href="${esc(src)}" target="_blank" rel="noopener">Official docs &#8599;</a>`:''}
+  `);
+}
+
+/* a capability / category row: what the capability is, then how all providers approach it */
+function openCapability(capId){
+  const c = capById[capId]; if(!c) return;
+  const note = c.comparison_note ? `<div class="insight">${esc(c.comparison_note)}</div>` : '';
+  const rows = providers.map(prov=>cmpRow(prov, topFeatsOn(capId, prov, null), capId)).join('');
+  openModal(`
+    <h2>${esc(c.name)}</h2>
+    <div class="row small muted">${esc(c.tier).replace(/_/g,' ')} capability</div>
+    ${c.description?`<div class="lede">${esc(c.description)}</div>`:''}
+    <div class="sec"><h3 class="small muted">How the providers compare</h3>${note}${rows}</div>
+  `);
+}
 
 /* ---------- nav: four intent-driven sections ---------- */
 const VIEWS = [['Overview',viewOverview],['Explore',viewExplore],['How it works',viewAbout],['Under the hood',viewUnderHood]];

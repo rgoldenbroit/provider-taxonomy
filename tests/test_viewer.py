@@ -31,5 +31,5 @@ def test_viewer_builds_and_embeds_valid_data():
     assert app["validation"]["valid"] is True
     # Embedded count matches whatever the working store holds (seed or grounded catalog).
     assert len(app["data"]["products"]) == len(load_dataset()["products"]) >= 1
-    for hook in ("viewOverview", "viewExplore", "openDrawer", "axisCompareSection", "featuresSection", "In flux"):
+    for hook in ("viewOverview", "viewExplore", "openDrawer", "openCapability", "compareSection", "In flux"):
         assert hook in html
