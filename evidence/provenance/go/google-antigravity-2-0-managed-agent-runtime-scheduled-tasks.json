@@ -4,7 +4,7 @@
     "confidence": "high",
     "fetch_ok": true,
     "found_quote": "We're introducing scheduled tasks, allowing users to plan ahead with their projects. Utilizing the newest Gemini 3.5 Flash model, users can schedule messages to be sent to their agents while they're away. * **Repeatable**: Set up time-based triggers to start conversations periodically.",
-    "lifecycle_status": "active",
+    "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Scheduled Tasks",
     "page_content_hash": "5418ba5768677142a184ef78e1b164bbd15ffe8cd5762fadc5b2c47000e424c5",

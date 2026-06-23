@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure at [claude.ai/code](https://claude.ai/code). Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app.",
+    "found_quote": "Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure at claude.ai/code. Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app. ... Each session runs in a fresh Anthropic-managed VM with your repository cloned.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Claude Code on the web",

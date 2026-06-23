@@ -1,0 +1,12 @@
+{
+  "key": "43def4b7409f9f36714802dce6ee7fc12f2468ac75914336909931e3e63abdfd",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use environments to control what Codex installs and runs during cloud tasks. For example, you can add dependencies, install tools like linters and formatters, and set environment variables.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It confirms that OpenAI offers Cloud environments for Codex, describing how they let users control what Codex installs and runs during cloud tasks. The page explicitly covers: (1) caching (\"Container caching\" section \u2014 caches container state for up to 12 hours), (2) secrets (\"Secrets are similar to environment variables, except they are stored with an additional layer of encryption\"), and (3) a default image (\"The Codex agent runs in a default container image called `universal`\"). All elements of the claim are directly and verbatim supported by the page. The page presents this as a generally available feature with no mention of preview or beta status.",
+    "supported": true
+  }
+}

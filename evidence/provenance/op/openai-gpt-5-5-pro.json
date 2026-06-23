@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Update on April 24, 2026: GPT\u20115.5 and GPT\u20115.5 Pro are now available in the API.",
+    "found_quote": "GPT\u20115.5 Pro is rolling out to Pro, Business, and Enterprise users in ChatGPT. ... Update on April 24, 2026: GPT\u20115.5 and GPT\u20115.5 Pro are now available in the API.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "GPT-5.5 Pro",

@@ -1,0 +1,12 @@
+{
+  "key": "2c2e2d1b756b4e4bf1e321d9f9a531a8027214f78e8a0fedf9891df8c70f8a53",
+  "label": "judge:openai-chatgpt",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ChatGPT | AI Chatbot to Discover, Learn & Create ... Join hundreds of millions of users and try ChatGPT today.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's official ChatGPT overview page, clearly describing ChatGPT as an actively available AI chatbot product with multiple pricing tiers (Free, Go, Plus, Pro, Business, Enterprise), features, and a call to action to start using it today. The offering is unambiguously active and generally available.",
+    "supported": true
+  }
+}

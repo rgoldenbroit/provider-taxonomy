@@ -19,7 +19,13 @@ import json
 from abc import ABC, abstractmethod
 from typing import Any
 
-from .config import Settings, settings
+from .config import _JUDGMENT_STEPS, Settings, settings
+
+
+def _route(label: str | None, model: str, judge_model: str) -> str:
+    """Deterministic per-step model choice — must match in record and replay (ledger key includes it)."""
+    step = (label or "").split(":", 1)[0]
+    return model if step in _JUDGMENT_STEPS else judge_model
 
 
 class LLMError(RuntimeError):
@@ -113,13 +119,15 @@ class ReplayLLM(LLMClient):
     """Serves structured calls purely from the evidence ledger — no Vertex, no creds.
     Used by ``taxo verify`` so a reproducible-build check runs anywhere (e.g. CI)."""
 
-    def __init__(self, ledger, model: str):
+    def __init__(self, ledger, model: str, judge_model: str | None = None):
         self._ledger = ledger
         self.model = model
+        self.judge_model = judge_model or model
 
     def structured(self, *, system: str, prompt: str, schema: dict, label: str | None = None) -> Any:
         from .ledger import LedgerMiss, llm_key
-        key = llm_key(model=self.model, system=system, prompt=prompt, schema=schema)
+        model = _route(label, self.model, self.judge_model)
+        key = llm_key(model=model, system=system, prompt=prompt, schema=schema)
         hit = self._ledger.get("llm", key)
         if hit is None:
             raise LedgerMiss(f"llm/{key} not in ledger (replay — no live calls)")
@@ -155,8 +163,8 @@ def _is_transient(exc: Exception) -> bool:
 
 class VertexLLM(LLMClient):
     def __init__(self, *, project_id: str | None, region: str, model: str,
-                 fallback_model: str | None = None, max_tokens: int = 8000,
-                 max_retries: int = 3, backoff: float = 2.0, ledger=None):
+                 judge_model: str | None = None, fallback_model: str | None = None,
+                 max_tokens: int = 8000, max_retries: int = 3, backoff: float = 2.0, ledger=None):
         if not project_id:
             raise LLMError("ANTHROPIC_VERTEX_PROJECT_ID is not set; cannot reach Vertex.")
         try:
@@ -169,6 +177,7 @@ class VertexLLM(LLMClient):
 
         self._client = AnthropicVertex(project_id=project_id, region=region)
         self.model = model
+        self.judge_model = judge_model or model
         self.fallback_model = fallback_model
         self.max_tokens = max_tokens
         self._max_retries = max_retries
@@ -216,8 +225,8 @@ class VertexLLM(LLMClient):
             raise LLMRefusal(f"model {model} refused the request")
         return message
 
-    def _structured_live(self, *, system: str, prompt: str, schema: dict) -> Any:
-        message = self._invoke(system=system, prompt=prompt, schema=schema, model=self.model)
+    def _structured_live(self, *, system: str, prompt: str, schema: dict, model: str) -> Any:
+        message = self._invoke(system=system, prompt=prompt, schema=schema, model=model)
         for block in getattr(message, "content", []):
             if getattr(block, "type", None) == "tool_use" and block.name == self._TOOL_NAME:
                 return block.input
@@ -228,13 +237,14 @@ class VertexLLM(LLMClient):
             raise LLMError("model did not return a structured tool call") from exc
 
     def structured(self, *, system: str, prompt: str, schema: dict, label: str | None = None) -> Any:
+        model = _route(label, self.model, self.judge_model)   # deterministic by step (ledger-safe)
         if self._ledger is not None and self._ledger.active:
             from .ledger import llm_key  # lazy: only the ledgered path needs it
-            key = llm_key(model=self.model, system=system, prompt=prompt, schema=schema)
+            key = llm_key(model=model, system=system, prompt=prompt, schema=schema)
             return self._ledger.cached("llm", key,
-                                       lambda: self._structured_live(system=system, prompt=prompt, schema=schema),
-                                       meta={"label": label, "model": self.model})
-        return self._structured_live(system=system, prompt=prompt, schema=schema)
+                                       lambda: self._structured_live(system=system, prompt=prompt, schema=schema, model=model),
+                                       meta={"label": label, "model": model})
+        return self._structured_live(system=system, prompt=prompt, schema=schema, model=model)
 
     def ping(self) -> str:
         with self._client.messages.stream(
@@ -259,8 +269,8 @@ def build_ledger(cfg: Settings | None = None):
 def get_llm(cfg: Settings | None = None, *, responses: dict[str, Any] | None = None) -> LLMClient:
     cfg = cfg or settings()
     if getattr(cfg, "ledger_mode", "off") == "replay":
-        return ReplayLLM(build_ledger(cfg), cfg.model)   # pure ledger reads → no Vertex/creds (CI-safe)
+        return ReplayLLM(build_ledger(cfg), cfg.model, cfg.judge_model)   # pure ledger reads → no Vertex/creds (CI-safe)
     if cfg.offline:
         return StubLLM(responses=responses)
     return VertexLLM(project_id=cfg.project_id, region=cfg.region, model=cfg.model,
-                     ledger=build_ledger(cfg))
+                     judge_model=cfg.judge_model, ledger=build_ledger(cfg))

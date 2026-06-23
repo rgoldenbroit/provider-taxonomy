@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "The browser uses a two-layer security system to control which URLs can be accessed:\n- **Denylist** - Deny dangerous/malicious URLs\n- **Allowlist** - Explicitly allow trusted URLs",
+    "found_quote": "The browser uses a two-layer security system to control which URLs can be accessed: **Denylist** - Deny dangerous/malicious URLs; **Allowlist** - Explicitly allow trusted URLs ... The denylist is maintained and enforced using the Google Superroots's BadUrlsChecker service ... The allowlist is a local text file that you can edit to explicitly trust specific URLs.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Allowlist / Denylist",

@@ -1,0 +1,12 @@
+{
+  "key": "6fa28bf4fefa47fc3b56e91490a1de962682f61d32698be129e6caa4fbacfc83",
+  "label": "judge:anthropic-claude-agent-sdk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Build production AI agents with Claude Code as a library. Build AI agents that autonomously read files, run commands, search the web, edit code, and more. The Agent SDK gives you the same tools, agent loop, and context management that power Claude Code, programmable in Python and TypeScript.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is the official Anthropic documentation for the \"Agent SDK\" (also referred to as \"Claude Agent SDK\"), available at docs.anthropic.com/en/api/agent-sdk/overview. The page describes it as a production-ready library for building AI agents in Python and TypeScript, with installation instructions, code examples, and a full feature set. There is no indication it is in preview, beta, deprecated, or sunset \u2014 it is presented as a currently available, production-grade offering.",
+    "supported": true
+  }
+}

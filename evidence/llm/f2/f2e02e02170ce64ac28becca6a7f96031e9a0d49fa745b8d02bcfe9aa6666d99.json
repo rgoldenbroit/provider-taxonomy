@@ -1,0 +1,12 @@
+{
+  "key": "f2e02e02170ce64ac28becca6a7f96031e9a0d49fa745b8d02bcfe9aa6666d99",
+  "label": "judge:google-antigravity-2-0-remote-agent-control-multi-agent-teamwork",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Multi-Agent Teamwork (Ultra Plan Only)\n\nAntigravity 2.0 introduces advanced multi-agent orchestration for extremely complex tasks. ... Using `/teamwork-preview` prompts the main agent to launch a collaborative multi-agent framework. This framework features built-in error recovery, automatic retries, and coordination logic, allowing you to simply define the high-level goal while the platform manages the overhead of a cooperative agent team.\n\n...\n\nAgents communicate by sending messages to each other using unique agent IDs.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Multi-Agent Teamwork\" offering under Antigravity 2.0. It confirms: (1) a collaborative multi-agent framework is launched, (2) the user defines a high-level goal while the platform manages coordination, and (3) agents direct one another via unique agent IDs. The `/teamwork-preview` slash command is explicitly marked as \"currently in preview,\" making lifecycle_status 'preview'. All three core elements of the claim are substantiated verbatim on the page.",
+    "supported": true
+  }
+}

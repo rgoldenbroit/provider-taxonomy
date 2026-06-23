@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Subagents are specialized AI assistants that handle specific types of tasks. Use one when a side task would flood your main conversation with search results, logs, or file contents you won't reference again: the subagent does that work in its own context and returns only the summary.",
+    "found_quote": "Subagents are specialized AI assistants that handle specific types of tasks. Use one when a side task would flood your main conversation with search results, logs, or file contents you won't reference again: the subagent does that work in its own context and returns only the summary. ... Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Subagents",

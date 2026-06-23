@@ -1,0 +1,12 @@
+{
+  "key": "be0e5d4d153a8189da0c74ead1cacdcf1d428ec555ff52b549ce958e00ac0114",
+  "label": "judge:openai-codex-code-execution-sandbox-permission-profiles",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Permission profiles let you apply least-privilege boundaries to local commands Codex runs on your behalf. A profile is a named policy that combines filesystem rules, which define what commands can read or write, with network rules, which define which destinations commands can reach.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly substantiates every element of the claim: (1) \"Permission profiles\" is the named feature; (2) they are \"least-privilege\" policies; (3) they are \"named\" (a profile is a named policy); (4) they combine \"filesystem rules\" and \"network rules\"; (5) they apply to \"local commands Codex runs.\" The page also clearly marks the feature as \"Beta\" and under active development, making the lifecycle status 'beta'/'preview'.",
+    "supported": true
+  }
+}

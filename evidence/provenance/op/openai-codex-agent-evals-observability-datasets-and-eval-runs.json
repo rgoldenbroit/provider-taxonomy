@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Once you know what \u201cgood\u201d looks like, move from individual traces to repeatable datasets and eval runs. This is the right step when you want to benchmark changes, compare prompts, or run larger-scale evaluations over time.",
+    "found_quote": "Move to datasets and eval runs when you need repeatability\n\nOnce you know what \"good\" looks like, move from individual traces to repeatable datasets and eval runs. This is the right step when you want to benchmark changes, compare prompts, or run larger-scale evaluations over time.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Datasets and eval runs",

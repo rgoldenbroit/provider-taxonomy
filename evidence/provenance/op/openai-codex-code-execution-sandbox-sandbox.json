@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "The sandbox is the boundary that lets Codex act autonomously without giving it unrestricted access to your machine. ... Codex uses platform-native enforcement on each OS. The implementation differs between macOS, Linux, WSL2, and native Windows, but the idea is the same across surfaces: give the agent a bounded place to work so routine tasks can run autonomously inside clear limits.",
+    "found_quote": "The sandbox is the boundary that lets Codex act autonomously without giving it unrestricted access to your machine. When Codex runs local commands in the Codex app, IDE extension, or CLI, those commands run inside a constrained environment instead of running with full access by default... Codex uses platform-native enforcement on each OS. The implementation differs between macOS, Linux, WSL2, and native Windows, but the idea is the same across surfaces: give the agent a bounded place to work so routine tasks can run autonomously inside clear limits.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Sandbox",

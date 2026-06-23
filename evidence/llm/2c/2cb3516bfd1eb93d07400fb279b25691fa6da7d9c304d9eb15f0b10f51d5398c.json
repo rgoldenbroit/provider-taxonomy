@@ -1,0 +1,12 @@
+{
+  "key": "2cb3516bfd1eb93d07400fb279b25691fa6da7d9c304d9eb15f0b10f51d5398c",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sandboxing provides kernel-level isolation for terminal commands executed by the Agent. When enabled, commands run in a restricted environment with limited file system and network access, protecting your system from unintended modifications.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Terminal Sandboxing\" as a feature of the Antigravity IDE, confirming kernel-level isolation for terminal commands executed by the Agent in a restricted environment. It further details that the feature can be enabled/disabled via user settings (permission grants), leverages OS-level mechanisms (macOS Seatbelt/sandbox-exec and Linux nsjail), and controls file system and network access \u2014 all consistent with the claim. The feature is described as available (though disabled by default), indicating an active lifecycle status.",
+    "supported": true
+  }
+}

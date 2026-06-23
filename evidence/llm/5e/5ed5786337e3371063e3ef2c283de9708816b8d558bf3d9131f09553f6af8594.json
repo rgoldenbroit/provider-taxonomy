@@ -1,0 +1,12 @@
+{
+  "key": "5ed5786337e3371063e3ef2c283de9708816b8d558bf3d9131f09553f6af8594",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents are specialized AI assistants that handle specific types of tasks. Use one when a side task would flood your main conversation with search results, logs, or file contents you won't reference again: the subagent does that work in its own context and returns only the summary. ... Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates the claim. It describes subagents as \"specialized AI assistants\" that run in \"their own context window,\" handle delegated tasks independently, and return results (summaries) to the main conversation. The page also provides extensive documentation on how to create, configure, and use subagents, indicating this is an active, generally available feature offered by Anthropic's Claude Code product.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "3d86fd74d1898742becf25dd0b3f3af9d162a58fb440b1f0157d79027e3696b9",
+  "label": "judge:google-antigravity-2-0-agent-evals-observability-lifecycle-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**3. Lifecycle Hooks**\nGain granular control over agent execution with three categories of hooks across nine concrete lifecycle points (e.g., session start, pre/post turn, pre/post tool call):\n\n*   **Inspect** (Read-Only, Non-Blocking): For logging, audit trails, and metrics.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Lifecycle Hooks\" as a core pillar of the Google Antigravity SDK, confirming \"granular control over agent execution,\" nine concrete lifecycle points, and that the Inspect hook category is used \"for logging, audit trails, and metrics.\" This directly substantiates all key elements of the claim. The feature is presented as a current, generally available capability with no preview or deprecation notices.",
+    "supported": true
+  }
+}

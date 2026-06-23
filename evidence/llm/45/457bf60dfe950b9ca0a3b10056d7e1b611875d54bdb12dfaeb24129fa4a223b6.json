@@ -1,0 +1,12 @@
+{
+  "key": "457bf60dfe950b9ca0a3b10056d7e1b611875d54bdb12dfaeb24129fa4a223b6",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-command-auto-execution",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Controls how the agent executes generated shell commands:\n* **Request Review**: The agent will always prompt for confirmation before executing any terminal command (except those explicitly added to your configurable Allow list).\n* **Always Proceed**: The agent will execute commands automatically without prompting (except those explicitly added to your configurable Deny list). High autonomy, high risk.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Terminal Command Auto Execution\" setting under \"Command Execution & File Access\" that controls whether the agent prompts for confirmation (\"Request Review\") or executes shell commands automatically (\"Always Proceed\"), directly matching the claim. The page presents this as a current, generally available setting with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

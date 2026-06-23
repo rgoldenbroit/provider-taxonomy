@@ -1,0 +1,12 @@
+{
+  "key": "4eed2dbec63544277566fd695d068468d2d5bedfb8a73f1a6cd83d6fe4dcba62",
+  "label": "judge:openai-openai-agents-sdk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The OpenAI Agents SDK enables you to build agentic AI apps in a lightweight, easy-to-use package with very few abstractions. It's a production-ready upgrade of our previous experimentation for agents, Swarm.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is the official documentation site for the OpenAI Agents SDK (https://openai.github.io/openai-agents-python/). It explicitly describes the SDK as \"production-ready,\" details its features, provides installation instructions (`pip install openai-agents`), and includes a working \"Hello world\" code example. There is no indication of deprecation, preview, or sunset status \u2014 it is presented as a generally available, active product.",
+    "supported": true
+  }
+}

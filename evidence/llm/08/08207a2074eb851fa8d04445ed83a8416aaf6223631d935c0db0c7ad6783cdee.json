@@ -1,0 +1,12 @@
+{
+  "key": "08207a2074eb851fa8d04445ed83a8416aaf6223631d935c0db0c7ad6783cdee",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-terminal-sandboxing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Terminal Sandboxing (Preview)\n\nPermission grants also apply to commands when sandbox is enabled:\n*   Paths granted under `read_file` dynamically populate the sandbox's read-only filesystem allowlist.\n*   Paths granted under `write_file` dynamically populate the sandbox's read-write filesystem allowlist.\n*   Domains granted under `read_url` define outbound network access policies.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Terminal Sandboxing\" feature under a section titled \"Terminal Sandboxing (Preview).\" It matches the claim's description: it is a security isolation mechanism that contains local shell command execution (via container isolation, referenced by the `unsandboxed` action type which executes commands \"outside of container isolation\"), and it populates filesystem allowlists (read-only from `read_file` grants, read-write from `write_file` grants) and outbound network allowlists (from `read_url` grants). The page also confirms it is currently in preview on macOS/Linux and coming soon to Windows, consistent with the claim's description of it as a \"lightweight kernel-level security isolation mechanism.\"",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "e0b162d06180dd44e7f0620f4c5ecf7d31fe6745e1d991508212a645768c4cc0",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandbox-runtime",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The [`@anthropic-ai/sandbox-runtime`](https://github.com/anthropic-experimental/sandbox-runtime) package wraps an entire process in the same Seatbelt or bubblewrap isolation that the built-in Bash sandbox uses. Running Claude Code through it constrains every tool, hook, and MCP server in the session, not only Bash. The runtime is a beta research preview, and its configuration format may change as the package evolves.",
+    "lifecycle_status": "beta",
+    "rationale": "The page clearly describes the Sandbox runtime offering from Anthropic as a package (`@anthropic-ai/sandbox-runtime`) that wraps the entire Claude Code process in Seatbelt/bubblewrap isolation, constraining every tool, hook, and subprocess \u2014 matching the claim. The page explicitly labels it a \"beta research preview.\" The claim's description of it as \"a lightweight isolation package that wraps the entire Claude Code process in Seatbelt/bubblewrap isolation, constraining every tool, hook, and subprocess without containers\" is well supported by the page content.",
+    "supported": true
+  }
+}

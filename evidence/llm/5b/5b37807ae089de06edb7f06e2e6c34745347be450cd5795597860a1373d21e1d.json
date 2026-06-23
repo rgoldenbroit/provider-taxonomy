@@ -1,0 +1,12 @@
+{
+  "key": "5b37807ae089de06edb7f06e2e6c34745347be450cd5795597860a1373d21e1d",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-allowlist-denylist",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The browser uses a two-layer security system to control which URLs can be accessed: **Denylist** - Deny dangerous/malicious URLs; **Allowlist** - Explicitly allow trusted URLs ... The denylist is maintained and enforced using the Google Superroots's BadUrlsChecker service ... The allowlist is a local text file that you can edit to explicitly trust specific URLs.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a two-layer browser security system called \"Allowlist / Denylist\" under the Antigravity IDE section. It confirms: (1) a server-enforced denylist (via Google Superroots's BadUrlsChecker RPC service) that blocks dangerous/malicious URLs, and (2) a locally editable allowlist (a local text file) for explicitly trusting specific URLs. The denylist always takes precedence, matching all key elements of the claim. The page presents this as a current, active feature with no deprecation or preview language.",
+    "supported": true
+  }
+}

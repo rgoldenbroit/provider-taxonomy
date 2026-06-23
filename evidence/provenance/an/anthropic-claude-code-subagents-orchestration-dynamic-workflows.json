@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "A dynamic workflow is a JavaScript script that orchestrates [subagents](/en/sub-agents) at scale. Claude writes the script for the task you describe, and a runtime executes it in the background while your session stays responsive.",
+    "found_quote": "A dynamic workflow is a JavaScript script that orchestrates subagents at scale. Claude writes the script for the task you describe, and a runtime executes it in the background while your session stays responsive.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Dynamic workflows",

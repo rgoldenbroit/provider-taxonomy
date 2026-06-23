@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "At a high level, the common sandbox modes are: - `read-only`: Codex can inspect files, but it can't edit files or run commands without approval. - `workspace-write`: Codex can read files, edit within the workspace, and run routine local commands inside that boundary. ... - `danger-full-access`: Codex runs without sandbox restrictions. This removes the filesystem and network boundaries",
+    "found_quote": "the common sandbox modes are:\n\n- `read-only`: Codex can inspect files, but it can't edit files or run commands without approval.\n- `workspace-write`: Codex can read files, edit within the workspace, and run routine local commands inside that boundary. This is the default low-friction mode for local work.\n- `danger-full-access`: Codex runs without sandbox restrictions. This removes the filesystem and network boundaries and should be used only when you want Codex to act with full access.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Sandbox modes",

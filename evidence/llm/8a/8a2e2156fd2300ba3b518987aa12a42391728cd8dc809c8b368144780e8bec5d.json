@@ -1,0 +1,12 @@
+{
+  "key": "8a2e2156fd2300ba3b518987aa12a42391728cd8dc809c8b368144780e8bec5d",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-interactive-approvals",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When the agent encounters an operation requiring approval (**Ask** mode), an interactive prompt card appears in your TUI.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Interactive Approvals under the \"Interactive permission prompts\" section. It states that when an operation requires approval (Ask mode), an interactive prompt card appears in the TUI. The page also describes scope editing behavior that adapts based on context (e.g., file/URL/MCP vs. terminal commands, and the ability to edit the target string to expand scope). The claim's mention of \"adapting based on sandbox state\" is partially supported by the note that scope editing is \"not supported for terminal commands\" and the cross-reference to sandbox customization, indicating the prompt behavior adapts based on the type/state of the operation.",
+    "supported": true
+  }
+}

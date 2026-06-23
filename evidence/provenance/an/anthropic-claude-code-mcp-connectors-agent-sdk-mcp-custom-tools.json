@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is an open standard for connecting AI agents to external tools and data sources. ... MCP servers can run as local processes, connect over HTTP, or execute directly within your SDK application. ... ### SDK MCP servers\\nDefine custom tools directly in your application code instead of running a separate server process.",
+    "found_quote": "The Model Context Protocol (MCP) is an open standard for connecting AI agents to external tools and data sources. With MCP, your agent can query databases, integrate with APIs like Slack and GitHub, and connect to other services without writing custom tool implementations... SDK MCP servers: Define custom tools directly in your application code instead of running a separate server process. See the custom tools guide for implementation details.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Agent SDK MCP & custom tools",

@@ -1,0 +1,12 @@
+{
+  "key": "2e5d70ec30f19740b3e548421b16d28dc84f902404b40b47de292f6e4a600e77",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-strict-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Strict mode provides enhanced security controls for the Agent, allowing you to restrict its access to external resources and sensitive operations.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Strict Mode\" feature under Google's Antigravity IDE settings. The verbatim text on the page matches the claim almost word-for-word: it states that strict mode \"provides enhanced security controls for the Agent, allowing you to restrict its access to external resources and sensitive operations.\" The page goes on to describe multiple security measures enforced by strict mode (URL allowlist/denylist, terminal/browser/artifact review policies, file system access restrictions), confirming the claim's description. The feature is presented as a current, generally available setting with no preview or deprecation indicators.",
+    "supported": true
+  }
+}

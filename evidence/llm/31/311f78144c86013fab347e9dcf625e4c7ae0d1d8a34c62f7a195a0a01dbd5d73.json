@@ -1,0 +1,12 @@
+{
+  "key": "311f78144c86013fab347e9dcf625e4c7ae0d1d8a34c62f7a195a0a01dbd5d73",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-custom-mcp-servers",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To connect to a custom MCP server:\n\n1. Open the MCP store via the \"...\" dropdown at the top of the editor's agent panel.\n2. Click on \"Manage MCP Servers\"\n3. Click on \"View raw config\"\n4. Modify the mcp_config.json with your custom MCP server configuration.\n\nThe configuration file is located at `~/.gemini/config/mcp_config.json`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents a \"Connecting Custom MCP Servers\" section, describing how users can connect custom MCP servers by editing the mcp_config.json configuration file. The file is shown as globally located at ~/.gemini/config/mcp_config.json. The page does not describe per-workspace configuration explicitly, but it does confirm the core claim: custom MCP servers can be connected by editing mcp_config.json. The feature is presented as currently available (active), with detailed configuration structure, properties, and authentication options documented.",
+    "supported": true
+  }
+}

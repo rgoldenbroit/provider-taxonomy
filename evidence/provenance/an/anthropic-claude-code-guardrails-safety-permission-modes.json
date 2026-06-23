@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "When Claude wants to edit a file, run a shell command, or make a network request, it pauses and asks you to approve the action. Permission modes control how often that pause happens.",
+    "found_quote": "Permission modes control how often that pause happens... As a default: set defaultMode in settings.\n\n```json\n{\n  \"permissions\": {\n    \"defaultMode\": \"acceptEdits\"\n  }\n}\n```",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Permission modes",

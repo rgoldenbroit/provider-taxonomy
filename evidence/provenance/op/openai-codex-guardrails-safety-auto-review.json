@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Auto-review replaces manual approval at the sandbox boundary with a separate reviewer agent. ... At a high level, Auto-review is designed to block actions such as: - sending private data, secrets, or credentials to untrusted destinations - probing for credentials, tokens, cookies, or session material - broad or persistent security weakening - destructive actions with significant risk of irreversible damage",
+    "found_quote": "Auto-review replaces manual approval at the sandbox boundary with a separate reviewer agent. The main Codex agent still runs inside the same sandbox, with the same approval policy and the same network and filesystem limits. The difference is who reviews eligible escalation requests.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Auto-review",

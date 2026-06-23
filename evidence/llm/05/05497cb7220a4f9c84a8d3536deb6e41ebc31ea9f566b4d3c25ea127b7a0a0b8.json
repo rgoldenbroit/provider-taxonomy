@@ -1,0 +1,12 @@
+{
+  "key": "05497cb7220a4f9c84a8d3536deb6e41ebc31ea9f566b4d3c25ea127b7a0a0b8",
+  "label": "judge:anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If you deploy a `managed-mcp.json` file, Claude Code loads only the servers that file defines. Users cannot add, modify, or use any other MCP servers, including plugin-provided servers. The file also suppresses claude.ai connectors unless you allow them alongside the managed set. Two other settings can further filter the managed set: `allowedMcpServers` and `deniedMcpServers` apply to managed servers too, so a managed server that doesn't pass them won't load.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's Managed MCP configuration feature (`managed-mcp.json`) in detail. It confirms: (1) it deploys a fixed set of MCP servers with exclusive control \u2014 \"Claude Code loads only the servers that file defines. Users cannot add, modify, or use any other MCP servers\"; and (2) allowlists/denylists can filter which servers load \u2014 \"`allowedMcpServers` and `deniedMcpServers` apply to managed servers too, so a managed server that doesn't pass them won't load.\" The feature appears to be generally available (active), with specific version requirements noted only for certain sub-features (e.g., `allowAllClaudeAiMcps` requires v2.1.149+).",
+    "supported": true
+  }
+}

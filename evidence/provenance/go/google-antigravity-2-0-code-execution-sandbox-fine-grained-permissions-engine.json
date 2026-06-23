@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "To secure your workstation while enabling autonomous workflows, Antigravity CLI integrates a robust **Fine-Grained Permissions Engine**. Every sensitive operation the agent performs is represented as a **permission resource** formatted as `action(target)`.",
+    "found_quote": "Antigravity CLI integrates a robust **Fine-Grained Permissions Engine**. Every sensitive operation the agent performs is represented as a **permission resource** formatted as `action(target)`. Permissions are evaluated across three distinct access lists configured inside your global settings: ... **`deny`**: The action is blocked immediately. **`ask`**: The agent pauses and prompts for your explicit approval before proceeding. **`allow`**: The action is auto-approved without prompting.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Fine-Grained Permissions Engine",

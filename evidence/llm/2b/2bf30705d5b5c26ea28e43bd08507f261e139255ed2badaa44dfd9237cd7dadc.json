@@ -1,0 +1,12 @@
+{
+  "key": "2bf30705d5b5c26ea28e43bd08507f261e139255ed2badaa44dfd9237cd7dadc",
+  "label": "judge:openai-codex-remote-agent-control-codex-security-cloud",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex Security cloud is currently in research preview. It scans connected GitHub repositories for likely security issues.",
+    "lifecycle_status": "preview",
+    "rationale": "The page clearly describes \"Codex Security cloud\" as an offering from OpenAI that scans connected GitHub repositories for security issues through Codex Web. The page also mentions it operates asynchronously (\"commit by commit\") and surfaces findings through GitHub. However, the claim specifically mentions \"CI/CD change reviews\" \u2014 the page does not explicitly mention CI/CD; it mentions reviewing code changes (pull requests/branches) via the plugin, not the cloud service directly. The core claim about an asynchronous cloud service scanning connected GitHub repos for security issues through Codex Web is well substantiated. The lifecycle status is \"research preview\" per the page.",
+    "supported": true
+  }
+}

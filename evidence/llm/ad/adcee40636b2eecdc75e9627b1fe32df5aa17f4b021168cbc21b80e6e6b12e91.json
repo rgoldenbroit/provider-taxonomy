@@ -1,0 +1,12 @@
+{
+  "key": "adcee40636b2eecdc75e9627b1fe32df5aa17f4b021168cbc21b80e6e6b12e91",
+  "label": "judge:google-antigravity-2-0-agent-memory-rules",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Rules are manually defined constraints for the Agent to follow, at both the local and global levels... While Rules provide models with guidance by providing persistent, reusable context at the prompt level...",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Rules as \"manually defined constraints for the Agent to follow, at both the local and global levels\" and confirms they provide \"persistent, reusable context.\" The claim states Rules operate at \"global and workspace levels,\" which matches the page's description of Global Rules (applied across all workspaces) and Workspace Rules (specific to a workspace). The page substantiates all key elements of the claim: manually defined constraints, persistent and reusable context, and availability at both global and workspace levels. The page presents this as a currently active feature with no deprecation or preview notices.",
+    "supported": true
+  }
+}

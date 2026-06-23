@@ -1,0 +1,12 @@
+{
+  "key": "631a88b00e68ebd769a2a3576d2dae211f0756fbf421bcec4eede0d37357accf",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Built-In Subagents\nAntigravity comes pre-packaged with several specialized subagents:\n* **`research`**: Optimized for codebase research, navigation, and exploration.\n* **`browser`**: Operates sandboxed web browsers to perform interactive browser tasks (invoked exclusively via the `/browser` slash command).\n* **`self`**: A direct clone of the calling agent, sharing the identical system prompt and toolsets.\n\n### Custom Subagents\nAgents can define their own custom subagents dynamically using the `define_subagent` tool.\n* **Configuration**: Define a custom system prompt and specific toolsets for read-only, write (including running terminal commands), and subagent delegation capabilities.\n* **Scope**: Once defined, the custom subagent can be invoked repeatedly for the remainder of the conversation.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Built-In vs. Custom Subagents\" section under Antigravity 2.0. It confirms that Antigravity ships pre-packaged specialized subagents (research, browser, self) and that agents can define custom subagents dynamically via the `define_subagent` tool with custom system prompts and specific toolsets. This directly substantiates all parts of the claim.",
+    "supported": true
+  }
+}

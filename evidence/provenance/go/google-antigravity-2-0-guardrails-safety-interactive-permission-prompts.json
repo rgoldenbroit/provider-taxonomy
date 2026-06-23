@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "When the Agent encounters an operation requiring approval (**Ask** mode), an interactive card appears in your editor. Before clicking **Allow** for file, URL, or MCP permissions, you can directly edit the target string in the prompt card to expand the granted scope (e.g., broadening a single file request like `/project/file.txt` to the parent directory `/project`).",
+    "found_quote": "When the Agent encounters an operation requiring approval (Ask mode), an interactive card appears in your editor. Before clicking Allow for file, URL, or MCP permissions, you can directly edit the target string in the prompt card to expand the granted scope (e.g., broadening a single file request like /project/file.txt to the parent directory /project). Antigravity validates that your edited target safely covers the operation and applies the expanded grant for the remainder of the turn, preventing repeated prompts for related operations. (Note: Scope editing is not supported for terminal commands).",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Interactive Permission Prompts",

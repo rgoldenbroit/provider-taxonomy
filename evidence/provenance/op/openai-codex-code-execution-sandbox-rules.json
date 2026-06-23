@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Use rules to control which commands Codex can run outside the sandbox. ... `allow`: Run the command outside the sandbox without prompting. `prompt`: Prompt before each matching invocation. `forbidden`: Block the request without prompting.",
+    "found_quote": "Use rules to control which commands Codex can run outside the sandbox... `decision` **(defaults to `\"allow\"`)**: The action to take when the rule matches... `allow`: Run the command outside the sandbox without prompting. `prompt`: Prompt before each matching invocation. `forbidden`: Block the request without prompting.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Rules",

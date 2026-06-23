@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "NotebookLM",
-    "page_content_hash": "fd05759c7dd8798a3662de5e10027bb80a9ea9c0f2d7cd9a7a4003543d7ce743",
+    "page_content_hash": "51bb5dda964a695bfbff2acbd646df23fb37781bc9a467bb1dd26881a747d426",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Google",
     "reconfirmed": true,

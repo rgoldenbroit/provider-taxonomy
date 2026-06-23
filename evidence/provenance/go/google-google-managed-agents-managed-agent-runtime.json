@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Managed Agents API on Agent Platform (Managed code): A config-driven, REST-first API for building autonomous agents inside a fully managed sandbox environment for actions.",
+    "found_quote": "Agents overview\nStay organized with collections\nSave and categorize content based on your preferences.\nBuild, deploy, and manage AI agents that use reasoning and tools to perform complex enterprise tasks, such as automating workflows, discovering information across multiple systems, and generating content.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Google managed agents",

@@ -1,0 +1,12 @@
+{
+  "key": "8b4121a843acc36eee9891b0962cc1087c882bfc6d80f762770d3700b811e57e",
+  "label": "judge:google-antigravity-2-0",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Preview release 2.0.1 [2] / 19 May 2026; 32 days ago (19 May 2026)",
+    "lifecycle_status": "preview",
+    "rationale": "The Wikipedia page on Google Antigravity explicitly lists a \"Preview release 2.0.1\" dated 19 May 2026, and reference [2] links to \"https://antigravity.google/blog/introducing-google-antigravity-2-0\". This substantiates that Google offers Antigravity 2.0, though it is currently in preview (not generally available).",
+    "supported": true
+  }
+}

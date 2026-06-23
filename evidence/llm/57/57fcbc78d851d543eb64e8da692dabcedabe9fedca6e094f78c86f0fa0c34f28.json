@@ -1,0 +1,12 @@
+{
+  "key": "57fcbc78d851d543eb64e8da692dabcedabe9fedca6e094f78c86f0fa0c34f28",
+  "label": "judge:openai-codex-managed-agent-runtime-sites",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sites lets Codex create, save, deploy, and inspect websites, web apps, and games hosted by OpenAI. Use the **Sites** plugin when you want to turn a prompt or a compatible existing project into a hosted site without setting up a separate deployment workflow.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes the Sites offering as a Codex plugin that creates, saves, deploys, and inspects websites and apps hosted by OpenAI, matching the claim exactly. The page also states \"Sites is in preview and currently available for ChatGPT Business and Enterprise workspaces,\" confirming its lifecycle status as preview.",
+    "supported": true
+  }
+}

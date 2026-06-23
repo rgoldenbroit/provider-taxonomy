@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Subagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work.",
+    "found_quote": "Subagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work... Instead of executing every step serially, an agent can delegate tasks\u2014such as running tests or performing extensive codebase searches\u2014to dedicated subagents. This architecture frees the parent agent to continue working on other tasks in parallel and prevents its context window from being polluted by the details of a subagent's work... A parent agent can invoke multiple subagents at any time.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Asynchronous Subagents",

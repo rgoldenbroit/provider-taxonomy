@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "## Control sensitive data in exports\n\nTelemetry is structural by default. Durations, model names, and tool names are recorded on every span; token counts are recorded when the underlying API request returns usage data, so spans for failed or aborted requests may omit them. The content your agent reads and writes is not recorded by default. These opt-in variables add content to the exported data:",
+    "found_quote": "The content your agent reads and writes is not recorded by default. These opt-in variables add content to the exported data",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Control sensitive data in exports",

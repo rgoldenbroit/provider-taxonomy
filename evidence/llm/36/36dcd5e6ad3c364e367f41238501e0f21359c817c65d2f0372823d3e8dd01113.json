@@ -1,0 +1,12 @@
+{
+  "key": "36dcd5e6ad3c364e367f41238501e0f21359c817c65d2f0372823d3e8dd01113",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-multi-agent-teamwork-orchestration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity 2.0 introduces advanced multi-agent orchestration for extremely complex tasks. ... Using `/teamwork-preview` prompts the main agent to launch a collaborative multi-agent framework. This framework features built-in error recovery, automatic retries, and coordination logic, allowing you to simply define the high-level goal while the platform manages the overhead of a cooperative agent team.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Multi-Agent Teamwork\" offering under Antigravity 2.0 that includes advanced multi-agent orchestration with built-in error recovery, retries, and coordination logic. The page also describes both synchronous/serial and asynchronous subagent execution, and a central parent agent (\"main agent\") that orchestrates subagents. However, the `/teamwork-preview` command is explicitly marked as currently in preview and exclusive to Ultra plan users, so its lifecycle status is 'preview'.",
+    "supported": true
+  }
+}

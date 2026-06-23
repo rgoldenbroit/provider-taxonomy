@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "The sandboxed Bash tool leverages operating system security primitives... These OS-level restrictions ensure that all child processes spawned by Claude Code's commands inherit the same security boundaries.",
+    "found_quote": "The Bash sandbox lets Claude run most shell commands without stopping to ask permission. Instead of approving each command, you define which files and network domains commands can touch, and the operating system enforces that boundary for every Bash command and its child processes.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Sandboxed Bash tool",

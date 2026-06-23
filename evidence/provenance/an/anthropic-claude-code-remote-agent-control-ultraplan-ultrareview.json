@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Ultraplan hands a planning task from your local CLI to a [Claude Code on the web](/en/claude-code-on-the-web) session running in [plan mode](/en/permission-modes#analyze-before-you-edit-with-plan-mode). Claude drafts the plan in the cloud while you keep working in your terminal.",
+    "found_quote": "Ultraplan hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while you keep working in your terminal. [...] Find bugs with ultrareview: the code review counterpart to ultraplan for catching issues before merge",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "ultraplan / ultrareview",

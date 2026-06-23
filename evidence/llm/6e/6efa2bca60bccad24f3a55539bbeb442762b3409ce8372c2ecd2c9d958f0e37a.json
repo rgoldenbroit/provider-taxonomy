@@ -1,0 +1,12 @@
+{
+  "key": "6efa2bca60bccad24f3a55539bbeb442762b3409ce8372c2ecd2c9d958f0e37a",
+  "label": "judge:google-antigravity-2-0-remote-agent-control-asynchronous-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work... Instead of executing every step serially, an agent can delegate tasks\u2014such as running tests or performing extensive codebase searches\u2014to dedicated subagents. This architecture frees the parent agent to continue working on other tasks in parallel and prevents its context window from being polluted by the details of a subagent's work... A parent agent can invoke multiple subagents at any time.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Asynchronous Subagents\" as a feature of Antigravity 2.0, confirming that the main agent can delegate parallel background tasks to concurrent subagents that run asynchronously without blocking the parent agent. The page describes the multi-threaded/concurrent architecture via the `invoke_subagent` tool, multiple simultaneous subagents, and the asynchronous background execution model. The claim's characterization of \"multi-threaded asynchronous architecture\" is substantiated by the page's description of concurrent sessions, parallel execution, and async background operation. The feature appears generally available (active) for Antigravity 2.0, with only the `/teamwork-preview` command noted as preview/Ultra-only.",
+    "supported": true
+  }
+}

@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "[Move tasks between web and terminal](#move-tasks-between-web-and-terminal) with `--remote` and `--teleport`",
+    "found_quote": "Move tasks between web and terminal with `--remote` and `--teleport`",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Move tasks between web and terminal",

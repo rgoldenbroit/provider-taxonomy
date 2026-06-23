@@ -1,0 +1,12 @@
+{
+  "key": "98cc13bdea26d5adb804efaf07e4e5160862680da0da51f42eb52297633c05dc",
+  "label": "judge:openai-codex-code-execution-sandbox-rules",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use rules to control which commands Codex can run outside the sandbox... `decision` **(defaults to `\"allow\"`)**: The action to take when the rule matches... `allow`: Run the command outside the sandbox without prompting. `prompt`: Prompt before each matching invocation. `forbidden`: Block the request without prompting.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Rules\" feature for OpenAI's Codex that allows users to allow, prompt, or forbid command prefixes outside the sandbox. The three decision types (`allow`, `prompt`, `forbidden`) directly correspond to the claim's description of \"allow, prompt, or forbid command prefixes outside the sandbox for specific exceptions.\" The page also notes \"Rules are experimental and may change,\" indicating a preview/experimental lifecycle status.",
+    "supported": true
+  }
+}

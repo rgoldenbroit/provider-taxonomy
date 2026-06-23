@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Use Codex code review to get another high-signal review pass on GitHub pull requests. Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues.",
+    "found_quote": "Use Codex code review to get another high-signal review pass on GitHub pull requests. Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues. ... If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud task](https://developers.openai.com/codex/cloud) using your pull request as context.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "GitHub integration",

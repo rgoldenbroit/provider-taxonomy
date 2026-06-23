@@ -7,7 +7,7 @@
     "lifecycle_status": "beta",
     "model": "claude-opus-4-8",
     "name": "Claude Computer Use",
-    "page_content_hash": "22b5ab99ece0a54b02c9070d7f5923f64871f95750c0c3607f14b5bb7be36695",
+    "page_content_hash": "aa203425833c9c51bc775cfa71ff12e359d1ae2bee6491da6eecf168992929b0",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Anthropic",
     "reconfirmed": true,

@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "| Code Review            | \u2705 Supported     | Same automated PR reviews as github.com                                                                                      |",
+    "found_quote": "Code Review | \u2705 Supported | Same automated PR reviews as github.com",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Code Review",

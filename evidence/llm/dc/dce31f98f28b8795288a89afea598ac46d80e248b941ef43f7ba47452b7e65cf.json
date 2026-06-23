@@ -1,0 +1,12 @@
+{
+  "key": "dce31f98f28b8795288a89afea598ac46d80e248b941ef43f7ba47452b7e65cf",
+  "label": "judge:openai-codex-subagents-orchestration-custom-agents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To define your own custom agents, add standalone TOML files under `~/.codex/agents/` for personal agents or `.codex/agents/` for project-scoped agents. Each file defines one custom agent. Codex loads these files as configuration layers for spawned sessions, so custom agents can override the same settings as a normal Codex session config.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the ability to define custom agents via TOML files placed under ~/.codex/agents/ or .codex/agents/. These TOML files support different model configurations (e.g., `model`, `model_reasoning_effort`) and instructions (e.g., `developer_instructions`), directly substantiating the claim. The feature is described as currently available (\"Current Codex releases enable subagent workflows by default\"), making its lifecycle status active.",
+    "supported": true
+  }
+}

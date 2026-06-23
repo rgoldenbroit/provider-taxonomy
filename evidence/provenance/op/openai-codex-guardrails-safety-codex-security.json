@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Codex Security cloud is currently in research preview. It scans connected GitHub repositories for likely security issues.",
+    "found_quote": "Codex Security cloud is currently in research preview. It scans connected GitHub repositories for likely security issues. It helps teams: 1. Find likely vulnerabilities by using a repo-specific threat model and real code context. 2. Reduce noise by validating findings before you review them. 3. Move findings toward fixes with ranked results, evidence, and suggested patch options.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Codex Security",

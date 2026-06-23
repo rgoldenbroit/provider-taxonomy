@@ -1,0 +1,12 @@
+{
+  "key": "ecad044664343f4a7a22dcc48ebda319a35463d2097522fe294344b1779400a6",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-scheduled-tasks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "We're introducing scheduled tasks, allowing users to plan ahead with their projects. Utilizing the newest Gemini 3.5 Flash model, users can schedule messages to be sent to their agents while they're away. * **Repeatable**: Set up time-based triggers to start conversations periodically.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Scheduled Tasks\" feature under Antigravity 2.0, matching all key elements of the claim: (1) users can schedule messages to be sent to their agents while away, and (2) repeatable time-based triggers are supported. The language \"We're introducing\" suggests this is a newly launched or preview-stage feature rather than a long-standing generally available one, so lifecycle_status is set to 'preview'. The claim accurately reflects the page content.",
+    "supported": true
+  }
+}

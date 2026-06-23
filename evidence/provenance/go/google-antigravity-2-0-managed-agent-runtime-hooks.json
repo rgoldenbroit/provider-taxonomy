@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Hooks allow you to run custom scripts or shell commands at specific points during Antigravity's execution loop. This is powerful for enforcing custom rules, running linters, or capturing diagnostics automatically.",
+    "found_quote": "Hooks allow you to run custom scripts or shell commands at specific points during Antigravity's execution loop. ... Hooks receive input via **stdin** as JSON and should return output via **stdout** as JSON.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Hooks",

@@ -1,0 +1,12 @@
+{
+  "key": "c468ecacaac484444437da549b7df0d661810abe4e56e5935431c74c7ef65252",
+  "label": "judge:openai-chatgpt-deep-research",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks. It accomplishes in tens of minutes what would take a human many hours.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's official announcement page titled \"Introducing deep research\" and explicitly states that deep research is being launched in ChatGPT as a generally available capability. Multiple updates (February 2025 through February 2026) confirm ongoing active development and expanded access to various user tiers (Pro, Plus, Team, Enterprise, Edu, and Free), confirming it is an active, generally available offering.",
+    "supported": true
+  }
+}

@@ -3,8 +3,8 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Introducing Operator ... A research preview of an agent that can use its own browser to perform tasks for you. Available to Pro users in the U.S.",
-    "lifecycle_status": "merged",
+    "found_quote": "July 17, 2025 update: Operator is now fully integrated into ChatGPT as ChatGPT agent. To access these updated capabilities, simply select \"agent mode\" from the dropdown in the composer and enter your query directly within ChatGPT. As a result, the standalone Operator site (operator.chatgpt.com) will sunset on in the coming weeks.",
+    "lifecycle_status": "sunset",
     "model": "claude-opus-4-8",
     "name": "Operator",
     "page_content_hash": "9f66163cb6287045c49564293fa0202f101b960db41f32bc1a1c27efe51d2f36",

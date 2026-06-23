@@ -1,0 +1,12 @@
+{
+  "key": "397cee1b0054d219e81d7e57346b0a4eb03c5c61d9e1d01c21dd7596be670003",
+  "label": "judge:openai-codex-guardrails-safety-codex-security",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex Security cloud is currently in research preview. It scans connected GitHub repositories for likely security issues. It helps teams: 1. Find likely vulnerabilities by using a repo-specific threat model and real code context. 2. Reduce noise by validating findings before you review them. 3. Move findings toward fixes with ranked results, evidence, and suggested patch options.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes \"Codex Security,\" a security-review plugin and cloud service for Codex offered by OpenAI. It confirms the offering scans connected GitHub repositories for vulnerabilities (\"Find likely vulnerabilities\"), validates findings to reduce noise (\"Reduce noise by validating findings before you review them\"), and provides remediation guidance (\"Move findings toward fixes with ranked results, evidence, and suggested patch options\"). All three core aspects of the claim are substantiated. The page notes the cloud component is \"currently in research preview,\" establishing its lifecycle status as preview/beta.",
+    "supported": true
+  }
+}

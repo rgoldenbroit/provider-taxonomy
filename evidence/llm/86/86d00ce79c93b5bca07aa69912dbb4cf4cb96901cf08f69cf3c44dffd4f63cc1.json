@@ -1,0 +1,12 @@
+{
+  "key": "86d00ce79c93b5bca07aa69912dbb4cf4cb96901cf08f69cf3c44dffd4f63cc1",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-projects",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In Antigravity 2.0, agents work in **Projects** (previously in Agent Manager, agents were strictly mapped to a single workspace folder). [...] **Worktree Support**: Projects natively support Git worktrees, allowing agents to operate in isolated background folders. [...] **Scoped Settings**: Settings are scoped, allowing you to have different security settings per project. [...] **Scoped Permissions**: Attach permission grants to projects to control what the agents are allowed to access. [...] Start quick, one-off conversations outside of any Project. These sessions run in an isolated local scratch folder. They have their own settings, and they also have their own permissions in addition to inheriting from global permissions.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Projects\" feature with agents working in Projects, isolated background folders via worktree support, scoped settings, scoped permissions, and one-off conversations running in an isolated local scratch folder. All key elements of the claim are substantiated. The claim attributes this to \"Google\" while the page is about \"Antigravity 2.0\" \u2014 however the URL is under antigravity.google, so this is a Google product. One minor discrepancy: the claim says Projects \"define folder and repository boundaries\" \u2014 the page mentions multi-folder access and worktrees but does not use the exact phrase \"repository boundaries.\" Nonetheless, the core substance of the claim is well-supported. The page presents these as current, active features with no deprecation or preview language for Projects specifically.",
+    "supported": true
+  }
+}

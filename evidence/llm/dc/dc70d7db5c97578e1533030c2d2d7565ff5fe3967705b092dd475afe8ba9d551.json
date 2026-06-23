@@ -1,0 +1,12 @@
+{
+  "key": "dc70d7db5c97578e1533030c2d2d7565ff5fe3967705b092dd475afe8ba9d551",
+  "label": "judge:openai-operator",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "July 17, 2025 update: Operator is now fully integrated into ChatGPT as ChatGPT agent. To access these updated capabilities, simply select \"agent mode\" from the dropdown in the composer and enter your query directly within ChatGPT. As a result, the standalone Operator site (operator.chatgpt.com) will sunset on in the coming weeks.",
+    "lifecycle_status": "sunset",
+    "rationale": "The page clearly confirms that OpenAI offered Operator \u2014 it was introduced on January 23, 2025, as a research preview agent. However, as of a July 17, 2025 update noted on the page, Operator has been fully integrated into ChatGPT as \"ChatGPT agent,\" and the standalone Operator site (operator.chatgpt.com) is set to sunset \"in the coming weeks.\" This means the offering existed and is substantiated, but the standalone Operator product is being sunsetted/merged into ChatGPT.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "6e4474ea7a060f5f4c66842636e234f45ef5bf04f3e1c420d647b8546c441086",
+  "label": "judge:openai-codex-mcp-connectors-plugins",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins bundle skills, app integrations, and MCP servers into reusable workflows for Codex.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and verbatim states the claim in its Overview section: \"Plugins bundle skills, app integrations, and MCP servers into reusable workflows for Codex.\" The page goes on to describe the feature in detail, including how to install, use, and build plugins, with no indication that it is in preview, deprecated, or sunset. It is presented as a current, generally available offering.",
+    "supported": true
+  }
+}

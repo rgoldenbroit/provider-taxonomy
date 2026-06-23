@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks.",
+    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks. It accomplishes in tens of minutes what would take a human many hours.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "ChatGPT Deep Research",

@@ -1,0 +1,12 @@
+{
+  "key": "09fd2e5005d43b73d95d43f3d2ed4dadcc32861955217302023ed92cfe7d3aee",
+  "label": "judge:openai-codex-agent-evals-observability-evals-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In this guide, we will focus on configuring evals programmatically using the Evals API. ... OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly substantiates the existence of OpenAI's Evals API, describing how to configure and run evaluations of model outputs programmatically via API, including batch evaluation against test datasets and evaluation runs. However, the page explicitly states that \"OpenAI is deprecating the Evals platform,\" with a read-only date of October 31, 2026 and a shutdown date of November 30, 2026, making the lifecycle status 'deprecated' (still functional but being retired). The claim about \"evaluation against external models\" is partially supported \u2014 the API allows specifying different models for runs \u2014 but the core claim about programmatic API-based evals is fully substantiated.",
+    "supported": true
+  }
+}

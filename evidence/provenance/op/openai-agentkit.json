@@ -3,8 +3,8 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Today we\u2019re launching AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents.",
-    "lifecycle_status": "active",
+    "found_quote": "Today we're launching AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents.",
+    "lifecycle_status": "deprecated",
     "model": "claude-opus-4-8",
     "name": "AgentKit",
     "page_content_hash": "5ac560112280e4e1e247f026508a05cb31cf5d89821be864a1994d89af43a914",

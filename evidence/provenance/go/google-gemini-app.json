@@ -3,7 +3,7 @@
   "value": {
     "confidence": "medium",
     "fetch_ok": true,
-    "found_quote": "The models integrate into the Google ecosystem through the Gemini mobile app, which functions as an overlay assistant on Android devices, and through the Vertex AI platform for third-party developers.",
+    "found_quote": "On February 8, 2024, Bard and Duet AI were unified under the Gemini brand, with a mobile app launched on Android and the service integrated into the Google app on iOS.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Gemini app",

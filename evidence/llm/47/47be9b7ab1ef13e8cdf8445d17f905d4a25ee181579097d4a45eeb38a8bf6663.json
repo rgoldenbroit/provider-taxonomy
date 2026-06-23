@@ -1,0 +1,12 @@
+{
+  "key": "47be9b7ab1ef13e8cdf8445d17f905d4a25ee181579097d4a45eeb38a8bf6663",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-dev-container",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container: you browse and edit files in the editor as usual, but the integrated terminal, language servers, and build tools all run inside the container rather than on your host. ... Claude Code runs inside the container, so it sees the same files, dependencies, and tools as the rest of your project's toolchain. In VS Code you can use either the Claude Code extension panel or run `claude` in the integrated terminal; both run inside the container and share the same `~/.claude` configuration.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents that Claude Code can run inside a Docker-based dev container managed by VS Code (and other editors), with project files mounted and commands executing inside the container rather than on the host machine. This directly substantiates the claim. The documentation is presented as current, active guidance with no deprecation or preview notices for this feature itself.",
+    "supported": true
+  }
+}

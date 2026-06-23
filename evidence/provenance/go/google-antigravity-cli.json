@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "To deliver the single platform you need to build the future, we're unifying our efforts into Google Antigravity, our premier agent-first development platform, which includes a powerful server-side harness and a brand-new terminal experience: Antigravity CLI.",
+    "found_quote": "Starting today, Antigravity CLI is available to everyone.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity CLI",

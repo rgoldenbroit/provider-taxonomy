@@ -1,0 +1,12 @@
+{
+  "key": "d9a1827b1f812a4bd269d5da0e6f6379229241ee67ccb7863492d15e47a35c0e",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-interactive-permission-prompts",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When the Agent encounters an operation requiring approval (Ask mode), an interactive card appears in your editor. Before clicking Allow for file, URL, or MCP permissions, you can directly edit the target string in the prompt card to expand the granted scope (e.g., broadening a single file request like /project/file.txt to the parent directory /project). Antigravity validates that your edited target safely covers the operation and applies the expanded grant for the remainder of the turn, preventing repeated prompts for related operations. (Note: Scope editing is not supported for terminal commands).",
+    "lifecycle_status": "active",
+    "rationale": "The page's \"Interactive Permission Prompts\" section directly describes the feature: when an operation requires approval (Ask mode), an interactive card surfaces in the editor where the user can approve, deny, or edit (expand) the granted target scope. The claim's description of approving, denying, or editing/expanding scope is substantiated verbatim. The page does not mark this feature as preview or deprecated; it is presented as a standard, active capability (unlike Terminal Sandboxing, which is explicitly labeled \"Preview\").",
+    "supported": true
+  }
+}

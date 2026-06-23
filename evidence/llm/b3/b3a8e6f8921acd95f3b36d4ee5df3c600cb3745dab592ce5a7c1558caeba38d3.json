@@ -1,0 +1,12 @@
+{
+  "key": "b3a8e6f8921acd95f3b36d4ee5df3c600cb3745dab592ce5a7c1558caeba38d3",
+  "label": "judge:openai-codex-code-execution-sandbox-sandbox",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The sandbox is the boundary that lets Codex act autonomously without giving it unrestricted access to your machine. When Codex runs local commands in the Codex app, IDE extension, or CLI, those commands run inside a constrained environment instead of running with full access by default... Codex uses platform-native enforcement on each OS. The implementation differs between macOS, Linux, WSL2, and native Windows, but the idea is the same across surfaces: give the agent a bounded place to work so routine tasks can run autonomously inside clear limits.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) the sandbox is described as a constrained environment letting Codex run local commands autonomously, (2) without unrestricted machine access, (3) enforced via OS-native mechanisms (platform-native enforcement using macOS Seatbelt, bubblewrap on Linux/WSL2, and Windows Sandbox on native Windows), and (4) covering all four platforms \u2014 macOS, Linux, WSL2, and Windows. The page presents this as a current, active feature with no deprecation or preview language.",
+    "supported": true
+  }
+}

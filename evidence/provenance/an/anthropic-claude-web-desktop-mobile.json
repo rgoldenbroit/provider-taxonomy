@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Download the desktop app: macOS ... Windows ... Try Claude on mobile: Apple ... Google Play",
+    "found_quote": "Download the desktop app: macOS Windows Windows (arm64) Try Claude on mobile: Apple Google Play",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (web/desktop/mobile)",

@@ -1,0 +1,12 @@
+{
+  "key": "bdd15c790809508cef3ded101b10db86c0525584fc1e43b11026ed789df079c7",
+  "label": "judge:google-agent-development-kit-adk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ADK is the open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Available in Python, TypeScript, Go, Java, and Kotlin.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is the official documentation site for Google's Agent Development Kit (ADK) at google.github.io/adk-docs/. It explicitly describes ADK as a generally available, open-source agent development framework from Google, with ADK Python 2.0 noted as \"GA\" (Generally Available). The page substantiates the claim fully and indicates the product is actively available.",
+    "supported": true
+  }
+}

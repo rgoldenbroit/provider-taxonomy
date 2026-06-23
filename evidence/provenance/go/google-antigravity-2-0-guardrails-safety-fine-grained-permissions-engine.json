@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Antigravity uses a robust, unified permission engine to secure your environment while enabling autonomous workflows. Every sensitive operation the Agent performs is represented as a **permission resource** formatted as `action(target)`. Permissions are evaluated across three distinct access lists: -   **Deny**: The action is blocked immediately. -   **Ask**: The Agent pauses and prompts for your explicit approval before proceeding. -   **Allow**: The action is auto-approved without prompting.",
+    "found_quote": "Antigravity uses a robust, unified permission engine to secure your environment while enabling autonomous workflows. Every sensitive operation the Agent performs is represented as a **permission resource** formatted as `action(target)`. Permissions are evaluated across three distinct access lists: **Deny**: The action is blocked immediately. **Ask**: The Agent pauses and prompts for your explicit approval before proceeding. **Allow**: The action is auto-approved without prompting. ... Conflicting rules are strictly evaluated in priority order: Deny > Ask > Allow.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Fine-Grained Permissions Engine",

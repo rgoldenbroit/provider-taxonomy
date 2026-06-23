@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "MCP servers can be configured at three scopes. The scope you choose controls which projects the server loads in and whether the configuration is shared with your team.",
+    "found_quote": "MCP servers can be configured at three scopes. The scope you choose controls which projects the server loads in and whether the configuration is shared with your team. Administrators can also deploy servers at the enterprise level via managed configuration.\n\n| Scope | Loads in | Shared with team | Stored in |\n| Local | Current project only | No | `~/.claude.json` |\n| Project | Current project only | Yes, via version control | `.mcp.json` in project root |\n| User | All your projects | No | `~/.claude.json` |",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "MCP installation scopes",

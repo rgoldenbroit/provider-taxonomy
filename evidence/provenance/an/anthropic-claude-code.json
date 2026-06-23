@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser.",
+    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser. Build, debug, and ship with natural language.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Code",
-    "page_content_hash": "6057fd7e98687d351eda5f03be5d2d87cab3a3cd32ba6db9ac03647e2f0dbb82",
+    "page_content_hash": "57cb0a1a8e7d2e5eefff5af9780c1759e731a98bc2a9cd0543dc57706b42a217",
     "primary_capability_id": "agentic-coding",
     "provider": "Anthropic",
     "reconfirmed": true,

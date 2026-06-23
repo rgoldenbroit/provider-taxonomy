@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "### Secure by Default\n\nWe put you in the driver's seat with robust security controls:\n\n* **Interactive Approvals**: By default, agents will request your explicit permission before running any terminal commands.  \n* **Bounded Access**: By default, your agent can only read and write within the provided folders of a project.",
+    "found_quote": "**Interactive Approvals**: By default, agents will request your explicit permission before running any terminal commands.  \n* **Bounded Access**: By default, your agent can only read and write within the provided folders of a project. If you change your security preset to \"Full Machine\" or \"Unrestricted\", the agent will have read and write access over your full machine.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Secure by Default",

@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Rules are manually defined constraints for the Agent to follow, at both the local and global levels.",
+    "found_quote": "Rules are manually defined constraints for the Agent to follow, at both the local and global levels... While Rules provide models with guidance by providing persistent, reusable context at the prompt level...",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Rules",

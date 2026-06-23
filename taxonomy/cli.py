@@ -360,7 +360,9 @@ def cmd_verify(args: argparse.Namespace) -> int:
     if not ledger.root.exists():
         print("VERIFY: FAIL — no evidence/ ledger found to replay.")
         return 1
-    llm, retrieval = ReplayLLM(ledger, settings().model), HttpFetch(ledger=ledger)
+    s = settings()
+    # judge_model must match the live routing, or judge-step replay keys won't resolve.
+    llm, retrieval = ReplayLLM(ledger, s.model, s.judge_model), HttpFetch(ledger=ledger)
     as_of = (catalog.get("_meta") or {}).get("as_of")   # reproduce with the catalog's own date
     try:
         replayed = copy.deepcopy(catalog)

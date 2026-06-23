@@ -96,6 +96,19 @@ def test_reverify_catalog_skips_scaffold_without_grounding():
     assert catalog_hash(catalog) == before   # unchanged → reproducible-build hash holds
 
 
+def test_reverify_skip_grounding_subfeature_no_calls_no_mutation():
+    # A sub-feature (skip_grounding=True) must not fetch or judge — and must pass through unchanged,
+    # so verify stays byte-identical and the cost saving (no LLM judge) is real.
+    rec = {"id": "sf", "name": "Tool scoping", "kind": "feature", "provider": "Anthropic",
+           "review_status": "confirmed", "status": "active",
+           "source": {"url": "https://code.claude.com/x", "last_verified": "2026-06-01", "confidence": "low"}}
+    llm = StubLLM()  # would record a call if invoked
+    out = reverify_record(rec, llm, _Exploding(), ledger=None, skip_grounding=True)
+    assert out == "confirmed"
+    assert llm.calls == []                          # no judge call
+    assert rec["source"]["last_verified"] == "2026-06-01"   # unchanged → byte-identical replay
+
+
 def test_reverify_keeps_prior_verdict_when_source_unreachable():
     rec = _rec("https://platform.openai.com/docs/r")   # prior: confirmed / high
     llm = StubLLM({"judge:r": {"supported": False, "confidence": "low", "found_quote": "",

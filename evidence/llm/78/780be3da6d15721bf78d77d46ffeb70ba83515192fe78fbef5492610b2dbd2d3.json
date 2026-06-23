@@ -1,0 +1,12 @@
+{
+  "key": "780be3da6d15721bf78d77d46ffeb70ba83515192fe78fbef5492610b2dbd2d3",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-plugins",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins are namespaced bundles that allow you to extend Antigravity's capabilities by grouping skills, rules, MCP servers, and hooks into a single package.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and verbatim substantiates every element of the claim: Plugins are described as \"namespaced bundles,\" they group \"skills, rules, MCP servers, and hooks into a single package,\" and they are used to extend Antigravity. The page presents this as a current, generally available feature with detailed documentation on directory structure, components, and how to add plugins, indicating an active lifecycle status.",
+    "supported": true
+  }
+}

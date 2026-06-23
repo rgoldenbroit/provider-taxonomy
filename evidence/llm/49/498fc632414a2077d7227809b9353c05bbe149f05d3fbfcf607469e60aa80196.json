@@ -1,0 +1,12 @@
+{
+  "key": "498fc632414a2077d7227809b9353c05bbe149f05d3fbfcf607469e60aa80196",
+  "label": "judge:anthropic-claude-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and mouse/keyboard control for autonomous desktop interaction.",
+    "lifecycle_status": "beta",
+    "rationale": "The page clearly describes Anthropic's Claude Computer Use tool in detail, including its capabilities (screenshot capture, mouse control, keyboard input, desktop automation), supported models, security considerations, and implementation guidance. The page explicitly states \"Computer use is in beta\" and requires a beta header, so its lifecycle status is beta/preview rather than generally available.",
+    "supported": true
+  }
+}

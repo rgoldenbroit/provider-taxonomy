@@ -1,0 +1,12 @@
+{
+  "key": "f10547ae2321e2df3fe5e34e710c9f186f9f086c6158e230a31bb2a23c18dbd5",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-artifact-review-policy",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "When working in **Planning Mode**, the Artifact Review Policy controls how you interact with and approve these plans before changes are made to your codebase.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly describes an \"Artifact Review Policy\" that controls how a user reviews and approves agent-proposed plans and artifacts before changes are made to the codebase. The page confirms the interactive co-steering workflow concept \u2014 specifically the \"Request Review (Recommended)\" policy, which \"always halts and requests your explicit approval before proceeding with proposed changes,\" pausing the agent at milestones (i.e., when the agent generates an implementation plan or code diff). The claim is substantiated by the page content. However, the claim attributes this to \"Google\" while the page is hosted at antigravity.google (an unfamiliar domain/product), and the claim uses the phrase \"interactive co-steering workflow that pauses the agent at milestones\" which is a characterization not verbatim on the page \u2014 but the underlying substance matches. Confidence is medium rather than high because the domain (antigravity.google) is unverified as an official Google product page, and the exact phrasing \"co-steering\" and \"milestones\" does not appear verbatim.",
+    "supported": true
+  }
+}

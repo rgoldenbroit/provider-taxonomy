@@ -1,0 +1,12 @@
+{
+  "key": "c0f299695f6331a7fc511d2a9a05457ab5ec9de574b7e0022342678dcb2c24f4",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-asynchronous-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents are an excellent way to parallelize complex tasks and preserve the context of your main agent. Instead of executing every step serially, an agent can delegate tasks\u2014such as running tests or performing extensive codebase searches\u2014to dedicated subagents. This architecture frees the parent agent to continue working on other tasks in parallel and prevents its context window from being polluted by the details of a subagent's work.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates every element of the claim. It is titled \"Asynchronous Subagents,\" confirms that subagents parallelize complex tasks, preserve the main agent's context window, delegate work to dedicated concurrent agents, and allow the main agent to continue working without blocking. The quoted passage maps precisely to all parts of the claim. The feature is described as a current, generally available capability (with only the `/teamwork-preview` multi-agent command noted as preview/Ultra-only), so the lifecycle status is active.",
+    "supported": true
+  }
+}

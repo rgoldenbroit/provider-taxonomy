@@ -1,0 +1,12 @@
+{
+  "key": "c1fd35149d20ea2d36bfb05a44202060e4a3f6787014392ad196edccbca012ea",
+  "label": "judge:google-gemini-enterprise-agent-platform",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Gemini Enterprise Agent Platform (formerly Vertex AI) | Google Cloud ... All the power of Vertex AI you know and love, now within Gemini Enterprise Agent Platform. ... Gemini Enterprise Agent Platform is Google Cloud's comprehensive platform for developers to build, scale, govern and optimize agents.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Gemini Enterprise Agent Platform\" as a Google Cloud offering, identifying it as formerly known as Vertex AI. It is presented as a current, generally available product with pricing, documentation, and customer testimonials, with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

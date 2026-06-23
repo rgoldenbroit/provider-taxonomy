@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "### Terminal Command Auto Execution\n\nControls how the agent executes generated shell commands:\n* **Request Review**: The agent will always prompt for confirmation before executing any terminal command (except those explicitly added to your configurable Allow list).\n* **Always Proceed**: The agent will execute commands automatically without prompting (except those explicitly added to your configurable Deny list). High autonomy, high risk.",
+    "found_quote": "Controls how the agent executes generated shell commands:\n* **Request Review**: The agent will always prompt for confirmation before executing any terminal command (except those explicitly added to your configurable Allow list).\n* **Always Proceed**: The agent will execute commands automatically without prompting (except those explicitly added to your configurable Deny list). High autonomy, high risk.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Terminal Command Auto Execution",

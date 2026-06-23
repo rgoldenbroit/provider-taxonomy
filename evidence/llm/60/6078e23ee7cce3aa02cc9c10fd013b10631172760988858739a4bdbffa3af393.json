@@ -1,0 +1,12 @@
+{
+  "key": "6078e23ee7cce3aa02cc9c10fd013b10631172760988858739a4bdbffa3af393",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-subagent-lifecycle-and-states",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work. At any point, a subagent exists in one of three states: ... 1. Running ... 2. Idle ... 3. Killed",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly contains a section titled \"Subagent Lifecycle and States\" which states that subagents run asynchronously and exist in one of three states: Running, Idle, or Killed \u2014 directly matching all elements of the claim. The page does not indicate this feature is in preview, deprecated, or sunset.",
+    "supported": true
+  }
+}

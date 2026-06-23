@@ -1,0 +1,12 @@
+{
+  "key": "73314772ccbf50ccdc8729f4991bafa97ef8d8227273af539064c9140e03c0c6",
+  "label": "judge:openai-agentkit",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today we're launching AgentKit, a complete set of tools for developers and enterprises to build, deploy, and optimize agents.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly confirms that OpenAI offers AgentKit, launched on October 6, 2025. However, an update dated June 3, 2026 states that OpenAI is \"winding down the Agent Builder and Evals products\" with a retirement date of November 30, 2026, meaning key components of AgentKit are deprecated (still available but being retired). ChatKit and new Evals capabilities were generally available; Agent Builder was in beta. The overall product is being wound down, making 'deprecated' the most accurate lifecycle status.",
+    "supported": true
+  }
+}

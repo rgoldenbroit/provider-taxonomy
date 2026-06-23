@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "**3. Lifecycle Hooks**  \nGain granular control over agent execution with three categories of hooks across nine concrete lifecycle points (e.g., session start, pre/post turn, pre/post tool call):\n\n*   **Inspect** (Read-Only, Non-Blocking): For logging, audit trails, and metrics.",
+    "found_quote": "**3. Lifecycle Hooks**\nGain granular control over agent execution with three categories of hooks across nine concrete lifecycle points (e.g., session start, pre/post turn, pre/post tool call):\n\n*   **Inspect** (Read-Only, Non-Blocking): For logging, audit trails, and metrics.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Lifecycle Hooks",

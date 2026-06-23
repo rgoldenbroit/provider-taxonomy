@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "In Antigravity 2.0, agents work in **Projects** (previously in Agent Manager, agents were strictly mapped to a single workspace folder). * **Worktree Support**: Projects natively support Git worktrees, allowing agents to operate in isolated background folders. * **Scoped Settings**: Settings are scoped... * **Scoped Permissions**: Attach permission grants to projects... Start quick, one-off conversations outside of any Project. These sessions run in an isolated local scratch folder.",
+    "found_quote": "In Antigravity 2.0, agents work in **Projects** (previously in Agent Manager, agents were strictly mapped to a single workspace folder). [...] **Worktree Support**: Projects natively support Git worktrees, allowing agents to operate in isolated background folders. [...] **Scoped Settings**: Settings are scoped, allowing you to have different security settings per project. [...] **Scoped Permissions**: Attach permission grants to projects to control what the agents are allowed to access. [...] Start quick, one-off conversations outside of any Project. These sessions run in an isolated local scratch folder. They have their own settings, and they also have their own permissions in addition to inheriting from global permissions.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Projects",

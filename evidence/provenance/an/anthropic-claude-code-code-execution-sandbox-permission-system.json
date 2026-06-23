@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude Code uses a tiered permission system to balance power and safety:",
+    "found_quote": "Claude Code uses a tiered permission system to balance power and safety: ... Bash commands | Shell execution | Yes | Permanently per project directory and command ... Claude Code supports several permission modes that control how tools are approved. ... For OS-level enforcement that blocks all processes from accessing a path, [enable the sandbox](/en/sandboxing).",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Permission system",

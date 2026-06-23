@@ -1,0 +1,12 @@
+{
+  "key": "a997572e9e5cc2b991a26555050c4f254a89feb9c4df5a79631fa8ec23bb2f2d",
+  "label": "judge:anthropic-claude-code-mcp-connectors-model-context-protocol-mcp",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code can connect to hundreds of external tools and data sources through the Model Context Protocol (MCP), an open source standard for AI-tool integrations. MCP servers give Claude Code access to your tools, databases, and APIs.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that Claude Code connects to external tools and data sources via MCP, which is described as an open source standard. It also confirms support for both locally-run servers (stdio/local processes) and hosted/remote services (HTTP, SSE, WebSocket transports), directly substantiating all aspects of the claim.",
+    "supported": true
+  }
+}

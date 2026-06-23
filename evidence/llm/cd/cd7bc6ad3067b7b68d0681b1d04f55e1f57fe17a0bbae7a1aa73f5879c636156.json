@@ -1,0 +1,12 @@
+{
+  "key": "cd7bc6ad3067b7b68d0681b1d04f55e1f57fe17a0bbae7a1aa73f5879c636156",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity CLI leverages a multi-threaded asynchronous execution architecture. Instead of locking your terminal session during long-running builds, massive codebase search sweeps, or complex multi-file edits, the primary agent delegates these operations to parallel **Subagents** or background **Tasks**.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a multi-threaded async architecture where the primary agent delegates long-running operations to parallel autonomous Subagents and background Tasks. It also describes the interactive \"/agents\" panel (the Agent Manager Panel) for monitoring these subagents, directly substantiating all key elements of the claim: multi-threaded async architecture, delegation to parallel autonomous Subagents, tracked background tasks, and an interactive monitoring panel.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "5efef2b6ed33202b7c655c58e4ca607af1e4f5983352bc45543c2cb88a600f00",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity CLI integrates a native **Terminal Sandbox** to restrict destructive shell operations or unauthorized remote network calls.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page explicitly describes the \"Terminal Sandbox\" feature within the Antigravity CLI, matching the claim's core assertion. It states the sandbox enforces native OS process isolation (via nsjail on Linux, sandbox-exec on macOS, and AppContainer on Windows) and restricts destructive shell operations and unauthorized network calls \u2014 directly corroborating all key elements of the claim. The page presents the feature as a current, generally available capability with configuration instructions, indicating an active lifecycle status.",
+    "supported": true
+  }
+}

@@ -40,12 +40,17 @@ def main() -> int:
     catalog.setdefault("_meta", {})["as_of"] = as_of
     llm, retrieval, ledger = get_llm(cfg), get_retrieval(cfg), build_ledger(cfg)
     print(f"re-verify ({cfg.ledger_mode}, as_of {as_of}) — {len(catalog['products'])} records\n")
+    feature_ids = {p["id"] for p in catalog["products"] if p.get("kind") == "feature"}
     counts: Counter[str] = Counter()
     for rec in catalog["products"]:
         if rec.get("status") == "absent":
             counts["absent"] += 1
             continue
-        review = reverify_record(rec, llm, retrieval, ledger, as_of)   # re-ground + re-grade + receipt
+        if rec.get("review_status") == "scaffold":
+            counts["scaffold"] += 1
+            continue
+        sub = rec.get("parent_id") in feature_ids   # sub-feature → deterministic presence, no judge
+        review = reverify_record(rec, llm, retrieval, ledger, as_of, skip_grounding=sub)
         counts[review] += 1
         tier = source_tier((rec.get("source") or {}).get("url"), rec.get("provider"))
         print(f"  {review:12} [{tier:9}] {rec['id']:48}")

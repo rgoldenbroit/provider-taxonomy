@@ -1,0 +1,12 @@
+{
+  "key": "4f0fb807e70eade79d7895dff8f9bad8e2dc8c168381d49649c11ef83ab3f093",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-permission-system",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code uses a tiered permission system to balance power and safety: ... Bash commands | Shell execution | Yes | Permanently per project directory and command ... Claude Code supports several permission modes that control how tools are approved. ... For OS-level enforcement that blocks all processes from accessing a path, [enable the sandbox](/en/sandboxing).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a tiered permission system governing tool actions including Bash shell execution, with approval requirements varying by tool type (read-only vs. bash commands vs. file modification). It documents fine-grained permission rules (allow/ask/deny with wildcard specifiers), multiple permission modes (default, acceptEdits, plan, auto, dontAsk, bypassPermissions), and references OS-level sandbox enforcement for blocking all processes from accessing paths. All three elements of the claim \u2014 tiered permission system, fine-grained rules with permission modes, and OS-level sandbox enforcement \u2014 are substantiated by the page.",
+    "supported": true
+  }
+}

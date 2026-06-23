@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "For the Codex app, CLI, or IDE Extension, the default `workspace-write` sandbox mode keeps network access turned off unless you enable it in your configuration",
+    "found_quote": "By default, the agent runs with network access turned off... For Codex cloud, see agent internet access to enable full internet access or a domain allow list. For the Codex app, CLI, or IDE Extension, the default `workspace-write` sandbox mode keeps network access turned off unless you enable it in your configuration... You can also control the web search tool without granting full network access to spawned commands.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Network access",

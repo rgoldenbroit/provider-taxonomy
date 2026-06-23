@@ -1,0 +1,12 @@
+{
+  "key": "2bc9e70ae449aa99af8ade6b784397f8f3da69cfa52e6dff49f68a65b893003d",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-inter-agent-communication",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Inter-Agent Communication\n\nAgents communicate by sending messages to each other using unique agent IDs.\n\n* **Flexible Routing**: Agents can communicate not only with their direct parents or subagents, but also with any other active agent whose ID is known.\n* **Auto-Wake**: If an idle agent receives a message, it is automatically re-awakened to process the new information.\n* **Shared Transcripts**: Agents can view each other's conversation transcripts, providing a comprehensive view of the collaborative workflow.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated \"Inter-Agent Communication\" section that verbatim matches the claim's core description: agents communicate via unique agent IDs, flexible routing allows communication beyond direct parent/child relationships, and agents can view each other's shared conversation transcripts. All three elements of the claim are directly substantiated by the page text. The feature appears to be described as generally active (no preview/beta qualifier on this specific section), though a related multi-agent teamwork feature is noted as preview/Ultra-only.",
+    "supported": true
+  }
+}

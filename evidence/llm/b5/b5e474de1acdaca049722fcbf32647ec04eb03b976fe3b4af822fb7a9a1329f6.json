@@ -1,0 +1,12 @@
+{
+  "key": "b5e474de1acdaca049722fcbf32647ec04eb03b976fe3b4af822fb7a9a1329f6",
+  "label": "judge:openai-codex-managed-agent-runtime-automations",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Automate recurring tasks in the background. Codex adds findings to the inbox, or automatically archives the task if there's nothing to report.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page directly and explicitly describes the \"Automations\" feature offered by OpenAI's Codex. It confirms that Codex runs recurring tasks unattended in the background (\"Automations run unattended\") and reports findings to an inbox (\"The 'Triage' section acts as your inbox. Automation runs with findings show up there\"). This precisely matches the claim in every material detail.",
+    "supported": true
+  }
+}

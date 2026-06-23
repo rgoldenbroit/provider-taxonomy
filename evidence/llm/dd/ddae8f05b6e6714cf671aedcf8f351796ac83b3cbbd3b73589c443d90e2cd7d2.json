@@ -1,0 +1,12 @@
+{
+  "key": "ddae8f05b6e6714cf671aedcf8f351796ac83b3cbbd3b73589c443d90e2cd7d2",
+  "label": "judge:anthropic-claude-code-agent-memory-output-styles",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Output styles are saved configurations that modify Claude's system prompt. They're stored as markdown files and can be reused across sessions and projects.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Output styles\" as saved configurations (markdown files) that modify Claude's system prompt and can be reused across sessions and projects. The claim's description closely matches the page's definition. The page presents this feature as currently active/available, with instructions on how to create, activate, and use output styles in both CLI and SDK contexts.",
+    "supported": true
+  }
+}

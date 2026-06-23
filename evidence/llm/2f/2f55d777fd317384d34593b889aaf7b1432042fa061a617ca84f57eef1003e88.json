@@ -1,0 +1,12 @@
+{
+  "key": "2f55d777fd317384d34593b889aaf7b1432042fa061a617ca84f57eef1003e88",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-store",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Connections are managed directly through the built-in MCP Store.\n\n1. **Access the Store:** Open the MCP Store panel within the \"...\" dropdown at the top of the editor's side panel.\n2. **Browse & Install:** Select any of the supported servers from the list and click Install.\n3. **Authenticate:** Follow the on-screen prompts to securely link your accounts (where applicable).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a built-in MCP Store within the Antigravity editor that allows users to browse supported MCP servers (a full list is provided), install them with a click, and authenticate accounts via on-screen prompts. This directly substantiates all three aspects of the claim: browse, install, and authenticate supported MCP servers directly in the editor. The page presents this as a currently available feature with no preview or beta qualifier.",
+    "supported": true
+  }
+}

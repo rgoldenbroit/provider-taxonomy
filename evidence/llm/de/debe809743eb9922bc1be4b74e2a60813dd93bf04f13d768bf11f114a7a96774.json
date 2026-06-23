@@ -1,0 +1,12 @@
+{
+  "key": "debe809743eb9922bc1be4b74e2a60813dd93bf04f13d768bf11f114a7a96774",
+  "label": "judge:openai-gpt-5-5-pro",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "GPT\u20115.5 Pro is rolling out to Pro, Business, and Enterprise users in ChatGPT. ... Update on April 24, 2026: GPT\u20115.5 and GPT\u20115.5 Pro are now available in the API.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly announces GPT-5.5 Pro as a real offering from OpenAI, initially rolling out to Pro, Business, and Enterprise users in ChatGPT, and subsequently made available in the API as of April 24, 2026. The page describes its capabilities, benchmarks, and early tester feedback, confirming it is an active, generally available product.",
+    "supported": true
+  }
+}

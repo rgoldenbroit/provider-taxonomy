@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "| Cost tracking       | Spend limits, rate limits, and usage attribution     | Anthropic only | [Costs](/en/costs)                       |",
+    "found_quote": "Cost tracking | Spend limits, rate limits, and usage attribution | Anthropic only | [Costs](/en/costs)",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Cost tracking",

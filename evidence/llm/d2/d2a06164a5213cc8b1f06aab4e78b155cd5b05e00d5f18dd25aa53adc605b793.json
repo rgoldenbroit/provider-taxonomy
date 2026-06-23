@@ -1,0 +1,12 @@
+{
+  "key": "d2a06164a5213cc8b1f06aab4e78b155cd5b05e00d5f18dd25aa53adc605b793",
+  "label": "judge:google-gemini-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google's Gemini Computer Use, grown from Project Mariner, optimizes for browser workflows where DOM awareness and web-native actions outperform generic screen scraping.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Gemini Computer Use\" as a Google offering, with its own dedicated section (\"Gemini Computer Use: Browser-Anchored\"), inclusion in the capability comparison matrix, and repeated references throughout the article. The page treats it as a current, available product (not preview or beta), comparing it head-to-head with Claude Computer Use and OpenAI Codex Background Computer Use as of April 16, 2026.",
+    "supported": true
+  }
+}

@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "## Connecting Custom MCP Servers\n\nTo connect to a custom MCP server:\n\n1. Open the MCP store via the \"...\" dropdown at the top of the editor's agent panel.\n2. Click on \"Manage MCP Servers\"\n3. Click on \"View raw config\"\n4. Modify the mcp_config.json with your custom MCP server configuration.\n\nThe configuration file is located at `~/.gemini/config/mcp_config.json`.",
+    "found_quote": "To connect to a custom MCP server:\n\n1. Open the MCP store via the \"...\" dropdown at the top of the editor's agent panel.\n2. Click on \"Manage MCP Servers\"\n3. Click on \"View raw config\"\n4. Modify the mcp_config.json with your custom MCP server configuration.\n\nThe configuration file is located at `~/.gemini/config/mcp_config.json`.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Custom MCP Servers",

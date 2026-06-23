@@ -1,0 +1,12 @@
+{
+  "key": "22e8f3be014498563500ca7a0605605fb5b80d89f3c29ac29ec4dda69545c690",
+  "label": "judge:google-antigravity-2-0-agent-evals-observability-observability",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Observability:** Track per-turn and cumulative token usage and access thinking traces.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Observability\" as a key capability under the Google Antigravity SDK, describing it in terms that match the claim almost verbatim: tracking per-turn and cumulative token usage and accessing thinking traces. The feature is listed without any preview/beta qualifiers, alongside other active capabilities.",
+    "supported": true
+  }
+}

@@ -3,8 +3,8 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "In this guide, we will focus on **configuring evals programmatically using the [Evals API](https://developers.openai.com/api/docs/api-reference/evals)**.",
-    "lifecycle_status": "sunset",
+    "found_quote": "In this guide, we will focus on configuring evals programmatically using the Evals API. ... OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026.",
+    "lifecycle_status": "deprecated",
     "model": "claude-opus-4-8",
     "name": "Evals API",
     "page_content_hash": "809e1f577b8418671ea6538b0318f86fcc14fc7a596cb92680d8c85c17ce4814",

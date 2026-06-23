@@ -3,11 +3,11 @@
   "value": {
     "confidence": "low",
     "fetch_ok": true,
-    "found_quote": "Gemini 3.5 Pro was announced at Google I/O on May 19, 2026 but is still in limited Vertex preview, with GA expected in June 2026.",
+    "found_quote": "Gemini 3.5 Pro was announced at Google I/O 2026 on May 19, with general availability targeted for June 2026. It is the model that absorbs the use cases Google previously routed to Gemini Ultra: frontier reasoning, deep multimodal understanding, and very long context.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Gemini 3.5 Pro",
-    "page_content_hash": "51da7bfb0896bcd6eff7fa3a9c6fed60dede8c7351c292754b71090adef8a7bd",
+    "page_content_hash": "2cd7aba265f5a03c07e0d4859fbe2c2db2a92f3ff9ae555f11833c4e1a4b4746",
     "primary_capability_id": "flagship-model",
     "provider": "Google",
     "reconfirmed": true,

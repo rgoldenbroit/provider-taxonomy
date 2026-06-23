@@ -1,0 +1,12 @@
+{
+  "key": "68c6bad544475c12552426623b1167d3e1e4c9f47bc3a5d94aca4cac79a3daf9",
+  "label": "judge:anthropic-claude-code-remote-agent-control-routines",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A routine is a saved Claude Code configuration: a prompt, one or more repositories, and a set of connectors, packaged once and run automatically. Routines execute on Anthropic-managed cloud infrastructure, so they keep working when your laptop is closed. Each routine can have one or more triggers attached to it: Scheduled: run on a recurring cadence like hourly, nightly, or weekly, or once at a specific future time; API: trigger on demand by sending an HTTP POST to a per-routine endpoint with a bearer token; GitHub: run automatically in response to repository events such as pull requests or releases",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Routines as \"a saved Claude Code configuration\" that runs \"on Anthropic-managed cloud infrastructure\" and supports all three trigger types claimed: scheduled runs, API calls, and GitHub events. This matches the claim precisely. However, the page states \"Routines are in research preview. Behavior, limits, and the API surface may change,\" indicating the feature is in an early/preview stage rather than generally available.",
+    "supported": true
+  }
+}

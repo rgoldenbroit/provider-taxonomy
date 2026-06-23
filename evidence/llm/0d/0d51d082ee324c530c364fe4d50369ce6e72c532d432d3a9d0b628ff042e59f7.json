@@ -1,0 +1,12 @@
+{
+  "key": "0d51d082ee324c530c364fe4d50369ce6e72c532d432d3a9d0b628ff042e59f7",
+  "label": "judge:openai-codex-agent-evals-observability-trace-grading",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Trace grading is the fastest way to identify workflow-level issues. A trace captures the end-to-end record of model calls, tool calls, guardrails, and handoffs for one run. Graders let you score those traces with structured criteria so you can find regressions and failure modes at scale.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Trace grading as an offering on the OpenAI Platform, matching the claim almost word-for-word. It states that traces capture \"the end-to-end record\" of a run and that \"Graders let you score those traces with structured criteria so you can find regressions and failure modes at scale.\" No deprecation or preview language is used; it is presented as a current, active feature.",
+    "supported": true
+  }
+}

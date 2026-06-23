@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "## Permissions and security model\n\nAutomations run unattended and use your default sandbox settings.\n\n- If your sandbox mode is **read-only**, tool calls fail if they require modifying files, accessing network, or working with apps on your computer.",
+    "found_quote": "Automations run unattended and use your default sandbox settings.\n\n- If your sandbox mode is **read-only**, tool calls fail if they require modifying files, accessing network, or working with apps on your computer. Consider updating sandbox settings to workspace write.\n- If your sandbox mode is **workspace-write**, tool calls fail if they require modifying files outside the workspace, accessing network, or working with apps on your computer. You can selectively allowlist commands to run outside the sandbox using [rules](https://developers.openai.com/codex/rules).\n- If your sandbox mode is **full access**, background automations carry elevated risk, as Codex may change files, run commands, and access network without asking.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Permissions and security model",

@@ -3,7 +3,7 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Beyond these built-in subagents, you can create your own with custom prompts, tool restrictions, permission modes, hooks, and skills.",
+    "found_quote": "Beyond these built-in subagents, you can create your own with custom prompts, tool restrictions, permission modes, hooks, and skills. The following sections show how to get started and customize subagents.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Custom subagents",

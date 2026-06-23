@@ -1,0 +1,12 @@
+{
+  "key": "266bcc7261c80941d98a3c36d25019d0a3d4019ac88089ee4482ad5d1c989f40",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity uses a robust, unified permission engine to secure your environment while enabling autonomous workflows. Every sensitive operation the Agent performs is represented as a **permission resource** formatted as `action(target)`. Permissions are evaluated across three distinct access lists: **Deny**: The action is blocked immediately. **Ask**: The Agent pauses and prompts for your explicit approval before proceeding. **Allow**: The action is auto-approved without prompting. ... Conflicting rules are strictly evaluated in priority order: Deny > Ask > Allow.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a unified permission engine that represents every sensitive agent operation as a permission resource, evaluated across deny/ask/allow access lists in strict priority order (Deny > Ask > Allow). This directly matches all elements of the claim: (1) unified permission engine, (2) every sensitive operation as a permission resource, and (3) evaluation across deny/ask/allow lists in strict priority order. The offering appears to be generally available (with Terminal Sandboxing specifically noted as \"Preview,\" but the core permissions engine itself is described as active).",
+    "supported": true
+  }
+}

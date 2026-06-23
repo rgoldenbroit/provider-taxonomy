@@ -1,0 +1,12 @@
+{
+  "key": "7a842fcea9dbd4cccc08b7715bfda52b1d81501f70bc339fbde4fc91aa94d4a9",
+  "label": "judge:anthropic-claude-web-desktop-mobile",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Download the desktop app: macOS Windows Windows (arm64) Try Claude on mobile: Apple Google Play",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Claude as available on web (the main claude.anthropic.com interface with a \"Try Claude\" / \"Ask Claude\" button), desktop (downloadable app for macOS and Windows), and mobile (Apple App Store and Google Play). This directly substantiates the claim that Anthropic offers Claude across web, desktop, and mobile platforms.",
+    "supported": true
+  }
+}
