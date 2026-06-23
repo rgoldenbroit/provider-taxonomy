@@ -1,0 +1,12 @@
+{
+  "key": "355f89318a993087235b5af99a254cd5a65973c66deea020c07a84ba57cdc250",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows-approve-the-plan-before-it-runs-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Approve the plan before it runs\n\nIn the CLI, the per-run prompt shows the planned phases and these options:\n\n* **Yes, run it**: start the run",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a section titled \"Approve the plan before it runs\" describing a per-run approval prompt in the CLI that shows the planned phases with approval options (Yes, run it / View raw script / No). This directly substantiates the claim.",
+    "supported": true
+  }
+}

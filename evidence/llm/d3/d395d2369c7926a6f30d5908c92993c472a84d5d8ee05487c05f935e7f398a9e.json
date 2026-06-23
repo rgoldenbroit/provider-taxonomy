@@ -1,0 +1,12 @@
+{
+  "key": "d395d2369c7926a6f30d5908c92993c472a84d5d8ee05487c05f935e7f398a9e",
+  "label": "judge:anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-connectors-ui-in-the-claude-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page documents connecting Claude Code to tools via MCP using CLI commands (claude mcp add), configuration files, and the /mcp panel. It references \"claude.ai connectors\" and the \"Anthropic Directory\" of connectors, but it does not describe a \"Connectors UI\" feature in a Claude Code desktop app. There is no mention of a desktop app or a Connectors UI anywhere on the page.",
+    "supported": false
+  }
+}

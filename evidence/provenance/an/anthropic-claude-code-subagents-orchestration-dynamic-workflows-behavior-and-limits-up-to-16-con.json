@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-behavior-and-limits-up-to-16-con",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Behavior and limits ... | Up to 16 concurrent agents, fewer on machines with limited CPU cores | Bounds local resource use | ... | 1,000 agents total per run | Prevents runaway loops |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Behavior and limits: up to 16 concurrent agents and 1,000 agents total per run",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-behavior-and-limits-up-to-16-con",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

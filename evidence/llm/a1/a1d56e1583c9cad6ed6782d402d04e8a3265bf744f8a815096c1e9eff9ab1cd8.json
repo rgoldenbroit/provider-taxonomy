@@ -1,0 +1,12 @@
+{
+  "key": "a1d56e1583c9cad6ed6782d402d04e8a3265bf744f8a815096c1e9eff9ab1cd8",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-dev-container-run-without-permission-prompts-using-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Because the container runs Claude Code as a non-root user and confines command execution to the container, you can pass `--dangerously-skip-permissions` for unattended operation. The CLI rejects this flag when launched as root, so confirm `remoteUser` is set to a non-root account.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated \"Run without permission prompts\" section describing passing --dangerously-skip-permissions while running Claude Code as a non-root user, matching the claim. Presented as a current capability.",
+    "supported": true
+  }
+}

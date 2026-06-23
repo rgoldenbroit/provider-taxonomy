@@ -1,0 +1,12 @@
+{
+  "key": "ca5bfba3d67fc663b7442dc96fe58d703b1ed64579521d872e0e2bcb30c8ca3f",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker-custom-container-with-your-own-ne",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A security-hardened container configuration might look like this: ... --security-opt seccomp=/path/to/seccomp-profile.json ... -v /path/to/code:/workspace:ro ... With `--network none`, the container has no network interfaces at all.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes hardened container deployments for Claude Code/Agent SDK that use custom seccomp profiles (--security-opt seccomp=...), mounted volumes (-v /path/to/code:/workspace:ro), and network policies/controls (--network none with proxy, domain allowlists). This substantiates the claim of a custom container with network policies, mounted volumes, and seccomp profiles.",
+    "supported": true
+  }
+}

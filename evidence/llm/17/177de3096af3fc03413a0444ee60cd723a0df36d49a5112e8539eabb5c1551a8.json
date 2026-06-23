@@ -1,0 +1,12 @@
+{
+  "key": "177de3096af3fc03413a0444ee60cd723a0df36d49a5112e8539eabb5c1551a8",
+  "label": "judge:anthropic-claude-code-remote-agent-control-routines-scheduled",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Scheduled**: run on a recurring cadence like hourly, nightly, or weekly, or once at a specific future time",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes \"Scheduled\" as one of the trigger types for routines on Anthropic-managed cloud infrastructure. Routines (and thus the Scheduled trigger) are explicitly noted as being in research preview: \"Routines are in research preview.\"",
+    "supported": true
+  }
+}

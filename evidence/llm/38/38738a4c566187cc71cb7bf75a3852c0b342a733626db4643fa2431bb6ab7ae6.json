@@ -1,0 +1,12 @@
+{
+  "key": "38738a4c566187cc71cb7bf75a3852c0b342a733626db4643fa2431bb6ab7ae6",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-link-traces-to-you",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In Agent SDK and non-interactive sessions started with `-p`, Claude Code also reads `TRACEPARENT` and `TRACESTATE` from its own environment when starting each interaction span. This lets an embedding process pass its ac",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes distributed tracing where Claude Code reads TRACEPARENT/TRACESTATE (W3C trace context) so an embedding application can nest Claude Code's spans within its own traces \u2014 i.e., linking traces to your application via W3C trace context nesting. This functionality is part of the Traces (beta) feature.",
+    "supported": true
+  }
+}

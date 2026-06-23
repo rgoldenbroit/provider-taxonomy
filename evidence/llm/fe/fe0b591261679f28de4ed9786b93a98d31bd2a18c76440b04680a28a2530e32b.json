@@ -1,0 +1,12 @@
+{
+  "key": "fe0b591261679f28de4ed9786b93a98d31bd2a18c76440b04680a28a2530e32b",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dynamic workflow is a JavaScript script that orchestrates [subagents](/en/sub-agents) at scale. Claude writes the script for the task you describe, and a runtime executes it in the background while your session stays responsive.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes Dynamic workflows as a JavaScript script Claude writes that orchestrates subagents at scale and runs in the background. It also describes cross-checking results (e.g., adversarially reviewing each other's findings, cross-checked research) for tasks too big for one conversation to coordinate. The feature is described as available on paid plans and across providers, indicating active status.",
+    "supported": true
+  }
+}

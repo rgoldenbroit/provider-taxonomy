@@ -1,0 +1,12 @@
+{
+  "key": "ac72598f9b7e8b3efd76d8974e4080153bc25d6828064c9097076f21b8bcc899",
+  "label": "judge:openai-codex-guardrails-safety-permission-profiles-extends-profile-inheritance",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `extends` when a profile is mostly the same as a built-in or another named profile. Prefer extending a built-in profile over starting from scratch so baseline protections carry forward.",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes `extends` for permission profiles, which provides profile inheritance (extending a parent profile and overriding only differing rules). The feature is described under \"Beta. Permission profiles are under active development and may change.\"",
+    "supported": true
+  }
+}

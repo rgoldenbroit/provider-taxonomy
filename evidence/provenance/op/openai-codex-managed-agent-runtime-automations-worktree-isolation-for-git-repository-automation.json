@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-automations-worktree-isolation-for-git-repository-automation",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "For Git repositories, each automation can run either in your local project or on a dedicated background [worktree](https://developers.openai.com/codex/app/features#worktree-support). Use worktrees when you want to isolate automation changes from unfinished local work.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Worktree isolation for Git-repository automations",
+    "page_content_hash": "d0253f1caf3a455e75bfaa8b6f2105dcbd08c84d48263d0800830976401ceee1",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-automations-worktree-isolation-for-git-repository-automation",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/app/automations.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

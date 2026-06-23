@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-memory-agents-md-customize-fallback-filenames-add-alternate-filen",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Customize fallback filenames\n\nIf your repository already uses a different filename (for example `TEAM_GUIDE.md`), add it to the fallback list so Codex treats it like an instructions file.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Customize fallback filenames: add alternate filenames to a fallback list so Codex treats them as instruction files",
+    "page_content_hash": "676796e239622cb1a997d20d0361b8bce204f834659779d2c498b52fc8553a3e",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-memory-agents-md-customize-fallback-filenames-add-alternate-filen",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-md.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

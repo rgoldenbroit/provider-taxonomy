@@ -1,0 +1,12 @@
+{
+  "key": "f21286904f54734658d599aa8eed0590477a07117a5f60a75f8928bcf482cddc",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments-environment-variables-and-encrypted-secrets",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Secrets** are similar to environment variables, except:\n\n- They are stored with an additional layer of encryption and are only decrypted for task execution.\n- They are only available to setup scripts. For security reasons, secrets are removed before the agent phase starts.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes environment variables and encrypted secrets that are only available to setup scripts, matching the claim. It states secrets have an additional layer of encryption and are only available to setup scripts (removed before the agent phase). Presented as a current feature.",
+    "supported": true
+  }
+}

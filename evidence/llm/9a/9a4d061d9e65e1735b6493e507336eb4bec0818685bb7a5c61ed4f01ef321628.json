@@ -1,0 +1,12 @@
+{
+  "key": "9a4d061d9e65e1735b6493e507336eb4bec0818685bb7a5c61ed4f01ef321628",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-ask-permissions-shows-a-diff-to-accept-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**[Remote Control](/en/remote-control) sessions** on your local machine: Ask permissions, Auto accept edits, and Plan mode. Auto and Bypass permissions are not available.",
+    "lifecycle_status": "active",
+    "rationale": "The claim is about an \"Ask permissions\" mode in Desktop that shows a diff to accept/reject each change. The page describes the Desktop/Remote Control mode selector including \"Ask permissions\" mode, which corresponds to `default` mode where \"Claude wants to edit a file... it pauses and asks you to approve the action\" and you \"review each action as it comes.\" The page lists \"Ask permissions\" as an available mode for Remote Control sessions on the local machine (which run via Desktop's mode selector). This substantiates the offering of an Ask permissions mode that prompts for approval of each change. The page does not explicitly use the phrase \"shows a diff,\" but it does describe the per-action approval prompt behavior that the claim refers to.",
+    "supported": true
+  }
+}

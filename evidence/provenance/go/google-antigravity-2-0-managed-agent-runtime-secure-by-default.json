@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-secure-by-default",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Secure by Default\n\nWe put you in the driver's seat with robust security controls:\n\n* **Interactive Approvals**: By default, agents will request your explicit permission before running any terminal commands.  \n* **Bounded Access**: By default, your agent can only read and write within the provided folders of a project.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Secure by Default",
+    "page_content_hash": "5418ba5768677142a184ef78e1b164bbd15ffe8cd5762fadc5b2c47000e424c5",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-secure-by-default",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

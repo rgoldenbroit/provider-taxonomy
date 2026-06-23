@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-remote-connections-get-notified-when-codex-completes-a-task-or",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Get notified when Codex completes a task or needs your attention.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Get notified when Codex completes a task or needs your attention",
+    "page_content_hash": "117e536573c6eae4c5567ba35cfd64954a0e3d276e75f64d5129edd8e6214869",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-remote-connections-get-notified-when-codex-completes-a-task-or",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/remote-connections.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-add-custom-per-edit-patterns-vi",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Create `.claude/security-patterns.yaml` to add regex or substring rules to the [per-edit pattern check](#on-each-file-edit). These run as deterministic string matches alongside the built-in patterns",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Add custom per-edit patterns via YAML/JSON regex/substring rules",
+    "page_content_hash": "ab1b88d8168d5f452ac182f3636ca817ca291a6efeda10253aabd20c5909fb7d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-add-custom-per-edit-patterns-vi",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/security-guidance.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

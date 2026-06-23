@@ -1,0 +1,12 @@
+{
+  "key": "3c7aa7849074db9c397eb7633e9c10665ce9cd9c07a22a5e38ddf979d986f7b8",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-events-log-events-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code exports metrics as time series data via the standard metrics protocol, events via the logs/events protocol, and optionally distributed traces via the [traces protocol](#traces-beta).",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude Code exporting events via the logs/events protocol through OpenTelemetry. It documents log events for prompts (user_prompt events, OTEL_LOG_USER_PROMPTS), API requests/responses (api_request_body / api_response_body log events), and tool details/results, matching the claimed structured records. The feature is presented as generally available, with traces being the only beta-marked component.",
+    "supported": true
+  }
+}

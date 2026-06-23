@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-code-review-verification-step-checks-candidate-findings-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Each agent looks for a different class of issue, then a verification step checks candidates against actual code behavior to filter out false positives.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Verification step checks candidate findings against actual code behavior",
+    "page_content_hash": "685651f2297a5b794eae7615a910bb273c8d4385908a47a8c139187f6c76180b",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-code-review-verification-step-checks-candidate-findings-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/code-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

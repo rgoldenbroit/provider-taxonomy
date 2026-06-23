@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-codex-for-linear-configure-manually-edit-codex-config-toml-to-set",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Configure manually\n\n1. Open `~/.codex/config.toml` in your editor.\n2. Add the following:\n\n```toml\n[mcp_servers.linear]\nurl = \"https://mcp.linear.app/mcp\"\n```",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Configure manually \u2014 edit Codex config.toml to set up the Linear MCP server",
+    "page_content_hash": "ec03368ffddcf54e085373fd9844a14e2b6938b17192aef33cdb8e5f91557bc2",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-codex-for-linear-configure-manually-edit-codex-config-toml-to-set",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/integrations/linear.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "29e953d44999a4d687702c7f786c1dde96925afb94b57a403dec91f1f4acb971",
+  "label": "judge:openai-codex-managed-agent-runtime-sites-control-access",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "## Control access and secrets\n\nSet the audience before you share a deployed URL. For a new site, keep access limited to the owner and workspace admins until you have reviewed the content, data handling, and expected audience.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes a \"Control access\" capability within the Sites feature, including access modes (admins_only, workspace_all, custom) that control who can access a deployed site. Sites itself is described as being in preview (\"Sites is in preview and currently available for ChatGPT Business and Enterprise workspaces\"), so the access control feature shares that lifecycle status. The claim that OpenAI offers Control access is substantiated.",
+    "supported": true
+  }
+}

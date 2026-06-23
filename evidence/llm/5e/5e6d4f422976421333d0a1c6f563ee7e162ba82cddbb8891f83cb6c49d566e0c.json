@@ -1,0 +1,12 @@
+{
+  "key": "5e6d4f422976421333d0a1c6f563ee7e162ba82cddbb8891f83cb6c49d566e0c",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker-multi-tenant-isolation-of-setting",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "A developer running Claude Code on their laptop has different requirements than a company processing customer data in a multi-tenant environment.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page discusses isolation technologies, credential management, network/egress controls, and references multi-tenant deployments as a use case for these hardening options. However, it does NOT describe a packaged \"Multi-tenant isolation\" offering that isolates settings, memory, config, working directory, and egress per tenant. The specific claimed feature set (per-tenant isolation of settings, memory, config, working directory, and egress as a distinct offering) is not asserted anywhere on the page. The page provides general security guidance and building blocks, not a named per-tenant isolation offering with those specific dimensions.",
+    "supported": false
+  }
+}

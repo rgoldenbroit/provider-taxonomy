@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-agent-teams-choose-a-display-mode-in-process-in-ma",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agent teams support two display modes: * **In-process**: all teammates run inside your main terminal... * **Split panes**: each teammate gets its own pane... Requires tmux, or iTerm2.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Choose a display mode: in-process in main terminal or split panes via tmux or iTerm2",
+    "page_content_hash": "63355f3b44d32f0cbc0641e9a3341c835632be04a8c2759c2a476470938e608a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-agent-teams-choose-a-display-mode-in-process-in-ma",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-teams.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

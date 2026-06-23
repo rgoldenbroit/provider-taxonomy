@@ -1,0 +1,12 @@
+{
+  "key": "581f6d343b6cb7d76a6893044d624607b954c3968c1262baa5e31b838c327c8d",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-hooks-supported-events",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Supported Events\n\n| Event | Description | Matcher Target |\n| :--- | :--- | :--- |\n| `PreToolUse` | Fires before a tool is executed. | Tool name (e.g., `run_command`) |",
+    "lifecycle_status": "active",
+    "rationale": "The page, part of Google's Antigravity 2.0 documentation on Hooks, contains a dedicated \"Supported Events\" section listing events (PreToolUse, PostToolUse, PreInvocation, PostInvocation, Stop). This directly substantiates the claim. The page describes the feature as currently available without indicating any deprecation or sunset.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "de43869903d1a3dbf32903acb2db5dfbd2d3e2e10d765e5322189ca794a1f5ef",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-custom-subagents-cli-defined-subagents-passed-as-j",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**CLI-defined subagents** are passed as JSON when launching Claude Code. They exist only for that session and aren't saved to disk, making them useful for quick testing or automation scripts. You can define multiple subagents in a single `--agents` call:",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes CLI-defined subagents passed as JSON via the --agents flag when launching Claude Code, existing only for that session, exactly matching the claim.",
+    "supported": true
+  }
+}

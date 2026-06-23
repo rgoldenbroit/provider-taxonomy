@@ -1,0 +1,12 @@
+{
+  "key": "e09cf2f2320df77f74ca6b65fd117218b5d3132192bf4b92ca551c53d9f2d16b",
+  "label": "judge:anthropic-claude-code-agent-memory-auto-memory-memory-md-auto-memory-paths-the-preset-embeds-aut",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes \"Auto memory\" as notes Claude writes for itself stored per git repository under ~/.claude/projects/, with a MEMORY.md index loading at session start. However, the specific claim about a \"preset\" embedding \"auto-memory paths\" as part of the \"per-session environment context in the system prompt\" is not described anywhere on the page. The page does not mention auto-memory paths being embedded in a preset or in the system prompt's per-session environment context. The claim's particular framing is not substantiated.",
+    "supported": false
+  }
+}

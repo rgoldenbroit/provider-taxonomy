@@ -1,0 +1,12 @@
+{
+  "key": "fc930ef9b0fdbd3caa01f31ed9c694a121dc0aca4213114035b499edae2e8d07",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-artifact-review-policy",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When working in **Planning Mode**, the Artifact Review Policy controls how you interact with and approve these plans before changes are made to your codebase.",
+    "lifecycle_status": "active",
+    "rationale": "The page is from Google's Antigravity documentation and explicitly describes the \"Artifact Review Policy,\" which controls how a user reviews and approves agent-proposed plans before changes are made to the codebase. It describes the interactive review workflow including a \"Request Review\" policy where the agent halts and pauses execution for explicit approval, matching the claim's description of co-steering and pausing at milestones. The page presents this as a current feature with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

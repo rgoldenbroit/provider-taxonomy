@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-evals-observability-tracing-sdk-level-or-per-run-tracing-controls",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you need less tracing, use the SDK-level or per-run tracing controls rather than removing all observability from the workflow.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "SDK-level or per-run tracing controls",
+    "page_content_hash": "ddb46f5e5a11022dec29117c721aab57debda9bc903d50f02692594e42c678d0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-evals-observability-tracing-sdk-level-or-per-run-tracing-controls",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/integrations-observability.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

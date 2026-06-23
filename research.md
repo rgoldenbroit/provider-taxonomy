@@ -1,87 +1,144 @@
-# Research — Filling in the Agentic Coding content (grounded)
+# Research — Revised approach: provider-first, real-named, insight-driven Agentic Coding
 
-## Goal & locked decisions
+## Why we're revising (the bar changed)
 
-Now that the structure (5 categories + scaffold sub-features) is right, **populate the Agentic Coding
-function with real, grounded content** through the existing trust pipeline. Decisions (Q&A):
-- **Scope:** complete the **5 current categories** (Surfaces · Agent Management · Context & Memory · Execution & Safety · Quality & Ops) across **Claude Code · Codex · Antigravity** (+ Jules where it's the relevant offering).
-- **Method:** **Hybrid** — engine discovery (Tavily, official-docs-scoped) for feature/coverage breadth + operator-curated **sub-feature** depth from official docs; the pipeline grounds everything.
-- **Grounding:** **run live now** (Vertex global · `claude-opus-4-8` · Tavily). Admit-only-what-grounds.
+This is a **portfolio piece** the user will feature on LinkedIn to attract hiring interest from AI
+providers. The bar is therefore: **cross-provider completeness + polish + insight** — a Google or
+OpenAI reviewer must see *their* products represented fully, accurately, and by their real names,
+side by side with Anthropic's. (See memory `portfolio-intent`.)
 
-## How "filling in" works here (not hand-typed facts)
+User feedback (2026-06-22): the taxonomy looks "a little disjointed," "fails at being all-inclusive,"
+and the names are wrong — *"it's not called 'Anthropic guardrails' or 'Antigravity guardrails.'"* Correct.
 
-A record becomes content only by clearing the pipeline that produced the existing 48 grounded records:
-1. **Candidate** node authored with an official `source.url` (operator-curated for sub-features; Tavily-discovered for feature cells).
-2. **`triage_one(record, dataset, llm, retrieval, evidence=, pinned_capability=)`** fetches the cited page, an LLM **grounding judge must find the claim quoted on it**, classifies, and returns an `Outcome{decision: confirmed|needs_review|rejected, record, report.grounding.score}`. Confidence is **derived from source tier** (`sources.py`), not asserted.
-3. Admit only `confirmed`/`needs_review`; **rejected/ungrounded cells stay empty or `scaffold`** — an honest "not verified", never fabricated.
-4. **Evidence capture:** `scripts/reverify.py` in `TAXO_LEDGER=record` re-grounds every (non-scaffold) record, writing page+LLM+**provenance receipt** into `evidence/` → the catalog becomes **replay-reproducible**.
-5. `taxo verify` (replay) asserts byte-identical; `audit`/`eval`/`gate`; `build`; deploy.
+## Diagnosis — root cause, with evidence
 
-## Current coverage map (the gap to close)
+The current content was built **top-down (grid-first)**: define a fixed set of axes, then have
+`ground_features.py` mint one node per `(provider × axis)` with a **templated name** `"{Product} {axis}"`
+and try to ground it. That method produces exactly the three problems observed:
 
-Per category → feature-axis → provider (`feature` nodes), from `data/taxonomy.json`:
+1. **Generic/manufactured names.** **22 of 25** feature-level comparison cells are templated
+   ("Anthropic guardrails," "Antigravity guardrails," "Codex sandbox," "OpenAI evals & observability"…).
+   Only 3 read as real (Codex Cloud, Jules async control, Claude Code Remote Control). The tier that
+   *does* sound real — sub-features like "Permission modes," "Approval modes" — is the one I
+   hand-curated. **The auto-minted layer is the weak link.**
+2. **Coverage biased toward the best-documented provider.** "Admit only what grounds" + Anthropic's
+   richer public docs ⇒ sub-feature depth Anthropic **11** / OpenAI **7** / **Google 0**. The method
+   itself favors whoever documents best — the opposite of what a 3-way portfolio piece needs.
+3. **Structural disjointedness.** 6 orphaned features (the entire **evals** row floats; Anthropic
+   guardrails and OpenAI MCP aren't under their products), **Google MCP mis-typed** as `service_tier`,
+   and Google fragmented across **Antigravity 2.0 / Jules / an empty "Antigravity CLI"** node.
+4. **No comparative insight.** Presence/absence cells only — no "so what," which is what actually
+   impresses a hiring reviewer.
 
-| Axis (category) | Anthropic | OpenAI | Google | Sub-features today |
-|---|---|---|---|---|
-| subagents-orchestration (Agent Mgmt) | ✅ confirmed | ✅ confirmed | ✅ confirmed | 3 scaffold × 3 providers (Definition files · Tool scoping · Model per subagent) |
-| managed-agent-runtime (Agent Mgmt) | ✅ confirmed | ⚠️ needs_review | ❌ **missing** | none |
-| agent-memory (Context & Mem) | ✅ | ✅ | ✅ (Jules) | none |
-| mcp-connectors (Context & Mem) | ✅ + 2 scaffold | ✅ + 2 scaffold | ❌ **missing-as-feature** (a Google MCP record exists but isn't a `feature` under a product) | 2 scaffold × 2 providers |
-| code-execution-sandbox (Exec & Safety) | ✅ | ✅ | ✅ | none |
-| guardrails-safety (Exec & Safety) | ✅ | ⚠️ needs_review | ✅ | none |
-| agent-evals-observability (Quality & Ops) | ✅ | ✅ | ✅ | none |
-| remote-agent-control (Quality & Ops) | ✅ | ✅ | ❌ **missing** (Jules *is* Google's async/remote agent — a classification gap, not a real absence) | none |
+## The reframe — provider-first / evidence-first
 
-**Three workstreams fall out:**
-- **A — Fill missing feature cells:** Google managed-agents, Google MCP (reconcile the existing record into a `feature`), Google remote-control (map Jules). `scripts/ground_features.py` already iterates this exact CLUSTER (incl. `google-antigravity-2-0`, `google-jules`) × 7 AXES and **skips existing** → running it live attempts precisely the empty cells.
-- **B — Reconfirm the 2 `needs_review`:** Codex managed agents, Codex guardrails (re-ground → confirm or keep flagged).
-- **C — Curate + ground sub-features** for every axis that has none, per provider (operator-curated from official docs, then judged). Also ground the 13 existing scaffold sub-features (flip `scaffold` → `confirmed`/`needs_review` with evidence).
+Flip the population method:
 
-## Tooling
+> **For each provider, read their actual agentic-coding docs; capture the real, named features and how
+> the provider groups them; THEN map those real features onto the shared comparison axes.**
 
-| Step | Tool | Notes |
-|---|---|---|
-| Fill feature cells (A) | `scripts/ground_features.py` (exists) | live; idempotent; admit-only-what-grounds. Run as-is. |
-| Reconfirm needs_review (B) | `scripts/reverify.py` (record) | re-grounds + re-grades the 2 records. |
-| Ground sub-features (C) | **new `scripts/ground_subfeatures.py`** | modeled on `ground_features.py`, one level deeper: `parent_id`=a feature node, `pinned_capability`=parent's axis, curated `(feature, provider) → [sub-feature name, search kw, official url]` list. Converts existing scaffold ids in place + appends new ones. |
-| Evidence + reproducibility | `scripts/reverify.py` `TAXO_LEDGER=record` → `taxo verify` (replay) | captures receipts; proves byte-identical. |
-| Ship | `taxo audit`/`eval`/`gate` → `taxo build` → `gcloud run deploy` | the established gate + deploy. |
+- **Axes / categories become the comparison lens (row labels), not the source of nodes.** Each leaf
+  carries the provider's *real* feature name + citation (the model already supports this:
+  capability = axis, product = the provider's product, `feature`(parent=product, primary=axis) = the
+  real named offering).
+- **Add a comparative-insight layer.** A presence/absence matrix is commodity; the differentiator is
+  one short, **grounded** sentence per axis on *how the three approaches differ* — e.g. *"Subagents:
+  Anthropic = version-controlled Markdown files (`.claude/agents/`); OpenAI = `AGENTS.md` config;
+  Google = managed Agent Manager — file-native vs config-native vs managed-runtime."* Derived from the
+  verified per-provider facts (cited, not opinion), rendered as a callout on each axis. This is what
+  reads as "understands the space" rather than "scraped some docs."
+- **Scope: go deep and impeccable on Agentic Coding only** — the 5 existing categories, all three
+  providers brought to **parity** depth and real names. No broadening to other functions this pass.
+- **Keep the trust backbone** (grounding judge, source tiers, reverify→verify reproducibility, the
+  collapsible viewer). We change *what we populate and how we name it*, not the trust machinery. The
+  engine's job shifts from *inventing node names off a grid* to *verifying operator-/doc-sourced real
+  features*.
 
-## Sub-feature curation (workstream C) — proposed shape
+## What stays vs. changes
 
-~2 sub-features per `(axis × provider)` where official docs support them (admit only what grounds). Illustrative targets (final list confirmed at plan):
-- **subagents** → Definition files · Tool scoping · Model per subagent (the existing 13 scaffold).
-- **managed-agent-runtime** → Hosted execution · Parallel/queued tasks.
-- **mcp-connectors** → Local (stdio) servers · Remote (HTTP/SSE) servers (+ Google once the feature cell exists).
-- **agent-memory** → Project memory file · Cross-session/persistent memory.
-- **code-execution-sandbox** → Network policy · Filesystem isolation.
-- **guardrails-safety** → Permission/approval modes · Allow/deny rules.
-- **agent-evals-observability** → Tracing/logs · Eval harness.
-- **remote-agent-control** → Async task hand-off · Status/notifications.
+**Stays:** schema's `capability(axis) → product → feature(parent) → sub-feature` model (already the
+right shape); grounding/`triage_one`; `reverify --record` → `taxo verify` byte-identical; the
+collapsible Overview/Explore/drawer tree.
 
-Each curated entry carries an **official-domain** URL (`docs.anthropic.com` · `developers.openai.com`/`platform.openai.com` · `antigravity.google`/`ai.google.dev` — all official-tier per `sources.py`). The judge verifies the quote actually appears; ungrounded ones are dropped, not faked.
+**Changes (data):** rename the 22 templated cells to real product/feature names; re-parent the 6
+orphans to their products; fix Google MCP `kind`; resolve Google's node fragmentation; bring
+OpenAI + Google to parity depth with Anthropic.
 
-## Surfaces category (special-cased)
+**Changes (process):** replace grid-mint discovery with an **automated provider-first pipeline**.
+Automation is required — but accuracy and completeness rank above it (a naive autopopulate is what
+produced the current mess). The pipeline (per provider, per category):
+1. **Retrieve the provider's own structured doc surface** — NOT web search. Probed + confirmed:
+   - **OpenAI Codex:** `developers.openai.com/codex/llms.txt` (per-page `.md` index) / `llms-full.txt`
+     (1 MB, 23k lines, 93 "subagent" hits) — the entire docs as clean markdown.
+   - **Anthropic Claude Code:** `code.claude.com/llms.txt` — index where every page is a clean `.md` URL.
+   - **Google Antigravity:** no llms.txt, but `antigravity.google/sitemap.xml` lists the real doc URLs
+     (e.g. `/docs/agent-features`); pages are JS-rendered, so fetch via **headless Chrome** (`--dump-dom`).
+   Tiered retriever: `llms-full/llms.txt` → `sitemap.xml` → headless render. Tavily demoted to a
+   last-resort discovery fallback. (Search-as-retrieval was the root cause of blogs, junk, and Google=0.)
+2. **Extract** the features each official page documents *under their real names*, with the exact
+   phrasing — the canonical name comes **from the page**, never a template.
+3. **Map** each extracted feature to a comparison axis (no artificial pinning).
+4. **Ground** each: the judge confirms the named feature appears on its cited official page → accuracy;
+   confidence derived from source tier.
+5. **Completeness critic + loop-until-dry:** after each pass, ask "for provider X, what documented
+   agentic-coding features are NOT yet captured?" and re-query until two rounds surface nothing new.
+6. **Lifecycle check:** capture `status` (active/preview/deprecated/sunset) so churn (e.g. a deprecated
+   Gemini CLI) is flagged with a dated lifecycle event, not silently featured.
+7. **Reverify --record → verify** for evidence + byte-identical reproducibility (existing backbone).
+8. **Insight synthesis:** once all three providers' real features for an axis are grounded, synthesize
+   the one-line "how they differ," grounded in the captured facts + citations.
 
-`agentic-coding/surfaces` has **empty `feature_axis_ids`** — surfaces aren't feature nodes; the engine deliberately folds CLI/IDE/web/mobile into the product's **`surfaces`** field (`autobuild._fold_surface`). So "completing Surfaces" = verifying each product's `surfaces[]` is accurate/complete (and modelling CI/GitHub as a surface where real). Rendered as a read-only "Surfaces" row in the breakdown, not as groundable sub-features.
+Constraint: on this GCP project Claude's own `web_search`/`web_fetch` are org-blocked, so discovery uses
+Tavily + `HttpFetch` (already wired). Human reviews pipeline *output*; does not hand-curate each cell.
 
-## Live stack & reproducibility (verified)
+**Adds (small schema + UI):** a comparative-insight field (per axis or per category) + render it as
+the "so what" line in the viewer.
 
-- `taxo config`: project `second-impact-444322-p8` · region **global** · model `claude-opus-4-8` · **Tavily configured**. `.env.local` pins `TAXO_OFFLINE=1`; override per-command (`TAXO_OFFLINE=0 .venv/bin/python …`). ADC logged in locally.
-- **Vertex gotchas (must honor):** global endpoint only for Opus 4.8; `structured_outputs`/`web_search`/`web_fetch` org-blocked → forced tool calls + HttpFetch for page retrieval; judge grounds **strictly on the fetched page** (its cutoff predates 2026).
-- **Reproducibility flow:** ground (live, mutates catalog) → `reverify.py --record` (writes `evidence/`) → `taxo verify` replay = byte-identical. The `as_of` date written by reverify must equal `_meta.as_of`; I'll pin a single date (2026-06-21) for this pass.
+## Real-name targets (hypotheses — the pass verifies/corrects)
 
-## Risks & mitigations
-- **R1 — live fetch 403 / thin docs.** Admit-only-what-grounds means a blocked/silent page → cell left empty (honest), never fabricated. Local IP (not a datacenter) avoids the CI 403 issue.
-- **R2 — cost / volume.** Workstream C is the bulk (~2 calls per sub-feature). Bounded by the curated list; I'll report counts and let you calibrate at plan.
-- **R3 — scaffold-skip interaction.** `reverify(record)` skips `review_status=="scaffold"`, so scaffold sub-features get **no** evidence until grounded. Workstream C must flip them out of `scaffold` (via `triage_one`) **before** the record pass, else they stay unverified. Sequencing matters.
-- **R4 — `as_of` drift breaks verify.** Pin one date across ground + reverify + `_meta`.
-- **R5 — classification over-reach** (e.g. mapping Jules to remote-control). Pin `kind`+axis (operator-known); let the judge set only relation/surfaces — per the engine's existing discipline.
+| Axis | Anthropic (real) | OpenAI (real) | Google (real) |
+|---|---|---|---|
+| guardrails-safety | Permission modes & sandboxing | Codex approval modes & sandbox | Antigravity ? (verify) |
+| subagents | Subagents (`.claude/agents`) | AGENTS.md / ? | Antigravity Agent Manager |
+| managed-runtime | ? | Codex Cloud tasks | Jules (managed/async) |
+| memory | CLAUDE.md memory | AGENTS.md | Jules ? |
+
+These are starting hypotheses only; provider-first reading sets the actual names and catches what we're
+missing for each competitor.
+
+## Structural cleanup (part of this pass)
+- **Re-parent orphans** to their products: evals ×3, Anthropic guardrails, OpenAI MCP → under
+  Claude Code / Codex / the right Google node.
+- **Google MCP:** `service_tier` → `feature`, parent to its product.
+- **Google fragmentation:** canonical Google representation = **Antigravity** (agent-first IDE) +
+  **Jules** (async). **Gemini CLI is out** as a primary node (reportedly being deprecated) — the
+  pipeline lifecycle-checks it and, if sunset/merged, shows a `deprecated` badge + dated event rather
+  than featuring it. Fold/populate the empty "Antigravity CLI" node.
+
+## Risks & tensions
+- **Automation vs. accuracy/completeness (the core requirement).** It must be automated AND maximally
+  accurate + complete. Accuracy ← grounding judge + source tiers + reproducible verify. Completeness ←
+  the completeness-critic loop-until-dry. If forced to choose, accuracy/completeness win over automation
+  convenience.
+- **Thin/newer Google docs** ⇒ some axes may be genuine gaps. Represent as a **grounded absence with a
+  note**, not silent emptiness — and never a fabricated cell.
+- **Comparative insight is editorial** ⇒ it must stay grounded/cited or it weakens the trust story.
+- **Scope creep.** Hold to Agentic Coding; resist adding functions/categories mid-pass.
+- **Naming accuracy is itself a claim** ⇒ the real name must be substantiated on the cited page (the
+  judge confirms the page actually calls it that), or we've traded generic-but-safe for specific-but-wrong.
+
+## Resolved (from feedback 2026-06-22)
+- **Automation:** automated provider-first pipeline; accuracy + completeness are hard requirements above
+  automation convenience.
+- **Google:** Antigravity + Jules; **Gemini CLI dropped** (lifecycle-verified, not featured).
+- **Naming source of truth:** extract the canonical name **from the grounded page**, judge-confirmed.
+
+## Open questions (resolve at plan)
+1. **Insight layer placement:** per-axis vs per-category; a schema field vs render-only (recommend a
+   per-axis `comparison_note` field, rendered as a callout).
+2. **Reference axes:** add the missing Agent-Management concepts (Agent teams, Custom personas, Skills)
+   and make Surfaces real this pass, or hold to the current 5 categories?
 
 ## Out of scope
-- Categories beyond the 5 current ones; sibling-surface products (Gemini CLI, Codex CLI/cloud) as standalone nodes; functions other than Agentic Coding.
-
-## Open questions (confirm at plan)
-1. The **sub-feature curation list + per-(axis×provider) count** (the table above is the proposed start).
-2. **Failure policy on `needs_review`:** keep-and-flag (current behavior) vs hold from the tree until confirmed.
-3. Whether to model **CI/GitHub** as a surface now or defer.
+Functions other than Agentic Coding; the reference's extension categories (Session/Context/Workflow);
+re-architecting the trust/reproducibility backbone.

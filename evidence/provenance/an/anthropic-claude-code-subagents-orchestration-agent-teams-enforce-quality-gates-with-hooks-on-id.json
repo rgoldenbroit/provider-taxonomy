@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-agent-teams-enforce-quality-gates-with-hooks-on-id",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Enforce quality gates with hooks\nUse [hooks](/en/hooks) to enforce rules when teammates finish work or tasks are created or completed:\n* [`TeammateIdle`](/en/hooks#teammateidle): runs when a teammate is about to go idle. Exit with code 2 to send feedback and keep the teammate working.\n* [`TaskCreated`](/en/hooks#taskcreated): runs when a task is being created. Exit with code 2 to prevent creation and send feedback.\n* [`TaskCompleted`](/en/hooks#taskcompleted): runs when a task is being marked complete. Exit with code 2 to prevent completion and send feedback.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Enforce quality gates with hooks on idle, task creation, or completion",
+    "page_content_hash": "63355f3b44d32f0cbc0641e9a3341c835632be04a8c2759c2a476470938e608a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-agent-teams-enforce-quality-gates-with-hooks-on-id",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-teams.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

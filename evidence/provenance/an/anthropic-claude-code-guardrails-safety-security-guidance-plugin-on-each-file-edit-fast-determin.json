@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-on-each-file-edit-fast-determin",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "[On each file edit](#on-each-file-edit): a fast pattern match for risky calls, with no model call",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "On each file edit: fast deterministic pattern match with no model call",
+    "page_content_hash": "ab1b88d8168d5f452ac182f3636ca817ca291a6efeda10253aabd20c5909fb7d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-on-each-file-edit-fast-determin",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/security-guidance.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

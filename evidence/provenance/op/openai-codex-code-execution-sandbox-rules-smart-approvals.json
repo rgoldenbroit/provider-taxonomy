@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-rules-smart-approvals",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When Smart approvals are enabled (the default), Codex may propose a `prefix_rule` for you during escalation requests.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Smart approvals",
+    "page_content_hash": "2a6a615f3199c50fba120cc1142219b7f8882946522609d9255e8ad4ee30bb8c",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-rules-smart-approvals",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/rules.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

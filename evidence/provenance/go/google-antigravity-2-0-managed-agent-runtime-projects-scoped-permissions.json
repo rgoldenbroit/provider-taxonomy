@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-projects-scoped-permissions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Scoped Permissions**: Attach permission grants to projects to control what the agents are allowed to access. Permissions manually granted during a conversation can persist, allowing the agent to learn trusted actions and enabling a more seamless experience over time.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Scoped Permissions",
+    "page_content_hash": "5418ba5768677142a184ef78e1b164bbd15ffe8cd5762fadc5b2c47000e424c5",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-projects-scoped-permissions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

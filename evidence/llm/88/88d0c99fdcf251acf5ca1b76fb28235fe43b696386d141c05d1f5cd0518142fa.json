@@ -1,0 +1,12 @@
+{
+  "key": "88d0c99fdcf251acf5ca1b76fb28235fe43b696386d141c05d1f5cd0518142fa",
+  "label": "judge:openai-codex-managed-agent-runtime-sites-configure-runtime-environment-values",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Configure runtime environment values\n\nOpen **Sites** in the app sidebar and select a project to add, update, or remove\nhosted environment variables and secrets in the Sites panel.",
+    "lifecycle_status": "preview",
+    "rationale": "The page contains a section titled \"Configure runtime environment values\" describing how to manage hosted environment variables and secrets in the Sites panel. This is part of the Sites feature, which the page states is in preview.",
+    "supported": true
+  }
+}

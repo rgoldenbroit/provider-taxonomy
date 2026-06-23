@@ -1,0 +1,12 @@
+{
+  "key": "d9d81d448046ad743a1e8a28050ea1d3fab480acdac72c612e4813dffe2b7970",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-terminal-sandboxing-filesystem-and-outbound-network-all",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Paths granted under `read_file` dynamically populate the sandbox's read-only filesystem allowlist. Paths granted under `write_file` dynamically populate the sandbox's read-write filesystem allowlist. Domains granted under `read_url` define outbound network access policies.",
+    "lifecycle_status": "preview",
+    "rationale": "The page (Google Antigravity permissions doc) describes that permission grants populate filesystem allowlists and that read_url domains are compiled into the container's outbound network allowlist (AllowedDomains). This substantiates that Google offers filesystem and outbound network allowlists derived from permission grants. These features are part of Terminal Sandboxing, which the page labels \"(Preview)\" and \"currently in preview on macOS / Linux.\"",
+    "supported": true
+  }
+}

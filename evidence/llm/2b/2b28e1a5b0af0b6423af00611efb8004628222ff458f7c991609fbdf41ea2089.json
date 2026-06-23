@@ -1,0 +1,12 @@
+{
+  "key": "2b28e1a5b0af0b6423af00611efb8004628222ff458f7c991609fbdf41ea2089",
+  "label": "judge:anthropic-claude-code-remote-agent-control-remote-control-server-mode",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The process stays running in your terminal in server mode, waiting for remote connections.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes \"server mode\" as a way to run Claude Code Remote Control: running `claude remote-control` keeps the process running \"in server mode,\" and the page references server mode multiple times (e.g., \"Unlike `claude remote-control` (server mode)\" and \"use [server mode] to run multiple concurrent sessions\"). Remote Control is described as \"in research preview,\" so the broader feature including server mode is in preview.",
+    "supported": true
+  }
+}

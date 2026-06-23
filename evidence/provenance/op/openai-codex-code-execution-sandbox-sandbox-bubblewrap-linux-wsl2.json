@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-sandbox-bubblewrap-linux-wsl2",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "On **Linux and WSL2**, install `bubblewrap` with your package manager first:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "bubblewrap (Linux/WSL2)",
+    "page_content_hash": "a2874f3663d1ffff8a4a358a5655f24befed86560a036d3ce901760dfd3fb4f5",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-sandbox-bubblewrap-linux-wsl2",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/concepts/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

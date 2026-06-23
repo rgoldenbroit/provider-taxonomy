@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-code-review-automatic-reviews-of-every-pull-request",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you want Codex to review every pull request automatically, turn on **Automatic reviews** in [Codex settings](https://chatgpt.com/codex/settings/code-review). Codex will post a review whenever someone opens a new PR for review, without needing an `@codex review` comment.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Automatic reviews of every pull request",
+    "page_content_hash": "7cce45075cb7960d0362e86cde5cc0f29efa0f8689b9b3dad51131b5beacf77d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-code-review-automatic-reviews-of-every-pull-request",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/integrations/github.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

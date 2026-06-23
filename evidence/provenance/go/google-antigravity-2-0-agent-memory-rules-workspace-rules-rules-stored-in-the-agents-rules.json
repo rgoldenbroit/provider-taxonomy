@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-agent-memory-rules-workspace-rules-rules-stored-in-the-agents-rules",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Workspace rules live in the .agents/rules folder of your workspace or git root.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Workspace Rules: Rules stored in the .agents/rules folder of a workspace or git root.",
+    "page_content_hash": "5136b065f0fdce7ae4a9fbfbc623a5b920682c8c1cbf318e99a4725dbc59a1ef",
+    "primary_capability_id": "agent-memory",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-agent-memory-rules-workspace-rules-rules-stored-in-the-agents-rules",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -7,7 +7,7 @@
     "lifecycle_status": "sunset",
     "model": "claude-opus-4-8",
     "name": "Sora",
-    "page_content_hash": "33168015f534184e91836ab2f13896bc34baa7017fdb9172c6712d9e66962c3e",
+    "page_content_hash": "72606307efc33407f683af51491ed026bff699f2d6f182c22810ac281b9c826e",
     "primary_capability_id": "image-video-generation",
     "provider": "OpenAI",
     "reconfirmed": true,

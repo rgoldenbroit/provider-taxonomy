@@ -1,0 +1,12 @@
+{
+  "key": "9a4bd25fb94570062bae0db1e4ed67b961a2f83db7f1114c049a312e9e45671b",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows-watch-the-run-progress-view-of-r",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Run `/workflows` at any time to list running and completed workflows, then select one to open its progress view. ... The progress view shows each phase with its agent counts, token totals, and elapsed time.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a \"Watch the run\" section describing the progress view of running and completed workflows, showing each phase with agent counts, token totals, and elapsed time \u2014 matching the claim. Dynamic workflows are described as available on all paid plans, indicating an active offering.",
+    "supported": true
+  }
+}

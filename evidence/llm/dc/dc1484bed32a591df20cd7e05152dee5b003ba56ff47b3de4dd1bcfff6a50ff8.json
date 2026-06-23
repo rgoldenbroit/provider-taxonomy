@@ -1,0 +1,12 @@
+{
+  "key": "dc1484bed32a591df20cd7e05152dee5b003ba56ff47b3de4dd1bcfff6a50ff8",
+  "label": "judge:openai-codex-mcp-connectors-codex-for-linear-use-the-cli-recommended-add-the-linear-mcp-serve",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Use the CLI (recommended)\\n\\nIf you have the CLI installed, run:\\n\\n```bash\\ncodex mcp add linear --url https://mcp.linear.app/mcp\\n```\\n\\nThis prompts you to sign in with your Linear account and connect it to Codex.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the CLI (recommended) method to add the Linear MCP server via the `codex mcp add linear` command, which prompts the user to sign in with their Linear account, matching the claim.",
+    "supported": true
+  }
+}

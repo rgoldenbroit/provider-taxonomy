@@ -1,0 +1,12 @@
+{
+  "key": "6abff0b3fb30afb421f16052f78c1e0f9ae02a32602ade8008b9d186b11c8dc7",
+  "label": "judge:openai-codex-code-execution-sandbox-permission-profiles-extends",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `extends` when a profile is mostly the same as a built-in or another named profile.",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes the `extends` feature in Codex permission profiles, which lets a profile inherit from a built-in or another named profile. This substantiates the claim that OpenAI (Codex) offers `extends`. The page notes the permission profiles feature is in Beta and under active development.",
+    "supported": true
+  }
+}

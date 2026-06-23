@@ -1,0 +1,12 @@
+{
+  "key": "6ffa0ea80eaed3bd0ef7d1c7cabe95094c2bd1fd2800b6d565ce900d571eca47",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents-delegation-hierarchy",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Delegation Hierarchy and Limits\n\nSubagents can invoke their own subagents, enabling multiple layers of delegation and hierarchical team structures.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated section titled \"Delegation Hierarchy and Limits\" describing how subagents can invoke their own subagents up to a maximum nesting depth of 10 levels. This is part of the Antigravity 2.0 (Google) Subagents documentation, directly substantiating the claim.",
+    "supported": true
+  }
+}

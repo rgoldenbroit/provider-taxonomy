@@ -1,0 +1,12 @@
+{
+  "key": "6d6dff6c9a25708fd4c75bf4e5ad36b2efb0f9817118d9ad4d84b26a7bbf7660",
+  "label": "judge:openai-codex-agent-evals-observability-tracing-sdk-level-or-per-run-tracing-controls",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If you need less tracing, use the SDK-level or per-run tracing controls rather than removing all observability from the workflow.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes SDK-level and per-run tracing controls within the Agents SDK, and presents tracing as built-in and enabled by default, indicating an active offering.",
+    "supported": true
+  }
+}

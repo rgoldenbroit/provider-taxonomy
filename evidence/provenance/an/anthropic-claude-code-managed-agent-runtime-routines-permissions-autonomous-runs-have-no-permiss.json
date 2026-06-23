@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-routines-permissions-autonomous-runs-have-no-permiss",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Routines run autonomously as full Claude Code cloud sessions: there is no permission-mode picker and no approval prompts during a run. ... Under Permissions, enable **Allow unrestricted branch pushes** for any repository where Claude should be able to push to existing branches instead of only `claude/`-prefixed ones.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Permissions \u2014 autonomous runs have no permission-mode picker or approval prompts; branch-push scope configurable",
+    "page_content_hash": "374c2554f988783fc07c14bd5df15bc029a42b22e2e75ea9d1e5ece99d4755bf",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-routines-permissions-autonomous-runs-have-no-permiss",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/routines.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

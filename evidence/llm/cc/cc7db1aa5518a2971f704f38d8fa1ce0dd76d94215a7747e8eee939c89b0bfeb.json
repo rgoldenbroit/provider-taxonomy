@@ -1,0 +1,12 @@
+{
+  "key": "cc7db1aa5518a2971f704f38d8fa1ce0dd76d94215a7747e8eee939c89b0bfeb",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-subagent-lifecycle-and-states-auto-wake",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Auto-Wake**: If an idle agent receives a message, it is automatically re-awakened to process the new information.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Auto-Wake as a feature of Antigravity 2.0 subagents' inter-agent communication, with no indication it is in preview or deprecated.",
+    "supported": true
+  }
+}

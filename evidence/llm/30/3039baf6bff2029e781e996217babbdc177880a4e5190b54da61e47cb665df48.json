@@ -1,0 +1,12 @@
+{
+  "key": "3039baf6bff2029e781e996217babbdc177880a4e5190b54da61e47cb665df48",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-asynchronous-subagents-fan-out-using-parallel-sub",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents are an excellent way to parallelize complex tasks and preserve the context of your main agent. Instead of executing every step serially, an agent can delegate tasks\u2014such as running tests or performing extensive codebase searches\u2014to dedicated subagents. This architecture frees the parent agent to continue working on other tasks in parallel",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Antigravity's asynchronous subagents, which allow a parent agent to delegate tasks to multiple concurrent subagents running in parallel (\"A parent agent can invoke multiple subagents at any time\"), substantiating the fan-out-via-parallel-subagents claim. The core subagent capability is described as a current feature (only the /teamwork-preview multi-agent orchestration is in preview).",
+    "supported": true
+  }
+}

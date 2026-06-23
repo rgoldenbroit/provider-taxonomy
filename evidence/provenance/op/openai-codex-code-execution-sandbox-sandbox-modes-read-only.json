@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-sandbox-modes-read-only",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`read-only`: Codex can inspect files, but it can't edit files or run commands without approval.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "read-only",
+    "page_content_hash": "a2874f3663d1ffff8a4a358a5655f24befed86560a036d3ce901760dfd3fb4f5",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-sandbox-modes-read-only",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/concepts/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

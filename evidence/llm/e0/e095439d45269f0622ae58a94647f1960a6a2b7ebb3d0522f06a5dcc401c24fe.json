@@ -1,0 +1,12 @@
+{
+  "key": "e095439d45269f0622ae58a94647f1960a6a2b7ebb3d0522f06a5dcc401c24fe",
+  "label": "judge:openai-codex-remote-agent-control-github-integration-enable-automatic-reviews-for-every-pull-req",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If you want Codex to review every pull request automatically, turn on **Automatic reviews** in [Codex settings](https://chatgpt.com/codex/settings/code-review). Codex will post a review whenever someone opens a new PR for review, without needing an `@codex review` comment.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex code review's \"Enable automatic reviews\" feature, which automatically reviews every pull request when turned on. This is presented as a currently available feature with setup instructions.",
+    "supported": true
+  }
+}

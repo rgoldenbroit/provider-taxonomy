@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-remote-control-enable-remote-control-for-all-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Enable Remote Control for all sessions\nBy default, Remote Control only activates when you explicitly run `claude remote-control`, `claude --remote-control`, or `/remote-control`. To enable it automatically for every interactive session, run `/config` inside Claude Code and set **Enable Remote Control for all sessions** to `true`.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Enable Remote Control for all sessions",
+    "page_content_hash": "d6cdb51f7bb0bdb6a2da91057b344b390611e361efda95b64cd3fb3b05110f70",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-agent-control-remote-control-enable-remote-control-for-all-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/remote-control.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

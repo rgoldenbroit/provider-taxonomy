@@ -1,0 +1,12 @@
+{
+  "key": "4927f1f547a64f6893b33fd6c8df6319bee54788e8ec5fe685bf6d7002e2593a",
+  "label": "judge:openai-codex-agent-memory-agents-md",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expectations, no matter which repository you open.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes AGENTS.md as a Codex feature: Codex reads AGENTS.md files before doing any work, layers global then project-specific instructions with a precedence/merge order, rebuilds the chain once per run, and inherits global defaults from the Codex home directory. All elements of the claim are substantiated. No indication of deprecation, so status is active.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "7e7a370e62b3641afa7efa8166cecbd37ba341392b659b7d20e946025ec8d610",
+  "label": "judge:openai-codex-subagents-orchestration-subagent-workflows-triggering-subagent-workflows-must-be-ex",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex only spawns subagents when you explicitly ask it to. Because each subagent does its own model and tool work, subagent workflows consume more tokens than comparable single-agent runs.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex subagent workflows and explicitly states that subagents are only spawned when explicitly requested, never automatically. The page also says current Codex releases enable subagent workflows by default, indicating active availability.",
+    "supported": true
+  }
+}

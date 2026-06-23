@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-code-review-p0-and-p1-issues-prioritization",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "In GitHub, Codex flags only P0 and P1 issues so review comments stay focused on high-priority risks.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "P0 and P1 issues prioritization",
+    "page_content_hash": "7cce45075cb7960d0362e86cde5cc0f29efa0f8689b9b3dad51131b5beacf77d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-code-review-p0-and-p1-issues-prioritization",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/integrations/github.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

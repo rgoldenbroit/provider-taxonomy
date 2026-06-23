@@ -1,0 +1,12 @@
+{
+  "key": "80228fdf258a3af32b4ce47d7235453c4ee0a12ab270d7386624b93b944c142d",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-sidecars-runtime-data",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Runtime data produced by sidecars are stored in `~/.gemini/antigravity/sidecar_data/\n/`.",
+    "lifecycle_status": "active",
+    "rationale": "The page, hosted on google's antigravity.google domain, includes a \"Runtime Data\" section describing how runtime data produced by sidecars is stored, including data/, logs/, and events/ subdirectories. This substantiates that Runtime Data is a described feature.",
+    "supported": true
+  }
+}

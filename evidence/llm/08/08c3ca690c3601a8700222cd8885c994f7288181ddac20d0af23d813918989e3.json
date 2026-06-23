@@ -1,0 +1,12 @@
+{
+  "key": "08c3ca690c3601a8700222cd8885c994f7288181ddac20d0af23d813918989e3",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Desktop scheduled tasks](/en/desktop-scheduled-tasks): run locally on your machine",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Desktop scheduled tasks as a scheduling option that runs on the user's machine with access to local files and tools. The comparison table lists Desktop as \"Runs on: Your machine\" with \"Access to local files: Yes,\" and the text says \"Use Desktop tasks when you need access to local files and tools.\" The offering is presented as currently available.",
+    "supported": true
+  }
+}

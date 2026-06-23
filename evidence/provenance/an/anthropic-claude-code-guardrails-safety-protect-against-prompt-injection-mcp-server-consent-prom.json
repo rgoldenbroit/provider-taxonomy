@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-protect-against-prompt-injection-mcp-server-consent-prom",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Trust verification**: First-time codebase runs and new MCP servers require trust verification",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP server consent prompt before using a new MCP server",
+    "page_content_hash": "375ebc7f7a0e27b478bf25c4fb76f6d3bcdc17a576e746b7628160af75f9def4",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-protect-against-prompt-injection-mcp-server-consent-prom",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

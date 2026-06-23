@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-code-review-claude-md-shared-project-instructions-read-a",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`CLAUDE.md`**: shared project instructions that Claude Code uses for all tasks, not just reviews. Code Review reads it as project context and flags newly introduced violations as nits.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "CLAUDE.md shared project instructions read as context",
+    "page_content_hash": "685651f2297a5b794eae7615a910bb273c8d4385908a47a8c139187f6c76180b",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-code-review-claude-md-shared-project-instructions-read-a",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/code-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "c3ba2619c26f94c727b28d93d299d0b475886f7b82f6be181119dcc74433c9e0",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-in-slack",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code in Slack brings the power of Claude Code directly into your Slack workspace. When you mention `@Claude` with a coding task, Claude automatically detects the intent and creates a Claude Code session on the web, allowing you to delegate development work without leaving your team conversations.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes Claude Code in Slack, including delegating coding tasks by mentioning @Claude, async/parallel task execution (\"Kick off coding tasks in Slack while you continue other work\"), context gathering (\"Context gathering: From threads... From channels...\"), and message actions (\"Message actions: View Session, Create PR, Retry as Code, Change Repo\"). All claim elements are substantiated. The page presents it as a currently available offering with current limitations, indicating active status.",
+    "supported": true
+  }
+}

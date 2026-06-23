@@ -1,0 +1,12 @@
+{
+  "key": "b7d7e6dc9d7c9f74e99161ea55c05f810b44b43b4005945b9969eb24864735dd",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-cross-platform-command-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Cross-Platform Command & Path Matching\nAntigravity ensures your permission rules work flawlessly whether you are developing on macOS, Linux, or Windows. On macOS and Linux, paths use standard forward slashes (`/`). On Windows, Antigravity automatically normalizes paths prior to rule evaluation by stripping drive letters (e.g., `C:`) and converting all backslashes (`\\`) to forward slashes (`/`).",
+    "lifecycle_status": "active",
+    "rationale": "The page (Google Antigravity docs) describes a \"Cross-Platform Command & Path Matching\" feature that works across macOS, Linux, and Windows, including normalization of Windows paths (stripping drive letters, converting backslashes to forward slashes). This substantiates the claim of cross-platform command and path normalization. It is presented as a current capability with no deprecation or preview qualifier.",
+    "supported": true
+  }
+}

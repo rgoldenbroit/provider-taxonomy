@@ -1,0 +1,12 @@
+{
+  "key": "fccc504e0bae8fce7884b2ac7db277c9a0c84bc499de66dc764f4b29b758db1d",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-cost-tracking",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| Cost tracking       | Spend limits, rate limits, and usage attribution     | Anthropic only | [Costs](/en/costs)                       |",
+    "lifecycle_status": "active",
+    "rationale": "The page lists \"Cost tracking\" as a usage visibility capability for Claude Code, describing spend limits, rate limits, and usage attribution, available for Anthropic-provider deployments. This substantiates the claim that Anthropic offers cost tracking for monitoring spend. The page also references token monitoring via OpenTelemetry export of sessions and tokens, and a usage dashboard. The page presents these as currently available features with no indication of deprecation.",
+    "supported": true
+  }
+}

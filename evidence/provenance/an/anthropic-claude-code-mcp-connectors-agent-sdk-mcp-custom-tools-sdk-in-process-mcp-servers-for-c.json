@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-sdk-in-process-mcp-servers-for-c",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### SDK MCP servers\\n\\nDefine custom tools directly in your application code instead of running a separate server process.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "SDK / in-process MCP servers for custom tools defined in application code",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-sdk-in-process-mcp-servers-for-c",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

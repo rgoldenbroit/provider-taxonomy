@@ -1,0 +1,12 @@
+{
+  "key": "9de6b21ac56110518bd24377956cb2905fd791003f45658a17e519e9ce212d39",
+  "label": "judge:openai-codex-guardrails-safety-codex-security-threat-model-editable-scan-time-security-context",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Find likely vulnerabilities** by using a repo-specific threat model and real code context.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes a repo-specific threat model used during scanning to find vulnerabilities and rank/triage findings, and references \"Improving the threat model\" which \"explains how to tune scope, attack surface, and criticality assumptions\" \u2014 confirming it is editable and used as scan-time security context. Codex Security cloud is stated to be in research preview.",
+    "supported": true
+  }
+}

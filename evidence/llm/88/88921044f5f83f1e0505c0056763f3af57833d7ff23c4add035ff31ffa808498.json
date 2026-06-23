@@ -1,0 +1,12 @@
+{
+  "key": "88921044f5f83f1e0505c0056763f3af57833d7ff23c4add035ff31ffa808498",
+  "label": "judge:openai-codex-remote-agent-control-remote-connections-pick-up-work-from-another-signed-in-codex-a",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can continue work from another signed-in Codex App device that supports remote control.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section \"Pick up work from another device\" describing the ability to continue work from another signed-in Codex App device that supports remote control, directly matching the claim. It is presented as a current feature with no indication of preview or retirement.",
+    "supported": true
+  }
+}

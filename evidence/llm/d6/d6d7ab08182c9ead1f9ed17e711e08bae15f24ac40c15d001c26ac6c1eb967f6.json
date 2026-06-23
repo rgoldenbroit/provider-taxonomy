@@ -1,0 +1,12 @@
+{
+  "key": "d6d7ab08182c9ead1f9ed17e711e08bae15f24ac40c15d001c26ac6c1eb967f6",
+  "label": "judge:openai-codex-subagents-orchestration-orchestration-approvals-and-sandbox-controls-subagents-inhe",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Approvals and sandbox controls\n\nSubagents inherit your current sandbox policy.\n\nIn interactive CLI sessions, approval requests can surface from inactive agent threads even while you are looking at the main thread.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated \"Approvals and sandbox controls\" section stating subagents inherit the current sandbox policy and that approval requests can surface from inactive agent threads, matching the claim exactly. Current Codex releases enable subagent workflows by default, indicating active status.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "1301e9964f2f8e2c8619bf4733e1b42b44b128c71744e1f5de99a8f464495a31",
+  "label": "judge:openai-codex-guardrails-safety-sandbox-mode",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Sandbox mode**: What Codex can do technically (for example, where it can write and whether it can reach the network) when it executes model-generated commands.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Sandbox mode as one of two Codex security control layers, defining it as what Codex can do technically (where it can write and whether it can reach the network), matching the claim verbatim. It is described as a current, in-use feature.",
+    "supported": true
+  }
+}

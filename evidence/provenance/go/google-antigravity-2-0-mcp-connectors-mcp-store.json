@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-mcp-store",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Connections are managed directly through the built-in MCP Store. 1. **Access the Store:** Open the MCP Store panel within the \"...\" dropdown at the top of the editor's side panel. 2. **Browse & Install:** Select any of the supported servers from the list and click Install. 3. **Authenticate:** Follow the on-screen prompts to securely link your accounts (where applicable).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP Store",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-mcp-store",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

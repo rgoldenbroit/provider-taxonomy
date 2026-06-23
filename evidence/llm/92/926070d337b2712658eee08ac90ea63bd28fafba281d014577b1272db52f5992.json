@@ -1,0 +1,12 @@
+{
+  "key": "926070d337b2712658eee08ac90ea63bd28fafba281d014577b1272db52f5992",
+  "label": "judge:anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allowedmcpserver",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`allowedMcpServers` and `deniedMcpServers` are lists of entries. Each entry is an object with a single key that identifies servers by their URL, their command, or their name",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents both allowedMcpServers (allowlist) and deniedMcpServers (denylist) as configuration mechanisms for Claude Code, including their behavior, matching rules, and example configurations. This is current documented functionality with no indication of deprecation.",
+    "supported": true
+  }
+}

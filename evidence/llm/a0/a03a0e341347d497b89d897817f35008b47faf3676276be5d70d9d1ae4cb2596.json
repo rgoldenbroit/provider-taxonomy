@@ -1,0 +1,12 @@
+{
+  "key": "a03a0e341347d497b89d897817f35008b47faf3676276be5d70d9d1ae4cb2596",
+  "label": "judge:google-antigravity-2-0-remote-agent-control-asynchronous-subagents-parent-control-interrupt-or-k",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Parent Control**: The parent agent can also interrupt a subagent (by sending a message) or kill it entirely.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Parent Control\" allowing a parent agent to interrupt a subagent or kill it entirely, matching the claim. It is described as a current capability within the Antigravity 2.0 subagent system.",
+    "supported": true
+  }
+}

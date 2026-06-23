@@ -1,0 +1,12 @@
+{
+  "key": "978bdda62edac742d8a843ab470346456755653f7111f7288663d72dc6d25617",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-on-the-web-security-and-isolation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Security and isolation](#security-and-isolation): how sessions are isolated",
+    "lifecycle_status": "preview",
+    "rationale": "The page lists \"Security and isolation\" as a section describing how sessions are isolated within Claude Code on the web, which is described as in research preview. This substantiates the claim.",
+    "supported": true
+  }
+}

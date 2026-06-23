@@ -1,0 +1,12 @@
+{
+  "key": "accf252aed12f91705ab3b76b93c52a52bb3345246ec462b6a72bc2c9a1945ad",
+  "label": "judge:openai-codex-code-execution-sandbox-network-access-control-website-access",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Network access is controlled through destination rules that apply to scripts, programs, and subprocesses spawned by commands. When command network access is already enabled, turn on the `network_proxy` feature to constrain that traffic to the network policy you configure.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes controlling website/network access for Codex through configurable network policies, domain allowlists/denylists, web search controls, and the network_proxy feature. This substantiates the claim that OpenAI offers the ability to control website access. The capability is presented as a current, configurable feature with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

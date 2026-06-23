@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-subagents-orchestration-subagent-lifecycle-and-states",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Subagent Lifecycle and States\n\nSubagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work. At any point, a subagent exists in one of three states:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Subagent Lifecycle and States",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-subagents-orchestration-subagent-lifecycle-and-states",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

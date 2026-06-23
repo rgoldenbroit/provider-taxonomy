@@ -1,0 +1,12 @@
+{
+  "key": "dcbe4c3ca3bde0ff369b68c8ca3a6eeb2d8d2c806b92395543060ed40f0b7a81",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-integration",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity supports the Model Context Protocol (MCP), a standard that allows the editor to securely connect to your local tools, databases, and external services.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Antigravity's MCP Integration, confirming support for connecting the editor to local tools, databases, and external services. It also documents both local process (stdio transport via `command`) and remote host (Streamable HTTP via `serverUrl`) configurations, matching all aspects of the claim. The page presents the feature as currently available with a built-in MCP Store.",
+    "supported": true
+  }
+}

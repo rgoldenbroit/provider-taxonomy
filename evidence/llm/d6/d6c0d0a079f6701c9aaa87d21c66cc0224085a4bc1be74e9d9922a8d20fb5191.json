@@ -1,0 +1,12 @@
+{
+  "key": "d6c0d0a079f6701c9aaa87d21c66cc0224085a4bc1be74e9d9922a8d20fb5191",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing-interaction-with-strict-mode-e",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When strict mode is enabled, sandboxing is automatically activated with network access denied. This ensures maximum protection when operating in a strict environment.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a section titled \"Interaction with Strict Mode\" which explicitly states that enabling strict mode automatically activates sandboxing with network access denied, directly substantiating the claim.",
+    "supported": true
+  }
+}

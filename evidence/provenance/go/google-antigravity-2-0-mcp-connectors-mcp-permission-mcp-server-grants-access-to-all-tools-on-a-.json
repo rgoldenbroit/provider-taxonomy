@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-mcp-permission-mcp-server-grants-access-to-all-tools-on-a-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`mcp` | `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` | Matches exact MCP tools or all tools on a specified server (applies equally to local `mcpl` servers and remote connections).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "mcp(server/*): grants access to all tools on a specified MCP server",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-mcp-permission-mcp-server-grants-access-to-all-tools-on-a-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

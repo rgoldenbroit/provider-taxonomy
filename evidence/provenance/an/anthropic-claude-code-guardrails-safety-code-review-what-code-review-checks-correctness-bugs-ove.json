@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-code-review-what-code-review-checks-correctness-bugs-ove",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "By default, Code Review focuses on correctness: bugs that would break production, not formatting preferences or missing test coverage.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "What Code Review checks: correctness bugs over formatting/test coverage",
+    "page_content_hash": "685651f2297a5b794eae7615a910bb273c8d4385908a47a8c139187f6c76180b",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-code-review-what-code-review-checks-correctness-bugs-ove",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/code-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

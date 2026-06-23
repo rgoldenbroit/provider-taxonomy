@@ -1,0 +1,12 @@
+{
+  "key": "862279fab0680e37ef5513f08e54e738e02d5ba17b2c5a0714f003e2d96e4c51",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-acceptedits-accept-edits-mode-auto-appr",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`acceptEdits` mode lets Claude create and edit files in your working directory without prompting. The status bar shows `\u23f5\u23f5 accept edits on` while this mode is active. In addition to file edits, `acceptEdits` mode auto-approves common filesystem Bash commands: `mkdir`, `touch`, `rm`, `rmdir`, `mv`, `cp`, and `sed`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes acceptEdits mode auto-approving file edits and common filesystem Bash commands within the working directory, matching the claim. It is presented as a currently available mode.",
+    "supported": true
+  }
+}

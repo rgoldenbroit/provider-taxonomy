@@ -1,0 +1,12 @@
+{
+  "key": "dbea48fcd330e21bf7b0f3c908d58de4f984b452274ba06798f1accf62d8f5ab",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-subagents-specialized-instructions-and-knowledge-v",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes subagents that use custom/focused system prompts to specialize behavior for specific domains, with the body of a subagent file becoming the system prompt that guides behavior. This substantiates the claim of specialized instructions and knowledge via tailored system prompts. The feature is described as currently available (active), e.g., \"The subagent is available immediately.\"",
+    "supported": true
+  }
+}

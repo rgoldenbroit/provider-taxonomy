@@ -1,0 +1,12 @@
+{
+  "key": "8d0506c5f2d90347c9c78c500e7c13ba9239ed01b21b7491ec773c46962267aa",
+  "label": "judge:openai-codex-guardrails-safety-auto-review-automatic-approval-reviews",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto-review replaces manual approval at the sandbox boundary with a separate reviewer agent.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes OpenAI Codex's \"Auto-review\" feature, which replaces manual approval at the sandbox boundary with a reviewer agent \u2014 matching the claim of \"Automatic approval reviews.\" The page presents it as a current/available feature with configuration details and an open-source implementation, indicating active status.",
+    "supported": true
+  }
+}

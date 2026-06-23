@@ -1,0 +1,12 @@
+{
+  "key": "9a1c9b8329464b86ce9b99d0948c47ac2a77c08658cd54a0a8db9590d1ea3082",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin-review-independence-reviews-run",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The end-of-turn and commit reviews run as a separate Claude call with a fresh context and a security-focused prompt: the reviewer starts from the diff, has no investment in the original approach, and is instructed only to find problems.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Review independence and limits\" that explicitly states the end-of-turn and commit reviews run as a separate Claude call with a fresh context, matching the claim. The plugin is described as available on all plans, indicating active status.",
+    "supported": true
+  }
+}

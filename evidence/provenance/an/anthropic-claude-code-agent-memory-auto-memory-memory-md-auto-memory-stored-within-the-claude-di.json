@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-memory-auto-memory-memory-md-auto-memory-stored-within-the-claude-di",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Auto memory: Notes Claude writes for itself based on your corrections and preferences, stored per git repository under `~/.claude/projects/`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Auto memory stored within the .claude directory",
+    "page_content_hash": "dfa8676d7b3e17afe2e5100172cfdc54ac9444d3e220bd7856db7ce687406931",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-memory-auto-memory-memory-md-auto-memory-stored-within-the-claude-di",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/glossary.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

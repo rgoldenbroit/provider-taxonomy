@@ -1,0 +1,12 @@
+{
+  "key": "855b345490bfe706a12a42ca5d2f2dce864acbf8bcab176dfbb62dbb9a41f8fe",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-subagents-asynchronous-execution-model",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Asynchronous execution model\n\nTo maximize developer velocity, Antigravity CLI leverages a multi-threaded asynchronous execution architecture.",
+    "lifecycle_status": "active",
+    "rationale": "The page, hosted on Google's antigravity.google domain, explicitly describes an \"Asynchronous execution model\" section for the Antigravity CLI, detailing its multi-threaded asynchronous execution architecture. This directly substantiates the claim. The page describes it as a current capability with no indication of preview or retirement status.",
+    "supported": true
+  }
+}

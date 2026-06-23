@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-subagents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "To maximize developer velocity, Antigravity CLI leverages a multi-threaded asynchronous execution architecture. Instead of locking your terminal session during long-running builds, massive codebase search sweeps, or complex multi-file edits, the primary agent delegates these operations to parallel **Subagents** or background **Tasks**.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Subagents",
+    "page_content_hash": "ffdd536cfc738228ed6a3b1a2666e11a63a33f4b9af9005d90c9710ce5ace21f",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-subagents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

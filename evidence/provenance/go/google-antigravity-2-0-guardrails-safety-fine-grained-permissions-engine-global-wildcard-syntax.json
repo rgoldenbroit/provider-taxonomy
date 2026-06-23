@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-global-wildcard-syntax",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Global Wildcard Syntax (\\n*\\n):\\nAcross all supported action types (e.g.,\\nread_file(*)\\n,\\ncommand(*)\\n,\\nmcp(*)\\n), passing the global wildcard\\n*\\nmatches all targets within that entire action namespace.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Global Wildcard Syntax (*)",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-global-wildcard-syntax",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

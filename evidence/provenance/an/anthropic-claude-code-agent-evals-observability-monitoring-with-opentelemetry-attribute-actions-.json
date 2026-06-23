@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-attribute-actions-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`OTEL_METRICS_INCLUDE_RESOURCE_ATTRIBUTES` | Include keys from `OTEL_RESOURCE_ATTRIBUTES` as attributes on metric datapoints | `true`",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Attribute actions to your end users (per-user audit trail via resource attributes)",
+    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-attribute-actions-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

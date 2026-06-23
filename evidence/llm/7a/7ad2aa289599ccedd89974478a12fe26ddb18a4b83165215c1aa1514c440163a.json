@@ -1,0 +1,12 @@
+{
+  "key": "7ad2aa289599ccedd89974478a12fe26ddb18a4b83165215c1aa1514c440163a",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-subagents-tool-restrictions-via-per-agent-tools-fr",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`tools` | No | [Tools](#available-tools) the subagent can use. Inherits all tools if omitted.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the per-agent `tools` frontmatter field that restricts which tools a subagent can use, including a companion `disallowedTools` field. It also explicitly lists \"Enforce constraints by limiting which tools a subagent can use.\" This substantiates the claim of tool restrictions via the per-agent `tools` frontmatter field.",
+    "supported": true
+  }
+}

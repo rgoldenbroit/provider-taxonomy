@@ -1,0 +1,12 @@
+{
+  "key": "9c98ceaebe900904300782053421b59dbe3060dc5279819e3d16c8cc07ce4c94",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-auto-allow-mode-runs-sandboxed-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Auto-allow mode**: Bash commands will attempt to run inside the sandbox and are automatically allowed without requiring permission.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude Code's sandboxed Bash tool with an Auto-allow mode that runs sandboxed Bash commands automatically without requiring permission, matching the claim. It is presented as a built-in, current feature.",
+    "supported": true
+  }
+}

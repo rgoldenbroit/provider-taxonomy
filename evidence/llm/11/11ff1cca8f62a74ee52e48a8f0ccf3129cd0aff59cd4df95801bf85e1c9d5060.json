@@ -1,0 +1,12 @@
+{
+  "key": "11ff1cca8f62a74ee52e48a8f0ccf3129cd0aff59cd4df95801bf85e1c9d5060",
+  "label": "judge:openai-codex-guardrails-safety-sandbox-mode-network-policy-allowlist-first-domain-rules-wher",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "#### Network policy\n\nDomain rules are allowlist-first:\n\n- Exact hosts match only themselves.\n- `*.example.com` matches subdomains such as `api.example.com`, but not\n  `example.com`.\n- `**.example.com` matches both the apex and subdomains.\n- A global `*` allow rule matches any public host that is not denied. Treat `*`\n  as broad network access and prefer scoped rules when you can.\n- `deny` always wins over `allow`, and global `*` is only valid for allow rules.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated \"Network policy\" section describing Codex's domain rules as allowlist-first, explicitly stating that \"deny always wins over allow.\" This directly substantiates the claim. The feature is described as a current configuration option with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

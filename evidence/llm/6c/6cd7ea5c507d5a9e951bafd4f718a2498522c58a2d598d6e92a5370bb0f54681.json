@@ -1,0 +1,12 @@
+{
+  "key": "6cd7ea5c507d5a9e951bafd4f718a2498522c58a2d598d6e92a5370bb0f54681",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-allowlist-denylist-denylist-server-side-enforcement-via",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The denylist is maintained and enforced using the Google Superroots\u2019s BadUrlsChecker service (See documentation). When the browser attempts to navigate to a URL, the hostname is checked against the server-side denylist via RPC.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a Denylist that is maintained and enforced server-side via Google Superroots's BadUrlsChecker service, with hostname checks performed via RPC. This directly substantiates the claim. The page presents it as a current, operational feature.",
+    "supported": true
+  }
+}

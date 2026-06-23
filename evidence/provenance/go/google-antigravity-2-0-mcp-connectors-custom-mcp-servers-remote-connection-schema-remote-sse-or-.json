@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-custom-mcp-servers-remote-connection-schema-remote-sse-or-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`serverUrl`** (string): URL for remote servers for Streamable HTTP transport.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Remote Connection Schema: remote SSE or websocket-based MCP connections must define the serverUrl field",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-custom-mcp-servers-remote-connection-schema-remote-sse-or-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

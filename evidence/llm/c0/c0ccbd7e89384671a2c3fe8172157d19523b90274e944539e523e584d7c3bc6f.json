@@ -1,0 +1,12 @@
+{
+  "key": "c0ccbd7e89384671a2c3fe8172157d19523b90274e944539e523e584d7c3bc6f",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-agent-teams-mailbox-peer-to-peer-messaging-between",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| **Mailbox**   | Messaging system for communication between agents                       |",
+    "lifecycle_status": "preview",
+    "rationale": "The page lists \"Mailbox\" as a component of agent teams, described as a \"Messaging system for communication between agents,\" directly substantiating the claim of a Mailbox / peer-to-peer messaging system between agents. The page also notes teammates \"message each other directly\" and \"any teammate can message any other by that name.\" Agent teams are explicitly described as \"experimental and disabled by default,\" indicating a preview/beta lifecycle stage.",
+    "supported": true
+  }
+}

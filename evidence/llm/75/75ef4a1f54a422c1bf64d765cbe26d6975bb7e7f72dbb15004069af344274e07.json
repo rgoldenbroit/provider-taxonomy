@@ -1,0 +1,12 @@
+{
+  "key": "75ef4a1f54a422c1bf64d765cbe26d6975bb7e7f72dbb15004069af344274e07",
+  "label": "judge:openai-codex-subagents-orchestration-custom-agents-built-in-agents-default-worker-and-explorer",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex ships with built-in agents:\n\n- `default`: general-purpose fallback agent.\n- `worker`: execution-focused agent for implementation and fixes.\n- `explorer`: read-heavy codebase exploration agent.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that Codex ships with built-in agents named default, worker, and explorer, matching the claim. The page describes these as currently available (subagent workflows are enabled by default in current Codex releases).",
+    "supported": true
+  }
+}

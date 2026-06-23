@@ -1,0 +1,12 @@
+{
+  "key": "2da00c40b46a4d3ac0e4dbcc3413f9abc8fca32a900a83cebe0cea2caf192da9",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-permission",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| `mcp` | `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` | Matches exact MCP tools or all tools on a specified server (applies equally to local `mcpl` servers and remote connections). Using `mcp(*)` matches any tool. | **Ask** |",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the `mcp` permission action as a supported action in Antigravity's permission engine, governing agent access to MCP tools, explicitly applying to both local `mcpl` servers and remote connections. This matches the claim. It is presented as a current supported action with no deprecation/sunset note.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-save-the-workflow-for-reuse-as-a",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When Claude writes a workflow for a task you'll repeat, you can save that run's script as a command. A process like a review you run on every branch then runs the same orchestration each time.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Save the workflow for reuse as a slash command",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-save-the-workflow-for-reuse-as-a",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

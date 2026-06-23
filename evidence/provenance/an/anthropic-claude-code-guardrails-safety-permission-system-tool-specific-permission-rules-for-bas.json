@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-permission-system-tool-specific-permission-rules-for-bas",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Tool-specific permission rules\n\n### Bash ... ### PowerShell ... ### Read and Edit",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool-specific permission rules for Bash, PowerShell, Read/Edit",
+    "page_content_hash": "63942d8d40c517c833ae3893ecd1ac05cf6b4cc764cccbceda94ecb9f09f3679",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-permission-system-tool-specific-permission-rules-for-bas",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

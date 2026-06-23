@@ -1,0 +1,12 @@
+{
+  "key": "758ac318109f7ea957c563cca3eba0b34f6cb7dae90af4cb3c13623e451d426d",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-code-review",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| Code Review            | \u2705 Supported     | Same automated PR reviews as github.com                                                                                      |",
+    "lifecycle_status": "active",
+    "rationale": "The page's feature table explicitly lists Code Review as supported for GHES with the note that it provides the same automated PR reviews as github.com, directly substantiating the claim.",
+    "supported": true
+  }
+}

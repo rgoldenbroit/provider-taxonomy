@@ -1,0 +1,12 @@
+{
+  "key": "d248a664b93df8db47fcfa78165aa0b08b864504e0893e60ce974dabbfb3ccdc",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin-on-each-file-edit-fast-determin",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[On each file edit](#on-each-file-edit): a fast pattern match for risky calls, with no model call",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the per-edit layer of the security-guidance plugin as a fast, deterministic pattern match with no model call. It states \"When Claude writes to a file, the plugin scans the new content for known risky patterns. This is a pattern match with no model call\" and \"The per-edit check is a deterministic string match with no model involved.\" The plugin is presented as available on all plans, indicating active status.",
+    "supported": true
+  }
+}

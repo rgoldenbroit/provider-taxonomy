@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-agent-teams-shared-task-list-with-self-coordinatio",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Tasks have three states: pending, in progress, and completed. Tasks can also depend on other tasks: a pending task with unresolved dependencies cannot be claimed until those dependencies are completed.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Shared task list with self-coordination: work items teammates claim and complete, with task states and dependencies",
+    "page_content_hash": "63355f3b44d32f0cbc0641e9a3341c835632be04a8c2759c2a476470938e608a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-agent-teams-shared-task-list-with-self-coordinatio",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-teams.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -125,6 +125,12 @@
   .b-scaffold { background:color-mix(in srgb,var(--purple) 13%,transparent); color:var(--purple);
     border:1px dashed color-mix(in srgb,var(--purple) 45%,transparent); }
   .celltree { margin-top:6px; }
+  /* comparative-insight callout (the per-axis "so what") */
+  .insight { border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:8px;
+    padding:8px 11px; margin:8px 0; font-size:13px; line-height:1.5; }
+  .insight b { color:var(--accent); font-weight:650; }
+  .insights-wrap { margin:10px 0 4px; }
+  .insights-wrap .insight { margin:6px 0; }
   /* inline function breakdown on the Overview matrix (spans the full grid width) */
   .covbreak { grid-column:1 / -1; margin:2px 0 8px; }
   .catbr.accent { border-color:color-mix(in srgb,var(--accent) 40%,var(--line)); background:var(--accent-soft); }
@@ -371,6 +377,7 @@ function exploreResultsHtml(){
     + (compare ? ` · comparing providers side by side` : '')
     + (treeFn ? ` · expand any offering for its category → feature → sub-feature breakdown` : '')
     + (exActive() ? ` · <a onclick="clearExplore()">clear filters</a>` : '') + `</div>`;
+  if (treeFn) html += insightsHtml(capList[0].id);
   html += `<div class="pivotwrap"><div class="pivot" style="grid-template-columns:${cols}">`;
   html += `<div class="colhead">capability</div>` +
     provs.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
@@ -633,10 +640,18 @@ function featuresSection(p){
    Shared by the Overview inline breakdown and the Explore compare path. */
 function functionBreakdownHtml(capId){
   const cols = `repeat(${providers.length}, minmax(0,1fr))`;
-  return `<div class="ovtreegrid" style="grid-template-columns:${cols}">`
+  return insightsHtml(capId)
+    + `<div class="ovtreegrid" style="grid-template-columns:${cols}">`
     + providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('')
     + providers.map(pr=>cell(capId, pr, null, {tree:true})).join('')
     + `</div>`;
+}
+/* "Key distinctions" — the per-axis comparison_note insights for a function */
+function insightsHtml(capId){
+  const axes = (catsByFunction[capId]||[]).flatMap(c => c.feature_axis_ids||[]);
+  const items = axes.map(ax=>capById[ax]).filter(c=>c && c.comparison_note)
+    .map(c=>`<div class="insight"><b>${esc(c.name)}</b> — ${esc(c.comparison_note)}</div>`).join('');
+  return items ? `<div class="insights-wrap"><h3 class="small muted">Key distinctions across providers</h3>${items}</div>` : '';
 }
 /* jump to Explore pre-filtered to a function (used by the hero CTA) */
 function exploreFunction(capId){
@@ -657,7 +672,8 @@ function axisCompareSection(p){
       rows += `<div class="card" style="border-left-color:${provVar(prov)};cursor:default"><div class="row"><span class="name muted">${esc(prov)}</span> ${isAbsent?'<span class="badge b-absent">&#9711; none</span>':'<span class="cov-pill unknown">? not verified</span>'}</div></div>`;
     }
   }
-  return `<h3 class="small muted" style="margin-top:16px">Same axis, other providers — ${esc(cap?.name||axis)}</h3>${rows}`;
+  const note = cap?.comparison_note ? `<div class="insight"><b>How they differ</b> — ${esc(cap.comparison_note)}</div>` : '';
+  return `<h3 class="small muted" style="margin-top:16px">Same axis, other providers — ${esc(cap?.name||axis)}</h3>${note}${rows}`;
 }
 
 /* "why we believe this" — the provenance receipt from the evidence ledger */

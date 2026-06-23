@@ -1,0 +1,12 @@
+{
+  "key": "d0d07aa3e7dbb51bcc49191256ffd5a604ccd006acc49ee2b0c1dffec0d7ee8b",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-allowlist-denylist-allowlist-local-editable-text-file-i",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The allowlist is a local text file that you can edit to explicitly trust specific URLs. ... The allowlist is initialized with just localhost, and can be edited at anytime.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Google Antigravity IDE's Allowlist feature as a local editable text file initialized with localhost, matching the claim.",
+    "supported": true
+  }
+}

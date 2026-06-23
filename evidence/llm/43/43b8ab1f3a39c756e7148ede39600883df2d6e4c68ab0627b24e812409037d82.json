@@ -1,0 +1,12 @@
+{
+  "key": "43b8ab1f3a39c756e7148ede39600883df2d6e4c68ab0627b24e812409037d82",
+  "label": "judge:openai-codex-mcp-connectors-codex-for-linear-connect-linear-for-local-tasks-mcp-access-linear",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Connect Linear for local tasks (MCP)\n\nIf you're using the Codex app, CLI, or IDE Extension and want Codex to access Linear issues locally, configure Codex to use the Linear Model Context Protocol (MCP) server.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly contains a section \"Connect Linear for local tasks (MCP)\" describing how Codex (OpenAI) can access Linear issues locally via the app, CLI, or IDE Extension using the Linear MCP server, matching the claim. It is presented as a currently available feature with setup instructions.",
+    "supported": true
+  }
+}

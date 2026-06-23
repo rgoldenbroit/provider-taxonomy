@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-dev-container-persist-authentication-and-settings-a",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Persist authentication and settings across rebuilds\n\nBy default, the container's home directory is discarded on rebuild, so engineers must sign in again each time. Claude Code stores its authentication token, user settings, and session history under [`~/.claude`](/en/claude-directory). Mount a named volume at that path to keep this state across rebuilds.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Persist authentication and settings across rebuilds via a named volume at ~/.claude",
+    "page_content_hash": "c2646f3035b13e1507cfb9f3fd524bcfdf11657a356584fb18d1e8e221d1de2a",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-dev-container-persist-authentication-and-settings-a",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/devcontainer.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

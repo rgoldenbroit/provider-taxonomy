@@ -1,0 +1,12 @@
+{
+  "key": "c73c09998ea990e05944b5b35fbd47e5709ba10162ff13eface48b0aa8d92d7e",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-system-deny-rules-prevent-tool-use",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Deny** rules prevent Claude Code from using the specified tool.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Deny rules as a permission mechanism that prevents Claude Code from using a specified tool, directly substantiating the claim. It is presented as a current feature.",
+    "supported": true
+  }
+}

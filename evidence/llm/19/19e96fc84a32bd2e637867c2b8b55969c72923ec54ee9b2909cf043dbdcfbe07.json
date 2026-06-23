@@ -1,0 +1,12 @@
+{
+  "key": "19e96fc84a32bd2e637867c2b8b55969c72923ec54ee9b2909cf043dbdcfbe07",
+  "label": "judge:openai-codex-code-execution-sandbox-permission-profiles-filesystem-rules",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A profile is a named policy that combines filesystem rules, which define what commands can read or write, with network rules, which define which destinations commands can reach.",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes Codex permission profiles that combine filesystem rules to define what commands can read or write, with a dedicated \"Filesystem permissions\" section and `[permissions.<name>.filesystem]` configuration. The page states permission profiles are \"Beta. Permission profiles are under active development and may change.\"",
+    "supported": true
+  }
+}

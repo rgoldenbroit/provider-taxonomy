@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-code-review-verification-bar-requires-evidence-before-po",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Verification bar**: require evidence before a class of finding is posted. For example, \"behavior claims need a `file:line` citation in the source, not an inference from naming\" cuts false positives that would otherwise cost the author a round trip.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Verification bar requires evidence before posting a finding class",
+    "page_content_hash": "685651f2297a5b794eae7615a910bb273c8d4385908a47a8c139187f6c76180b",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-code-review-verification-bar-requires-evidence-before-po",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/code-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

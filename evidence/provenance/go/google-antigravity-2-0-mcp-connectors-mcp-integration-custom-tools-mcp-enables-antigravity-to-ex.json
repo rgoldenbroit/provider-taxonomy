@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-mcp-integration-custom-tools-mcp-enables-antigravity-to-ex",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### 2. Custom Tools\n\nMCP enables Antigravity to execute specific, safe actions defined by your connected servers.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Custom Tools: MCP enables Antigravity to execute specific, safe actions defined by connected servers",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-mcp-integration-custom-tools-mcp-enables-antigravity-to-ex",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

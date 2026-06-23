@@ -1,0 +1,12 @@
+{
+  "key": "6ecd6f9fd604a478a4665def7c68eaa82c145508d8edcfd4e356ca27497d452d",
+  "label": "judge:google-antigravity-2-0-remote-agent-control-asynchronous-subagents-background-tasks-subagents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents run asynchronously in the background, allowing the parent agent to delegate a task and immediately resume its own work.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Google Antigravity's subagents feature, which run asynchronously in the background and can be delegated tasks. This substantiates the claim of background tasks & subagents. The core subagent functionality is described as active (pre-packaged built-in subagents, invoke/define tools), though an advanced multi-agent teamwork feature is noted as preview/Ultra-only.",
+    "supported": true
+  }
+}

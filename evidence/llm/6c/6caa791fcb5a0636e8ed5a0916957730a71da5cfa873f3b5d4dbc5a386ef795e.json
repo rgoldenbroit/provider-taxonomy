@@ -1,0 +1,12 @@
+{
+  "key": "6caa791fcb5a0636e8ed5a0916957730a71da5cfa873f3b5d4dbc5a386ef795e",
+  "label": "judge:anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-status-indicator",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "After the cloud session launches, your CLI's prompt input shows a status indicator while the cloud session works:",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes a status indicator shown in the CLI prompt input while the ultraplan cloud session works, including specific status states. Ultraplan itself is in research preview, so the status indicator feature is part of a preview offering.",
+    "supported": true
+  }
+}

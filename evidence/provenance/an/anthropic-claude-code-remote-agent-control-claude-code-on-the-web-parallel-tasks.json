@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-claude-code-on-the-web-parallel-tasks",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Parallel tasks",
+    "page_content_hash": "1e8772429e95ced5b23b7b8f9b1190af0faa97692ba04a2a8ac89189b748e0d6",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-remote-agent-control-claude-code-on-the-web-parallel-tasks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

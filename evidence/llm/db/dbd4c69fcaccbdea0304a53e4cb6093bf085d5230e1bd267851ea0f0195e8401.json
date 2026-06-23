@@ -1,0 +1,12 @@
+{
+  "key": "dbd4c69fcaccbdea0304a53e4cb6093bf085d5230e1bd267851ea0f0195e8401",
+  "label": "judge:anthropic-claude-code-agent-memory-auto-memory-memory-md",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto memory: Notes Claude writes for itself based on your corrections and preferences, stored per git repository under `~/.claude/projects/`. All worktrees of the same repository share one auto memory directory. The first 200 lines or 25 KB of the `MEMORY.md` index loads at the start of every session.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Auto memory as MEMORY.md notes Claude writes for itself based on corrections/preferences, persisted per git repository and auto-loaded at the start of every session, matching the claim. No deprecation or preview status is indicated.",
+    "supported": true
+  }
+}

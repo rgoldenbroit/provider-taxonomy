@@ -1,0 +1,12 @@
+{
+  "key": "063ea91f934a8dbc36fb3659375e5b9185821cf49a443b111bc114164a2c3d83",
+  "label": "judge:anthropic-claude-code-mcp-connectors-mcp-installation-scopes-managed-configuration-to-deploy-mcp",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Administrators can also deploy servers at the enterprise level via [managed configuration](#managed-mcp-configuration).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that administrators can deploy MCP servers at the enterprise level via managed configuration, directly substantiating the claim. It is presented as a current capability with no deprecation or sunset language.",
+    "supported": true
+  }
+}

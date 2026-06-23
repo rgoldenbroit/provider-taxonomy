@@ -1,0 +1,12 @@
+{
+  "key": "698ab850604fddc6a96e7b1c6f2bf0723bef7f809a1f8fe0097b1ea154ce16cb",
+  "label": "judge:anthropic-claude-code-agent-memory-claude-md-claude-local-md-gitignored-file-for-private-per-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For private per-project preferences that shouldn't be checked into version control, create a `CLAUDE.local.md` at the project root. It loads alongside `CLAUDE.md` and is treated the same way. Add `CLAUDE.local.md` to your `.gitignore` so it isn't committed",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes CLAUDE.local.md as a file for private per-project preferences that loads alongside CLAUDE.md and should be added to .gitignore, matching the claim exactly.",
+    "supported": true
+  }
+}

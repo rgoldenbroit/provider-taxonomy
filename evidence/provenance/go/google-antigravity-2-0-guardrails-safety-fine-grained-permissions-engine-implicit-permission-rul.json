@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-implicit-permission-rul",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Implicit Permission Rules\n\n*   **Write implies Read:** Allowing `write_file` on a path automatically grants `read_file` on that path.\n*   **Deny Read implies Deny Write:** Denying `read_file` on a path immediately blocks `write_file` on that path.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Implicit Permission Rules (write implies read, deny-read implies deny-write)",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-implicit-permission-rul",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

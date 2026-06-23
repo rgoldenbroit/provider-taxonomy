@@ -1,0 +1,12 @@
+{
+  "key": "923b1fda474703468eae07d0e0050550929f62c5f4c08f9e5bc230a386bd45e8",
+  "label": "judge:openai-codex-mcp-connectors-plugins-marketplace-source-publish-share-plugins-via-a-r",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can share plugins by publishing them through a marketplace source, such as a repo marketplace for a project or team.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes sharing plugins by publishing them through a marketplace source, including a repo marketplace, matching the claim. It is presented as a current capability with setup guidance referenced.",
+    "supported": true
+  }
+}

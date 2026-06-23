@@ -1,0 +1,12 @@
+{
+  "key": "b66d5d07827f003363d20393993cba2d58c67c8ab8b84ca57aa3b891e46ec428",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-agent-teams-choose-a-display-mode-in-process-in-ma",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent teams support two display modes: * **In-process**: all teammates run inside your main terminal... * **Split panes**: each teammate gets its own pane... Requires tmux, or iTerm2.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Choose a display mode\" feature with two modes: in-process (teammates run in the main terminal) and split panes (via tmux or iTerm2). This matches the claim. The feature is part of agent teams, which the page states are experimental and disabled by default, so lifecycle is preview/experimental.",
+    "supported": true
+  }
+}

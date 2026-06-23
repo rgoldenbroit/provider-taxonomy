@@ -1,0 +1,9 @@
+{
+  "key": "d0c6e31c90e8882fd7868669db20b30f3f6649df140d39d9bc5a74d0cc4fe7bd",
+  "url": "https://antigravity.google/assets/docs/browser/allowlist-denylist.md",
+  "value": {
+    "status": 200,
+    "text": "---\nslug: allowlist-denylist\nsection: Antigravity IDE\ntitle: Allowlist / Denylist\npath:\n  - Antigravity IDE\n  - Browser\n  - Allowlist / Denylist\n---\n\n# Allowlist / Denylist\n\nThe browser uses a two-layer security system to control which URLs can be accessed:\n- **Denylist** - Deny dangerous/malicious URLs\n- **Allowlist** - Explicitly allow trusted URLs\n\n## How It Works\n\n### Denylist\nThe denylist is maintained and enforced using the Google Superroots\u2019s BadUrlsChecker service (See documentation).\nWhen the browser attempts to navigate to a URL, the hostname is checked against the server-side denylist via RPC.\n\n**NOTE:** If the server is unavailable, access is denied by default.\n\n### Allowlist\n\nThe allowlist is a local text file that you can edit to explicitly trust specific URLs.\n\n![Allowlist](assets/image/docs/browser-allowlist.png)\n\nThe allowlist is initialized with just localhost, and can be edited at anytime.\n\nWhen the browser attempts to navigate to a non-allowlisted URL, it will prompt you with an \u201calways allow\u201d button, which if clicked will add the URL to the allowlist and enable the browser to open and interact with the web page. An example situation is shown below:\n\n![Always Allow](assets/image/docs/always-allow-url.png)\n\nYou can also add/remove URLS from the allowlist manually. However, the denylist always takes precedence: you cannot allowlist a URL that appears on the denylist.",
+    "url": "https://antigravity.google/assets/docs/browser/allowlist-denylist.md"
+  }
+}

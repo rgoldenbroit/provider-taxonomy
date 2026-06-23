@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-memory-claude-md-deploy-organization-wide-claude-md-centrally-man",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Organizations can deploy a centrally managed CLAUDE.md that applies to all users on a machine. This file cannot be excluded by individual settings.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Deploy organization-wide CLAUDE.md \u2014 centrally managed CLAUDE.md applied to all users on a machine that cannot be excluded",
+    "page_content_hash": "e59c8bd2d2206ba050fcfc2a51a0bb61092da32d54780636ccf3667139bd2712",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-memory-claude-md-deploy-organization-wide-claude-md-centrally-man",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/memory.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

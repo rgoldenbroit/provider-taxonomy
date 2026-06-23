@@ -1,0 +1,12 @@
+{
+  "key": "b0eb0936dfc93420a2570f15a6bdf831e63978765f50d8816ec466c09691c493",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-on-the-web-work-with-sessions",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Work with sessions](#work-with-sessions): reviewing, sharing, archiving, deleting",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes \"Work with sessions\" as a section covering reviewing, sharing, archiving, and deleting sessions within Claude Code on the web. The page states Claude Code on the web is in research preview for Pro, Max, and Team users, indicating preview lifecycle status.",
+    "supported": true
+  }
+}

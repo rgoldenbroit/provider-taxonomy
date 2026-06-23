@@ -1,0 +1,12 @@
+{
+  "key": "197ef855de1a5da14c302261e6f176addad95e0efc853d7c4dc3f7801293f8d1",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-read-only-commands-run-without-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The claim states that \"Read-only commands run without a permission prompt.\" The page discusses sandboxing modes (auto-allow and regular permissions), filesystem isolation, and network isolation, but it does not contain any statement that read-only commands specifically run without a permission prompt. The page describes auto-allow mode where sandboxed commands run automatically, and various rules about which commands still prompt, but there is no mention of a \"read-only commands\" classification that bypasses permission prompts. The concept of read-only commands running without prompting is not asserted anywhere on the page.",
+    "supported": false
+  }
+}

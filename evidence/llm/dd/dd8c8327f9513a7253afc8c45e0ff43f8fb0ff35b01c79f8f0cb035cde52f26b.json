@@ -1,0 +1,12 @@
+{
+  "key": "dd8c8327f9513a7253afc8c45e0ff43f8fb0ff35b01c79f8f0cb035cde52f26b",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Code Review analyzes your GitHub pull requests and posts findings as inline comments on the lines of code where it found issues. A fleet of specialized agents examine the code changes in the context of your full codebase, looking for logic errors, security vulnerabilities, broken edge cases, and subtle regressions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Code Review as an automated PR review service using multi-agent (\"fleet of specialized agents\") analysis to flag logic errors, security vulnerabilities, and regressions. It is configurable via repository instruction files (CLAUDE.md and REVIEW.md). The page states it is \"in research preview, available for Team and Enterprise subscriptions,\" indicating preview lifecycle status.",
+    "supported": true
+  }
+}

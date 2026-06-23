@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-debug-logging-claude-debug-verbose-mode-shows-ev",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Verbose mode shows every tool call, file read, and intermediate step",
+    "page_content_hash": "80b09be17fae1745380c3652eb613cd41483a3ef6534c44be95489bc8ff4f03b",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-agent-evals-observability-debug-logging-claude-debug-verbose-mode-shows-ev",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/debug-your-config.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

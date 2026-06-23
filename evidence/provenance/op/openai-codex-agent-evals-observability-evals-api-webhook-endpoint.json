@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-evals-observability-evals-api-webhook-endpoint",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "To receive updates when a run succeeds, fails, or is canceled, create a webhook endpoint and subscribe to the `eval.run.succeeded`, `eval.run.failed`, and `eval.run.canceled` events. See the [webhooks guide](https://developers.openai.com/api/docs/guides/webhooks) for more details.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "webhook endpoint",
+    "page_content_hash": "809e1f577b8418671ea6538b0318f86fcc14fc7a596cb92680d8c85c17ce4814",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-evals-observability-evals-api-webhook-endpoint",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/evals.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

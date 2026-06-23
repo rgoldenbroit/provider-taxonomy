@@ -1,0 +1,12 @@
+{
+  "key": "08beeedd9ab265349654787882fd4263c551a8c6cb24b78b5d952860e0bc7f56",
+  "label": "judge:openai-codex-guardrails-safety-permission-profiles-built-in-permission-profiles-read-only-worksp",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex includes three built-in permission profiles:\n\n- `:read-only` keeps local command execution read-only.\n- `:workspace` allows writes inside the active workspace roots and system temp directories.\n- `:danger-full-access` removes local sandbox restrictions and should be used\n  only when that broad access is intentional.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly lists three built-in permission profiles\u2014read-only, workspace, and danger-full-access\u2014matching the claim. The page also states at the top that permission profiles are in Beta and under active development.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "79bdf41d15f03d37fb703e6acd6470532814eda4c946143c7f6fd15d44ab629f",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-artifact-review-policy-request-review-always-halt-for-e",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Request Review (Recommended)\\n\\nThe agent always halts and requests your explicit approval before proceeding with proposed changes.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes \"Request Review\" as one of two Artifact Review policies, stating the agent always halts and requests explicit approval before proceeding, which directly matches the claim. It is presented as a recommended, available option with no indication of deprecation.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-memory-agents-md",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expectations, no matter which repository you open.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "AGENTS.md",
+    "page_content_hash": "676796e239622cb1a997d20d0361b8bce204f834659779d2c498b52fc8553a3e",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-memory-agents-md",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-md.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

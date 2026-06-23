@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-read-agent-traces-",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Distributed tracing exports spans that link each user prompt to the API requests and tool executions it triggers, so you can view a full request as a single trace in your tracing backend.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Read agent traces \u2014 each agent loop step becomes an inspectable span",
+    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-read-agent-traces-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

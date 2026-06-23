@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Antigravity CLI integrates a native **Terminal Sandbox** to restrict destructive shell operations or unauthorized remote network calls.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Terminal Sandbox (CLI)",
+    "page_content_hash": "0a9b459989ce6933c933f3179de9293d08e026c2a5d223bb08fdbb68ee623a97",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-sandbox.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

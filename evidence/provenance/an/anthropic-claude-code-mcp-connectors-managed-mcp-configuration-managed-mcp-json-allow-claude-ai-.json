@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allow-claude-ai-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "To load those connectors alongside the servers in `managed-mcp.json`, set `\"allowAllClaudeAiMcps\": true` in a [managed settings source](/en/admin-setup#decide-how-settings-reach-devices). Requires Claude Code v2.1.149 or later.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Allow claude.ai connectors alongside the managed set via allowAllClaudeAiMcps",
+    "page_content_hash": "cce9e286735b9ef670a6953c986c701f68ba14ad7da894f19cbab72953458d1b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allow-claude-ai-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/managed-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

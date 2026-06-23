@@ -1,0 +1,12 @@
+{
+  "key": "b017b39f22091df94a045eadeedb10b77779bd049d51fbff9123570d3b1cc686",
+  "label": "judge:openai-codex-mcp-connectors-mcp-model-context-protocol",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP (Model Context Protocol) is the standard way to connect Codex to external tools and context providers.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated MCP section describing Model Context Protocol as the standard way to connect Codex to external tools and context providers, matching the claim verbatim. It is presented as a current, available capability.",
+    "supported": true
+  }
+}

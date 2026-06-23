@@ -1,0 +1,12 @@
+{
+  "key": "64f204db4eaa5166e1625a1ed06b22b0802acf8f0efd93e9c3d14075e6660e29",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments-manual-setup-with-a-custom-setup-script-for",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Manual setup\n\nIf your development setup is more complex, you can also provide a custom setup script.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a \"Manual setup\" section explicitly stating that for more complex development setups, you can provide a custom setup script, directly substantiating the claim. No deprecation or sunset language is present.",
+    "supported": true
+  }
+}

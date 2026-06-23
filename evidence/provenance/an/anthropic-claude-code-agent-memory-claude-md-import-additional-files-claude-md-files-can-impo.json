@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-memory-claude-md-import-additional-files-claude-md-files-can-impo",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "CLAUDE.md files can import additional files using `@path/to/import` syntax. Imported files are expanded and loaded into context at launch alongside the CLAUDE.md that references them.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Import additional files \u2014 CLAUDE.md files can import other files using @path syntax, expanded into context at launch",
+    "page_content_hash": "e59c8bd2d2206ba050fcfc2a51a0bb61092da32d54780636ccf3667139bd2712",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-memory-claude-md-import-additional-files-claude-md-files-can-impo",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/memory.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

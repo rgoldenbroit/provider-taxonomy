@@ -1,0 +1,12 @@
+{
+  "key": "9b42a023159e6b3c668449763fac19adaf0d7c01f985032531530c083350bfe5",
+  "label": "judge:anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-add-a-remote-http-server-recomme",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Option 1: Add a remote HTTP server\\n\\nHTTP servers are the recommended option for connecting to remote MCP servers. This is the most widely supported transport for cloud-based services.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes adding a remote HTTP server as Option 1 for installing MCP servers in Claude Code, stating HTTP is the recommended transport. This matches the claim.",
+    "supported": true
+  }
+}

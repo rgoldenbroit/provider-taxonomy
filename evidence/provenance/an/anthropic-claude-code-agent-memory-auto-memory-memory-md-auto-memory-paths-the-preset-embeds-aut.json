@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-memory-auto-memory-memory-md-auto-memory-paths-the-preset-embeds-aut",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "auto-memory paths \u2014 the preset embeds auto-memory paths as part of the per-session environment context in the system prompt",
+    "page_content_hash": "dfa8676d7b3e17afe2e5100172cfdc54ac9444d3e220bd7856db7ce687406931",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-agent-memory-auto-memory-memory-md-auto-memory-paths-the-preset-embeds-aut",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/glossary.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

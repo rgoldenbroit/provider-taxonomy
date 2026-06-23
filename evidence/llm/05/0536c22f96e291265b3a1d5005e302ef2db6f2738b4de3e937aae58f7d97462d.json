@@ -1,0 +1,12 @@
+{
+  "key": "0536c22f96e291265b3a1d5005e302ef2db6f2738b4de3e937aae58f7d97462d",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-permission-mcp-server-grants-access-to-all-tools-on-a-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`mcp` | `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` | Matches exact MCP tools or all tools on a specified server (applies equally to local `mcpl` servers and remote connections).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents the `mcp(server/*)` permission target which matches all tools on a specified server, matching the claim. It is presented as a supported action with no indication of deprecation.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "9966cd854719ba99434f5147096285317ab6d03ae0e34083077af5db8df571ab",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-interactive-approvals-proceed-in-sandbox-a-permiss",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes a Fine-Grained Permissions Engine with allow/deny/ask lists and actions including `unsandboxed`, but there is no mention of a \"proceed-in-sandbox\" permission preset that auto-proceeds tool actions when run inside the sandbox. The page references sandboxing in the context of the `unsandboxed` action (which runs commands outside container isolation) and a Sandbox Customization link, but nothing describes an auto-proceed/auto-approve preset tied to running inside the sandbox. The claimed offering is not present on the page.",
+    "supported": false
+  }
+}

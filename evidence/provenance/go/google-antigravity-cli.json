@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Antigravity CLI",
-    "page_content_hash": "348959bf63d8dbdcda5e2a6861d9bb707601b36139cfd382eae3ce6c9363f38e",
+    "page_content_hash": "8fe978d83264878fae85f62834816e0b43618be71c87b36626d5610f683d8a23",
     "primary_capability_id": "agentic-coding",
     "provider": "Google",
     "reconfirmed": true,

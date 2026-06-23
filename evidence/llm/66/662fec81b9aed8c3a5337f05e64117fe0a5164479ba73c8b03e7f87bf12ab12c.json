@@ -1,0 +1,12 @@
+{
+  "key": "662fec81b9aed8c3a5337f05e64117fe0a5164479ba73c8b03e7f87bf12ab12c",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-store-supported-servers-registry-of-supported-server-i",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Supported Servers\n\nThe MCP Store currently features integrations for:\n\n- Airweave\n- Arize\n- AlloyDB for PostgreSQL\n- Atlassian\n- BigQuery\n- Bigtable Admin remote MCP\n- Chrome DevTools\n- ClickHouse\n- Cloud SQL for MySQL\n- Cloud SQL for PostgreSQL\n- Cloud SQL for SQL Server\n- Cloud SQL Managed MCP\n- Dart\n- Dataplex\n- Figma Dev Mode MCP\n- Firebase\n- GitHub\n- GitLab Orbit\n- Harness\n- Heroku\n- Linear\n- Locofy\n- Looker\n- MCP Toolbox for Databases\n- MongoDB\n- Neon\n- Netlify\n- Notion\n- PayPal\n- Perplexity Ask\n- Pinecone\n- PostHog\n- Postman\n- Prisma\n- Redis\n- Sequential Thinking\n- SonarQube\n- Spanner\n- Stripe\n- Supabase",
+    "lifecycle_status": "active",
+    "rationale": "The page documents a \"Supported Servers\" section listing MCP Store integrations, including Atlassian, BigQuery, GitHub, Linear, Notion, plus many other third-party services and Google services (e.g., BigQuery, Spanner, Firebase). The page describes it as \"currently features integrations for,\" indicating it is active.",
+    "supported": true
+  }
+}

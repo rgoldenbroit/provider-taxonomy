@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-rules",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Use rules to control which commands Codex can run outside the sandbox. ... `allow`: Run the command outside the sandbox without prompting. `prompt`: Prompt before each matching invocation. `forbidden`: Block the request without prompting.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Rules",
+    "page_content_hash": "2a6a615f3199c50fba120cc1142219b7f8882946522609d9255e8ad4ee30bb8c",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-rules",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/rules.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

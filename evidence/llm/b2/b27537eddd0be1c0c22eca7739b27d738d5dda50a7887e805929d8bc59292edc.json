@@ -1,0 +1,12 @@
+{
+  "key": "b27537eddd0be1c0c22eca7739b27d738d5dda50a7887e805929d8bc59292edc",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-code-review-plugin-marketplaces-organizations-can-ho",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Host plugin marketplaces on your GHES instance to distribute internal tooling across your organization.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes plugin marketplaces on GHES, stating organizations can host plugin marketplaces on their GHES instance to distribute internal tooling. The feature table also lists \"Plugin marketplaces\" as \u2705 Supported.",
+    "supported": true
+  }
+}

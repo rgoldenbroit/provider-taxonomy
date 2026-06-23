@@ -1,0 +1,12 @@
+{
+  "key": "411f7f064766737609f307c39aceb9ea185315683697dad6a2b74ecf3121c1d4",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-implicit-permission-rul",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Implicit Permission Rules\n\n*   **Write implies Read:** Allowing `write_file` on a path automatically grants `read_file` on that path.\n*   **Deny Read implies Deny Write:** Denying `read_file` on a path immediately blocks `write_file` on that path.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated \"Implicit Permission Rules\" section in Antigravity 2.0 docs that explicitly describes both rules: \"Write implies Read\" and \"Deny Read implies Deny Write,\" exactly matching the claim. No deprecation or preview status is indicated for this feature.",
+    "supported": true
+  }
+}

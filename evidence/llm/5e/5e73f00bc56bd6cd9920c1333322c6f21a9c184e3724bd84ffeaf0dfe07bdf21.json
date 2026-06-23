@@ -1,0 +1,12 @@
+{
+  "key": "5e73f00bc56bd6cd9920c1333322c6f21a9c184e3724bd84ffeaf0dfe07bdf21",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-system-match-by-input-parameter-with-tool-par",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Deny and ask rules can match a top-level input parameter on any tool with `Tool(param:value)`. The rule matches when Claude calls the tool with that parameter set to that exact value.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated section titled \"Match by input parameter\" describing the `Tool(param:value)` syntax for Claude Code permission rules, directly substantiating the claim.",
+    "supported": true
+  }
+}

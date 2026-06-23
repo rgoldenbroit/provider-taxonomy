@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-containers-docker-ephemeral-sessions-create-and-des",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Ephemeral sessions create and destroy a container per user task",
+    "page_content_hash": "ddec036207d4c4f0841c5ef7c5dbbe6edfdacb6e68f60dc4a045e4eb478e1637",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-containers-docker-ephemeral-sessions-create-and-des",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

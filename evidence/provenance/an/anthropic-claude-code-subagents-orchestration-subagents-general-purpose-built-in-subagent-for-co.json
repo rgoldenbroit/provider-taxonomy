@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-subagents-general-purpose-built-in-subagent-for-co",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A capable agent for complex, multi-step tasks that require both exploration and action. ... Claude delegates to general-purpose when the task requires both exploration and modification, complex reasoning to interpret results, or multiple dependent steps.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "General-purpose: built-in subagent for complex, multi-step tasks",
+    "page_content_hash": "13f8ef3f23b8e8bc467516d292afe1397698924a52adc2c050ba7f0f8bbe66bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-subagents-general-purpose-built-in-subagent-for-co",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

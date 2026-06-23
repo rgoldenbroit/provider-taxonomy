@@ -1,0 +1,12 @@
+{
+  "key": "6bbefce48c089e82cbb087be623898ea3bf990f16be61a64e126ff66ffd435a8",
+  "label": "judge:openai-codex-code-execution-sandbox-sandbox-seatbelt-framework-macos",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "On **macOS**, sandboxing works out of the box using the built-in Seatbelt framework.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex using the built-in Seatbelt framework on macOS for sandboxing, presented as a current, out-of-the-box capability.",
+    "supported": true
+  }
+}

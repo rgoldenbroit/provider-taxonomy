@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Browse reviewed connectors in the [Anthropic Directory](https://claude.ai/directory). Directory connectors use the same MCP infrastructure as Claude Code, so you can add any remote server listed there with `claude mcp add`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Anthropic Directory & connectors",
+    "page_content_hash": "3e6883319029d9c3f38bd29e3b6267e8d55062140c07a3ad80323973460b2468",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

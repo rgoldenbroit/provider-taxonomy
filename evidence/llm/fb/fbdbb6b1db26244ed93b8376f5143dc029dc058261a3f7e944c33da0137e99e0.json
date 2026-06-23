@@ -1,0 +1,12 @@
+{
+  "key": "fbdbb6b1db26244ed93b8376f5143dc029dc058261a3f7e944c33da0137e99e0",
+  "label": "judge:openai-codex-subagents-orchestration-creating-multi-agent-workflows-codex-reply-mcp-tool-continu",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`codex-reply`**: Continue a Codex session by providing the thread ID and prompt. The `codex-reply` tool takes these properties:",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the `codex-reply` MCP tool as continuing a Codex session by providing the thread ID and prompt, matching the claim. It is presented as a currently available tool exposed by the Codex MCP server, with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

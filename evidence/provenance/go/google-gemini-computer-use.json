@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Gemini Computer Use",
-    "page_content_hash": "465dda5f59a46ca551cf8775591ade8fb36a7fb3f5286978279b77536f64bc70",
+    "page_content_hash": "18329d4905c78d4d2600f852d87bd99433e9484eb5465e1b01aabaa3f57667bd",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Google",
     "reconfirmed": true,

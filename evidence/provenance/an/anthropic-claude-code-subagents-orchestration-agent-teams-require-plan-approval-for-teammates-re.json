@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-agent-teams-require-plan-approval-for-teammates-re",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Require plan approval for teammates\n\nFor complex or risky tasks, you can require teammates to plan before implementing. The teammate works in read-only plan mode until the lead approves their approach:",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Require plan approval for teammates (read-only planning until lead approves)",
+    "page_content_hash": "63355f3b44d32f0cbc0641e9a3341c835632be04a8c2759c2a476470938e608a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-agent-teams-require-plan-approval-for-teammates-re",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-teams.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

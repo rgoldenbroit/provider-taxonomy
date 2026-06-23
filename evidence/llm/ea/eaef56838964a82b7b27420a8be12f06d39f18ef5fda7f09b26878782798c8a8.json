@@ -1,0 +1,12 @@
+{
+  "key": "eaef56838964a82b7b27420a8be12f06d39f18ef5fda7f09b26878782798c8a8",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-cost-tracking-check-usage-ring-current-context-w",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page covers admin setup for Claude Code, including usage visibility/monitoring options (usage monitoring, analytics dashboard, cost tracking), but it does not mention any \"Check usage ring\" feature for showing current context window usage and plan usage across surfaces. The offering named in the claim does not appear on the page.",
+    "supported": false
+  }
+}

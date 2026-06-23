@@ -1,0 +1,12 @@
+{
+  "key": "d00f50364594dbff6df05a42b073a5ed24b4da0d6b796a2150e0f1dc3d1e7e45",
+  "label": "judge:anthropic-claude-code-remote-agent-control-move-tasks-between-web-and-terminal-connect-from-your",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "See [Connect from your terminal](/en/web-quickstart#connect-from-your-terminal) for the `/web-setup` walkthrough.",
+    "lifecycle_status": "preview",
+    "rationale": "The page references \"Connect from your terminal\" as a documented section for the `/web-setup` walkthrough, part of Claude Code on the web (an Anthropic offering). The overall feature is described as being in research preview.",
+    "supported": true
+  }
+}

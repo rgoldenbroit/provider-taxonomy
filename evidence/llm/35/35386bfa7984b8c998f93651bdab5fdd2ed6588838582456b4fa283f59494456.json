@@ -1,0 +1,12 @@
+{
+  "key": "35386bfa7984b8c998f93651bdab5fdd2ed6588838582456b4fa283f59494456",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows-have-claude-write-a-workflow-via",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Ask for a workflow in your prompt, either in your own words or by including the keyword `ultracode`, and Claude writes one for the task.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes having Claude write a workflow either by including a trigger keyword (e.g. `ultracode`) or by asking in natural language (\"use a workflow\"). It is presented as a currently available feature on paid plans.",
+    "supported": true
+  }
+}

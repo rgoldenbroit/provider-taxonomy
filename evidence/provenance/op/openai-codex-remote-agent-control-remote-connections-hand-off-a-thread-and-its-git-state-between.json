@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-remote-connections-hand-off-a-thread-and-its-git-state-between",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Handoff moves an existing thread and its Git state between your local computer and a connected remote host. Use it to start work locally, continue in a worktree on a remote computer, and bring the thread back later.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Hand off a thread and its Git state between local and remote hosts",
+    "page_content_hash": "117e536573c6eae4c5567ba35cfd64954a0e3d276e75f64d5129edd8e6214869",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-remote-connections-hand-off-a-thread-and-its-git-state-between",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/remote-connections.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

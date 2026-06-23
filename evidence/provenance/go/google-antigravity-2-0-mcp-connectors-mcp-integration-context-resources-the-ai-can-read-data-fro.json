@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-mcp-integration-context-resources-the-ai-can-read-data-fro",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### 1. Context Resources\n\nThe AI can read data from connected MCP servers to inform its suggestions.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Context Resources: the AI can read data from connected MCP servers to inform its suggestions",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-mcp-integration-context-resources-the-ai-can-read-data-fro",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

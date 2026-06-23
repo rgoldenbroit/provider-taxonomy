@@ -1,0 +1,12 @@
+{
+  "key": "dd0e2b6b6f6a15baaaaae3b92ac02dbd6507e14373a726c935b3da711d6dcc24",
+  "label": "judge:anthropic-claude-code-mcp-connectors-channels-reply-tool-for-two-way-channels-to-send-messages",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Two-way channels like chat bridges also [expose a reply tool](#expose-a-reply-tool) so Claude can send messages back.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes that two-way channels expose a reply tool so Claude can send messages back, directly substantiating the claim. The page notes Channels are in research preview, requiring Claude Code v2.1.80 or later.",
+    "supported": true
+  }
+}

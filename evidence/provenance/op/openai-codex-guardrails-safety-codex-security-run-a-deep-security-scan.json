@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-codex-security-run-a-deep-security-scan",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "[Run a deep security scan](https://developers.openai.com/codex/security/plugin/deep-scans) when you need a more comprehensive scan and can wait longer for it to finish.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Run a deep security scan",
+    "page_content_hash": "bfb3b872e30657d740ba8e7381dca775dd72795156b8dbe25b2503e75ce1447f",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-codex-security-run-a-deep-security-scan",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

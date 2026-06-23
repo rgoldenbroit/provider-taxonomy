@@ -1,0 +1,12 @@
+{
+  "key": "93fdbf9ae5f4b3ea5926d239aa04f841f3f3805a568e597be244e68496eb9545",
+  "label": "judge:openai-codex-mcp-connectors-mcp-model-context-protocol-prompts-mcp-servers-can-expose-reusable-p",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP servers can expose:\n\n- **Tools** (actions)\n- **Resources** (readable data)\n- **Prompts** (reusable prompt templates)",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that MCP servers can expose Prompts described as \"reusable prompt templates,\" directly matching the claim. It is presented as a current capability with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

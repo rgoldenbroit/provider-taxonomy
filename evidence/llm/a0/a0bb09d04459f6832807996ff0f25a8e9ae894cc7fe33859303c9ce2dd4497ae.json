@@ -1,0 +1,12 @@
+{
+  "key": "a0bb09d04459f6832807996ff0f25a8e9ae894cc7fe33859303c9ce2dd4497ae",
+  "label": "judge:anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-send-the-plan-back-to-your-term",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Send the plan back to your terminal",
+    "lifecycle_status": "preview",
+    "rationale": "The page contains a section explicitly titled \"Send the plan back to your terminal,\" describing how to approve a plan and teleport it back to the terminal for local execution. Ultraplan is described as being \"in research preview.\"",
+    "supported": true
+  }
+}

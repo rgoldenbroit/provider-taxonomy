@@ -1,0 +1,12 @@
+{
+  "key": "34f3d0061ade64eac47eb58975436b5b82471e9f9beda40bb8667a5daf84c7c4",
+  "label": "judge:openai-codex-managed-agent-runtime-automations-worktree-isolation-for-git-repository-automation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For Git repositories, each automation can run either in your local project or on a dedicated background [worktree](https://developers.openai.com/codex/app/features#worktree-support). Use worktrees when you want to isolate automation changes from unfinished local work.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes that automations in Git repositories can run on a dedicated background worktree to isolate automation changes from local work, directly substantiating the claim of worktree isolation for Git-repository automations.",
+    "supported": true
+  }
+}

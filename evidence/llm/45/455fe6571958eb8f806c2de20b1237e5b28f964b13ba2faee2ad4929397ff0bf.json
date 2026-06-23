@@ -1,0 +1,12 @@
+{
+  "key": "455fe6571958eb8f806c2de20b1237e5b28f964b13ba2faee2ad4929397ff0bf",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-custom-subagents-programmatic-definition-via-the-a",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The claim concerns programmatic definition of agents via an `agents` parameter in `query()` options \u2014 an SDK/API construct. This page describes defining subagents through Markdown files, the `/agents` command, and the `--agents` CLI flag. It does not mention a `query()` function or an `agents` parameter in query options anywhere. While it references the Agent SDK in passing, it does not describe the specific `query()` options `agents` parameter described in the claim.",
+    "supported": false
+  }
+}

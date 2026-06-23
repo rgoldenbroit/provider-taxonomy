@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-subagent-lifecycle-and-states",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Subagent Lifecycle and States ... At any point, a subagent exists in one of three states: ### 1. Running ... ### 2. Idle ... ### 3. Killed",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Subagent Lifecycle and States (Running, Idle, Killed)",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-subagent-lifecycle-and-states",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

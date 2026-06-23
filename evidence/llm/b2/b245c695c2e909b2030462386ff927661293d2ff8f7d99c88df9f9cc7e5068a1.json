@@ -1,0 +1,12 @@
+{
+  "key": "b245c695c2e909b2030462386ff927661293d2ff8f7d99c88df9f9cc7e5068a1",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-permission-mcp-server-tool-scopes-a-grant-to-a-specifi",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`mcp` | `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` | Matches exact MCP tools or all tools on a specified server (applies equally to local `mcpl` servers and remote connections). Using `mcp(*)` matches any tool.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Antigravity's permission engine, which includes the `mcp` action with target format `mcp(server/tool)` that scopes a grant to a specific tool on a specific MCP server. This is described as part of the supported actions table without preview/sunset qualifiers, indicating active status.",
+    "supported": true
+  }
+}

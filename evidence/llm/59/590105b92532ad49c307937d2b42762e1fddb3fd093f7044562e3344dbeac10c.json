@@ -1,0 +1,12 @@
+{
+  "key": "590105b92532ad49c307937d2b42762e1fddb3fd093f7044562e3344dbeac10c",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-worktree-isolation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "An isolation mode that runs Claude in a separate git worktree under `.claude/worktrees/`, enabled with the `-w` flag or `isolation: worktree` in subagent config. Changes stay on a separate branch in a separate directory, so parallel agents don't overwrite each other's files.",
+    "lifecycle_status": "active",
+    "rationale": "The glossary page has a dedicated \"Worktree isolation\" entry describing exactly this feature: running agents in separate git worktrees so parallel agents don't overwrite each other's files. No deprecation or preview status indicated.",
+    "supported": true
+  }
+}

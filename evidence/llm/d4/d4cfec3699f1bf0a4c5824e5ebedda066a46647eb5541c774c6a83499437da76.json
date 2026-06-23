@@ -1,0 +1,12 @@
+{
+  "key": "d4cfec3699f1bf0a4c5824e5ebedda066a46647eb5541c774c6a83499437da76",
+  "label": "judge:google-antigravity-2-0-agent-evals-observability-subagents-subagent-detail-view-full-screen-view",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Selecting a subagent from the panel opens a full-screen detail view. This view shows the entirety of the subagent\u2019s conversation, including its steps, thoughts, and tool execution logs.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a full-screen Subagent Detail View showing the subagent's entire conversation including steps, thoughts, and tool execution logs, matching the claim. It is presented as a current feature of the Antigravity CLI.",
+    "supported": true
+  }
+}

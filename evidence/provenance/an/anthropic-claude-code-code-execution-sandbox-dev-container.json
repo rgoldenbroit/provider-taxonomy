@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-dev-container",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container... Claude Code runs inside the container, so it sees the same files, dependencies, and tools as the rest of your project's toolchain.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Dev container",
+    "page_content_hash": "c2646f3035b13e1507cfb9f3fd524bcfdf11657a356584fb18d1e8e221d1de2a",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-dev-container",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/devcontainer.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

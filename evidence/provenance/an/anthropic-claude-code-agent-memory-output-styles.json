@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-memory-output-styles",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Output styles are saved configurations that modify Claude's system prompt. They're stored as markdown files and can be reused across sessions and projects.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Output styles",
+    "page_content_hash": "d87866276d452f731605d8fdbeba305ff667aea42b61e2b6d8fb6de10b60011c",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-memory-output-styles",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-routines-github-trigger-starts-a-new-session-automat",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A GitHub trigger starts a new session automatically when a matching event occurs on a connected repository. Each matching event starts its own session.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "GitHub trigger \u2014 starts a new session automatically when a matching repository event occurs",
+    "page_content_hash": "374c2554f988783fc07c14bd5df15bc029a42b22e2e75ea9d1e5ece99d4755bf",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-routines-github-trigger-starts-a-new-session-automat",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/routines.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

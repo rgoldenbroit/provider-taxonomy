@@ -1,0 +1,12 @@
+{
+  "key": "1377a867f40638d71f2b103328e15f56873f56c622814a1dd7f019d418b84750",
+  "label": "judge:anthropic-claude-code-guardrails-safety-protect-against-prompt-injection-context-aware-analysis-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Context-aware analysis**: Detects potentially harmful instructions by analyzing the full request",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Context-aware analysis\" as a core protection against prompt injection, describing it as detecting potentially harmful instructions by analyzing the full request, which directly matches the claim.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-sandbox-mode-dns-rebinding-protections",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "#### DNS rebinding protections\n\nBefore allowing a hostname, Codex performs a best-effort DNS and IP classification check:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "DNS rebinding protections",
+    "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-sandbox-mode-dns-rebinding-protections",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

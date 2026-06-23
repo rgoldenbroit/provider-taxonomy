@@ -1,0 +1,12 @@
+{
+  "key": "95e2310f2ff52c3a07b01b76c41f45e921ba7a103a1d16e92c8f4f00e5e379de",
+  "label": "judge:openai-codex-mcp-connectors-example-mcp-servers-openai-docs-mcp-search-and-read-openai-developer",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[OpenAI Docs MCP](https://developers.openai.com/learn/docs-mcp): Search and read OpenAI developer docs.",
+    "lifecycle_status": "active",
+    "rationale": "The page lists \"OpenAI Docs MCP\" with the description \"Search and read OpenAI developer docs,\" matching the claim. It is presented as a useful MCP server with a link, indicating it is currently available.",
+    "supported": true
+  }
+}

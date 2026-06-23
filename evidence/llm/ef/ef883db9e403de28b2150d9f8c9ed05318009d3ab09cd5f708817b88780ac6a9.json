@@ -1,0 +1,12 @@
+{
+  "key": "ef883db9e403de28b2150d9f8c9ed05318009d3ab09cd5f708817b88780ac6a9",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-hooks-pretooluse",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`PreToolUse` | Fires before a tool is executed. | Tool name (e.g., `run_command`)",
+    "lifecycle_status": "active",
+    "rationale": "The page (Google Antigravity 2.0 Hooks docs) describes PreToolUse as a supported hook event that fires before a tool is executed, including its schema, input/output fields, and examples. This substantiates that Google offers PreToolUse as part of its Antigravity hooks feature. The page presents it as a current/available capability with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

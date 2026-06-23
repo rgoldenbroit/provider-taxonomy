@@ -1,0 +1,12 @@
+{
+  "key": "b60999c48a946b3aea98f969dd784d5dcb31b33574a21f91300ba5360dee3aa2",
+  "label": "judge:openai-codex-agent-evals-observability-evals-api-eval-run",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Creating an eval run\n\nWith our test data in place, let's evaluate a prompt and see how it performs against our test criteria. Via API, we can do this by [creating an eval run](https://developers.openai.com/api/docs/api-reference/evals/createRun).",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page explicitly describes creating an eval run via the Evals API, with full code examples. However, it also states \"OpenAI is deprecating the Evals platform,\" with evals becoming read-only on October 31, 2026 and the platform scheduled to shut down on November 30, 2026 \u2014 so the offering exists but is being retired, making the lifecycle status deprecated.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "d16e937e941d1560bf015f1ae8f33a4ac5cdfd76e4125942af58a8ba62b1f79f",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-permission-system-permission-modes-including-isolat",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Only use this mode in isolated environments like containers or VMs where Claude Code cannot cause damage.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Permission modes including a `bypassPermissions` mode, and explicitly states it should only be used in isolated environments like containers or VMs, substantiating the claim.",
+    "supported": true
+  }
+}

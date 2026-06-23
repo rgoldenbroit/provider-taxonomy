@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-cost-tracking-spend-dashboard-showing-daily-api-",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Cost tracking | Spend limits, rate limits, and usage attribution | Anthropic only | [Costs](/en/costs)",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Spend dashboard showing daily API costs in dollars alongside user count",
+    "page_content_hash": "deea7de6421aabcc192a5f7936c7ec6e1c9085047b69d2962c34540b63ff4975",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-agent-evals-observability-cost-tracking-spend-dashboard-showing-daily-api-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/admin-setup.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

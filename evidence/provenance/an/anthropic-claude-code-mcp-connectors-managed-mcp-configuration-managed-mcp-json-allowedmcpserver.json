@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allowedmcpserver",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`allowedMcpServers` and `deniedMcpServers` are lists of entries. Each entry is an object with a single key that identifies servers by their URL, their command, or their name",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "allowedMcpServers / deniedMcpServers allowlists and denylists",
+    "page_content_hash": "cce9e286735b9ef670a6953c986c701f68ba14ad7da894f19cbab72953458d1b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allowedmcpserver",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/managed-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

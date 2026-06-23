@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-claude-code-in-slack",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude Code in Slack brings the power of Claude Code directly into your Slack workspace. When you mention `@Claude` with a coding task, Claude automatically detects the intent and creates a Claude Code session on the web, allowing you to delegate development work without leaving your team conversations.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code in Slack",
+    "page_content_hash": "236814d8794dfe9ff7d7f054af4c910b25cc5c40d9db9ab15ab2c0621aa8c6a0",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-agent-control-claude-code-in-slack",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/slack.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

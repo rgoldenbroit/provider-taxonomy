@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-allow-mcp-tools-with-explicit-pe",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "MCP tools require explicit permission before Claude can use them. Without permission, Claude will see that tools are available but won't be able to call them. ... Wildcards (`*`) let you allow all tools from a server without listing each one individually.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Allow MCP tools with explicit permission and allowedTools wildcards",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-allow-mcp-tools-with-explicit-pe",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

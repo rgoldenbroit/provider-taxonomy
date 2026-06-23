@@ -1,0 +1,12 @@
+{
+  "key": "6000f17e8086a5f3286ad18bf313153f80a7eb179100e8f22c01b5f5f419dcf8",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-projects-worktree-support",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Worktree Support**: Projects natively support Git worktrees, allowing agents to operate in isolated background folders.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Worktree Support as a feature of Antigravity 2.0 Projects, stating projects natively support Git worktrees. It is presented as a current feature with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

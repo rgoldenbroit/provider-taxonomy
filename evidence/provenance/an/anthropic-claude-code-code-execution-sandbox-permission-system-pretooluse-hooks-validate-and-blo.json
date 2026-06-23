@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-permission-system-pretooluse-hooks-validate-and-blo",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Use PreToolUse hooks**: implement a hook that validates URLs in Bash commands and blocks disallowed domains",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "PreToolUse hooks validate and block tool actions such as disallowed URLs",
+    "page_content_hash": "63942d8d40c517c833ae3893ecd1ac05cf6b4cc764cccbceda94ecb9f09f3679",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-permission-system-pretooluse-hooks-validate-and-blo",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "a31f4d93be53d0b29a12749da644a01c4092cf0bc11c67824dc2d637090c236d",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin-add-custom-per-edit-patterns-vi",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Create `.claude/security-patterns.yaml` to add regex or substring rules to the [per-edit pattern check](#on-each-file-edit). These run as deterministic string matches alongside the built-in patterns",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes adding custom per-edit patterns via a security-patterns.yaml (or .yml/.json) file with regex or substring rules, matching the claim. The plugin is described as available on all plans with no deprecation notice.",
+    "supported": true
+  }
+}

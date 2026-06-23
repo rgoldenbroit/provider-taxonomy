@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-permission-system-bash-permission-rules-with-wildca",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Bash permission rules support wildcard matching with `*`. Wildcards can appear at any position in the command, including at the beginning, middle, or end... #### Compound commands Claude Code is aware of shell operators, so a rule like `Bash(safe-cmd *)` won't give it permission to run the command `safe-cmd && other-cmd`... #### Process wrappers Before matching Bash rules, Claude Code strips a fixed set of process wrappers so a rule like `Bash(npm test *)` also matches `timeout 30 npm test`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Bash permission rules with wildcards for compound commands and process wrappers",
+    "page_content_hash": "63942d8d40c517c833ae3893ecd1ac05cf6b4cc764cccbceda94ecb9f09f3679",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-permission-system-bash-permission-rules-with-wildca",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

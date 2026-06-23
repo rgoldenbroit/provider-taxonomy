@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-artifact-review-policy-request-review-always-halt-for-e",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Request Review (Recommended)\\n\\nThe agent always halts and requests your explicit approval before proceeding with proposed changes.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Request Review (always halt for explicit approval)",
+    "page_content_hash": "a79baeabb6d4630908c44d33dc888a3ff0120ae4d64540463116a7d8b0eb67f4",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-artifact-review-policy-request-review-always-halt-for-e",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/artifact-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

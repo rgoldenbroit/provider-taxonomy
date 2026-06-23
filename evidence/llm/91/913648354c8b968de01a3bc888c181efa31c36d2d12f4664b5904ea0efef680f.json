@@ -1,0 +1,12 @@
+{
+  "key": "913648354c8b968de01a3bc888c181efa31c36d2d12f4664b5904ea0efef680f",
+  "label": "judge:openai-codex-managed-agent-runtime-sites-sites-storage-d1-and-r2",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| Saved records, user progress, or game scores                   | D1, a relational database for durable structured data                         |\n| Images, documents, audio, video, or other uploads              | R2, object storage for files                                                  |",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Sites, an OpenAI/Codex feature for hosting websites, which supports durable storage via D1 (relational database) and R2 (object storage). The hosting.json example also shows \"d1\" and \"r2\" binding fields. The page states \"Sites is in preview,\" so lifecycle_status is preview.",
+    "supported": true
+  }
+}

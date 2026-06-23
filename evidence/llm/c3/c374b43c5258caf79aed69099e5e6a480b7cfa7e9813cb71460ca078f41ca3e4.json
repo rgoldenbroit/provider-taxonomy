@@ -1,0 +1,12 @@
+{
+  "key": "c374b43c5258caf79aed69099e5e6a480b7cfa7e9813cb71460ca078f41ca3e4",
+  "label": "judge:anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-choose-where-to-execute",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Choose where to execute\n\nWhen the plan looks right, you choose from the browser whether Claude implements it in the same cloud session or sends it back to your waiting terminal.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Choose where to execute\" feature as part of Anthropic's ultraplan in Claude Code, letting users decide whether to execute on the web or back in the terminal. The page notes ultraplan is in research preview, so the lifecycle status is preview.",
+    "supported": true
+  }
+}

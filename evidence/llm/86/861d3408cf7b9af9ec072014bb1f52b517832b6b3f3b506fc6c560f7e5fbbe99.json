@@ -1,0 +1,12 @@
+{
+  "key": "861d3408cf7b9af9ec072014bb1f52b517832b6b3f3b506fc6c560f7e5fbbe99",
+  "label": "judge:google-antigravity-2-0-agent-memory-workflows-agent-generated-workflows-the-agent-can-generate",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can also ask Agent to generate Workflows for you! This works particularly well after manually working with Agent through a series of steps since it can use the conversation history to create the Workflow.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes an \"Agent-Generated Workflows\" feature where the Agent can generate Workflows, using the conversation history to do so, matching the claim.",
+    "supported": true
+  }
+}

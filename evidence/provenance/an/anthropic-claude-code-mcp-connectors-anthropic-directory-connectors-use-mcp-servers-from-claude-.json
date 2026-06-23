@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-use-mcp-servers-from-claude-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "5. [claude.ai connectors](#use-mcp-servers-from-claude-ai)",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Use MCP servers from Claude.ai (connectors load automatically when signed in)",
+    "page_content_hash": "3e6883319029d9c3f38bd29e3b6267e8d55062140c07a3ad80323973460b2468",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-use-mcp-servers-from-claude-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

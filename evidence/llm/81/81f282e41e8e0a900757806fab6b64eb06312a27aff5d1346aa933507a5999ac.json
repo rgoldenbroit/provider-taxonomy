@@ -1,0 +1,12 @@
+{
+  "key": "81f282e41e8e0a900757806fab6b64eb06312a27aff5d1346aa933507a5999ac",
+  "label": "judge:openai-codex-guardrails-safety-code-review",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes Codex code review in GitHub: it reviews the PR diff, follows repository-specific guidance (AGENTS.md review guidelines), and posts a standard GitHub code review focused on serious issues (P0/P1). This matches all aspects of the claim. The page presents it as an available feature with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

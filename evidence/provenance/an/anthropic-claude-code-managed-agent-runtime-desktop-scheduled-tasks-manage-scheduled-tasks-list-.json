@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks-manage-scheduled-tasks-list-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Ask Claude in natural language to list or cancel tasks, or reference the underlying tools directly. ... A session can hold up to 50 scheduled tasks at once.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Manage scheduled tasks \u2014 list or cancel via natural language or cron tools, up to 50 tasks per session",
+    "page_content_hash": "6df9983acaa75e56307d660338b9983eab7cbb5dda251c4b5cb6bedf41bf2332",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks-manage-scheduled-tasks-list-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

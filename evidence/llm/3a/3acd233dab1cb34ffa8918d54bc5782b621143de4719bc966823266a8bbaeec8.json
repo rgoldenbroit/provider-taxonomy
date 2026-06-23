@@ -1,0 +1,12 @@
+{
+  "key": "3acd233dab1cb34ffa8918d54bc5782b621143de4719bc966823266a8bbaeec8",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-subagents-preload-skills-via-the-skills-field",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`skills` | No | [Skills](/en/skills) to preload into the subagent's context at startup. The full skill content is injected, not just the description.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the `skills` frontmatter field, which preloads Skills into the subagent's context at startup, matching the claim that skills can be preloaded via the skills field. It is presented as a currently supported configuration option.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-claude-code-in-slack-repository-selection",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Repository selection\n\nClaude automatically selects a repository based on context from your Slack conversation. If multiple repositories could apply, Claude may display a dropdown allowing you to choose the correct one.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Repository selection",
+    "page_content_hash": "236814d8794dfe9ff7d7f054af4c910b25cc5c40d9db9ab15ab2c0621aa8c6a0",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-agent-control-claude-code-in-slack-repository-selection",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/slack.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

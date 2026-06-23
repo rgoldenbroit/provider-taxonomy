@@ -1,0 +1,12 @@
+{
+  "key": "e8c7e93b53c3207238b8b47d26bf52d184e04bf8afef9b76ccbfa613d5571ae1",
+  "label": "judge:anthropic-claude-code-mcp-connectors-anthropic-directory-connectors",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Browse reviewed connectors in the [Anthropic Directory](https://claude.ai/directory). Directory connectors use the same MCP infrastructure as Claude Code, so you can add any remote server listed there with `claude mcp add`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the Anthropic Directory as a registry of reviewed connectors that can be added to Claude Code with `claude mcp add`. The claim's specific examples (GitHub, Slack, Linear) and surfaces (desktop, VS Code, web, Claude.ai) are not all enumerated, but the core offering \u2014 a reviewed connector directory addable via `claude mcp add` \u2014 is directly substantiated. The page presents it as currently available, with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

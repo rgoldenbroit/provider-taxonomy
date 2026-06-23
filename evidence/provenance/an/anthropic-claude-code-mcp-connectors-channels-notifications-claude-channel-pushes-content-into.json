@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-channels-notifications-claude-channel-pushes-content-into",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Your server emits `notifications/claude/channel` with two params: ... `content` ... The event body. Delivered as the body of the `<channel>` tag.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "notifications/claude/channel pushes content into Claude's context as a <channel> tag",
+    "page_content_hash": "9843e25143ecbff76047595dc42fef2a76de723f3be760d716055744efd22a79",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-channels-notifications-claude-channel-pushes-content-into",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/channels-reference.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

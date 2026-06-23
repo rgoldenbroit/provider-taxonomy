@@ -1,0 +1,12 @@
+{
+  "key": "a70dffe8f53e2c8429504a85375f1c45bb5ac85a5b3ed2ba774173ebb59d3ad8",
+  "label": "judge:openai-codex-guardrails-safety-codex-security",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex Security cloud is currently in research preview. It scans connected GitHub repositories for likely security issues.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Codex Security as both a plugin (\"Codex Security plugin quickstart\") and a cloud service that scans repositories for vulnerabilities, validates findings (\"validating findings before you review them\"), and provides remediation guidance (\"suggested fixes you can review in GitHub\"). This matches the claim. The cloud component is explicitly stated to be in research preview.",
+    "supported": true
+  }
+}

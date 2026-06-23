@@ -1,0 +1,12 @@
+{
+  "key": "da55f5fd93d6bf9e4ec9e95b47682eadcac6866547f6629ad3e2fd7083afb8fb",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker-multi-agent-container-runs-multip",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a guide on securely deploying Claude Code and the Agent SDK, covering isolation technologies, credential management, and proxy patterns. It does not mention any \"Multi-agent container\" offering that runs multiple SDK subprocesses for collaborating agents. There is no reference to multi-agent collaboration or running multiple SDK subprocesses anywhere on the page.",
+    "supported": false
+  }
+}

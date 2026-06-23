@@ -1,0 +1,12 @@
+{
+  "key": "c930ffe8c75974232b114eea3c3370d7bb38ce3b360a5f4b9ed843479a8d3a51",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sandboxing provides kernel-level isolation for terminal commands executed by the Agent. When enabled, commands run in a restricted environment with limited file system and network access, protecting your system from unintended modifications.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated \"Terminal Sandboxing\" section describing kernel-level isolation for terminal commands executed by the Agent, running in a restricted environment with permission-governed controls (toggles, strict mode). This matches the claim. It is described as a current, configurable feature (though disabled by default), supported on macOS (Seatbelt) and Linux (nsjail), indicating active availability.",
+    "supported": true
+  }
+}

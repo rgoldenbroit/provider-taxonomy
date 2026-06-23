@@ -1,0 +1,12 @@
+{
+  "key": "6c9e545ece67133220b5c573b7acc4c4b009b2b6472b4aaff8fab71c643790c9",
+  "label": "judge:anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-stop-ultraplan",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Run `/tasks` and select the ultraplan entry to open a detail view with the session link, agent activity, and a **Stop ultraplan** action. Stopping archives the cloud session and clears the indicator; nothing is saved to your terminal.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes ultraplan (a research preview feature of Claude Code by Anthropic) and explicitly mentions a \"Stop ultraplan\" action that archives the cloud session. The overarching ultraplan feature is described as being in research preview.",
+    "supported": true
+  }
+}

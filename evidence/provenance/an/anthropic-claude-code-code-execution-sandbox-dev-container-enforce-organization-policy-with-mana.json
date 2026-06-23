@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-dev-container-enforce-organization-policy-with-mana",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A dev container is a convenient place to apply organization policy, because the same image and configuration run on every engineer's machine. ... Claude Code reads `/etc/claude-code/managed-settings.json` on Linux and applies it at the highest precedence in the [settings hierarchy](/en/settings#how-scopes-interact) ... To set [environment variables](/en/env-vars) that apply to every Claude Code session in the container, add them to `containerEnv` in your `devcontainer.json`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Enforce organization policy with managed settings and environment variables",
+    "page_content_hash": "c2646f3035b13e1507cfb9f3fd524bcfdf11657a356584fb18d1e8e221d1de2a",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-dev-container-enforce-organization-policy-with-mana",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/devcontainer.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

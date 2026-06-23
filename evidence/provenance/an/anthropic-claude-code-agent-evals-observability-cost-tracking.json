@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-cost-tracking",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "| Cost tracking       | Spend limits, rate limits, and usage attribution     | Anthropic only | [Costs](/en/costs)                       |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Cost tracking",
+    "page_content_hash": "deea7de6421aabcc192a5f7936c7ec6e1c9085047b69d2962c34540b63ff4975",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-evals-observability-cost-tracking",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/admin-setup.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

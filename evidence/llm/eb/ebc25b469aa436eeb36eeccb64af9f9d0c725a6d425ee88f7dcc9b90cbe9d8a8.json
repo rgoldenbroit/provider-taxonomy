@@ -1,0 +1,12 @@
+{
+  "key": "ebc25b469aa436eeb36eeccb64af9f9d0c725a6d425ee88f7dcc9b90cbe9d8a8",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-asynchronous-subagents-invoking-subagents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Invoking Subagents\n\nThe parent agent calls the `invoke_subagent` tool to spawn a new concurrent session with a dedicated role and initial prompt.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Google Antigravity 2.0 documentation that contains a dedicated \"Invoking Subagents\" section describing the `invoke_subagent` tool. This directly substantiates the claim. No deprecation or sunset language is present, so it is treated as active.",
+    "supported": true
+  }
+}

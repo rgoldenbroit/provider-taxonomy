@@ -1,0 +1,12 @@
+{
+  "key": "d28de17bb1c9af2734a31d79cd43ec3457faff65a462bb10a8815b08b9a6a173",
+  "label": "judge:openai-codex-code-execution-sandbox-sandbox-modes-workspace-write",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`workspace-write`: Codex can read files, edit within the workspace, and run routine local commands inside that boundary. This is the default low-friction mode for local work.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes `workspace-write` as one of the common sandbox modes in OpenAI Codex, calling it the default low-friction mode for local work, which substantiates the claim.",
+    "supported": true
+  }
+}

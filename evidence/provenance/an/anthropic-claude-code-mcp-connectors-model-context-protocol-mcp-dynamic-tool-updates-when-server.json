@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-dynamic-tool-updates-when-server",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude Code supports MCP `list_changed` notifications, allowing MCP servers to dynamically update their available tools, prompts, and resources without requiring you to disconnect and reconnect. When an MCP server sends a `list_changed` notification, Claude Code automatically refreshes the available capabilities from that server.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Dynamic tool updates when servers send list_changed notifications",
+    "page_content_hash": "3e6883319029d9c3f38bd29e3b6267e8d55062140c07a3ad80323973460b2468",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-dynamic-tool-updates-when-server",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

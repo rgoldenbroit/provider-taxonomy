@@ -1,0 +1,12 @@
+{
+  "key": "79191d52acdd56ba8b27850f9720f20bddf2b2716bf68f7136ca5e1a00d43e8c",
+  "label": "judge:openai-codex-code-execution-sandbox-approval-policy-auto-review",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto-review mode | `--sandbox workspace-write --ask-for-approval on-request -c approvals_reviewer=auto_review` or `approvals_reviewer = \"auto_review\"` | Same sandbox boundary as standard on-request mode, but eligible approval requests are reviewed by Auto-review instead of surfacing to the user.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Auto-review as a Codex feature where approval requests are routed through a reviewer agent (`approvals_reviewer = \"auto_review\"`), including a dedicated \"Automatic approval reviews\" section and an \"Auto-review mode\" entry. This substantiates OpenAI offering Auto-review. It is presented as a current, configurable feature with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

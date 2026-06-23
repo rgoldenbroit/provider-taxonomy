@@ -1,0 +1,12 @@
+{
+  "key": "151c4a357ebdf28fc481a2a0ad5fea8b32d3e5bd9e91fe0afbca0fa81a416dc7",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin-add-guidance-for-model-backed-r",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Add guidance for the model-backed reviews\n\nCreate `.claude/claude-security-guidance.md` in your project and describe your threat model and review checklist in plain language. The model-backed reviews load it as additional context alongside the built-in vulnerability checklist.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the security-guidance plugin's extension point that lets users add guidance for the model-backed reviews via a Markdown file (.claude/claude-security-guidance.md) where they describe their threat model and review checklist. This directly substantiates the claim. The page presents it as a currently available feature with no deprecation or sunset notice.",
+    "supported": true
+  }
+}

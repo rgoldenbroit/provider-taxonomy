@@ -1,0 +1,12 @@
+{
+  "key": "72c0dd52e643f31365f88c2ee75d0d994334a7476cb2b375afb37e7c7afecad5",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-supported-actions-match",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Supported Actions & Matching Rules\n\n| Action | Target Format | Matching Behavior | Default Fallback |\n| :--- | :--- | :--- | :--- |\n| `read_file` | `read_file(/path)`, `read_file(dir)`, or `read_file(*)` | ... | `write_file` ... | `read_url` ... | `execute_url` ... | `command` ... | `unsandboxed` ... | `mcp`",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a \"Supported Actions & Matching Rules\" section with a table listing all named actions: read_file, write_file, read_url, execute_url, command, unsandboxed, and mcp (MCP). This directly substantiates the claim. The page is part of Antigravity 2.0 documentation describing the permission engine as a current capability.",
+    "supported": true
+  }
+}

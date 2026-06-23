@@ -1,0 +1,12 @@
+{
+  "key": "03f9e2c363545b28083e5693407bcfcc1bcd448ea312bde800d98abb17c0f391",
+  "label": "judge:openai-codex-mcp-connectors-plugins-plugin-directory-in-the-cli-to-install-uninstall",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In Codex CLI, run the following command to open the plugins list: ... The CLI plugin browser groups plugins by marketplace. Use the marketplace tabs to switch sources, open a plugin to inspect details, install or uninstall marketplace entries, and press Space on an installed plugin to toggle its enabled state.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Plugin directory in the CLI\" that groups plugins by marketplace and lets users install, uninstall, and toggle (via Space) plugins, matching all elements of the claim.",
+    "supported": true
+  }
+}

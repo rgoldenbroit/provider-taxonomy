@@ -156,6 +156,17 @@ def test_category_bad_additional_property():
     assert _has(validate(d), kind="schema", rule="additionalProperties", msg_contains="bogus")
 
 
+def test_comparison_note_accepted():
+    d = _seed()
+    cap = d["capabilities"][0]
+    cap["comparison_note"] = "Anthropic uses files; OpenAI uses config; Google uses a managed runtime."
+    cap["comparison_note_sources"] = ["https://docs.anthropic.com/x", "https://developers.openai.com/y"]
+    assert validate(d) == []
+    # and a capability without it still validates
+    del cap["comparison_note"], cap["comparison_note_sources"]
+    assert validate(d) == []
+
+
 def test_parent_id_cycle_detected():
     d = _seed()
     a, b = d["products"][0]["id"], d["products"][1]["id"]

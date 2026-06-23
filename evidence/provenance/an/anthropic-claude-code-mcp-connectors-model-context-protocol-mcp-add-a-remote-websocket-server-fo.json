@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-add-a-remote-websocket-server-fo",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Option 4: Add a remote WebSocket server\n\nWebSocket servers hold a persistent bidirectional connection, which suits remote MCP servers that push events to Claude unprompted.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Add a remote WebSocket server for persistent bidirectional connections",
+    "page_content_hash": "3e6883319029d9c3f38bd29e3b6267e8d55062140c07a3ad80323973460b2468",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-add-a-remote-websocket-server-fo",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

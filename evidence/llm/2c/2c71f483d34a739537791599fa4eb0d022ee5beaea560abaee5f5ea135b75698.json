@@ -1,0 +1,12 @@
+{
+  "key": "2c71f483d34a739537791599fa4eb0d022ee5beaea560abaee5f5ea135b75698",
+  "label": "judge:openai-codex-agent-evals-observability-evals-api-testing-criteria",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`testing_criteria`: The [graders](https://developers.openai.com/api/docs/guides/graders) that determine if the model output is correct.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page describes testing_criteria as a key parameter of the Evals API, used to define the graders that determine if model output is correct. While the offering exists and is documented, the page states OpenAI is deprecating the Evals platform (read-only Oct 31, 2026; shutdown Nov 30, 2026), and existing evals content remains available during the transition window \u2014 making the lifecycle status deprecated.",
+    "supported": true
+  }
+}

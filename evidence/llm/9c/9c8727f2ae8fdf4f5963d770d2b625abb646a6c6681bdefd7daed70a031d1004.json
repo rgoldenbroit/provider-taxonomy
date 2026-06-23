@@ -1,0 +1,12 @@
+{
+  "key": "9c8727f2ae8fdf4f5963d770d2b625abb646a6c6681bdefd7daed70a031d1004",
+  "label": "judge:openai-codex-agent-memory-agents-md-layer-project-instructions-repository-level-agen",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Repository-level files keep Codex aware of project norms while still inheriting your global defaults.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Layer project instructions\" describing repository-level AGENTS.md files that apply project norms while inheriting global defaults, and a \"Merge order\" precedence rule, exactly matching the claim.",
+    "supported": true
+  }
+}

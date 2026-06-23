@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-routines-cloud-environment-controls-network-access-e",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Pick a [cloud environment](/en/claude-code-on-the-web#the-cloud-environment) for the routine. Environments control what the cloud session has access to: * **Network access**: set the level of internet access available during each run * **Environment variables**: provide API keys, tokens, or other secrets Claude can use * **Setup script**: install dependencies and tools the routine needs.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Cloud environment \u2014 controls network access, environment variables, and setup script during cloud runs",
+    "page_content_hash": "374c2554f988783fc07c14bd5df15bc029a42b22e2e75ea9d1e5ece99d4755bf",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-routines-cloud-environment-controls-network-access-e",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/routines.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

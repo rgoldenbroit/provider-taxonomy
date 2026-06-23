@@ -1,0 +1,12 @@
+{
+  "key": "1c4f26117d8646c0a91df6bdab5576a78317e1f63b4fc5fefd3129d255b3c2d0",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-routines-github-trigger-starts-a-new-session-automat",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A GitHub trigger starts a new session automatically when a matching event occurs on a connected repository. Each matching event starts its own session.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes the GitHub trigger as part of Anthropic's Claude Code routines, stating it starts a new session automatically when a matching repository event occurs. The feature is explicitly noted as being in research preview.",
+    "supported": true
+  }
+}

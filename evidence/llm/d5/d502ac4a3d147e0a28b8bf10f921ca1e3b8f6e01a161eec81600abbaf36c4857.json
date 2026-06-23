@@ -1,0 +1,12 @@
+{
+  "key": "d502ac4a3d147e0a28b8bf10f921ca1e3b8f6e01a161eec81600abbaf36c4857",
+  "label": "judge:anthropic-claude-code-guardrails-safety-managed-settings-channelsenabled-organization-policy-con",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about configuring Claude Code permissions (permission rules, modes, managed settings). It does not mention any \"channelsEnabled\" organization policy or any concept of channels being enabled. The claim is not substantiated anywhere on the page.",
+    "supported": false
+  }
+}

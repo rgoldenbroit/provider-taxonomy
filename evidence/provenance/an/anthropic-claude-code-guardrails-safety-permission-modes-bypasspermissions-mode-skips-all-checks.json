@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-permission-modes-bypasspermissions-mode-skips-all-checks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "[`bypassPermissions`](#skip-all-checks-with-bypasspermissions-mode) | Everything | Isolated containers and VMs only",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "bypassPermissions mode skips all checks (isolated containers/VMs only)",
+    "page_content_hash": "95cd159b4e21ca06bd81a460f8e7b317f1d29ab3a56d6140c5659917af274f5f",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-permission-modes-bypasspermissions-mode-skips-all-checks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permission-modes.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

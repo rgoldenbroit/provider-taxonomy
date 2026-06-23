@@ -1,0 +1,12 @@
+{
+  "key": "64c759e045e0e5e438b09302a2ba1b506b0d438eaa5ff8afcaa241799ee8906d",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-strict-mode",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Strict mode provides enhanced security controls for the Agent, allowing you to restrict its access to external resources and sensitive operations.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated \"Strict Mode\" section describing it as providing enhanced security controls that restrict the Agent's access to external resources and sensitive operations, matching the claim verbatim. It is presented as a current configurable setting.",
+    "supported": true
+  }
+}

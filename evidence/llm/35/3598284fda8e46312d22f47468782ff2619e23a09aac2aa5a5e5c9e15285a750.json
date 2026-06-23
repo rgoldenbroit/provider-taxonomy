@@ -1,0 +1,12 @@
+{
+  "key": "3598284fda8e46312d22f47468782ff2619e23a09aac2aa5a5e5c9e15285a750",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing-file-system-sandboxed-commands",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**File System**: Commands can only write to your designated workspace directory and essential system locations. This prevents the Agent from accidentally deleting or modifying files outside your project.",
+    "lifecycle_status": "active",
+    "rationale": "The page, under Terminal Sandboxing > Restrictions, describes a File System restriction whereby sandboxed commands can only write to the designated workspace directory and essential system locations. This matches the claim. The feature is presented as a current capability of Antigravity (Google), though sandboxing is disabled by default.",
+    "supported": true
+  }
+}

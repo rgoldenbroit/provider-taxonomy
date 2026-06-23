@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-sandbox-modes-writable-roots",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you need Codex to work across more than one directory, writable roots let you extend the places it can modify without removing the sandbox entirely.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "writable roots",
+    "page_content_hash": "a2874f3663d1ffff8a4a358a5655f24befed86560a036d3ce901760dfd3fb4f5",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-sandbox-modes-writable-roots",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/concepts/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

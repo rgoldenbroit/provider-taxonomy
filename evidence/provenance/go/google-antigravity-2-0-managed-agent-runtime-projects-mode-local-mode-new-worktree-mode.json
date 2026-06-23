@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-projects-mode-local-mode-new-worktree-mode",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Mode (Local Mode, New Worktree Mode)",
+    "page_content_hash": "5418ba5768677142a184ef78e1b164bbd15ffe8cd5762fadc5b2c47000e424c5",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": false,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-projects-mode-local-mode-new-worktree-mode",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

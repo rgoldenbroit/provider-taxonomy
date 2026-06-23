@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-automations-standalone-automations",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Standalone automations start fresh runs on a schedule and report results in Triage. Use them when each run should be independent or when one automation should run across one or more projects.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Standalone automations",
+    "page_content_hash": "d0253f1caf3a455e75bfaa8b6f2105dcbd08c84d48263d0800830976401ceee1",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-automations-standalone-automations",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/app/automations.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

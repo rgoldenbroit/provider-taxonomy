@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-agent-teams-talk-to-teammates-directly-to-give-ins",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Each teammate is a full, independent Claude Code session. You can message any teammate directly to give additional instructions, ask follow-up questions, or redirect their approach.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Talk to teammates directly to give instructions, ask questions, or redirect",
+    "page_content_hash": "63355f3b44d32f0cbc0641e9a3341c835632be04a8c2759c2a476470938e608a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-agent-teams-talk-to-teammates-directly-to-give-ins",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-teams.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-subagents-deep-dive-monitoring",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Deep-dive monitoring\n\nTo inspect the inner reasoning, thoughts, and logs of a specific background agent:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Deep-dive monitoring",
+    "page_content_hash": "ffdd536cfc738228ed6a3b1a2666e11a63a33f4b9af9005d90c9710ce5ace21f",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-subagents-deep-dive-monitoring",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

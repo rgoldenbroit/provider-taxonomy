@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-artifact-review-policy",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When working in **Planning Mode**, the Artifact Review Policy controls how you interact with and approve these plans before changes are made to your codebase.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Artifact Review Policy",
+    "page_content_hash": "a79baeabb6d4630908c44d33dc888a3ff0120ae4d64540463116a7d8b0eb67f4",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-artifact-review-policy",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/artifact-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

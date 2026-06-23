@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-terminal-sandboxing-filesystem-and-outbound-network-all",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Paths granted under `read_file` dynamically populate the sandbox's read-only filesystem allowlist. Paths granted under `write_file` dynamically populate the sandbox's read-write filesystem allowlist. Domains granted under `read_url` define outbound network access policies.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Filesystem and outbound network allowlists from permission grants",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-terminal-sandboxing-filesystem-and-outbound-network-all",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

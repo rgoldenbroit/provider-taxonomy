@@ -1,0 +1,12 @@
+{
+  "key": "50c9e43c0d7ce01824ff7e5ede35d71950fc3e718442f9951288d246e71ffcb1",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli-native-operating-system-featu",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Unlike heavy virtual containers or isolated virtual machines that slow down execution speeds, Antigravity uses lightweight, native operating system kernel utilities to create secure process rings with zero execution overhead",
+    "lifecycle_status": "active",
+    "rationale": "The page (from Google's antigravity.google domain) describes the Antigravity CLI Terminal Sandbox using native OS utilities instead of VMs or containers for zero execution overhead. The table explicitly lists nsjail (Linux), sandbox-exec (macOS), and AppContainer (Windows), matching the claim precisely. The feature is documented as a current capability with configuration instructions, indicating active status.",
+    "supported": true
+  }
+}

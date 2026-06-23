@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-traces-beta-distri",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Traces (beta)\n\nDistributed tracing exports spans that link each user prompt to the API requests and tool executions it triggers, so you can view a full request as a single trace in your tracing backend.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Traces (beta) \u2014 distributed tracing exports spans linking each user prompt to API requests and tool executions",
+    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-traces-beta-distri",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

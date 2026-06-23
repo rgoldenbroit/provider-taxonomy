@@ -1,0 +1,12 @@
+{
+  "key": "04efe1ae594ed335ad1d3292f50a37a55fc6db0eab33bb5bd751fabb1840b908",
+  "label": "judge:openai-codex-mcp-connectors-mcp-server-transports",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**STDIO servers**: Servers that run as a local process (started by a command). ... **Streamable HTTP servers**: Servers that you access at an address.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists both supported MCP server transports for Codex: STDIO servers (local process started by a command) and Streamable HTTP servers (accessed at an address), matching the claim.",
+    "supported": true
+  }
+}

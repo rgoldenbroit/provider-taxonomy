@@ -1,0 +1,12 @@
+{
+  "key": "f75f50714fb769522075dbd7ba4a66f7155dfaa6f2abdbda3f0643f4db52bbc6",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-interactive-permission-prompts-fast-path-alerts-for-ins",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Antigravity's permission engine with Deny/Ask/Allow lists, interactive prompts, and various action types. It does not mention any offering called \"Fast Path Alerts\" nor anything about \"instant subagent permission approval.\" Subagents are only mentioned in the context of the Browser Subagent for read_url permissions, not in relation to a \"Fast Path Alerts\" feature.",
+    "supported": false
+  }
+}

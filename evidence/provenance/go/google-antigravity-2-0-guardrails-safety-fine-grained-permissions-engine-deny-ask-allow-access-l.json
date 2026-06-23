@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-deny-ask-allow-access-l",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Permissions are evaluated across three distinct access lists:\n-   **Deny**: The action is blocked immediately.\n-   **Ask**: The Agent pauses and prompts for your explicit approval before proceeding.\n-   **Allow**: The action is auto-approved without prompting.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Deny / Ask / Allow access lists",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-deny-ask-allow-access-l",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "d000d45000efad4fc492752849b3c124ca276163279d9ef1d4d377ba877c1a6d",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-virtual-machines-hardware-level-isolation-through-c",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dedicated virtual machine provides the strongest separation, with its own kernel and, in cloud or microVM deployments, its own virtualized hardware. Options include cloud instances, local hypervisors, and microVMs such as Firecracker.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the virtual machine sandbox option, which provides hardware-level isolation via virtualized hardware (CPU virtualization in cloud/microVM deployments) with each VM running its own kernel. This matches the claim of hardware-level isolation through CPU virtualization with each VM running its own kernel.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "40428cb746596532fc175453a8ba80658ec162d96f2963a3261ca2ef2be4e559",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-projects",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In Antigravity 2.0, agents work in **Projects** (previously in Agent Manager, agents were strictly mapped to a single workspace folder). * **Worktree Support**: Projects natively support Git worktrees, allowing agents to operate in isolated background folders. * **Scoped Settings**: Settings are scoped... * **Scoped Permissions**: Attach permission grants to projects... Start quick, one-off conversations outside of any Project. These sessions run in an isolated local scratch folder.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Projects in Antigravity 2.0, including agents working in Projects, folder/repository boundaries via worktrees and multi-folder access, isolated background folders, scoped settings, scoped permissions, and one-off conversations running in an isolated local scratch folder. All claim elements are substantiated as current features.",
+    "supported": true
+  }
+}

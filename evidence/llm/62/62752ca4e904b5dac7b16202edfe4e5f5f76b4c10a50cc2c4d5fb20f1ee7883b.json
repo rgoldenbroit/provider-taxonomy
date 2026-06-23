@@ -1,0 +1,12 @@
+{
+  "key": "62752ca4e904b5dac7b16202edfe4e5f5f76b4c10a50cc2c4d5fb20f1ee7883b",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-virtual-machines",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dedicated virtual machine provides the strongest separation, with its own kernel and, in cloud or microVM deployments, its own virtualized hardware. Options include cloud instances, local hypervisors, and microVMs such as Firecracker.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Virtual machine as a sandbox approach for running Claude Code, stating a dedicated VM provides the strongest separation with its own kernel and virtualized hardware\u2014matching the claim. It is presented as a currently available option with no deprecation or sunset language.",
+    "supported": true
+  }
+}

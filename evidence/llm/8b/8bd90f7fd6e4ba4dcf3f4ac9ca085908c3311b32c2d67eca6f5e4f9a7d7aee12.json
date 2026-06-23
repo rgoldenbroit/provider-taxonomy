@@ -1,0 +1,12 @@
+{
+  "key": "8bd90f7fd6e4ba4dcf3f4ac9ca085908c3311b32c2d67eca6f5e4f9a7d7aee12",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-dontask-mode-runs-only-pre-approved-too",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| [`dontAsk`](#allow-only-pre-approved-tools-with-dontask-mode)       | Only pre-approved tools                                                                | Locked-down CI and scripts              |",
+    "lifecycle_status": "active",
+    "rationale": "The page lists `dontAsk` as an available permission mode in Claude Code, and explicitly states that what runs without asking in this mode is \"Only pre-approved tools,\" directly matching the claim. The mode is presented as a current available option (set with `--permission-mode dontAsk`), with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-disable-or-uninstall-individual",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Disable or uninstall\n\nTo turn off individual layers while keeping the rest, set the matching environment variable:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Disable or uninstall individual layers or the whole plugin",
+    "page_content_hash": "ab1b88d8168d5f452ac182f3636ca817ca291a6efeda10253aabd20c5909fb7d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-disable-or-uninstall-individual",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/security-guidance.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

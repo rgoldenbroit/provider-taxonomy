@@ -1,0 +1,12 @@
+{
+  "key": "16a66c81d03b004d4a1985d6e2d7ad1732d04e66ef227e184ae0c09f3e654f91",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-in-slack-create-pr",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Create PR**: Creates a pull request directly from the session's changes.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes \"Create PR\" as a message action button within Claude Code in Slack that creates a pull request directly from the session's changes. It is presented as a current feature, with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

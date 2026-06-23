@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "[Desktop scheduled tasks](/en/desktop-scheduled-tasks): run locally on your machine",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Desktop scheduled tasks",
+    "page_content_hash": "6df9983acaa75e56307d660338b9983eab7cbb5dda251c4b5cb6bedf41bf2332",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-bundled-skills-prompt-based-play",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Bundled skills: prompt-based playbooks that let Claude orchestrate work and spawn agents",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-bundled-skills-prompt-based-play",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

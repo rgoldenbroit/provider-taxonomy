@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-routines",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A routine is a saved Claude Code configuration: a prompt, one or more repositories, and a set of connectors, packaged once and run automatically. Routines execute on Anthropic-managed cloud infrastructure, so they keep working when your laptop is closed.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Routines",
+    "page_content_hash": "374c2554f988783fc07c14bd5df15bc029a42b22e2e75ea9d1e5ece99d4755bf",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-routines",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/routines.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

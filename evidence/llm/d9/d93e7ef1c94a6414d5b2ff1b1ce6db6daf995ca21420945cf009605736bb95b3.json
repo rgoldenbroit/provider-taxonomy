@@ -1,0 +1,12 @@
+{
+  "key": "d93e7ef1c94a6414d5b2ff1b1ce6db6daf995ca21420945cf009605736bb95b3",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-custom-subagents-subagent-scope-precedence-overrid",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When multiple subagents share the same name, the higher-priority location wins.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes subagent scope precedence: when multiple subagents share the same name, the higher-priority location wins, with a defined priority order table (managed settings highest at 1, plugin lowest at 5). This matches the claim of override by name based on defined priority order.",
+    "supported": true
+  }
+}

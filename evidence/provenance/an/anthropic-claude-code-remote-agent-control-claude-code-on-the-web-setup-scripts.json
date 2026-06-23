@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-claude-code-on-the-web-setup-scripts",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A setup script is a Bash script that runs when a new cloud session starts, before Claude Code launches. Use setup scripts to install dependencies, configure tools, or fetch anything the session needs that isn't pre-installed.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Setup scripts",
+    "page_content_hash": "1e8772429e95ced5b23b7b8f9b1190af0faa97692ba04a2a8ac89189b748e0d6",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-agent-control-claude-code-on-the-web-setup-scripts",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

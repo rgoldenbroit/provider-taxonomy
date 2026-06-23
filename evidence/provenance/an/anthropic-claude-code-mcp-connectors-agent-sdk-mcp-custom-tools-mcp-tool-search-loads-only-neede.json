@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-mcp-tool-search-loads-only-neede",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Tool search solves this by withholding tool definitions from context and loading only the ones Claude needs for each turn. Tool search is enabled by default.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP tool search loads only needed tool definitions per turn, enabled by default",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools-mcp-tool-search-loads-only-neede",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

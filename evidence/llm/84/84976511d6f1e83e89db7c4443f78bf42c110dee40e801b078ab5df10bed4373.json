@@ -1,0 +1,12 @@
+{
+  "key": "84976511d6f1e83e89db7c4443f78bf42c110dee40e801b078ab5df10bed4373",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker-container-based-sandboxing-for-pr",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Containers provide isolation through Linux namespaces. Each container has its own view of the filesystem, process tree, and network stack, while sharing the host kernel.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes container-based isolation in detail, covering process isolation (own process tree, --pids-limit, --user non-root), resource limits (--memory, --cpus, --pids-limit), network control (--network none, proxy/Unix socket allowlists), and an ephemeral filesystem (--read-only root with --tmpfs that's \"cleared when the container stops\"). This substantiates all aspects of the claim.",
+    "supported": true
+  }
+}

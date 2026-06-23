@@ -1,0 +1,12 @@
+{
+  "key": "33ee9980caa86903ba0c3572f680a6ccf019b49733d80a0db5dc2c4e9b384eb0",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-agent-teams-use-subagent-definitions-for-teammates",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When spawning a teammate, you can reference a [subagent](/en/sub-agents) type from any [subagent scope](/en/sub-agents#choose-the-subagent-scope): project, user, plugin, or CLI-defined. This lets you define a role once, such as a security-reviewer or test-runner, and reuse it both as a delegated subagent and as an agent team teammate.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes using subagent definitions for teammates from any subagent scope (project, user, plugin, or CLI-defined), matching the claim. Agent teams are described as experimental and disabled by default, indicating a preview/experimental status.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "a269a3b4483d81f5867e61585d6a0003e0e7cc89bbc15e61476fe6a237696922",
+  "label": "judge:openai-codex-subagents-orchestration-custom-agents-choosing-models-and-reasoning-per-agent-model",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Optional fields such as `nickname_candidates`, `model`, `model_reasoning_effort`, `sandbox_mode`, `mcp_servers`, and `skills.config` inherit from the parent session when you omit them.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes per-agent model and reasoning configuration: each custom agent can specify a `model` and `model_reasoning_effort` field, or inherit (auto-select from parent) when omitted. Examples show pinned values like model = \"gpt-5.4\" and model_reasoning_effort = \"high\". Subagent workflows are enabled by default in current releases (active).",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "1cad65a27a2985688fdf172be344a6d487ce96afe078a006127c2ff38f35cec5",
+  "label": "judge:anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-add-a-local-stdio-server-for-too",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Option 3: Add a local stdio server\\n\\nStdio servers run as local processes on your machine. They're ideal for tools that need direct system access or custom scripts.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes adding a local stdio server as an installation option, noting these servers run as local processes and are ideal for tools that need direct system access. This matches the claim. It is presented as a current, available feature.",
+    "supported": true
+  }
+}

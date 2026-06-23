@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-evals-observability-evals-api-data-source-config",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`data_source_config`: A schema for the test data you will use along with the eval.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "data_source_config",
+    "page_content_hash": "809e1f577b8418671ea6538b0318f86fcc14fc7a596cb92680d8c85c17ce4814",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-evals-observability-evals-api-data-source-config",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/evals.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

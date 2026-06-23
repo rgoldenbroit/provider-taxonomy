@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-invoking-subagents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Invoking Subagents\n\nThe parent agent calls the `invoke_subagent` tool to spawn a new concurrent session with a dedicated role and initial prompt.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Invoking Subagents",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-invoking-subagents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

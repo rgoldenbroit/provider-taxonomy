@@ -1,0 +1,12 @@
+{
+  "key": "ae5b71de15494b4a5c85db792ebf8d7d0704a7d21b04f13aaef2c92a250e51f9",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review-verification-bar-requires-evidence-before-po",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Verification bar**: require evidence before a class of finding is posted. For example, \"behavior claims need a `file:line` citation in the source, not an inference from naming\" cuts false positives that would otherwise cost the author a round trip.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a \"Verification bar\" REVIEW.md tuning option that requires evidence before a class of finding is posted, matching the claim. It is documented as a configurable feature of Code Review (itself in research preview), but the verification bar tuning is described as a usable feature.",
+    "supported": true
+  }
+}

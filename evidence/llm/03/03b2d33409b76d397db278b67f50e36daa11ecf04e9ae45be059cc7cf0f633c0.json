@@ -1,0 +1,12 @@
+{
+  "key": "03b2d33409b76d397db278b67f50e36daa11ecf04e9ae45be059cc7cf0f633c0",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-claude-code-on-the-web-teleport-sessions-sessions-ca",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about choosing sandbox environments for Claude Code. It discusses the sandboxed Bash tool, sandbox runtime, dev containers, custom containers, VMs, and Claude Code on the web. There is no mention of \"Teleport sessions\" or any feature that moves sessions between web and terminal or pulls a cloud session into the local terminal. The offering is not described on the page.",
+    "supported": false
+  }
+}

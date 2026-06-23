@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-sandbox-mode-network-policy-allowlist-first-domain-rules-wher",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "#### Network policy\n\nDomain rules are allowlist-first:\n\n- Exact hosts match only themselves.\n- `*.example.com` matches subdomains such as `api.example.com`, but not\n  `example.com`.\n- `**.example.com` matches both the apex and subdomains.\n- A global `*` allow rule matches any public host that is not denied. Treat `*`\n  as broad network access and prefer scoped rules when you can.\n- `deny` always wins over `allow`, and global `*` is only valid for allow rules.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Network policy (allowlist-first domain rules where deny wins over allow)",
+    "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-sandbox-mode-network-policy-allowlist-first-domain-rules-wher",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

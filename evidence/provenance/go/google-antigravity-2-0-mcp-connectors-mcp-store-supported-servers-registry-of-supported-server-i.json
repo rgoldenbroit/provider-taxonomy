@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-mcp-store-supported-servers-registry-of-supported-server-i",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Supported Servers\n\nThe MCP Store currently features integrations for:\n\n- Airweave\n- Arize\n- AlloyDB for PostgreSQL\n- Atlassian\n- BigQuery\n- Bigtable Admin remote MCP\n- Chrome DevTools\n- ClickHouse\n- Cloud SQL for MySQL\n- Cloud SQL for PostgreSQL\n- Cloud SQL for SQL Server\n- Cloud SQL Managed MCP\n- Dart\n- Dataplex\n- Figma Dev Mode MCP\n- Firebase\n- GitHub\n- GitLab Orbit\n- Harness\n- Heroku\n- Linear\n- Locofy\n- Looker\n- MCP Toolbox for Databases\n- MongoDB\n- Neon\n- Netlify\n- Notion\n- PayPal\n- Perplexity Ask\n- Pinecone\n- PostHog\n- Postman\n- Prisma\n- Redis\n- Sequential Thinking\n- SonarQube\n- Spanner\n- Stripe\n- Supabase",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Supported Servers: registry of supported server integrations including Atlassian, BigQuery, GitHub, Linear, Notion and other third-party and Google services",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-mcp-store-supported-servers-registry-of-supported-server-i",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

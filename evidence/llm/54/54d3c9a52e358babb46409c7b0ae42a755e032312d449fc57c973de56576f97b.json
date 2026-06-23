@@ -1,0 +1,12 @@
+{
+  "key": "54d3c9a52e358babb46409c7b0ae42a755e032312d449fc57c973de56576f97b",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-plan-mode-researches-and-proposes-chang",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plan mode tells Claude to research and propose changes without making them. Claude reads files, runs shell commands to explore, and writes a plan, but does not edit your source.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes plan mode as a permission mode where Claude researches and proposes changes without making them, exactly matching the claim. It is presented as a currently available mode with no deprecation or sunset language.",
+    "supported": true
+  }
+}

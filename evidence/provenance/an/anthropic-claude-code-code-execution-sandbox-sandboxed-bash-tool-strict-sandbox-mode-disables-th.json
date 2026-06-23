@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-strict-sandbox-mode-disables-th",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "You can disable this escape hatch by setting `\"allowUnsandboxedCommands\": false` in your [sandbox settings](/en/settings#sandbox-settings). When disabled, which the `/sandbox` Overrides tab shows as **Strict sandbox mode**, the `dangerouslyDisableSandbox` parameter is completely ignored and all commands must run sandboxed or be explicitly listed in `excludedCommands`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Strict sandbox mode disables the unsandboxed escape hatch",
+    "page_content_hash": "1217817d282d5725d10c54be56480611080aba95106841b4268e65cfc1385dde",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-strict-sandbox-mode-disables-th",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

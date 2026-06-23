@@ -1,0 +1,12 @@
+{
+  "key": "eafb1c0deae51e99b1b1f03b6d508703dea453310cb82b02f5282859fd41d65a",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-hooks-input-output-contract",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Input/Output Contract\n\nHooks receive input via **stdin** as JSON and should return output via **stdout** as JSON. Field names use camelCase.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Google's Antigravity 2.0 Hooks documentation, which includes a section titled \"Input/Output Contract\" describing how hooks receive input via stdin and return output via stdout as JSON. This directly substantiates the claim. The page presents it as current/available functionality with no indication of deprecation.",
+    "supported": true
+  }
+}

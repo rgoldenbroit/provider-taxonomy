@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-cancellation-via-stop-subagen",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Cancellation**: You can cancel a running subagent by clicking the **Stop Subagent** button in the subagent panel. This instantly cancels generation and transitions the subagent to an idle state.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Cancellation via Stop Subagent button",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-remote-agent-control-asynchronous-subagents-cancellation-via-stop-subagen",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

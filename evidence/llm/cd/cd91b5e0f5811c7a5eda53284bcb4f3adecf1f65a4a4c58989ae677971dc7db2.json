@@ -1,0 +1,12 @@
+{
+  "key": "cd91b5e0f5811c7a5eda53284bcb4f3adecf1f65a4a4c58989ae677971dc7db2",
+  "label": "judge:openai-codex-guardrails-safety-sandbox-mode-network-access-off-by-default-restrictable-to-a-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "By default, the agent runs with network access turned off. ... Domain rules are allowlist-first: - Exact hosts match only themselves. ... domains = { \"api.openai.com\" = \"allow\", \"example.com\" = \"deny\" }",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states network access is off by default (\"By default, the agent runs with network access turned off\") and describes restricting it to a domain allow list via the network_proxy feature with allowlist-first domain rules. This directly substantiates the claim.",
+    "supported": true
+  }
+}

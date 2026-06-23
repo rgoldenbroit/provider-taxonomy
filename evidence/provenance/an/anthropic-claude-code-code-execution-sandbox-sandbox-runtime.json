@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandbox-runtime",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The [`@anthropic-ai/sandbox-runtime`](https://github.com/anthropic-experimental/sandbox-runtime) package wraps an entire process in the same Seatbelt or bubblewrap isolation that the built-in Bash sandbox uses. Running Claude Code through it constrains every tool, hook, and MCP server in the session, not only Bash. The runtime is a beta research preview, and its configuration format may change as the package evolves.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Sandbox runtime",
+    "page_content_hash": "52ae04e93fb667c1ace64567377b9c65d1c204f20a30aea8a4e1b180bff45e80",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandbox-runtime",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandbox-environments.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

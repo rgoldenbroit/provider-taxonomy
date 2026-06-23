@@ -1,0 +1,12 @@
+{
+  "key": "130b8c931c2acb9f44c1b84bd1ecbd8c1f91a6cf5028e7758fc7018d7332afa5",
+  "label": "judge:openai-codex-code-execution-sandbox-permission-profiles-read-only",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`:read-only` keeps local command execution read-only.",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes `:read-only` as one of three built-in permission profiles in Codex, which \"keeps local command execution read-only.\" The page is marked \"Beta. Permission profiles are under active development and may change.\"",
+    "supported": true
+  }
+}

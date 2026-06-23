@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing-file-system-sandboxed-commands",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**File System**: Commands can only write to your designated workspace directory and essential system locations. This prevents the Agent from accidentally deleting or modifying files outside your project.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "File System \u2014 sandboxed commands can only write to the designated workspace directory and essential system locations",
+    "page_content_hash": "315faf24e85eaf3160c1962196118a8bc163de9131d9a2a5bb3128c86d17f5ee",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-code-execution-sandbox-terminal-sandboxing-file-system-sandboxed-commands",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/settings/ide-settings.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

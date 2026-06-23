@@ -1,0 +1,12 @@
+{
+  "key": "246218068e14e94192350b85c195310104e84910f90fc4e118c9973661c21629",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments-default-universal-image-pre-installed-with-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Codex agent runs in a default container image called `universal`, which comes pre-installed with common languages, packages, and tools.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the default universal image pre-installed with common languages, packages, and tools, matching the claim. It is presented as the current default container image for cloud tasks, indicating active status.",
+    "supported": true
+  }
+}

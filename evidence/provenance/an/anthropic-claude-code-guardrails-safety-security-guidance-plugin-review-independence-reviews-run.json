@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-review-independence-reviews-run",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The end-of-turn and commit reviews run as a separate Claude call with a fresh context and a security-focused prompt: the reviewer starts from the diff, has no investment in the original approach, and is instructed only to find problems.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Review independence: reviews run as a separate Claude call with fresh context",
+    "page_content_hash": "ab1b88d8168d5f452ac182f3636ca817ca291a6efeda10253aabd20c5909fb7d",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-security-guidance-plugin-review-independence-reviews-run",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/security-guidance.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

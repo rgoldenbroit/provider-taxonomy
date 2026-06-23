@@ -1,0 +1,12 @@
+{
+  "key": "800c8f50a60243cee9140d4079308f5885dbab435d8e3e7c91027930da838a9b",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-secure-by-default-bounded-access",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Bounded Access**: By default, your agent can only read and write within the provided folders of a project. If you change your security preset to \u201cFull Machine\u201d or \u201cUnrestricted\u201d, the agent will have read and write access over your full machine.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Bounded Access\" as a feature under \"Secure by Default\" in Antigravity 2.0, a Google offering. It is presented as a current default security control.",
+    "supported": true
+  }
+}

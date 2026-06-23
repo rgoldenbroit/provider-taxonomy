@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-subagents-orchestration-inter-agent-communication-auto-wake",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Auto-Wake**: If an idle agent receives a message, it is automatically re-awakened to process the new information.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Auto-Wake",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-subagents-orchestration-inter-agent-communication-auto-wake",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

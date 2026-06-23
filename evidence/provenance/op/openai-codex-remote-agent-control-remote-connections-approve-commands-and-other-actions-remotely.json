@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-remote-connections-approve-commands-and-other-actions-remotely",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Approve commands and other actions.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Approve commands and other actions remotely",
+    "page_content_hash": "117e536573c6eae4c5567ba35cfd64954a0e3d276e75f64d5129edd8e6214869",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-remote-connections-approve-commands-and-other-actions-remotely",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/remote-connections.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

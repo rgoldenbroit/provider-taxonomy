@@ -1,0 +1,12 @@
+{
+  "key": "2c51dbde136de701d2a7adbc6fb3e0fca35e3dc422fbe7bbc8cce678807d7239",
+  "label": "judge:openai-codex-managed-agent-runtime-sites-save-a-version",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Save a version.** Codex builds the deployable site and associates that version with the source Git commit used for the build. Use this stage when you want a reviewable deployment candidate.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes \"Save a version\" as one of the two stages of Sites publishing, where Codex builds a reviewable deployment candidate. Sites itself is described as \"in preview,\" so the feature is part of a preview offering.",
+    "supported": true
+  }
+}

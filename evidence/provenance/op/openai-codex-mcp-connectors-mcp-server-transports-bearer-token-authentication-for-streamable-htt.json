@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-mcp-server-transports-bearer-token-authentication-for-streamable-htt",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Streamable HTTP servers**: Servers that you access at an address.\n  - Bearer token authentication",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Bearer token authentication for Streamable HTTP MCP servers",
+    "page_content_hash": "f5555cc8d3f3967cbaaf49e47ae6c226ea00014cbadb93927ea6e7593a61b17f",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-mcp-server-transports-bearer-token-authentication-for-streamable-htt",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

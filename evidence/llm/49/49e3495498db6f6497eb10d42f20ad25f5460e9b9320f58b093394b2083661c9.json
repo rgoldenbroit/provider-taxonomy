@@ -1,0 +1,12 @@
+{
+  "key": "49e3495498db6f6497eb10d42f20ad25f5460e9b9320f58b093394b2083661c9",
+  "label": "judge:openai-codex-subagents-orchestration-creating-multi-agent-workflows-trace-the-workflow-records-t",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex automatically records traces that capture every prompt, tool call, and hand-off. After the multi-agent run completes, open the [Traces dashboard](https://platform.openai.com/trace) to inspect the execution timeline.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Trace the workflow\" describing that Codex automatically records traces of prompts, tool calls, and hand-offs, viewable in the Traces dashboard, matching the claim.",
+    "supported": true
+  }
+}

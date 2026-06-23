@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-custom-subagents-dynamic-agent-configuration-creat",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Dynamic agent configuration created at query time based on runtime conditions",
+    "page_content_hash": "13f8ef3f23b8e8bc467516d292afe1397698924a52adc2c050ba7f0f8bbe66bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-subagents-orchestration-custom-subagents-dynamic-agent-configuration-creat",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

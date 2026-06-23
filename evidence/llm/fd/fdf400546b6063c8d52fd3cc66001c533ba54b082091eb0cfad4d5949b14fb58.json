@@ -1,0 +1,12 @@
+{
+  "key": "fdf400546b6063c8d52fd3cc66001c533ba54b082091eb0cfad4d5949b14fb58",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-interactive-permission-prompts",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When the Agent encounters an operation requiring approval (**Ask** mode), an interactive card appears in your editor. Before clicking **Allow** for file, URL, or MCP permissions, you can directly edit the target string in the prompt card to expand the granted scope (e.g., broadening a single file request like `/project/file.txt` to the parent directory `/project`).",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a section titled \"Interactive Permission Prompts\" describing an interactive card surfacing in the editor when approval is required, where the user can approve (Allow), deny, or edit and expand the granted target scope \u2014 exactly matching the claim. The page is Google's Antigravity 2.0 documentation. The feature is described as current functionality with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

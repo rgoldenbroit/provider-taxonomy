@@ -1,0 +1,12 @@
+{
+  "key": "6abe1ff975ef32e229c3d2c23f7da31a836961eb1b0c08d3f7530144fd881fe1",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents-custom-subagents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Custom Subagents\nAgents can define their own custom subagents dynamically using the `define_subagent` tool.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Custom Subagents\" as a capability within Google Antigravity 2.0, where agents can define their own custom subagents dynamically using the define_subagent tool. It is presented as a current capability with no preview or deprecation markers.",
+    "supported": true
+  }
+}

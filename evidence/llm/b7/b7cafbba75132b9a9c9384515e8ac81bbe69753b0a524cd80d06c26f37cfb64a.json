@@ -1,0 +1,12 @@
+{
+  "key": "b7cafbba75132b9a9c9384515e8ac81bbe69753b0a524cd80d06c26f37cfb64a",
+  "label": "judge:anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-use-mcp-servers-from-claude-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "5. [claude.ai connectors](#use-mcp-servers-from-claude-ai)",
+    "lifecycle_status": "active",
+    "rationale": "The page references a section \"Use MCP servers from Claude.ai\" and lists \"claude.ai connectors\" within the scope hierarchy and precedence, confirming the offering of using MCP servers from Claude.ai. The page treats it as a current, active capability with no indication of deprecation.",
+    "supported": true
+  }
+}

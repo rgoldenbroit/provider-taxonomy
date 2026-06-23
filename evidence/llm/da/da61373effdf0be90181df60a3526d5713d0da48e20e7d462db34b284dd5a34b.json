@@ -1,0 +1,12 @@
+{
+  "key": "da61373effdf0be90181df60a3526d5713d0da48e20e7d462db34b284dd5a34b",
+  "label": "judge:openai-codex-guardrails-safety-auto-review-denials-and-failure-behavior",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Denials and failure behavior\n\nAn explicit denial is not treated like an ordinary sandbox error. Codex returns the review rationale to the main agent and adds a stronger instruction:",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated section titled \"Denials and failure behavior\" describing how OpenAI's Codex Auto-review handles denials, including the rejection circuit breaker and override path. This directly substantiates the claim. The page describes it as a current/active feature.",
+    "supported": true
+  }
+}

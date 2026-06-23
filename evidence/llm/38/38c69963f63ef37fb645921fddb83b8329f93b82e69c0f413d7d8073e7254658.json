@@ -1,0 +1,12 @@
+{
+  "key": "38c69963f63ef37fb645921fddb83b8329f93b82e69c0f413d7d8073e7254658",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents-permissions-and-conf",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Permissions and Configuration Inheritance\n\nSubagents inherit their parent's safety configurations to maintain robust security boundaries:",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated section titled \"Permissions and Configuration Inheritance\" describing how subagents inherit parent safety configurations within Google's Antigravity 2.0, directly substantiating the claim. No lifecycle qualifier is given, so it is presented as a current/active feature.",
+    "supported": true
+  }
+}

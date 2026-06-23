@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-routines-let-claude-choose-the-interval-claude-dynam",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "The minimum interval is one hour; expressions that run more frequently are rejected.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Let Claude choose the interval \u2014 Claude dynamically picks a delay between one minute and one hour",
+    "page_content_hash": "374c2554f988783fc07c14bd5df15bc029a42b22e2e75ea9d1e5ece99d4755bf",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-routines-let-claude-choose-the-interval-claude-dynam",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/routines.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-hooks-supported-events",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Supported Events\n\n| Event | Description | Matcher Target |\n| :--- | :--- | :--- |\n| `PreToolUse` | Fires before a tool is executed. | Tool name (e.g., `run_command`) |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Supported Events",
+    "page_content_hash": "2eea783a3597e36e2aad85d10039d9b1c9f48275439548ef4e042dd175acac68",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-hooks-supported-events",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/hooks.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

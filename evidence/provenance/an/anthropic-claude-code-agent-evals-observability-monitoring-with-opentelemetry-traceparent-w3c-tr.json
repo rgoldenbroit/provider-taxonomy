@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-traceparent-w3c-tr",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When tracing is active, Bash and PowerShell subprocesses automatically inherit a `TRACEPARENT` environment variable containing the W3C trace context of the active tool execution span. ... When tracing is active and Claude Code is connected directly to the Anthropic API, each model request carries a W3C `traceparent` header set to the `claude_code.llm_request` span's context ... Outbound HTTP MCP requests carry `traceparent` the same way.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "TRACEPARENT / W3C trace context propagation to subprocesses, model requests, and HTTP MCP requests",
+    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-traceparent-w3c-tr",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

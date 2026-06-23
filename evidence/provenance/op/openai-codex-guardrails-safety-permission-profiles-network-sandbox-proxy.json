@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-permission-profiles-network-sandbox-proxy",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Configures the network sandbox proxy and the sandbox network policy for the profile.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "network sandbox proxy",
+    "page_content_hash": "503cd21be61ffbba5c38da67655b91755b9d52a124f9c3c4440da3030c301b75",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-permission-profiles-network-sandbox-proxy",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

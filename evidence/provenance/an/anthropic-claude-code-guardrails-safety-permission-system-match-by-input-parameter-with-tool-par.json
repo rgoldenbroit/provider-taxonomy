@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-permission-system-match-by-input-parameter-with-tool-par",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Deny and ask rules can match a top-level input parameter on any tool with `Tool(param:value)`. The rule matches when Claude calls the tool with that parameter set to that exact value.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Match by input parameter with Tool(param:value)",
+    "page_content_hash": "63942d8d40c517c833ae3893ecd1ac05cf6b4cc764cccbceda94ecb9f09f3679",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-permission-system-match-by-input-parameter-with-tool-par",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

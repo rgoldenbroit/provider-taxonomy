@@ -1,0 +1,12 @@
+{
+  "key": "b2b2ab2323c2904a6b0630d10b97dd7fad0363b975309f599d9c78f655479c25",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-claude-security",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Security        | \u2705 Supported     | Available in public beta for Enterprise plans at [claude.ai/security](https://claude.ai/security)",
+    "lifecycle_status": "beta",
+    "rationale": "The page lists Claude Security as a supported feature available for Enterprise plans at claude.ai/security, matching the claim. The page describes it as being in public beta.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "832dca8f03ece563d6670a37f5a250911e8d003487694c2336768e4a1d5c303c",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments-container-caching-for-up-to-12-hours-to-spe",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex caches container state for up to 12 hours to speed up new tasks and follow-ups.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a \"Container caching\" section that states verbatim that Codex caches container state for up to 12 hours to speed up new tasks and follow-ups, directly substantiating the claim. It is described as a current feature with no indication of deprecation.",
+    "supported": true
+  }
+}

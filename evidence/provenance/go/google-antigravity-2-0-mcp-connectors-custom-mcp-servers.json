@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-mcp-connectors-custom-mcp-servers",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Connecting Custom MCP Servers\n\nTo connect to a custom MCP server:\n\n1. Open the MCP store via the \"...\" dropdown at the top of the editor's agent panel.\n2. Click on \"Manage MCP Servers\"\n3. Click on \"View raw config\"\n4. Modify the mcp_config.json with your custom MCP server configuration.\n\nThe configuration file is located at `~/.gemini/config/mcp_config.json`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Custom MCP Servers",
+    "page_content_hash": "0c3c60d27a062207a286cc01950b4612de4ffcd3e28486d0fb1d0155a4df7496",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-mcp-connectors-custom-mcp-servers",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

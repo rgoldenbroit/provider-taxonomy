@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-resume-after-a-pause-within-the-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you stop a run, you can resume it: agents that already completed return their cached results, and the rest run live. Resume a paused run from `/workflows` by selecting it and pressing `p`... Resume works within the same Claude Code session.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Resume after a pause within the same session, returning cached results for completed agents",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-resume-after-a-pause-within-the-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

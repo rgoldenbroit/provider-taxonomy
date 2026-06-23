@@ -1,0 +1,12 @@
+{
+  "key": "9e60d3cad252cfac983401c53fb5311df9624ace6bdda5f3cf9483531118dc25",
+  "label": "judge:openai-codex-subagents-orchestration-custom-agents-reasoning-effort-high-medium-or-low-per-agent",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Optional fields such as `nickname_candidates`, `model`, `model_reasoning_effort`, `sandbox_mode`, `mcp_servers`, and `skills.config` inherit from the parent session when you omit them.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a per-agent `model_reasoning_effort` field, with examples using values \"high\" and \"medium\" (e.g. reviewer.toml sets `model_reasoning_effort = \"high\"` and pr-explorer.toml sets `model_reasoning_effort = \"medium\"`). This substantiates the claim that reasoning effort can be configured per agent. Low is a standard value in the same set; high and medium are shown verbatim.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "f77a017040d1f1fe8808dbb9344ad5d867314ca0a6d3b30de0e79b246dfae0a9",
+  "label": "judge:openai-codex-code-execution-sandbox-sandbox-run-commands-with-elevated-permissions",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`danger-full-access`: Codex runs without sandbox restrictions. This removes the filesystem and network boundaries and should be used only when you want Codex to act with full access.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex's ability to run commands with elevated permissions via the `danger-full-access` sandbox mode (combined with `approval_policy = \"never\"` for full access), and switching to \"full access\" in the permissions selector. This substantiates the claim that OpenAI offers running commands with elevated permissions.",
+    "supported": true
+  }
+}

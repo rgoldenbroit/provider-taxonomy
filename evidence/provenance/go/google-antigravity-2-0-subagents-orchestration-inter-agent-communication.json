@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-subagents-orchestration-inter-agent-communication",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Inter-Agent Communication\n\nAgents communicate by sending messages to each other using unique agent IDs.\n\n* **Flexible Routing**: Agents can communicate not only with their direct parents or subagents, but also with any other active agent whose ID is known.\n* **Auto-Wake**: If an idle agent receives a message, it is automatically re-awakened to process the new information.\n* **Shared Transcripts**: Agents can view each other's conversation transcripts, providing a comprehensive view of the collaborative workflow.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Inter-Agent Communication",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-subagents-orchestration-inter-agent-communication",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

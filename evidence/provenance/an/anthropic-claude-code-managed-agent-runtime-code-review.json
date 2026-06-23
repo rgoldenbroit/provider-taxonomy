@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-managed-agent-runtime-code-review",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "| Code Review            | \u2705 Supported     | Same automated PR reviews as github.com                                                                                      |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Code Review",
+    "page_content_hash": "1ae3716c8ee6d144714a877a717e58141f6c547155a0ba59b3490880186cf6ba",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-managed-agent-runtime-code-review",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

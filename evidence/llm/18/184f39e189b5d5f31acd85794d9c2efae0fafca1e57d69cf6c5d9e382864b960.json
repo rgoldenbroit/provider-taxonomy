@@ -1,0 +1,12 @@
+{
+  "key": "184f39e189b5d5f31acd85794d9c2efae0fafca1e57d69cf6c5d9e382864b960",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-strict-sandbox-mode-disables-th",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can disable this escape hatch by setting `\"allowUnsandboxedCommands\": false` in your [sandbox settings](/en/settings#sandbox-settings). When disabled, which the `/sandbox` Overrides tab shows as **Strict sandbox mode**, the `dangerouslyDisableSandbox` parameter is completely ignored and all commands must run sandboxed or be explicitly listed in `excludedCommands`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Strict sandbox mode (the state when allowUnsandboxedCommands is false) as disabling the unsandboxed escape hatch, ignoring dangerouslyDisableSandbox and requiring all commands to run sandboxed.",
+    "supported": true
+  }
+}

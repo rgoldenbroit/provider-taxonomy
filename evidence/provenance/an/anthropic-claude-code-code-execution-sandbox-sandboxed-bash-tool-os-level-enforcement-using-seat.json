@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-os-level-enforcement-using-seat",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### OS-level enforcement\\n\\nThe sandboxed Bash tool leverages operating system security primitives:\\n\\n* **macOS**: uses Seatbelt for sandbox enforcement\\n* **Linux**: uses [bubblewrap](https://github.com/containers/bubblewrap) for isolation\\n* **WSL2**: uses bubblewrap, same as Linux",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "OS-level enforcement using Seatbelt on macOS and bubblewrap on Linux/WSL2",
+    "page_content_hash": "1217817d282d5725d10c54be56480611080aba95106841b4268e65cfc1385dde",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-os-level-enforcement-using-seat",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

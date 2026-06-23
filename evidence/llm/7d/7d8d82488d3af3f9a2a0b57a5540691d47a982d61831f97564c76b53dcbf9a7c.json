@@ -1,0 +1,12 @@
+{
+  "key": "7d8d82488d3af3f9a2a0b57a5540691d47a982d61831f97564c76b53dcbf9a7c",
+  "label": "judge:openai-codex-remote-agent-control-github-integration",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use Codex code review to get another high-signal review pass on GitHub pull requests. Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex integrating with GitHub to review pull requests (via @codex review) and starting cloud tasks when mentioning @codex with other instructions, matching the claim. No deprecation or sunset language is present, so it is treated as active.",
+    "supported": true
+  }
+}

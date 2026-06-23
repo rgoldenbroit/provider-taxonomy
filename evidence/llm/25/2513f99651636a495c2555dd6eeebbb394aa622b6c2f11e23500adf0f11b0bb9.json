@@ -1,0 +1,12 @@
+{
+  "key": "2513f99651636a495c2555dd6eeebbb394aa622b6c2f11e23500adf0f11b0bb9",
+  "label": "judge:google-antigravity-2-0-remote-agent-control-multi-agent-teamwork-auto-waking-idle-agents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Auto-Wake**: If an idle agent receives a message, it is automatically re-awakened to process the new information.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes an Auto-Wake feature where idle agents are automatically re-awakened upon receiving a message, matching the claim of auto-waking idle agents. It is presented as a current capability of Antigravity 2.0 subagents.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "dfeac3e9aeaceae30ac34b8816151d5cd7c3c3b826fda560ec7ccb0e426787f2",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-on-the-web-parallel-tasks",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Claude Code on the web, cloud environments, setup scripts, and running tasks on Anthropic-managed infrastructure. While it mentions running tasks and parallel installs (\"Run independent installs in parallel with `&` and `wait`\"), it does not describe any offering or feature named \"Parallel tasks.\" There is no mention of running multiple tasks in parallel as a named product feature.",
+    "supported": false
+  }
+}

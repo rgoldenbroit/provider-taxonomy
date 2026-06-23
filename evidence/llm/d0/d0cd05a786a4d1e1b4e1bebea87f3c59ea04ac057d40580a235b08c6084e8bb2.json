@@ -1,0 +1,12 @@
+{
+  "key": "d0cd05a786a4d1e1b4e1bebea87f3c59ea04ac057d40580a235b08c6084e8bb2",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-attribute-actions-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "`OTEL_METRICS_INCLUDE_RESOURCE_ATTRIBUTES` | Include keys from `OTEL_RESOURCE_ATTRIBUTES` as attributes on metric datapoints | `true`",
+    "lifecycle_status": "active",
+    "rationale": "The page describes resource attribute support for telemetry, including resource attributes as keys on metric datapoints and per-user attributes such as user.account_uuid via OTEL_METRICS_INCLUDE_ACCOUNT_UUID. This supports attributing usage/audit data to end users via resource attributes. While the exact phrasing \"Attribute actions to your end users\" does not appear verbatim, the page substantively describes the capability of per-user attribution through resource attributes.",
+    "supported": true
+  }
+}

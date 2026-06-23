@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-filesystem-isolation-with-confi",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "You can also deny write or read access using `sandbox.filesystem.denyWrite` and `sandbox.filesystem.denyRead`, and re-allow specific paths within a denied region using `sandbox.filesystem.allowRead`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Filesystem isolation with configurable allow/deny read and write paths",
+    "page_content_hash": "1217817d282d5725d10c54be56480611080aba95106841b4268e65cfc1385dde",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-filesystem-isolation-with-confi",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

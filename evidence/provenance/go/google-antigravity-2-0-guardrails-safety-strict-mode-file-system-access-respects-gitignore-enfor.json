@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-strict-mode-file-system-access-respects-gitignore-enfor",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### File System Access\n\nStrict mode restricts the Agent's access to the file system to ensure it only interacts with authorized files:\n- **Respect .gitignore**: The Agent will respect `.gitignore` rules, preventing it from accessing ignored files.\n- **Workspace Isolation**: Access to files outside the workspace is disabled. The Agent can only view and edit files within the designated workspace.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "File System Access (respects .gitignore, enforces workspace isolation)",
+    "page_content_hash": "315faf24e85eaf3160c1962196118a8bc163de9131d9a2a5bb3128c86d17f5ee",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-strict-mode-file-system-access-respects-gitignore-enfor",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/settings/ide-settings.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

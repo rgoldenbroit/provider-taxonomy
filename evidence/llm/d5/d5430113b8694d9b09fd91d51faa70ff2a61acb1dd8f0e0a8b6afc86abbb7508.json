@@ -1,0 +1,12 @@
+{
+  "key": "d5430113b8694d9b09fd91d51faa70ff2a61acb1dd8f0e0a8b6afc86abbb7508",
+  "label": "judge:anthropic-claude-code-guardrails-safety-protect-against-prompt-injection-trust-verification-for-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Trust verification**: First-time codebase runs and new MCP servers require trust verification",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists Trust verification as a safeguard requiring trust verification for first-time codebase runs and new MCP servers, directly matching the claim.",
+    "supported": true
+  }
+}

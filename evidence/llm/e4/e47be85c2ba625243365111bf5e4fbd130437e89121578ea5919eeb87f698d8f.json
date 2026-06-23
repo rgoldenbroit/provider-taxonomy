@@ -1,0 +1,12 @@
+{
+  "key": "e47be85c2ba625243365111bf5e4fbd130437e89121578ea5919eeb87f698d8f",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-secure-by-default-interactive-approvals",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Interactive Approvals**: By default, agents will request your explicit permission before running any terminal commands.",
+    "lifecycle_status": "active",
+    "rationale": "The page lists \"Interactive Approvals\" as a feature of Antigravity 2.0 under the \"Secure by Default\" section, describing it as a current default behavior, which substantiates the claim.",
+    "supported": true
+  }
+}

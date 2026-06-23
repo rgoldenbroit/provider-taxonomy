@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents-delegation-hierarchy",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Delegation Hierarchy and Limits\n\nSubagents can invoke their own subagents, enabling multiple layers of delegation and hierarchical team structures.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Delegation Hierarchy and Limits",
+    "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-subagents-orchestration-built-in-vs-custom-subagents-delegation-hierarchy",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-code-execution-sandbox-fine-grained-permissions-engine",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "To secure your workstation while enabling autonomous workflows, Antigravity CLI integrates a robust **Fine-Grained Permissions Engine**. Every sensitive operation the agent performs is represented as a **permission resource** formatted as `action(target)`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Fine-Grained Permissions Engine",
+    "page_content_hash": "7d39803957ef2c6b2d2794b9a58119866b11d48cb877d76f56f3f3f22c23af68",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-code-execution-sandbox-fine-grained-permissions-engine",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

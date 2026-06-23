@@ -1,0 +1,12 @@
+{
+  "key": "a436db243e4a23b6f607861d37e9396d346a9c84be1d192c6bf35de57f2f470b",
+  "label": "judge:openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-mcp-tool-that-starts-a-codex-se",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`codex`**: Run a Codex session. Accepts configuration parameters that match the Codex `Config` struct.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the `codex` MCP tool exposed by the Codex MCP server, stating it runs (starts) a Codex session. It is presented as a currently usable tool with no deprecation or sunset notice.",
+    "supported": true
+  }
+}

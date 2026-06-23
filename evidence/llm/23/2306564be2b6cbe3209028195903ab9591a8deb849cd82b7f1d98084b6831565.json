@@ -1,0 +1,12 @@
+{
+  "key": "2306564be2b6cbe3209028195903ab9591a8deb849cd82b7f1d98084b6831565",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-sidecars-schedule-builtin",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`builtin`** (string): Builtin command to execute. Currently supports `schedule`. Mutually exclusive with `command`.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the `schedule` builtin as part of Antigravity's sidecar configuration, including a dedicated section explaining it as \"a simple builtin scheduler for running recurring commands.\" It is presented as currently supported/available, indicating active status.",
+    "supported": true
+  }
+}

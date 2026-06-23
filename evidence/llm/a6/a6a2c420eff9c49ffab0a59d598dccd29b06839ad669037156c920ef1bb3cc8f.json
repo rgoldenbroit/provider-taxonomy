@@ -1,0 +1,12 @@
+{
+  "key": "a6a2c420eff9c49ffab0a59d598dccd29b06839ad669037156c920ef1bb3cc8f",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-deny-ask-allow-access-l",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Permissions are evaluated across three distinct access lists:\n-   **Deny**: The action is blocked immediately.\n-   **Ask**: The Agent pauses and prompts for your explicit approval before proceeding.\n-   **Allow**: The action is auto-approved without prompting.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Google Antigravity's permission engine evaluating permissions across three access lists: Deny, Ask, and Allow, directly matching the claim. The feature is presented as a current capability with no deprecation or sunset language.",
+    "supported": true
+  }
+}

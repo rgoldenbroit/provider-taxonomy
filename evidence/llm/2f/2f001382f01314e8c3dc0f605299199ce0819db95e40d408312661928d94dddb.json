@@ -1,0 +1,12 @@
+{
+  "key": "2f001382f01314e8c3dc0f605299199ce0819db95e40d408312661928d94dddb",
+  "label": "judge:openai-codex-remote-agent-control-github-integration-codex-code-review-posts-a-standard-github-c",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Codex code review reviewing the PR diff and posting a standard GitHub code review, matching the claim. The page presents it as a currently usable feature with setup instructions.",
+    "supported": true
+  }
+}

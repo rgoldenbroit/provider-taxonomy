@@ -1,0 +1,12 @@
+{
+  "key": "450b69925959e9dd1e9150e7c3d3eac7ab35846ccc612f2281efd63d8ba9c22f",
+  "label": "judge:openai-codex-guardrails-safety-codex-security-run-a-deep-security-scan",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Run a deep security scan](https://developers.openai.com/codex/security/plugin/deep-scans) when you need a more comprehensive scan and can wait longer for it to finish.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Run a deep security scan\" as a Codex Security plugin use case, describing it as a more comprehensive scan. While Codex Security cloud is noted as research preview, the deep scan is listed as an available plugin feature without preview qualification, so it is described as active.",
+    "supported": true
+  }
+}

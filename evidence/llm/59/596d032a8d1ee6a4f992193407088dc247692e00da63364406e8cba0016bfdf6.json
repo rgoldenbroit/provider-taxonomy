@@ -1,0 +1,12 @@
+{
+  "key": "596d032a8d1ee6a4f992193407088dc247692e00da63364406e8cba0016bfdf6",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks-jitter-deterministic-offset-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To avoid every session hitting the API at the same wall-clock moment, the scheduler adds a deterministic offset to fire times... The offset is derived from the task ID, so the same task always gets the same offset.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Jitter\" describing a deterministic offset derived from the task ID, added to avoid every session hitting the API at the same wall-clock moment. This directly matches the claim. The feature is described as current behavior of the scheduler.",
+    "supported": true
+  }
+}

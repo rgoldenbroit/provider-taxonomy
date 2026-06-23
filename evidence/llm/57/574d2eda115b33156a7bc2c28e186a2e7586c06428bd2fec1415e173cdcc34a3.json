@@ -1,0 +1,12 @@
+{
+  "key": "574d2eda115b33156a7bc2c28e186a2e7586c06428bd2fec1415e173cdcc34a3",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-strict-mode-browser-url-allowlist-denylist-governance-f",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In strict mode, the Agent's ability to interact with external websites is governed by the browser's Allowlist and Denylist.",
+    "lifecycle_status": "active",
+    "rationale": "The page (Google's Antigravity IDE docs) explicitly describes a Browser URL Allowlist/Denylist feature that governs the Agent's interaction with external websites in strict mode, directly substantiating the claim. No lifecycle limitation is indicated, so it is treated as active.",
+    "supported": true
+  }
+}

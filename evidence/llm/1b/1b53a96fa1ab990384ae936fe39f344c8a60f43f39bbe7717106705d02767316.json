@@ -1,0 +1,12 @@
+{
+  "key": "1b53a96fa1ab990384ae936fe39f344c8a60f43f39bbe7717106705d02767316",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-default-mode-routes-unmatched-tools-to-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The claim states that \"default mode routes unmatched tools to canUseTool (Agent SDK).\" The page describes permission modes for Claude Code, including default mode (which auto-approves \"Reads only\"). However, the page never mentions \"canUseTool\" or the \"Agent SDK,\" nor does it describe default mode routing unmatched tools to any such callback. The decision-order section discussing routing is specific to auto mode and its classifier, not default mode's canUseTool behavior. The page does not substantiate this specific claim.",
+    "supported": false
+  }
+}

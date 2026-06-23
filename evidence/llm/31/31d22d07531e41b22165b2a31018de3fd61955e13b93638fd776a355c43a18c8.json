@@ -1,0 +1,12 @@
+{
+  "key": "31d22d07531e41b22165b2a31018de3fd61955e13b93638fd776a355c43a18c8",
+  "label": "judge:openai-codex-remote-agent-control-remote-connections-switch-between-connected-hosts-and-threads",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Switch between connected hosts and threads.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Switch between connected hosts and threads.\" as one of the things you can do remotely with Codex, directly substantiating the claim. No lifecycle qualifier (preview/beta/deprecation) is mentioned, so it is presented as a current feature.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-remote-connections-set-up-mobile-access-via-qr-code-from-the-c",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The setup flow enables remote access for that host, then shows a QR code you can scan from your phone. ... Use your phone to scan the QR code shown by Codex. The code opens ChatGPT so you can finish connecting the mobile app to the host.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Set up mobile access via QR code from the ChatGPT mobile app",
+    "page_content_hash": "117e536573c6eae4c5567ba35cfd64954a0e3d276e75f64d5129edd8e6214869",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-remote-connections-set-up-mobile-access-via-qr-code-from-the-c",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/remote-connections.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

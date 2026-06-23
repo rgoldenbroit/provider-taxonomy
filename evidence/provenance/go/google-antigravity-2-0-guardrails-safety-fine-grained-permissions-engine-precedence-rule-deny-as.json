@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-precedence-rule-deny-as",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Precedence Rule:\nConflicting rules are strictly evaluated in priority order:\nDeny > Ask > Allow\n. For example, if you configure\ncommand(*)\nin Ask and\ncommand(git)\nin Allow, the Ask rule takes precedence and prompts before every command.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Precedence Rule (Deny > Ask > Allow)",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-precedence-rule-deny-as",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

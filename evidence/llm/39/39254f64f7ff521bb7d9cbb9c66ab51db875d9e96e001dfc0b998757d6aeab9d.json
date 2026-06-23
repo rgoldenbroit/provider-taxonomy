@@ -1,0 +1,12 @@
+{
+  "key": "39254f64f7ff521bb7d9cbb9c66ab51db875d9e96e001dfc0b998757d6aeab9d",
+  "label": "judge:openai-codex-agent-evals-observability-trace-grading-agent-workflow-evaluation",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The OpenAI Platform offers a suite of evaluation tools to help you ensure your agents perform consistently and accurately.",
+    "lifecycle_status": "active",
+    "rationale": "The page is titled \"Evaluate agent workflows\" and describes OpenAI's evaluation tools (trace grading, datasets, eval runs) for agent workflows, directly substantiating the claim. It is presented as currently available with no indication of deprecation.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-allowlist-denylist",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The browser uses a two-layer security system to control which URLs can be accessed:\n- **Denylist** - Deny dangerous/malicious URLs\n- **Allowlist** - Explicitly allow trusted URLs",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Allowlist / Denylist",
+    "page_content_hash": "3b115b16e878b60b6fda01250ad28fd4bc843111357451b043c71447e1443519",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-allowlist-denylist",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/browser/allowlist-denylist.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

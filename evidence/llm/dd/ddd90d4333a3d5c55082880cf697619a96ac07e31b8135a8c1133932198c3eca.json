@@ -1,0 +1,12 @@
+{
+  "key": "ddd90d4333a3d5c55082880cf697619a96ac07e31b8135a8c1133932198c3eca",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-debug-logging-claude-debug-verbose-mode-shows-ev",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about debugging Claude Code configuration. It mentions debug logging commands like /debug, claude --debug hooks, and claude --debug mcp, which record events and output. However, there is no mention of a \"Verbose mode\" that shows every tool call, file read, and intermediate step. The page does not describe the named offering at all.",
+    "supported": false
+  }
+}

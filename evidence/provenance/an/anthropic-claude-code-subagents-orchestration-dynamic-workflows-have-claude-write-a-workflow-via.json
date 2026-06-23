@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-have-claude-write-a-workflow-via",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Ask for a workflow in your prompt, either in your own words or by including the keyword `ultracode`, and Claude writes one for the task.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Have Claude write a workflow via in-prompt keyword or natural-language request",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-have-claude-write-a-workflow-via",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

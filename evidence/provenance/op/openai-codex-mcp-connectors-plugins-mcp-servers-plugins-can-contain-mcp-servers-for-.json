@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-plugins-mcp-servers-plugins-can-contain-mcp-servers-for-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**MCP servers:** services that give Codex access to more tools or shared information, often from systems outside your local project.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP servers \u2014 plugins can contain MCP servers for more tools or shared information",
+    "page_content_hash": "16cd696a3493d867f73b728e85947bb48aed9c2e3822f54397ed33ddc1def0d9",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-plugins-mcp-servers-plugins-can-contain-mcp-servers-for-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/plugins.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

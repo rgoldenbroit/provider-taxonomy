@@ -1,0 +1,12 @@
+{
+  "key": "8621bb525d4db352289e89e54206bfa898cd3d6de6774be6c355a8974e04fedb",
+  "label": "judge:openai-codex-mcp-connectors-plugins-plugin-provided-mcp-servers-installed-plugins-ca",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins bundle skills, app integrations, and MCP servers into reusable workflows for Codex.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that plugins bundle MCP servers, and lists \"MCP servers\" as one of the things a plugin can contain. It also describes that installed plugins with MCP servers may require extra setup. This substantiates that plugins can bundle MCP servers.",
+    "supported": true
+  }
+}

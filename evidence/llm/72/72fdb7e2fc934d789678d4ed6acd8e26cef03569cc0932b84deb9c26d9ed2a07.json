@@ -1,0 +1,12 @@
+{
+  "key": "72fdb7e2fc934d789678d4ed6acd8e26cef03569cc0932b84deb9c26d9ed2a07",
+  "label": "judge:anthropic-claude-code-mcp-connectors-channels-notifications-claude-channel-pushes-content-into",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Your server emits `notifications/claude/channel` with two params: ... `content` ... The event body. Delivered as the body of the `<channel>` tag.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes channels as MCP servers that emit `notifications/claude/channel` events, with content delivered into Claude's context wrapped in a `<channel>` tag. It explicitly states channels are in research preview. This directly substantiates the claim.",
+    "supported": true
+  }
+}

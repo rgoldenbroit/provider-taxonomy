@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-example-mcp-servers-context7",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "[Context7](https://github.com/upstash/context7): Connect to up-to-date developer documentation.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Context7",
+    "page_content_hash": "f5555cc8d3f3967cbaaf49e47ae6c226ea00014cbadb93927ea6e7593a61b17f",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": false,
+    "record_id": "openai-codex-mcp-connectors-example-mcp-servers-context7",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/mcp.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "1e018a0d23a81dbf6d9f8fd0fb73cc3aec89f948948f76c0d6b7789055b941a4",
+  "label": "judge:openai-codex-guardrails-safety-auto-review-default-reviewer-policy-data-exfiltration-creden",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The default reviewer policy is in the open-source Codex repository: [core/src/guardian/policy.md]. ... At a high level, Auto-review is designed to block actions such as: - sending private data, secrets, or credentials to untrusted destinations - probing for credentials, tokens, cookies, or session material - broad or persistent security weakening - destructive actions with significant risk of irreversible damage",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly references a \"default reviewer policy\" and describes what Auto-review blocks: data exfiltration (sending private data/secrets/credentials to untrusted destinations), credential probing (probing for credentials, tokens, cookies, or session material), broad or persistent security weakening, and destructive actions with significant risk of irreversible damage. This matches all elements of the claim.",
+    "supported": true
+  }
+}

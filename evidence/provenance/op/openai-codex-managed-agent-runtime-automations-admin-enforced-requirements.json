@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-automations-admin-enforced-requirements",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you are in a managed environment, admins can restrict these behaviors using admin-enforced requirements. For example, they can disallow `approval_policy = \"never\"` or constrain allowed sandbox modes. See [Admin-enforced requirements (`requirements.toml`)]",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Admin-enforced requirements",
+    "page_content_hash": "d0253f1caf3a455e75bfaa8b6f2105dcbd08c84d48263d0800830976401ceee1",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-automations-admin-enforced-requirements",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/app/automations.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

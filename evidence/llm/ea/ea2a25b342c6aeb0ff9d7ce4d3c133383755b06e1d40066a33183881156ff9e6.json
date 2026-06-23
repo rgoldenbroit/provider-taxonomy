@@ -1,0 +1,12 @@
+{
+  "key": "ea2a25b342c6aeb0ff9d7ce4d3c133383755b06e1d40066a33183881156ff9e6",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-in-slack-context-gathering",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Context gathering\n\n**From threads**: When you @mention Claude in a thread, it gathers context from all messages in that thread to understand the full conversation.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly has a \"Context gathering\" section describing how Claude Code in Slack gathers context from threads and channels. It is presented as a current capability with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

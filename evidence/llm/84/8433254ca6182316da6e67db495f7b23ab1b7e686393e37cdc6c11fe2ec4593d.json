@@ -1,0 +1,12 @@
+{
+  "key": "8433254ca6182316da6e67db495f7b23ab1b7e686393e37cdc6c11fe2ec4593d",
+  "label": "judge:openai-codex-mcp-connectors-plugins",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins bundle skills, app integrations, and MCP servers into reusable workflows for Codex.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's Codex Plugins documentation, and it describes Plugins exactly as the claim states, with the matching verbatim definition. It provides installation, usage, and management instructions, indicating the offering is current and available.",
+    "supported": true
+  }
+}

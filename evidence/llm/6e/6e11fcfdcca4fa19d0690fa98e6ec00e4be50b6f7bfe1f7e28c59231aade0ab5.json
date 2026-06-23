@@ -1,0 +1,12 @@
+{
+  "key": "6e11fcfdcca4fa19d0690fa98e6ec00e4be50b6f7bfe1f7e28c59231aade0ab5",
+  "label": "judge:openai-codex-code-execution-sandbox-rules-codex-execpolicy-check",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `codex execpolicy check` to test how your rules apply to a command:",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes `codex execpolicy check` as a command to test how rules apply. The rules feature is described as \"experimental and may change,\" indicating a preview/experimental lifecycle status.",
+    "supported": true
+  }
+}

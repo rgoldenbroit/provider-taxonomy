@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-subagents-plan-research-subagent-used-during-plan-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A research agent used during [plan mode](/en/permission-modes#analyze-before-you-edit-with-plan-mode) to gather context before presenting a plan.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Plan: research subagent used during plan mode to gather context",
+    "page_content_hash": "13f8ef3f23b8e8bc467516d292afe1397698924a52adc2c050ba7f0f8bbe66bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-subagents-plan-research-subagent-used-during-plan-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

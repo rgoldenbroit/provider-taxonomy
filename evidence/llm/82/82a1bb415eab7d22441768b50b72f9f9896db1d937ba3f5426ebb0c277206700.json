@@ -1,0 +1,12 @@
+{
+  "key": "82a1bb415eab7d22441768b50b72f9f9896db1d937ba3f5426ebb0c277206700",
+  "label": "judge:openai-codex-subagents-orchestration-custom-agents-subagents-customization-specialized-roles-and",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With subagent workflows, you can also define your own custom agents with different model configurations and instructions depending on the task.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex subagent workflows with specialized roles (built-in agents like explorer/worker, and custom agents with distinct jobs) and tool surfaces (e.g., dedicated MCP servers per agent). It states \"Current Codex releases enable subagent workflows by default,\" indicating active availability.",
+    "supported": true
+  }
+}

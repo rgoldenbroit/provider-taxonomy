@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-sites-configure-runtime-environment-values",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Configure runtime environment values\n\nOpen **Sites** in the app sidebar and select a project to add, update, or remove\nhosted environment variables and secrets in the Sites panel.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Configure runtime environment values",
+    "page_content_hash": "2740ab94b0bcdbcf0f16f249b9737a22362be6c0dead013e5378f03ee769ac97",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-sites-configure-runtime-environment-values",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/sites.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

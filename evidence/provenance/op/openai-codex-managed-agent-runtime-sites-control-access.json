@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-sites-control-access",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Control access and secrets\n\nSet the audience before you share a deployed URL. For a new site, keep access limited to the owner and workspace admins until you have reviewed the content, data handling, and expected audience.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Control access",
+    "page_content_hash": "2740ab94b0bcdbcf0f16f249b9737a22362be6c0dead013e5378f03ee769ac97",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-sites-control-access",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/sites.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-agent-evals-observability-subagents-tool-confirmations-approvals-approve-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Tool Confirmations & Approvals**  \nWhen a subagent wants to execute a tool that requires user permissions (such as running a local command or writing a file), it will surface the request. You can manage approvals in two ways: \n\n1. **Detail View Approvals**  \n   The Subagent Detail View features an interaction section containing all pending approvals, where you can selectively approve or deny requests.\n...\n2. **Fast Path Alerts**  \n   To keep you in your flow, Antigravity CLI displays a Fast Path Alert directly above your prompt box when a subagent requests permission.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool Confirmations & Approvals: approve or deny subagent tool execution requests via detail view or fast path alerts",
+    "page_content_hash": "f49ef04e49d3c23c8bbd37a392dc279197cf3ebbe1e42529e3efe9de624ebb2f",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-agent-evals-observability-subagents-tool-confirmations-approvals-approve-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-features.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

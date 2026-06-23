@@ -1,0 +1,12 @@
+{
+  "key": "100e4e173f592d0fcea1972fd7cc42d8a015adc8dad5b938be0fc42de63b8829",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows-bundled-skills-prompt-based-play",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The claim describes \"Bundled skills: prompt-based playbooks that let Claude orchestrate work and spawn agents.\" The page is about \"Dynamic workflows\" and \"Bundled workflows\" (e.g., /deep-research), not \"Bundled skills.\" The page does mention \"skills\" as a distinct concept (\"Instructions Claude follows\") in a comparison table, and references \"bundled workflow\" / \"Bundled workflows\" \u2014 but it never describes anything called \"Bundled skills.\" The conflation of \"skills\" with bundled prompt-based playbooks that orchestrate and spawn agents is not asserted by the page; those are characteristics it attributes to workflows, not skills. No verbatim text on the page substantiates the named offering \"Bundled skills.\"",
+    "supported": false
+  }
+}

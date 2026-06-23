@@ -1,0 +1,12 @@
+{
+  "key": "d448742d07a269bf7128ad28dde599f1dad8bbeaa906b3aebafa6e209a6eeb3d",
+  "label": "judge:openai-codex-agent-evals-observability-datasets-and-eval-runs",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Once you know what \u201cgood\u201d looks like, move from individual traces to repeatable datasets and eval runs. This is the right step when you want to benchmark changes, compare prompts, or run larger-scale evaluations over time.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes datasets and eval runs as a repeatable evaluation surface for benchmarking changes, comparing prompts, or running larger-scale evaluations over time, matching the claim verbatim.",
+    "supported": true
+  }
+}

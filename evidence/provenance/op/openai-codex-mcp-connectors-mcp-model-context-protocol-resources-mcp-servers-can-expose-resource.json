@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-mcp-model-context-protocol-resources-mcp-servers-can-expose-resource",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "MCP servers can expose:\n\n- **Tools** (actions)\n- **Resources** (readable data)\n- **Prompts** (reusable prompt templates)",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Resources \u2014 MCP servers can expose resources as readable data",
+    "page_content_hash": "1824bf445eda8a58077ba8e502a9ad8c8d76a9684dbaf8435a77c7907f923041",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-mcp-model-context-protocol-resources-mcp-servers-can-expose-resource",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/concepts/customization.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "dc19c7469e02b96de7c2d63d2eb3551c360e742ca25df8da96ffe963d9209f9b",
+  "label": "judge:openai-codex-mcp-connectors-codex-for-linear",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use Codex in Linear to delegate work from issues. Assign an issue to Codex or mention `@Codex` in a comment, and Codex creates a cloud task and replies with progress and results.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes delegating work to Codex from Linear issues by assigning or mentioning @Codex, and also covers connecting the Linear MCP server for local tasks. It is described as available on paid plans, indicating active status.",
+    "supported": true
+  }
+}

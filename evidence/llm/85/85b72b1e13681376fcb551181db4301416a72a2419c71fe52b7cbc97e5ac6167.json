@@ -1,0 +1,12 @@
+{
+  "key": "85b72b1e13681376fcb551181db4301416a72a2419c71fe52b7cbc97e5ac6167",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-dynamic-workflows-save-the-workflow-for-reuse-as-a",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When Claude writes a workflow for a task you'll repeat, you can save that run's script as a command. A process like a review you run on every branch then runs the same orchestration each time.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Save the workflow for reuse\" describing how to save a workflow run's script as a slash command (running as /<name> in future sessions), substantiating the claim.",
+    "supported": true
+  }
+}

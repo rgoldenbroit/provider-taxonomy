@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-cloud-environments",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Use environments to control what Codex installs and runs during cloud tasks. For example, you can add dependencies, install tools like linters and formatters, and set environment variables.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Cloud environments",
+    "page_content_hash": "8ffeeb3960894ca90ab59cf7e325aba1e1058afaba5e4ac56af9a0b328b719ef",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-cloud-environments",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/cloud/environments.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

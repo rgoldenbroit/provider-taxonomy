@@ -1,0 +1,12 @@
+{
+  "key": "d7f282ad737950a27f4d9655b1220aab074e4678f1e6cd9956185b1b58b0e340",
+  "label": "judge:anthropic-claude-code-mcp-connectors-model-context-protocol-mcp-plugin-provided-mcp-servers-that",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins can bundle MCP servers, automatically providing tools and integrations when the plugin is enabled. ... When a plugin is enabled, its MCP servers start automatically",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes plugin-provided MCP servers that start automatically when a plugin is enabled, matching the claim. It is described as a current, working feature.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "bd8749be20c920b90e8e59865f76a185ba72cf4cf9cd3137f5b1e349df0577cd",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-sidecars",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sidecars are background processes that run alongside Antigravity. Antigravity manages the lifecycle of sidecars, automatically launching them and restarting them if they crash or error.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes Sidecars as background processes that run alongside Antigravity, with Antigravity managing their lifecycle (auto-launching and restarting), and includes a \"Runtime Data\" section describing per-sidecar runtime data stored in sidecar_data directories. This fully substantiates the claim. No deprecation or sunset language is present, so it is treated as active.",
+    "supported": true
+  }
+}

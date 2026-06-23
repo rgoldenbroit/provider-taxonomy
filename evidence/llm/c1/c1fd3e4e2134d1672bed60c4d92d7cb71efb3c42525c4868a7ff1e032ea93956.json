@@ -1,0 +1,12 @@
+{
+  "key": "c1fd3e4e2134d1672bed60c4d92d7cb71efb3c42525c4868a7ff1e032ea93956",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli-sandbox-customization-os-leve",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Enforce native operating system process isolation, manage execution containment boundaries, and protect your local workstation.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Antigravity CLI's Sandbox feature, which enforces native OS process isolation and execution containment boundaries for the CLI, configurable/enforceable via the enableTerminalSandbox setting. This substantiates the claim of OS-level container isolation boundaries that can be enforced. The page presents it as a current feature with no indication of deprecation.",
+    "supported": true
+  }
+}

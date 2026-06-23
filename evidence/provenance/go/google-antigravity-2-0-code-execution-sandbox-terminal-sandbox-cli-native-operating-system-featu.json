@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli-native-operating-system-featu",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Unlike heavy virtual containers or isolated virtual machines that slow down execution speeds, Antigravity uses lightweight, native operating system kernel utilities to create secure process rings with zero execution overhead",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "native operating system features (nsjail on Linux, sandbox-exec on macOS, AppContainer on Windows) rather than VMs or containers for zero startup overhead",
+    "page_content_hash": "0a9b459989ce6933c933f3179de9293d08e026c2a5d223bb08fdbb68ee623a97",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli-native-operating-system-featu",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-sandbox.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

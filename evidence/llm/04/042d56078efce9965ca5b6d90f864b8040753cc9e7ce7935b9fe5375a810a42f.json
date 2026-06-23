@@ -1,0 +1,12 @@
+{
+  "key": "042d56078efce9965ca5b6d90f864b8040753cc9e7ce7935b9fe5375a810a42f",
+  "label": "judge:google-antigravity-2-0-subagents-orchestration-asynchronous-subagents-parallel-local-subagents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents are an excellent way to parallelize complex tasks and preserve the context of your main agent. ... This architecture frees the parent agent to continue working on other tasks in parallel ... A parent agent can invoke multiple subagents at any time.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Google's Antigravity 2.0 subagents, which run concurrently/in parallel and can operate in isolated local Git worktrees (local subagents). The page documents this as a current capability (the multi-agent teamwork extension is preview, but core parallel subagents are presented as active).",
+    "supported": true
+  }
+}

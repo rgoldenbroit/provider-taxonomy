@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-virtual-machines-claude-code-on-the-web-runs-each-s",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "[Claude Code on the web](/en/claude-code-on-the-web) runs each session in an isolated, Anthropic-managed virtual machine. A network proxy enforces a default allowlist, and a separate proxy holds your GitHub token outside the sandbox while issuing scoped credentials for repository access inside it.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code on the web runs each session in an isolated, Anthropic-managed VM with a network proxy enforcing a default allowlist",
+    "page_content_hash": "52ae04e93fb667c1ace64567377b9c65d1c204f20a30aea8a4e1b180bff45e80",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-virtual-machines-claude-code-on-the-web-runs-each-s",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandbox-environments.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

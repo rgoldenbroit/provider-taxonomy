@@ -1,0 +1,12 @@
+{
+  "key": "00d1ad8043b8557ee8af54ddde00e6114b15c63b710d7793ec44eb04d7708223",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-routines-schedule-trigger-runs-a-routine-on-a-recurr",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A schedule trigger runs the routine on a recurring cadence, or once at a specific future time.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a schedule trigger that runs on a recurring cadence or once at a specific future time, matching the claim. The page notes routines are in research preview.",
+    "supported": true
+  }
+}

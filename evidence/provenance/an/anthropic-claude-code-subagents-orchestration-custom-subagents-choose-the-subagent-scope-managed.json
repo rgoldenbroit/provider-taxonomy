@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-custom-subagents-choose-the-subagent-scope-managed",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Store them in different locations depending on scope. When multiple subagents share the same name, the higher-priority location wins. | Location | Scope | Priority | ... | Managed settings | Organization-wide | 1 (highest) | ... | `--agents` CLI flag | Current session | 2 | ... | `.claude/agents/` | Current project | 3 | ... | `~/.claude/agents/` | All your projects | 4 | ... | Plugin's `agents/` directory | Where plugin is enabled | 5 (lowest) |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Choose the subagent scope: managed, session, project, user, or plugin scope with priority ordering",
+    "page_content_hash": "13f8ef3f23b8e8bc467516d292afe1397698924a52adc2c050ba7f0f8bbe66bb",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-custom-subagents-choose-the-subagent-scope-managed",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "7c1647398ac6822c211d3eb5d4151fd5e53a893820d2a972e94679177f70ad8d",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-virtual-machines-claude-code-on-the-web-runs-each-s",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Claude Code on the web](/en/claude-code-on-the-web) runs each session in an isolated, Anthropic-managed virtual machine. A network proxy enforces a default allowlist, and a separate proxy holds your GitHub token outside the sandbox while issuing scoped credentials for repository access inside it.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Claude Code on the web running each session in an isolated, Anthropic-managed VM with a network proxy enforcing a default allowlist, matching the claim verbatim. It is presented as a current available option requiring a Claude subscription and GitHub account.",
+    "supported": true
+  }
+}

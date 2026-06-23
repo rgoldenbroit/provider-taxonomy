@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-network-isolation-via-a-proxy-s",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Network access is controlled through a proxy server running outside the sandbox: * **Domain restrictions**: no domains are pre-allowed. The first time a command needs a new domain, Claude Code prompts for approval. Pre-allow domains with [`allowedDomains`](/en/settings#sandbox-settings) to avoid the prompt.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Network isolation via a proxy server with domain restrictions",
+    "page_content_hash": "1217817d282d5725d10c54be56480611080aba95106841b4268e65cfc1385dde",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-network-isolation-via-a-proxy-s",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

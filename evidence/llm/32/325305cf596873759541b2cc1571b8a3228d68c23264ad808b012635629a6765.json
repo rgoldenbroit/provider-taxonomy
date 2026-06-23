@@ -1,0 +1,12 @@
+{
+  "key": "325305cf596873759541b2cc1571b8a3228d68c23264ad808b012635629a6765",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandbox-runtime-unix-socket-architecture-with-netwo",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes several sandboxing approaches and mentions network proxies (e.g., \"A network proxy enforces a default allowlist\" for Claude Code on the web, and iptables firewalls for dev containers). However, it does not describe a \"Unix socket architecture\" where the agent reaches outside only through a mounted Unix socket to a host proxy with --network none. No mention of Unix sockets or --network none appears anywhere on the page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-connectors-ui-in-the-claude-",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "model": "claude-opus-4-8",
+    "name": "Connectors UI in the Claude Code desktop app",
+    "page_content_hash": "3e6883319029d9c3f38bd29e3b6267e8d55062140c07a3ad80323973460b2468",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": false,
+    "record_id": "anthropic-claude-code-mcp-connectors-anthropic-directory-connectors-connectors-ui-in-the-claude-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/mcp.md",
+    "supported": false,
+    "verified_at": "2026-06-22"
+  }
+}

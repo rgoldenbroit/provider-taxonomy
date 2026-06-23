@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-mcp-tool-that-starts-a-codex-se",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`codex`**: Run a Codex session. Accepts configuration parameters that match the Codex `Config` struct.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "codex \u2014 MCP tool that starts a Codex session",
+    "page_content_hash": "48ec78d3486a8610a3d70d7d440085a540e607227fd93c4847d8fd07c5837ae1",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-mcp-tool-that-starts-a-codex-se",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

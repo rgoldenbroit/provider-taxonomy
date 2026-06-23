@@ -1,0 +1,12 @@
+{
+  "key": "78a4cb1f36ad9a4338b378ed9bda7b0438dc610ed9e67c8ba95990788d8f3952",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin-add-your-own-rules-via-two-addi",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The plugin has two extension points: a Markdown guidance file for the model-backed reviews, and a YAML or JSON patterns file for the per-edit string match. Both are additive.",
+    "lifecycle_status": "active",
+    "rationale": "The page's \"Add your own rules\" section explicitly describes two additive extension points (a Markdown guidance file and a YAML/JSON patterns file), matching the claim. The plugin is described as available on all plans with no deprecation, so it is active.",
+    "supported": true
+  }
+}

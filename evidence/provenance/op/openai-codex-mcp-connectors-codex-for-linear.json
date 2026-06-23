@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-codex-for-linear",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Use Codex in Linear to delegate work from issues. Assign an issue to Codex or mention `@Codex` in a comment, and Codex creates a cloud task and replies with progress and results.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Codex for Linear",
+    "page_content_hash": "ec03368ffddcf54e085373fd9844a14e2b6938b17192aef33cdb8e5f91557bc2",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-codex-for-linear",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/integrations/linear.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

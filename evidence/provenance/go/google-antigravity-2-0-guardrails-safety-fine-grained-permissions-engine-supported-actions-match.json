@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-supported-actions-match",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Supported Actions & Matching Rules\n\n| Action | Target Format | Matching Behavior | Default Fallback |\n| :--- | :--- | :--- | :--- |\n| `read_file` | `read_file(/path)`, `read_file(dir)`, or `read_file(*)` | ... | `write_file` ... | `read_url` ... | `execute_url` ... | `command` ... | `unsandboxed` ... | `mcp`",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Supported Actions & Matching Rules (read_file, write_file, read_url, execute_url, command, unsandboxed, MCP)",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-supported-actions-match",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

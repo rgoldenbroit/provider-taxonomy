@@ -1,0 +1,12 @@
+{
+  "key": "7e35b385e90e9a20d12ae02a28fb24655ef63fbe7385802ba1059eaae9f8067f",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks-seven-day-expiry-recurring-t",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Recurring tasks automatically expire 7 days after creation. The task fires one final time, then deletes itself.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a \"Seven-day expiry\" section explicitly stating recurring tasks expire 7 days after creation, fire one final time, then delete themselves, matching the claim. Presented as a current feature.",
+    "supported": true
+  }
+}

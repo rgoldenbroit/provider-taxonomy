@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is an open standard for connecting AI agents to external tools and data sources. ... MCP servers can run as local processes, connect over HTTP, or execute directly within your SDK application. ... ### SDK MCP servers\\nDefine custom tools directly in your application code instead of running a separate server process.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agent SDK MCP & custom tools",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

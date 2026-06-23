@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-code-review-severity-levels-important-nit-pre-existing-t",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "| \ud83d\udd34     | Important    | A bug that should be fixed before merging                           |\n| \ud83d\udfe1     | Nit          | A minor issue, worth fixing but not blocking                        |\n| \ud83d\udfe3     | Pre-existing | A bug that exists in the codebase but was not introduced by this PR |",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Severity levels (Important, Nit, Pre-existing) that never block merging",
+    "page_content_hash": "685651f2297a5b794eae7615a910bb273c8d4385908a47a8c139187f6c76180b",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-code-review-severity-levels-important-nit-pre-existing-t",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/code-review.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

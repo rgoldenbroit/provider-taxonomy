@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-remote-connections-connect-to-an-ssh-host-to-run-threads-again",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "In the Codex App, add remote projects from an SSH host and run threads against the remote filesystem and shell. Remote project threads run commands, read files, and write changes on the remote host.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Connect to an SSH host to run threads against the remote filesystem and shell",
+    "page_content_hash": "117e536573c6eae4c5567ba35cfd64954a0e3d276e75f64d5129edd8e6214869",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-remote-connections-connect-to-an-ssh-host-to-run-threads-again",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/remote-connections.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

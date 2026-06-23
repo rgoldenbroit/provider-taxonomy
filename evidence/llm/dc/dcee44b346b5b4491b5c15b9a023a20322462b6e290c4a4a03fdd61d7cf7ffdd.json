@@ -1,0 +1,12 @@
+{
+  "key": "dcee44b346b5b4491b5c15b9a023a20322462b6e290c4a4a03fdd61d7cf7ffdd",
+  "label": "judge:openai-codex-managed-agent-runtime-sites-cloudflare-worker-compatible-output-as-es-module",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sites hosts projects that build Cloudflare Worker-compatible output as ES modules.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly states that OpenAI's Sites feature hosts projects building Cloudflare Worker-compatible output as ES modules. The page notes Sites is in preview (\"Sites is in preview and currently available for ChatGPT Business and Enterprise workspaces\").",
+    "supported": true
+  }
+}

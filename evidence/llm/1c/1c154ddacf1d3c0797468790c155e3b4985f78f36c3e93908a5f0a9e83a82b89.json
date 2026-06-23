@@ -1,0 +1,12 @@
+{
+  "key": "1c154ddacf1d3c0797468790c155e3b4985f78f36c3e93908a5f0a9e83a82b89",
+  "label": "judge:openai-codex-code-execution-sandbox-permission-profiles-danger-full-access",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`:danger-full-access` removes local sandbox restrictions and should be used only when that broad access is intentional.",
+    "lifecycle_status": "beta",
+    "rationale": "The page describes `:danger-full-access` as one of the three built-in Codex permission profiles. The page header states \"Beta. Permission profiles are under active development and may change,\" so the lifecycle status is beta.",
+    "supported": true
+  }
+}

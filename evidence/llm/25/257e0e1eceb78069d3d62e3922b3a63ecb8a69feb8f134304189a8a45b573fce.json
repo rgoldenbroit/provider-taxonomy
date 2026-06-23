@@ -1,0 +1,12 @@
+{
+  "key": "257e0e1eceb78069d3d62e3922b3a63ecb8a69feb8f134304189a8a45b573fce",
+  "label": "judge:openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-reply-mcp-tool-that-continues-a",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`codex-reply`**: Continue a Codex session by providing the thread ID and prompt. The `codex-reply` tool takes these properties:",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes `codex-reply` as one of the tools exposed by the Codex MCP server, stating it continues a Codex session via thread ID and prompt, with required `prompt` and `threadId` properties. This directly matches the claim. The page presents it as a currently available tool with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "ee6784d138a8edb9838d8dfd237d32a79f09c20f91e539ded3953a3563a57afb",
+  "label": "judge:openai-codex-remote-agent-control-remote-connections",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Remote connections let you use Codex from another device or another machine. ... - Start new threads in projects on the host, or continue existing ones. - Send follow-up instructions, answer questions, and steer active work. - Approve commands and other actions. - Review outputs, diffs, test results, terminal output, and screenshots. - Get notified when Codex completes a task or needs your attention.",
+    "lifecycle_status": "active",
+    "rationale": "The page is dedicated to Remote connections and describes all claimed capabilities: using Codex from another device/machine, starting/continuing threads, steering work, approving actions, reviewing outputs, and notifications. Described as a current feature with no deprecation notice.",
+    "supported": true
+  }
+}

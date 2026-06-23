@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-managed-agent-runtime-sites-save-a-version",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Save a version.** Codex builds the deployable site and associates that version with the source Git commit used for the build. Use this stage when you want a reviewable deployment candidate.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Save a version",
+    "page_content_hash": "2740ab94b0bcdbcf0f16f249b9737a22362be6c0dead013e5378f03ee769ac97",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-managed-agent-runtime-sites-save-a-version",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/sites.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

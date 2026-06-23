@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-permission-modes-the-classifier-evaluates-auto-mode-acti",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Auto mode lets Claude execute without routine permission prompts. A separate classifier model reviews actions before they run, blocking anything that escalates beyond your request, targets unrecognized infrastructure, or appears driven by hostile content Claude read.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "The classifier evaluates auto-mode actions and blocks dangerous operations",
+    "page_content_hash": "95cd159b4e21ca06bd81a460f8e7b317f1d29ab3a56d6140c5659917af274f5f",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-permission-modes-the-classifier-evaluates-auto-mode-acti",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permission-modes.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

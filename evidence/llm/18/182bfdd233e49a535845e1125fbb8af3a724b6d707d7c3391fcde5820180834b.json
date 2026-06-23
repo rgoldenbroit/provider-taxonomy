@@ -1,0 +1,12 @@
+{
+  "key": "182bfdd233e49a535845e1125fbb8af3a724b6d707d7c3391fcde5820180834b",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-claude-code-on-the-web",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "[Claude Code on the web](/en/claude-code-on-the-web) runs each session in an isolated, Anthropic-managed virtual machine. A network proxy enforces a default allowlist, and a separate proxy holds your GitHub token outside the sandbox while issuing scoped credentials for repository access inside it.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Claude Code on the web\" as running each session in an isolated, Anthropic-managed virtual machine. It also states sessions clone your repository from GitHub and the comparison table describes it as \"Full operating system, hosted by Anthropic.\" This substantiates the claim that Anthropic hosts and runs each session in a managed, isolated VM, cloning repos. The page describes it as a current offering requiring a Claude subscription and GitHub account, with no indication of deprecation, so lifecycle status is active.",
+    "supported": true
+  }
+}

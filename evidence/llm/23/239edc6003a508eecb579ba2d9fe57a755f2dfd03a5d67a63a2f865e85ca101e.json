@@ -1,0 +1,12 @@
+{
+  "key": "239edc6003a508eecb579ba2d9fe57a755f2dfd03a5d67a63a2f865e85ca101e",
+  "label": "judge:openai-codex-guardrails-safety-auto-review-reviewer-policy-customization-per-enterprise-or-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "That policy can be customized per enterprise with `guardian_policy_config` or per user with local [`[auto_review].policy`](/codex/config-advanced#approval-policies-and-sandbox-modes).",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex Auto-review's reviewer policy as customizable per enterprise (via guardian_policy_config) or per user (via local [auto_review].policy), directly substantiating the claim that OpenAI offers reviewer policy customization per enterprise or per user. The feature is described as currently functional/available.",
+    "supported": true
+  }
+}

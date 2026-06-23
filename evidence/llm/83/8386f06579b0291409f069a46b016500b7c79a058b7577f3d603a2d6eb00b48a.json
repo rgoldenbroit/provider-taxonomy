@@ -1,0 +1,12 @@
+{
+  "key": "8386f06579b0291409f069a46b016500b7c79a058b7577f3d603a2d6eb00b48a",
+  "label": "judge:google-antigravity-2-0-code-execution-sandbox-terminal-sandbox-cli-native-os-containment-lightwe",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Unlike heavy virtual containers or isolated virtual machines that slow down execution speeds, Antigravity uses lightweight, native operating system kernel utilities to create secure process rings with zero execution overhead:",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Native OS containment\" using lightweight native OS kernel utilities to create secure process rings with zero execution overhead, matching the claim verbatim. It is presented as a current capability of the Antigravity CLI with configuration instructions.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-managed-agent-runtime-projects-conversations-outside-of-projects",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Conversations outside of projects\n\nStart quick, one-off conversations outside of any Project. These sessions run in an isolated local scratch folder.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Conversations outside of projects",
+    "page_content_hash": "5418ba5768677142a184ef78e1b164bbd15ffe8cd5762fadc5b2c47000e424c5",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-managed-agent-runtime-projects-conversations-outside-of-projects",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

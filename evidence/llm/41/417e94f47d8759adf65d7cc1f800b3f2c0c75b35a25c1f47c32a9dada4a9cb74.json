@@ -1,0 +1,12 @@
+{
+  "key": "417e94f47d8759adf65d7cc1f800b3f2c0c75b35a25c1f47c32a9dada4a9cb74",
+  "label": "judge:openai-codex-code-execution-sandbox-network-access-web-search-tool",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can also control the [web search tool](https://platform.openai.com/docs/guides/tools-web-search) without granting full network access to spawned commands. Codex defaults to using a web search cache to access results.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"web search tool\" that Codex can control, including options for cached, live, or disabled modes. This substantiates that OpenAI offers a web search tool. The page presents it as currently usable with configurable defaults, indicating active status.",
+    "supported": true
+  }
+}

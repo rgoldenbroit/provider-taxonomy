@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-agent-evals-observability-lifecycle-hooks-inspect-read-only-non-blocking-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Inspect** (Read-Only, Non-Blocking): For logging, audit trails, and metrics.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Inspect: read-only, non-blocking hooks for logging, audit trails, and metrics",
+    "page_content_hash": "39e954cc65890d31b078560e299fd8455b308010bd521aa9cc4eb1002cbf14b0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-agent-evals-observability-lifecycle-hooks-inspect-read-only-non-blocking-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/sdk/sdk-overview.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

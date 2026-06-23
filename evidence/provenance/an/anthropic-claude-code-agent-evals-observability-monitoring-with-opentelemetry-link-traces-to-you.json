@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-link-traces-to-you",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "In Agent SDK and non-interactive sessions started with `-p`, Claude Code also reads `TRACEPARENT` and `TRACESTATE` from its own environment when starting each interaction span. This lets an embedding process pass its ac",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Link traces to your application via W3C trace context nesting",
+    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry-link-traces-to-you",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

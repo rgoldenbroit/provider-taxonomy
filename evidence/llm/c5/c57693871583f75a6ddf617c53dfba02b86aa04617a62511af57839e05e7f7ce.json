@@ -1,0 +1,12 @@
+{
+  "key": "c57693871583f75a6ddf617c53dfba02b86aa04617a62511af57839e05e7f7ce",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-plugins-antigravity-plugins-namespaced-bundles-that-can-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Plugins are namespaced bundles that allow you to extend Antigravity's capabilities by grouping skills, rules, MCP servers, and hooks into a single package.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Antigravity plugins as namespaced bundles that group skills, rules, MCP servers (Model Context Protocol), and hooks into a single package. The Supported Components section confirms MCP Servers configured via mcp_config.json, directly substantiating the claim. The page presents this as current functionality.",
+    "supported": true
+  }
+}

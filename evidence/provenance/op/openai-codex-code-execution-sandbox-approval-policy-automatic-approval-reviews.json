@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-approval-policy-automatic-approval-reviews",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "### Automatic approval reviews\n\nBy default, approval requests route to you:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Automatic approval reviews",
+    "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-approval-policy-automatic-approval-reviews",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

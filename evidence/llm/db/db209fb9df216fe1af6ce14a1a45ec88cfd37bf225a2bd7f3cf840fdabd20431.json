@@ -1,0 +1,12 @@
+{
+  "key": "db209fb9df216fe1af6ce14a1a45ec88cfd37bf225a2bd7f3cf840fdabd20431",
+  "label": "judge:google-antigravity-2-0-guardrails-safety-strict-mode-agent-non-workspace-file-access-control",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Agent Non-Workspace File Access\n\nAllows the agent to view and edit files outside of the active project folders.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents the \"Agent Non-Workspace File Access\" setting as a configurable control in the Antigravity IDE, describing how it allows the agent to view and edit files outside active project folders. This directly substantiates the claim, and it is presented as a currently available setting.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "4f011e85af914d5a91349bb3f5f17250d7a2d727c3ad816832bd074d6d6235c6",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-network-isolation-via-a-proxy-s",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Network access is controlled through a proxy server running outside the sandbox: * **Domain restrictions**: no domains are pre-allowed. The first time a command needs a new domain, Claude Code prompts for approval. Pre-allow domains with [`allowedDomains`](/en/settings#sandbox-settings) to avoid the prompt.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude Code's Network isolation, controlled through a proxy server running outside the sandbox, with domain restrictions enforced via an allowlist. This directly matches the claim.",
+    "supported": true
+  }
+}

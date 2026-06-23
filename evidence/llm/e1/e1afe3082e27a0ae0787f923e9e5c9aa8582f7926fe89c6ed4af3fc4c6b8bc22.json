@@ -1,0 +1,12 @@
+{
+  "key": "e1afe3082e27a0ae0787f923e9e5c9aa8582f7926fe89c6ed4af3fc4c6b8bc22",
+  "label": "judge:openai-codex-subagents-orchestration-managing-subagents-agent-thread-inspect-and-switch-between-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `/agent` in the CLI to switch between active agent threads and inspect the ongoing thread.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes the `/agent` CLI command that lets users switch between active agent threads and inspect the ongoing thread, directly matching the claimed \"Agent thread (inspect and switch between agent CLI threads)\" offering. It is described as part of current Codex releases with subagent workflows enabled by default.",
+    "supported": true
+  }
+}

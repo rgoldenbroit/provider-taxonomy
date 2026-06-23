@@ -1,0 +1,12 @@
+{
+  "key": "318fb409621bec99eb9cfc127bda9aa8f760cf24ef668058967249caf1fc4eec",
+  "label": "judge:openai-codex-mcp-connectors-mcp-model-context-protocol-codex-mcp-cli-command-to-add-and-manage-m",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP (Model Context Protocol) is the standard way to connect Codex to external tools and context providers.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes MCP support in Codex as a way to connect to external tools, but it does not mention a \"codex mcp\" CLI command for adding and managing MCP servers. The page references MCP conceptually and via configuration/skill dependencies, but no CLI command for managing MCP servers is described. The specific claimed offering (a CLI command to add and manage MCP servers) is not substantiated on this page.",
+    "supported": false
+  }
+}

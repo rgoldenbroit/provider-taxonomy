@@ -1,0 +1,12 @@
+{
+  "key": "27320f0c7011805a01d0bd3783b437f15bdb308c2f6a98a63ad7073b606fe592",
+  "label": "judge:google-antigravity-2-0-agent-memory-rules-workspace-rules-rules-stored-in-the-agents-rules",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Workspace rules live in the .agents/rules folder of your workspace or git root.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Workspace Rules stored in the .agents/rules folder of a workspace or git root, matching the claim. It is presented as a current feature.",
+    "supported": true
+  }
+}

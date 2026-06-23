@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-watch-the-run-progress-view-of-r",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Run `/workflows` at any time to list running and completed workflows, then select one to open its progress view. ... The progress view shows each phase with its agent counts, token totals, and elapsed time.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Watch the run: progress view of running/completed workflows with phase agent counts, tokens, elapsed time",
+    "page_content_hash": "de01318fcb93a3b719307fdef42e139c50516407d50f5c1f83f4f34937b64e47",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-subagents-orchestration-dynamic-workflows-watch-the-run-progress-view-of-r",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/workflows.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

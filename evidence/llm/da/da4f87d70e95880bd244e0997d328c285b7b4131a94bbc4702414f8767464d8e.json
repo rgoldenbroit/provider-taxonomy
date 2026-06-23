@@ -1,0 +1,12 @@
+{
+  "key": "da4f87d70e95880bd244e0997d328c285b7b4131a94bbc4702414f8767464d8e",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-subagents-background-tasks",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "# Background tasks & subagents\n\nDelegate slow builds, multi-file code generation, and research sweeps to parallel background agents while maintaining your active programming flow.",
+    "lifecycle_status": "active",
+    "rationale": "The page, hosted on Google's antigravity.google domain, describes Background Tasks as part of the Antigravity CLI. It details an asynchronous execution model where the primary agent delegates operations to background Tasks and Subagents, plus a /tasks command for monitoring background operations. The page presents these as current capabilities with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

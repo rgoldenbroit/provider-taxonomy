@@ -1,0 +1,12 @@
+{
+  "key": "d3d9ec192b89e9a8523ec45c08259f9a0810b797f3a4c53d2df77dc2e7b24cc9",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review-severity-levels-important-nit-pre-existing-t",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| \ud83d\udd34     | Important    | A bug that should be fixed before merging                           |\n| \ud83d\udfe1     | Nit          | A minor issue, worth fixing but not blocking                        |\n| \ud83d\udfe3     | Pre-existing | A bug that exists in the codebase but was not introduced by this PR |",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Code Review (an Anthropic offering, in research preview) with a \"Severity levels\" section listing exactly Important, Nit, and Pre-existing. It also states \"Findings are tagged by severity and don't approve or block your PR\" and \"The check run always completes with a neutral conclusion so it never blocks merging through branch protection rules,\" substantiating that the severity levels never block merging.",
+    "supported": true
+  }
+}

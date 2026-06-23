@@ -1,0 +1,12 @@
+{
+  "key": "e965143ba2df80612eb3a5bda1bcdf5c5b150f6f141f1dbc5b9862e145d1b310",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-hooks-stop",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`Stop` | array | Handlers that run when the execution loop terminates.",
+    "lifecycle_status": "active",
+    "rationale": "The page (Google's Antigravity 2.0 Hooks documentation) describes a `Stop` hook event that fires when the execution loop terminates, including its input/output schema and examples. This substantiates that Google offers a Stop hook.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "eef940a4352e3712f2b1f5be1bc71dfb4e6058b12f9d22a7e741aecaf8a62057",
+  "label": "judge:openai-codex-guardrails-safety-approval-policy-destructive-app-mcp-tool-call-approval",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Destructive app/MCP tool calls always require approval when the tool advertises a destructive annotation, even if it also advertises other hints (for example, read-only hints).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes that Codex requires approval for destructive app/MCP tool calls when the tool advertises a destructive annotation, directly substantiating the claimed offering as a current capability.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-codex-security-codex-security-plugin-local-scans",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "For a prescriptive first local scan, start with the [Codex Security plugin quickstart](https://developers.openai.com/codex/security/plugin).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Codex Security plugin (local scans)",
+    "page_content_hash": "bfb3b872e30657d740ba8e7381dca775dd72795156b8dbe25b2503e75ce1447f",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-codex-security-codex-security-plugin-local-scans",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

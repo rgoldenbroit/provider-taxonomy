@@ -1,0 +1,12 @@
+{
+  "key": "3068d55500575401ce8cd9634de1615c99adb7d4c7eef4c632d44b7e282509ba",
+  "label": "judge:openai-codex-mcp-connectors-plugins-apps-connections-to-tools-like-github-slack-or-g",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Apps:** connections to tools like GitHub, Slack, or Google Drive, so Codex can read information from those tools and take actions in them.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes \"Apps\" as a component of Codex plugins, defined verbatim as connections to tools like GitHub, Slack, or Google Drive, matching the claim. The page presents this as a current feature with installation instructions, indicating active status.",
+    "supported": true
+  }
+}

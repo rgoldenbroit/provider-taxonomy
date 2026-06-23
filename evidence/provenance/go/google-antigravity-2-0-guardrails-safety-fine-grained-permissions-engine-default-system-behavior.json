@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-default-system-behavior",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Default System Behaviors & Guardrails\n\nWhen an action is not explicitly listed in your Allow, Deny, or Ask lists, Antigravity falls back to secure system defaults:\n\n1.  **Web Browsing Defaults to Ask:** Actions for `read_url` and `execute_url` default to **Ask**. ... 2.  **Workspaces are Auto-Allowed:** In standard operation, reading and writing files inside your active project directory is automatically allowed.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Default System Behaviors & Guardrails (workspaces auto-allowed, web browsing defaults to Ask)",
+    "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine-default-system-behavior",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

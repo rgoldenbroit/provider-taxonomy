@@ -1,0 +1,12 @@
+{
+  "key": "33e75d81a2606a5e3b3ac88c528afbeffe88c5763909573b7a31a2a3b3029035",
+  "label": "judge:openai-codex-code-execution-sandbox-approval-policy-automatic-approval-reviews",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Automatic approval reviews\n\nBy default, approval requests route to you:",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated section titled \"Automatic approval reviews\" describing how to route eligible approval requests through a reviewer agent (approvals_reviewer = \"auto_review\") before Codex runs the request. It is described as a currently available feature with configuration options, with no indication of preview or sunset status.",
+    "supported": true
+  }
+}

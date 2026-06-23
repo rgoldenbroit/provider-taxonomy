@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-sandbox-modes-auto-allow-and-re",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude Code offers two sandbox modes:\\n\\n**Auto-allow mode**: Bash commands will attempt to run inside the sandbox and are automatically allowed without requiring permission. ... **Regular permissions mode**: All Bash commands go through the regular permission flow, even when sandboxed.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Sandbox modes (auto-allow and regular permissions modes)",
+    "page_content_hash": "1217817d282d5725d10c54be56480611080aba95106841b4268e65cfc1385dde",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool-sandbox-modes-auto-allow-and-re",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

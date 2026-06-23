@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-agent-evals-observability-observability",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Observability:** Track per-turn and cumulative token usage and access thinking traces.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Observability",
+    "page_content_hash": "39e954cc65890d31b078560e299fd8455b308010bd521aa9cc4eb1002cbf14b0",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-agent-evals-observability-observability",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/sdk/sdk-overview.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

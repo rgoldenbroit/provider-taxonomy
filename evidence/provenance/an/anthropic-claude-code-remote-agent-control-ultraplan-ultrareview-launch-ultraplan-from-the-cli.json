@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-launch-ultraplan-from-the-cli",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Launch ultraplan from the CLI\n\nFrom your local CLI session, you can launch ultraplan in three ways:",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Launch ultraplan from the CLI",
+    "page_content_hash": "de1fed20cbb11a11a052036656b88472e0e69bb6f9a8294c769c044f03ad216b",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-remote-agent-control-ultraplan-ultrareview-launch-ultraplan-from-the-cli",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/ultraplan.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

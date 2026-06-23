@@ -1,0 +1,12 @@
+{
+  "key": "2389c0626ba9817b43642131bb6ca42502ec11839a2bd48fa0e916509870a673",
+  "label": "judge:openai-codex-agent-evals-observability-integrations-and-observability",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For code-first SDK workflows, start with [Integrations and observability](https://developers.openai.com/api/docs/guides/agents/integrations-observability#tracing) to get high-signal traces before you formalize graders.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly mentions \"Integrations and observability\" as a surface for code-first SDK workflows that provides high-signal traces, directly substantiating the claim. It is presented as a currently available offering with no indication of deprecation or sunset.",
+    "supported": true
+  }
+}

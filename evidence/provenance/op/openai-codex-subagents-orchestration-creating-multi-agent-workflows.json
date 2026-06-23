@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-subagents-orchestration-creating-multi-agent-workflows",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Codex CLI can do far more than run ad-hoc tasks. By exposing the CLI as a [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) server and orchestrating it with the OpenAI Agents SDK, you can create deterministic, reviewable workflows that scale from a single agent to a complete software delivery pipeline.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Creating multi-agent workflows",
+    "page_content_hash": "48ec78d3486a8610a3d70d7d440085a540e607227fd93c4847d8fd07c5837ae1",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-subagents-orchestration-creating-multi-agent-workflows",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

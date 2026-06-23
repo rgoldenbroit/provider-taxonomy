@@ -1,0 +1,12 @@
+{
+  "key": "c6be0d9f3b4cb6b23aefa29735104268d5e24b9009489f6815a7b8418e68edd0",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-custom-subagents-enable-persistent-memory-a-memory",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Select **User scope** to give the subagent a [persistent memory directory](#enable-persistent-memory) at `~/.claude/agent-memory/`. The subagent uses this to accumulate insights across conversations, such as codebase patterns and recurring issues.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a persistent memory directory feature for Claude Code subagents that accumulates insights across conversations, directly matching the claim. It is presented as a currently available feature with no indication of deprecation.",
+    "supported": true
+  }
+}

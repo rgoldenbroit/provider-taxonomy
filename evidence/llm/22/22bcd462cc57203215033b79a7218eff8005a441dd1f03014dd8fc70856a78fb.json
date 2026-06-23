@@ -1,0 +1,12 @@
+{
+  "key": "22bcd462cc57203215033b79a7218eff8005a441dd1f03014dd8fc70856a78fb",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review-skip-rules-for-paths-branch-patterns-and-fin",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Skip rules**: list paths, branch patterns, and finding categories where Claude should post no findings.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Skip rules as a REVIEW.md customization option for Code Review, explicitly listing paths, branch patterns, and finding categories. Code Review is described as being in research preview.",
+    "supported": true
+  }
+}

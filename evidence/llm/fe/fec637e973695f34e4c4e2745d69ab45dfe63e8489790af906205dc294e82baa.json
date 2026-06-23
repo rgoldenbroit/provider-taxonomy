@@ -1,0 +1,12 @@
+{
+  "key": "fec637e973695f34e4c4e2745d69ab45dfe63e8489790af906205dc294e82baa",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes-auto-mode-executes-with-a-classifier-mo",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto mode lets Claude execute without routine permission prompts. A separate classifier model reviews actions before they run, blocking anything that escalates beyond your request, targets unrecognized infrastructure, or appears driven by hostile content Claude read.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes auto mode for Claude Code, where a separate classifier model reviews actions before they run. The page also states \"Auto mode is a research preview,\" indicating preview lifecycle status.",
+    "supported": true
+  }
+}

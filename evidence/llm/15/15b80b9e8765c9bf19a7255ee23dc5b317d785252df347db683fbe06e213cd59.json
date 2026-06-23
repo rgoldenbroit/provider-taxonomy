@@ -1,0 +1,12 @@
+{
+  "key": "15b80b9e8765c9bf19a7255ee23dc5b317d785252df347db683fbe06e213cd59",
+  "label": "judge:openai-codex-subagents-orchestration-subagent-workflows-subagent-workflow",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex can run subagent workflows by spawning specialized agents in parallel and then collecting their results in one response.",
+    "lifecycle_status": "active",
+    "rationale": "The page is dedicated to Codex subagent workflows and explicitly describes the offering. The Availability section states \"Current Codex releases enable subagent workflows by default,\" indicating it is generally available/active.",
+    "supported": true
+  }
+}

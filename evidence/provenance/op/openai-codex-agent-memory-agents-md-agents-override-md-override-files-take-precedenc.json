@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-memory-agents-md-agents-override-md-override-files-take-precedenc",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "In your Codex home directory (defaults to `~/.codex`, unless you set `CODEX_HOME`), Codex reads `AGENTS.override.md` if it exists. Otherwise, Codex reads `AGENTS.md`. Codex uses only the first non-empty file at this level.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "AGENTS.override.md: override files take precedence over regular AGENTS.md at both global and project scopes",
+    "page_content_hash": "676796e239622cb1a997d20d0361b8bce204f834659779d2c498b52fc8553a3e",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-memory-agents-md-agents-override-md-override-files-take-precedenc",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-md.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

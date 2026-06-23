@@ -1,0 +1,12 @@
+{
+  "key": "b5eb15649876f27b3b3c4c7730fd02e4f442bd3a3ffba787363e0f631c3bf6b4",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-dev-container-claude-code-dev-container-feature-ins",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code installs into any dev container through the [Claude Code Dev Container Feature](https://github.com/anthropics/devcontainer-features/tree/main/src/claude-code).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the Claude Code Dev Container Feature, stating it installs Claude Code (the CLI) into any dev container, matching the claim directly. It is presented as a current, available offering with no indication of deprecation.",
+    "supported": true
+  }
+}

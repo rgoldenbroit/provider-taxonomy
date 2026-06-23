@@ -63,6 +63,15 @@
           "type": "array",
           "items": { "type": "string" },
           "description": "Other names people search for; helps an LLM map a fuzzy query to the right row."
+        },
+        "comparison_note": {
+          "type": "string",
+          "description": "Optional. One grounded sentence contrasting how each provider approaches this axis (the 'so what'). Synthesized from the verified per-provider offerings; rendered as a callout in the comparison view."
+        },
+        "comparison_note_sources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Optional. Source URLs the comparison_note is grounded in (the per-provider citations)."
         }
       }
     },

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-guardrails-safety-permission-modes-ask-permissions-shows-a-diff-to-accept-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**[Remote Control](/en/remote-control) sessions** on your local machine: Ask permissions, Auto accept edits, and Plan mode. Auto and Bypass permissions are not available.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Ask permissions shows a diff to accept or reject each change (desktop)",
+    "page_content_hash": "95cd159b4e21ca06bd81a460f8e7b317f1d29ab3a56d6140c5659917af274f5f",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-guardrails-safety-permission-modes-ask-permissions-shows-a-diff-to-accept-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permission-modes.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

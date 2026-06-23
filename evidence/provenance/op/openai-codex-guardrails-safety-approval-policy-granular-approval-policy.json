@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-guardrails-safety-approval-policy-granular-approval-policy",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "For a middle ground, `approval_policy = { granular = { ... } }` lets you keep specific approval prompt categories interactive while automatically rejecting others. The granular policy covers sandbox approvals, execpolicy-rule prompts, MCP prompts, `request_permissions` prompts, and skill-script approvals.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "granular approval policy",
+    "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-guardrails-safety-approval-policy-granular-approval-policy",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

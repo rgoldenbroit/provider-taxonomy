@@ -1,0 +1,12 @@
+{
+  "key": "6bcae0d0a035fa80d8f2b53f9a5565c87d24975afee7af83387af08e3ca5c74e",
+  "label": "judge:openai-codex-guardrails-safety-code-review-p0-and-p1-issues-prioritization",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In GitHub, Codex flags only P0 and P1 issues so review comments stay focused on high-priority risks.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Codex code review in GitHub flagging P0 and P1 issues to prioritize high-priority risks, substantiating the claim. It is presented as a currently available feature.",
+    "supported": true
+  }
+}

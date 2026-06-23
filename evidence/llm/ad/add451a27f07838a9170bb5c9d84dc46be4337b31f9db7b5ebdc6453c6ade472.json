@@ -1,0 +1,12 @@
+{
+  "key": "add451a27f07838a9170bb5c9d84dc46be4337b31f9db7b5ebdc6453c6ade472",
+  "label": "judge:anthropic-claude-code-mcp-connectors-channels",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A channel is an MCP server that pushes events into a Claude Code session so Claude can react to things happening outside the terminal.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Channels as MCP servers that push external events (webhooks, alerts, chat messages) into a Claude Code session so Claude reacts to them, matching the claim. It explicitly states channels are in research preview.",
+    "supported": true
+  }
+}

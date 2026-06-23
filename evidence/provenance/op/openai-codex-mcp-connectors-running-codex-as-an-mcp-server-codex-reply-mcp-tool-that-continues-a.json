@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-reply-mcp-tool-that-continues-a",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`codex-reply`**: Continue a Codex session by providing the thread ID and prompt. The `codex-reply` tool takes these properties:",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "codex-reply \u2014 MCP tool that continues a Codex session given a thread ID and prompt",
+    "page_content_hash": "48ec78d3486a8610a3d70d7d440085a540e607227fd93c4847d8fd07c5837ae1",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-mcp-connectors-running-codex-as-an-mcp-server-codex-reply-mcp-tool-that-continues-a",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

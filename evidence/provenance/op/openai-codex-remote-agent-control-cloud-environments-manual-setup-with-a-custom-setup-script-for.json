@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-remote-agent-control-cloud-environments-manual-setup-with-a-custom-setup-script-for",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Manual setup\n\nIf your development setup is more complex, you can also provide a custom setup script.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Manual setup with a custom setup script for complex setups",
+    "page_content_hash": "8ffeeb3960894ca90ab59cf7e325aba1e1058afaba5e4ac56af9a0b328b719ef",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-remote-agent-control-cloud-environments-manual-setup-with-a-custom-setup-script-for",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/cloud/environments.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-code-execution-sandbox-interactive-approvals",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When the agent encounters an operation requiring approval (**Ask** mode), an interactive prompt card appears in your TUI.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Interactive Approvals",
+    "page_content_hash": "7d39803957ef2c6b2d2794b9a58119866b11d48cb877d76f56f3f3f22c23af68",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-code-execution-sandbox-interactive-approvals",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

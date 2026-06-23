@@ -1,0 +1,12 @@
+{
+  "key": "251a71d243e4f3b7c548e1c68f54771519f1430652654f5a198f116fef080313",
+  "label": "judge:openai-codex-remote-agent-control-github-integration-request-a-codex-review-by-mentioning-codex-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Request a Codex review\n\n1. In a pull request comment, mention `@codex review`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Request a Codex review\" feature, instructing users to mention `@codex review` in a pull request comment, exactly matching the claim. It is presented as a current, usable feature with no indication of preview or sunset status.",
+    "supported": true
+  }
+}

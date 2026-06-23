@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-agent-memory-agents-md-global-guidance-persistent-default-instructions-",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Create persistent defaults in your Codex home directory so every repository inherits your working agreements.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Global guidance: persistent default instructions from AGENTS.md in the Codex home directory inherited by every repository",
+    "page_content_hash": "676796e239622cb1a997d20d0361b8bce204f834659779d2c498b52fc8553a3e",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-agent-memory-agents-md-global-guidance-persistent-default-instructions-",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/guides/agents-md.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

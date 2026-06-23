@@ -1,0 +1,12 @@
+{
+  "key": "f9cf194e86f8a0d83152d11e7dc561359689c842d77358fc66230625125af71c",
+  "label": "judge:anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json-allow-claude-ai-",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To load those connectors alongside the servers in `managed-mcp.json`, set `\"allowAllClaudeAiMcps\": true` in a [managed settings source](/en/admin-setup#decide-how-settings-reach-devices). Requires Claude Code v2.1.149 or later.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Allow claude.ai connectors alongside the managed set\" describing the allowAllClaudeAiMcps setting to load claude.ai connectors alongside the managed-mcp.json servers, matching the claim exactly. It is presented as a currently available setting (requires v2.1.149 or later).",
+    "supported": true
+  }
+}

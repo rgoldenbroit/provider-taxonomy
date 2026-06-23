@@ -1,0 +1,12 @@
+{
+  "key": "917e170ccd91f82467b4672a8e10fbcb37fcbc68b160c82a624784c8df5b8915",
+  "label": "judge:openai-codex-code-execution-sandbox-network-access-always-allow-browser-content",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page covers Codex sandboxing, approvals, and network access controls, including web search modes (cached/live/disabled) and network policy rules. However, it contains no mention of an \"Always allow browser content\" setting or feature anywhere on the page.",
+    "supported": false
+  }
+}

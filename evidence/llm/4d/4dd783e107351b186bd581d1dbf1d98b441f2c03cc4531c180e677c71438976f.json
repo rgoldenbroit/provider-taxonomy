@@ -1,0 +1,12 @@
+{
+  "key": "4dd783e107351b186bd581d1dbf1d98b441f2c03cc4531c180e677c71438976f",
+  "label": "judge:google-antigravity-2-0-agent-evals-observability-subagents",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity CLI features an asynchronous subagents framework that allows the main agent to delegate parallel work, perform background research, and run system tests without blocking your active conversation.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes an asynchronous subagents framework that runs parallel background agent sessions, with a /agents panel for monitoring delegated work, matching the claim. No deprecation or sunset language is present.",
+    "supported": true
+  }
+}

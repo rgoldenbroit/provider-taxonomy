@@ -1,0 +1,12 @@
+{
+  "key": "cd23424133419a4fd098a9c4505ea214a5f44799e069c19a12d65f659029759b",
+  "label": "judge:openai-codex-agent-evals-observability-trace-grading-graders",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Graders let you score those traces with structured criteria so you can find regressions and failure modes at scale.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Graders as a tool that lets users score traces with structured criteria, and references creating and running graders against traces in the trace-grading workflow. This substantiates that OpenAI offers Graders, presented as a current evaluation surface.",
+    "supported": true
+  }
+}

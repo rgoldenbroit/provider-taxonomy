@@ -1,0 +1,12 @@
+{
+  "key": "8b0eb6918df36bf8561978a11a5878e2eede2486e229d11ac96b694961522fd1",
+  "label": "judge:openai-codex-mcp-connectors-plugins-skills-reusable-instructions-codex-loads-for-spe",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Skills:** reusable instructions for specific kinds of work. Codex can load them when needed so it follows the right steps and uses the right references or helper scripts for a task.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Skills as reusable instructions for specific kinds of work that Codex can load when needed, matching the claim. It is presented as a current capability bundled in plugins.",
+    "supported": true
+  }
+}

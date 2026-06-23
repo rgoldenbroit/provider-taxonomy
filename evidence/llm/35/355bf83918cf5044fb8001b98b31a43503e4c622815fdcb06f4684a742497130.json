@@ -1,0 +1,12 @@
+{
+  "key": "355bf83918cf5044fb8001b98b31a43503e4c622815fdcb06f4684a742497130",
+  "label": "judge:openai-codex-code-execution-sandbox-approval-policy-auto-review-session-transcripts",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Prompt-build, review-session, and parse failures fail closed.",
+    "lifecycle_status": "active",
+    "rationale": "The claim references an \"Auto-review\" feature, which the page describes in detail under \"Automatic approval reviews\" and \"Auto-review mode,\" including routing approval requests through a reviewer agent via `approvals_reviewer = \"auto_review\"`. The page also mentions \"review-session\" failures. While the claim's exact phrasing \"Auto-review session transcripts\" is not used verbatim, the Auto-review offering itself is clearly substantiated as a current feature.",
+    "supported": true
+  }
+}

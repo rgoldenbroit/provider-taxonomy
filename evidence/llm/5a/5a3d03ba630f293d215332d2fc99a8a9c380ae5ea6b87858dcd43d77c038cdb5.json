@@ -1,0 +1,12 @@
+{
+  "key": "5a3d03ba630f293d215332d2fc99a8a9c380ae5ea6b87858dcd43d77c038cdb5",
+  "label": "judge:openai-codex-managed-agent-runtime-automations-standalone-automations",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Standalone automations start fresh runs on a schedule and report results in Triage. Use them when each run should be independent or when one automation should run across one or more projects.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Standalone automations\" as a feature of OpenAI's Codex app, explaining how they work and when to use them. It is presented as a current, available capability.",
+    "supported": true
+  }
+}

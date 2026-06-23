@@ -1,0 +1,12 @@
+{
+  "key": "52f6455895c8f52c1be0f4bf693e06849858cdb75bac56bb5f050c74dbbea888",
+  "label": "judge:anthropic-claude-code-remote-agent-control-remote-control-connect-from-another-device",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "### Connect from another device\n\nOnce a Remote Control session is active, you have a few ways to connect from another device:",
+    "lifecycle_status": "preview",
+    "rationale": "The page is Anthropic's Claude Code documentation describing Remote Control, which includes a dedicated \"Connect from another device\" section explaining how to connect from a browser, QR code, or the Claude app. The feature is described as being \"in research preview and available on all plans,\" so lifecycle status is preview.",
+    "supported": true
+  }
+}

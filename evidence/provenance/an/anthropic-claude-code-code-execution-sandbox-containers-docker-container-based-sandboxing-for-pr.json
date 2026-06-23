@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-code-code-execution-sandbox-containers-docker-container-based-sandboxing-for-pr",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Containers provide isolation through Linux namespaces. Each container has its own view of the filesystem, process tree, and network stack, while sharing the host kernel.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Container-based sandboxing for process isolation, resource limits, network control, and ephemeral filesystem",
+    "page_content_hash": "ddec036207d4c4f0841c5ef7c5dbbe6edfdacb6e68f60dc4a045e4eb478e1637",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-code-code-execution-sandbox-containers-docker-container-based-sandboxing-for-pr",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

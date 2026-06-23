@@ -1,0 +1,12 @@
+{
+  "key": "2c633605c4f6faa347c36509401b5c4619967d581476ffec504528a9398bf563",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-system-tool-specific-permission-rules-for-bas",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Tool-specific permission rules\n\n### Bash ... ### PowerShell ... ### Read and Edit",
+    "lifecycle_status": "active",
+    "rationale": "The page has a section titled \"Tool-specific permission rules\" with subsections for Bash, PowerShell, and Read and Edit, directly substantiating the claim.",
+    "supported": true
+  }
+}

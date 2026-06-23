@@ -1,0 +1,12 @@
+{
+  "key": "a94321281f348323f2c98b092cc2095dba5e7b655156f52c60eb9dcf9ee104c9",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review-claude-md-shared-project-instructions-read-a",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`CLAUDE.md`**: shared project instructions that Claude Code uses for all tasks, not just reviews. Code Review reads it as project context and flags newly introduced violations as nits.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes CLAUDE.md as shared project instructions that Claude Code uses, read by Code Review as project context \u2014 matching the claim. Code Review itself is in research preview, but the CLAUDE.md feature is described as actively used.",
+    "supported": true
+  }
+}

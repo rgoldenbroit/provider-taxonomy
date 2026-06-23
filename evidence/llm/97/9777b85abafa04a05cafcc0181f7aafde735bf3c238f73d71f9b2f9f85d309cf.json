@@ -1,0 +1,12 @@
+{
+  "key": "9777b85abafa04a05cafcc0181f7aafde735bf3c238f73d71f9b2f9f85d309cf",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-permission-system-os-level-sandbox-blocks-all-proce",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For OS-level enforcement that blocks all processes from accessing a path, [enable the sandbox](/en/sandboxing).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes an OS-level sandbox that blocks all processes from accessing a path, directing users to enable the sandbox for this enforcement. This matches the claim.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "6b73773312ddb03dfa7efdc3fde0fd63dd3c6c70cadca09bb8cf2d840289ea02",
+  "label": "judge:anthropic-claude-code-remote-agent-control-routines-run-now",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Click **Run now** to start a run immediately without waiting for the next scheduled time.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes \"Run now\" as a feature on the routine's detail page that starts a run immediately. Routines (and by extension this feature) are described as being in research preview. Thus the claim that Anthropic offers \"Run now\" is substantiated.",
+    "supported": true
+  }
+}

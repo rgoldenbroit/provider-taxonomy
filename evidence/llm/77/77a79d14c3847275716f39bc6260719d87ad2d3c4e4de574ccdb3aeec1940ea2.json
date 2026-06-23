@@ -1,0 +1,12 @@
+{
+  "key": "77a79d14c3847275716f39bc6260719d87ad2d3c4e4de574ccdb3aeec1940ea2",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Containers (Docker) | Setup dependent | Low | Medium ... Containers provide isolation through Linux namespaces. Each container has its own view of the filesystem, process tree, and network stack, while sharing the host kernel. A security-hardened container configuration might look like this: docker run --cap-drop ALL --security-opt no-new-privileges --security-opt seccomp=/path/to/seccomp-profile.json --read-only ... --network none ... -v /path/to/code:/workspace:ro",
+    "lifecycle_status": "active",
+    "rationale": "The page lists \"Containers (Docker)\" as an isolation technology for running Claude Code or the Agent SDK, describing isolation through Linux namespaces, a security-hardened configuration with seccomp profiles, dropped capabilities, network policies (--network none, proxy), and mounted volumes \u2014 matching all elements of the claim.",
+    "supported": true
+  }
+}

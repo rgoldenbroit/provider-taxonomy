@@ -1,0 +1,21 @@
+{
+  "key": "openai-codex-code-execution-sandbox-approval-policy-auto-review",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Auto-review mode | `--sandbox workspace-write --ask-for-approval on-request -c approvals_reviewer=auto_review` or `approvals_reviewer = \"auto_review\"` | Same sandbox boundary as standard on-request mode, but eligible approval requests are reviewed by Auto-review instead of surfacing to the user.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Auto-review",
+    "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-codex-code-execution-sandbox-approval-policy-auto-review",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
+    "supported": true,
+    "verified_at": "2026-06-22"
+  }
+}

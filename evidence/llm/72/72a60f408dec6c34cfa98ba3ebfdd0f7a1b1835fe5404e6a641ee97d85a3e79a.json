@@ -1,0 +1,12 @@
+{
+  "key": "72a60f408dec6c34cfa98ba3ebfdd0f7a1b1835fe5404e6a641ee97d85a3e79a",
+  "label": "judge:anthropic-claude-code-agent-memory-claude-md-import-additional-files-claude-md-files-can-impo",
+  "model": "claude-opus-4-8",
+  "value": {
+    "confidence": "high",
+    "found_quote": "CLAUDE.md files can import additional files using `@path/to/import` syntax. Imported files are expanded and loaded into context at launch alongside the CLAUDE.md that references them.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Import additional files\" feature, stating CLAUDE.md files can import other files using @path syntax and that imported files are expanded and loaded into context at launch, matching the claim.",
+    "supported": true
+  }
+}
