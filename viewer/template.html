@@ -181,6 +181,13 @@
   #drawer .cmp-feats a:hover { color:var(--accent); }
   #drawer .docs { display:inline-block; margin-top:18px; font-size:13px; color:var(--accent); text-decoration:none; }
   #drawer .docs:hover { text-decoration:underline; }
+  #drawer .provblock { border-left:3px solid var(--line); padding:6px 0 6px 11px; margin:7px 0; }
+  #drawer .provblock > summary { cursor:pointer; list-style:none; font-size:13px; }
+  #drawer .provblock > summary::-webkit-details-marker { display:none; }
+  #drawer .provblock > summary::before { content:"\25B8"; color:var(--muted); margin-right:7px; font-size:11px; }
+  #drawer .provblock[open] > summary::before { content:"\25BE"; }
+  #drawer .catbr, #drawer .treebr { margin:3px 0; }
+  .caparrow { color:var(--muted); margin-left:5px; font-weight:700; }
   .capname.clickable { cursor:pointer; }
   .capname.clickable:hover { color:var(--accent); }
   .kv { display:grid; grid-template-columns:120px 1fr; gap:5px 10px; margin:12px 0; font-size:13px; }
@@ -540,13 +547,9 @@ function viewOverview(){
     providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
   for (const tier of tiers){
     for (const c of caps.filter(x=>x.tier===tier && x.id!=='unclassified')){
-      cov += `<div class="cov-caph"><div class="capname clickable" onclick="openCapability('${c.id}')" title="What is ${esc(c.name)}? How providers compare">${esc(c.name)}</div><div class="faint small">${esc(c.tier)}</div></div>`;
+      const drill = catsByFunction[c.id] ? `<span class="caparrow" title="compare across providers">&rsaquo;</span>` : '';
+      cov += `<div class="cov-caph"><div class="capname clickable" onclick="openCapability('${c.id}')" title="What is ${esc(c.name)}? How providers compare">${esc(c.name)}${drill}</div><div class="faint small">${esc(c.tier).replace(/_/g,' ')}</div></div>`;
       cov += providers.map(pr=>covCell(c.id, pr)).join('');
-      if (catsByFunction[c.id]){   // a function with a deeper breakdown → expand it inline, full width
-        cov += `<div class="covbreak"><details class="catbr accent" id="ovbreak-${esc(c.id)}"><summary>Drill into the ${esc(c.name)} breakdown &mdash; category &rarr; feature &rarr; sub-feature</summary>
-          <div class="catdesc muted small">Each provider's offering, broken down. Expand any feature for its sub-features.</div>
-          ${functionBreakdownHtml(c.id)}</details></div>`;
-      }
     }
   }
   cov += `</div></div>`;
@@ -615,46 +618,47 @@ function viewAbout(){
 function scaffoldBadge(p){
   return isScaffold(p) ? `<span class="badge b-scaffold" title="structural placeholder — not yet ground-verified">scaffold</span>` : '';
 }
-/* one node: a leaf if it has no children, else a collapsible <details> with its sub-tree */
-function treeRow(p){
+/* one node: a leaf if it has no children, else a collapsible <details> with its sub-tree.
+   `lite` (used in the focus pop-out) drops the status/relation chips to reduce noise. */
+function treeRow(p, lite){
   const kids = childrenOf(p.id);
   const name = `<a class="treename" onclick="event.preventDefault();event.stopPropagation();openDrawer('${p.id}')">${esc(p.name)}</a>`;
-  const head = `<span class="treehead" style="border-left-color:${provVar(p.provider)}">${name} ${confDot(p)}${statusBadge(p)}${relTag(p)}${scaffoldBadge(p)}</span>`;
+  const chips = lite ? confDot(p) : `${confDot(p)}${statusBadge(p)}${relTag(p)}${scaffoldBadge(p)}`;
+  const head = `<span class="treehead" style="border-left-color:${provVar(p.provider)}">${name} ${chips}</span>`;
   if (!kids.length) return `<div class="treeleaf">${head}</div>`;
   return `<details class="treebr"><summary>${head} <span class="faint small">${kids.length}</span></summary>
-    <div class="treekids">${kids.map(treeRow).join('')}</div></details>`;
+    <div class="treekids">${kids.map(k=>treeRow(k,lite)).join('')}</div></details>`;
 }
-/* a product's descendants, grouped by category when its function defines them */
-function featureTreeHtml(p){
+/* a product's descendants, grouped by category when its function defines them.
+   Categories are COLLAPSED by default (progressive disclosure) — expand the one you want. */
+function featureTreeHtml(p, lite){
   const kids = childrenOf(p.id);
   if (!kids.length) return '';
   const groups = catsByFunction[p.primary_capability_id] || [];
-  if (!groups.length) return kids.map(treeRow).join('');
+  if (!groups.length) return kids.map(k=>treeRow(k,lite)).join('');
   let html = '', used = new Set();
   for (const c of groups){
     const axes = new Set(c.feature_axis_ids||[]);
     const inCat = kids.filter(k => axes.has(k.primary_capability_id));
     if (!inCat.length) continue;
     inCat.forEach(k=>used.add(k.id));
-    html += `<details class="catbr" open><summary>${esc(c.name)} <span class="faint small">${inCat.length}</span></summary>
+    html += `<details class="catbr"><summary>${esc(c.name)} <span class="faint small">${inCat.length}</span></summary>
       ${c.description?`<div class="catdesc muted small">${esc(c.description)}</div>`:''}
-      <div class="treekids">${inCat.map(treeRow).join('')}</div></details>`;
+      <div class="treekids">${inCat.map(k=>treeRow(k,lite)).join('')}</div></details>`;
   }
   const rest = kids.filter(k=>!used.has(k.id));
   if (rest.length)
-    html += `<details class="catbr" open><summary>Other <span class="faint small">${rest.length}</span></summary>
-      <div class="treekids">${rest.map(treeRow).join('')}</div></details>`;
+    html += `<details class="catbr"><summary>Other <span class="faint small">${rest.length}</span></summary>
+      <div class="treekids">${rest.map(k=>treeRow(k,lite)).join('')}</div></details>`;
   return html;
 }
-/* per-provider compare grid for one function, each cell drilling into its tree.
-   Shared by the Overview inline breakdown and the Explore compare path. */
-function functionBreakdownHtml(capId){
-  const cols = `repeat(${providers.length}, minmax(0,1fr))`;
-  return insightsHtml(capId)
-    + `<div class="ovtreegrid" style="grid-template-columns:${cols}">`
-    + providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('')
-    + providers.map(pr=>cell(capId, pr, null, {tree:true})).join('')
-    + `</div>`;
+/* count of non-empty category groups for a node (for the "N features in M categories" summary) */
+function catGroupCount(p){
+  const kids = childrenOf(p.id), groups = catsByFunction[p.primary_capability_id] || [];
+  let n = 0;
+  for (const c of groups){ const ax = new Set(c.feature_axis_ids||[]); if (kids.some(k=>ax.has(k.primary_capability_id))) n++; }
+  if (kids.some(k=>!groups.some(c=>(c.feature_axis_ids||[]).includes(k.primary_capability_id)))) n++;  // "Other"
+  return n;
 }
 /* "Key distinctions" — the per-axis comparison_note insights for a function */
 function insightsHtml(capId){
@@ -700,30 +704,45 @@ function openModal(html){
 function closeDrawer(){ document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); }
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); });
 
-/* a feature / product / service tier: what it is, then how it compares */
+/* a feature / product / service tier: what it is, then what's inside, then how it compares.
+   Small node → a one-line "Includes:"; large node → a collapsed "N features in M categories" tree. */
 function openDrawer(id){
   const p = prodById[id]; if(!p) return;
   const cap = capById[p.primary_capability_id];
   const what = p.scope_note || (cap && cap.description) || '';
-  const subs = childrenOf(p.id).filter(k=>k.kind==='feature');
-  const includes = subs.length
-    ? `<div class="includes"><b>Includes:</b> ${subs.map(s=>esc(s.name)).join(' &middot; ')}</div>` : '';
+  const kids = childrenOf(p.id).filter(k=>k.kind==='feature');
+  let inside = '';
+  if (kids.length > 8){
+    const m = catGroupCount(p);
+    inside = `<div class="sec"><h3 class="small muted">${kids.length} features${m?` in ${m} categories`:''}</h3>${featureTreeHtml(p, true)}</div>`;
+  } else if (kids.length){
+    inside = `<div class="includes"><b>Includes:</b> ${kids.map(s=>esc(s.name)).join(' &middot; ')}</div>`;
+  }
   const src = (p.source||{}).url;
   openModal(`
     <h2>${esc(p.name)}</h2>
     <div class="row small muted" style="gap:7px;align-items:center;flex-wrap:wrap">${esc(p.provider)} <span class="faint">&middot;</span> ${statusBadge(p)} <span class="faint">&middot;</span> ${esc(cap?cap.name:p.primary_capability_id)}</div>
     ${what?`<div class="lede">${esc(what)}</div>`:''}
-    ${includes}
+    ${inside}
     <div class="sec">${compareSection(p)}</div>
     ${src?`<a class="docs" href="${esc(src)}" target="_blank" rel="noopener">Official docs &#8599;</a>`:''}
   `);
 }
 
-/* a capability / category row: what the capability is, then how all providers approach it */
+/* a capability / category row: what the capability is, then how all providers approach it.
+   Each provider is a collapsed, counted block — expand to its offerings (progressive disclosure). */
 function openCapability(capId){
   const c = capById[capId]; if(!c) return;
   const note = c.comparison_note ? `<div class="insight">${esc(c.comparison_note)}</div>` : '';
-  const rows = providers.map(prov=>cmpRow(prov, topFeatsOn(capId, prov, null), capId)).join('');
+  const rows = providers.map(prov=>{
+    const feats = topFeatsOn(capId, prov, null);
+    if (!feats.length){
+      const ab = (byCap[capId]||[]).some(q=>q.provider===prov && q.status==='absent');
+      return `<div class="cmp-row" style="border-left-color:${provVar(prov)}"><span class="cmp-prov">${esc(prov)}</span><span class="cmp-feats muted">${ab?'&#9711; no offering':'? not verified'}</span></div>`;
+    }
+    return `<details class="provblock" style="border-left-color:${provVar(prov)}"><summary><span class="cmp-prov">${esc(prov)}</span> <span class="faint small">${feats.length}</span></summary>
+      <div class="treekids">${feats.map(f=>treeRow(f, true)).join('')}</div></details>`;
+  }).join('');
   openModal(`
     <h2>${esc(c.name)}</h2>
     <div class="row small muted">${esc(c.tier).replace(/_/g,' ')} capability</div>
