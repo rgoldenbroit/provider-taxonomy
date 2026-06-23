@@ -137,6 +137,28 @@
           "description": "Dated change events. This is how the app shows history and detects what is in flux.",
           "items": { "$ref": "#/$defs/lifecycle_event" }
         },
+        "comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Optional, generated: feature-level cross-provider comparison (what this does + how each other provider's nearest equivalent compares). Plain language, constrained to real catalog features.",
+          "required": ["summary"],
+          "properties": {
+            "summary": { "type": "string", "description": "Plain 1-2 sentences: what this feature does and how providers compare on it." },
+            "equivalents": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["provider", "note"],
+                "properties": {
+                  "provider": { "type": "string" },
+                  "match": { "type": ["string", "null"], "description": "Name of the nearest equivalent feature from that provider, or null if none." },
+                  "note": { "type": "string", "description": "<=15 words on how it differs (or 'no direct equivalent')." }
+                }
+              }
+            }
+          }
+        },
         "source": { "$ref": "#/$defs/source" }
       }
     },

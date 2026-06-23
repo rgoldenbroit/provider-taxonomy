@@ -685,9 +685,17 @@ function cmpRow(prov, feats, axis){
   return `<div class="cmp-row" style="border-left-color:${provVar(prov)}"><span class="cmp-prov">${esc(prov)}</span>
     <span class="cmp-feats muted">${isAbsent?'&#9711; no offering':'? not verified'}</span></div>`;
 }
-/* "how it compares" for a single offering: how-they-differ synthesis, then the OTHER providers' offerings on this axis */
+/* "how it compares" — prefers the generated FEATURE-LEVEL comparison (specific to this feature);
+   falls back to the axis-level offering list (used for products) when none was generated. */
 function compareSection(p){
-  const axis = p.primary_capability_id, cap = capById[axis];
+  if (p.comparison && p.comparison.summary){          // generated, feature-specific
+    const eq = (p.comparison.equivalents||[]).map(e=>{
+      const body = e.match ? `<b>${esc(e.match)}</b> &mdash; ${esc(e.note||'')}` : `<span class="muted">${esc(e.note||'no direct equivalent')}</span>`;
+      return `<div class="cmp-row" style="border-left-color:${provVar(e.provider)}"><span class="cmp-prov">${esc(e.provider)}</span><span class="cmp-feats">${body}</span></div>`;
+    }).join('');
+    return `<h3 class="small muted">How it compares</h3><div class="lede" style="font-size:14px;margin-top:0">${esc(p.comparison.summary)}</div>${eq}`;
+  }
+  const axis = p.primary_capability_id, cap = capById[axis];   // fallback (products): offerings on this axis
   const note = cap?.comparison_note ? `<div class="insight">${esc(cap.comparison_note)}</div>` : '';
   const rows = providers.filter(prov=>prov!==p.provider)
     .map(prov=>cmpRow(prov, topFeatsOn(axis, prov, p.id), axis)).join('');
@@ -709,22 +717,30 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); })
 function openDrawer(id){
   const p = prodById[id]; if(!p) return;
   const cap = capById[p.primary_capability_id];
+  const parent = p.parent_id && prodById[p.parent_id];
+  const isSub = parent && parent.kind === 'feature';   // a sub-feature: detail of a parent feature
   const what = p.scope_note || (cap && cap.description) || '';
-  const kids = childrenOf(p.id).filter(k=>k.kind==='feature');
-  let inside = '';
-  if (kids.length > 8){
-    const m = catGroupCount(p);
-    inside = `<div class="sec"><h3 class="small muted">${kids.length} features${m?` in ${m} categories`:''}</h3>${featureTreeHtml(p, true)}</div>`;
-  } else if (kids.length){
-    inside = `<div class="includes"><b>Includes:</b> ${kids.map(s=>esc(s.name)).join(' &middot; ')}</div>`;
+  let body;
+  if (isSub){
+    // sub-features are facets of their parent — no cross-provider comparison (it isn't meaningful at this grain)
+    body = `<div class="includes">Part of <a onclick="openDrawer('${parent.id}')">${esc(parent.name)}</a> &middot; ${esc(cap?cap.name:p.primary_capability_id)}</div>`;
+  } else {
+    const kids = childrenOf(p.id).filter(k=>k.kind==='feature');
+    let inside = '';
+    if (kids.length > 8){
+      const m = catGroupCount(p);
+      inside = `<div class="sec"><h3 class="small muted">${kids.length} features${m?` in ${m} categories`:''}</h3>${featureTreeHtml(p, true)}</div>`;
+    } else if (kids.length){
+      inside = `<div class="includes"><b>Includes:</b> ${kids.map(s=>esc(s.name)).join(' &middot; ')}</div>`;
+    }
+    body = `${inside}<div class="sec">${compareSection(p)}</div>`;
   }
-  const src = (p.source||{}).url;
+  const src = ((p.source||{}).url||'').replace(/\.md(\.txt)?($|[?#])/, '$2');   // link the real page, not the .md
   openModal(`
     <h2>${esc(p.name)}</h2>
     <div class="row small muted" style="gap:7px;align-items:center;flex-wrap:wrap">${esc(p.provider)} <span class="faint">&middot;</span> ${statusBadge(p)} <span class="faint">&middot;</span> ${esc(cap?cap.name:p.primary_capability_id)}</div>
     ${what?`<div class="lede">${esc(what)}</div>`:''}
-    ${inside}
-    <div class="sec">${compareSection(p)}</div>
+    ${body}
     ${src?`<a class="docs" href="${esc(src)}" target="_blank" rel="noopener">Official docs &#8599;</a>`:''}
   `);
 }

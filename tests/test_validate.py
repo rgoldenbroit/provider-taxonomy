@@ -167,6 +167,21 @@ def test_comparison_note_accepted():
     assert validate(d) == []
 
 
+def test_comparison_object_accepted():
+    d = _seed()
+    d["products"][1]["comparison"] = {
+        "summary": "Does X; OpenAI's nearest equivalent does Y; Google has none.",
+        "equivalents": [
+            {"provider": "OpenAI", "match": "Some Feature", "note": "narrower scope"},
+            {"provider": "Google", "match": None, "note": "no direct equivalent"},
+        ],
+    }
+    assert validate(d) == []
+    # bad shape (missing summary) rejected
+    d["products"][1]["comparison"] = {"equivalents": []}
+    assert _has(validate(d), kind="schema", rule="required", msg_contains="summary")
+
+
 def test_parent_id_cycle_detected():
     d = _seed()
     a, b = d["products"][0]["id"], d["products"][1]["id"]
