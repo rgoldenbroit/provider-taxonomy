@@ -1,0 +1,12 @@
+{
+  "key": "e0596e918bca8fbb266ac95223c60aa1152cd272647320ca4c23b204b6282b57",
+  "label": "judge:openai-sora",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Sora web and app experiences were discontinued on April 26, 2026. The Sora API will be discontinued on September 24, 2026.",
+    "lifecycle_status": "sunset",
+    "rationale": "The page confirms that OpenAI did offer Sora \u2014 it existed as both a web/app experience and an API product. However, the page is an official OpenAI discontinuation notice: the Sora web and app were shut down on April 26, 2026, and the Sora API is scheduled for discontinuation on September 24, 2026. The offering existed but is sunset (discontinued), not active.",
+    "supported": true
+  }
+}

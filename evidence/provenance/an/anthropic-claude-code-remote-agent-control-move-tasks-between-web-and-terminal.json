@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Move tasks between web and terminal",
-    "page_content_hash": "1e8772429e95ced5b23b7b8f9b1190af0faa97692ba04a2a8ac89189b748e0d6",
+    "page_content_hash": "08a0238eba099e0cb59264089188a1bb229a6c707af36dc4503f007f362b419f",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
     "reconfirmed": true,

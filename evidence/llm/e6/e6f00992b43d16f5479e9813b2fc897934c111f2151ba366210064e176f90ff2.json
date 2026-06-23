@@ -1,0 +1,12 @@
+{
+  "key": "e6f00992b43d16f5479e9813b2fc897934c111f2151ba366210064e176f90ff2",
+  "label": "judge:google-antigravity-2-0",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google Antigravity is a software development platform developed by Google. It consists of an integrated development environment (IDE), a command-line interface (CLI), and a software development kit (SDK) designed to orchestrate autonomous artificial intelligence agents for code generation, execution, and testing.",
+    "lifecycle_status": "preview",
+    "rationale": "The page does substantiate that Google offers the Antigravity platform with an IDE (including a 2.0 preview release) and a CLI. However, the claim specifically includes \"Jules async web agent\" as part of the Antigravity umbrella, and the page makes no mention of Jules whatsoever. The page also describes an SDK rather than Jules. Additionally, the claim describes Antigravity as an \"agentic-coding platform (Antigravity umbrella)\" \u2014 while the page does describe an agent-first IDE and CLI, it does not mention Jules or frame it as an umbrella over Jules. Since a key specific element of the claim (Jules async web agent) is entirely absent from the page, the full claim is not substantiated.",
+    "supported": false
+  }
+}
