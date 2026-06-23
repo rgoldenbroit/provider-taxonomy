@@ -1,0 +1,12 @@
+{
+  "key": "b2bd2a881e2a114e63012fedae9a7f8734c0aafb5fa6817c62efb56a7e4fa4e6",
+  "label": "judge:google-gemini-enterprise-agent-platform-mcp-connectors-prebuilt-connectors",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Gemini Enterprise includes prebuilt connectors for commonly-used third-party applications like Confluence, Jira, Microsoft SharePoint, and ServiceNow.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that Gemini Enterprise includes prebuilt connectors for commonly-used third-party applications, listing Confluence, Jira, Microsoft SharePoint, and ServiceNow \u2014 directly matching the claim. The offering is described as currently available (active), with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

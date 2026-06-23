@@ -1,0 +1,12 @@
+{
+  "key": "92c69f9b2fa08424d906f47454774468f37c29831680f97f500acf8a5fb59600",
+  "label": "judge:openai-agentkit-managed-agent-runtime-responses-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "It is OpenAI's flagship API and the best place to access the newest model behavior, built-in tools, stateful workflows, and agent features.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the Responses API as \"OpenAI's flagship API\" and lists \"stateful workflows\" and \"agent features\" as key capabilities, directly matching the claim. The page also recommends always starting with the Responses API and shows extensive code examples using it, confirming it is generally available and active.",
+    "supported": true
+  }
+}

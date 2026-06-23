@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-agent-evals-observability-traces",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A trace captures the end-to-end record of model calls, tool calls, guardrails, and handoffs for one run... Open Logs > Traces in the dashboard.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Traces",
+    "page_content_hash": "c28f66a84b844c37e294b3a6551d01a2868ff59a3b1a4ee1d0ac040b320cfa2f",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-agent-evals-observability-traces",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agent-evals.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "49b226651118744c92a5f86e2aca975b6d193fb14a80ea11e3f51c9249d26104",
+  "label": "judge:anthropic-claude-code",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser. Build, debug, and ship with natural language.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is Anthropic's official Claude Code product page (https://www.anthropic.com/claude-code). It clearly describes Claude Code as an actively available product offered by Anthropic, with pricing tiers (Pro, Max 5x, Max 20x), download instructions, platform support (macOS, Linux, Windows), and integrations (VS Code, JetBrains, Slack, etc.). The product is generally available and not in preview or beta.",
+    "supported": true
+  }
+}

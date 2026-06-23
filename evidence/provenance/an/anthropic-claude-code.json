@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Code",
-    "page_content_hash": "57cb0a1a8e7d2e5eefff5af9780c1759e731a98bc2a9cd0543dc57706b42a217",
+    "page_content_hash": "c727505bdcd4a980d5692d2b76af9a1745e94a1e828198c9a650915e147e5df3",
     "primary_capability_id": "agentic-coding",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/claude-code",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-mcp-connectors-mcp-servers-and-hosted-mcp-tools-agentkit",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "MCP servers and hosted MCP tools | Attaching MCP-backed capabilities | [Integrations and observability](https://developers.openai.com/api/docs/guides/agents/integrations-observability#mcp)",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP servers and hosted MCP tools (AgentKit)",
+    "page_content_hash": "17a7879495b88e2d038abf707006f3f78d92b2b6e978ebe79fb7d5f485d5c6a3",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-mcp-connectors-mcp-servers-and-hosted-mcp-tools-agentkit",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/define-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "23fa5e0eecabdf4ac2f8308a7f5bfa818fcdcf9db56adf2c13e410f3dd0d1ac8",
+  "label": "judge:openai-agentkit-mcp-connectors-remote-mcp-servers",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Remote MCP servers can be used to connect models over the Internet to new data sources and capabilities.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that \"Remote MCP servers can be used to connect models over the Internet to new data sources and capabilities,\" which directly substantiates the claim. The page goes on to provide detailed documentation, code examples, and API usage demonstrating that this is an active, generally available offering from OpenAI.",
+    "supported": true
+  }
+}

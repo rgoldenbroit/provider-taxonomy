@@ -1,0 +1,12 @@
+{
+  "key": "3d932b2e59ad26b0e7208e83a7c352056adf7cf3e34d34d178fedc3fa4c15513",
+  "label": "judge:openai-agentkit-guardrails-safety-moderation-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "OpenAI's Moderation API is free-to-use and can help reduce the frequency of unsafe content in your completions. ... you can also request moderation scores in the generation request",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that OpenAI offers a free Moderation API that reduces unsafe content in completions, and further states that moderation scores can be requested on generated content. This directly substantiates both aspects of the claim: (1) it is free, (2) it reduces unsafe content in completions, and (3) it provides moderation scores on generated content.",
+    "supported": true
+  }
+}

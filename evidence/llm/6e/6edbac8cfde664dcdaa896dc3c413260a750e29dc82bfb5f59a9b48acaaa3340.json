@@ -1,0 +1,12 @@
+{
+  "key": "6edbac8cfde664dcdaa896dc3c413260a750e29dc82bfb5f59a9b48acaaa3340",
+  "label": "judge:openai-agentkit-guardrails-safety-safety-identifiers",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sending safety identifiers in your requests can help OpenAI monitor and detect abuse. This allows OpenAI to provide your team with more actionable feedback in the event that we detect any policy violations in your application. Safety identifiers can also help your team respond to abuse faster. They create a stable way to trace activity back to an individual end user and reduce the chance that one user's misuse disrupts access for your broader organization. A safety identifier should be a string that uniquely identifies each user. Hash the username or email address in order to avoid sending us any identifying information.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Safety identifiers\" as a feature where developers attach a stable, per-user hashed identifier to API requests (via the `safety_identifier` parameter) to enable abuse monitoring, detection, traceability, and blocking of high-risk individual users. This directly matches all elements of the claim: stable identifier, per-user, hashed, attached to API requests, and used for abuse monitoring/detection/traceability. The page presents it as a current, available feature (recommended but not required), with working code examples, indicating active/GA status.",
+    "supported": true
+  }
+}

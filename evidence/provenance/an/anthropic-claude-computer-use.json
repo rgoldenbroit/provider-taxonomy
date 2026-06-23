@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and mouse/keyboard control for autonomous desktop interaction.",
+    "found_quote": "Computer use is a beta feature that enables Claude to interact with desktop environments. This tool provides: Screenshot capture: See what's currently displayed on screen, Mouse control: Click, drag, and move the cursor, Keyboard input: Type text and use keyboard shortcuts, Desktop automation: Interact with any application or interface",
     "lifecycle_status": "beta",
     "model": "claude-opus-4-8",
     "name": "Claude Computer Use",
-    "page_content_hash": "aa203425833c9c51bc775cfa71ff12e359d1ae2bee6491da6eecf168992929b0",
+    "page_content_hash": "22b5ab99ece0a54b02c9070d7f5923f64871f95750c0c3607f14b5bb7be36695",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use-tool",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

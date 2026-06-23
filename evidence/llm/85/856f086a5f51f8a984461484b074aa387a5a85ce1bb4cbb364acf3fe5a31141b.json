@@ -1,0 +1,12 @@
+{
+  "key": "856f086a5f51f8a984461484b074aa387a5a85ce1bb4cbb364acf3fe5a31141b",
+  "label": "judge:openai-agentkit-agent-memory-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Detailed compaction guidance now lives in [Compaction](https://developers.openai.com/api/docs/guides/compaction). - For `/responses` with `context_management` and `compact_threshold`, see [Server-side compaction](https://developers.openai.com/api/docs/guides/compaction#server-side-compaction). - For explicit compaction control, see [Standalone compact endpoint](https://developers.openai.com/api/docs/guides/compaction#standalone-compact-endpoint) and the [`/responses/compact` API reference](https://developers.openai.com/api/docs/api-reference/responses/compact).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly mentions a \"Compaction\" section under \"Managing the context window,\" describing it as managing context window limits. It references both server-side compaction (via `/responses` with `context_management` and `compact_threshold` parameters) and a standalone compact endpoint (`/responses/compact`), directly matching the claim's description of both automatic server-side compaction and a standalone mechanism.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-managed-agent-runtime-skills",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Skills are reusable, versioned bundles that you can mount in hosted shell environments. This defines the available skills, and at shell execution time the model decides whether to invoke them.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Skills",
+    "page_content_hash": "e3ddf3c63eb8ccac5c98e1e9162fa0c7877f48b3b79cc2a9ce5c01c38e43cb67",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-managed-agent-runtime-skills",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-shell.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

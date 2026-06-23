@@ -1,0 +1,12 @@
+{
+  "key": "13b6466063805a13950624e189fb82c0ea94879d86b0e3fa25cd902ff74b2ab6",
+  "label": "judge:google-gemini-enterprise-agent-platform-managed-agent-runtime-agent-runtime",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Utilizing a fully managed Agent Runtime to deploy and scale agents efficiently without the need to manage underlying infrastructure, ensuring reliable performance with built-in observability.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Agent Runtime as a fully managed runtime that deploys and scales agents without requiring customers to manage underlying infrastructure, which directly matches the claim. The page also clearly states at the top: \"Preview. This feature is subject to the 'Pre-GA Offerings Terms'\", indicating the offering is in preview/pre-GA status rather than generally available.",
+    "supported": true
+  }
+}

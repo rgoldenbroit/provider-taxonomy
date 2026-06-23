@@ -1,0 +1,12 @@
+{
+  "key": "2ad531fad4ccc273224f732e906761aa92ba7c22270a50480b039a1ac884dd7c",
+  "label": "judge:google-gemini-enterprise-agent-platform-managed-agent-runtime-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Context management: Utilizing Agent Platform Sessions and an Agent Platform Memory Bank to maintain the state of continuous conversations and retrieve persistent, long-term memories, enabling highly personalized and natural user interactions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Google's Sessions offering as part of the Gemini Enterprise Agent Platform, stating it is used to \"maintain the state of continuous conversations\" (i.e., conversation context across interactions with hosted agents). The page also includes a dedicated \"Sessions\" section with guides on managing sessions with agents. The page is marked as \"Preview. This feature is subject to the 'Pre-GA Offerings Terms'\", indicating the lifecycle status is preview/pre-GA.",
+    "supported": true
+  }
+}

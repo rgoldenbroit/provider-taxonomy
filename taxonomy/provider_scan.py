@@ -15,24 +15,43 @@ from __future__ import annotations
 from .retrieval.base import RetrievalError
 from .sources import _JUNK
 
-# provider → its agentic-coding product node + OFFICIAL first-party domains ONLY.
-# Note: forums (community./discuss.) and third-party blogs are excluded (see is_official).
-# Google is scoped to the coding-agent products (antigravity.google / jules.google) — NOT
-# ai.google.dev, which is the Gemini/ADK platform (a different product that caused drift).
-PROVIDERS = {
-    "Anthropic": {
-        "product_id": "anthropic-claude-code", "product": "Claude Code",
-        "domains": ["anthropic.com", "claude.com"],   # covers docs./code./support.*.claude(.anthropic).com
+# Per-capability registry: {capability_id: {provider: {product_id, product, domains, doc}}}.
+# Each provider entry carries its product node + official domains + the doc-retrieval config
+# (`doc.kind` ∈ llms_index | asset_md | html_section). This is the one place that grows when
+# onboarding a new capability — the pipeline is otherwise capability-agnostic.
+CAPABILITY_CONFIG = {
+    "agentic-coding": {
+        "Anthropic": {"product_id": "anthropic-claude-code", "product": "Claude Code",
+                      "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "llms_index", "url": "https://code.claude.com/llms.txt"}},
+        "OpenAI": {"product_id": "openai-codex", "product": "Codex", "domains": ["openai.com"],
+                   "doc": {"kind": "llms_index", "url": "https://developers.openai.com/codex/llms.txt"}},
+        "Google": {"product_id": "google-antigravity-2-0", "product": "Antigravity",
+                   "domains": ["antigravity.google", "jules.google"],
+                   "doc": {"kind": "asset_md", "home": "https://antigravity.google/docs",
+                           "asset_re": r"https://antigravity\.google/assets/docs/[^\"\\]+\.md"}},
     },
-    "OpenAI": {
-        "product_id": "openai-codex", "product": "Codex",
-        "domains": ["openai.com"],                     # developers./platform./help./cookbook.openai.com
-    },
-    "Google": {
-        "product_id": "google-antigravity-2-0", "product": "Antigravity",
-        "domains": ["antigravity.google", "jules.google"],
+    "enterprise-agent-platform": {
+        # Tier-1 clean docs for Anthropic + OpenAI; Tier-3 open HTML (CC BY 4.0) for Google Cloud.
+        "Anthropic": {"product_id": "anthropic-claude-on-third-party-platforms",
+                      "product": "Claude on Bedrock / Vertex", "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "llms_index", "url": "https://docs.claude.com/llms.txt"}},
+        "OpenAI": {"product_id": "openai-agentkit", "product": "AgentKit", "domains": ["openai.com"],
+                   "doc": {"kind": "llms_index", "url": "https://developers.openai.com/api/llms.txt"}},
+        "Google": {"product_id": "google-gemini-enterprise-agent-platform", "product": "Gemini Enterprise",
+                   "domains": ["cloud.google.com"],
+                   "doc": {"kind": "html_section",
+                           # seed the product's known doc roots (devsite nav is JS, so link-following alone
+                           # under-enumerates); fetch_html_section also follows any in-section links it finds.
+                           "roots": [f"https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/{s}"
+                                     for s in ("overview", "set-up", "deploy", "use", "sessions/overview",
+                                               "memory-bank/overview", "manage/overview", "examples", "quickstart")]
+                                    + ["https://cloud.google.com/gemini-enterprise/docs/overview"],
+                           "path_substrs": ["/vertex-ai/generative-ai/docs/agent-engine/",
+                                            "/gemini-enterprise/docs/"]}},
     },
 }
+PROVIDERS = CAPABILITY_CONFIG["agentic-coding"]   # back-compat alias for is_official/search_official
 
 _FORUM_PREFIXES = ("community.", "discuss.", "forum.", "support-community.")
 _MAX_PAGE_CHARS = 20000

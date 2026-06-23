@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Download the desktop app: macOS Windows Windows (arm64) Try Claude on mobile: Apple Google Play",
+    "found_quote": "Download the desktop app:\nmacOS\nWindows\nWindows (arm64)\nTry Claude on mobile:\nApple\nGoogle Play",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (web/desktop/mobile)",
-    "page_content_hash": "ea7c151ebb0c40e92e91fea4f3f2fc37126607b52af49badfa730e8a7c3b8048",
+    "page_content_hash": "09b7cf6f8b2fd4ed7d10f894d1c284d772e464b6ed56d8cc71e9a00f82a76551",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/claude",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

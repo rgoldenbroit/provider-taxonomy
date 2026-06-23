@@ -1,0 +1,21 @@
+{
+  "key": "google-gemini-enterprise-agent-platform-managed-agent-runtime-memory-bank",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Memory Bank overview: Learn how to use Memory Bank to store long-term user preferences and facts.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Memory Bank",
+    "page_content_hash": "7857f1529a999acf0f2d5aa92e9608f70ab718e828a794be0f9457b9f496372c",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-gemini-enterprise-agent-platform-managed-agent-runtime-memory-bank",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/memory-bank/overview",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

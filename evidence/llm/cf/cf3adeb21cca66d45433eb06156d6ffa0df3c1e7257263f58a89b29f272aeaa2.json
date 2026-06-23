@@ -1,0 +1,12 @@
+{
+  "key": "cf3adeb21cca66d45433eb06156d6ffa0df3c1e7257263f58a89b29f272aeaa2",
+  "label": "judge:openai-agentkit-guardrails-safety-guardrails",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Guardrails validate input, output, or tool behavior automatically... Block disallowed user requests before the main model runs [Input guardrails] | Validate or redact the final output before it leaves the system [Output guardrails] | Check arguments or results around a function tool call [Tool guardrails]",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's guardrail system for agents, covering input guardrails, output guardrails, and tool guardrails. It confirms that guardrails automatically validate, sanitize/redact, and block content around agent runs \u2014 covering input (blocking disallowed requests), output (validating or redacting final output), and tool calls (checking arguments/results). Code examples show programmatic guardrail definitions. The page also describes human-in-the-loop approvals as a complementary mechanism. All aspects of the claim are substantiated by the page content, and the feature appears to be generally available (active), with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

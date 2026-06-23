@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Gemini Computer Use",
-    "page_content_hash": "92fc9a38163ded359390bb0fe26433d7ce46a68471d38c7a05a7cb196922b9aa",
+    "page_content_hash": "f43c96bf296f0803036ea25e29627461586882e4244ef24a162992cda16189f7",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "low",
     "source_url": "https://www.digitalapplied.com/blog/computer-use-agents-2026-claude-openai-gemini-matrix",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

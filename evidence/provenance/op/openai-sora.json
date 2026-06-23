@@ -7,7 +7,7 @@
     "lifecycle_status": "sunset",
     "model": "claude-opus-4-8",
     "name": "Sora",
-    "page_content_hash": "72606307efc33407f683af51491ed026bff699f2d6f182c22810ac281b9c826e",
+    "page_content_hash": "22e35d8da5a419d3309b78b99928ac80844e29b9afceb9a45300025958c54e29",
     "primary_capability_id": "image-video-generation",
     "provider": "OpenAI",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

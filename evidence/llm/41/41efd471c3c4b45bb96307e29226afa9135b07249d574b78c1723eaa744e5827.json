@@ -1,0 +1,12 @@
+{
+  "key": "41efd471c3c4b45bb96307e29226afa9135b07249d574b78c1723eaa744e5827",
+  "label": "judge:openai-agentkit-agent-memory-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Sessions are the best default when you want durable memory, resumable approval flows, or storage that your application controls.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a `session` strategy for multi-turn conversations, stating that sessions provide \"durable memory\" and \"storage your application controls\" \u2014 directly matching the claim's description of \"durable, application-controlled persistent memory across multiple conversation turns.\" Code examples show `MemorySession` (TypeScript) and `SQLiteSession` (Python) being passed across multiple turns, confirming the feature is available and functional.",
+    "supported": true
+  }
+}

@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Google managed agents",
-    "page_content_hash": "e14b1ad672747181c8c4e0ba336c2b3ebf8c9f99434969b1d61e640884a5e302",
+    "page_content_hash": "613701ef8cd22550b35d15179b0a5651f77ccb334fd669b47e3eadd24998c5fa",
     "primary_capability_id": "managed-agent-runtime",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents",
     "supported": true,
-    "verified_at": "2026-06-22"
+    "verified_at": "2026-06-23"
   }
 }

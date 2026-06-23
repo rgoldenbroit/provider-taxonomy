@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-agent-memory-file-search",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "File Search augments the Assistant with knowledge from outside its model, such as proprietary product information or documents provided by your users. OpenAI automatically parses and chunks your documents, creates and stores the embeddings, and use both vector and keyword search to retrieve relevant content to answer user queries.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "File Search",
+    "page_content_hash": "4076aff81b71b942eda72a7f4b9e0a3568832f1721c95f30273afcb1dd11cb33",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-agent-memory-file-search",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/assistants/tools/file-search.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "29f9e7d63a19da3d35e9e14593be690c91187f614eb460e6e2678ccbbf451b84",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-evals-observability-set-up-tracing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Set up tracing\nLearn how to enable Cloud Trace on your agent and view traces to analyze query response times and executed operations.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes the \"Set up tracing\" guide under the \"Monitor agents\" section, stating it enables Cloud Trace on agents to view traces and analyze query response times and executed operations \u2014 which matches the claim verbatim. The page also notes at the top that the feature is in Preview (\"Pre-GA Offerings Terms\").",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "4981488fc4a11c21becf0a284544c8b4149019218eff400949f0d912d79b3809",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-memory-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Context management: Utilizing Agent Platform Sessions and an Agent Platform Memory Bank to maintain the state of continuous conversations and retrieve persistent, long-term memories, enabling highly personalized and natural user interactions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Google's Sessions offering under the \"Scale your agents\" section of the Gemini Enterprise Agent Platform documentation. It states that Sessions are used to \"maintain the state of continuous conversations,\" which directly matches the claim of maintaining conversation state within and across agent interactions. The page also includes a dedicated \"Sessions\" section with guides on managing sessions, confirming it is a real offering. However, the page opens with a \"Preview\" notice: \"This feature is subject to the 'Pre-GA Offerings Terms'\", indicating the feature is in preview/pre-GA status rather than generally available.",
+    "supported": true
+  }
+}

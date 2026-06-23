@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-guardrails-safety-safety-classifiers-and-safety-checks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "We classify requests to GPT-5 into risk thresholds. ... To help ensure safety in your use of the OpenAI API and tools, we run safety checks on our own models, including all fine-tuned models, and on the computer use tool. ... Cyber Safety ... Fine-tuning safety ... Safety checks in computer use",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Safety classifiers and safety checks",
+    "page_content_hash": "1762454d5a46b4ee0e18aa22d8c9a6919035c2174281a62b8974cc98b31a8c73",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-guardrails-safety-safety-classifiers-and-safety-checks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/safety-checks.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

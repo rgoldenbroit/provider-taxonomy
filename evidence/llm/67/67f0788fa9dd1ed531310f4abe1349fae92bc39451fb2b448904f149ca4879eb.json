@@ -1,0 +1,12 @@
+{
+  "key": "67f0788fa9dd1ed531310f4abe1349fae92bc39451fb2b448904f149ca4879eb",
+  "label": "judge:openai-agentkit-managed-agent-runtime-built-in-tools",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Built-in tools are the API's native capabilities. Instead of building every tool yourself, you can give the model access to tools that already work inside the Responses API. The model can then decide when to use them... Current built-in tools and related tool options include: Web search: Search the web for up-to-date information, File search: Search uploaded files or vector stores, Code interpreter: Run Python for analysis, math, charts, and file processing, Shell: Run shell commands in a hosted container or your own runtime, Computer use: Operate a UI through screenshots, clicks, typing, and scrolling, Image generation: Generate or edit images, MCP/connectors: Connect the model to external services and tools, Skills: Attach reusable instruction bundles and workflow files, Apply patch: Make structured code edits",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's built-in tools as native API capabilities hosted and executed within the Responses API infrastructure. It enumerates web search, code interpreter, shell, computer use, and other tools \u2014 directly matching the claim. These are presented as generally available, active features with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

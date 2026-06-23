@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-mcp-connectors-function-calling-controls",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If your application has many functions or large schemas, you can pair function calling with tool search to defer rarely used tools and load them only when the model needs them... Use namespaces to group related tools by domain... The model may choose to call multiple functions in a single turn. You can prevent this by setting `parallel_tool_calls` to `false`... Setting `strict` to `true` will ensure function calls reliably adhere to the function schema... Streaming can be used to surface progress by showing which function is called as the model fills its arguments",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Function calling controls",
+    "page_content_hash": "cac050e4760e77800efaa6ce23de8b32da0f386e0e54061c2262b9d6b846e3f6",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-mcp-connectors-function-calling-controls",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/function-calling.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-gemini-enterprise-agent-platform-agent-evals-observability-evaluation-service",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Leveraging the Example Store and Evaluation Service to test, monitor, and trace agent behavior, creating a continuous feedback loop and data flywheel to iteratively refine agent performance over time.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Evaluation Service",
+    "page_content_hash": "7857f1529a999acf0f2d5aa92e9608f70ab718e828a794be0f9457b9f496372c",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-gemini-enterprise-agent-platform-agent-evals-observability-evaluation-service",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

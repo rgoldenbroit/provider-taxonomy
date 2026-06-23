@@ -1,0 +1,12 @@
+{
+  "key": "928ad29a09c58eda5485a5a5cc2e41c19634c6c34c81d7ade70f800fabc4f525",
+  "label": "judge:google-gemini-enterprise-agent-platform-guardrails-safety-iam-agent-identity",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use IAM agent identity\nLearn how to use Identity Access Management (IAM) agent identity to provide security and access management features with Agent Platform.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a guide titled \"Use IAM agent identity\" which states it teaches users how to use Identity Access Management (IAM) agent identity to provide security and access management features with Agent Platform. This directly matches the claim. The page also carries a \"Preview\" banner at the top (\"This feature is subject to the 'Pre-GA Offerings Terms'\"), indicating the offering is in preview stage.",
+    "supported": true
+  }
+}

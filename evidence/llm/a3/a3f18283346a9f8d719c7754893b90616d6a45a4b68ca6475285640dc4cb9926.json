@@ -1,0 +1,12 @@
+{
+  "key": "a3f18283346a9f8d719c7754893b90616d6a45a4b68ca6475285640dc4cb9926",
+  "label": "judge:openai-agentkit-agent-evals-observability-datasets",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Datasets, a feature of the OpenAI platform, provide a quick way to get started with evals and test prompts.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page explicitly describes OpenAI's Datasets feature as part of the Evals platform, confirming it is a feature that provides \"a quick way to get started with evals.\" The page also describes structured test datasets, graders for repeatable large-scale benchmarking, and evaluation of agent/model behavior over stored data \u2014 all matching the claim. However, the page clearly states the Evals platform (including Datasets) is being deprecated: it becomes read-only on October 31, 2026, and shuts down on November 30, 2026, so lifecycle_status is 'deprecated' (still works during the transition window but being retired).",
+    "supported": true
+  }
+}

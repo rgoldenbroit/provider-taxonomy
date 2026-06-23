@@ -103,6 +103,40 @@ def _md_title(text: str) -> str:
     return h.group(1).strip() if h else ""
 
 
+def html_to_text(html: str) -> str:
+    """Strip an HTML doc page to readable text (Tier-3: open HTML docs with no llms.txt/.md,
+    e.g. Google Cloud / Gemini Enterprise — SSR, content-rich, CC BY 4.0)."""
+    html = re.sub(r"(?is)<(script|style|nav|header|footer|noscript|svg)[^>]*>.*?</\1>", " ", html)
+    txt = re.sub(r"(?s)<[^>]+>", " ", html)
+    txt = (txt.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+              .replace("&#39;", "'").replace("&quot;", '"').replace("&nbsp;", " "))
+    return re.sub(r"[ \t]*\n[ \t\n]*", "\n", re.sub(r"[ \t]+", " ", txt)).strip()
+
+
+def fetch_html_section(roots, path_substrs, limit: int = 10) -> "list[DocPage]":
+    """Targeted Tier-3 crawl: fetch each doc-root page, follow same-section in-page links whose
+    path matches one of `path_substrs`, fetch those (bounded), and normalize HTML→text. Avoids a
+    full nested-sitemap crawl — a product's overview page links its own section."""
+    from urllib.parse import urljoin
+    seen, queue, pages = set(), list(roots), []
+    # one hop: collect in-section links off the root pages (relative or absolute hrefs)
+    for root in list(roots):
+        html = _get(root)
+        for m in re.finditer(r'href=["\']([^"\'#?>]+)', html):
+            u = urljoin(root, m.group(1)).split("#")[0]
+            if any(ps in u for ps in path_substrs) and u not in queue:
+                queue.append(u)
+    for url in queue:
+        if url in seen or len(pages) >= limit:
+            continue
+        seen.add(url)
+        text = html_to_text(_get(url))
+        if len(text) > 400:
+            title = (re.search(r"^#?\s*(.+)$", text, re.M) or [None, url.rstrip("/").rsplit("/", 1)[-1]])[1][:80]
+            pages.append(DocPage(url, text, title))
+    return pages
+
+
 def _density(text: str, keywords) -> int:
     t = (text or "").lower()
     return sum(t.count(k) for k in keywords)
@@ -122,24 +156,43 @@ def _matches(text: str, keywords) -> bool:
     return any(k in t for k in keywords)
 
 
-def relevant_doc_pages(provider: str, keywords, limit: int = 8) -> list[DocPage]:
-    """Clean doc pages for a provider, filtered to the axis keywords, via its best official surface."""
-    cfg = DOC_SOURCES[provider]
+def relevant_doc_pages(doc_cfg: dict, keywords, limit: int = 8) -> list[DocPage]:
+    """Clean doc pages for ONE capability×provider, filtered to the axis keywords, via the provider's
+    best official surface. ``doc_cfg`` (from the capability registry) selects the retrieval kind:
+    `llms_index` (per-page .md / .md.txt), `asset_md` (SPA content assets), `html_section` (Tier-3 open
+    HTML, e.g. Google Cloud). Pages are ranked by keyword density; top `limit` returned."""
     kws = [k.lower() for k in keywords]
-    scored: list[tuple[int, DocPage]] = []   # (relevance density, page) → rank, then take top `limit`
-    if cfg["kind"] == "llms_index":
-        cands = [(t, u, d) for (t, u, d) in parse_llms_index(_get(cfg["url"]))
-                 if u.endswith(".md") and _matches(f"{t} {d} {u}", kws)][:16]   # per-page .md only
-        for title, url, _ in cands:
+    kind = doc_cfg["kind"]
+    scored: list[tuple[int, DocPage]] = []
+    if kind == "llms_index":
+        suffix = doc_cfg.get("md_suffix")   # e.g. ".md.txt" for ai.google.dev Gemini docs
+        cands: list[tuple[str, str]] = []
+        for title, url, desc in parse_llms_index(_get(doc_cfg["url"])):
+            if not _matches(f"{title} {desc} {url}", kws):
+                continue
+            if url.endswith((".md", ".md.txt")):
+                fetch = url
+            elif suffix:
+                fetch = url.rstrip("/") + suffix
+            else:
+                continue   # require a markdown surface (avoid fetching big HTML)
+            cands.append((title, fetch))
+            if len(cands) >= 16:
+                break
+        for title, url in cands:
             txt = _get(url)
             if txt.strip():
                 scored.append((_density(txt, kws), DocPage(url, txt, title)))
-    elif cfg["kind"] == "asset_md":
-        for url in enumerate_asset_docs(cfg["home"], cfg["asset_re"]):
-            txt = _get(url)   # gzip-aware
+    elif kind == "asset_md":
+        for url in enumerate_asset_docs(doc_cfg["home"], doc_cfg["asset_re"]):
+            txt = _get(url)
             if txt.strip() and _matches(txt, kws):
                 scored.append((_density(txt, kws), DocPage(url, txt, _md_title(txt) or url.rsplit("/", 1)[-1])))
-    scored.sort(key=lambda s: s[0], reverse=True)   # densest (most on-axis) pages first
+    elif kind == "html_section":
+        for p in fetch_html_section(doc_cfg["roots"], doc_cfg["path_substrs"], limit=max(limit, 12)):
+            if _matches(p.text, kws):
+                scored.append((_density(p.text, kws), p))
+    scored.sort(key=lambda s: s[0], reverse=True)
     return [p for _, p in scored[:limit]]
 
 

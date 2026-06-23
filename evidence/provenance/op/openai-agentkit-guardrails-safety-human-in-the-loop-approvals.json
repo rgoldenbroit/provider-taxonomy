@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-guardrails-safety-human-in-the-loop-approvals",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Pause before side effects like cancellations, edits, shell commands, or sensitive MCP actions | Human-in-the-loop approvals",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Human-in-the-loop approvals",
+    "page_content_hash": "c903e5cbd86e3ad5b55f41e717c976959a98a5dd77af5c9fa008952406bbfb38",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-guardrails-safety-human-in-the-loop-approvals",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/guardrails-approvals.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

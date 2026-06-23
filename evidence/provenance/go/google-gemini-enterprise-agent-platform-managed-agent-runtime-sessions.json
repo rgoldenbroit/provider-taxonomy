@@ -1,0 +1,21 @@
+{
+  "key": "google-gemini-enterprise-agent-platform-managed-agent-runtime-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Context management: Utilizing Agent Platform Sessions and an Agent Platform Memory Bank to maintain the state of continuous conversations and retrieve persistent, long-term memories, enabling highly personalized and natural user interactions.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Sessions",
+    "page_content_hash": "7857f1529a999acf0f2d5aa92e9608f70ab718e828a794be0f9457b9f496372c",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-gemini-enterprise-agent-platform-managed-agent-runtime-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/sessions/overview",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

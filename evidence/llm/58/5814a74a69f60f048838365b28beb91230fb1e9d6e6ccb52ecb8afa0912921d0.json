@@ -1,0 +1,12 @@
+{
+  "key": "5814a74a69f60f048838365b28beb91230fb1e9d6e6ccb52ecb8afa0912921d0",
+  "label": "judge:google-google-managed-agents-managed-agent-runtime",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agents overview\nStay organized with collections\nSave and categorize content based on your preferences.\nBuild, deploy, and manage AI agents that use reasoning and tools to perform complex enterprise tasks, such as automating workflows, discovering information across multiple systems, and generating content.",
+    "lifecycle_status": "preview",
+    "rationale": "The page directly matches the claim's quoted text nearly verbatim, confirming Google offers managed agents via the Gemini Enterprise Agent Platform. The page also explicitly includes a \"Managed Agents API on Agent Platform\" section describing a config-driven, REST-first API for building autonomous agents inside a fully managed sandbox environment. The page is marked as \"Preview\" subject to Pre-GA Offerings Terms, indicating the feature is in preview/early access rather than generally available.",
+    "supported": true
+  }
+}

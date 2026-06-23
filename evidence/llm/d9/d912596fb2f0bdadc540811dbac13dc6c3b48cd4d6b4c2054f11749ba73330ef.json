@@ -1,0 +1,12 @@
+{
+  "key": "d912596fb2f0bdadc540811dbac13dc6c3b48cd4d6b4c2054f11749ba73330ef",
+  "label": "judge:openai-agentkit-agent-evals-observability-graders",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Graders are a way to evaluate your model's performance against reference answers. Our graders API is a way to test your graders, experiment with results, and improve your fine-tuning or evaluation framework to get the results you want. ... Graders let you compare reference answers to the corresponding model-generated answer and return a grade in the range from 0 to 1. ... Graders are specified in JSON format, and there are several types: String check, Text similarity, Score model grader, Python code execution. ... OpenAI is deprecating graders as part of the evals and fine-tuning workflows they support.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page fully substantiates the claim: OpenAI offers Graders as a framework for evaluating model outputs against reference answers using multiple scoring strategies (string check, text similarity, score model, Python, multigraders), returning scores in the range 0 to 1, used in evals and fine-tuning. However, the page explicitly states \"OpenAI is deprecating graders as part of the evals and fine-tuning workflows they support,\" making the lifecycle status 'deprecated' (still works, but being retired).",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "0c566067dcf319ef42f133c0be8a6a84c9dbe114ce592cb3d724986e60781c0f",
+  "label": "judge:openai-agentkit-managed-agent-runtime-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Skills are reusable, versioned bundles that you can mount in hosted shell environments. This defines the available skills, and at shell execution time the model decides whether to invoke them.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Skills as \"reusable, versioned bundles\" that can be mounted into hosted shell containers, and that \"at shell execution time the model decides whether to invoke them.\" This directly matches the claim about reusable, versioned code bundles being mounted into hosted shell containers and selectively invoked by the model at execution time. The feature is presented as currently available (no preview/beta label), with working API examples included.",
+    "supported": true
+  }
+}

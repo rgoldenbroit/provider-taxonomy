@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-guardrails-safety-moderation-api",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "OpenAI's Moderation API is free-to-use and can help reduce the frequency of unsafe content in your completions. ... you can also request moderation scores in the generation request",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Moderation API",
+    "page_content_hash": "48b459e4a307d17d95a58e37e8fa20e21d97085dcd5426cad182f1a93512aa33",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-guardrails-safety-moderation-api",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/safety-best-practices.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

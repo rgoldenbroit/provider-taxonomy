@@ -1,0 +1,12 @@
+{
+  "key": "f920d10101cbafe9c77f6435e468fe02386d5d8cec4e45d3d0cdbfa4dbc6ed2b",
+  "label": "judge:openai-agentkit-agent-evals-observability-traces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A trace captures the end-to-end record of model calls, tool calls, guardrails, and handoffs for one run... Open Logs > Traces in the dashboard.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's Traces feature as capturing \"the end-to-end record of model calls, tool calls, guardrails, and handoffs for one run,\" which aligns closely with the claim's description of capturing \"model calls, tool calls, guardrails, handoffs, decisions, and reasoning steps.\" The page also confirms it is viewable in a dedicated dashboard via \"Logs > Traces in the dashboard.\" The feature is described as currently available (no preview or beta qualifiers), indicating it is active.",
+    "supported": true
+  }
+}

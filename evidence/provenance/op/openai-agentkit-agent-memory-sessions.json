@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-agent-memory-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Sessions are the best default when you want durable memory, resumable approval flows, or storage that your application controls.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Sessions",
+    "page_content_hash": "d8f1bced2fe1ae93acfc2a5294c0b2bae1c38ca07e32ac802ae9ac369d56acef",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-agent-memory-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/running-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

@@ -26,7 +26,7 @@ sys.path.insert(0, str(ROOT))
 
 from taxonomy.config import settings  # noqa: E402
 from taxonomy.doc_source import CachedPages, relevant_doc_pages  # noqa: E402
-from taxonomy.provider_scan import PROVIDERS, consolidate_features, extract_features  # noqa: E402
+from taxonomy.provider_scan import CAPABILITY_CONFIG, consolidate_features, extract_features  # noqa: E402
 from taxonomy.retrieval.base import RetrievalError  # noqa: E402
 from taxonomy.schema import DEFAULT_DATA_PATH  # noqa: E402
 from taxonomy.triage import triage_one  # noqa: E402
@@ -35,7 +35,7 @@ from taxonomy.vertex_client import get_llm  # noqa: E402
 AS_OF = "2026-06-22"
 FEATURE_CAP = 6
 
-AXIS_KEYWORDS = {
+AXIS_KEYWORDS = {  # agentic-coding axes
     "subagents-orchestration": ["subagent", "sub-agent", "multi-agent", "multi agent", "orchestrat",
                                 "parallel agent", "agent team", "agent manager", "delegat", "spawn"],
     "managed-agent-runtime": ["managed agent", "hosted", "runtime", "cloud agent", "background agent",
@@ -52,6 +52,24 @@ AXIS_KEYWORDS = {
                                   "telemetry", "debug"],
     "remote-agent-control": ["remote", "async", "cloud", "on the web", "delegate", "background task",
                              "pull request", "headless"],
+}
+
+# enterprise-agent-platform reuses cross-cutting axes, keyworded for enterprise/cloud docs.
+ENTERPRISE_AXES = {
+    "managed-agent-runtime": ["agent engine", "managed runtime", "deploy", "hosting", "serverless",
+                              "scale", "endpoint", "runtime", "reasoning engine", "fully managed"],
+    "guardrails-safety": ["governance", "iam", "permission", "vpc service controls", "security",
+                          "compliance", "policy", "access control", "guardrail", "safety", "data residency"],
+    "agent-evals-observability": ["observability", "monitoring", "trace", "cloud trace", "logging",
+                                  "metrics", "evaluation", "eval", "telemetry", "tracing", "dashboard"],
+    "mcp-connectors": ["connector", "integration", "mcp", "tool", "data store", "grounding",
+                       "data source", "extension", "function calling"],
+    "agent-memory": ["memory", "memory bank", "session", "state", "context", "rag", "example store"],
+}
+
+CAPABILITY_AXES = {
+    "agentic-coding": AXIS_KEYWORDS,
+    "enterprise-agent-platform": ENTERPRISE_AXES,
 }
 
 _norm = lambda s: re.sub(r"[^a-z0-9]", "", (s or "").lower())
@@ -98,11 +116,9 @@ def _sub_record(provider, parent_id, axis, name, url):
     }
 
 
-def scan_provider(provider, cfg_axis, catalog, llm):
-    meta = PROVIDERS[provider]
+def scan_provider(provider, meta, cfg_axis, kws, catalog, llm):
     axis_id, axis_name, axis_desc = cfg_axis
-    kws = AXIS_KEYWORDS.get(axis_id, [axis_name.lower()])
-    pages = relevant_doc_pages(provider, kws)
+    pages = relevant_doc_pages(meta["doc"], kws)
     if not pages:
         return [], [f"  no doc pages ({axis_id})"]
     cached = CachedPages(pages)
@@ -149,14 +165,23 @@ def scan_provider(provider, cfg_axis, catalog, llm):
 
 
 def main() -> int:
+    flags = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    global AS_OF
+    AS_OF = flags.get("as_of", AS_OF)
+    capability = flags.get("capability", "agentic-coding")
+    config = CAPABILITY_CONFIG.get(capability)
+    kw_map = CAPABILITY_AXES.get(capability)
+    if not config or not kw_map:
+        print(f"unknown capability {capability!r}; known: {list(CAPABILITY_CONFIG)}", file=sys.stderr)
+        return 1
     cfg = settings()
     if cfg.offline:
-        print("repopulate_agentic needs live grounding: set TAXO_OFFLINE=0.", file=sys.stderr)
+        print("repopulate needs live grounding: set TAXO_OFFLINE=0.", file=sys.stderr)
         return 1
     catalog = json.loads(DEFAULT_DATA_PATH.read_text(encoding="utf-8"))
     cap_by_id = {c["id"]: c for c in catalog["capabilities"]}
-    axes = [args[0]] if args else list(AXIS_KEYWORDS)
+    axes = [args[0]] if args else list(kw_map)
     llm = get_llm(cfg)
 
     all_records, summary = [], {}
@@ -166,23 +191,24 @@ def main() -> int:
             print(f"  skip unknown axis {axis_id}")
             continue
         cfg_axis = (axis_id, cap["name"], cap.get("description", ""))
+        kws = kw_map.get(axis_id, [cap["name"].lower()])
         print(f"\n=== AXIS: {cap['name']} ({axis_id}) ===")
         summary[axis_id] = {}
-        for provider in PROVIDERS:
+        for provider, meta in config.items():
             print(f"[{provider}]")
-            recs, log = scan_provider(provider, cfg_axis, catalog, llm)
+            recs, log = scan_provider(provider, meta, cfg_axis, kws, catalog, llm)
             for line in log:
                 print(line)
-            feats = [r for r in recs if r["parent_id"] == PROVIDERS[provider]["product_id"]]
+            feats = [r for r in recs if r["parent_id"] == meta["product_id"]]
             all_records.extend(recs)
             summary[axis_id][provider] = [r["name"] for r in feats]
 
-    out = ROOT / "data" / "_sweep_records.json"
-    out.write_text(json.dumps({"as_of": AS_OF, "records": all_records}, indent=2, ensure_ascii=False) + "\n",
-                   encoding="utf-8")
+    out = ROOT / "data" / f"_sweep_{capability}.json"
+    out.write_text(json.dumps({"as_of": AS_OF, "capability": capability, "records": all_records},
+                              indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("\n=== SWEEP SUMMARY — features per axis × provider ===")
     for axis_id, provs in summary.items():
-        counts = " · ".join(f"{p}:{len(provs.get(p, []))}" for p in PROVIDERS)
+        counts = " · ".join(f"{p}:{len(provs.get(p, []))}" for p in config)
         print(f"  {axis_id:28} {counts}")
     feats = sum(1 for r in all_records if r["relation_within_capability"] == "direct")
     print(f"\n{len(all_records)} records ({feats} features + {len(all_records)-feats} sub-features) → {out}")

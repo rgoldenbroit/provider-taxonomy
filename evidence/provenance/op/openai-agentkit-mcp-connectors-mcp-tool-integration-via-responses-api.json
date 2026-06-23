@@ -1,0 +1,21 @@
+{
+  "key": "openai-agentkit-mcp-connectors-mcp-tool-integration-via-responses-api",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "You can test the MCP server using the Responses API directly with a request like this one... \"tools\": [ { \"type\": \"mcp\", \"server_label\": \"cats\", \"server_url\": \"https://777ff573-9947-4b9c-8982-658fa40c7d09-00-3le96u7wsymx.janeway.replit.dev/sse/\", \"allowed_tools\": [ \"search\", \"fetch\" ], \"require_approval\": \"never\" } ]",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "MCP tool integration via Responses API",
+    "page_content_hash": "61b5681df855a0f1cd797aae828cbbf4d4d9b9ad4f0d9fd6bfa70b9e04c06bc8",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-agentkit-mcp-connectors-mcp-tool-integration-via-responses-api",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-23"
+  }
+}

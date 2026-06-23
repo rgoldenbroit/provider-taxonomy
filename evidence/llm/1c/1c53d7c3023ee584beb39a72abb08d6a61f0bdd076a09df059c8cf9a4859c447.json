@@ -1,0 +1,12 @@
+{
+  "key": "1c53d7c3023ee584beb39a72abb08d6a61f0bdd076a09df059c8cf9a4859c447",
+  "label": "judge:openai-agentkit-agent-evals-observability-trace-grading",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Trace grading is the process of assigning structured scores or labels to an agent's trace\u2014the end-to-end log of decisions, tool calls, and reasoning steps\u2014to assess correctness, quality, or adherence to expectations. These annotations help identify where the agent did well or made mistakes, enabling targeted improvements in orchestration or behavior. Trace evals use those graded traces to systematically evaluate agent performance across many examples, helping to benchmark changes, identify regressions, or validate improvements.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page directly and verbatim describes the offering of \"Trace grading\" by OpenAI, matching the claim almost word-for-word. It confirms that trace grading assigns structured scores or labels to an agent's trace to assess correctness, quality, or adherence to expectations, and that trace evals systematically evaluate agent performance across many examples to find regressions and failure modes at scale. The page presents this as a current, generally available feature with actionable steps in the dashboard, indicating an active lifecycle status.",
+    "supported": true
+  }
+}

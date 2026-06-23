@@ -1,0 +1,12 @@
+{
+  "key": "08c8bf8189299762f907fa1e18662e6ff6cc5be5b87c2f43d46f530e9f405eef",
+  "label": "judge:google-gemini-enterprise-agent-platform-managed-agent-runtime-memory-bank",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Memory Bank overview: Learn how to use Memory Bank to store long-term user preferences and facts.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Google's Memory Bank offering on Vertex AI / Gemini Enterprise Agent Platform, stating it is used to \"store long-term user preferences and facts\" and to \"retrieve persistent, long-term memories, enabling highly personalized and natural user interactions.\" The page also clearly labels the feature as \"Preview\" under \"Pre-GA Offerings Terms,\" confirming it is not yet generally available. The description closely matches the claim of a managed long-term memory store that persists user preferences and facts across agent sessions.",
+    "supported": true
+  }
+}

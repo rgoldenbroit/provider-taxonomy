@@ -1,0 +1,12 @@
+{
+  "key": "3cc5cf7623b4076e38b1f7f8dbaecf579729a4905c232960ef2cf88eeb4623af",
+  "label": "judge:openai-agentkit-agent-memory-file-search",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "File Search augments the Assistant with knowledge from outside its model, such as proprietary product information or documents provided by your users. OpenAI automatically parses and chunks your documents, creates and stores the embeddings, and use both vector and keyword search to retrieve relevant content to answer user queries.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's File Search tool for Assistants, confirming it augments assistants with knowledge from uploaded files stored in vector stores that persist across runs. The page provides full documentation including quickstart guides, code samples, and detailed configuration options, indicating it is an actively available (generally available) offering.",
+    "supported": true
+  }
+}
