@@ -1,0 +1,12 @@
+{
+  "key": "c72c5b05c3ae29356386f68599f4ff9a99ac269d937ce293fc08352278dd1021",
+  "label": "judge:google-agent-development-kit-adk-mcp-connectors-mcptoolset",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "from google.adk.tools.mcp_tool import McpToolset\n...\n    tools=[\n        McpToolset(\n            connection_params=StdioConnectionParams(\n                server_params=StdioServerParameters(\n                    command=\"npx\",\n                    args=[\n                        \"-y\",\n                        \"mcp-remote\",\n                        \"https://mcp.asana.com/sse\",\n                    ]\n                ),\n                timeout=30,\n            ),\n        )\n    ],",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly shows ADK's McpToolset (imported from google.adk.tools.mcp_tool) being used to wrap an MCP server connection (Asana's MCP server) and expose its tools to an agent. This directly substantiates the claim that ADK provides a McpToolset connector that wraps an MCP server connection and exposes its tools to an agent, used to integrate third-party MCP servers such as Asana. The page also shows both Python (McpToolset) and TypeScript (MCPToolset) variants, and presents the integration as currently active/generally available with no preview or deprecation notices.",
+    "supported": true
+  }
+}

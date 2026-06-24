@@ -1,0 +1,12 @@
+{
+  "key": "c8a06cd0f6f5b33e2c2ec8e5b25f7624dd283c41898a7d25e4ae8a6282e1a23b",
+  "label": "judge:openai-openai-agents-sdk-agent-memory-conversations-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Conversations API works with the Responses API to persist conversation state as a long-running object with its own durable identifier. After creating a conversation object, you can keep using it across sessions, devices, or jobs.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the Conversations API under \"Using the Conversations API\" section. It states that the API persists conversation state as a long-running object with its own durable identifier, reusable across sessions \u2014 which directly matches the claim. The page presents it as a current, available offering with code examples, and does not indicate it is in preview, beta, deprecated, or sunset.",
+    "supported": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-subagents-orchestration-skills",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Each skill is a folder with a SKILL.md file plus any supporting files it needs. By default, both you and Claude can invoke a skill. Use frontmatter to control that: disable-model-invocation: true for user-only workflows like /deploy, or user-invocable: false to hide from the / menu while Claude can still invoke it.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Skills",
+    "page_content_hash": "9e9e87190940bb46ccfc20f9b4f07f17d3973bff138b12ec1c0739a895d535d4",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-subagents-orchestration-skills",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/claude-directory.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

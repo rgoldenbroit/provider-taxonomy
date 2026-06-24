@@ -1,0 +1,12 @@
+{
+  "key": "559b5db47361952521d31e0fbcb844548ed65a9a8142e8fb7221bf4295baa27b",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-managed-settings",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To prevent `bypassPermissions` or `auto` mode from being used, set `permissions.disableBypassPermissionsMode` or `permissions.disableAutoMode` to `\"disable\"` in any [settings file](/en/settings#settings-files). These are most useful in [managed settings](#managed-settings) where they cannot be overridden.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes managed settings as an organization-wide permission policy mechanism. It references a \"managed settings\" section and explains that administrators can set `permissions.disableBypassPermissionsMode` or `permissions.disableAutoMode` to `\"disable\"` in managed settings where they \"cannot be overridden.\" This directly substantiates the claim that administrators can enforce organization-wide permission policies (e.g., disabling bypassPermissions or auto mode) via managed settings.",
+    "supported": true
+  }
+}

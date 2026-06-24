@@ -1,0 +1,12 @@
+{
+  "key": "5a84f35eb727218a75b6333408ca80b9ac33a76c042fc41ebf605a5bb474651e",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-claude-code-on-the-web",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Each session runs in a fresh Anthropic-managed VM with your repository cloned. This section covers what's available when a session starts and how to customize it. ... Cloud sessions come with common language runtimes, build tools, and databases pre-installed. ... Sessions persist even if you close your browser ... Network access ... levels, proxies, and the default allowlist",
+    "lifecycle_status": "preview",
+    "rationale": "The page substantiates all key elements of the claim: (1) Anthropic-managed VMs \u2014 \"Each session runs in a fresh Anthropic-managed VM\"; (2) repository cloned \u2014 \"with your repository cloned\"; (3) common runtimes pre-installed \u2014 \"Cloud sessions come with common language runtimes, build tools, and databases pre-installed\"; (4) network proxy enforcing a default allowlist \u2014 the page covers \"Network access: levels, proxies, and the default allowlist\" and references \"Trusted defaults\" and \"default allowed domains.\" The page also notes sessions persist (\"Sessions persist even if you close your browser\"), matching the \"persistent\" aspect of the claim. The page describes the offering as being \"in research preview\" for certain user tiers, so lifecycle_status is 'preview'.",
+    "supported": true
+  }
+}

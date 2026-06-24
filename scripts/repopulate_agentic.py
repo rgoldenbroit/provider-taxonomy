@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -67,9 +68,35 @@ ENTERPRISE_AXES = {
     "agent-memory": ["memory", "memory bank", "session", "state", "context", "rag", "example store"],
 }
 
+# agent-building SDKs reuse the cross-cutting axes, keyworded for SDK/library docs.
+SDK_AXES = {
+    "subagents-orchestration": ["handoff", "sub-agent", "subagent", "multi-agent", "orchestrat",
+                                "agent as tool", "agents as tools", "delegate", "swarm", "workflow"],
+    "agent-memory": ["session", "memory", "state", "context", "persistence", "thread", "history"],
+    "mcp-connectors": ["tool", "function calling", "mcp", "model context protocol", "custom tool",
+                       "connector", "integration", "hosted tool"],
+    "code-execution-sandbox": ["code execution", "code interpreter", "sandbox", "bash", "container",
+                               "shell", "computer use"],
+    "guardrails-safety": ["guardrail", "approval", "human review", "validation", "safety", "permission",
+                          "input guardrail", "output guardrail", "tripwire"],
+    "agent-evals-observability": ["trace", "tracing", "eval", "observability", "logging", "debug",
+                                  "monitor", "span", "session replay"],
+    "managed-agent-runtime": ["runner", "run loop", "agent loop", "deploy", "hosted", "runtime",
+                              "streaming", "run", "execution"],
+}
+
+# Capabilities outside the agent-building domains don't map onto the cross-cutting axes; sweep them
+# with a single capability-level axis (features attach flat to the capability, no forced sub-categories).
 CAPABILITY_AXES = {
     "agentic-coding": AXIS_KEYWORDS,
     "enterprise-agent-platform": ENTERPRISE_AXES,
+    "agent-building-sdk": SDK_AXES,
+    "browser-computer-use-agent": {"browser-computer-use-agent": [
+        "computer use", "computer-use", "browser", "screenshot", "click", "navigate", "mouse",
+        "keyboard", "gui", "operator", "action", "scroll", "ui automation", "web task"]},
+    "image-video-generation": {"image-video-generation": [
+        "image", "video", "generation", "imagen", "veo", "sora", "gpt-image", "edit", "render",
+        "resolution", "aspect ratio", "prompt", "style", "frame"]},
 }
 
 _norm = lambda s: re.sub(r"[^a-z0-9]", "", (s or "").lower())
@@ -184,7 +211,10 @@ def main() -> int:
     axes = [args[0]] if args else list(kw_map)
     llm = get_llm(cfg)
 
-    all_records, summary = [], {}
+    # Build the independent (axis × provider) scan tasks, then run them in a bounded thread pool —
+    # each scan is independent (own LLM calls + grounding; shared llm/doc-cache are concurrency-safe),
+    # so this cuts wall-clock ~Nx vs the old sequential nested loops.
+    tasks = []
     for axis_id in axes:
         cap = cap_by_id.get(axis_id)
         if not cap:
@@ -192,16 +222,28 @@ def main() -> int:
             continue
         cfg_axis = (axis_id, cap["name"], cap.get("description", ""))
         kws = kw_map.get(axis_id, [cap["name"].lower()])
-        print(f"\n=== AXIS: {cap['name']} ({axis_id}) ===")
-        summary[axis_id] = {}
         for provider, meta in config.items():
-            print(f"[{provider}]")
+            tasks.append((axis_id, cap["name"], cfg_axis, kws, provider, meta))
+
+    def run(t):
+        axis_id, axis_name, cfg_axis, kws, provider, meta = t
+        try:
             recs, log = scan_provider(provider, meta, cfg_axis, kws, catalog, llm)
+        except Exception as exc:   # one bad scan must not lose the whole sweep
+            recs, log = [], [f"  SCAN FAILED ({type(exc).__name__}: {exc})"]
+        return axis_id, provider, meta, recs, log
+
+    all_records, summary = [], {}
+    workers = min(8, len(tasks))
+    print(f"\nrunning {len(tasks)} scans across {workers} workers\n")
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for axis_id, provider, meta, recs, log in ex.map(run, tasks):
+            print(f"=== {axis_id} / {provider} ===")
             for line in log:
                 print(line)
             feats = [r for r in recs if r["parent_id"] == meta["product_id"]]
             all_records.extend(recs)
-            summary[axis_id][provider] = [r["name"] for r in feats]
+            summary.setdefault(axis_id, {})[provider] = [r["name"] for r in feats]
 
     out = ROOT / "data" / f"_sweep_{capability}.json"
     out.write_text(json.dumps({"as_of": AS_OF, "capability": capability, "records": all_records},

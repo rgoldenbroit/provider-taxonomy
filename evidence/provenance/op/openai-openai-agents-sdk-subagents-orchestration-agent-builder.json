@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-subagents-orchestration-agent-builder",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agent Builder is a visual canvas for building multi-step agent workflows. ... A workflow is a combination of agents, tools, and control-flow logic.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Agent Builder",
+    "page_content_hash": "2c4eab1b47c569e89e148a2cf7e5871ce0907ecbb07b7051d30fcc2e94f24783",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-subagents-orchestration-agent-builder",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agent-builder.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

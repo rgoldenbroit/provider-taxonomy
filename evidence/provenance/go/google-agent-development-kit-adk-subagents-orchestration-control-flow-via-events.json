@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-subagents-orchestration-control-flow-via-events",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Control Flow: Specific fields like `event.actions.transfer_to_agent` or `event.actions.escalate` act as signals that direct the framework, determining which agent runs next or if a loop should terminate.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Control Flow via Events",
+    "page_content_hash": "ba6f1c08546c102c260cd366b48c9d76b535a597ce30f96cb84a0ca98648f535",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-subagents-orchestration-control-flow-via-events",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/events/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -50,6 +50,39 @@ CAPABILITY_CONFIG = {
                            "path_substrs": ["/vertex-ai/generative-ai/docs/agent-engine/",
                                             "/gemini-enterprise/docs/"]}},
     },
+    "agent-building-sdk": {
+        "Anthropic": {"product_id": "anthropic-claude-agent-sdk", "product": "Claude Agent SDK",
+                      "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "llms_index", "url": "https://code.claude.com/llms.txt"}},
+        "OpenAI": {"product_id": "openai-openai-agents-sdk", "product": "OpenAI Agents SDK",
+                   "domains": ["openai.com", "openai.github.io"],
+                   "doc": {"kind": "llms_index", "url": "https://developers.openai.com/api/llms.txt"}},
+        "Google": {"product_id": "google-agent-development-kit-adk", "product": "Google ADK",
+                   "domains": ["adk.dev", "google.github.io"],
+                   "doc": {"kind": "llms_index", "url": "https://adk.dev/llms.txt"}},
+    },
+    "browser-computer-use-agent": {  # focused capability → precise topic pages (no broad-index over-pull)
+        "Anthropic": {"product_id": "anthropic-claude-computer-use", "product": "Claude Computer Use",
+                      "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "pages", "urls": ["https://code.claude.com/docs/en/computer-use.md"]}},
+        "OpenAI": {"product_id": "openai-operator", "product": "OpenAI Computer Use", "domains": ["openai.com"],
+                   "doc": {"kind": "pages",
+                           "urls": ["https://developers.openai.com/api/docs/guides/tools-computer-use.md"]}},
+        "Google": {"product_id": "google-gemini-computer-use", "product": "Gemini Computer Use",
+                   "domains": ["ai.google.dev", "google.com"],
+                   "doc": {"kind": "pages",
+                           "urls": ["https://ai.google.dev/gemini-api/docs/computer-use.md.txt"]}},
+    },
+    "image-video-generation": {  # Anthropic honestly absent (no entry); OpenAI + Google via topic pages
+        "OpenAI": {"product_id": "openai-sora", "product": "OpenAI image & video", "domains": ["openai.com"],
+                   "doc": {"kind": "pages", "urls": [
+                       "https://developers.openai.com/api/docs/guides/image-generation.md",
+                       "https://developers.openai.com/api/docs/guides/video-generation.md"]}},
+        "Google": {"product_id": "google-veo", "product": "Imagen & Veo", "domains": ["ai.google.dev", "google.com"],
+                   "doc": {"kind": "pages", "urls": [
+                       "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
+                       "https://ai.google.dev/gemini-api/docs/imagen.md.txt"]}},
+    },
 }
 PROVIDERS = CAPABILITY_CONFIG["agentic-coding"]   # back-compat alias for is_official/search_official
 
@@ -109,7 +142,7 @@ def extract_features(llm, page_text, url, provider, product, axis_name, axis_des
     )
     out = llm.structured(system=EXTRACT_SYSTEM, prompt=prompt, schema=EXTRACT_SCHEMA,
                          label=f"extract:{provider}:{axis_name}")
-    feats = out.get("features", []) if isinstance(out, dict) else []
+    feats = [f for f in (out.get("features", []) if isinstance(out, dict) else []) if isinstance(f, dict)]
     for f in feats:
         f["_url"] = url
     return feats

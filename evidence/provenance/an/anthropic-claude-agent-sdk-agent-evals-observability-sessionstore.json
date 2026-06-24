@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-evals-observability-sessionstore",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "declare const sessionStore: SessionStore; // S3, Redis, Postgres, or your own adapter",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "SessionStore",
+    "page_content_hash": "4813cca8578a5afc3f29ed3ac0d66920259451122ed5cd31894fb9f6a7440f55",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-evals-observability-sessionstore",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

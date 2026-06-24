@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-routines",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A remote routine runs on Anthropic-managed cloud infrastructure even when your computer is off, and can also fire on API calls or GitHub events.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Routines",
+    "page_content_hash": "8344ce1ba34e5a6eea51a6c797c6ab97d033d4a477ca97bf924a30f577dbc5db",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-routines",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

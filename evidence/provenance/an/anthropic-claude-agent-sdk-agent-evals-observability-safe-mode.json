@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-evals-observability-safe-mode",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Start with [`claude --safe-mode`](/en/cli-reference#cli-flags), which launches a session with all customizations disabled, including `CLAUDE.md`, skills, plugins, hooks, MCP servers, and custom commands and agents. Authentication, model selection, built-in tools, and permissions work normally. If the problem disappears in safe mode, one of those surfaces is the cause; use the targeted checks above to find which.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "safe-mode",
+    "page_content_hash": "80b09be17fae1745380c3652eb613cd41483a3ef6534c44be95489bc8ff4f03b",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-evals-observability-safe-mode",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/debug-your-config.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

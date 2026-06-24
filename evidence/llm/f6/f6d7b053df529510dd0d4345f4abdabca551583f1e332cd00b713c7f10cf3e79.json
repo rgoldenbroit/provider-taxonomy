@@ -1,0 +1,12 @@
+{
+  "key": "f6d7b053df529510dd0d4345f4abdabca551583f1e332cd00b713c7f10cf3e79",
+  "label": "judge:google-agent-development-kit-adk-managed-agent-runtime-resume-stopped-agents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Resume feature of ADK allows an agent workflow to pick up where it left off, avoiding the need to restart the entire workflow. In ADK Python 1.16 and higher, you can configure an ADK workflow to be resumable, so that it tracks the execution of workflow and then allows you to resume it after an unexpected interruption.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Resume stopped agents\" feature of ADK, confirming that it allows an interrupted agent workflow to pick up where it left off without restarting the entire workflow, and that it tracks completed steps via Events and Event Actions. This directly substantiates every element of the claim. The feature is marked as supported in ADK Python v1.14.0 and Kotlin v0.1.0, indicating general availability (active status).",
+    "supported": true
+  }
+}

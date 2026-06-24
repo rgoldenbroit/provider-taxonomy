@@ -1,0 +1,12 @@
+{
+  "key": "8ab6a9244c27d38df73fd3701a2b9260200cf5f2e6b5f4783b8a632188766529",
+  "label": "judge:openai-openai-agents-sdk-code-execution-sandbox-hosted-shell",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `container_auto` when you want OpenAI to provision and manage a container for the request.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Hosted shell\" feature where OpenAI provisions and manages isolated container environments server-side (via `container_auto` or `container_reference`), allowing agents/models to run arbitrary shell commands. The page provides full quickstart guides, API examples, and runtime details, confirming this is an active, generally available offering through the Responses API.",
+    "supported": true
+  }
+}

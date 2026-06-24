@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-managed-agents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "If you do not need infrastructure control, custom isolation, or your own data plane, consider [Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview) instead: a hosted REST API where Anthropic runs the agent and the sandbox, so your application sends events and streams back results with no hosting infrastructure to operate.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Managed Agents",
+    "page_content_hash": "4813cca8578a5afc3f29ed3ac0d66920259451122ed5cd31894fb9f6a7440f55",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-managed-agents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

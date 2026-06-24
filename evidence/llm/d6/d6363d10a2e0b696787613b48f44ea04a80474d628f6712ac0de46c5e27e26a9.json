@@ -1,0 +1,12 @@
+{
+  "key": "d6363d10a2e0b696787613b48f44ea04a80474d628f6712ac0de46c5e27e26a9",
+  "label": "judge:openai-openai-agents-sdk-agent-memory-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`session` | Your storage plus the SDK | Persistent chat state, resumable runs, and storage you control | The same session",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a `session` strategy in the conversation strategies table, noting it lives in \"Your storage plus the SDK\" and is best for \"Persistent chat state, resumable runs, and storage you control.\" It then provides full code examples using `MemorySession` (TypeScript) and `SQLiteSession` (Python) to persist multi-turn conversation state across agent runs, confirming the claim that sessions persist multi-turn conversation state in storage controlled by the application, enabling memory across agent runs. The page presents this as a current, generally available feature with no preview/beta qualifiers.",
+    "supported": true
+  }
+}

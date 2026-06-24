@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-subagents-orchestration-agents-as-tools",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agents as tools | A manager should stay in control and call specialists as bounded capabilities | The manager keeps ownership of the reply",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agents as tools",
+    "page_content_hash": "f16575a205d63f85c4c8934fecb0024dd5cb243ee949e54ff418a1b280f4fa0e",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-subagents-orchestration-agents-as-tools",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/orchestration.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

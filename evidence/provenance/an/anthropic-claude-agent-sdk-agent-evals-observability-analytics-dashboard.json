@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-evals-observability-analytics-dashboard",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Analytics dashboard | Per-user metrics, contribution tracking, leaderboard | Anthropic only | [Analytics](/en/analytics)",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Analytics dashboard",
+    "page_content_hash": "09e886dff7bd8c3d4b44f1bda6f8e052e871966f6e0aba0dd25f35f41a0e5559",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-evals-observability-analytics-dashboard",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/admin-setup.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

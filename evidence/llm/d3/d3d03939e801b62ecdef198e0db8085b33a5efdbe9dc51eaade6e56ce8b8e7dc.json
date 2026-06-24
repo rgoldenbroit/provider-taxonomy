@@ -1,0 +1,12 @@
+{
+  "key": "d3d03939e801b62ecdef198e0db8085b33a5efdbe9dc51eaade6e56ce8b8e7dc",
+  "label": "judge:google-agent-development-kit-adk-agent-evals-observability-agent-activity-logging",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ADK emits logs using standard library facilities and structured GenAI events via OpenTelemetry.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Agent activity logging\" as supported in ADK Python v0.1.0, Go v0.1.0, and Kotlin v0.1.0. It confirms that ADK uses standard library facilities (Python's `logging` module, Go's `log` package, JVM/Flogger for Kotlin) alongside OpenTelemetry for structured, configurable logging of agent behavior. This directly substantiates the claim. The feature is presented as generally available (active), not in preview or deprecated.",
+    "supported": true
+  }
+}

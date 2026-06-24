@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-subagents-orchestration-workflow-graph-events",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Within a graph-based workflow, you pass data using ***Events***. All execution *nodes* in a workflow graph consume and emit Events. This section covers the basics of transmitting and receiving data between nodes in a ***Workflow***. Events have specific parameters for transmitting different types of data between nodes. The key parameters for node data handling are as follows:\n\n- **`output`**: Parameter for passing information between *nodes*.\n- **`message`**: Data intended as a response to a user.\n- **`state`**: Data automatically persisted across nodes via ***Events*** throughout an ADK session.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Workflow graph Events",
+    "page_content_hash": "2e6685d5a73ca5b6974c14ad98229a46a9fc6e31f108d350979de93241c3fec7",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-subagents-orchestration-workflow-graph-events",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/graphs/data-handling/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

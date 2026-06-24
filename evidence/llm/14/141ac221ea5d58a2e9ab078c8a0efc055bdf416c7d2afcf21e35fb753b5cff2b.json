@@ -1,0 +1,12 @@
+{
+  "key": "141ac221ea5d58a2e9ab078c8a0efc055bdf416c7d2afcf21e35fb753b5cff2b",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hooks are user-defined shell commands that execute at specific points in Claude Code's lifecycle. They provide deterministic control over Claude Code's behavior, ensuring certain actions always happen rather than relying on the LLM to choose to run them.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and verbatim substantiates every element of the claim: hooks are described as \"user-defined shell commands,\" they \"execute at specific points in Claude Code's lifecycle,\" and they \"provide deterministic control over Claude Code's behavior.\" The page presents the feature with full documentation, configuration examples, and a reference to a hooks browser (/hooks command), indicating it is an active, generally available feature.",
+    "supported": true
+  }
+}

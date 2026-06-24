@@ -1,0 +1,12 @@
+{
+  "key": "1bdd5aab12a766fedc5308badecec025834051a7e4943fc27599e92ae92306f4",
+  "label": "judge:google-agent-development-kit-adk-mcp-connectors-bigquerytoolset",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "They are packaged in the toolset `BigQueryToolset`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes BigQueryToolset as a managed tool connector for BigQuery available in ADK Python v1.1.0. It packages a set of BigQuery integration tools (list_dataset_ids, get_dataset_info, list_table_ids, get_table_info, get_job_info, execute_sql, forecast, analyze_contribution, detect_anomalies, ask_data_insights, search_catalog) for use in ADK agents, directly substantiating the claim. The page shows it as generally available (supported in ADK Python v1.1.0) with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

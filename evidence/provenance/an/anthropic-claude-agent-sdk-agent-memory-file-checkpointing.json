@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-file-checkpointing",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "File checkpointing tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, allowing you to rewind files to any previous state.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "File checkpointing",
+    "page_content_hash": "fcf0286a9aadfa7e3ed495566d6806a2c0d004d8af1ed94026aec97409de1f5b",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-file-checkpointing",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-guardrails-safety-canusetool-callback",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude requests user input in two situations: when it needs **permission to use a tool** (like deleting files or running commands), and when it has **clarifying questions** (via the `AskUserQuestion` tool). Both trigger your `canUseTool` callback, which pauses execution until you return a response.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "canUseTool callback",
+    "page_content_hash": "3cf355d3bd0ba4518fe75be2d036144c8f511a09ca6400bc7a2bc05105891e96",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-guardrails-safety-canusetool-callback",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/user-input.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

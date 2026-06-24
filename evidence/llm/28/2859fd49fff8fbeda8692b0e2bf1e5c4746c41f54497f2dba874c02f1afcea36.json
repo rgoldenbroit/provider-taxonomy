@@ -1,0 +1,12 @@
+{
+  "key": "2859fd49fff8fbeda8692b0e2bf1e5c4746c41f54497f2dba874c02f1afcea36",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A session is the conversation history the SDK accumulates while your agent works. It contains your prompt, every tool call the agent made, every tool result, and every response. The SDK writes it to disk automatically so you can return to it later.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim. It confirms that Sessions are offered by Anthropic's Agent SDK, and that the SDK automatically writes the full conversation history \u2014 including prompts, tool calls, tool results, and responses \u2014 to disk. The page further confirms that this enables agent state to be resumed across process restarts or hosts (via continue, resume, and cross-host session transfer mechanisms). The feature is presented as generally available (active), with no preview/beta/deprecated labels.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "e9aee56047e612328407650bcca04fca747628f855147950a148e893509993ee",
+  "label": "judge:google-agent-development-kit-adk-subagents-orchestration-workflow-graph-events",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Within a graph-based workflow, you pass data using ***Events***. All execution *nodes* in a workflow graph consume and emit Events. This section covers the basics of transmitting and receiving data between nodes in a ***Workflow***. Events have specific parameters for transmitting different types of data between nodes. The key parameters for node data handling are as follows:\n\n- **`output`**: Parameter for passing information between *nodes*.\n- **`message`**: Data intended as a response to a user.\n- **`state`**: Data automatically persisted across nodes via ***Events*** throughout an ADK session.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim under the \"Workflow graph Events\" section. It explicitly describes that agents and graph nodes exchange data through a structured Event system, and enumerates the three distinct parameters: `output` (for passing information between nodes), `message` (for user-directed responses), and `state` (for persisted data across nodes). This matches all elements of the claim precisely. The page is marked as \"Supported in ADK Python v2.0.0,\" indicating general availability.",
+    "supported": true
+  }
+}

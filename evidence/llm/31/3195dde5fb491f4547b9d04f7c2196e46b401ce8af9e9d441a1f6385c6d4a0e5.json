@@ -1,0 +1,12 @@
+{
+  "key": "3195dde5fb491f4547b9d04f7c2196e46b401ce8af9e9d441a1f6385c6d4a0e5",
+  "label": "judge:openai-openai-agents-sdk-agent-evals-observability-graders",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "While annotations are the most effective way to incorporate human feedback into your evaluation process, graders let you run evaluations at scale. Graders are automated assessments that can produce a variety of inputs depending on their type. ... Score model grader: Uses an LLM to assign a numeric score ... Label model grader: Uses an LLM to select a categorical label",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page explicitly describes OpenAI's Graders offering as \"automated assessments that can produce a variety of inputs depending on their type,\" supporting evaluation at scale. It lists multiple grader types including LLM-as-a-judge variants (\"Score model grader\" and \"Label model grader\" both use an LLM). This directly substantiates the claim. However, the page also states that \"OpenAI is deprecating the Evals platform\" with a read-only date of October 31, 2026, and shutdown on November 30, 2026, making the lifecycle status 'deprecated' (still works for now but being retired).",
+    "supported": true
+  }
+}

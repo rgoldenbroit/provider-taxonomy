@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Code",
-    "page_content_hash": "da9ef931d3f882087e94929b1b4b40d784fd77c34d84b8c49c461040da62a293",
+    "page_content_hash": "10b6066fe6ad02cee5a98566e806d7f89e7b1ba974c4e2f3a4fa1cc3c7d3c5ba",
     "primary_capability_id": "agentic-coding",
     "provider": "Anthropic",
     "reconfirmed": true,

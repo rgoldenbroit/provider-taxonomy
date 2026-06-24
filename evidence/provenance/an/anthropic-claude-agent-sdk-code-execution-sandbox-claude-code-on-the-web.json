@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-code-execution-sandbox-claude-code-on-the-web",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Each session runs in a fresh Anthropic-managed VM with your repository cloned. This section covers what's available when a session starts and how to customize it. ... Cloud sessions come with common language runtimes, build tools, and databases pre-installed. ... Sessions persist even if you close your browser ... Network access ... levels, proxies, and the default allowlist",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Claude Code on the web",
+    "page_content_hash": "9b8e5e444ead92a7b05447dcd3f43d150bce8229c3d887a97696485c299ebcad",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-code-execution-sandbox-claude-code-on-the-web",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

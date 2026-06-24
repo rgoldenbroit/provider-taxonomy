@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-skills",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "For domain knowledge or workflows that are only relevant sometimes, use skills instead. Claude loads them on demand without bloating every conversation. ... Create `SKILL.md` files in `.claude/skills/` to give Claude domain knowledge and reusable workflows. Skills extend Claude's knowledge with information specific to your project, team, or domain. Claude applies them automatically when relevant, or you can invoke them directly with `/skill-name`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Skills",
+    "page_content_hash": "9c36d7389945c36afd095e322d3ef7c05397bfa96016ea322bac63563bb83263",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-skills",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/best-practices.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

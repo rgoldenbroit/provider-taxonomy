@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-code-execution-sandbox-local-shell",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Local shell is a tool that allows agents to run shell commands locally on a machine you or the user provides. It's designed to work with Codex CLI and `codex-mini-latest`. Commands are executed inside your own runtime, **you are fully in control of which commands actually run** \u2014the API only returns the instructions, but does not execute them on OpenAI infrastructure.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Local shell",
+    "page_content_hash": "827df42e114b89a66a281d61ef37a68ffaa599c2ad226b3912ba85a48cb14401",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-code-execution-sandbox-local-shell",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-local-shell.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

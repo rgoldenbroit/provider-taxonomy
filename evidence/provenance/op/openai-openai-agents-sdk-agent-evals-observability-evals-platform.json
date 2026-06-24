@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-agent-evals-observability-evals-platform",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026. ... If you need advanced features such as evaluation against external models, want to interact with your eval runs via API, or want to run evaluations on a larger scale, consider using Evals instead. ... Evals run asynchronously, support larger data volumes, and let you monitor performance across versions.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Evals platform",
+    "page_content_hash": "3c0d117ff43fd300665d9adfcd6597b4d72699ba2fae1442eca48884fd9c4f2a",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-agent-evals-observability-evals-platform",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/evaluation-getting-started.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

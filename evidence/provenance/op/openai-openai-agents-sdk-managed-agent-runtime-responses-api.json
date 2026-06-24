@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-managed-agent-runtime-responses-api",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "It is OpenAI's flagship API and the best place to access the newest model behavior, built-in tools, stateful workflows, and agent features.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Responses API",
+    "page_content_hash": "9a7e3594282f518e243fdb8da78886f823711f0acd7431857d43388e5eb04c91",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-managed-agent-runtime-responses-api",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/deployment-checklist.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

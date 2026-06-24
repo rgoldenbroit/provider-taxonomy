@@ -1,0 +1,12 @@
+{
+  "key": "87a96b284b61ebcba19c6d562d01215207717e17ecbf7c0d92263300e91fd786",
+  "label": "judge:google-agent-development-kit-adk-subagents-orchestration-coordinator-and-dispatcher",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A central [`LlmAgent`](/agents/llm-agents/) (Coordinator) manages several specialized `sub_agents`. ... Route incoming requests to the appropriate specialist agent. ... Primarily uses **LLM-Driven Delegation** (requires clear `description`s on sub-agents and appropriate `instruction` on Coordinator) or **Explicit Invocation (`AgentTool`)** (Coordinator includes `AgentTool`-wrapped specialists in its `tools`).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Coordinator and dispatcher\" pattern under the Multi-agent workflow patterns guide for ADK (Agent Development Kit). It matches the claim precisely: a central LlmAgent acts as a dynamic coordinator, routing incoming requests to appropriate specialist sub-agents via LLM-Driven Delegation or Explicit Invocation (AgentTool). The page is active documentation with no deprecation notices.",
+    "supported": true
+  }
+}

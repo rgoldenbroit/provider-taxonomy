@@ -1,0 +1,12 @@
+{
+  "key": "dad9dbe8ba2de2600776d783a7a29a91c67daa394f473f7b709d5a23f146e23d",
+  "label": "judge:openai-openai-agents-sdk-agent-evals-observability-evaluate-external-models",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When using Evaluations on the OpenAI Platform, in addition to evaluating OpenAI's native models, you can also evaluate a variety of external models. We support accessing third-party models (no API key required) and accessing custom endpoints (API key required).",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page explicitly confirms that the OpenAI Evaluations platform supports running evals against third-party models (Google, Anthropic, Together, Fireworks) and custom external endpoints, not just OpenAI's own models. This directly substantiates the claim. However, the page also prominently states that \"OpenAI is deprecating the Evals platform,\" with a read-only date of October 31, 2026, and a shutdown date of November 30, 2026, making the lifecycle status 'deprecated' (still functional during the transition window, but officially being retired).",
+    "supported": true
+  }
+}

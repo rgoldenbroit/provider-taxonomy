@@ -1,0 +1,12 @@
+{
+  "key": "f6aebc1a3fb80361943007faddf1220656eb4dbe7c3739def895179ccafdb917",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For domain knowledge or workflows that are only relevant sometimes, use skills instead. Claude loads them on demand without bloating every conversation. ... Create `SKILL.md` files in `.claude/skills/` to give Claude domain knowledge and reusable workflows. Skills extend Claude's knowledge with information specific to your project, team, or domain. Claude applies them automatically when relevant, or you can invoke them directly with `/skill-name`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Skills\" as a feature of Claude Code, stored as SKILL.md files in `.claude/skills/` directories, providing domain knowledge and reusable workflows. It states that Claude loads them on demand \"without bloating every conversation,\" which directly matches the claim's wording. The feature is described as currently available (not preview or beta), with concrete syntax examples and invocation instructions.",
+    "supported": true
+  }
+}

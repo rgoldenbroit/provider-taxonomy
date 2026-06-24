@@ -1,0 +1,12 @@
+{
+  "key": "4b7f379235ec60dffa795112327f8e4d31a00d3c1d30205c1461f4e8fcc45c6d",
+  "label": "judge:openai-openai-agents-sdk-guardrails-safety-trace-graders",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Trace grading provides scores and annotations to specific parts of an agent's trace\u2014such as decisions, tool calls, or reasoning steps\u2014to assess where the agent performed well or made mistakes.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Trace graders\" under the \"Run trace graders and evals\" section, stating that trace grading provides scores and annotations to specific parts of an agent's trace\u2014including decisions, tool calls, and reasoning steps\u2014to identify where the agent performed well or made mistakes. This directly substantiates the claim. The offering appears to be currently active (no preview/beta/deprecated label is applied to this specific feature).",
+    "supported": true
+  }
+}

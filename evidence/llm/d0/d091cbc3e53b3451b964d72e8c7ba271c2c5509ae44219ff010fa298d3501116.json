@@ -1,0 +1,12 @@
+{
+  "key": "d091cbc3e53b3451b964d72e8c7ba271c2c5509ae44219ff010fa298d3501116",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-container-based-sandboxing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Run the SDK inside a sandboxed container for process isolation, resource limits, network control, and an ephemeral filesystem. Several providers specialize in sandboxed container environments that fit the Agent SDK's model.",
+    "lifecycle_status": "active",
+    "rationale": "The page has a dedicated section titled \"Container-based sandboxing\" under \"Provision the container\" that explicitly describes running the Agent SDK inside sandboxed containers for process isolation, resource limits, and network control. It also covers multi-tenant isolation and deployment considerations. The page does not indicate this is a preview or beta feature \u2014 it is presented as a current, available deployment approach with specific provider recommendations and production guidance.",
+    "supported": true
+  }
+}

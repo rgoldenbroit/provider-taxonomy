@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-agent-memory-firestore-session-service",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "ADK provides a native integration for managing persistent agent session states using Firestore, allowing continuous multi-turn conversations without losing conversation history.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Firestore Session Service",
+    "page_content_hash": "b61be118288c02dffa60b5b5ea44173930ef7157c158c06548bf65d847bbd2c0",
+    "primary_capability_id": "agent-memory",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-agent-memory-firestore-session-service",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/integrations/firestore-session-service/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-managed-agent-runtime-agent-skills",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agent Skills let you upload and reuse versioned bundles of files in hosted and local shell environments. ... A skill is a versioned bundle of files plus a `SKILL.md` manifest (front matter + instructions). Skills are modular instructions you can use to codify processes and conventions, from company style guides to multi-step workflows.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agent Skills",
+    "page_content_hash": "bcdf7a0b88038b93040a68fb399005df788701f18aa4338ba4a35706dcfd6f42",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-managed-agent-runtime-agent-skills",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-skills.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

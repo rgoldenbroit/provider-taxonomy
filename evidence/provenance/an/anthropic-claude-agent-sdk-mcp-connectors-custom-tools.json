@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-mcp-connectors-custom-tools",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A tool is defined by four parts, passed as arguments to the [`tool()`](/en/agent-sdk/typescript#tool) helper in TypeScript or the [`@tool`](/en/agent-sdk/python#tool) decorator in Python:\n\n* **Name:** a unique identifier Claude uses to call the tool.\n* **Description:** what the tool does. Claude reads this to decide when to call it.\n* **Input schema:** the arguments Claude must provide.\n* **Handler:** the async function that runs when Claude calls the tool.\n\nAfter defining a tool, wrap it in a server with [`createSdkMcpServer`](/en/agent-sdk/typescript#createsdkmcpserver) (TypeScript) or [`create_sdk_mcp_server`](/en/agent-sdk/python#create_sdk_mcp_server) (Python). The server runs in-process inside your application, not as a separate process.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Custom tools",
+    "page_content_hash": "a63beb549f9752bf834e5864319ccdc2f6af29896ea4f048f387a01497d881d7",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-mcp-connectors-custom-tools",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/custom-tools.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

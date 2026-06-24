@@ -1,0 +1,12 @@
+{
+  "key": "8d5b041b071db59d2919e4c7716d9ee813e3093c2737c59be38de854a5724099",
+  "label": "judge:anthropic-claude-agent-sdk-agent-evals-observability-sessionstore",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "declare const sessionStore: SessionStore; // S3, Redis, Postgres, or your own adapter",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates the claim. It describes a `SessionStore` adapter interface that mirrors session transcripts to durable storage backends including S3, Redis, and Postgres. The page states: \"For any session a user expects to resume, mirror the transcript to durable storage with a `SessionStore` adapter\" and references \"Reference implementations for S3, Redis, and Postgres adapters and a conformance suite for your own.\" It also explains the pluggable/adapter nature: \"S3, Redis, Postgres, or your own adapter.\" The page confirms it is used for agent session persistence (hybrid sessions that persist across container restarts). The description matches the claim about it being a pluggable adapter interface that mirrors session transcripts to durable storage for agent session persistence.",
+    "supported": true
+  }
+}

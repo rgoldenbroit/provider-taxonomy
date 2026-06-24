@@ -1,0 +1,12 @@
+{
+  "key": "fc09e5dfcd00dceb7c7f8481802b313b5cab5c472b003bfe94b2d4a97abe8ecb",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Run hooks first. A hook can deny the call outright or pass it on. A hook that returns `allow` does not skip the deny and ask rules below; those are evaluated regardless of the hook result. ... **Hooks:** run custom code to allow, deny, or modify tool requests. See [Control execution with hooks](/en/agent-sdk/hooks).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Hooks as a feature of the Claude Agent SDK's permission evaluation system. It states that hooks \"run custom code to allow, deny, or modify tool requests\" and that they \"run first\" in the permission evaluation order, where \"a hook can deny the call outright or pass it on.\" The page also references a dedicated hooks guide at /en/agent-sdk/hooks and mentions hook matchers implicitly (hooks intercept tool invocations as part of the permission pipeline). The claim's description \u2014 hooks run custom code at the start of permission evaluation to allow, deny, or modify tool requests \u2014 is directly substantiated. The page also references \"hook matchers\" in the context of hooks intercepting calls. The feature appears to be actively documented with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

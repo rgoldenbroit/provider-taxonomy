@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-guardrails-safety-allow-ask-deny-rules",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "* **Allow** rules let Claude Code use the specified tool without manual approval.\n* **Ask** rules prompt for confirmation whenever Claude Code tries to use the specified tool.\n* **Deny** rules prevent Claude Code from using the specified tool.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Allow / Ask / Deny rules",
+    "page_content_hash": "63942d8d40c517c833ae3893ecd1ac05cf6b4cc764cccbceda94ecb9f09f3679",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-guardrails-safety-allow-ask-deny-rules",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "1bd0ee3118ecfea7e76e0acaec9a90ba681faabac730cefe73769bc5e7ee1d24",
+  "label": "judge:anthropic-claude-agent-sdk-managed-agent-runtime-routines",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A remote routine runs on Anthropic-managed cloud infrastructure even when your computer is off, and can also fire on API calls or GitHub events.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Routines\" as a feature that runs on Anthropic-managed cloud infrastructure even when the computer is off, and can be triggered by schedule, API calls, or GitHub events. This directly matches the claim. The page also references the Routines page (/en/routines) multiple times and includes a comparison table showing cloud tasks run on \"Anthropic cloud\" with \"No\" requirement for machine to be on, and supports API/event triggers. The feature is described as currently available (active), not in preview or beta.",
+    "supported": true
+  }
+}

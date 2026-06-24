@@ -1,0 +1,12 @@
+{
+  "key": "aaf590637e6adbdd27c4c93ee271fdcab983330784877c372104b95da689a379",
+  "label": "judge:openai-openai-agents-sdk-code-execution-sandbox-local-shell",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Local shell is a tool that allows agents to run shell commands locally on a machine you or the user provides. It's designed to work with Codex CLI and `codex-mini-latest`. Commands are executed inside your own runtime, **you are fully in control of which commands actually run** \u2014the API only returns the instructions, but does not execute them on OpenAI infrastructure.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly substantiates the claim that OpenAI offers a Local shell tool that allows agents to run shell commands locally on a machine the user provides, executing commands inside the user's own runtime. The description matches the claim almost verbatim. However, the page also notes that \"The local shell tool is outdated. For new use cases, use the `shell` tool with GPT-5.1 instead,\" indicating it is deprecated (still functional but being superseded).",
+    "supported": true
+  }
+}

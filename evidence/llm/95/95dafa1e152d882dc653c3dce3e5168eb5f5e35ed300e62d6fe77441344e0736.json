@@ -1,0 +1,12 @@
+{
+  "key": "95dafa1e152d882dc653c3dce3e5168eb5f5e35ed300e62d6fe77441344e0736",
+  "label": "judge:openai-openai-agents-sdk-agent-memory-manually-manage-conversation-state",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "While each text generation request is independent and stateless, you can still implement multi-turn conversations by providing additional messages as parameters to your text generation request.",
+    "lifecycle_status": "active",
+    "rationale": "The page has an explicit section titled \"Manually manage conversation state\" that describes exactly what the claim states: multi-turn conversation context can be preserved by manually passing prior message history as input on each request. The page provides code examples showing how to build a history array of prior messages and pass it as the `input` parameter on each subsequent request, directly substantiating the claim.",
+    "supported": true
+  }
+}

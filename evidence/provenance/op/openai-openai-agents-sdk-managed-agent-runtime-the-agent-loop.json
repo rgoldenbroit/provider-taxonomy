@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-managed-agent-runtime-the-agent-loop",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "One SDK run is one application-level turn. The runner keeps looping until it reaches a real stopping point: 1. Call the current agent's model with the prepared input. 2. Inspect the model output. 3. If the model produced tool calls, execute them and continue. 4. If the model handed off to another specialist, switch agents and continue. 5. If the model produced a final answer with no more tool work, return a result. That loop is the core concept behind the SDK. Tools, handoffs, approvals, and streaming all build on top of it rather than replacing it.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "The agent loop",
+    "page_content_hash": "d8f1bced2fe1ae93acfc2a5294c0b2bae1c38ca07e32ac802ae9ac369d56acef",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-managed-agent-runtime-the-agent-loop",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/running-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

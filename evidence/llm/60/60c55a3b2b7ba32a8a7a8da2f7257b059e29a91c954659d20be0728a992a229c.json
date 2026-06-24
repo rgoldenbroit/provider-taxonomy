@@ -1,0 +1,12 @@
+{
+  "key": "60c55a3b2b7ba32a8a7a8da2f7257b059e29a91c954659d20be0728a992a229c",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-allow-ask-deny-rules",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "* **Allow** rules let Claude Code use the specified tool without manual approval.\n* **Ask** rules prompt for confirmation whenever Claude Code tries to use the specified tool.\n* **Deny** rules prevent Claude Code from using the specified tool.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly describes Allow, Ask, and Deny rules for tools in Claude Code's permission system. It explains that these rules can be configured via `/permissions` or in settings files using `permissions.allow` and `permissions.deny` lists. The page describes how these rules pre-approve (Allow), prompt for confirmation (Ask), or block (Deny) specific tool calls, matching the claim. While the claim refers to `allowedTools`/`disallowedTools` as the config keys, the page uses `permissions.allow` and `permissions.deny`, but the core concept of declarative Allow/Ask/Deny rule lists for tools is fully substantiated.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "ae48112edfbdf999db01b8f426f003cb5f02845977d985f983d7abadce6b8855",
+  "label": "judge:google-agent-development-kit-adk-subagents-orchestration-graph-based-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Graph-based workflows:** (ADK 2.0 and higher) This workflow type allows you to compose both AI-powered agents and deterministic execution nodes into a flexible execution graph that can include decision branching.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Graph-based workflows\" as an offering under ADK (Google's Agent Development Kit), matching the claim almost verbatim: it composes AI-powered agents and deterministic execution nodes into a flexible execution graph with decision branching. The feature is listed as available in ADK 2.0 and higher, indicating general availability (active status).",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "2a6154f8e9d8fe7d89fb654c8c164e76c4b49205e83fe3daa2694ba835d55a2e",
+  "label": "judge:google-gemini-computer-use-browser-computer-use-agent-computer-use-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Computer Use tool lets you build browser, mobile, and desktop control agents that interact with and automate tasks. Using screenshots, the model can \"see\" a computer screen, and \"act\" by generating specific UI actions like mouse clicks and keyboard inputs.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Google's Computer Use tool in terms that closely match the claim \u2014 enabling browser, mobile, and desktop control agents that interact with and automate tasks using screenshots and UI actions. The page also notes it is a \"Preview capability\" that may contain errors and security vulnerabilities, placing its lifecycle status as 'preview'.",
+    "supported": true
+  }
+}

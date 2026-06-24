@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-subagents-orchestration-subagents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Subagents",
+    "page_content_hash": "ea43950b65ec707c96723aa8a8e7a83af449468f9ed55c8933af42d33840c200",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-subagents-orchestration-subagents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sub-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

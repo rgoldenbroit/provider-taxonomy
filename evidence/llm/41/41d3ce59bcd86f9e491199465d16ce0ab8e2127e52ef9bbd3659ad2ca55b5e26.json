@@ -1,0 +1,12 @@
+{
+  "key": "41d3ce59bcd86f9e491199465d16ce0ab8e2127e52ef9bbd3659ad2ca55b5e26",
+  "label": "judge:anthropic-claude-agent-sdk-subagents-orchestration-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions. When Claude encounters a task that matches a subagent's description, it delegates to that subagent, which works independently and returns results.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's Claude Code offering called \"Subagents,\" which matches all key elements of the claim: they run in their own context window, have a custom system prompt, specific tool access, and independent model selection. The main agent spawns them to handle focused subtasks (described as \"specialized AI assistants that handle specific types of tasks\"), and they return only summarized results to the main conversation (\"the subagent does that work in its own context and returns only the summary\"). The page presents this as a fully available, active feature with detailed documentation on how to create and configure subagents.",
+    "supported": true
+  }
+}

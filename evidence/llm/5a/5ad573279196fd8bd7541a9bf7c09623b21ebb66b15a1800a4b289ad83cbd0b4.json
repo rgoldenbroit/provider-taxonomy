@@ -1,0 +1,12 @@
+{
+  "key": "5ad573279196fd8bd7541a9bf7c09623b21ebb66b15a1800a4b289ad83cbd0b4",
+  "label": "judge:openai-openai-agents-sdk-guardrails-safety-guardrails",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Guardrails validate input, output, or tool behavior automatically. ... Block disallowed user requests before the main model runs | Input guardrails | Validate or redact the final output before it leaves the system | Output guardrails | Check arguments or results around a function tool call | Tool guardrails",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly describes OpenAI's Guardrails feature, covering input guardrails (to block disallowed requests), output guardrails (to validate or redact outputs), and tool guardrails (to check tool calls). These map directly to the claim's description of built-in guardrail validation that sanitizes inputs, validates/redacts outputs, and checks tool calls to block disallowed requests. The page also shows working code examples in TypeScript and Python, indicating the feature is generally available (active). While the page does not explicitly mention PII redaction or jailbreak/prompt-injection detection in this particular excerpt, it does substantiate the core claim of guardrails that block disallowed requests, validate/redact outputs, and check tool calls. The feature is presented as current and active with no preview/beta/deprecated indicators.",
+    "supported": true
+  }
+}

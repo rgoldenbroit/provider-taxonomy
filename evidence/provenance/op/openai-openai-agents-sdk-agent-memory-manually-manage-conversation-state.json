@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-agent-memory-manually-manage-conversation-state",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "While each text generation request is independent and stateless, you can still implement multi-turn conversations by providing additional messages as parameters to your text generation request.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Manually manage conversation state",
+    "page_content_hash": "42892be4428ec984818be2f0b14edc8516db2af6e7e717732edb4b1ae32b34f9",
+    "primary_capability_id": "agent-memory",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-agent-memory-manually-manage-conversation-state",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/conversation-state.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "eff6b695641625f443a7dc3bcd159d45d3bb7406b8471749657fca75ea512940",
+  "label": "judge:openai-openai-agents-sdk-mcp-connectors-mcp-tool-integration-via-responses-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can test the MCP server using the Responses API directly with a request like this one... \"tools\": [ { \"type\": \"mcp\", \"server_label\": \"cats\", \"server_url\": \"https://777ff573-9947-4b9c-8982-658fa40c7d09-00-3le96u7wsymx.janeway.replit.dev/sse/\", \"allowed_tools\": [ \"search\", \"fetch\" ], \"require_approval\": \"never\" } ]",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly demonstrates that remote MCP servers can be declared as tools in the Responses API (via the `tools` array with `\"type\": \"mcp\"`), allowing models to call them programmatically. The curl example against `https://api.openai.com/v1/responses` shows the MCP server configured as a built-in tool type in the Responses API, directly substantiating the claim. The page treats this as a current, generally available capability with no preview or beta caveats attached.",
+    "supported": true
+  }
+}

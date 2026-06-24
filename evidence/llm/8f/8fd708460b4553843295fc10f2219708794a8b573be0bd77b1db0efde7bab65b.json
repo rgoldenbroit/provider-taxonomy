@@ -1,0 +1,12 @@
+{
+  "key": "8fd708460b4553843295fc10f2219708794a8b573be0bd77b1db0efde7bab65b",
+  "label": "judge:google-agent-development-kit-adk-managed-agent-runtime-agent-runtime",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "These instructions explain how to test an ADK agent deployed to the Agent Runtime runtime environment. Before using these instructions, you need to have completed the deployment of your agent to the Agent Runtime runtime environment using one of the available methods.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates the claim. It describes Agent Runtime as a Google Cloud-hosted runtime environment (referencing cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview) where ADK agents are deployed and executed. The page demonstrates that Agent Runtime manages the agent loop on behalf of the user (handling sessions, stream queries, and agent interactions), supports auto-scaling (implied by the managed cloud deployment), and is fully managed (users interact via REST or SDK without managing infrastructure). The page is an active documentation page with working code examples and no indication of preview/beta/deprecated status.",
+    "supported": true
+  }
+}

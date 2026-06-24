@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-guardrails-safety-hooks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Run hooks first. A hook can deny the call outright or pass it on. A hook that returns `allow` does not skip the deny and ask rules below; those are evaluated regardless of the hook result. ... **Hooks:** run custom code to allow, deny, or modify tool requests. See [Control execution with hooks](/en/agent-sdk/hooks).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Hooks",
+    "page_content_hash": "48f28b28f3c684ef9235e7980ccc46f47a8b51292b9e9f1bd8a01207bebfe5dc",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-guardrails-safety-hooks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

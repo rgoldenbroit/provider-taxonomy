@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-subagents-orchestration-agent-view",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agent view: One screen to dispatch and monitor sessions running in the background, opened with `claude agents`. Research preview",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Agent view",
+    "page_content_hash": "553796828ab0bef440965eebd444db4065339021ffa3041b6e5258650f625539",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-subagents-orchestration-agent-view",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

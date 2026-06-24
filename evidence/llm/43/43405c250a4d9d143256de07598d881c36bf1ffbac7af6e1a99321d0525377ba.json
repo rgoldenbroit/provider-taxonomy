@@ -1,0 +1,12 @@
+{
+  "key": "43405c250a4d9d143256de07598d881c36bf1ffbac7af6e1a99321d0525377ba",
+  "label": "judge:anthropic-claude-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and mouse/keyboard control for autonomous desktop interaction.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly describes Anthropic's Claude Computer Use offering. The page is the official Anthropic API documentation for the \"Computer use tool.\" It clearly states the feature exists and is currently in beta, requiring a beta header. Multiple Claude models are supported (Claude Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, Opus 4.5, Sonnet 4.5, Haiku 4.5, etc.). The page says \"Computer use is a beta feature\" and \"Computer use is in beta and requires a beta header.\"",
+    "supported": true
+  }
+}

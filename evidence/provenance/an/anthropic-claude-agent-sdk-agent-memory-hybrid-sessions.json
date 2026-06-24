@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-hybrid-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Hybrid sessions: Ephemeral containers that hydrate from a SessionStore on startup and persist updates back. Best for sessions that span many interactions but sit idle between them. The container spins down during idle periods and spins back up when the user returns.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Hybrid sessions",
+    "page_content_hash": "4813cca8578a5afc3f29ed3ac0d66920259451122ed5cd31894fb9f6a7440f55",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-hybrid-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

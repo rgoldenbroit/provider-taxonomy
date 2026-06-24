@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-guardrails-safety-channel-safety-controls",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Channels are in [research preview](/en/channels#research-preview) and require Claude Code v2.1.80 or later. Team and Enterprise organizations must [explicitly enable them](/en/channels#enterprise-controls)... Gate inbound messages: sender checks to prevent prompt injection... Relay permission prompts: forward tool approval prompts to remote channels... During the research preview, custom channels aren't on the approved allowlist... This flag skips the allowlist only. The `channelsEnabled` organization policy still applies. Don't use it to run channels from untrusted sources.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Channel safety controls",
+    "page_content_hash": "9843e25143ecbff76047595dc42fef2a76de723f3be760d716055744efd22a79",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-guardrails-safety-channel-safety-controls",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/channels-reference.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

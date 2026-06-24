@@ -1,0 +1,12 @@
+{
+  "key": "cae4cbb1da2a752a5523c379ab249e65e18c5ad46553ede9621d456064bf2612",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-claude-md-memory-files",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`CLAUDE.md` memory files    | `~/.claude/CLAUDE.md` for the user tier and the session's working directory for the project tier",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes CLAUDE.md memory files as a type of agent state that lives on the container's filesystem, with two tiers: a user-level file at `~/.claude/CLAUDE.md` and a project-level file in the session's working directory. The page also discusses how these files persist information and need separate storage strategies (mounted volume or object-store sync) to survive container restarts, confirming their role in persisting information across sessions. The page additionally references \"Auto memory\" at `~/.claude/projects/<session>/memory/` that loads into the system prompt, further confirming per-user and per-project memory file functionality.",
+    "supported": true
+  }
+}

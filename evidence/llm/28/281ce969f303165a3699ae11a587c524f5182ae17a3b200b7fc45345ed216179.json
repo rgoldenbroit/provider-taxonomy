@@ -1,0 +1,12 @@
+{
+  "key": "281ce969f303165a3699ae11a587c524f5182ae17a3b200b7fc45345ed216179",
+  "label": "judge:google-agent-development-kit-adk-managed-agent-runtime-agents-cli-deployment",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Deploying to Agent Runtime via Agents CLI provides an accelerated path to a production-ready environment. Agents CLI automatically configures Google Cloud resources, CI/CD pipelines, and Infrastructure-as-Code (Terraform) to support the entire development lifecycle.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page directly substantiates the claim. It describes a CLI-driven deployment path (\"Agents CLI\") that automatically configures Google Cloud resources, CI/CD pipelines, and Infrastructure-as-Code (Terraform) for deploying to the hosted Agent Runtime. The page is an active documentation guide (not marked as preview or deprecated), and it describes the offering as supported in ADK Python and Go v1.2.0, indicating general availability.",
+    "supported": true
+  }
+}

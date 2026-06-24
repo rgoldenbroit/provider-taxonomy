@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (web/desktop/mobile)",
-    "page_content_hash": "0390d77434b5c03a372472ee50054d107b2e49c11390a31aa2c5f9b094fd3fb3",
+    "page_content_hash": "24d528e64007a37cbfee0ef6024d33056bc2b5ed0a04b7d77092d3703c018e2f",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
     "reconfirmed": true,

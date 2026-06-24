@@ -1,0 +1,12 @@
+{
+  "key": "2565b7ea4a691e47f022ef30e896eca779a13fc92b15c8ad5dc8d7dcc6a19c2f",
+  "label": "judge:google-agent-development-kit-adk-agent-evals-observability-w-b-weave-observability-for-adk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "By integrating Google ADK with Weave, you can track and analyze your agent's performance and behavior using OpenTelemetry (OTEL) traces.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes W&B Weave observability for ADK as a supported integration (\"Supported in ADKPython\"), detailing how Google ADK integrates with W&B Weave to log, track, and visualize agent runs via OpenTelemetry traces. The page provides full setup instructions, code examples, and dashboard visualization guidance, confirming the claim in its entirety.",
+    "supported": true
+  }
+}

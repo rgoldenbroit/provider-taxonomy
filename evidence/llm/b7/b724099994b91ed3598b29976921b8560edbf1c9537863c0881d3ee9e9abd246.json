@@ -1,0 +1,12 @@
+{
+  "key": "b724099994b91ed3598b29976921b8560edbf1c9537863c0881d3ee9e9abd246",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-development-containers",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container... The reference container includes an `init-firewall.sh` script that blocks all outbound traffic except the domains Claude Code and your development tools need... Because the container runs Claude Code as a non-root user and confines command execution to the container, you can pass `--dangerously-skip-permissions` for unattended operation.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's Development containers offering for Claude Code. It confirms: (1) Docker-based dev containers managed by VS Code (and other editors), (2) a default-deny iptables-style firewall via the `init-firewall.sh` script that \"blocks all outbound traffic except the allowed domains,\" (3) isolation of command execution from the host, and (4) support for unattended operation via `--dangerously-skip-permissions`. All core aspects of the claim are substantiated by the page content. The offering appears to be actively available (not in preview or beta).",
+    "supported": true
+  }
+}

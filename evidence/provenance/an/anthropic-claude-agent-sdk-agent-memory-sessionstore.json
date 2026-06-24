@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-sessionstore",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A `SessionStore` adapter lets you mirror those transcripts to your own backend, such as S3, Redis, or a database, so a session created on one host can be resumed on another.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "SessionStore",
+    "page_content_hash": "6600771ea9772bdf09cfe186e801916603c5a48940bebafc060e84978beb8f7a",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-sessionstore",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/session-storage.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

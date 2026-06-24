@@ -1,0 +1,12 @@
+{
+  "key": "268060623eac6fefc793f68b1129edc49a92ff258106ae049a429419f6bf8630",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-permission-modes",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| Mode                | Description                                                                                                                                                        |\n| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `default`           | Standard behavior: prompts for permission on first use of each tool                                                                                                |\n| `acceptEdits`       | Automatically accepts file edits and common filesystem commands (`mkdir`, `touch`, `mv`, `cp`, etc.) for paths in the working directory or `additionalDirectories` |\n| `plan`              | Plan Mode: Claude reads files and runs read-only shell commands to explore but does not edit your source files                                                     |\n| `auto`              | Auto-approves tool calls with background safety checks that verify actions align with your request. Currently a research preview                                   |\n| `dontAsk`           | Auto-denies tools unless pre-approved via `/permissions` or `permissions.allow` rules                                                                              |\n| `bypassPermissions` | Skips permission prompts, except those forced by explicit `ask` rules. Root and home directory removals such as `rm -rf /` also still prompt as a circuit breaker  |",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents all six permission modes (default, acceptEdits, plan, auto, dontAsk, bypassPermissions) in a table under the \"Permission modes\" section. The page confirms these are global session-level modes set via `defaultMode` in settings files, controlling how tools are approved across an entire session \u2014 ranging from fully restricted (dontAsk, which auto-denies unless pre-approved) to auto-approved (bypassPermissions, which skips all permission prompts). The claim's characterization is accurate and substantiated. Note that `auto` is described as \"Currently a research preview,\" but the overall permission modes feature is active/generally available.",
+    "supported": true
+  }
+}

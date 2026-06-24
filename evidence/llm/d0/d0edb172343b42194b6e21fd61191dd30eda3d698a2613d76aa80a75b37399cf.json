@@ -1,0 +1,12 @@
+{
+  "key": "d0edb172343b42194b6e21fd61191dd30eda3d698a2613d76aa80a75b37399cf",
+  "label": "judge:google-agent-development-kit-adk-agent-evals-observability-agentops-observability-for-adk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With just two lines of code, AgentOps provides session replays, metrics, and monitoring for agents.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim. It is an official ADK integration page titled \"AgentOps observability for ADK\" and explicitly states that AgentOps provides session replays, metrics, and monitoring with minimal setup (\"just two lines of code\"). The page describes the offering as currently available (\"Supported in ADK Python\"), with detailed setup instructions, code examples, and feature descriptions \u2014 all consistent with an active, generally available integration.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "b448c986c7a67e37bbbfda2eccb4b2ba02dfafe84715fa0cd81f46235001ed45",
+  "label": "judge:openai-openai-agents-sdk-code-execution-sandbox-code-interpreter",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Code Interpreter tool allows models to write and run Python code in a sandboxed environment to solve complex problems in domains like data analysis, coding, and math.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim. It confirms that OpenAI offers a Code Interpreter tool that allows models to write and run Python code in a sandboxed environment to solve complex problems in data analysis, coding, and image processing. The page describes it as a fully available offering with API references, pricing, and detailed usage documentation \u2014 indicating it is generally available (active).",
+    "supported": true
+  }
+}

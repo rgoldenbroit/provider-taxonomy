@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-code-execution-sandbox-sandboxed-bash-tool",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The sandboxed Bash tool leverages operating system security primitives: macOS: uses Seatbelt for sandbox enforcement; Linux: uses bubblewrap for isolation; WSL2: uses bubblewrap, same as Linux... The sandbox is built into Claude Code and runs on macOS, Linux, and WSL2... The Bash sandbox lets Claude run most shell commands without stopping to ask permission. Instead of approving each command, you define which files and network domains commands can touch, and the operating system enforces that boundary for every Bash command and its child processes.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Sandboxed Bash tool",
+    "page_content_hash": "87140e29704a04dcffa74f2ea3048871204d73b6b22d93dcc156a4772836c36a",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-code-execution-sandbox-sandboxed-bash-tool",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/sandboxing.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

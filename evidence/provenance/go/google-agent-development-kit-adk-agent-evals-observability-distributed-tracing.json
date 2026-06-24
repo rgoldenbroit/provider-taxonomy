@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-agent-evals-observability-distributed-tracing",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Agent Development Kit (ADK) provides distributed tracing capabilities to help you visualize the end-to-end journey of a request as it travels through your agent's architecture... ADK emits data using the standard OTLP format, ensuring that your traces will seamlessly integrate into any OTel-compatible backend (e.g., Google Cloud Trace, Jaeger, Grafana Tempo, Datadog).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Distributed tracing",
+    "page_content_hash": "686a7fd87444d2670d2d74f5717f734ea11f2c3e0630f2568dd5b0dba4e1c68b",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-agent-evals-observability-distributed-tracing",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/observability/traces/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

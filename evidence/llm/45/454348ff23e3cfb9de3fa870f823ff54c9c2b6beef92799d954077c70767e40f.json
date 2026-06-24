@@ -1,0 +1,12 @@
+{
+  "key": "454348ff23e3cfb9de3fa870f823ff54c9c2b6beef92799d954077c70767e40f",
+  "label": "judge:anthropic-claude-agent-sdk-agent-evals-observability-w3c-trace-context-propagation",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The SDK automatically propagates W3C trace context into the CLI subprocess. When you call `query()` while an OpenTelemetry span is active in your application, the SDK injects `TRACEPARENT` and `TRACESTATE` into the child process environment, and the CLI reads them so its `claude_code.interaction` span becomes a child of your span. The agent run then appears inside your application's trace instead of as a disconnected root.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly describes W3C trace context propagation (via TRACEPARENT and TRACESTATE) being automatically injected into CLI subprocesses so that agent spans nest inside the calling application's traces. This directly matches the claim. The tracing feature is noted as being in beta (\"Tracing is in beta. Span names and attributes may change between releases.\").",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "4fde89149ccb791a3d30bf3f5064f0917ddda85e0edb8e963ab67e0d2fe44e98",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-sessionstore",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A `SessionStore` adapter lets you mirror those transcripts to your own backend, such as S3, Redis, or a database, so a session created on one host can be resumed on another.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents a `SessionStore` interface that is a pluggable adapter allowing session transcripts to be mirrored to external backends including S3, Redis, and Postgres (via reference implementations), enabling any host to resume sessions across restarts. This directly matches every element of the claim: the pluggable adapter interface, the mirroring of session transcripts to external backends (S3, Redis, Postgres), and the ability for any host to resume them across restarts. The page presents this as a currently available, active feature with full API documentation and code examples.",
+    "supported": true
+  }
+}

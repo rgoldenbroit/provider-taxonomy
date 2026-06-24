@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-subagents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Subagents are separate agent instances that your main agent can spawn to handle focused subtasks. Use subagents to isolate context for focused subtasks, run multiple analyses in parallel, and apply specialized instructions without adding to the main agent's prompt.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Subagents",
+    "page_content_hash": "8b77069e88daf40ca9dca0dac973b3b4062d577dd0133e44103491c733fcc858",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-subagents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/subagents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-code-execution-sandbox-code-interpreter",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The Code Interpreter tool allows models to write and run Python code in a sandboxed environment to solve complex problems in domains like data analysis, coding, and math.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Code Interpreter",
+    "page_content_hash": "de1d59e99647ec79faf29ec5e0a5d4284f15901e401b9e5eb9a79fecaf0b8a2b",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-code-execution-sandbox-code-interpreter",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-code-interpreter.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

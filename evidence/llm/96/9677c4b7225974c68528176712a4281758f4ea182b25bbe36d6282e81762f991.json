@@ -1,0 +1,12 @@
+{
+  "key": "9677c4b7225974c68528176712a4281758f4ea182b25bbe36d6282e81762f991",
+  "label": "judge:openai-openai-agents-sdk-subagents-orchestration-handoffs",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Handoffs | A specialist should take over the conversation for that branch of the work | Control moves to the specialist agent",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Handoffs\" as an orchestration pattern where \"A specialist should take over the conversation for that branch of the work\" and \"Control moves to the specialist agent.\" This directly matches the claim that Handoffs transfer full conversational ownership to a specialist agent for a given branch of work. The page also provides working code examples in both TypeScript and Python demonstrating the feature, indicating it is generally available (active).",
+    "supported": true
+  }
+}

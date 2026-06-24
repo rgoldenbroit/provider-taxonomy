@@ -1,0 +1,12 @@
+{
+  "key": "e22c57a35d3d1e348afc404f85cd9467ad62cd6349e4f08b2bbba380680ce10f",
+  "label": "judge:openai-openai-agents-sdk-managed-agent-runtime-the-agent-loop",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "One SDK run is one application-level turn. The runner keeps looping until it reaches a real stopping point: 1. Call the current agent's model with the prepared input. 2. Inspect the model output. 3. If the model produced tool calls, execute them and continue. 4. If the model handed off to another specialist, switch agents and continue. 5. If the model produced a final answer with no more tool work, return a result. That loop is the core concept behind the SDK. Tools, handoffs, approvals, and streaming all build on top of it rather than replacing it.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly describes \"The agent loop\" section, confirming the SDK self-hosts the agent execution loop, automatically iterating through model calls, tool execution, and handoffs. Streaming support is confirmed in the \"Stream runs incrementally\" section (\"Streaming uses the same agent loop\"). Pause/resume support is confirmed in the \"Handle pauses and failures deliberately\" section (\"Expected pauses such as human approval requests, where the run is intentionally interrupted and should later resume from the same state\"), and the streaming rules note \"If the run pauses for approval, resolve interruptions and resume from state.\" All aspects of the claim are substantiated by the page. No preview or deprecation markers are present.",
+    "supported": true
+  }
+}

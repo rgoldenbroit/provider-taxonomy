@@ -1,0 +1,12 @@
+{
+  "key": "5f71e03890e15ff8f5cbdb695fbd8438b8f4a545e721f2830ae17b7cb11097bc",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-channel-safety-controls",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Channels are in [research preview](/en/channels#research-preview) and require Claude Code v2.1.80 or later. Team and Enterprise organizations must [explicitly enable them](/en/channels#enterprise-controls)... Gate inbound messages: sender checks to prevent prompt injection... Relay permission prompts: forward tool approval prompts to remote channels... During the research preview, custom channels aren't on the approved allowlist... This flag skips the allowlist only. The `channelsEnabled` organization policy still applies. Don't use it to run channels from untrusted sources.",
+    "lifecycle_status": "preview",
+    "rationale": "The page substantiates all key components of the claim: (1) sender gating is described under \"Gate inbound messages: sender checks to prevent prompt injection\"; (2) approved allowlists are explicitly mentioned (\"custom channels aren't on the approved allowlist\"); (3) relayed approval prompts are described under \"Relay permission prompts: forward tool approval prompts to remote channels\" and in the server options table (`capabilities.experimental['claude/channel/permission']` \"forwards tool approval prompts to your channel so you can approve or deny them remotely\"); (4) organization-level enable/disable policies are confirmed via \"Team and Enterprise organizations must explicitly enable them\" and the `channelsEnabled` organization policy. The offering is in \"research preview,\" not generally available.",
+    "supported": true
+  }
+}

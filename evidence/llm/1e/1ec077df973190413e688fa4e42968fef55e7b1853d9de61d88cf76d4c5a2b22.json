@@ -1,0 +1,12 @@
+{
+  "key": "1ec077df973190413e688fa4e42968fef55e7b1853d9de61d88cf76d4c5a2b22",
+  "label": "judge:anthropic-claude-agent-sdk-managed-agent-runtime-isolation-technologies",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "| Technology              | Isolation strength             | Performance overhead | Complexity  |\n| ----------------------- | ------------------------------ | -------------------- | ----------- |\n| Sandbox runtime         | Good (secure defaults)         | Very low             | Low         |\n| Containers (Docker)     | Setup dependent                | Low                  | Medium      |\n| gVisor                  | Excellent (with correct setup) | Medium/High          | Medium      |\n| VMs (Firecracker, QEMU) | Excellent (with correct setup) | High                 | Medium/High |",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly contains a section titled \"Isolation technologies\" that describes agents being deployed inside sandbox runtimes, containers (Docker), gVisor, and VMs (Firecracker, QEMU), each with different isolation tradeoffs (isolation strength, performance overhead, and complexity). This directly substantiates the claim. The page presents this as current, active documentation with no deprecation or preview notices.",
+    "supported": true
+  }
+}

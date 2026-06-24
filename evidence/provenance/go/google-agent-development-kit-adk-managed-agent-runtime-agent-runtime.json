@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-managed-agent-runtime-agent-runtime",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "These instructions explain how to test an ADK agent deployed to the Agent Runtime runtime environment. Before using these instructions, you need to have completed the deployment of your agent to the Agent Runtime runtime environment using one of the available methods.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agent Runtime",
+    "page_content_hash": "a4ff90fd1b596d3e6bbbac5912013f6281f88d67fb0980586d3fbe7772686a11",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-managed-agent-runtime-agent-runtime",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/deploy/agent-runtime/test/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

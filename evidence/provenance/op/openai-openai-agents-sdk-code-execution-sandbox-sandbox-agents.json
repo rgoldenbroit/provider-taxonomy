@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-code-execution-sandbox-sandbox-agents",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A sandbox gives an agent an isolated, Unix-like execution environment with a filesystem, shell, installed packages, mounted data, exposed ports, snapshots, and controlled access to external systems.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Sandbox Agents",
+    "page_content_hash": "061ad343b8457cbb41bafa3b9bc9cf6d19a0c23b8b89775f3f6da098f6b8632d",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-code-execution-sandbox-sandbox-agents",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/sandboxes.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

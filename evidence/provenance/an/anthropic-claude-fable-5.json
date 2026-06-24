@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Fable 5",
-    "page_content_hash": "1805fc6cd48c69a8866d34b9353365d8b0f8a3b35c9560a818d97c831c76e8d8",
+    "page_content_hash": "26fe6463f4da5b67e62b767ab562da280f0048ce4122963e98c11e2da1e6d18a",
     "primary_capability_id": "flagship-model",
     "provider": "Anthropic",
     "reconfirmed": true,

@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-mcp-connectors-tool-search",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The `tool_search` tool lets the model search for relevant tools, add them to the model context, and then use them. Only `gpt-5.4` and later models support it.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool search",
+    "page_content_hash": "cac050e4760e77800efaa6ce23de8b32da0f386e0e54061c2262b9d6b846e3f6",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-mcp-connectors-tool-search",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/function-calling.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

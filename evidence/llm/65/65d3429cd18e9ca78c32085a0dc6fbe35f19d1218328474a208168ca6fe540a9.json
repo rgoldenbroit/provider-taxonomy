@@ -1,0 +1,12 @@
+{
+  "key": "65d3429cd18e9ca78c32085a0dc6fbe35f19d1218328474a208168ca6fe540a9",
+  "label": "judge:openai-openai-agents-sdk-agent-evals-observability-evals-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly substantiates the existence of the Evals API \u2014 it is a full guide on \"configuring evals programmatically using the Evals API,\" with detailed code examples for creating evals, running them, and retrieving results via API endpoints (e.g., POST /v1/evals, POST /v1/evals/{id}/runs). However, the page also prominently states that OpenAI is deprecating the Evals platform, with a read-only cutoff of October 31, 2026, and a full shutdown on November 30, 2026. Therefore the offering exists and is currently functional, but is officially deprecated.",
+    "supported": true
+  }
+}

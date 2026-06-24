@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-subagents-orchestration-agent-config",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "The ADK Agent Config feature lets you build an ADK workflow without writing code. An Agent Config uses a YAML format text file with a brief description of the agent, allowing just about anyone to assemble and run an ADK agent.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Agent Config",
+    "page_content_hash": "365645b387113cbf852bdbb35761150fea7f6aa3e496b651283b37e0ebf37360",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-subagents-orchestration-agent-config",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/agents/config/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

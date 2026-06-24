@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-mcp-connectors-tool-search",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Tool search enables your agent to work with hundreds or thousands of tools by dynamically discovering and loading them on demand. Instead of loading all tool definitions into the context window upfront, the agent searches your tool catalog and loads only the tools it needs... When tool search is active, tool definitions are withheld from the context window.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool search",
+    "page_content_hash": "c87248cd57f2d96975996ffe42fa23816ec1923a4e50bd108e193a2e1ea74c1c",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-mcp-connectors-tool-search",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/tool-search.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

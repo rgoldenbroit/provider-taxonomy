@@ -1,0 +1,21 @@
+{
+  "key": "openai-operator-browser-computer-use-agent-computer-use",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Computer use lets a model operate software through the user interface. It can inspect screenshots, return interface actions for your code to execute, or work through a custom harness that mixes visual and programmatic interaction with the UI.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Computer use",
+    "page_content_hash": "5a0593c65a959a5621594af29542f92dce0744456c856318b5459bc50c5980f5",
+    "primary_capability_id": "browser-computer-use-agent",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-operator-browser-computer-use-agent-computer-use",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-computer-use.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

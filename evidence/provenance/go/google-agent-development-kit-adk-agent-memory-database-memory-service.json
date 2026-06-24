@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-agent-memory-database-memory-service",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "`adk-database-memory` is a drop-in persistent `BaseMemoryService` for ADK Python, backed by async SQLAlchemy. This integration provides persistent cross-session memory for ADK agents using your own database: use SQLite for development, or Postgres / MySQL for production.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Database Memory Service",
+    "page_content_hash": "8251c289714fe8481a65229b719a6df8adb5b2671e80790bc3740758762a8140",
+    "primary_capability_id": "agent-memory",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-agent-memory-database-memory-service",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/integrations/database-memory/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

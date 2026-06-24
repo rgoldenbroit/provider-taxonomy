@@ -1,0 +1,12 @@
+{
+  "key": "96cb0169399dff930c67fe95bb933f58d5399185e78dcb95b41c4eaca67a0919",
+  "label": "judge:anthropic-claude-agent-sdk-agent-evals-observability-analytics-dashboard",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Analytics dashboard | Per-user metrics, contribution tracking, leaderboard | Anthropic only | [Analytics](/en/analytics)",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists the \"Analytics dashboard\" capability in its usage visibility table, describing it as providing \"Per-user metrics, contribution tracking, leaderboard\" and noting its availability as \"Anthropic only.\" This directly matches all elements of the claim: the feature name, its features (per-user metrics, contribution tracking, and leaderboard), and its restriction to Anthropic plans only.",
+    "supported": true
+  }
+}

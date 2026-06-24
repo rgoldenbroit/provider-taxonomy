@@ -1,0 +1,12 @@
+{
+  "key": "330613567725ba88b7238a4a50e0d99851cfb91a73cc4705f15f7980b55cb7fe",
+  "label": "judge:openai-openai-agents-sdk-managed-agent-runtime-sandbox-agents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A sandbox gives an agent an isolated, Unix-like execution environment with a filesystem, shell, installed packages, mounted data, exposed ports, snapshots, and controlled access to external systems.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly describes OpenAI's Sandbox Agents offering, confirming it provides agents with an isolated, Unix-like execution environment that includes a filesystem, shell, installed packages, mounted data, exposed ports, and snapshots. The page also confirms swappable execution providers (e.g., Unix-local, Docker, hosted providers) via the sandbox client configuration. The page states the feature is \"in beta, so API details, defaults, and supported capabilities may change.\"",
+    "supported": true
+  }
+}

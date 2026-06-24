@@ -1,0 +1,12 @@
+{
+  "key": "a6981ed401cf02ce7ccdf73c64784d86f731b6b50d436034e391f481ba1c9a20",
+  "label": "judge:openai-openai-agents-sdk-mcp-connectors-tool-search",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The `tool_search` tool lets the model search for relevant tools, add them to the model context, and then use them. Only `gpt-5.4` and later models support it.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"tool search\" built-in tool that allows the model to search for relevant tools from a large ecosystem, load them on demand (deferred loading), and then use them. The page states it is available for gpt-5.4 and later models, and links to a dedicated tool search guide, substantiating the claim fully.",
+    "supported": true
+  }
+}

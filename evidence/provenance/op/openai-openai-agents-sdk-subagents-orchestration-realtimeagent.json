@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-subagents-orchestration-realtimeagent",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "In TypeScript, the fastest path to a browser-based voice assistant is a `RealtimeAgent` and `RealtimeSession`... From there, attach tools, handoffs, and guardrails to the `RealtimeAgent` the same way you would attach them to a text agent. Keep audio transport concerns in the session layer, and keep business logic in the agent definition.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "RealtimeAgent",
+    "page_content_hash": "23d97dfd7a843e67b28f3961929db0ef8386ee9e59bc19a093a224cabd47c77a",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-subagents-orchestration-realtimeagent",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/voice-agents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

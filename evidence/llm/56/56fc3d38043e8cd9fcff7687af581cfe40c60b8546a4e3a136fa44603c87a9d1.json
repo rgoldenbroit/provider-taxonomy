@@ -1,0 +1,12 @@
+{
+  "key": "56fc3d38043e8cd9fcff7687af581cfe40c60b8546a4e3a136fa44603c87a9d1",
+  "label": "judge:google-agent-development-kit-adk-agent-memory-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`Memory`**: Searchable, Cross-Session Information\n\n   - Represents a store of information that might span *multiple past sessions* or include external data sources.\n   - It acts as a knowledge base the agent can *search* to recall information or context beyond the immediate conversation.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Memory\" concept in Google's Agent Development Kit (ADK) as a searchable, cross-session knowledge store that agents can query to recall information beyond the current conversation. This directly matches the claim. The page presents it as a current, supported feature (noting support across Python, TypeScript, Go, Java, Kotlin v0.1.0) with no indication of it being in preview or deprecated.",
+    "supported": true
+  }
+}

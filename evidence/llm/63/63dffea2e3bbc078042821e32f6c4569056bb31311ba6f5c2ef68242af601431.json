@@ -1,0 +1,12 @@
+{
+  "key": "63dffea2e3bbc078042821e32f6c4569056bb31311ba6f5c2ef68242af601431",
+  "label": "judge:openai-openai-agents-sdk-guardrails-safety-safety-classifiers-for-gpt-5-and-forward",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With the introduction of GPT-5, we added some checks to find and halt hazardous information from being accessed... We classify requests to GPT-5 into risk thresholds... Implement safety identifiers for products where individual users interact with a model... we run safety checks on our own models, including all fine-tuned models, and on the computer use tool... Cyber Safety... Fine-tuning safety... Safety checks in computer use",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and comprehensively substantiates every element of the claim: (1) It confirms safety classifiers exist for GPT-5 and forward, (2) it describes classifying requests into risk thresholds and halting hazardous information, (3) it documents per-user safety identifiers via the `safety_identifier` parameter, (4) it references cybersecurity monitoring (\"Cyber Safety\"), and (5) it explicitly states safety checks are run across computer use and fine-tuning. The page presents this as a currently active, generally available system with no preview/beta caveats.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "6a1db7a8a9bf2f313da0c2a60fea196fd81b50a4e0f636e45543186a8b00997b",
+  "label": "judge:google-agent-development-kit-adk-managed-agent-runtime-deploy-to-google-kubernetes-engine-gke",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In this example we will deploy a simple agent to GKE. The agent will be a FastAPI application that uses `Gemini 2.0 Flash` as the LLM.",
+    "lifecycle_status": "active",
+    "rationale": "The page is entirely dedicated to \"Deploy to Google Kubernetes Engine (GKE)\" and is labeled \"Supported in ADK Python.\" It explicitly describes packaging ADK agents as containerized FastAPI applications (with a Dockerfile, main.py using FastAPI, and requirements.txt) and deploying them to a GKE Kubernetes cluster \u2014 matching the claim exactly. The page provides both manual (kubectl/gcloud) and automated (adk deploy gke) deployment paths, confirming the offering is active and generally available.",
+    "supported": true
+  }
+}

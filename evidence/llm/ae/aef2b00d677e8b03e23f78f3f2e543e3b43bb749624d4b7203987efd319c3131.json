@@ -1,0 +1,12 @@
+{
+  "key": "aef2b00d677e8b03e23f78f3f2e543e3b43bb749624d4b7203987efd319c3131",
+  "label": "judge:openai-openai-agents-sdk-agent-evals-observability-built-in-tracing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tracing is built into the Agents SDK and is enabled by default in the normal server-side SDK path. Every run can emit a structured record of model calls, tool calls, handoffs, guardrails, and custom spans, which you can inspect in the Traces dashboard... Feed higher-signal examples into agent workflow evaluation once you are ready to score behavior systematically.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms all key elements of the claim: (1) tracing is \"built into the Agents SDK\" (matching \"Built-in tracing\"), (2) it is \"enabled by default in the normal server-side SDK path\" (matching \"enabled by default in the Agents SDK\"), (3) \"Every run can emit a structured record\" (matching \"emits a structured record of every agent run\"), (4) inspectable \"in the Traces dashboard\" at platform.openai.com/traces (matching \"viewable in the dashboard\"), and (5) traces can be fed into \"agent workflow evaluation\" for scoring behavior (matching \"gradeable for agent evaluation\"). The feature is described as generally available with no preview/beta qualifiers.",
+    "supported": true
+  }
+}

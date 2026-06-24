@@ -1,0 +1,12 @@
+{
+  "key": "f888a78ab62705bbe578c1dd88509b0573b4edae6def63e6080eddf71282a1c2",
+  "label": "judge:anthropic-claude-agent-sdk-agent-evals-observability-opentelemetry-telemetry-export",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Agent SDK can export this data as OpenTelemetry traces, metrics, and log events to any backend that accepts the OpenTelemetry Protocol (OTLP), such as Honeycomb, Datadog, Grafana, Langfuse, or a self-hosted collector.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim. It describes how Claude Code and the Agent SDK export usage, costs, and tool activity as traces, metrics, and log events to any OTLP-compatible observability backend via OpenTelemetry. The page covers metrics (counters for tokens, cost, sessions, tool decisions), log events (structured records for each prompt, API request, API error, and tool result), and traces (spans for each interaction, model request, tool call). Metrics and log events are generally available; traces are noted as \"beta\" via the CLAUDE_CODE_ENHANCED_TELEMETRY_BETA flag, but the overall OpenTelemetry telemetry export feature is active/available.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "f40dd8f725ff3edef2d098487873bc5c07b6b7053d9dee08d8b13a1988033313",
+  "label": "judge:anthropic-claude-agent-sdk-managed-agent-runtime-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Subagents are separate agent instances that your main agent can spawn to handle focused subtasks. Use subagents to isolate context for focused subtasks, run multiple analyses in parallel, and apply specialized instructions without adding to the main agent's prompt.",
+    "lifecycle_status": "active",
+    "rationale": "The page is a dedicated documentation page titled \"Subagents in the SDK\" from Anthropic's Claude Agent SDK. It directly and comprehensively substantiates every element of the claim: (1) subagents are separate agent instances, (2) a main agent can spawn them, (3) they handle focused subtasks, and (4) each runs in an isolated fresh conversation (\"Each subagent runs in its own fresh conversation\"). The page provides full API references, code examples in both Python and TypeScript, and configuration details, indicating this is a generally available, active feature.",
+    "supported": true
+  }
+}

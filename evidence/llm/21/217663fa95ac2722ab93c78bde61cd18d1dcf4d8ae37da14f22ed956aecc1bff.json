@@ -1,0 +1,12 @@
+{
+  "key": "217663fa95ac2722ab93c78bde61cd18d1dcf4d8ae37da14f22ed956aecc1bff",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-tool-search",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tool search enables your agent to work with hundreds or thousands of tools by dynamically discovering and loading them on demand. Instead of loading all tool definitions into the context window upfront, the agent searches your tool catalog and loads only the tools it needs... When tool search is active, tool definitions are withheld from the context window.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Tool search\" offering from Anthropic (via claude.com/code agent SDK). It confirms: (1) dynamic discovery and loading of only relevant tools on demand, (2) withholding MCP tool definitions from context, and (3) scaling to thousands of tools (up to 10,000) without filling the context window. All three key aspects of the claim are substantiated verbatim in the documentation. The feature is described as enabled by default (active/GA), not in preview or beta.",
+    "supported": true
+  }
+}

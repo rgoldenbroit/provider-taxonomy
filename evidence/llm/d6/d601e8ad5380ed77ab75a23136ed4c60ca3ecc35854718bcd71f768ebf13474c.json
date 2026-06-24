@@ -1,0 +1,12 @@
+{
+  "key": "d601e8ad5380ed77ab75a23136ed4c60ca3ecc35854718bcd71f768ebf13474c",
+  "label": "judge:anthropic-claude-agent-sdk-subagents-orchestration-worktree-isolation",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Worktrees give each session a separate git checkout, so parallel sessions never edit the same files. Use them for sessions you run yourself. Agent view moves each dispatched session into its own worktree automatically, and subagents you spawn can each get one too.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Worktrees\" feature that provides each session with a separate git checkout, preventing parallel sessions from editing the same files. This directly substantiates the claim about worktree isolation for parallel sessions and subagents. The page also references a dedicated guide at /en/worktrees and mentions it integrates with agent view and subagents, matching the claim's description of filesystem-level isolation for concurrent sessions.",
+    "supported": true
+  }
+}

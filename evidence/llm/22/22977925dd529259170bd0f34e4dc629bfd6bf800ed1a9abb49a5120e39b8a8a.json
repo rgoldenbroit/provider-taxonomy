@@ -1,0 +1,12 @@
+{
+  "key": "22977925dd529259170bd0f34e4dc629bfd6bf800ed1a9abb49a5120e39b8a8a",
+  "label": "judge:google-agent-development-kit-adk-agent-memory-session-service-backends",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Persistence: Depends on `SessionService` - Whether state survives application restarts depends on your chosen service: `InMemorySessionService`: **Not Persistent.** State is lost on restart. `DatabaseSessionService` / `VertexAiSessionService`: **Persistent.** State is saved reliably.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Session Service Backends (specifically DatabaseSessionService and VertexAiSessionService) as persistent session service implementations that reliably save state across application restarts, in contrast to InMemorySessionService which loses state on restart. This directly substantiates the claim about \"Session Service Backends\" that persist state reliably across application restarts, enabling true cross-session memory.",
+    "supported": true
+  }
+}

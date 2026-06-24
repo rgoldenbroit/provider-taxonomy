@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-guardrails-safety-guardrails",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Guardrails validate input, output, or tool behavior automatically. ... Block disallowed user requests before the main model runs | Input guardrails | Validate or redact the final output before it leaves the system | Output guardrails | Check arguments or results around a function tool call | Tool guardrails",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Guardrails",
+    "page_content_hash": "c903e5cbd86e3ad5b55f41e717c976959a98a5dd77af5c9fa008952406bbfb38",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-guardrails-safety-guardrails",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agents/guardrails-approvals.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

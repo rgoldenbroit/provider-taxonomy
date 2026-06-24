@@ -1,0 +1,12 @@
+{
+  "key": "50ca8c7a8d8648e18cb84b230821878d36343341d5834dad2ee4cbc8444944e3",
+  "label": "judge:google-agent-development-kit-adk-agent-memory-firestore-session-service",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ADK provides a native integration for managing persistent agent session states using Firestore, allowing continuous multi-turn conversations without losing conversation history.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Google's Firestore Session Service (part of ADK Java) as providing persistent, cross-session agent state storage backed by Google Cloud Firestore, enabling multi-turn conversations. It details installation via Maven/Gradle, configuration, and usage through `FirestoreSessionService` and `FirestoreDatabaseRunner`. The offering is presented as currently available (version 1.4.0), with no indication of preview, deprecation, or sunset status.",
+    "supported": true
+  }
+}

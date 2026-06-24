@@ -1,0 +1,12 @@
+{
+  "key": "4b378ba56ba197540ed0450e62ae6a3575f4f5e5be0538314af446283e59e578",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-hybrid-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hybrid sessions: Ephemeral containers that hydrate from a SessionStore on startup and persist updates back. Best for sessions that span many interactions but sit idle between them. The container spins down during idle periods and spins back up when the user returns.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Hybrid sessions\" as one of the four session patterns under \"Choose a session pattern.\" The description matches the claim precisely: ephemeral containers that hydrate transcript state from a SessionStore on startup and persist updates back, combining local disk (subprocess writes to local disk first) with durable external storage (S3, Redis, Postgres, or custom adapters). The page presents this as an active, available pattern with code examples in both TypeScript and Python.",
+    "supported": true
+  }
+}

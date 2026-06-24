@@ -1,0 +1,12 @@
+{
+  "key": "e751242e9ebcc4ca29b4eff441e44f7d3eed46eeb3315c50a1aa5b37a0b0b55e",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-custom-tools",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A tool is defined by four parts, passed as arguments to the [`tool()`](/en/agent-sdk/typescript#tool) helper in TypeScript or the [`@tool`](/en/agent-sdk/python#tool) decorator in Python:\n\n* **Name:** a unique identifier Claude uses to call the tool.\n* **Description:** what the tool does. Claude reads this to decide when to call it.\n* **Input schema:** the arguments Claude must provide.\n* **Handler:** the async function that runs when Claude calls the tool.\n\nAfter defining a tool, wrap it in a server with [`createSdkMcpServer`](/en/agent-sdk/typescript#createsdkmcpserver) (TypeScript) or [`create_sdk_mcp_server`](/en/agent-sdk/python#create_sdk_mcp_server) (Python). The server runs in-process inside your application, not as a separate process.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes and documents Anthropic's custom tools feature in the Claude Agent SDK. It confirms that developers can define custom tools with a name, description, input schema, and async handler that Claude can call. It also confirms these are exposed via an in-process MCP server (\"The server runs in-process inside your application, not as a separate process\"), matching all elements of the claim. The page provides detailed code examples in both Python and TypeScript, and a full reference guide, indicating this is an active, generally available feature.",
+    "supported": true
+  }
+}

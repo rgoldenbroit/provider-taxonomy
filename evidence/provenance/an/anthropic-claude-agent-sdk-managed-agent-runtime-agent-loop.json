@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-agent-loop",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When you start an agent, the SDK runs the same execution loop that powers Claude Code: Claude evaluates your prompt, calls tools to take action, receives the results, and repeats until the task is complete... The SDK includes the same tools that power Claude Code: [File operations: Read, Edit, Write | Search: Glob, Grep | Execution: Bash | Web: WebSearch, WebFetch | Discovery: ToolSearch | Orchestration: Agent, Skill, AskUserQuestion, TaskCreate, TaskUpdate]",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agent loop",
+    "page_content_hash": "a8ebb9c7fee56294db9a18ee7f616c0efe1c195803ee6f401e945ebe2f9c6c1e",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-agent-loop",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

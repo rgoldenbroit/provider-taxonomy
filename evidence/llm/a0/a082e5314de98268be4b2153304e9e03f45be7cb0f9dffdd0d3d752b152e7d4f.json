@@ -1,0 +1,12 @@
+{
+  "key": "a082e5314de98268be4b2153304e9e03f45be7cb0f9dffdd0d3d752b152e7d4f",
+  "label": "judge:anthropic-claude-agent-sdk-guardrails-safety-canusetool-callback",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude requests user input in two situations: when it needs **permission to use a tool** (like deleting files or running commands), and when it has **clarifying questions** (via the `AskUserQuestion` tool). Both trigger your `canUseTool` callback, which pauses execution until you return a response.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the `canUseTool` callback as a runtime callback that pauses agent execution and surfaces tool-use approval requests to users so they can interactively approve or deny individual tool calls. It explains that the callback fires when a tool isn't auto-approved by permission rules or modes, matching the claim's description precisely. The page presents this as a current, generally available feature with full code examples in both Python and TypeScript.",
+    "supported": true
+  }
+}

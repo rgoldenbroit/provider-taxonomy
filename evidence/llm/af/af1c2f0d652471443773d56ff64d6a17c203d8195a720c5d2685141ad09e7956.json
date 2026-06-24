@@ -1,0 +1,12 @@
+{
+  "key": "af1c2f0d652471443773d56ff64d6a17c203d8195a720c5d2685141ad09e7956",
+  "label": "judge:google-agent-development-kit-adk-agent-memory-durable-state-restate",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Durable state**: Agent memory and conversation history persist across restarts with built-in session management.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Durable state\" as one of the use cases provided by the Restate plugin for ADK (Google's Agent Development Kit), with the exact description matching the claim: \"Agent memory and conversation history persist across restarts with built-in session management.\" The page describes this as a current, available capability with installation instructions and working examples, indicating it is actively supported.",
+    "supported": true
+  }
+}

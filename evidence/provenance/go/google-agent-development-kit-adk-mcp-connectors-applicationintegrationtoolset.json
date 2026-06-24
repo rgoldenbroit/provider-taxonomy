@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-mcp-connectors-applicationintegrationtoolset",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "With **ApplicationIntegrationToolset**, you can seamlessly give your agents secure and governed access to enterprise applications using Integration Connectors' 100+ pre-built connectors for systems like Salesforce, ServiceNow, JIRA, SAP, and more. It supports both on-premise and SaaS applications. In addition, you can turn your existing Application Integration process automations into agentic workflows by providing application integration workflows as tools to your ADK agents.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "ApplicationIntegrationToolset",
+    "page_content_hash": "413cc84b010b01fb39e966558ae5d1be9100d703745f8c99b70e9d395e58178f",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-mcp-connectors-applicationintegrationtoolset",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/integrations/application-integration/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

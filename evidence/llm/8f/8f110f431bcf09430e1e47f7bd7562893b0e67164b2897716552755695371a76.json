@@ -1,0 +1,12 @@
+{
+  "key": "8f110f431bcf09430e1e47f7bd7562893b0e67164b2897716552755695371a76",
+  "label": "judge:anthropic-claude-agent-sdk-subagents-orchestration-agent-view",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent view: One screen to dispatch and monitor sessions running in the background, opened with `claude agents`. Research preview",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Agent view as \"One screen to dispatch and monitor sessions running in the background, opened with `claude agents`,\" which matches the claim almost verbatim. The claim says \"multiple independent background sessions,\" while the page says \"sessions running in the background,\" which is equivalent. The page also labels it \"Research preview,\" indicating it is not yet generally available.",
+    "supported": true
+  }
+}

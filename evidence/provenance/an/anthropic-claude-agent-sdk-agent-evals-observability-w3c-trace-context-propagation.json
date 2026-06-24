@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-evals-observability-w3c-trace-context-propagation",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The SDK automatically propagates W3C trace context into the CLI subprocess. When you call `query()` while an OpenTelemetry span is active in your application, the SDK injects `TRACEPARENT` and `TRACESTATE` into the child process environment, and the CLI reads them so its `claude_code.interaction` span becomes a child of your span. The agent run then appears inside your application's trace instead of as a disconnected root.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "W3C trace context propagation",
+    "page_content_hash": "9ad3dc5567fc169a7f7adc8866757d667e90a116da8a1caf806b1523e9d065e1",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-evals-observability-w3c-trace-context-propagation",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "34f2b67bb0034c211f5b6c45bd933bbb70c20a6d36598143459f85b2fc0a1ad4",
+  "label": "judge:openai-openai-agents-sdk-subagents-orchestration-realtimeagent",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In TypeScript, the fastest path to a browser-based voice assistant is a `RealtimeAgent` and `RealtimeSession`... From there, attach tools, handoffs, and guardrails to the `RealtimeAgent` the same way you would attach them to a text agent. Keep audio transport concerns in the session layer, and keep business logic in the agent definition.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes `RealtimeAgent` as a dedicated agent type for speech-to-speech (live audio) sessions in the TypeScript SDK. It shows a code example importing `RealtimeAgent` from `@openai/agents/realtime`, and directly states that tools, handoffs, and guardrails can be attached to the `RealtimeAgent` \u2014 matching all aspects of the claim. The page presents this as a current, active offering with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

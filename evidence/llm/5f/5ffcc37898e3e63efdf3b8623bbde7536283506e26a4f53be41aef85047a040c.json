@@ -1,0 +1,12 @@
+{
+  "key": "5ffcc37898e3e63efdf3b8623bbde7536283506e26a4f53be41aef85047a040c",
+  "label": "judge:google-agent-development-kit-adk-agent-evals-observability-monocle-observability-for-adk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Monocle automatically instruments Google ADK applications, allowing you to: ... Monocle generates OpenTelemetry-compatible traces that can be exported to various destinations including local files or console output.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is titled \"Monocle observability for ADK\" and explicitly states that Monocle provides automatic instrumentation of Google ADK applications and generates OpenTelemetry-compatible traces for monitoring. This directly substantiates the claim in full. The page presents the integration as currently available (marked \"Supported in ADKPython\") with no indications of preview, deprecation, or sunset status.",
+    "supported": true
+  }
+}

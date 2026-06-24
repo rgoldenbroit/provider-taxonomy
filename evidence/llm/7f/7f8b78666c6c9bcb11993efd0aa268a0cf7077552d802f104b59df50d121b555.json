@@ -1,0 +1,12 @@
+{
+  "key": "7f8b78666c6c9bcb11993efd0aa268a0cf7077552d802f104b59df50d121b555",
+  "label": "judge:openai-openai-agents-sdk-subagents-orchestration-agent-builder",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent Builder is a visual canvas for building multi-step agent workflows. ... A workflow is a combination of agents, tools, and control-flow logic.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page explicitly describes Agent Builder as \"a visual canvas for building multi-step agent workflows\" and confirms that workflows coordinate \"agents, tools, and control-flow logic,\" directly matching the claim. However, the page also states that \"OpenAI is deprecating Agent Builder\" with a scheduled shutdown on November 30, 2026, meaning it is deprecated (still functional during a transition window, but not active/GA). The lifecycle_status is therefore 'deprecated' rather than 'active'.",
+    "supported": true
+  }
+}

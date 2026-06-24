@@ -1,0 +1,12 @@
+{
+  "key": "5f91c7ae4b81e6731e067760d8594862f4fec03f2b6b1e85321ecc0f2bff191c",
+  "label": "judge:openai-openai-agents-sdk-agent-evals-observability-evals-platform",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026. ... If you need advanced features such as evaluation against external models, want to interact with your eval runs via API, or want to run evaluations on a larger scale, consider using Evals instead. ... Evals run asynchronously, support larger data volumes, and let you monitor performance across versions.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page confirms that OpenAI's Evals platform exists and matches the claim's description: it runs evaluations at scale asynchronously, supports API interaction, and monitors performance across model outputs/versions. The page explicitly links to the Evals guide for API interaction and large-scale async runs. However, the page also clearly states the platform is being deprecated, with a read-only date of October 31, 2026, and a full shutdown on November 30, 2026 \u2014 so its lifecycle status is 'deprecated' (still works during the transition window, but being retired).",
+    "supported": true
+  }
+}

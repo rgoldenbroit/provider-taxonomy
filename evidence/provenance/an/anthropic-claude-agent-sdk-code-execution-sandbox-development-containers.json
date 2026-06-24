@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-code-execution-sandbox-development-containers",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container... The reference container includes an `init-firewall.sh` script that blocks all outbound traffic except the domains Claude Code and your development tools need... Because the container runs Claude Code as a non-root user and confines command execution to the container, you can pass `--dangerously-skip-permissions` for unattended operation.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Development containers",
+    "page_content_hash": "c2646f3035b13e1507cfb9f3fd524bcfdf11657a356584fb18d1e8e221d1de2a",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-code-execution-sandbox-development-containers",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/devcontainer.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

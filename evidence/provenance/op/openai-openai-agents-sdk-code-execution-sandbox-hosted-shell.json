@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-code-execution-sandbox-hosted-shell",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Use `container_auto` when you want OpenAI to provision and manage a container for the request.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Hosted shell",
+    "page_content_hash": "e3ddf3c63eb8ccac5c98e1e9162fa0c7877f48b3b79cc2a9ce5c01c38e43cb67",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-code-execution-sandbox-hosted-shell",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/tools-shell.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

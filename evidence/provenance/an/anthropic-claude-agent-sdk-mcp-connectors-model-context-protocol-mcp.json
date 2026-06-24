@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-mcp-connectors-model-context-protocol-mcp",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The Model Context Protocol (MCP) is an open standard for connecting AI agents to external tools and data sources. With MCP, your agent can query databases, integrate with APIs like Slack and GitHub, and connect to other services without writing custom tool implementations.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Model Context Protocol (MCP)",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-mcp-connectors-model-context-protocol-mcp",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "507a0fa6ee3965dbea69423d46a403c4ef51cd360c9a06eef5be227f0c2b98d3",
+  "label": "judge:openai-openai-agents-sdk-managed-agent-runtime-built-in-tracing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tracing is built into the Agents SDK and is enabled by default in the normal server-side SDK path. Every run can emit a structured record of model calls, tool calls, handoffs, guardrails, and custom spans, which you can inspect in the Traces dashboard.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that tracing is built into the Agents SDK and enabled by default, emitting a structured record of model calls, tool calls, and handoffs. The table also lists \"Built-in tracing\" as the recommended approach for debugging, and the page covers MCP integration options alongside tracing. All core elements of the claim are directly substantiated by the page content.",
+    "supported": true
+  }
+}

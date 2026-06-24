@@ -1,0 +1,12 @@
+{
+  "key": "7f00ce4cf536fec01270cf3739a961d257646595b601315c63b27028a13e414d",
+  "label": "judge:openai-openai-agents-sdk-managed-agent-runtime-hosted-shell",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hosted shell is a native and streamlined option for tasks that need richer, deterministic processing, from running calculations to working with multimedia. Use `container_auto` when you want OpenAI to provision and manage a container for the request.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Hosted shell\" offering where OpenAI provisions and manages sandboxed shell containers server-side (via `container_auto`), so users do not need to host or operate the execution environment themselves. The page also describes it as currently available through the Responses API with detailed quickstart examples, runtime specs, and API calls \u2014 indicating it is generally available (active).",
+    "supported": true
+  }
+}

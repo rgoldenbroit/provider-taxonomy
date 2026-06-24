@@ -1,0 +1,12 @@
+{
+  "key": "f8b2c478f1fa2834939466f79191a77a6ab5cf2851acd7abf6fa3eababe94295",
+  "label": "judge:google-agent-development-kit-adk-mcp-connectors-google-cloud-api-registry-connector-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Google Cloud API Registry connector tool for Agent Development Kit (ADK) lets you access a wide range of Google Cloud services for your agents as Model Context Protocol (MCP) servers through the Google Cloud API Registry. You can configure this tool to connect your agent to your Google Cloud projects and dynamically access Cloud services enabled for that project.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes the Google Cloud API Registry connector tool for ADK, confirming that it connects ADK agents to Google Cloud services exposed as MCP servers via the Google Cloud API Registry. This directly substantiates the claim. The page also clearly marks this as a \"Preview release,\" hence the lifecycle_status of 'preview'.",
+    "supported": true
+  }
+}

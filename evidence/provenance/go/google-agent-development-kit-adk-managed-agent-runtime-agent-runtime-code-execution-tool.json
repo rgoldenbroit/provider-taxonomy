@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-managed-agent-runtime-agent-runtime-code-execution-tool",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "The Agent Runtime Code Execution ADK Tool provides a low-latency, highly efficient method for running AI-generated code using the Google Cloud Agent Runtime service. This tool is designed for fast execution, tailored for agentic workflows, and uses sandboxed environments for improved security... This code execution tool is part of the Agent Runtime suite, however you do not have to deploy your agent to Agent Runtime to use it. You can run your agent locally or with other services and use this tool.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Agent Runtime Code Execution tool",
+    "page_content_hash": "4ea7d92558e66d648aa6fcd8ed10f4af7870e2a1b822ec6737ee792d931e11f1",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-managed-agent-runtime-agent-runtime-code-execution-tool",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/integrations/code-exec-agent-runtime/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

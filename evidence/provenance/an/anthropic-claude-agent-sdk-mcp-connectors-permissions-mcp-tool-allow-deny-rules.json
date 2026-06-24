@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-mcp-connectors-permissions-mcp-tool-allow-deny-rules",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Tool-name globs are supported in deny rules: `\"*\"` matches every tool and `\"mcp__*\"` matches every MCP tool across all servers. Allow rules accept tool-name globs only after a literal `mcp__<server>__` prefix. The server segment must be glob-free so the rule names a specific server you configured: `mcp__puppeteer__*` matches every tool from the `puppeteer` server, and `mcp__github__get_*` matches its `get_` tools.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Permissions (MCP tool allow/deny rules)",
+    "page_content_hash": "48f28b28f3c684ef9235e7980ccc46f47a8b51292b9e9f1bd8a01207bebfe5dc",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-mcp-connectors-permissions-mcp-tool-allow-deny-rules",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

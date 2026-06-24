@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-agent-evals-observability-datasets",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Datasets, a feature of the OpenAI platform, provide a quick way to get started with evals and test prompts.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Datasets",
+    "page_content_hash": "3c0d117ff43fd300665d9adfcd6597b4d72699ba2fae1442eca48884fd9c4f2a",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-agent-evals-observability-datasets",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/evaluation-getting-started.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

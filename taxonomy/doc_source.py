@@ -166,8 +166,11 @@ def relevant_doc_pages(doc_cfg: dict, keywords, limit: int = 8) -> list[DocPage]
     scored: list[tuple[int, DocPage]] = []
     if kind == "llms_index":
         suffix = doc_cfg.get("md_suffix")   # e.g. ".md.txt" for ai.google.dev Gemini docs
+        pathf = doc_cfg.get("path_filter")  # restrict to a topic sub-path on a broad index (focused caps)
         cands: list[tuple[str, str]] = []
         for title, url, desc in parse_llms_index(_get(doc_cfg["url"])):
+            if pathf and pathf not in url:
+                continue
             if not _matches(f"{title} {desc} {url}", kws):
                 continue
             if url.endswith((".md", ".md.txt")):
@@ -192,6 +195,14 @@ def relevant_doc_pages(doc_cfg: dict, keywords, limit: int = 8) -> list[DocPage]
         for p in fetch_html_section(doc_cfg["roots"], doc_cfg["path_substrs"], limit=max(limit, 12)):
             if _matches(p.text, kws):
                 scored.append((_density(p.text, kws), p))
+    elif kind == "pages":
+        # explicit topic-page URLs (focused capabilities) — precise, no broad-index over-pull.
+        # Handles .md/.md.txt directly and strips HTML otherwise; always kept (score floored at 1).
+        for url in doc_cfg["urls"]:
+            raw = _get(url)
+            txt = raw if url.endswith((".md", ".md.txt")) else html_to_text(raw)
+            if txt.strip():
+                scored.append((max(_density(txt, kws), 1), DocPage(url, txt, _md_title(txt) or url.rsplit("/", 1)[-1])))
     scored.sort(key=lambda s: s[0], reverse=True)
     return [p for _, p in scored[:limit]]
 

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-claude-md-memory-files",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "`CLAUDE.md` memory files    | `~/.claude/CLAUDE.md` for the user tier and the session's working directory for the project tier",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "CLAUDE.md memory files",
+    "page_content_hash": "4813cca8578a5afc3f29ed3ac0d66920259451122ed5cd31894fb9f6a7440f55",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-claude-md-memory-files",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "900d121bce17c9bec87a26d03b11fae0c8627d024a0ae0cd10af8a22b3b422b5",
+  "label": "judge:anthropic-claude-agent-sdk-subagents-orchestration-dynamic-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Dynamic workflows | A script that runs many subagents and cross-checks their results, for work too big to coordinate one turn at a time or that needs more than a single pass | A job outgrows a handful of subagents, or you want findings verified against each other: a codebase-wide audit, a 500-file migration, cross-checked research, or a plan drafted from several angles",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Dynamic workflows\" as an offering from Anthropic (via Claude Code), characterizing it as \"A script that runs many subagents and cross-checks their results, for work too big to coordinate one turn at a time.\" This closely matches the claim's description of \"A script-driven approach that runs many subagents and cross-checks their results for large jobs that exceed what turn-by-turn agentic loops can handle.\" The page presents it as an active, documented feature (with its own dedicated page at /en/workflows) without any preview, beta, or deprecated markers.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "b676eccac90e5b061867d775d6eff316da00d04761b0ec7b710f7f3232697808",
+  "label": "judge:google-agent-development-kit-adk-subagents-orchestration-workflow-agents-sequential-parallel-loo",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A [`SequentialAgent`](/agents/workflow-agents/sequential-agents/) contains `sub_agents` executed in a fixed order... A [`ParallelAgent`](/agents/workflow-agents/parallel-agents/) runs multiple `sub_agents` concurrently... `SequentialAgent` defines the order... `ParallelAgent` for concurrent execution (Fan-Out).",
+    "lifecycle_status": "active",
+    "rationale": "The page, from Google's Agent Development Kit (ADK) documentation, explicitly describes workflow agents with sequential (SequentialAgent) and parallel (ParallelAgent) execution patterns for sub-agents, with code examples in multiple languages. These are described as pre-built primitives with fixed execution logic (sequential ordering and concurrent fan-out). The page does not explicitly show a dedicated \"Loop\" agent type by name, but it does cover Sequential and Parallel workflow agents as described in the claim. The claim mentions \"Loop\" as one of the three types; the page does not mention a LoopAgent specifically, but it does substantiate Sequential and Parallel workflow agents as pre-built template workflow agents providing fixed execution logic structures including sequential and parallel orchestration of sub-agents. The page is marked as supported in ADK across multiple languages and versions, indicating active status.",
+    "supported": true
+  }
+}

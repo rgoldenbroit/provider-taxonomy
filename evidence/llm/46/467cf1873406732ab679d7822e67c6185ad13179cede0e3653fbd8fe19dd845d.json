@@ -1,0 +1,12 @@
+{
+  "key": "467cf1873406732ab679d7822e67c6185ad13179cede0e3653fbd8fe19dd845d",
+  "label": "judge:google-agent-development-kit-adk-code-execution-sandbox-computer-use-toolset",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Computer Use Toolset allows an agent to operate a user interface of a computer, such as browsers, to complete tasks. This tool uses a specific Gemini model and the Playwright testing tool to control a Chromium browser and can interact with web pages by taking screenshots, clicking, typing, and navigating.",
+    "lifecycle_status": "preview",
+    "rationale": "The page directly substantiates the claim. It describes Google's Computer Use Toolset (offered via ADK/Gemini API) that allows an agent to operate a computer's user interface including browsers to complete tasks, and explicitly uses Playwright to control them. The page also clearly states this is a \"Preview release,\" confirming the lifecycle status.",
+    "supported": true
+  }
+}

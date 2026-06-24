@@ -1,0 +1,12 @@
+{
+  "key": "1b74e24153e38b3badff8cac80dece37bad0e58b093b1ebacfd5889297e46777",
+  "label": "judge:openai-openai-agents-sdk-subagents-orchestration-sandbox-agents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A sandbox gives an agent an isolated, Unix-like execution environment with a filesystem, shell, installed packages, mounted data, exposed ports, snapshots, and controlled access to external systems. ... `SandboxAgent` is still an `Agent`. It keeps the usual agent surface, including `instructions`, `prompt`, `tools`, `handoffs`, MCP servers, model settings, structured output, guardrails, and hooks. What changes is the execution boundary: the runner prepares the agent against a live sandbox session that owns files, commands, ports, and provider-specific isolation.",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly describes OpenAI's Sandbox Agents offering, confirming that SandboxAgent wraps a standard Agent with an isolated, Unix-like execution environment that includes a filesystem, shell, ports, and snapshots. The page also states the feature is currently in beta: \"Sandbox agents are available in the TypeScript and Python Agents SDKs. They are in beta, so API details, defaults, and supported capabilities may change.\"",
+    "supported": true
+  }
+}

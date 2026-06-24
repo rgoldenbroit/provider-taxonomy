@@ -1,0 +1,12 @@
+{
+  "key": "d00caca664a66e198488103d076c98a7b10d8a449f035bea20d05ce038f9d655",
+  "label": "judge:anthropic-claude-agent-sdk-managed-agent-runtime-managed-agents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If you do not need infrastructure control, custom isolation, or your own data plane, consider [Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview) instead: a hosted REST API where Anthropic runs the agent and the sandbox, so your application sends events and streams back results with no hosting infrastructure to operate.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Managed Agents\" as an alternative to self-hosting, characterizing it as \"a hosted REST API where Anthropic runs the agent and the sandbox, so your application sends events and streams back results.\" This closely matches the claim's description of a provider-hosted REST API where Anthropic runs the agent and sandbox, and your application sends events and streams results. The page presents it as a current, available option without any preview/beta/deprecated qualifier.",
+    "supported": true
+  }
+}

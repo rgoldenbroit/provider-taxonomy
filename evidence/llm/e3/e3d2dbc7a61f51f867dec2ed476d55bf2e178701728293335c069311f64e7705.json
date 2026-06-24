@@ -1,0 +1,12 @@
+{
+  "key": "e3d2dbc7a61f51f867dec2ed476d55bf2e178701728293335c069311f64e7705",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-model-context-protocol-mcp",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Model Context Protocol (MCP) is an open standard for connecting AI agents to external tools and data sources. With MCP, your agent can query databases, integrate with APIs like Slack and GitHub, and connect to other services without writing custom tool implementations.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's Agent SDK supporting MCP as an open standard for connecting agents to external tools and data sources. It confirms support for databases (e.g., Postgres MCP server), APIs (e.g., GitHub, Slack), and browsers/other services. The documentation provides full working code examples in TypeScript and Python, covering HTTP, SSE, and stdio transport types, authentication, and error handling \u2014 all consistent with the claim's description of MCP as a standard for connecting agents to external tools and data sources including databases, browsers, and APIs.",
+    "supported": true
+  }
+}

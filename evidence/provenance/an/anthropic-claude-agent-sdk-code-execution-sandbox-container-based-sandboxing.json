@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-code-execution-sandbox-container-based-sandboxing",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Run the SDK inside a sandboxed container for process isolation, resource limits, network control, and an ephemeral filesystem. Several providers specialize in sandboxed container environments that fit the Agent SDK's model.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Container-based sandboxing",
+    "page_content_hash": "4813cca8578a5afc3f29ed3ac0d66920259451122ed5cd31894fb9f6a7440f55",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-code-execution-sandbox-container-based-sandboxing",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

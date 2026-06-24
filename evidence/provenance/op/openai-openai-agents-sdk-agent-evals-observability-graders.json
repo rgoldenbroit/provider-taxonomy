@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-agent-evals-observability-graders",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "While annotations are the most effective way to incorporate human feedback into your evaluation process, graders let you run evaluations at scale. Graders are automated assessments that can produce a variety of inputs depending on their type. ... Score model grader: Uses an LLM to assign a numeric score ... Label model grader: Uses an LLM to select a categorical label",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Graders",
+    "page_content_hash": "3c0d117ff43fd300665d9adfcd6597b4d72699ba2fae1442eca48884fd9c4f2a",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-agent-evals-observability-graders",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/evaluation-getting-started.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

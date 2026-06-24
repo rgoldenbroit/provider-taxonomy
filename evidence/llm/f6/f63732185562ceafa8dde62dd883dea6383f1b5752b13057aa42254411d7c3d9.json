@@ -1,0 +1,12 @@
+{
+  "key": "f63732185562ceafa8dde62dd883dea6383f1b5752b13057aa42254411d7c3d9",
+  "label": "judge:anthropic-claude-computer-use-browser-computer-use-agent-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Enable computer use in the Claude Code CLI so Claude can open apps, click, type, and see your screen on macOS. Test native apps, debug visual issues, and automate GUI-only tools without leaving your terminal.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Anthropic's Computer Use offering, which allows Claude to open apps, control the screen, click, type, and see the screen on macOS to complete GUI-based tasks. The claim matches the page content closely. The page also notes it is a \"research preview,\" placing its lifecycle status as preview/beta rather than generally available.",
+    "supported": true
+  }
+}

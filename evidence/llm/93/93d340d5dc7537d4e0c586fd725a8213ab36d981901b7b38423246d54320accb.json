@@ -1,0 +1,12 @@
+{
+  "key": "93d340d5dc7537d4e0c586fd725a8213ab36d981901b7b38423246d54320accb",
+  "label": "judge:google-agent-development-kit-adk-agent-evals-observability-mlflow-observability-for-adk",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google ADK emits OTel spans for agent runs, tool calls, and model requests, which you can send directly to an MLflow Tracking Server for analysis and debugging.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes MLflow observability for ADK and directly matches the claim. It confirms that Google ADK emits OpenTelemetry spans for agent runs, tool calls, and model requests, and that these can be sent to an MLflow Tracking backend (MLflow Tracking Server). The page provides full setup instructions including installation, server configuration, and code examples, indicating this is an active, generally available integration.",
+    "supported": true
+  }
+}

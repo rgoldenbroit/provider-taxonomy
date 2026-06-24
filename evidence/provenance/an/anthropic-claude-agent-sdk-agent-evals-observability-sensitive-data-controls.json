@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-evals-observability-sensitive-data-controls",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Telemetry is structural by default. Durations, model names, and tool names are recorded on every span; token counts are recorded when the underlying API request returns usage data, so spans for failed or aborted requests may omit them. The content your agent reads and writes is not recorded by default. These opt-in variables add content to the exported data:\n\n| Variable                  | Adds                                                                                                                                                                                                                                                                                                                                                                                                                                                        |\n| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `OTEL_LOG_USER_PROMPTS=1` | Prompt text on `claude_code.user_prompt` events and on the `claude_code.interaction` span                                                                                                                                                                                                                                                                                                                                                                   |\n| `OTEL_LOG_TOOL_DETAILS=1` | Tool input arguments (file paths, shell commands, search patterns) on `claude_code.tool_result` events                                                                                                                                                                                                                                                                                                                                                      |\n| `OTEL_LOG_TOOL_CONTENT=1` | Full tool input and output bodies as span events on `claude_code.tool`, truncated at 60 KB. Requires tracing to be enabled                                                                                                                                                                                                                                                                                                                                            |\n| `OTEL_LOG_RAW_API_BODIES` | Full Anthropic Messages API request and response JSON as `claude_code.api_request_body` and `claude_code.api_response_body` log events.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Sensitive data controls",
+    "page_content_hash": "9ad3dc5567fc169a7f7adc8866757d667e90a116da8a1caf806b1523e9d065e1",
+    "primary_capability_id": "agent-evals-observability",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-evals-observability-sensitive-data-controls",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

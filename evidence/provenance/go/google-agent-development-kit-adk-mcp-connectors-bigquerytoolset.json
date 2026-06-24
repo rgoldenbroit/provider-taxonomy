@@ -1,0 +1,21 @@
+{
+  "key": "google-agent-development-kit-adk-mcp-connectors-bigquerytoolset",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "They are packaged in the toolset `BigQueryToolset`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "BigQueryToolset",
+    "page_content_hash": "43a971cb9e25af064b3efed711806ba88dc82773049c061993ecc1a040b503a6",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-agent-development-kit-adk-mcp-connectors-bigquerytoolset",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://adk.dev/integrations/bigquery/index.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

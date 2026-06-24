@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-isolation-technologies",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "| Technology              | Isolation strength             | Performance overhead | Complexity  |\n| ----------------------- | ------------------------------ | -------------------- | ----------- |\n| Sandbox runtime         | Good (secure defaults)         | Very low             | Low         |\n| Containers (Docker)     | Setup dependent                | Low                  | Medium      |\n| gVisor                  | Excellent (with correct setup) | Medium/High          | Medium      |\n| VMs (Firecracker, QEMU) | Excellent (with correct setup) | High                 | Medium/High |",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Isolation technologies",
+    "page_content_hash": "ddec036207d4c4f0841c5ef7c5dbbe6edfdacb6e68f60dc4a045e4eb478e1637",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-isolation-technologies",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

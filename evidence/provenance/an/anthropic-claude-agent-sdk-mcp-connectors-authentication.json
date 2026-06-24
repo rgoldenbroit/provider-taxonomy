@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-mcp-connectors-authentication",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Most MCP servers require authentication to access external services. Pass credentials through environment variables in the server configuration. [...] For HTTP and SSE servers, pass authentication headers directly in the server configuration [...] The MCP specification supports OAuth 2.1 for authorization. The SDK doesn't handle OAuth flows automatically, but you can pass access tokens via headers after completing the OAuth flow in your application",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Authentication",
+    "page_content_hash": "748675b4eca6e031e954f9412c2ed34e6872c5ab9c2900a4c47c67d766f3894b",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-mcp-connectors-authentication",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "da2c26838b86d899bb6d7af3ce107f4536a68f9c6055d5401e9eb9343759ff07",
+  "label": "judge:anthropic-claude-agent-sdk-managed-agent-runtime-agent-loop",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When you start an agent, the SDK runs the same execution loop that powers Claude Code: Claude evaluates your prompt, calls tools to take action, receives the results, and repeats until the task is complete... The SDK includes the same tools that power Claude Code: [File operations: Read, Edit, Write | Search: Glob, Grep | Execution: Bash | Web: WebSearch, WebFetch | Discovery: ToolSearch | Orchestration: Agent, Skill, AskUserQuestion, TaskCreate, TaskUpdate]",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms the fully managed agent loop: the SDK runs the loop where Claude evaluates prompts, calls tools, receives results, and repeats until done. It also confirms a pre-built set of built-in tools covering file operations (Read, Edit, Write), search (Glob, Grep), shell execution (Bash), web (WebSearch, WebFetch), and orchestration (Agent, Skill, AskUserQuestion, TaskCreate, TaskUpdate). All core elements of the claim are substantiated verbatim on the page, and the offering appears to be generally available (active), with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

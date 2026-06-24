@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-guardrails-safety-trace-graders",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Trace grading provides scores and annotations to specific parts of an agent's trace\u2014such as decisions, tool calls, or reasoning steps\u2014to assess where the agent performed well or made mistakes.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Trace graders",
+    "page_content_hash": "cc97488ce2661c6e2c0b07e9b624f6e7203bbe600512c38d8255364edac408fd",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-guardrails-safety-trace-graders",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/agent-builder-safety.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

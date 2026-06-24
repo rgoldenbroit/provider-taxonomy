@@ -1,0 +1,12 @@
+{
+  "key": "5aed3474869a49413494e0085bb23f909822fe4702552856ce7a57c3f5df69de",
+  "label": "judge:openai-operator-browser-computer-use-agent-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Computer use lets a model operate software through the user interface. It can inspect screenshots, return interface actions for your code to execute, or work through a custom harness that mixes visual and programmatic interaction with the UI.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's \"Computer use\" offering in detail, matching the claim precisely: it lets a model operate software through the user interface by inspecting screenshots and returning executable UI actions. The page provides full implementation guides, code samples, and references to generally available models (gpt-5.4, gpt-5.5), indicating this is an active offering. It also mentions migration from an older \"computer use preview,\" confirming the current version is beyond preview/beta.",
+    "supported": true
+  }
+}

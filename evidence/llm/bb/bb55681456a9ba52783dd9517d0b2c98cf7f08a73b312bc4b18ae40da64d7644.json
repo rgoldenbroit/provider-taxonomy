@@ -1,0 +1,12 @@
+{
+  "key": "bb55681456a9ba52783dd9517d0b2c98cf7f08a73b312bc4b18ae40da64d7644",
+  "label": "judge:google-agent-development-kit-adk-agent-memory-session-state",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Within each `Session` (our conversation thread), the **`state`** attribute acts like the agent's dedicated scratchpad for that specific interaction. While `session.events` holds the full history, `session.state` is where the agent stores and updates dynamic details needed *during* the conversation. ... Conceptually, `session.state` is a collection (dictionary or Map) holding key-value pairs. ... **Persistence: Depends on `SessionService`** - Whether state survives application restarts depends on your chosen service: `InMemorySessionService`: **Not Persistent.** State is lost on restart. `DatabaseSessionService` / `VertexAiSessionService`: **Persistent.** State is saved reliably.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes Session State as a per-session key-value scratchpad (dictionary/Map) where agents store and update dynamic details during a conversation. It explicitly covers persistence (conditional on the SessionService used), and is marked as supported in multiple SDK versions (Python v0.1.0, TypeScript v0.2.0, Go v0.1.0, Java v0.1.0, Kotlin v0.1.0), indicating general availability.",
+    "supported": true
+  }
+}

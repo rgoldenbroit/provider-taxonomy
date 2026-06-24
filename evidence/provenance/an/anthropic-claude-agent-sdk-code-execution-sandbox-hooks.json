@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-code-execution-sandbox-hooks",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Hooks are user-defined shell commands that execute at specific points in Claude Code's lifecycle. They provide deterministic control over Claude Code's behavior, ensuring certain actions always happen rather than relying on the LLM to choose to run them.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Hooks",
+    "page_content_hash": "d4f44b2409c949853328fe69808172bc0deb40d767b9242a60e3fb1f679d8015",
+    "primary_capability_id": "code-execution-sandbox",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-code-execution-sandbox-hooks",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/hooks-guide.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

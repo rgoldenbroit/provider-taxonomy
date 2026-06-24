@@ -1,0 +1,12 @@
+{
+  "key": "ef52931bb6459f9516bc67fe98fd2a57a06c24452fae89b2a03f3be7257ad093",
+  "label": "judge:openai-openai-agents-sdk-agent-memory-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Detailed compaction guidance now lives in [Compaction](https://developers.openai.com/api/docs/guides/compaction). - For `/responses` with `context_management` and `compact_threshold`, see [Server-side compaction](https://developers.openai.com/api/docs/guides/compaction#server-side-compaction). - For explicit compaction control, see [Standalone compact endpoint](https://developers.openai.com/api/docs/guides/compaction#standalone-compact-endpoint) and the [`/responses/compact` API reference](https://developers.openai.com/api/docs/api-reference/responses/compact).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly mentions a \"Compaction\" feature under the \"Managing the context window\" section, referencing both server-side compaction (via `/responses` with `context_management` and `compact_threshold` parameters) and client-side/explicit compaction control (via a standalone `/responses/compact` endpoint). This directly substantiates the claim that OpenAI offers Compaction to manage context window limits in long-running conversations, available both server-side and client-side. The feature is presented as current/generally available with no preview or deprecated markers.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "7026631e336da0cc42a3afd908e6bbc1f1ab72d3ff12cdb4232283db9136d9a5",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-permissions-mcp-tool-allow-deny-rules",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tool-name globs are supported in deny rules: `\"*\"` matches every tool and `\"mcp__*\"` matches every MCP tool across all servers. Allow rules accept tool-name globs only after a literal `mcp__<server>__` prefix. The server segment must be glob-free so the rule names a specific server you configured: `mcp__puppeteer__*` matches every tool from the `puppeteer` server, and `mcp__github__get_*` matches its `get_` tools.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes per-query access control via `allowed_tools` and `disallowed_tools` (allow/deny rules), glob-based matching for MCP tools using `mcp__*` to match all MCP tools across all servers, and server-scoped rules like `mcp__<server>__*` to target a specific MCP server. The page also describes multiple permission modes (default, dontAsk, acceptEdits, bypassPermissions, plan) that control how these rules interact. This substantiates all key aspects of the claim: permissions as MCP tool allow/deny rules, per-query access control, and glob-based rules scoped to all servers (`mcp__*`) or a specific server (`mcp__<server>__`).",
+    "supported": true
+  }
+}

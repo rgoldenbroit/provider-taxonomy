@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-managed-agent-runtime-permissions-system",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**Permissions system**: Every tool and bash command can be configured to allow, block, or prompt the user for approval. Use glob patterns to create rules like \"allow all npm commands\" or \"block any command with sudo\". Organizations can set policies that apply across all users. See [permissions](/en/permissions).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Permissions system",
+    "page_content_hash": "ddec036207d4c4f0841c5ef7c5dbbe6edfdacb6e68f60dc4a045e4eb478e1637",
+    "primary_capability_id": "managed-agent-runtime",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-managed-agent-runtime-permissions-system",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/secure-deployment.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

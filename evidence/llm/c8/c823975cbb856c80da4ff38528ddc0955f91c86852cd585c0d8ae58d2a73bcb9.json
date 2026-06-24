@@ -1,0 +1,12 @@
+{
+  "key": "c823975cbb856c80da4ff38528ddc0955f91c86852cd585c0d8ae58d2a73bcb9",
+  "label": "judge:google-agent-development-kit-adk-subagents-orchestration-control-flow-via-events",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Control Flow: Specific fields like `event.actions.transfer_to_agent` or `event.actions.escalate` act as signals that direct the framework, determining which agent runs next or if a loop should terminate.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Control Flow\" as one of the key reasons Events are central to ADK's operation, and directly states that fields like `event.actions.transfer_to_agent` and `event.actions.escalate` carry control signals that determine which agent runs next \u2014 exactly matching the claim. The feature is described as currently supported across multiple SDK languages (Python v0.1.0, TypeScript v0.2.0, Go v0.1.0, Java v0.1.0, Kotlin v0.1.0) with no deprecation or preview caveats.",
+    "supported": true
+  }
+}

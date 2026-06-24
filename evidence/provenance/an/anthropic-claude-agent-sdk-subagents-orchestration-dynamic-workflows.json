@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-subagents-orchestration-dynamic-workflows",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Dynamic workflows | A script that runs many subagents and cross-checks their results, for work too big to coordinate one turn at a time or that needs more than a single pass | A job outgrows a handful of subagents, or you want findings verified against each other: a codebase-wide audit, a 500-file migration, cross-checked research, or a plan drafted from several angles",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Dynamic workflows",
+    "page_content_hash": "553796828ab0bef440965eebd444db4065339021ffa3041b6e5258650f625539",
+    "primary_capability_id": "subagents-orchestration",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-subagents-orchestration-dynamic-workflows",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agents.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-agent-sdk-agent-memory-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "A session is the conversation history the SDK accumulates while your agent works. It contains your prompt, every tool call the agent made, every tool result, and every response. The SDK writes it to disk automatically so you can return to it later.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Sessions",
+    "page_content_hash": "7a64e56ea143e5cd732856d51cef52a870382ae9d96b75fdb222c3595049b6e3",
+    "primary_capability_id": "agent-memory",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-agent-sdk-agent-memory-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://code.claude.com/docs/en/agent-sdk/sessions.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

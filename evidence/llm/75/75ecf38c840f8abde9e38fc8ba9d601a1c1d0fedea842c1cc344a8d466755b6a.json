@@ -1,0 +1,12 @@
+{
+  "key": "75ecf38c840f8abde9e38fc8ba9d601a1c1d0fedea842c1cc344a8d466755b6a",
+  "label": "judge:anthropic-claude-code",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code is an agent that reads your codebase, edits files, and runs commands across your terminal, IDE, desktop app, and browser. Build, debug, and ship with natural language.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Anthropic's official Claude Code product page (https://www.anthropic.com/claude-code). It clearly describes Claude Code as a generally available offering with pricing tiers (Pro at $17/month, Max at $100/month and $200/month), download instructions, and detailed feature descriptions. The product is actively available for macOS, Linux, and Windows with integrations for VS Code, JetBrains, Slack, and more.",
+    "supported": true
+  }
+}

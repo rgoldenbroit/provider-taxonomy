@@ -1,0 +1,21 @@
+{
+  "key": "openai-openai-agents-sdk-guardrails-safety-role-based-access-control-rbac",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Role-based access control (RBAC) lets you decide who can do what across your organization and projects\u2014both through the API and in the Dashboard. The same permissions govern both surfaces: if someone can call an endpoint (for example, `/v1/chat/completions`), they can use the equivalent Dashboard page, and missing permissions disable related UI (such as the **Upload** button in Playground).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Role-based access control (RBAC)",
+    "page_content_hash": "9e9e531de3fbd9c302410862dd41c28ae6b99263023c0a12c2e8973c4fbe5cb0",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-openai-agents-sdk-guardrails-safety-role-based-access-control-rbac",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/rbac.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

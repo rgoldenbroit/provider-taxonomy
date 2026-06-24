@@ -1,0 +1,12 @@
+{
+  "key": "f51a130d1f271b7e940e9d906fd61f163351a11ea5b0841a6de5d2a3ad54f35a",
+  "label": "judge:openai-openai-agents-sdk-subagents-orchestration-agents-as-tools",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agents as tools | A manager should stay in control and call specialists as bounded capabilities | The manager keeps ownership of the reply",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Agents as tools\" pattern in a comparison table and dedicates a full section (\"Use agents as tools for manager-style workflows\") to it. It clearly states that this pattern is used when \"A manager should stay in control and call specialists as bounded capabilities\" and \"The manager keeps ownership of the reply,\" directly matching the claim. Code examples are provided showing how to implement this pattern using the OpenAI Agents SDK. The page presents this as a current, generally available feature with no preview or deprecation notices.",
+    "supported": true
+  }
+}

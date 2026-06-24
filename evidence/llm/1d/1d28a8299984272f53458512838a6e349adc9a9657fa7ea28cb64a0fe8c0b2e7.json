@@ -1,0 +1,12 @@
+{
+  "key": "1d28a8299984272f53458512838a6e349adc9a9657fa7ea28cb64a0fe8c0b2e7",
+  "label": "judge:anthropic-claude-agent-sdk-agent-memory-file-checkpointing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "File checkpointing tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, allowing you to rewind files to any previous state.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes File checkpointing as an Anthropic offering, matching the claim almost verbatim. It explains that the feature tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, and allows files to be restored to earlier states. The page provides full documentation, code examples in both Python and TypeScript, and appears to be a generally available feature (no preview/beta labels).",
+    "supported": true
+  }
+}
