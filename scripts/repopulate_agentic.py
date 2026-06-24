@@ -30,6 +30,7 @@ from taxonomy.doc_source import CachedPages, relevant_doc_pages  # noqa: E402
 from taxonomy.provider_scan import CAPABILITY_CONFIG, consolidate_features, extract_features  # noqa: E402
 from taxonomy.retrieval.base import RetrievalError  # noqa: E402
 from taxonomy.schema import DEFAULT_DATA_PATH  # noqa: E402
+from taxonomy.sources import derive_confidence, source_tier  # noqa: E402
 from taxonomy.triage import triage_one  # noqa: E402
 from taxonomy.vertex_client import get_llm  # noqa: E402
 
@@ -139,13 +140,20 @@ def _feat_record(provider, product_id, axis, name, claim, url, status, review):
     }
 
 
+def _sub_confidence(url, provider):
+    # sub-features are admitted by string-presence on an official page (not independently LLM-judged),
+    # so grade by source tier but cap at 'medium' — never the 'high' that LLM-substantiation earns.
+    conf = derive_confidence(source_tier(url, provider))
+    return "medium" if conf == "high" else conf
+
+
 def _sub_record(provider, parent_id, axis, name, url):
     return {
         "id": f"{parent_id}-{_slug(name)}"[:96], "name": name, "kind": "feature",
         "parent_id": parent_id, "provider": provider, "capability_ids": [axis],
         "primary_capability_id": axis, "relation_within_capability": "partial", "surfaces": [],
         "status": "active", "review_status": "confirmed", "scope_note": "", "lifecycle": [],
-        "source": {"url": url, "last_verified": AS_OF, "confidence": "low"},
+        "source": {"url": url, "last_verified": AS_OF, "confidence": _sub_confidence(url, provider)},
     }
 
 
