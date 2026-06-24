@@ -1,0 +1,12 @@
+{
+  "key": "ac091061b16874968b0ef00594cf3324542851c9f84d8d8706293bd48191e910",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude can now use your computer to complete tasks in Cowork and Claude Code... When Claude doesn't have a connector or tool for what you need, it navigates your screen directly\u2014clicking, typing, and opening apps just like you would. It can work in your browser, open files, and run your dev tools automatically, with no setup required.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Anthropic's \"Computer use\" feature for Claude, which allows Claude to directly operate the desktop by clicking, typing, navigating apps, and interacting with local files \u2014 matching the claim closely. The page also notes it can open files and work in the browser without manual uploads or downloads. However, the page states this is a \"research preview\" available only for Pro and Max plans in the Claude Desktop application, so its lifecycle status is 'preview' rather than fully 'active'.",
+    "supported": true
+  }
+}

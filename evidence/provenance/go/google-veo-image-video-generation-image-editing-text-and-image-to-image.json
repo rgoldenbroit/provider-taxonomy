@@ -1,0 +1,21 @@
+{
+  "key": "google-veo-image-video-generation-image-editing-text-and-image-to-image",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Image editing (text-and-image-to-image)\n\n**Reminder** : Make sure you have the necessary rights to any images you upload.\nDon't generate content that infringe on others' rights, including videos or\nimages that deceive, harass, or harm. Your use of this generative AI service is\nsubject to our [Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy).\n\nProvide an image and use text prompts to add, remove, or modify elements,\nchange the style, or adjust the color grading.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Image editing (text-and-image-to-image)",
+    "page_content_hash": "1ed2d521cade3a59fb5949dcb41cad60baba2cb34df2188daea3eb3afadbf112",
+    "primary_capability_id": "image-video-generation",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-veo-image-video-generation-image-editing-text-and-image-to-image",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

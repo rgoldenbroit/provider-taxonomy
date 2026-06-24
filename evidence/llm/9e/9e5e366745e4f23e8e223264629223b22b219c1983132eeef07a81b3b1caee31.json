@@ -1,0 +1,12 @@
+{
+  "key": "9e5e366745e4f23e8e223264629223b22b219c1983132eeef07a81b3b1caee31",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-connectors",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Connectors. If a connector is available\u2014like Gmail, Google Drive, or Slack\u2014Claude uses it. This is the fastest and most reliable path.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Connectors as the first and preferred method Claude uses in Cowork, naming Gmail, Google Drive, and Slack as examples, and characterizing them as \"the fastest and most reliable path\" \u2014 matching the claim verbatim. The overall computer use / Cowork feature is noted as being in \"research preview\" for Pro and Max plans.",
+    "supported": true
+  }
+}

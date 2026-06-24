@@ -83,6 +83,31 @@ CAPABILITY_CONFIG = {
                        "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
                        "https://ai.google.dev/gemini-api/docs/imagen.md.txt"]}},
     },
+    "knowledge-work-research": {
+        "Anthropic": {"product_id": "anthropic-claude-cowork", "product": "Claude Cowork",
+                      "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "pages", "urls": [
+                          "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork.md",
+                          "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork.md",
+                          "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork.md",
+                          "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork.md"]}},
+        "OpenAI": {"product_id": "openai-chatgpt-deep-research", "product": "ChatGPT Deep Research",
+                   "domains": ["openai.com"],
+                   "doc": {"kind": "pages", "urls": ["https://developers.openai.com/api/docs/guides/deep-research.md"]}},
+        "Google": {"product_id": "google-notebooklm", "product": "NotebookLM", "domains": ["google.com"],
+                   "doc": {"kind": "pages", "urls": ["https://notebooklm.google/"]}},
+    },
+    "consumer-chat-assistant": {  # enterprise-edition lens; OpenAI help center stays bot-blocked → partial
+        "Anthropic": {"product_id": "anthropic-claude-web-desktop-mobile", "product": "Claude (Team/Enterprise)",
+                      "domains": ["anthropic.com", "claude.com"],
+                      "doc": {"kind": "pages", "urls": [
+                          "https://support.claude.com/en/articles/13132885-set-up-single-sign-on-sso.md",
+                          "https://support.claude.com/en/articles/14499648-how-scim-sync-works-for-enterprise-organizations.md"]}},
+        "Google": {"product_id": "google-gemini-app", "product": "Gemini for Workspace", "domains": ["google.com"],
+                   "doc": {"kind": "pages", "urls": [
+                       "https://workspace.google.com/solutions/ai/",
+                       "https://support.google.com/a/answer/15756885"]}},
+    },
 }
 PROVIDERS = CAPABILITY_CONFIG["agentic-coding"]   # back-compat alias for is_official/search_official
 

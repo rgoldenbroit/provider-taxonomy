@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-scheduled-tasks-and-routines",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Scheduled tasks allow you to delegate work to Claude Cowork by creating tasks that run automatically on a recurring basis, or on demand. Instead of starting each task from scratch, you describe it once and Claude handles it on your schedule\u2014delivering finished outputs like reports, briefings, and summaries every time.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Scheduled tasks and routines",
+    "page_content_hash": "42d77884e8e1c3b9a2955aa1ecef913f1593ddfeaa1c5065f255055f93bd9e5f",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-scheduled-tasks-and-routines",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

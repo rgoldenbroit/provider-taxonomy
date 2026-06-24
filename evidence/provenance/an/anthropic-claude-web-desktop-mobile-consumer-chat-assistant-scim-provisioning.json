@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-web-desktop-mobile-consumer-chat-assistant-scim-provisioning",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "When you connect your identity provider (IdP) to your Enterprise organization through the WorkOS integration, two things sync from your IdP: Members from your SCIM directory [and] SCIM groups that you've pushed from your IdP to WorkOS [...] Your Enterprise organization receives changes from your IdP automatically whenever your IdP pushes member or group updates (adds, removes, or edits) to WorkOS.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "SCIM provisioning",
+    "page_content_hash": "3703ea9b1a5c3bfabfa2c2fb75032450cfc897b7b54015ad35e5d3e3919d9012",
+    "primary_capability_id": "consumer-chat-assistant",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-web-desktop-mobile-consumer-chat-assistant-scim-provisioning",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/14499648-how-scim-sync-works-for-enterprise-organizations.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

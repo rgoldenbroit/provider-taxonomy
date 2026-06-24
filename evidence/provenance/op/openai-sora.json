@@ -3,18 +3,18 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "The Sora web and app experiences were discontinued on April 26, 2026. The Sora API will be discontinued on September 24, 2026.",
-    "lifecycle_status": "sunset",
+    "found_quote": "The OpenAI API lets you generate and edit images from text prompts using GPT Image models, including our latest, `gpt-image-2`. You can access image generation capabilities through two APIs: [Image API] ... [Responses API]",
+    "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Sora",
-    "page_content_hash": "03360dc0307f0c9a98945726319a3e6ec00af8e37767171d6273f84d5b376d06",
+    "name": "OpenAI image & video",
+    "page_content_hash": "11c9ad17efcb4f45b8f7362fbf431a6ae390da520264994b47007a5e66ec5aa8",
     "primary_capability_id": "image-video-generation",
     "provider": "OpenAI",
     "reconfirmed": true,
     "record_id": "openai-sora",
     "review_status": "confirmed",
     "source_tier": "official",
-    "source_url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+    "source_url": "https://developers.openai.com/api/docs/guides/image-generation.md",
     "supported": true,
     "verified_at": "2026-06-24"
   }

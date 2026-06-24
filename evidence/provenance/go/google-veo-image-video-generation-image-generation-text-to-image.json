@@ -1,0 +1,21 @@
+{
+  "key": "google-veo-image-video-generation-image-generation-text-to-image",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "## Image generation (text-to-image)\n\n...\n\n**Nano Banana** is the name for Gemini's native image generation capabilities. Gemini can generate and process images conversationally with text, images, or a combination of both.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Image generation (text-to-image)",
+    "page_content_hash": "1ed2d521cade3a59fb5949dcb41cad60baba2cb34df2188daea3eb3afadbf112",
+    "primary_capability_id": "image-video-generation",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-veo-image-video-generation-image-generation-text-to-image",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

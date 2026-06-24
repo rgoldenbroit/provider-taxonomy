@@ -1,0 +1,21 @@
+{
+  "key": "openai-sora-image-video-generation-video-editing",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Editing lets you take an existing video and make targeted adjustments without regenerating everything from scratch. Send `POST /v1/videos/edits` with a prompt and a `video` reference, and the system reuses the original structure, continuity, and composition while applying the modification.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Video editing",
+    "page_content_hash": "d453d29b3b87a91cca9d5eb901de6b53e3a897d28f6918e9f2343d8f78b1a6ad",
+    "primary_capability_id": "image-video-generation",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-sora-image-video-generation-video-editing",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/video-generation.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "dd6c0f86b413faef44be526c88ab9d0ee7fc16478541c3fe18dfda9aaa3e9af6",
+  "label": "judge:google-veo-image-video-generation-imagen",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Imagen is Google's high-fidelity image generation model, capable of generating realistic and high quality images from text prompts.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page directly substantiates the claim that Google offers Imagen as a high-fidelity text-to-image generation model producing realistic and high quality images from text prompts \u2014 the language is nearly verbatim. However, the page also clearly states that Imagen is deprecated and will be shut down on August 17, 2026, with a migration path to \"Nano Banana\" (gemini-2.5-flash-image). Since the model is deprecated but still operational until the shutdown date, the lifecycle status is 'deprecated'.",
+    "supported": true
+  }
+}

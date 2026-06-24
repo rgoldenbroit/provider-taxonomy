@@ -1,0 +1,12 @@
+{
+  "key": "fb860bf11c27034c532c1d7327157c80a824ca95b1bef83803b1c62ec4f97c82",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-background-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To improve reliability, we recommend using background mode, which allows you to execute long running tasks without worrying about timeouts or connectivity issues.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a Background mode feature (via `background=True` parameter in the Responses API) for deep research tasks. It confirms that research tasks can run asynchronously in the background, and that this mode allows execution of long-running tasks without worrying about timeouts or connectivity issues. Code examples show `background: true` being set. The page also notes it can be used with webhooks to receive notifications when a response is ready, further supporting the asynchronous nature described in the claim.",
+    "supported": true
+  }
+}

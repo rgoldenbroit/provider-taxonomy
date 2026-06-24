@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-connectors",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Connectors. If a connector is available\u2014like Gmail, Google Drive, or Slack\u2014Claude uses it. This is the fastest and most reliable path.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Connectors",
+    "page_content_hash": "64011739f986e15bb95ef0a46094b84ed9ebda5c6f8a361f0b5fb75cce94d216",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-connectors",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

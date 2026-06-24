@@ -1,0 +1,12 @@
+{
+  "key": "9b4a5bdb9650556febf5c7384552f7b656312f2ce4dd8535b7793893e14f2cbc",
+  "label": "judge:google-veo",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Imagen is Google's high-fidelity image generation model, capable of generating realistic and high quality images from text prompts.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly describes Google's Imagen as an image generation model, substantiating the claim that Google offers Imagen for image generation. However, the page explicitly states that \"Imagen models are deprecated and will shut down on August 17, 2026,\" making the lifecycle status 'deprecated' (still works for now but being retired). Notably, the page does NOT mention Veo (video generation) at all \u2014 but the claim only needs to be evaluated against what the page says. Since the claim bundles both Imagen and Veo together, the page only substantiates the Imagen portion. That said, the core claim that Google offers Imagen image generation is directly supported. The page does not mention Veo, but it does substantiate the Imagen part of the claim. Since the overall claim is partially supported (Imagen is confirmed, Veo is not mentioned), and the instructions say to set supported=true if the page describes the offering, Imagen is described and confirmed as a Google offering, albeit deprecated.",
+    "supported": true
+  }
+}

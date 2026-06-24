@@ -1,0 +1,12 @@
+{
+  "key": "5a652551166bea64d8db3e31207dc365338e8455f0a676c5c25e3881b1edae70",
+  "label": "judge:openai-chatgpt-deep-research",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The `o3-deep-research` and `o4-mini-deep-research` models can find, analyze, and synthesize hundreds of sources to create a comprehensive report at the level of a research analyst. These models are optimized for browsing and data analysis, and can use web search, remote MCP servers, and file search over internal vector stores to generate detailed reports",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's Deep Research capability \u2014 autonomous, multi-step research models (o3-deep-research and o4-mini-deep-research) that browse the web, analyze data, and synthesize information from hundreds of sources into detailed reports. The page also references \"Deep Research in ChatGPT\" as an existing product. No deprecation or preview language is used; the models and API are presented as currently available and actively documented with full code examples.",
+    "supported": true
+  }
+}

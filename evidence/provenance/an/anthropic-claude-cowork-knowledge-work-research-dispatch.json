@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-dispatch",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude Cowork gives you one continuous conversation with Claude that you can reach from your phone or your desktop. Assign Claude a task, go do something else, and come back to the finished work. Claude runs on your computer\u2014with access to your local files, connectors, plugins, and your apps through computer use\u2014and messages you the result when it's done. This capability is available in beta for Pro and Max plans on Claude Cowork.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Dispatch",
+    "page_content_hash": "e3481e85005090e4fac281444571895c430bce7ca78cae5462ed338fc09ba1e1",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-dispatch",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

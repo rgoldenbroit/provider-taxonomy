@@ -1,0 +1,12 @@
+{
+  "key": "5c34d59cac9301f02c785ad037ed623342bb90fa4c7da30663be0988e1918c26",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-file-search",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "These models are optimized for browsing and data analysis, and can use web search, remote MCP servers, and file search over internal vector stores to generate detailed reports",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that the deep research models (o3-deep-research and o4-mini-deep-research) support file search over internal vector stores, which directly matches the claim. The page also provides working code examples demonstrating the \"file_search\" tool with \"vector_store_ids\", confirming the feature is actively available via the Responses API. No preview or deprecated language is used for this feature.",
+    "supported": true
+  }
+}

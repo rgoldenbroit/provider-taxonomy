@@ -1,0 +1,12 @@
+{
+  "key": "c0a3597041f22ae43956110cc60433800e8b9036085ce9c55cb911504604f0eb",
+  "label": "judge:openai-sora-image-video-generation-gpt-image-models",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To ensure these models are used responsibly, you may need to complete the API Organization Verification from your developer console before using GPT Image models, including `gpt-image-2`, `gpt-image-1.5`, `gpt-image-1`, and `gpt-image-1-mini`.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that OpenAI offers GPT Image models for image generation. It lists all four models mentioned in the claim \u2014 gpt-image-2, gpt-image-1.5, gpt-image-1, and gpt-image-1-mini \u2014 by name. The page describes them as OpenAI's first-party image generation models available via both the Image API and Responses API, with gpt-image-2 being the latest. No deprecation or sunset language is present; they are presented as current, actively available offerings.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "e4c7a3dfc79cbb88e378d16056b21aeb5a76701fb7fc6cafbcc2525e3b365ca5",
+  "label": "judge:google-veo-image-video-generation-image-editing-text-and-image-to-image",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Image editing (text-and-image-to-image)\n\n**Reminder** : Make sure you have the necessary rights to any images you upload.\nDon't generate content that infringe on others' rights, including videos or\nimages that deceive, harass, or harm. Your use of this generative AI service is\nsubject to our [Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy).\n\nProvide an image and use text prompts to add, remove, or modify elements,\nchange the style, or adjust the color grading.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains an explicit section titled \"Image editing (text-and-image-to-image)\" and describes the capability in language that matches the claim almost verbatim: \"Provide an image and use text prompts to add, remove, or modify elements, change the style, or adjust the color grading.\" The page further provides working code examples in Python, JavaScript, and REST for this capability, and presents it as a generally available feature of the Gemini API without any preview/beta caveats for this specific feature.",
+    "supported": true
+  }
+}

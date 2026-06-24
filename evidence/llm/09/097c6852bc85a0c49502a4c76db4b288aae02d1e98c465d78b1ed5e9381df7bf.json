@@ -1,0 +1,12 @@
+{
+  "key": "097c6852bc85a0c49502a4c76db4b288aae02d1e98c465d78b1ed5e9381df7bf",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-clarification-and-prompt-rewriting",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "1. **Clarification**: When you ask a question, an intermediate model (like `gpt-4.1`) helps clarify the user's intent and gather more context (such as preferences, goals, or constraints) before the research process begins. This extra step helps the system tailor its web searches and return more relevant and targeted results.\n2. **Prompt rewriting**: An intermediate model (like `gpt-4.1`) takes the original user input and clarifications, and produces a more detailed prompt.\n3. **Deep research**: The detailed, expanded prompt is passed to the deep research model, which conducts research and returns it.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes both Clarification and Prompt Rewriting as a multi-step process where an intermediate model (like gpt-4.1) either asks follow-up clarifying questions or rewrites/enriches the user's prompt before the deep research task runs. The page provides detailed guidance and code examples showing how developers can implement these optional steps via the Responses API. This directly substantiates the claim.",
+    "supported": true
+  }
+}

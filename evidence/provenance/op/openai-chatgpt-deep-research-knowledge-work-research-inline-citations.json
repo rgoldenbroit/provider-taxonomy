@@ -1,0 +1,21 @@
+{
+  "key": "openai-chatgpt-deep-research-knowledge-work-research-inline-citations",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**message**: The model's final answer with inline citations. ... \"text\": \"...answer with inline citations...\", \"annotations\": [ { \"url\": \"https://www.realwatersports.com\", \"title\": \"Real Water Sports\", \"start_index\": 123, \"end_index\": 145 } ]",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Inline citations",
+    "page_content_hash": "ed88b156ab5b54d1f4f41fadcdda1f4ee25f9acef734a6e2b20d41c3dec1fa40",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-chatgpt-deep-research-knowledge-work-research-inline-citations",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/deep-research.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

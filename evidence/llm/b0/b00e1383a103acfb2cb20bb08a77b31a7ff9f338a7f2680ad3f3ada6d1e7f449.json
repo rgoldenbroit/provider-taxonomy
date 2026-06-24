@@ -1,0 +1,12 @@
+{
+  "key": "b00e1383a103acfb2cb20bb08a77b31a7ff9f338a7f2680ad3f3ada6d1e7f449",
+  "label": "judge:openai-sora-image-video-generation-video-editing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Editing lets you take an existing video and make targeted adjustments without regenerating everything from scratch. Send `POST /v1/videos/edits` with a prompt and a `video` reference, and the system reuses the original structure, continuity, and composition while applying the modification.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a Video editing feature via the `POST /v1/videos/edits` endpoint, which enables targeted modifications to an existing video without regenerating it from scratch. The feature is documented as generally available (with a note that the older \"remix\" endpoint is being deprecated in favor of this new edits endpoint), confirming it is active. The description directly matches the claim's definition of \"targeted modifications to an existing video without regenerating it from scratch.\"",
+    "supported": true
+  }
+}

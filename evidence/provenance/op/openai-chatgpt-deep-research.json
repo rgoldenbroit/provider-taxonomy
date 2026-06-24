@@ -3,18 +3,18 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks. It accomplishes in tens of minutes what would take a human many hours. Deep research is OpenAI's next agent that can do work for you independently\u2014you give it a prompt, and ChatGPT will find, analyze, and synthesize hundreds of online sources to create a comprehensive report at the level of a research analyst.",
+    "found_quote": "The `o3-deep-research` and `o4-mini-deep-research` models can find, analyze, and synthesize hundreds of sources to create a comprehensive report at the level of a research analyst. These models are optimized for browsing and data analysis, and can use web search, remote MCP servers, and file search over internal vector stores to generate detailed reports",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "ChatGPT Deep Research",
-    "page_content_hash": "d1301e0c1ff411f7c05306ae6682cf3efa9489689de9263d56b94de6c9231889",
+    "page_content_hash": "ed88b156ab5b54d1f4f41fadcdda1f4ee25f9acef734a6e2b20d41c3dec1fa40",
     "primary_capability_id": "knowledge-work-research",
     "provider": "OpenAI",
     "reconfirmed": true,
     "record_id": "openai-chatgpt-deep-research",
     "review_status": "confirmed",
     "source_tier": "official",
-    "source_url": "https://openai.com/index/introducing-deep-research/",
+    "source_url": "https://developers.openai.com/api/docs/guides/deep-research.md",
     "supported": true,
     "verified_at": "2026-06-24"
   }

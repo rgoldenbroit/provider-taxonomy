@@ -1,0 +1,12 @@
+{
+  "key": "b085437dbd4eaa0d1744fb325fbd23febe98d2207c3b216a7e7dce958f466a80",
+  "label": "judge:openai-sora-image-video-generation-sora-2",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`sora-2` is designed for **speed and flexibility**. It's ideal for the exploration phase, when you're experimenting with tone, structure, or visual style and need quick feedback rather than perfect fidelity. It generates good quality results quickly, making it well suited for rapid iteration, concepting, and rough cuts.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Sora 2 (`sora-2`) as a model variant optimized for speed, flexibility, and rapid iteration. The claim accurately characterizes Sora 2 as \"a fast, flexible video generation model variant optimized for rapid iteration and exploration,\" which matches the page's description of `sora-2` being \"designed for speed and flexibility,\" \"ideal for the exploration phase,\" and \"well suited for rapid iteration.\" The page presents this as a generally available, active offering with working API code examples.",
+    "supported": true
+  }
+}

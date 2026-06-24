@@ -1,0 +1,21 @@
+{
+  "key": "openai-sora-image-video-generation-gpt-image-models",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "To ensure these models are used responsibly, you may need to complete the API Organization Verification from your developer console before using GPT Image models, including `gpt-image-2`, `gpt-image-1.5`, `gpt-image-1`, and `gpt-image-1-mini`.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "GPT Image models",
+    "page_content_hash": "11c9ad17efcb4f45b8f7362fbf431a6ae390da520264994b47007a5e66ec5aa8",
+    "primary_capability_id": "image-video-generation",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-sora-image-video-generation-gpt-image-models",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/image-generation.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "594cc9cf9473dbf06f9f3da401011b426097f8c7a6be44570c5a2fadee689d00",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-code-interpreter",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can also include the [code interpreter](https://developers.openai.com/api/docs/guides/tools-code-interpreter) tool to allow the model to perform complex analysis by writing code.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that deep research models (o3-deep-research and o4-mini-deep-research) can include the code interpreter tool to perform complex analysis by writing code. The page also shows working code examples with `\"type\": \"code_interpreter\"` included in the tools array, and mentions `code_interpreter_call` as a valid output item type. This directly substantiates the claim that deep research models can write and execute code to perform complex quantitative analysis as part of a research task.",
+    "supported": true
+  }
+}

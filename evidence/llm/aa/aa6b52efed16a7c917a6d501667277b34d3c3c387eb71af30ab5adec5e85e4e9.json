@@ -1,0 +1,12 @@
+{
+  "key": "aa6b52efed16a7c917a6d501667277b34d3c3c387eb71af30ab5adec5e85e4e9",
+  "label": "judge:openai-sora-image-video-generation-image-references",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can guide a generation with an input image, which acts as **the first frame of your video**. This is useful if you need the output video to preserve the look of a brand asset, a character, or a specific environment.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes an \"image references\" feature under the section \"Use image references,\" stating that an input image acts as the first frame of the generated video. This directly matches the claim. The feature is documented as generally available with code examples and no preview/beta qualifiers.",
+    "supported": true
+  }
+}

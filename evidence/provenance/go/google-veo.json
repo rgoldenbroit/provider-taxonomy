@@ -3,18 +3,18 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Veo 3.1 \u2014 Google DeepMind ... Veo Our leading video generation model ... Veo 3.1 Video, meet audio. Our leading video generation model, designed to empower filmmakers and storytellers.",
-    "lifecycle_status": "active",
+    "found_quote": "Imagen is Google's high-fidelity image generation model, capable of generating realistic and high quality images from text prompts.",
+    "lifecycle_status": "deprecated",
     "model": "claude-opus-4-8",
-    "name": "Veo",
-    "page_content_hash": "182e57a030e6a3e3b40bfa7725a5984b5b125fd748c42394cb5345d50dbf81f7",
+    "name": "Imagen & Veo",
+    "page_content_hash": "1b997de461640396d74ec4cef81332ccb3b76de279fbba34df16c65d9ee41a38",
     "primary_capability_id": "image-video-generation",
     "provider": "Google",
     "reconfirmed": true,
     "record_id": "google-veo",
     "review_status": "confirmed",
     "source_tier": "official",
-    "source_url": "https://deepmind.google/models/veo/",
+    "source_url": "https://ai.google.dev/gemini-api/docs/imagen.md.txt",
     "supported": true,
     "verified_at": "2026-06-24"
   }

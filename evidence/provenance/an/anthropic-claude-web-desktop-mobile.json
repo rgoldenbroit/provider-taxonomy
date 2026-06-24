@@ -3,18 +3,18 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Download the desktop app:\nmacOS\nWindows\nWindows (arm64)\nTry Claude on mobile:\nApple\nGoogle Play",
+    "found_quote": "Single sign-on is available for Team plans, Enterprise plans, and Console organizations. This guide covers the steps to configure SSO for Team and Enterprise plans, and Claude Console organizations.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Claude (web/desktop/mobile)",
-    "page_content_hash": "24d528e64007a37cbfee0ef6024d33056bc2b5ed0a04b7d77092d3703c018e2f",
+    "name": "Claude (Team/Enterprise)",
+    "page_content_hash": "5242986e43636cceebfc2b015640d8f77ebbff168ee55cfc3ddaa12dca9990ab",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
     "reconfirmed": true,
     "record_id": "anthropic-claude-web-desktop-mobile",
     "review_status": "confirmed",
     "source_tier": "official",
-    "source_url": "https://www.anthropic.com/claude",
+    "source_url": "https://support.claude.com/en/articles/13132885-set-up-single-sign-on-sso.md",
     "supported": true,
     "verified_at": "2026-06-24"
   }

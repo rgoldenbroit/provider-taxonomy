@@ -1,0 +1,12 @@
+{
+  "key": "2d46ae96d734ffe9de44b824a3f1c307122b0f793be441c90a4c3d43dc83fd83",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-dispatch",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Cowork gives you one continuous conversation with Claude that you can reach from your phone or your desktop. Assign Claude a task, go do something else, and come back to the finished work. Claude runs on your computer\u2014with access to your local files, connectors, plugins, and your apps through computer use\u2014and messages you the result when it's done. This capability is available in beta for Pro and Max plans on Claude Cowork.",
+    "lifecycle_status": "beta",
+    "rationale": "The page substantiates the claim. It describes \"Dispatch\" as a feature within Claude Cowork that provides a single persistent conversation thread accessible from mobile or desktop, allowing users to assign knowledge-work tasks to Claude from anywhere while it works on the desktop. The page explicitly names the feature \"Dispatch\" (users click \"Dispatch\" on the left side panel), describes it as a single persistent thread, and confirms it is accessible from phone or desktop. The only discrepancy is that the page attributes the feature to \"Anthropic's Claude Cowork\" rather than calling it a standalone product named \"Dispatch,\" and it is currently in beta rather than fully active.",
+    "supported": true
+  }
+}

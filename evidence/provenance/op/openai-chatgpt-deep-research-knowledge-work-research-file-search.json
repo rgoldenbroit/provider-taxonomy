@@ -1,0 +1,21 @@
+{
+  "key": "openai-chatgpt-deep-research-knowledge-work-research-file-search",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "These models are optimized for browsing and data analysis, and can use web search, remote MCP servers, and file search over internal vector stores to generate detailed reports",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "File search",
+    "page_content_hash": "ed88b156ab5b54d1f4f41fadcdda1f4ee25f9acef734a6e2b20d41c3dec1fa40",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-chatgpt-deep-research-knowledge-work-research-file-search",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/deep-research.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

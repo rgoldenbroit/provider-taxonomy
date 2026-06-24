@@ -1,0 +1,12 @@
+{
+  "key": "ea30cfe6054af231e959498f5de9685b44f89f2cb663f5d44c71099c449d3003",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-projects",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Projects: Group related tasks into separate workspaces with their own files, context, instructions, and memory.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Projects\" feature in Claude Cowork that allows users to organize related tasks into persistent, self-contained workspaces with their own files, context, instructions, and memory. This directly matches the claim. The page also references a dedicated article for this feature and mentions it in the \"What is Claude Cowork?\" section as an introduced capability, indicating it is currently active/available.",
+    "supported": true
+  }
+}

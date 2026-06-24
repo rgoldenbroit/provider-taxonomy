@@ -1,0 +1,21 @@
+{
+  "key": "openai-sora-image-video-generation-image-references",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "You can guide a generation with an input image, which acts as **the first frame of your video**. This is useful if you need the output video to preserve the look of a brand asset, a character, or a specific environment.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Image references",
+    "page_content_hash": "d453d29b3b87a91cca9d5eb901de6b53e3a897d28f6918e9f2343d8f78b1a6ad",
+    "primary_capability_id": "image-video-generation",
+    "provider": "OpenAI",
+    "reconfirmed": true,
+    "record_id": "openai-sora-image-video-generation-image-references",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://developers.openai.com/api/docs/guides/video-generation.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

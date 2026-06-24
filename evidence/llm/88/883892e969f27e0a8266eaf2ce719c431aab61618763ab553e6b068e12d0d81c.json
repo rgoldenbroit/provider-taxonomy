@@ -1,0 +1,12 @@
+{
+  "key": "883892e969f27e0a8266eaf2ce719c431aab61618763ab553e6b068e12d0d81c",
+  "label": "judge:anthropic-claude-web-desktop-mobile-consumer-chat-assistant-scim-provisioning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When you connect your identity provider (IdP) to your Enterprise organization through the WorkOS integration, two things sync from your IdP: Members from your SCIM directory [and] SCIM groups that you've pushed from your IdP to WorkOS [...] Your Enterprise organization receives changes from your IdP automatically whenever your IdP pushes member or group updates (adds, removes, or edits) to WorkOS.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It confirms that Anthropic's Enterprise plan offers SCIM provisioning via the WorkOS integration, that membership and groups are synced from an identity provider, and that automatic provisioning and deprovisioning occur when the IdP pushes updates (adds, removes, or edits) to WorkOS. The page is an active support article marked \"Available on the Enterprise plan\" with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

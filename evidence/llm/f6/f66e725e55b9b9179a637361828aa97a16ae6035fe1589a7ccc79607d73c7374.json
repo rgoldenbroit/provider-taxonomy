@@ -1,0 +1,12 @@
+{
+  "key": "f66e725e55b9b9179a637361828aa97a16ae6035fe1589a7ccc79607d73c7374",
+  "label": "judge:openai-sora",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The OpenAI API lets you generate and edit images from text prompts using GPT Image models, including our latest, `gpt-image-2`. You can access image generation capabilities through two APIs: [Image API] ... [Responses API]",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates that OpenAI offers image generation (GPT Image) via the OpenAI API \u2014 both through the Image API and the Responses API \u2014 and describes it as a current, generally available offering with code examples, model names, and endpoint references. However, the page contains no mention of video generation or the Sora app (discontinued or otherwise), so only the image generation portion of the claim is directly substantiated by this page.",
+    "supported": true
+  }
+}

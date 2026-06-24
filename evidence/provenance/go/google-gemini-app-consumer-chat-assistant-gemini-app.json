@@ -1,0 +1,21 @@
+{
+  "key": "google-gemini-app-consumer-chat-assistant-gemini-app",
+  "value": {
+    "confidence": "low",
+    "fetch_ok": true,
+    "found_quote": "Chat with AI in the Gemini app\nBrainstorm, create content, analyze information, and generate insights with your secure everyday AI assistant at work",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Gemini app",
+    "page_content_hash": "89727a55dcf71bbb62030b40bd542c4f648fb1b75a92a81c52b74216059803ec",
+    "primary_capability_id": "consumer-chat-assistant",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-gemini-app-consumer-chat-assistant-gemini-app",
+    "review_status": "needs_review",
+    "source_tier": "low",
+    "source_url": "https://workspace.google.com/solutions/ai/",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

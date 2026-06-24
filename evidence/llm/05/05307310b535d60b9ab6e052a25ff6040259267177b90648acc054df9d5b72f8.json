@@ -1,0 +1,12 @@
+{
+  "key": "05307310b535d60b9ab6e052a25ff6040259267177b90648acc054df9d5b72f8",
+  "label": "judge:google-gemini-app-consumer-chat-assistant-gemini-app",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Chat with AI in the Gemini app\nBrainstorm, create content, analyze information, and generate insights with your secure everyday AI assistant at work",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists the Gemini app as a product (\"AI assistant\") and describes it as a \"secure everyday AI assistant at work\" that lets users \"Brainstorm, create content, analyze information, and generate insights.\" The page also references it being available via laptop and mobile contexts (as part of Google Workspace plans), and the product navigation lists it alongside other active products. This substantiates the claim's description of the Gemini app as a secure everyday conversational AI assistant for work that supports brainstorming, content creation, analyzing information, learning, and planning.",
+    "supported": true
+  }
+}

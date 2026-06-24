@@ -1,0 +1,12 @@
+{
+  "key": "d74cb1eedccfe79d1913e5c15891f44bd675269555e98dd822df22db768cf816",
+  "label": "judge:google-gemini-app",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google Workspace with Gemini weaves AI into apps you use every day like Gmail, Docs, Sheets, Meet, Chat, Vids, and more. It also provides powerful standalone tools like the Gemini app and NotebookLM.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Google Workspace with Gemini as a current, generally available offering, including pricing plans (e.g., Business Standard at $14/user/month and Gemini Enterprise), detailed feature descriptions, and customer testimonials. The offering is actively sold and described throughout the page.",
+    "supported": true
+  }
+}

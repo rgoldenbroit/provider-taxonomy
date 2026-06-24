@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-projects",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Projects: Group related tasks into separate workspaces with their own files, context, instructions, and memory.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Projects",
+    "page_content_hash": "b4bbb38208308adea06614dcb13af9174ecbdb4fb748eeab67518bd470553211",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-projects",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

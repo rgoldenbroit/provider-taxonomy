@@ -97,6 +97,12 @@ CAPABILITY_AXES = {
     "image-video-generation": {"image-video-generation": [
         "image", "video", "generation", "imagen", "veo", "sora", "gpt-image", "edit", "render",
         "resolution", "aspect ratio", "prompt", "style", "frame"]},
+    "knowledge-work-research": {"knowledge-work-research": [
+        "research", "deep research", "report", "source", "cite", "notebook", "document", "summarize",
+        "task", "schedule", "cowork", "analyze", "synthesis", "workspace"]},
+    "consumer-chat-assistant": {"consumer-chat-assistant": [
+        "enterprise", "team", "admin", "sso", "scim", "security", "compliance", "workspace", "data",
+        "governance", "controls", "user management", "chat", "assistant"]},
 }
 
 _norm = lambda s: re.sub(r"[^a-z0-9]", "", (s or "").lower())

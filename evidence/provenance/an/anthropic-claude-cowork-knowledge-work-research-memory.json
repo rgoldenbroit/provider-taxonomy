@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-memory",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude remembers what you've worked on and learns how you work. Context carries across sessions, so you don't have to re-explain your preferences, your projects, or how you like things done.\n\nYou control what Claude remembers. You can view, edit, and delete your memory at any time.",
+    "lifecycle_status": "beta",
+    "model": "claude-opus-4-8",
+    "name": "Memory",
+    "page_content_hash": "e3481e85005090e4fac281444571895c430bce7ca78cae5462ed338fc09ba1e1",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-memory",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

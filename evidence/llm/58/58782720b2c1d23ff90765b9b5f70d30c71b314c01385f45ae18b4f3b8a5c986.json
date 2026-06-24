@@ -1,0 +1,12 @@
+{
+  "key": "58782720b2c1d23ff90765b9b5f70d30c71b314c01385f45ae18b4f3b8a5c986",
+  "label": "judge:openai-sora-image-video-generation-image-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Starting with `gpt-image-1` and later models, the [Image API](https://developers.openai.com/api/docs/api-reference/images) provides two endpoints, each with distinct capabilities:\n\n- **Generations**: [Generate images](#generate-images) from scratch based on a text prompt\n- **Edits**: [Modify existing images](#edit-images) using a new prompt, either partially or entirely\n\n...\n\nThe Responses API and Image API support streaming image generation. You can stream partial images as the APIs generate them, providing a more interactive experience.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly describes the Image API as a dedicated API for generating and editing images from text prompts using GPT Image models (e.g., gpt-image-2). It also explicitly states that the Image API supports streaming of partial images, with code examples showing `stream: true` and `partial_images: 2` parameters. All key aspects of the claim \u2014 dedicated Image API, text-prompt-based generation and editing, GPT Image models, and progressive streaming of partial images \u2014 are substantiated by the page.",
+    "supported": true
+  }
+}

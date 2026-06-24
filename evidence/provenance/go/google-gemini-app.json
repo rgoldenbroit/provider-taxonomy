@@ -1,20 +1,20 @@
 {
   "key": "google-gemini-app",
   "value": {
-    "confidence": "high",
+    "confidence": "low",
     "fetch_ok": true,
-    "found_quote": "Gemini app\nYour personal, proactive and powerful AI Assistant",
+    "found_quote": "Google Workspace with Gemini weaves AI into apps you use every day like Gmail, Docs, Sheets, Meet, Chat, Vids, and more. It also provides powerful standalone tools like the Gemini app and NotebookLM.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Gemini app",
-    "page_content_hash": "963edb152d86f246d325b9cabd916e583164242c05d7308f975a7f1b25674708",
+    "name": "Gemini for Workspace",
+    "page_content_hash": "89727a55dcf71bbb62030b40bd542c4f648fb1b75a92a81c52b74216059803ec",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Google",
     "reconfirmed": true,
     "record_id": "google-gemini-app",
     "review_status": "confirmed",
-    "source_tier": "official",
-    "source_url": "https://gemini.google/about/",
+    "source_tier": "low",
+    "source_url": "https://workspace.google.com/solutions/ai/",
     "supported": true,
     "verified_at": "2026-06-24"
   }

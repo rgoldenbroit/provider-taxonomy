@@ -1,0 +1,12 @@
+{
+  "key": "eb046a0a9b31ffed9794ff8147140dab1cde4ac44cb86a73cafc0124f5a4d8c5",
+  "label": "judge:openai-sora-image-video-generation-video-extensions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Each extension can add up to `20` seconds. A single video can be extended up to six times, for a maximum total length of `120` seconds.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Video extensions\" feature under \"Extend completed videos\" that continues an existing completed video by generating additional segments while preserving scene continuity (motion, camera direction, and scene continuity). It confirms the maximum total length of 120 seconds (up to 6 extensions of up to 20 seconds each), matching the claim. The feature is documented as currently available via POST /v1/videos/extensions with no preview/beta caveat on the feature itself.",
+    "supported": true
+  }
+}

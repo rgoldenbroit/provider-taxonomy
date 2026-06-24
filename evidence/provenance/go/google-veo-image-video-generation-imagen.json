@@ -1,0 +1,21 @@
+{
+  "key": "google-veo-image-video-generation-imagen",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Imagen is Google's high-fidelity image generation model, capable of generating realistic and high quality images from text prompts.",
+    "lifecycle_status": "deprecated",
+    "model": "claude-opus-4-8",
+    "name": "Imagen",
+    "page_content_hash": "1b997de461640396d74ec4cef81332ccb3b76de279fbba34df16c65d9ee41a38",
+    "primary_capability_id": "image-video-generation",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-veo-image-video-generation-imagen",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://ai.google.dev/gemini-api/docs/imagen.md.txt",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

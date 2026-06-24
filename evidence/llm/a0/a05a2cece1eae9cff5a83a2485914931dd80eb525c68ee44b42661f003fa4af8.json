@@ -1,0 +1,12 @@
+{
+  "key": "a05a2cece1eae9cff5a83a2485914931dd80eb525c68ee44b42661f003fa4af8",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-web-search",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The `o3-deep-research` and `o4-mini-deep-research` models can find, analyze, and synthesize hundreds of sources to create a comprehensive report at the level of a research analyst. These models are optimized for browsing and data analysis, and can use web search, remote MCP servers, and file search over internal vector stores to generate detailed reports",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's deep research models (o3-deep-research and o4-mini-deep-research) as being capable of autonomously searching the web (via the web_search tool, e.g., \"web_search_preview\") and synthesizing hundreds of sources to produce comprehensive reports. This directly substantiates the claim. The offering is presented as currently available with no deprecation or preview caveats.",
+    "supported": true
+  }
+}

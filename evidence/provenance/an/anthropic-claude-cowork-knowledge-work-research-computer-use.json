@@ -1,0 +1,21 @@
+{
+  "key": "anthropic-claude-cowork-knowledge-work-research-computer-use",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Claude can now use your computer to complete tasks in Cowork and Claude Code... When Claude doesn't have a connector or tool for what you need, it navigates your screen directly\u2014clicking, typing, and opening apps just like you would. It can work in your browser, open files, and run your dev tools automatically, with no setup required.",
+    "lifecycle_status": "preview",
+    "model": "claude-opus-4-8",
+    "name": "Computer use",
+    "page_content_hash": "64011739f986e15bb95ef0a46094b84ed9ebda5c6f8a361f0b5fb75cce94d216",
+    "primary_capability_id": "knowledge-work-research",
+    "provider": "Anthropic",
+    "reconfirmed": true,
+    "record_id": "anthropic-claude-cowork-knowledge-work-research-computer-use",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork.md",
+    "supported": true,
+    "verified_at": "2026-06-24"
+  }
+}

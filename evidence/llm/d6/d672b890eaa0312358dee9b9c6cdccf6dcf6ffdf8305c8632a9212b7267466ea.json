@@ -1,0 +1,12 @@
+{
+  "key": "d672b890eaa0312358dee9b9c6cdccf6dcf6ffdf8305c8632a9212b7267466ea",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-scheduled-tasks-and-routines",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Scheduled tasks allow you to delegate work to Claude Cowork by creating tasks that run automatically on a recurring basis, or on demand. Instead of starting each task from scratch, you describe it once and Claude handles it on your schedule\u2014delivering finished outputs like reports, briefings, and summaries every time.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates the claim. It describes a feature called \"Scheduled tasks\" that allows users to delegate recurring knowledge-work tasks (reports, briefings, summaries, research, etc.) that Claude runs automatically on a set cadence or on demand, without requiring further prompting each time. The page states it is available for all paid plans (Pro, Max, Team, Enterprise), indicating it is generally available/active rather than in preview or beta.",
+    "supported": true
+  }
+}

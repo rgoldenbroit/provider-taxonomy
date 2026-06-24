@@ -1,0 +1,12 @@
+{
+  "key": "0211059527153f28ad96b8bb281351246580175a136a6a7e971ca74a6091759c",
+  "label": "judge:openai-chatgpt-deep-research-knowledge-work-research-inline-citations",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**message**: The model's final answer with inline citations. ... \"text\": \"...answer with inline citations...\", \"annotations\": [ { \"url\": \"https://www.realwatersports.com\", \"title\": \"Real Water Sports\", \"start_index\": 123, \"end_index\": 145 } ]",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes that the final message output from a deep research model includes inline citations with source metadata (URL, title, and character index positions linking back to specific spans of text). The output structure section shows a concrete JSON example where the \"message\" item contains \"annotations\" with url, title, start_index, and end_index fields \u2014 precisely matching the claim that research outputs include inline citations with source metadata linking claims back to their original sources. The page also instructs developers that \"inline citations should be made clearly visible and clickable in your user interface,\" further confirming this is an active, documented feature.",
+    "supported": true
+  }
+}
