@@ -1,0 +1,12 @@
+{
+  "key": "51119d0f6b8e6994ef31f6c216c46daae928732b6cfbb775767f7a19bce82d05",
+  "label": "judge:openai-agentkit-guardrails-safety-safety-classifiers-and-safety-checks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "We classify requests to GPT-5 into risk thresholds... To help ensure safety in your use of the OpenAI API and tools, we run safety checks on our own models, including all fine-tuned models, and on the computer use tool. Learn more: [Model evaluations hub], [Cyber Safety], [Fine-tuning safety], [Safety checks in computer use]",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) OpenAI classifies requests to GPT-5 into risk thresholds (\"We classify requests to GPT-5 into risk thresholds\"); (2) dedicated safety checks run across model usage (\"we run safety checks on our own models\"), tools (\"Safety checks in computer use\"), fine-tuning (\"Fine-tuning safety\"), and cybersecurity (\"Cyber Safety\"); (3) escalating consequences for hazardous requests are described (delayed streaming responses \u2192 blocked model access for individual users \u2192 loss of access for the entire organization). The page presents this as a currently active, generally available system with no preview or beta language.",
+    "supported": true
+  }
+}

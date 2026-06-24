@@ -218,6 +218,9 @@
   .cov { display:grid; gap:12px; min-width:760px; align-items:start; }
   .cov-caph { padding:4px 2px; }
   .cov-caph .capname { font-weight:650; letter-spacing:-.01em; }
+  .axesstrip { margin-top:16px; padding-top:14px; border-top:1px solid var(--line); line-height:2.1; }
+  .axischip { display:inline-block; cursor:pointer; font-size:12px; border:1px solid var(--line); border-radius:999px; padding:3px 11px; margin:2px 5px 2px 0; color:var(--ink); }
+  .axischip:hover { border-color:var(--accent); color:var(--accent); }
   .cov-cell { display:flex; flex-wrap:wrap; gap:6px; align-content:flex-start; padding-top:2px; }
   .cov-pill { display:inline-flex; align-items:center; gap:6px; font-size:12px; padding:4px 9px; border-radius:999px; border:1px solid var(--line); background:var(--panel); cursor:pointer; box-shadow:var(--shadow); transition:transform .12s,border-color .12s,box-shadow .12s; }
   .cov-pill:hover { border-color:var(--accent); transform:translateY(-1px); box-shadow:var(--shadow-lift); }
@@ -297,6 +300,9 @@ const cats = D.categories || [];
 const catsByFunction = {};   // function (capability) id → ordered categories
 cats.forEach(c => (catsByFunction[c.function_id] ||= []).push(c));
 Object.values(catsByFunction).forEach(list => list.sort((a,b)=>(a.order||0)-(b.order||0)));
+// capabilities used only as feature-AXES (sub-dimensions inside product trees), not standalone products.
+// The Overview matrix shows product capabilities only; these live inside pop-outs + an axes strip.
+const axisIds = new Set(cats.flatMap(c => c.feature_axis_ids || []));
 const childrenOf = id => prods.filter(q => q.parent_id === id);
 const isScaffold = p => p.review_status === 'scaffold';
 function countDescendants(id){ return childrenOf(id).reduce((n,c)=>n+1+countDescendants(c.id), 0); }
@@ -546,13 +552,17 @@ function viewOverview(){
   cov += `<div class="colhead">capability</div>` +
     providers.map(p=>`<div class="colhead" style="border-bottom-color:${provVar(p)}">${esc(p)}</div>`).join('');
   for (const tier of tiers){
-    for (const c of caps.filter(x=>x.tier===tier && x.id!=='unclassified')){
+    for (const c of caps.filter(x=>x.tier===tier && x.id!=='unclassified' && !axisIds.has(x.id))){
       const drill = catsByFunction[c.id] ? `<span class="caparrow" title="compare across providers">&rsaquo;</span>` : '';
       cov += `<div class="cov-caph"><div class="capname clickable" onclick="openCapability('${c.id}')" title="What is ${esc(c.name)}? How providers compare">${esc(c.name)}${drill}</div><div class="faint small">${esc(c.tier).replace(/_/g,' ')}</div></div>`;
       cov += providers.map(pr=>covCell(c.id, pr)).join('');
     }
   }
   cov += `</div></div>`;
+  const axisCaps = caps.filter(c => axisIds.has(c.id));
+  if (axisCaps.length)
+    cov += `<div class="axesstrip"><span class="faint small">Cross-cutting developer-platform axes (compared inside each product):</span> `
+      + axisCaps.map(c=>`<span class="axischip" onclick="openCapability('${c.id}')">${esc(c.name)}</span>`).join('') + `</div>`;
   return `
   <section class="hero">
     <h1>The AI provider landscape, kept honest.</h1>

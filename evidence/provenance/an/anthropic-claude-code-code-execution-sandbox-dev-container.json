@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container: you browse and edit files in the editor as usual, but the integrated terminal, language servers, and build tools all run inside the container rather than on your host. ... Claude Code runs inside the container, so it sees the same files, dependencies, and tools as the rest of your project's toolchain. In VS Code you can use either the Claude Code extension panel or run `claude` in the integrated terminal; both run inside the container and share the same `~/.claude` configuration.",
+    "found_quote": "A dev container runs as a Docker container, either on your machine or on a cloud host such as GitHub Codespaces. An editor that supports the Dev Containers spec, such as VS Code, GitHub Codespaces, a JetBrains IDE, or Cursor, connects to that container: you browse and edit files in the editor as usual, but the integrated terminal, language servers, and build tools all run inside the container rather than on your host... Claude Code runs inside the container, so it sees the same files, dependencies, and tools as the rest of your project's toolchain. In VS Code you can use either the Claude Code extension panel or run `claude` in the integrated terminal; both run inside the container and share the same `~/.claude` configuration.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Dev container",
+    "name": "Dev Container Integration",
     "page_content_hash": "c2646f3035b13e1507cfb9f3fd524bcfdf11657a356584fb18d1e8e221d1de2a",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/devcontainer.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

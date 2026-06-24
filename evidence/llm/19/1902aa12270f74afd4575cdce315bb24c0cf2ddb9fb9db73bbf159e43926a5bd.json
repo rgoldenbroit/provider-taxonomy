@@ -1,0 +1,12 @@
+{
+  "key": "1902aa12270f74afd4575cdce315bb24c0cf2ddb9fb9db73bbf159e43926a5bd",
+  "label": "judge:openai-codex-remote-agent-control-cloud-environments",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use environments to control what Codex installs and runs during cloud tasks. For example, you can add dependencies, install tools like linters and formatters, and set environment variables. ... Secrets are similar to environment variables, except: They are stored with an additional layer of encryption and are only decrypted for task execution. ... Codex caches container state for up to 12 hours to speed up new tasks and follow-ups. ... The Codex agent runs in a default container image called `universal`, which comes pre-installed with common languages, packages, and tools.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes Cloud Environments as a feature that lets users control what Codex installs and runs during cloud tasks. It explicitly covers all the elements mentioned in the claim: (1) controlling installs and runs during cloud tasks, (2) container caching (up to 12 hours), (3) secrets (stored with additional encryption, available to setup scripts), and (4) a default universal image pre-installed with common languages and tools. The page is presented as current documentation with no deprecation or preview notices, indicating the feature is generally available.",
+    "supported": true
+  }
+}

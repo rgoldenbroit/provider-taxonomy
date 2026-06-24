@@ -1,0 +1,12 @@
+{
+  "key": "b642f2a08a045cbe33d8b6a3672404d90b977d465d84730dc1c4585d2da08afe",
+  "label": "judge:anthropic-claude-code-remote-agent-control-move-tasks-between-web-and-terminal",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Move sessions between web and terminal with `--remote` and `--teleport`. ... Run `/web-setup` in your terminal to sync your local `gh` CLI token to your Claude account.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes the ability to move sessions between the web and terminal using `--remote` and `--teleport` (mentioned in both the page description and the table of contents). It also describes `/web-setup` as a terminal command used to set up GitHub authentication for web sessions. The offering is in \"research preview\" status for Pro, Max, Team, and Enterprise users.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "d342f8cfdfbfc91cd372dc9b56009090b7528f0e4a3c7c879377bd6065b8a31b",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-custom-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Beyond these built-in subagents, you can create your own with custom prompts, tool restrictions, permission modes, hooks, and skills.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that users can create custom subagents with custom prompts, tool restrictions, permission modes, hooks, and skills \u2014 matching all elements of the claim. The page further substantiates this with detailed documentation on how to create subagents via the /agents command or manually via Markdown files with YAML frontmatter, covering configuration of tools, permissionMode, hooks, and skills fields.",
+    "supported": true
+  }
+}

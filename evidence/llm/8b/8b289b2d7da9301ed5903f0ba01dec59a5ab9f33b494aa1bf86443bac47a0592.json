@@ -1,0 +1,12 @@
+{
+  "key": "8b289b2d7da9301ed5903f0ba01dec59a5ab9f33b494aa1bf86443bac47a0592",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-forked-subagent",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A forked subagent (/en/sub-agents#fork-the-current-conversation) is a subagent that inherits your full conversation context instead of starting fresh. It's a way to spawn a subagent, not a separate surface.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"forked subagent\" as a subagent that inherits the full conversation context instead of starting fresh, which directly matches the claim. The page presents this as an existing feature with a dedicated anchor link, and does not mark it as preview, beta, or deprecated.",
+    "supported": true
+  }
+}

@@ -1,21 +1,21 @@
 {
   "key": "google-gemini-app",
   "value": {
-    "confidence": "medium",
+    "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "On February 8, 2024, Bard and Duet AI were unified under the Gemini brand, with a mobile app launched on Android and the service integrated into the Google app on iOS.",
+    "found_quote": "Gemini app\nYour personal, proactive and powerful AI Assistant",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Gemini app",
-    "page_content_hash": "9a94b7956bba362f38190ff3b37824dedd735c093741d9f42aa5a82c05eb0598",
+    "page_content_hash": "963edb152d86f246d325b9cabd916e583164242c05d7308f975a7f1b25674708",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Google",
     "reconfirmed": true,
     "record_id": "google-gemini-app",
     "review_status": "confirmed",
-    "source_tier": "reputable",
-    "source_url": "https://en.wikipedia.org/wiki/Gemini_(chatbot)",
+    "source_tier": "official",
+    "source_url": "https://gemini.google/about/",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

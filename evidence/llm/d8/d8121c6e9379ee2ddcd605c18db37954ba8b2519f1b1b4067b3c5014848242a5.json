@@ -1,0 +1,12 @@
+{
+  "key": "d8121c6e9379ee2ddcd605c18db37954ba8b2519f1b1b4067b3c5014848242a5",
+  "label": "judge:openai-codex-agent-evals-observability-tracing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tracing is built into the Agents SDK and is enabled by default in the normal server-side SDK path. Every run can emit a structured record of model calls, tool calls, handoffs, guardrails, and custom spans, which you can inspect in the Traces dashboard.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Built-in Run Tracing under the \"Tracing\" section, confirming it is built into the Agents SDK, enabled by default, and emits a structured record of model calls, tool calls, handoffs, guardrails, and custom spans viewable in a Traces dashboard \u2014 matching all elements of the claim. The feature is described as currently active with no deprecation or preview caveats.",
+    "supported": true
+  }
+}

@@ -6,7 +6,7 @@
     "found_quote": "Anthropic's Claude models are available through Vertex AI. ... Claude is also available through Amazon Bedrock, Claude Platform on AWS, and Microsoft Foundry.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Claude on third-party platforms",
+    "name": "Claude on Third-Party Platforms",
     "page_content_hash": "04b4d304e3f858e84605b1ef5ff34f085d9a6875451d6bc9d015bc3caba5f54a",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/api/claude-on-vertex-ai",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

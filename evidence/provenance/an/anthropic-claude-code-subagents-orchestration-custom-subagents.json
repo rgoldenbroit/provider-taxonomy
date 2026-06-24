@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Beyond these built-in subagents, you can create your own with custom prompts, tool restrictions, permission modes, hooks, and skills. The following sections show how to get started and customize subagents.",
+    "found_quote": "Beyond these built-in subagents, you can create your own with custom prompts, tool restrictions, permission modes, hooks, and skills.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Custom subagents",
-    "page_content_hash": "13f8ef3f23b8e8bc467516d292afe1397698924a52adc2c050ba7f0f8bbe66bb",
+    "name": "Custom Subagents",
+    "page_content_hash": "75febb466374fe9f543772d825d766f0daa44137454d4cf1f77cc7d2849bae9e",
     "primary_capability_id": "subagents-orchestration",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/sub-agents.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

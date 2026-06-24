@@ -1,0 +1,12 @@
+{
+  "key": "af22dc9f18736e9f6863c078879886a71aea48e04748a9770c97ebe393962509",
+  "label": "judge:google-notebooklm",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google NotebookLM | AI Research Tool & Thinking Partner",
+    "lifecycle_status": "active",
+    "rationale": "The page title explicitly identifies the product as \"Google NotebookLM\" and describes it as an \"AI Research Tool & Thinking Partner,\" directly confirming that Google offers NotebookLM. No deprecation, sunset, or preview language is present in the provided page content.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "753b0f2ab0a4a7bb21721e5cd2b1a86de32a1ef458ceb70e4f18fe4b886d2bd9",
+  "label": "judge:openai-agentkit-guardrails-safety-role-based-access-control-rbac",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Role-based access control (RBAC) lets you decide who can do what across your organization and projects\u2014both through the API and in the Dashboard.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents OpenAI's RBAC offering, confirming that it allows administrators to control who can perform what actions across the organization and projects. The page also lists network-level access control features such as \"IP allowlist\" (View and manage IP allowlist) and \"mTLS\" (View and manage mutual TLS settings) as permissions within the RBAC framework, substantiating the network-level access controls aspect of the claim. The offering is presented as currently active with detailed setup instructions, best practices, and a full permissions table.",
+    "supported": true
+  }
+}

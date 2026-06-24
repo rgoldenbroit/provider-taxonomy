@@ -1,0 +1,12 @@
+{
+  "key": "d1c5f16c587c8ae239497d314f8cb52b2ddd41dcad88b1124b54967e6acea15e",
+  "label": "judge:google-gemini-app",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Gemini app\nYour personal, proactive and powerful AI Assistant",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly describes the \"Gemini app\" as an offering from Google, listing it under multiple subscription tiers (Free, AI Plus, AI Pro, AI Ultra) as a core product. It is presented as generally available (\"Get started\") with no indication of deprecation or sunset. The page is Google's official Gemini about/landing page, substantiating that Google offers the Gemini app.",
+    "supported": true
+  }
+}

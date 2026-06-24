@@ -6,7 +6,7 @@
     "found_quote": "The content your agent reads and writes is not recorded by default. These opt-in variables add content to the exported data",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Control sensitive data in exports",
+    "name": "Sensitive Data Export Controls",
     "page_content_hash": "9ad3dc5567fc169a7f7adc8866757d667e90a116da8a1caf806b1523e9d065e1",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

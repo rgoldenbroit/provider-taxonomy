@@ -1,0 +1,12 @@
+{
+  "key": "6b53169c10d2a97b82077d7064cc114b5aed138010cd0ca06b248010a0b452ee",
+  "label": "judge:openai-codex-agent-evals-observability-prompt-optimizer",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use your dataset to automatically improve your prompts.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page explicitly lists \"Use your dataset to automatically improve your prompts.\" as one of the related evaluation surfaces under the \"Related evaluation surfaces\" section. This matches the claim's description of a \"Prompt Optimizer\" that \"Uses your dataset to automatically improve your prompts.\" The page does not, however, specify a lifecycle status (active, preview, etc.) for this offering.",
+    "supported": true
+  }
+}

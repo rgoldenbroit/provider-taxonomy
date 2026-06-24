@@ -1,0 +1,12 @@
+{
+  "key": "bfbca02c2f786cca6647e549405809f4db09f3bfe1a0fde473c049b14d7642ab",
+  "label": "judge:openai-codex-managed-agent-runtime-permissions-and-security-model",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Automations run unattended and use your default sandbox settings.\n\n- If your sandbox mode is **read-only**, tool calls fail if they require modifying files, accessing network, or working with apps on your computer. Consider updating sandbox settings to workspace write.\n- If your sandbox mode is **workspace-write**, tool calls fail if they require modifying files outside the workspace, accessing network, or working with apps on your computer. You can selectively allowlist commands to run outside the sandbox using rules.\n- If your sandbox mode is **full access**, background automations carry elevated risk, as Codex may change files, run commands, and access network without asking.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Automation Sandbox Permissions\" under the \"Permissions and security model\" section. It states that automations run unattended using default sandbox settings and enumerates all three sandbox modes mentioned in the claim: read-only, workspace-write, and full access. The descriptions of each mode closely match the claim's characterization. All key elements of the claim are substantiated by the page content.",
+    "supported": true
+  }
+}

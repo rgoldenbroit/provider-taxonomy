@@ -1,0 +1,12 @@
+{
+  "key": "a3d44ee8cf458b934e5e2bf86749f9dd9c3ddac219e26a46976804e6fcebfe6d",
+  "label": "judge:anthropic-claude-code-agent-memory-claude-md",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "CLAUDE.md files are markdown files that give Claude persistent instructions for a project, your personal workflow, or your entire organization. You write these files in plain text; Claude reads them at the start of every session. ... Both are loaded at the start of every conversation.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes CLAUDE.md as markdown files that the user writes to give Claude persistent instructions/project context, and explicitly states they are loaded at the start of every session. The page also confirms these files survive context compaction by design, as they are reloaded at the start of every conversation rather than being part of the rolling context window. The claim accurately reflects the documented feature.",
+    "supported": true
+  }
+}

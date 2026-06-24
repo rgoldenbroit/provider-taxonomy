@@ -1,0 +1,12 @@
+{
+  "key": "31b53d8a13303a44a4ba183fbad494b6eb53936d884622d97c1e1fb01e6ad8f9",
+  "label": "judge:anthropic-claude-code-mcp-connectors-managed-mcp-configuration-managed-mcp-json",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If you deploy a `managed-mcp.json` file, Claude Code loads only the servers that file defines. Users cannot add, modify, or use any other MCP servers, including plugin-provided servers... Two other settings can further filter the managed set: `allowedMcpServers` and `deniedMcpServers` apply to managed servers too, so a managed server that doesn't pass them won't load.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates the claim. It describes a \"Managed MCP Configuration\" feature where deploying a `managed-mcp.json` file gives exclusive control by deploying a fixed set of MCP servers (users cannot add, modify, or use any other servers). The page also describes allowlists (`allowedMcpServers`) and denylists (`deniedMcpServers`) that filter which servers load. The page presents this as an active, generally available feature with detailed configuration instructions, platform paths, and example JSON.",
+    "supported": true
+  }
+}

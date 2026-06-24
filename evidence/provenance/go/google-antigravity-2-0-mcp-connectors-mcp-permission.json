@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "| `mcp` | `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` | Matches exact MCP tools or all tools on a specified server (applies equally to local `mcpl` servers and remote connections). Using `mcp(*)` matches any tool. | **Ask** |",
+    "found_quote": "mcp | mcp(server/tool), mcp(server/*), or mcp(*) | Matches exact MCP tools or all tools on a specified server (applies equally to local mcpl servers and remote connections). Using mcp(*) matches any tool. | Ask",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "mcp permission",
+    "name": "MCP Permission",
     "page_content_hash": "b123450f5ed5519125c1c74e13ee9eef37c46def99d18bc06f9dd95ca78d3dde",
     "primary_capability_id": "mcp-connectors",
     "provider": "Google",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "6062915746c6ba9e08276b2b25fec8d0a9ae0ad109fe707b0cd559711dc6a3d9",
+  "label": "judge:openai-codex-guardrails-safety-auto-review",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Auto-review replaces manual approval at the sandbox boundary with a separate reviewer agent. The main Codex agent still runs inside the same sandbox, with the same approval policy and the same network and filesystem limits. The difference is who reviews eligible escalation requests.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It explicitly describes Auto-review as replacing manual approval at the sandbox boundary with a separate reviewer agent, checking escalation requests before Codex runs them. The page also confirms it blocks risks such as \"sending private data, secrets, or credentials to untrusted destinations\" (data exfiltration), \"probing for credentials, tokens, cookies, or session material\" (credential probing), and \"destructive actions with significant risk of irreversible damage\" \u2014 matching all three risk categories cited in the claim. The page presents this as a current, active offering with configuration details, open-source policy links, and enterprise customization options, with no indication it is in preview or deprecated.",
+    "supported": true
+  }
+}

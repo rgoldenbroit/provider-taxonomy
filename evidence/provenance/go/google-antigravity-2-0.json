@@ -3,18 +3,18 @@
   "value": {
     "confidence": "medium",
     "fetch_ok": true,
-    "found_quote": "Google Antigravity is a software development platform developed by Google. It consists of an integrated development environment (IDE), a command-line interface (CLI), and a software development kit (SDK) designed to orchestrate autonomous artificial intelligence agents for code generation, execution, and testing.",
-    "lifecycle_status": "preview",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
     "model": "claude-opus-4-8",
     "name": "Antigravity",
-    "page_content_hash": "be6d732c73ded76c0d5a4bb107bc58c53864fa6d98e5f7e6b0af1d04bb5312d3",
+    "page_content_hash": "4b61c9d93614fad93a0c2e1b8de6a20363f25fea4233f09e515079f5b83ff878",
     "primary_capability_id": "agentic-coding",
     "provider": "Google",
     "reconfirmed": false,
     "record_id": "google-antigravity-2-0",
     "review_status": "confirmed",
-    "source_tier": "reputable",
-    "source_url": "https://en.wikipedia.org/wiki/Google_Antigravity",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/",
     "supported": false,
     "verified_at": "2026-06-23"
   }

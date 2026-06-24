@@ -1,0 +1,12 @@
+{
+  "key": "114886c3ec38183ff197dc92713090e3312122c20adc4178f3287bbfabf5636c",
+  "label": "judge:openai-codex-code-execution-sandbox-network-access",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For the Codex app, CLI, or IDE Extension, the default `workspace-write` sandbox mode keeps network access turned off unless you enable it in your configuration... For Codex cloud, see [agent internet access](https://developers.openai.com/codex/cloud/internet-access) to enable full internet access or a domain allow list... You can also control the [web search tool](https://platform.openai.com/docs/guides/tools-web-search) without granting full network access to spawned commands.",
+    "lifecycle_status": "active",
+    "rationale": "The page clearly substantiates all parts of the claim: (1) Network access is off by default in workspace-write mode (\"the default `workspace-write` sandbox mode keeps network access turned off\"); (2) full internet access or a domain allowlist can be enabled (referenced for Codex cloud, and configurable via `network_access = true` plus domain rules for CLI/app); (3) web search controls are explicitly described, including cached mode, live mode, and disabled mode. The page describes these as current, active features with detailed configuration options.",
+    "supported": true
+  }
+}

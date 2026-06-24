@@ -1,0 +1,12 @@
+{
+  "key": "15384d7603234ac9410f4b03e5a1c0339a45354e9dff4109b6aa8aea61e0a1f7",
+  "label": "judge:openai-agentkit-managed-agent-runtime-hosted-shell",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hosted shell containers managed by OpenAI. ... Use `container_auto` when you want OpenAI to provision and manage a container for the request.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Hosted shell containers managed by OpenAI\" as one of the two shell execution modes, and further explains that using `container_auto` causes OpenAI to \"provision and manage a container for the request.\" This directly substantiates the claim that OpenAI provisions and manages sandboxed shell containers on its infrastructure, allowing agent shell commands to run without self-hosting. The page presents this as a currently available, generally accessible feature (not preview or beta).",
+    "supported": true
+  }
+}

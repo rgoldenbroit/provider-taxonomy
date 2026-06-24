@@ -1,0 +1,12 @@
+{
+  "key": "e466fbf8fc647ae5e2a9bdc64e85bbe6b804505c1bf2bb7093f283fcb6250792",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-system",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code uses a tiered permission system to balance power and safety... Allow rules let Claude Code use the specified tool without manual approval. Ask rules prompt for confirmation whenever Claude Code tries to use the specified tool. Deny rules prevent Claude Code from using the specified tool. Rules are evaluated in order: deny, then ask, then allow.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) it describes a \"tiered permission system\" that \"balance[s] power and safety,\" (2) it classifies tools by approval requirements (read-only requiring no approval, bash commands and file modifications requiring approval), (3) it governs whether Claude Code may use a tool via allow/ask/deny rules, and (4) it explicitly states rules are \"evaluated in order: deny, then ask, then allow\" \u2014 matching the claimed \"deny-then-ask-then-allow order.\" The offering appears to be generally available (active).",
+    "supported": true
+  }
+}

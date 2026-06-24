@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "A channel is an MCP server that pushes events into a Claude Code session so Claude can react to things happening outside the terminal.",
+    "found_quote": "A channel is an MCP server that pushes events into a Claude Code session so Claude can react to things happening outside the terminal. ... One-way channels forward alerts, webhooks, or monitoring events for Claude to act on. Two-way channels like chat bridges also expose a reply tool so Claude can send messages back.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "Channels",
+    "name": "MCP Event Channels",
     "page_content_hash": "9843e25143ecbff76047595dc42fef2a76de723f3be760d716055744efd22a79",
     "primary_capability_id": "mcp-connectors",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/channels-reference.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

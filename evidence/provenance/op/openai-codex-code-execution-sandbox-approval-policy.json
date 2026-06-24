@@ -6,7 +6,7 @@
     "found_quote": "**Approval policy**: When Codex must ask you before it executes an action (for example, leaving the sandbox, using the network, or running commands outside a trusted set).",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Approval policy",
+    "name": "Approval Policy",
     "page_content_hash": "36303ea4a3dd150291a21057a5036fb8d41822f638e9457b2e671478dd4022b6",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/agent-approvals-security.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

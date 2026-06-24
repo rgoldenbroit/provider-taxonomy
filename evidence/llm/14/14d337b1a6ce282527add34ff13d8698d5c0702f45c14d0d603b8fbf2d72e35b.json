@@ -1,0 +1,12 @@
+{
+  "key": "14d337b1a6ce282527add34ff13d8698d5c0702f45c14d0d603b8fbf2d72e35b",
+  "label": "judge:anthropic-claude-code-guardrails-safety-security-guidance-plugin",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Install the security-guidance plugin to have Claude review its own code changes for vulnerabilities and fix them in the same session.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the Security Guidance Plugin as an in-session plugin that makes Claude review its own code changes for vulnerabilities and fix them in the same session. It also describes multiple layers of review: a deterministic per-edit pattern check (no model call) and model-backed end-of-turn and commit reviews \u2014 matching the claim about \"deterministic and model-backed layers.\" The page treats this as a generally available offering (\"The plugin is available on all plans.\"), indicating active status.",
+    "supported": true
+  }
+}

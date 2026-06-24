@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Use environments to control what Codex installs and runs during cloud tasks. For example, you can add dependencies, install tools like linters and formatters, and set environment variables.",
+    "found_quote": "Use environments to control what Codex installs and runs during cloud tasks. For example, you can add dependencies, install tools like linters and formatters, and set environment variables. ... Secrets are similar to environment variables, except: They are stored with an additional layer of encryption and are only decrypted for task execution. ... Codex caches container state for up to 12 hours to speed up new tasks and follow-ups. ... The Codex agent runs in a default container image called `universal`, which comes pre-installed with common languages, packages, and tools.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Cloud environments",
+    "name": "Cloud Environments",
     "page_content_hash": "8ffeeb3960894ca90ab59cf7e325aba1e1058afaba5e4ac56af9a0b328b719ef",
     "primary_capability_id": "remote-agent-control",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/cloud/environments.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

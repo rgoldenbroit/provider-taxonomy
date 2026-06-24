@@ -6,7 +6,7 @@
     "found_quote": "Move to datasets and eval runs when you need repeatability\n\nOnce you know what \"good\" looks like, move from individual traces to repeatable datasets and eval runs. This is the right step when you want to benchmark changes, compare prompts, or run larger-scale evaluations over time.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Datasets and eval runs",
+    "name": "Datasets & Eval Runs",
     "page_content_hash": "c28f66a84b844c37e294b3a6551d01a2868ff59a3b1a4ee1d0ac040b320cfa2f",
     "primary_capability_id": "agent-evals-observability",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/agent-evals.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "af2d031d3ba1c027c448a176896a3e7c651bba41a75740827385938f0d2531f0",
+  "label": "judge:openai-codex-mcp-connectors-running-codex-as-an-mcp-server",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can run Codex as an MCP server and connect it from other MCP clients (for example, an agent built with the OpenAI Agents SDK MCP integration). To start Codex as an MCP server, you can use the following command: codex mcp-server",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page explicitly describes running Codex as an MCP (Model Context Protocol) server that other MCP clients can connect to. It provides the command to start it (`codex mcp-server`), details the tools it exposes (`codex` and `codex-reply`), and gives full working code examples \u2014 all indicating this is a currently available, active feature.",
+    "supported": true
+  }
+}

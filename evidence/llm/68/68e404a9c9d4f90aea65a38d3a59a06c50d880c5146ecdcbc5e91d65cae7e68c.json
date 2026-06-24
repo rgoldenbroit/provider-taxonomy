@@ -1,0 +1,12 @@
+{
+  "key": "68e404a9c9d4f90aea65a38d3a59a06c50d880c5146ecdcbc5e91d65cae7e68c",
+  "label": "judge:openai-agentkit-mcp-connectors-chatgpt-apps-connectors",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Remote MCP servers can be used to connect models over the Internet to new data sources and capabilities. In this guide, we'll cover how to build a remote MCP server that reads data from a private data source (a vector store) and makes it available in ChatGPT as a data-only app (formerly called a connector) for chat, deep research, and company knowledge",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that remote MCP servers can be registered as apps (formerly connectors) in ChatGPT for chat, deep research, and company knowledge. The page also notes the terminology update as of December 17, 2025, renaming \"connectors\" to \"apps,\" which aligns precisely with the claim's parenthetical \"(formerly connectors).\" The functionality is described as current and generally available, with setup instructions, code examples, and links to further documentation.",
+    "supported": true
+  }
+}

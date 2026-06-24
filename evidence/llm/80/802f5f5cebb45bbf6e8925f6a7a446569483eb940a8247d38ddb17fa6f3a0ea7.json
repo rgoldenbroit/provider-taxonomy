@@ -1,0 +1,12 @@
+{
+  "key": "802f5f5cebb45bbf6e8925f6a7a446569483eb940a8247d38ddb17fa6f3a0ea7",
+  "label": "judge:openai-agentkit-mcp-connectors-mcp-tool-integration-via-responses-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "\"You can test the MCP server using the Responses API directly with a request like this one\" ... \"tools\": [ { \"type\": \"mcp\", \"server_label\": \"cats\", \"server_url\": \"https://777ff573-9947-4b9c-8982-658fa40c7d09-00-3le96u7wsymx.janeway.replit.dev/sse/\", \"allowed_tools\": [ \"search\", \"fetch\" ], \"require_approval\": \"never\" } ]",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly demonstrates that remote MCP servers can be specified as tools directly in Responses API requests (using \"type\": \"mcp\" in the tools array), and this is used for API-driven deep research (the example uses the \"o4-mini-deep-research\" model). The guide covers building MCP servers for \"chat, deep research, and company knowledge\" via API, fully substantiating the claim. The feature is presented as currently active with no preview/beta caveats mentioned.",
+    "supported": true
+  }
+}

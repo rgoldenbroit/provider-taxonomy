@@ -1,0 +1,12 @@
+{
+  "key": "927f871c6cead1d3511fc80886f534d48201a3e8611b13e9f8f8910d06d6e0f9",
+  "label": "judge:anthropic-claude-code-guardrails-safety-protect-against-prompt-injection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt injection is a technique where an attacker attempts to override or manipulate an AI assistant's instructions by inserting malicious text. Claude Code includes several safeguards against these attacks: ... Context-aware analysis: Detects potentially harmful instructions by analyzing the full request ... Input sanitization: Prevents command injection by processing user inputs ... Isolated context windows: Web fetch uses a separate context window to avoid injecting potentially malicious prompts",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms the claim. Under \"Protect against prompt injection,\" it states that Claude Code includes several safeguards against prompt injection attacks, and specifically names context-aware analysis, input sanitization, and isolated context windows (labeled as \"Isolated contexts\" in the claim). All three mechanisms described in the claim are substantiated verbatim on the page. The offering appears to be generally available (active) with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

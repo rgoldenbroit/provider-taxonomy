@@ -3,19 +3,19 @@
   "value": {
     "confidence": "low",
     "fetch_ok": true,
-    "found_quote": "Gemini 3.5 Pro was announced at Google I/O 2026 on May 19, with general availability targeted for June 2026. It is the model that absorbs the use cases Google previously routed to Gemini Ultra: frontier reasoning, deep multimodal understanding, and very long context.",
+    "found_quote": "3.5 Pro coming soon",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Gemini 3.5 Pro",
-    "page_content_hash": "2cd7aba265f5a03c07e0d4859fbe2c2db2a92f3ff9ae555f11833c4e1a4b4746",
+    "page_content_hash": "c469563f5a3b39471b2302dc2c865fecb7dca4afcb94e728b307fc4cb01943d0",
     "primary_capability_id": "flagship-model",
     "provider": "Google",
     "reconfirmed": true,
     "record_id": "google-gemini-3-5-pro",
     "review_status": "needs_review",
-    "source_tier": "low",
-    "source_url": "https://codersera.com/blog/gemini-3-5-pro-launch-guide-2026/",
+    "source_tier": "official",
+    "source_url": "https://deepmind.google/models/gemini/pro/",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

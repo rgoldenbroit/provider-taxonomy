@@ -1,0 +1,12 @@
+{
+  "key": "e4c50f57e8f2991d372f0f82d99281f6c80d924bec99b2ed9d8d00f09ba4f4d0",
+  "label": "judge:anthropic-claude-code-remote-agent-control-ultraplan-ultrareview",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Ultraplan hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while you keep working in your terminal... [and] Find bugs with ultrareview: the code review counterpart to ultraplan for catching issues before merge",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Ultraplan as a feature that hands planning tasks from the local CLI to Claude Code on the web sessions that run asynchronously in the cloud, matching the claim. It also references Ultrareview as \"the code review counterpart to ultraplan.\" The page explicitly states \"Ultraplan is in research preview,\" indicating a preview/beta lifecycle status. The claim's description of handing tasks from the local CLI to cloud-based web sessions is well-supported by the page content.",
+    "supported": true
+  }
+}

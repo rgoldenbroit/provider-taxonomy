@@ -1,0 +1,12 @@
+{
+  "key": "e6464e856c18161b7cb21c262b1ffb0869df1e00eaea3c5e535ceff427a8d72e",
+  "label": "judge:google-antigravity-2-0-mcp-connectors-mcp-permission",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "mcp | mcp(server/tool), mcp(server/*), or mcp(*) | Matches exact MCP tools or all tools on a specified server (applies equally to local mcpl servers and remote connections). Using mcp(*) matches any tool. | Ask",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents an `mcp` permission action in the \"Supported Actions & Matching Rules\" table. It describes how the action governs access to MCP tools via target formats like `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)`, and states it \"applies equally to local `mcpl` servers and remote connections\" \u2014 directly matching the claim about governing agent access to MCP tools across local and remote MCP servers. Configuration examples further reinforce this with entries like `mcp(linter/*)` and `mcp(sql/execute_mutation)`. The permission is presented as a currently active, documented feature (not preview/beta), though Terminal Sandboxing is noted as preview separately.",
+    "supported": true
+  }
+}

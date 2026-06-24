@@ -1,0 +1,12 @@
+{
+  "key": "4a149e4d4a54f06cd24297466b5cee82bcaa18658df5c87da7ee3f03468adb21",
+  "label": "judge:openai-codex-code-execution-sandbox-approval-policy",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Approval policy**: When Codex must ask you before it executes an action (for example, leaving the sandbox, using the network, or running commands outside a trusted set).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the \"Approval policy\" as one of the two core security layers in Codex, matching the claim's description that it controls when Codex must stop and ask before crossing sandbox boundaries such as leaving the sandbox or using the network. The page also elaborates extensively on configuring the approval policy, confirming it is an active, generally available feature.",
+    "supported": true
+  }
+}

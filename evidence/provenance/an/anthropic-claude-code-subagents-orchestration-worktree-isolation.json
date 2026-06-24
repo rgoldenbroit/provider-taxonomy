@@ -6,8 +6,8 @@
     "found_quote": "An isolation mode that runs Claude in a separate git worktree under `.claude/worktrees/`, enabled with the `-w` flag or `isolation: worktree` in subagent config. Changes stay on a separate branch in a separate directory, so parallel agents don't overwrite each other's files.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Worktree isolation",
-    "page_content_hash": "dfa8676d7b3e17afe2e5100172cfdc54ac9444d3e220bd7856db7ce687406931",
+    "name": "Worktree Isolation",
+    "page_content_hash": "3841d6d47ecdb7763c65d2841628332c8ee030398284256f7784e102d5970987",
     "primary_capability_id": "subagents-orchestration",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/glossary.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

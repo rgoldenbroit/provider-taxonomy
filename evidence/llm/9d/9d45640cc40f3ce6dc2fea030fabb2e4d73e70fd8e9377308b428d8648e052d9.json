@@ -1,0 +1,12 @@
+{
+  "key": "9d45640cc40f3ce6dc2fea030fabb2e4d73e70fd8e9377308b428d8648e052d9",
+  "label": "judge:openai-codex-subagents-orchestration-managing-subagents",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `/agent` in the CLI to switch between active agent threads and inspect the ongoing thread.\n- Ask Codex directly to steer a running subagent, stop it, or close completed agent threads.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes subagent management capabilities under the \"Managing subagents\" section. It states users can switch between active agent threads (via `/agent` in the CLI) and can ask Codex to steer, stop, or close running/completed subagents. This directly matches all three elements of the claim: switching between active agent threads, steering running subagents, and stopping or closing them. The feature is described as currently available (not preview/beta), as subagent workflows are enabled by default in current Codex releases.",
+    "supported": true
+  }
+}

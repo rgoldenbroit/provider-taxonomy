@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Move tasks between web and terminal with `--remote` and `--teleport`",
+    "found_quote": "Move sessions between web and terminal with `--remote` and `--teleport`. ... Run `/web-setup` in your terminal to sync your local `gh` CLI token to your Claude account.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "Move tasks between web and terminal",
-    "page_content_hash": "08a0238eba099e0cb59264089188a1bb229a6c707af36dc4503f007f362b419f",
+    "name": "Web\u2013Terminal Session Transfer",
+    "page_content_hash": "9b8e5e444ead92a7b05447dcd3f43d150bce8229c3d887a97696485c299ebcad",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

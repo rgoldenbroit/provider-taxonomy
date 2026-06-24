@@ -1,0 +1,12 @@
+{
+  "key": "10a89bea141be05fbd302f09ff1e364606e1ecb40c0e5b30be612a5cf6ce4727",
+  "label": "judge:anthropic-claude-code-mcp-connectors-channels",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A channel is an MCP server that pushes events into a Claude Code session so Claude can react to things happening outside the terminal. ... One-way channels forward alerts, webhooks, or monitoring events for Claude to act on. Two-way channels like chat bridges also expose a reply tool so Claude can send messages back.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes MCP Event Channels (called \"Channels\") as a feature where an MCP server can push external events\u2014including webhooks, alerts, and chat messages\u2014into a Claude Code session so Claude reacts to them. The page is a detailed reference document for building such channels, covering capability declaration, notification events, reply tools, sender gating, and permission relay. The page also clearly states the feature is in \"research preview\" and requires Claude Code v2.1.80 or later, confirming it is not yet generally available.",
+    "supported": true
+  }
+}

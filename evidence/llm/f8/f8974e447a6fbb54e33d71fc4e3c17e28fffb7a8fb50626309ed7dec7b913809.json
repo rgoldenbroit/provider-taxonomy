@@ -1,0 +1,12 @@
+{
+  "key": "f8974e447a6fbb54e33d71fc4e3c17e28fffb7a8fb50626309ed7dec7b913809",
+  "label": "judge:openai-agentkit-mcp-connectors-mcp-servers-and-hosted-mcp-tools-agentkit",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP servers and hosted MCP tools | Attaching MCP-backed capabilities | [Integrations and observability](https://developers.openai.com/api/docs/guides/agents/integrations-observability#mcp)",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"MCP servers and hosted MCP tools\" as an agent property used for \"Attaching MCP-backed capabilities,\" matching the claim exactly. It appears in the agent configuration table as an active, documented feature with a dedicated link to further documentation. The page also reinforces this in the \"When to split one agent into several\" section, noting that \"A specialist needs a different tool or MCP surface\" as a common reason to split agents. There is no indication this is in preview, deprecated, or sunset.",
+    "supported": true
+  }
+}

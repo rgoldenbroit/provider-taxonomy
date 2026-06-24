@@ -6,7 +6,7 @@
     "found_quote": "When using Evaluations on the OpenAI Platform, in addition to evaluating OpenAI's native models, you can also evaluate a variety of external models. We support accessing third-party models (no API key required) and accessing custom endpoints (API key required).",
     "lifecycle_status": "deprecated",
     "model": "claude-opus-4-8",
-    "name": "Evaluate external models",
+    "name": "Evaluate External Models",
     "page_content_hash": "c1dc37c6e38d1aac236ab0149488e596ccaa17cf4b3f15e13749f8e795951bdd",
     "primary_capability_id": "agent-evals-observability",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/external-models.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

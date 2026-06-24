@@ -6,7 +6,7 @@
     "found_quote": "Use your dataset to automatically improve your prompts.",
     "lifecycle_status": "unknown",
     "model": "claude-opus-4-8",
-    "name": "Prompt optimizer",
+    "name": "Prompt Optimizer",
     "page_content_hash": "c28f66a84b844c37e294b3a6551d01a2868ff59a3b1a4ee1d0ac040b320cfa2f",
     "primary_capability_id": "agent-evals-observability",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/agent-evals.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

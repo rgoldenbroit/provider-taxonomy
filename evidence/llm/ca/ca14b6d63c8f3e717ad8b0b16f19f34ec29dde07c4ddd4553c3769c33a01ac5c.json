@@ -1,0 +1,12 @@
+{
+  "key": "ca14b6d63c8f3e717ad8b0b16f19f34ec29dde07c4ddd4553c3769c33a01ac5c",
+  "label": "judge:anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Model Context Protocol (MCP) is an open standard for connecting AI agents to external tools and data sources. With MCP, your agent can query databases, integrate with APIs like Slack and GitHub, and connect to other services without writing custom tool implementations... SDK MCP servers: Define custom tools directly in your application code instead of running a separate server process. See the custom tools guide for implementation details.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It is official documentation for the Agent SDK's MCP integration, showing how the Agent SDK connects agents to external tools via MCP (supporting stdio, HTTP/SSE, and SDK MCP server transport types). It explicitly describes an \"SDK MCP servers\" transport type that allows defining custom tools directly in application code (in-process), with a link to a dedicated custom tools guide. The documentation provides working code examples in both TypeScript and Python, indicating this is a generally available, active feature.",
+    "supported": true
+  }
+}

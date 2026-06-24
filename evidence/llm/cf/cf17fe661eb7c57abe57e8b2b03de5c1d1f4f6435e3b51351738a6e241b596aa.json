@@ -1,0 +1,12 @@
+{
+  "key": "cf17fe661eb7c57abe57e8b2b03de5c1d1f4f6435e3b51351738a6e241b596aa",
+  "label": "judge:anthropic-claude-code-mcp-connectors-anthropic-directory-connectors",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Browse reviewed connectors in the [Anthropic Directory](https://claude.ai/directory). Directory connectors use the same MCP infrastructure as Claude Code, so you can add any remote server listed there with `claude mcp add`.",
+    "lifecycle_status": "active",
+    "rationale": "The page confirms the existence of the \"Anthropic Directory\" (linked at https://claude.ai/directory) as a place to browse reviewed connectors, and confirms that connectors listed there can be added to Claude Code with `claude mcp add`. The page also mentions specific tools/integrations like GitHub, Slack, Figma, Notion, Asana, etc., consistent with the claim's examples. However, the page does not explicitly enumerate GitHub, Slack, and Linear as specific Directory entries, nor does it explicitly state the offering spans \"desktop, VS Code, web, and Claude.ai surfaces\" \u2014 it references claude.ai connectors but the multi-surface detail is only partially substantiated. The core claim about the Anthropic Directory being a registry of reviewed connectors addable via `claude mcp add` is clearly supported.",
+    "supported": true
+  }
+}

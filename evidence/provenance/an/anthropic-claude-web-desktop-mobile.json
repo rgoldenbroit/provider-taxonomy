@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (web/desktop/mobile)",
-    "page_content_hash": "09b7cf6f8b2fd4ed7d10f894d1c284d772e464b6ed56d8cc71e9a00f82a76551",
+    "page_content_hash": "0390d77434b5c03a372472ee50054d107b2e49c11390a31aa2c5f9b094fd3fb3",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/claude",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

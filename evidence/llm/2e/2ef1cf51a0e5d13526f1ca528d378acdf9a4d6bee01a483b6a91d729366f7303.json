@@ -1,0 +1,12 @@
+{
+  "key": "2ef1cf51a0e5d13526f1ca528d378acdf9a4d6bee01a483b6a91d729366f7303",
+  "label": "judge:openai-agentkit-guardrails-safety-human-in-the-loop-approvals",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Pause before side effects like cancellations, edits, shell commands, or sensitive MCP actions | Human-in-the-loop approvals",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Human-in-the-loop approvals\" feature that pauses agent runs before sensitive tool actions so a person or policy can approve or reject them. The table entry directly references pausing before \"sensitive MCP actions\" via human-in-the-loop approvals, and the \"Pause for human review\" section provides detailed code examples showing how to implement approval nodes for tool operations (including `needsApproval: true` for function tools). This substantiates all aspects of the claim: pausing before sensitive tool actions, approval/rejection by a person or policy, and coverage of MCP tool operations.",
+    "supported": true
+  }
+}

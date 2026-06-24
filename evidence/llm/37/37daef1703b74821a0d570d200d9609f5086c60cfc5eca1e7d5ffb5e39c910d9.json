@@ -1,0 +1,12 @@
+{
+  "key": "37daef1703b74821a0d570d200d9609f5086c60cfc5eca1e7d5ffb5e39c910d9",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-monitoring-with-opentelemetry",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Track Claude Code usage, costs, and tool activity across your organization by exporting telemetry data through OpenTelemetry (OTel). Claude Code exports metrics as time series data via the standard metrics protocol, events via the logs/events protocol, and optionally distributed traces via the traces protocol.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes a dedicated Monitoring feature for Claude Code that exports metrics, events (logs), and traces via OpenTelemetry to configurable OTLP-compatible backends (grpc, http/protobuf, http/json, prometheus, console). Metrics and events/logs are generally available (active), while distributed traces are noted as beta. The core claim about OpenTelemetry monitoring with OTLP-compatible backends is clearly described and active.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "10b2a9a0fd6e8d99005fb455a6c08c28c86f502e26dfecf594126eeb3d4b3067",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-evals-observability-set-up-logging",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Set up logging\nLearn how to set up Cloud Logging for your agents deployed on Agent Platform.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly mentions a \"Set up logging\" guide that describes how to set up Cloud Logging for agents deployed on Agent Platform, which directly substantiates the claim of a Cloud Logging integration for capturing agent run logs. The page is marked as \"Preview\" (Pre-GA), indicating this feature is in preview/beta stage.",
+    "supported": true
+  }
+}

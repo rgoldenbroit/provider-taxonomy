@@ -6,7 +6,7 @@
     "found_quote": "The Conversations API works with the Responses API to persist conversation state as a long-running object with its own durable identifier. After creating a conversation object, you can keep using it across sessions, devices, or jobs.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Conversation state management",
+    "name": "Conversation State Management",
     "page_content_hash": "42892be4428ec984818be2f0b14edc8516db2af6e7e717732edb4b1ae32b34f9",
     "primary_capability_id": "agent-memory",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/conversation-state.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

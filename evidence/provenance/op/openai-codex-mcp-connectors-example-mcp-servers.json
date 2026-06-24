@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Here are a few common ones:\n\n- [OpenAI Docs MCP](https://developers.openai.com/learn/docs-mcp): Search and read OpenAI developer docs.\n- [Context7](https://github.com/upstash/context7): Connect to up-to-date developer documentation.\n- Figma [Local](https://developers.figma.com/docs/figma-mcp-server/local-server-installation/) and [Remote](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/): Access your Figma designs.\n- [Playwright](https://www.npmjs.com/package/@playwright/mcp): Control and inspect a browser using Playwright.\n- [Chrome Developer Tools](https://github.com/ChromeDevTools/chrome-devtools-mcp/): Control and inspect Chrome.\n- [Sentry](https://docs.sentry.io/product/sentry-mcp/#codex): Access Sentry logs.\n- [GitHub](https://github.com/github/github-mcp-server): Manage GitHub beyond what `git` supports (for example, pull requests and issues).",
+    "found_quote": "Here are a few common ones:\n\n- [OpenAI Docs MCP](https://developers.openai.com/learn/docs-mcp): Search and read OpenAI developer docs.\n- [Context7](https://github.com/upstash/context7): Connect to up-to-date developer documentation.\n- Figma [Local](https://developers.figma.com/docs/figma-mcp-server/local-server-installation/) and [Remote](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/): Access your Figma designs.\n- [Playwright](https://www.npmjs.com/package/@playwright/mcp): Control and inspect a browser using Playwright.\n- [GitHub](https://github.com/github/github-mcp-server): Manage GitHub beyond what `git` supports (for example, pull requests and issues).",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Example MCP servers",
+    "name": "Example MCP Servers",
     "page_content_hash": "f5555cc8d3f3967cbaaf49e47ae6c226ea00014cbadb93927ea6e7593a61b17f",
     "primary_capability_id": "mcp-connectors",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/mcp.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

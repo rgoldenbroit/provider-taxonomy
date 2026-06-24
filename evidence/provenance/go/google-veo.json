@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Veo \u2014 Our leading video generation model",
+    "found_quote": "Veo 3.1 \u2014 Google DeepMind ... Veo Our leading video generation model ... Veo 3.1 Video, meet audio. Our leading video generation model, designed to empower filmmakers and storytellers.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Veo",
-    "page_content_hash": "fc288b8faf45f13638b0ee9612ade4278aa084bf975db1a6d0f29c5ad81dc136",
+    "page_content_hash": "182e57a030e6a3e3b40bfa7725a5984b5b125fd748c42394cb5345d50dbf81f7",
     "primary_capability_id": "image-video-generation",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://deepmind.google/models/veo/",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

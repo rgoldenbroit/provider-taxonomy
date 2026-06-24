@@ -6,7 +6,7 @@
     "found_quote": "Sending safety identifiers in your requests can help OpenAI monitor and detect abuse. This allows OpenAI to provide your team with more actionable feedback in the event that we detect any policy violations in your application. Safety identifiers can also help your team respond to abuse faster. They create a stable way to trace activity back to an individual end user and reduce the chance that one user's misuse disrupts access for your broader organization. A safety identifier should be a string that uniquely identifies each user. Hash the username or email address in order to avoid sending us any identifying information.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Safety identifiers",
+    "name": "Safety Identifiers",
     "page_content_hash": "48b459e4a307d17d95a58e37e8fa20e21d97085dcd5426cad182f1a93512aa33",
     "primary_capability_id": "guardrails-safety",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/safety-best-practices.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

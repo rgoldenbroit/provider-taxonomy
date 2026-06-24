@@ -1,0 +1,12 @@
+{
+  "key": "fa03226a88ab46f97fe8bcbac814fde920524c0bedb39ec4c3516effb616246a",
+  "label": "judge:google-antigravity-2-0",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page content provided contains only the text \"Google Antigravity\" \u2014 nothing more. There is no description, announcement, product details, or any substantive information about an \"Antigravity IDE/desktop app (2.0 preview),\" an \"Antigravity CLI,\" or a \"Jules async web agent\" on this page. Because the page does not describe or assert any of the claimed offerings, the claim cannot be substantiated from this source. A page title alone is insufficient to confirm the existence or details of the described product.",
+    "supported": false
+  }
+}

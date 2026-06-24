@@ -6,7 +6,7 @@
     "found_quote": "Set up tracing\nLearn how to enable Cloud Trace on your agent and view traces to analyze query response times and executed operations.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "Set up tracing",
+    "name": "Cloud Trace Integration",
     "page_content_hash": "7857f1529a999acf0f2d5aa92e9608f70ab718e828a794be0f9457b9f496372c",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Google",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/set-up",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

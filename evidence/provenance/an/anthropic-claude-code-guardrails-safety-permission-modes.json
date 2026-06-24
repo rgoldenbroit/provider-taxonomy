@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Permission modes control how often that pause happens... As a default: set defaultMode in settings.\n\n```json\n{\n  \"permissions\": {\n    \"defaultMode\": \"acceptEdits\"\n  }\n}\n```",
+    "found_quote": "Permission modes control how often that pause happens... As a default: set defaultMode in settings.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Permission modes",
+    "name": "Permission Modes",
     "page_content_hash": "95cd159b4e21ca06bd81a460f8e7b317f1d29ab3a56d6140c5659917af274f5f",
     "primary_capability_id": "guardrails-safety",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/permission-modes.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

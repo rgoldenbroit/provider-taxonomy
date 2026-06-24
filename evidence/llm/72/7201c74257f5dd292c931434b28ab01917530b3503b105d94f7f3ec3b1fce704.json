@@ -1,0 +1,12 @@
+{
+  "key": "7201c74257f5dd292c931434b28ab01917530b3503b105d94f7f3ec3b1fce704",
+  "label": "judge:google-gemini-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Computer Use tool lets you build browser, mobile, and desktop control agents that interact with and automate tasks. Using screenshots, the model can \"see\" a computer screen, and \"act\" by generating specific UI actions like mouse clicks and keyboard inputs.",
+    "lifecycle_status": "preview",
+    "rationale": "The page is Google's official Gemini API documentation explicitly describing \"Computer Use\" as a tool available via the Gemini API. The page notes it is currently a \"Preview capability\" with associated caveats about errors and security vulnerabilities, placing its lifecycle status as 'preview'. The recommended model is Gemini 3.5 Flash, with a legacy Gemini 2.5 option also described.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "ddba7b0a1eecaaa4c747bcf1a7eb37214084256acba7978116fc2010c82184c8",
+  "label": "judge:openai-codex-agent-memory-agents-md",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expectations, no matter which repository you open. ... Codex builds an instruction chain when it starts (once per run; in the TUI this usually means once per launched session). Discovery follows this precedence order: 1. **Global scope:** In your Codex home directory (defaults to `~/.codex`, unless you set `CODEX_HOME`), Codex reads `AGENTS.override.md` if it exists. Otherwise, Codex reads `AGENTS.md`. ... **Merge order:** Codex concatenates files from the root down, joining them with blank lines. Files closer to your current directory override earlier guidance because they appear later in the combined prompt.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page fully substantiates the claim. It confirms that: (1) Codex reads AGENTS.md files before doing any work; (2) instructions are layered with global-then-project precedence; (3) the instruction chain is built once per run; (4) global defaults come from the Codex home directory (~/.codex by default); and (5) files are merged/concatenated in root-down order. All key elements of the claim are directly supported by verbatim text on the page. The page presents this as a current, active feature with no deprecation or preview language.",
+    "supported": true
+  }
+}

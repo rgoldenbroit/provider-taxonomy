@@ -6,7 +6,7 @@
     "found_quote": "**STDIO servers**: Servers that run as a local process (started by a command). ... **Streamable HTTP servers**: Servers that you access at an address.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "MCP server transports",
+    "name": "MCP Server Transports",
     "page_content_hash": "f5555cc8d3f3967cbaaf49e47ae6c226ea00014cbadb93927ea6e7593a61b17f",
     "primary_capability_id": "mcp-connectors",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/mcp.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

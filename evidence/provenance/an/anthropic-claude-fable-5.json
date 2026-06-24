@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Fable 5",
-    "page_content_hash": "f814994d3b52a405725380dd0c0a116f3ccc46d40b6bd1d868bfa261fb4cad4a",
+    "page_content_hash": "1805fc6cd48c69a8866d34b9353365d8b0f8a3b35c9560a818d97c831c76e8d8",
     "primary_capability_id": "flagship-model",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

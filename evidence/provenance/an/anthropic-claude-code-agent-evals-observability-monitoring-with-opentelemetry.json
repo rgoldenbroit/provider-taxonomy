@@ -6,8 +6,8 @@
     "found_quote": "Track Claude Code usage, costs, and tool activity across your organization by exporting telemetry data through OpenTelemetry (OTel). Claude Code exports metrics as time series data via the standard metrics protocol, events via the logs/events protocol, and optionally distributed traces via the traces protocol.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Monitoring with OpenTelemetry",
-    "page_content_hash": "b473a5fdb5b89e09edcb7d4b387112649026f186f24c97e699199c74fd850da0",
+    "name": "OpenTelemetry Monitoring",
+    "page_content_hash": "9c3bbb1a9382af67bc812cf9e6d42a560bbba4d41c8b666e3e1486c6697d7e5a",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/monitoring-usage.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

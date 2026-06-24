@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "You can run Codex as an MCP server and connect it from other MCP clients (for example, an agent built with the OpenAI Agents SDK MCP integration).",
+    "found_quote": "You can run Codex as an MCP server and connect it from other MCP clients (for example, an agent built with the OpenAI Agents SDK MCP integration). To start Codex as an MCP server, you can use the following command: codex mcp-server",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Running Codex as an MCP server",
+    "name": "Codex as MCP Server",
     "page_content_hash": "48ec78d3486a8610a3d70d7d440085a540e607227fd93c4847d8fd07c5837ae1",
     "primary_capability_id": "mcp-connectors",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "17443319879af6c8d42c856f0198e82188c8d100842ea0e2ae391dbc0f091d12",
+  "label": "judge:openai-agentkit-mcp-connectors-function-calling-controls",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "If your application has many functions or large schemas, you can pair function calling with [tool search](https://developers.openai.com/api/docs/guides/tools-tool-search) to defer rarely used tools and load them only when the model needs them... Use namespaces to group related tools by domain... The model may choose to call multiple functions in a single turn. You can prevent this by setting `parallel_tool_calls` to `false`... Setting `strict` to `true` will ensure function calls reliably adhere to the function schema... Streaming can be used to surface progress by showing which function is called as the model fills its arguments",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes all five advanced controls mentioned in the claim: (1) tool search \u2014 pairing function calling with tool search to defer rarely used tools; (2) namespaces \u2014 grouping related tools by domain; (3) parallel calls \u2014 the model calling multiple functions in a single turn, controllable via `parallel_tool_calls`; (4) strict schema enforcement \u2014 `strict: true` ensuring function calls adhere to the function schema; and (5) streaming \u2014 surfacing progress by showing which function is called as the model fills its arguments. All are presented as currently active/available features.",
+    "supported": true
+  }
+}

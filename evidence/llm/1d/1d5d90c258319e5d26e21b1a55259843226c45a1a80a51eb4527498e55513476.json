@@ -1,0 +1,12 @@
+{
+  "key": "1d5d90c258319e5d26e21b1a55259843226c45a1a80a51eb4527498e55513476",
+  "label": "judge:openai-codex-remote-agent-control-github-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use Codex code review to get another high-signal review pass on GitHub pull requests. Codex reviews the pull request diff, follows your repository guidance, and posts a standard GitHub code review focused on serious issues. ... If you mention `@codex` in a comment with anything other than `review`, Codex starts a [cloud task](https://developers.openai.com/codex/cloud) using your pull request as context.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes Codex integrating with GitHub to review pull requests (triggering via `@codex review` comments or automatically), and also confirms that mentioning `@codex` with any other text starts an async cloud task \u2014 exactly matching the claim about reviewing PRs and running async cloud tasks delegated by mentioning @codex. The page presents this as a current, generally available feature with no preview/beta caveats.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "7b05bd8a6fed2710ef45e3cb6dd43b6c5e7e42d94ddd0065eced440ec818ad1f",
+  "label": "judge:google-antigravity-2-0-managed-agent-runtime-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hooks allow you to run custom scripts or shell commands at specific points during Antigravity's execution loop... Hooks receive input via **stdin** as JSON and should return output via **stdout** as JSON.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) Hooks run custom local shell scripts or commands (\"run custom scripts or shell commands\"), (2) at specific lifecycle points during Antigravity's execution loop (\"at specific points during Antigravity's execution loop\"), and (3) communicate via a JSON stdin/stdout contract (\"Hooks receive input via stdin as JSON and should return output via stdout as JSON\"). The page is a documentation page for Antigravity 2.0 Hooks and describes the feature as active/generally available with no preview or deprecation indicators.",
+    "supported": true
+  }
+}

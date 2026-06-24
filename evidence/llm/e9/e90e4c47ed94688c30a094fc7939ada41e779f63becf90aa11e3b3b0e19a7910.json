@@ -1,0 +1,12 @@
+{
+  "key": "e90e4c47ed94688c30a094fc7939ada41e779f63becf90aa11e3b3b0e19a7910",
+  "label": "judge:openai-agentkit-mcp-connectors-chatgpt-developer-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ChatGPT developer mode provides full Model Context Protocol (MCP) client support for all tools, both read and write. It's powerful but dangerous, and is intended for developers who understand how to safely configure and test apps. When using developer mode, watch for prompt injections and other risks, model mistakes on write actions that could destroy data, and malicious MCPs that attempt to steal information.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page explicitly confirms every element of the claim: (1) OpenAI offers \"ChatGPT Developer Mode,\" (2) it provides \"full Model Context Protocol (MCP) client support for all tools, both read and write,\" and (3) it enables developers to connect remote MCP servers (the page describes creating apps from remote MCP servers via SSE and streaming HTTP). The offering is described as currently available to Pro, Plus, Business, Enterprise, and Education accounts on the web, indicating it is generally active.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "85e924c5d3c77d782b6cdf5c92efd0af965044337ff2e408189301b79980c6a3",
+  "label": "judge:google-gemini-3-5-pro",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "3.5 Pro coming soon",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly mentions \"3.5 Pro coming soon\" as a teaser/announcement on the Gemini Pro page. This confirms that Google has announced Gemini 3.5 Pro, though it is not yet available \u2014 it is listed as \"coming soon,\" indicating a preview/upcoming status rather than general availability.",
+    "supported": true
+  }
+}

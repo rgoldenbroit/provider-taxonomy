@@ -1,0 +1,12 @@
+{
+  "key": "b1921796db2286e56cdafbf6f8e6ac2e5cb059659bcf9f273545e6d04d09d7a1",
+  "label": "judge:anthropic-claude-cowork",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Cowork by Anthropic\nClaude Cowork handles tasks autonomously. Give it a goal and Claude works on your computer, local files, and applications to return a finished deliverable.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is the official Anthropic product page for \"Claude Cowork,\" explicitly branding it as \"Claude Cowork by Anthropic.\" The page describes it as a generally available offering (\"Claude Cowork is currently available on all paid plans\"), confirming it is an active product and fully substantiating the claim.",
+    "supported": true
+  }
+}

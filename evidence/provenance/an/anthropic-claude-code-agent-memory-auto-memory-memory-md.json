@@ -6,8 +6,8 @@
     "found_quote": "Notes Claude writes for itself based on your corrections and preferences, stored per git repository under `~/.claude/projects/`. All worktrees of the same repository share one auto memory directory. The first 200 lines or 25 KB of the `MEMORY.md` index loads at the start of every session. Auto memory is the Claude-written counterpart to [CLAUDE.md](#claude-md), which you write.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Auto memory (MEMORY.md)",
-    "page_content_hash": "dfa8676d7b3e17afe2e5100172cfdc54ac9444d3e220bd7856db7ce687406931",
+    "name": "Auto Memory (MEMORY.md)",
+    "page_content_hash": "3841d6d47ecdb7763c65d2841628332c8ee030398284256f7784e102d5970987",
     "primary_capability_id": "agent-memory",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/glossary.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

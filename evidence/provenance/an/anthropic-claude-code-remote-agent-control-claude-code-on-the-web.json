@@ -6,8 +6,8 @@
     "found_quote": "Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure at claude.ai/code. Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app. ... Each session runs in a fresh Anthropic-managed VM with your repository cloned.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "Claude Code on the web",
-    "page_content_hash": "08a0238eba099e0cb59264089188a1bb229a6c707af36dc4503f007f362b419f",
+    "name": "Claude Code on the Web",
+    "page_content_hash": "9b8e5e444ead92a7b05447dcd3f43d150bce8229c3d887a97696485c299ebcad",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

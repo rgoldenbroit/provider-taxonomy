@@ -1,0 +1,12 @@
+{
+  "key": "b0c28fbfad8877101060f665f224d22699017634d5ffec1ed1be451599883d16",
+  "label": "judge:openai-agentkit-agent-memory-conversation-state-management",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Conversations API works with the Responses API to persist conversation state as a long-running object with its own durable identifier. After creating a conversation object, you can keep using it across sessions, devices, or jobs.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It explicitly describes two methods of conversation state management: (1) manually constructing and passing message history as input (via alternating user/assistant messages or chaining via previous_response_id), and (2) the Conversations API which \"persists conversation state as a long-running object with its own durable identifier\" reusable \"across sessions, devices, or jobs.\" Both methods described in the claim are confirmed verbatim on the page, and the offering appears to be generally available (active) with no preview or deprecation notices.",
+    "supported": true
+  }
+}

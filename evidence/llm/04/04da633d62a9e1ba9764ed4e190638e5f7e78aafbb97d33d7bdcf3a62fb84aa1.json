@@ -1,0 +1,12 @@
+{
+  "key": "04da633d62a9e1ba9764ed4e190638e5f7e78aafbb97d33d7bdcf3a62fb84aa1",
+  "label": "judge:openai-chatgpt-deep-research",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today we're launching deep research in ChatGPT, a new agentic capability that conducts multi-step research on the internet for complex tasks. It accomplishes in tens of minutes what would take a human many hours. Deep research is OpenAI's next agent that can do work for you independently\u2014you give it a prompt, and ChatGPT will find, analyze, and synthesize hundreds of online sources to create a comprehensive report at the level of a research analyst.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's official announcement for \"deep research\" in ChatGPT, directly describing it as an autonomous multi-step research capability that synthesizes information from across the web into detailed reports. The page confirms it is generally available (with multiple access-expansion updates noted), matching all aspects of the claim.",
+    "supported": true
+  }
+}

@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Antigravity 2.0 introduces advanced multi-agent orchestration for extremely complex tasks. ... Using `/teamwork-preview` prompts the main agent to launch a collaborative multi-agent framework. This framework features built-in error recovery, automatic retries, and coordination logic, allowing you to simply define the high-level goal while the platform manages the overhead of a cooperative agent team.",
+    "found_quote": "Antigravity 2.0 introduces advanced multi-agent orchestration for extremely complex tasks... Using `/teamwork-preview` prompts the main agent to launch a collaborative multi-agent framework. This framework features built-in error recovery, automatic retries, and coordination logic, allowing you to simply define the high-level goal while the platform manages the overhead of a cooperative agent team.",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "Multi-Agent Teamwork & Orchestration",
+    "name": "Multi-Agent Orchestration",
     "page_content_hash": "9f4f6087210485427e86794a779defac11ef2da883abbff6cc0cbc0d101306bb",
     "primary_capability_id": "subagents-orchestration",
     "provider": "Google",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

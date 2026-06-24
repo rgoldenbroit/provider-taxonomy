@@ -6,7 +6,7 @@
     "found_quote": "Tracing is built into the Agents SDK and is enabled by default in the normal server-side SDK path. Every run can emit a structured record of model calls, tool calls, handoffs, guardrails, and custom spans, which you can inspect in the Traces dashboard.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Tracing",
+    "name": "Built-in Run Tracing",
     "page_content_hash": "ddb46f5e5a11022dec29117c721aab57debda9bc903d50f02692594e42c678d0",
     "primary_capability_id": "agent-evals-observability",
     "provider": "OpenAI",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://developers.openai.com/api/docs/guides/agents/integrations-observability.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

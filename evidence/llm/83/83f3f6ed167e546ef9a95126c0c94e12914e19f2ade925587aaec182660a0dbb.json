@@ -1,0 +1,12 @@
+{
+  "key": "83f3f6ed167e546ef9a95126c0c94e12914e19f2ade925587aaec182660a0dbb",
+  "label": "judge:anthropic-claude-code-remote-agent-control-claude-code-on-the-web",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure at claude.ai/code. Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app. ... Each session runs in a fresh Anthropic-managed VM with your repository cloned.",
+    "lifecycle_status": "preview",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) Claude Code on the web runs tasks on Anthropic-managed cloud infrastructure, (2) it can be started from the browser (claude.ai/code), (3) sessions can be monitored remotely including from the Claude mobile app, (4) each session runs in a fresh VM, and (5) sessions persist/continue even if you close your browser (i.e., if you disconnect). The page also explicitly states it is \"in research preview for Pro, Max, and Team users, and for Enterprise users with premium seats or Chat + Claude Code seats,\" confirming it is in a preview/research preview lifecycle stage rather than fully generally available.",
+    "supported": true
+  }
+}

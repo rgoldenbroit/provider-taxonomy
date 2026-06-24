@@ -1,0 +1,12 @@
+{
+  "key": "7189ffa561f1f812c2feec396e144f90cc124833a6dfa8400d4c0eb33ef45308",
+  "label": "judge:google-veo",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Veo 3.1 \u2014 Google DeepMind ... Veo Our leading video generation model ... Veo 3.1 Video, meet audio. Our leading video generation model, designed to empower filmmakers and storytellers.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Google DeepMind's official Veo model page. It clearly describes Veo (currently at version 3.1) as \"Our leading video generation model,\" with options to try it in Gemini, Google Flow, or build with it via API. The offering is presented as generally available and active, with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

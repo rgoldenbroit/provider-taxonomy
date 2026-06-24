@@ -1,0 +1,12 @@
+{
+  "key": "b474f477afd53d7921d3d5a6a2ec7981e7b69e440b93c0a8b188298da0a98865",
+  "label": "judge:openai-agentkit-agent-evals-observability-evals-platform-api",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In this guide, we will focus on configuring evals programmatically using the Evals API. If you prefer, you can also configure evals in the OpenAI dashboard. OpenAI is deprecating the Evals platform. Existing evals content remains available during the transition window. Evals will become read-only for existing users on October 31, 2026, and the platform is scheduled to shut down on November 30, 2026.",
+    "lifecycle_status": "deprecated",
+    "rationale": "The page clearly substantiates the claim. It describes an active Evals API for programmatically creating, configuring, and running evaluations of model outputs at scale and asynchronously (with queued/async run execution and result tracking). It also confirms the legacy Evals platform is deprecated with a scheduled shutdown: read-only on October 31, 2026, and full shutdown on November 30, 2026. The new Evals API itself appears active/generally available, while the legacy Evals platform is deprecated heading toward sunset.",
+    "supported": true
+  }
+}

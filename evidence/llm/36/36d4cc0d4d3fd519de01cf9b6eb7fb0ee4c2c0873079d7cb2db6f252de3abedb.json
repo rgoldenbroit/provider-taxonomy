@@ -1,0 +1,12 @@
+{
+  "key": "36d4cc0d4d3fd519de01cf9b6eb7fb0ee4c2c0873079d7cb2db6f252de3abedb",
+  "label": "judge:openai-codex-subagents-orchestration-orchestration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex handles orchestration across agents, including spawning new subagents, routing follow-up instructions, waiting for results, and closing agent threads.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Codex's cross-agent orchestration capability in language that directly mirrors the claim. It states that Codex handles \"spawning new subagents, routing follow-up instructions, waiting for results, and closing agent threads\" \u2014 matching every element of the claim (spawning, routing instructions, waiting for results, and closing threads). The feature is marked as currently enabled by default (\"Current Codex releases enable subagent workflows by default\"), indicating it is generally available/active.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "302bc650959e83f8962b4e65c47c23ea518c965fa4be9ec63366f00f15a7ecc2",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-containers-docker",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Containers provide isolation through Linux namespaces. Each container has its own view of the filesystem, process tree, and network stack, while sharing the host kernel. A security-hardened container configuration might look like this: docker run \\ --cap-drop ALL \\ --security-opt no-new-privileges \\ --security-opt seccomp=/path/to/seccomp-profile.json \\ --read-only \\ --tmpfs /tmp:rw,noexec,nosuid,size=100m \\ --tmpfs /home/agent:rw,noexec,nosuid,size=500m \\ --network none \\ --memory 2g \\ --cpus 2 \\ --pids-limit 100 \\ --user 1000:1000 \\ -v /path/to/code:/workspace:ro \\ -v /var/run/proxy.sock:/var/run/proxy.sock:ro \\ agent-image",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a Docker/OCI container runtime option for running Claude Code or the Agent SDK, detailing isolation through Linux namespaces, security-hardened configuration (--cap-drop ALL, --security-opt no-new-privileges), seccomp profiles (--security-opt seccomp=...), network policies (--network none), and mounted volumes (-v flags). This directly substantiates all elements of the claim. The page presents this as a current, available deployment option with no deprecation or preview notices.",
+    "supported": true
+  }
+}

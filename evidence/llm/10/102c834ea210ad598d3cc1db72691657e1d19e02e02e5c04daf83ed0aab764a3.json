@@ -1,0 +1,12 @@
+{
+  "key": "102c834ea210ad598d3cc1db72691657e1d19e02e02e5c04daf83ed0aab764a3",
+  "label": "judge:anthropic-claude-code-managed-agent-runtime-desktop-scheduled-tasks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use **Desktop tasks** when you need access to local files and tools.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly mentions \"Desktop scheduled tasks\" as one of three scheduling options offered by Claude Code (Anthropic's product). The comparison table shows Desktop tasks run on \"Your machine,\" have \"Yes\" for access to local files, and the page directly states to use Desktop tasks \"when you need access to local files and tools.\" The page links to /en/desktop-scheduled-tasks multiple times and describes it as a scheduling option that runs locally. This substantiates the claim that Anthropic offers Desktop Scheduled Tasks as a scheduling option that runs locally on your machine with access to local files and tools.",
+    "supported": true
+  }
+}

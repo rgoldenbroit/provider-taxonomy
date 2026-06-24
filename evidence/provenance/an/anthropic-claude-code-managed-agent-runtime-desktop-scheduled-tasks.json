@@ -6,7 +6,7 @@
     "found_quote": "Use **Desktop tasks** when you need access to local files and tools.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
-    "name": "Desktop scheduled tasks",
+    "name": "Desktop Scheduled Tasks",
     "page_content_hash": "6df9983acaa75e56307d660338b9983eab7cbb5dda251c4b5cb6bedf41bf2332",
     "primary_capability_id": "managed-agent-runtime",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

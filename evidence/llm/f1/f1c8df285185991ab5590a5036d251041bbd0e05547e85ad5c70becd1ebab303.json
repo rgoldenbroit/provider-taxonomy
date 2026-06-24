@@ -1,0 +1,12 @@
+{
+  "key": "f1c8df285185991ab5590a5036d251041bbd0e05547e85ad5c70becd1ebab303",
+  "label": "judge:google-gemini-enterprise-agent-platform-guardrails-safety-private-service-connect-interface",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use a Private Service Connect interface with Agent Platform Runtime \u2014 Learn to configure a Private Service Connect (PSC) interface to securely connect your agent to your VPC and manage internet access.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a guide titled \"Use a Private Service Connect interface with Agent Platform Runtime\" with a description matching the claim: it allows users to configure a PSC interface to securely connect agents to their VPC and manage internet access. The page also has a navigation entry \"Use Private Service Connect (PSC) interfaces\" under Agent Runtime. Additionally, the page carries a \"Preview\" banner at the top, indicating this feature is pre-GA.",
+    "supported": true
+  }
+}

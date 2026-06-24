@@ -3,10 +3,10 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Ultraplan hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while you keep working in your terminal. [...] Find bugs with ultrareview: the code review counterpart to ultraplan for catching issues before merge",
+    "found_quote": "Ultraplan hands a planning task from your local CLI to a Claude Code on the web session running in plan mode. Claude drafts the plan in the cloud while you keep working in your terminal... [and] Find bugs with ultrareview: the code review counterpart to ultraplan for catching issues before merge",
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
-    "name": "ultraplan / ultrareview",
+    "name": "Ultraplan / Ultrareview",
     "page_content_hash": "de1fed20cbb11a11a052036656b88472e0e69bb6f9a8294c769c044f03ad216b",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/ultraplan.md",
     "supported": true,
-    "verified_at": "2026-06-23"
+    "verified_at": "2026-06-24"
   }
 }

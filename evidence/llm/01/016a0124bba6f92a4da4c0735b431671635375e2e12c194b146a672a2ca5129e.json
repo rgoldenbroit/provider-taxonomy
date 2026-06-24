@@ -1,0 +1,12 @@
+{
+  "key": "016a0124bba6f92a4da4c0735b431671635375e2e12c194b146a672a2ca5129e",
+  "label": "judge:anthropic-claude-code-mcp-connectors-mcp-installation-scopes",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP servers can be configured at three scopes. The scope you choose controls which projects the server loads in and whether the configuration is shared with your team... | Local | Current project only | No | ~/.claude.json | | Project | Current project only | Yes, via version control | .mcp.json in project root | | User | All your projects | No | ~/.claude.json |",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a dedicated \"MCP installation scopes\" section confirming that MCP servers can be configured at local, project, or user scope. It details how each scope controls sharing (team visibility) and loading (which projects the server loads in), stored across different configuration files (~/.claude.json for local/user scope, .mcp.json for project scope). This directly substantiates the claim about MCP Installation Scopes controlling sharing and loading across configuration files.",
+    "supported": true
+  }
+}

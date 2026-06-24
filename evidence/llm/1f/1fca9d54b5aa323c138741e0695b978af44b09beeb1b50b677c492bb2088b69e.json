@@ -1,0 +1,12 @@
+{
+  "key": "1fca9d54b5aa323c138741e0695b978af44b09beeb1b50b677c492bb2088b69e",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-virtual-machines",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A dedicated virtual machine provides the strongest separation, with its own kernel and, in cloud or microVM deployments, its own virtualized hardware.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a Virtual Machine isolation option for Claude Code, stating it provides \"the strongest separation, with its own kernel and, in cloud or microVM deployments, its own virtualized hardware.\" This directly matches the claim that a dedicated virtual machine provides the strongest, hardware-level separation with its own kernel and virtualized hardware for running Claude Code. The page lists it as an active sandboxing approach in the comparison table and provides guidance on when and how to use it.",
+    "supported": true
+  }
+}
