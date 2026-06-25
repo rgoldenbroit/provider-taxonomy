@@ -190,7 +190,7 @@ def build_cell(pkey, pname, product, mapping, feats):
     if not mapping or not mapping.get("matched") or not (1 <= mapping.get("feature_index", 0) <= len(feats)):
         return {"offering": product, "implementation": "unverified", "status": "unverified",
                 "evidence_url": "", "last_verified": "",
-                "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"}
+                "notes": "No first-party documentation found for this capability — left unverified rather than guessed."}
     f = feats[mapping["feature_index"] - 1]
     src = f.get("source") or {}
     return {"offering": product,

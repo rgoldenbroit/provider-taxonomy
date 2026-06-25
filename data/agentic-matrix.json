@@ -319,7 +319,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -517,7 +517,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -817,7 +817,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -849,7 +849,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -881,7 +881,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -889,7 +889,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             }
           }
         }
@@ -1015,7 +1015,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -1055,7 +1055,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             }
           }
         },
@@ -1117,7 +1117,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -1181,7 +1181,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",
@@ -1213,7 +1213,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
+              "notes": "No first-party documentation found for this capability — left unverified rather than guessed."
             },
             "openai": {
               "offering": "Codex",

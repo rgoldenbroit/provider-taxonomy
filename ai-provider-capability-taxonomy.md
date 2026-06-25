@@ -362,7 +362,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Persistent agent memory
@@ -527,7 +527,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Plan-then-execute mode
@@ -767,7 +767,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Prompt-injection protection
@@ -793,7 +793,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Codex Security
@@ -819,14 +819,14 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
 - name: Quality & ops
   layer: governance
   capabilities:
@@ -928,7 +928,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Evals API
@@ -961,7 +961,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
   - id: resume-session
     name: Resume / fork session
     what: Continue or branch a previous session.
@@ -1009,7 +1009,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Remote Action Approval
@@ -1061,7 +1061,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Codex for Linear
@@ -1087,7 +1087,7 @@ capability_groups:
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: '(Stage A: no catalog match — pending official-doc / Tavily grounding)'
+        notes: No first-party documentation found for this capability — left unverified rather than guessed.
       openai:
         offering: Codex
         implementation: Access surfaces
