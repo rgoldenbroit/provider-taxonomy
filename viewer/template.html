@@ -90,7 +90,9 @@
   .b-active{ background:color-mix(in srgb,var(--green) 15%,transparent); color:var(--green); }
   .b-preview,.b-beta{ background:color-mix(in srgb,var(--amber) 16%,transparent); color:var(--amber); }
   .b-deprecated,.b-sunset,.b-merged,.b-renamed{ background:color-mix(in srgb,var(--red) 14%,transparent); color:var(--red); }
-  .b-absent{ background:color-mix(in srgb,var(--grey) 18%,transparent); color:var(--grey); }
+  .b-absent,.b-none{ background:color-mix(in srgb,var(--grey) 18%,transparent); color:var(--grey); }
+  .b-unverified{ background:color-mix(in srgb,var(--amber) 13%,transparent); color:var(--amber);
+    border:1px dashed color-mix(in srgb,var(--amber) 45%,transparent); }
   .rel { font-size:11px; padding:1px 7px; border-radius:6px; border:1px solid var(--line); }
   .rel-direct{ color:var(--green); } .rel-partial{ color:var(--blue); } .rel-broader{ color:var(--purple); } .rel-none{ color:var(--grey); }
   .dot { display:inline-block; width:8px; height:8px; border-radius:50%; vertical-align:middle; margin-right:4px; }
@@ -246,6 +248,29 @@
   .cov-pill.unknown { border-style:dashed; border-color:color-mix(in srgb,var(--amber) 45%,var(--line)); color:var(--amber); background:none; box-shadow:none; cursor:help; }
   .cell.empty.unknown { border-style:dashed; border-color:color-mix(in srgb,var(--amber) 40%,var(--line)); color:var(--amber); font-size:12px; }
   .legmark { display:inline-block; width:13px; text-align:center; margin-right:4px; font-weight:700; }
+
+  /* ---------- capability matrix (vendor-neutral, doc-grounded) ---------- */
+  .mxwrap { overflow-x:auto; margin-top:12px; }
+  .mx { display:grid; gap:10px; min-width:780px; align-items:start; }
+  .mx-group { grid-column:1 / -1; display:flex; align-items:baseline; gap:10px; margin:16px 0 0;
+    padding-top:10px; border-top:1px solid var(--line); }
+  .mx-group h3 { margin:0; font-size:14px; }
+  .mx-group .pill { text-transform:capitalize; }
+  .mx-caph { padding:5px 2px; }
+  .mx-caph .capname { font-weight:650; letter-spacing:-.01em; }
+  .mx-cell { background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--line);
+    border-radius:10px; padding:8px 10px; box-shadow:var(--shadow); }
+  .mx-cell.unverified { border-style:dashed; box-shadow:none; }
+  .mx-cell .impl { font-weight:600; letter-spacing:-.01em; }
+  .mx-cell .mxev { font-size:12px; white-space:nowrap; }
+  .mx-cell .mxnote { color:var(--muted); font-size:12px; line-height:1.45; margin-top:5px; }
+  @media (max-width:760px){
+    .mx { grid-template-columns:1fr !important; min-width:0; }
+    .mx .colhead { display:none; }
+    .mx-caph { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+    .mx-cell::before { content:attr(data-prov); display:block; font-size:11px; font-weight:680;
+      color:var(--muted); margin-bottom:4px; }
+  }
 
   /* ---------- explore toolbar ---------- */
   .toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 8px; }
@@ -521,6 +546,7 @@ function viewOverview(){
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="selectView('Explore')">Explore the catalog &rarr;</button>
       <button class="btn" onclick="exploreFunction('agentic-coding')">Agentic Coding breakdown &rarr;</button>
+      <button class="btn" onclick="selectView('Capability Matrix')">Capability matrix &rarr;</button>
       <button class="btn" onclick="showAbout()">How it works</button>
     </div>
     <div class="hero-stats"><b>${providers.length}</b> providers &middot; <b>${productCaps}</b> capabilities &middot; <b>${topFeatures}</b> grounded features &middot; <b>${grounded}%</b> first-party-sourced</div>
@@ -734,8 +760,50 @@ function openCapability(capId){
   `);
 }
 
-/* ---------- nav: four intent-driven sections ---------- */
-const VIEWS = [['Overview',viewOverview],['Explore',viewExplore],['How it works',viewAbout]];
+/* ---------- Capability Matrix: vendor-neutral, doc-grounded agentic-coding comparison ----------
+   A different lens from the auto-discovered catalog: hand-curated neutral capabilities (the "what"),
+   each provider's feature in the cell (the "how"), every non-unverified cell linked to its source. */
+const MX = APP.matrix || null;
+const MX_PROVIDERS = [['anthropic','Anthropic'],['google','Google'],['openai','OpenAI']];
+function mxCell(prov, cell){
+  if (!cell) return `<div class="mx-cell unverified" data-prov="${esc(prov)}"><span class="muted small">&mdash;</span></div>`;
+  const ev = (cell.evidence_url||'').trim();
+  const evLink = ev ? `<a class="mxev" href="${esc(ev)}" target="_blank" rel="noopener" title="${esc(ev)}">docs &#8599;</a>` : '';
+  const lv = cell.last_verified ? `<span class="faint small">verified ${esc(cell.last_verified)}</span>` : '';
+  const impl = cell.implementation ? esc(cell.implementation) : `<span class="muted">unverified</span>`;
+  const note = cell.notes ? `<div class="mxnote">${esc(cell.notes)}</div>` : '';
+  const meta = (evLink||lv) ? `<div class="row small" style="gap:10px;margin-top:4px">${evLink}${lv}</div>` : '';
+  return `<div class="mx-cell${cell.status==='unverified'?' unverified':''}" data-prov="${esc(prov)}" style="border-left-color:${provVar(prov)}">
+    <div class="row" style="gap:6px;justify-content:space-between;align-items:flex-start"><span class="impl">${impl}</span> <span class="badge b-${esc(cell.status)}">${esc(cell.status)}</span></div>
+    ${meta}${note}</div>`;
+}
+function viewMatrix(){
+  if (!MX || !MX.capability_groups) return `<div class="empty-state">Capability-matrix data not loaded.</div>`;
+  const groups = MX.capability_groups;
+  const offerings = {};
+  let total=0, grounded=0, unv=0;
+  groups.forEach(g => g.capabilities.forEach(c => MX_PROVIDERS.forEach(([k])=>{
+    const cell=c.providers[k]; if(!cell) return;
+    if(cell.offering && !offerings[k]) offerings[k]=cell.offering;
+    total++; cell.status==='unverified' ? unv++ : grounded++;
+  })));
+  const cols = `220px 1fr 1fr 1fr`;
+  let grid = `<div class="mxwrap"><div class="mx" style="grid-template-columns:${cols}">`;
+  grid += `<div class="colhead">capability</div>` + MX_PROVIDERS.map(([k,label])=>
+    `<div class="colhead" style="border-bottom-color:${provVar(k)}">${esc(label)}${offerings[k]?` <span class="faint small">${esc(offerings[k])}</span>`:''}</div>`).join('');
+  for (const g of groups){
+    grid += `<div class="mx-group"><h3>${esc(g.name)}</h3><span class="pill">${esc(g.layer)}</span></div>`;
+    for (const c of g.capabilities){
+      grid += `<div class="mx-caph"><div class="capname">${esc(c.name)}</div><div class="faint small">${esc(c.tier)}</div><div class="muted small" style="margin-top:3px">${esc(c.what)}</div></div>`;
+      grid += MX_PROVIDERS.map(([k])=>mxCell(k, c.providers[k])).join('');
+    }
+  }
+  grid += `</div></div>`;
+  return `<div class="section-intro">A <strong>vendor-neutral</strong> comparison of agentic-coding capabilities across Claude Code, Antigravity &amp; Codex. Each row is a capability (the <em>what</em>); each cell names the provider's feature (the <em>how</em>) and links the official doc it was verified against. Unlike the self-maintaining catalog in the other tabs, this matrix is hand-curated and grounded to first-party docs &mdash; <strong>${grounded}/${total}</strong> cells grounded, <strong>${unv}</strong> left honestly <span class="badge b-unverified">unverified</span> rather than guessed.</div>${grid}`;
+}
+
+/* ---------- nav: intent-driven sections ---------- */
+const VIEWS = [['Overview',viewOverview],['Explore',viewExplore],['Capability Matrix',viewMatrix],['How it works',viewAbout]];
 const nav = document.getElementById('nav');
 const navButtons = {};
 VIEWS.forEach(([label,fn])=>{ const btn=document.createElement('button'); btn.textContent=label;

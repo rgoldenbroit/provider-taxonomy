@@ -65,6 +65,7 @@ def build(data_path: str | None = None) -> tuple[Path, list]:
         "metrics": dataset_metrics(data),
         "provenance": _load_provenance(),
         "changelog": _load_json("data/changelog.json"),
+        "matrix": _load_json("data/agentic-matrix.json"),
         "staleness": {p["id"]: days_overdue(p, today) for p in data.get("products", [])},
         "validation": {
             "valid": not issues,
