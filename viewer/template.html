@@ -221,6 +221,24 @@
   .axesstrip { margin-top:16px; padding-top:14px; border-top:1px solid var(--line); line-height:2.1; }
   .axischip { display:inline-block; cursor:pointer; font-size:12px; border:1px solid var(--line); border-radius:999px; padding:3px 11px; margin:2px 5px 2px 0; color:var(--ink); }
   .axischip:hover { border-color:var(--accent); color:var(--accent); }
+  /* mobile: the 4-column coverage matrix can't fit a phone — stack it (capability, then each provider labeled) */
+  @media (max-width:760px){
+    .cov { grid-template-columns:1fr !important; }
+    .cov .colhead { display:none; }
+    .cov-caph { margin-top:14px; border-top:1px solid var(--line); padding-top:12px; }
+    .cov-cell { padding:2px 0 4px; }
+    .cov-cell::before { content:attr(data-prov); display:block; font-size:11px; font-weight:680; color:var(--muted); margin:2px 0 4px; }
+    .pivot, .ovtreegrid { overflow-x:auto; }
+  }
+  /* ---------- site footer (attribution) ---------- */
+  #sitefoot { max-width:1180px; margin:48px auto 0; padding:20px 22px 40px; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; gap:14px 28px; align-items:baseline; justify-content:space-between; }
+  #sitefoot .foot-why { flex:1 1 460px; font-size:12.5px; line-height:1.6; color:var(--muted); }
+  #sitefoot .foot-why b { color:var(--ink); }
+  #sitefoot .foot-wip { color:var(--amber); }
+  #sitefoot .foot-links { display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; }
+  #sitefoot .foot-links a { color:var(--accent); cursor:pointer; text-decoration:none; white-space:nowrap; }
+  #sitefoot .foot-links a:hover { text-decoration:underline; }
   .cov-cell { display:flex; flex-wrap:wrap; gap:6px; align-content:flex-start; padding-top:2px; }
   .cov-pill { display:inline-flex; align-items:center; gap:6px; font-size:12px; padding:4px 9px; border-radius:999px; border:1px solid var(--line); background:var(--panel); cursor:pointer; box-shadow:var(--shadow); transition:transform .12s,border-color .12s,box-shadow .12s; }
   .cov-pill:hover { border-color:var(--accent); transform:translateY(-1px); box-shadow:var(--shadow-lift); }
@@ -261,6 +279,19 @@
   <nav id="nav"></nav>
 </header>
 <main id="main"></main>
+
+<footer id="sitefoot">
+  <div class="foot-why">A solo project by <b>Russell Goldenbroit</b>. A self-maintaining, source-grounded map of what
+    Anthropic, OpenAI &amp; Google ship across AI capabilities — every claim grounded to first-party docs,
+    reproducible byte-for-byte from a committed evidence ledger, and gated in CI before each deploy.
+    <span class="foot-wip">Work in progress — coverage and depth are actively expanding.</span></div>
+  <div class="foot-links">
+    <a href="https://github.com/rgoldenbroit/provider-taxonomy" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
+    <a href="https://www.linkedin.com/in/russell-goldenbroit" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+    <a onclick="selectView('How it works')">How it works</a>
+    <a onclick="selectView('Under the hood')">Under the hood</a>
+  </div>
+</footer>
 
 <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
 <aside id="drawer"></aside>
@@ -537,10 +568,10 @@ function covPill(p){
 function covCell(cap, provider){
   const items = (byCap[cap]||[]).filter(p=>p.provider===provider);
   if (!items.length)   // no record at all → unknown, NOT a claim of absence
-    return `<div class="cov-cell"><span class="cov-pill unknown" title="not yet verified — not a claim that this provider lacks it">? not verified</span></div>`;
+    return `<div class="cov-cell" data-prov="${esc(provider)}"><span class="cov-pill unknown" title="not yet verified — not a claim that this provider lacks it">? not verified</span></div>`;
   const ids = new Set(items.map(p=>p.id));
   const tops = items.filter(p => !(p.parent_id && ids.has(p.parent_id)));   // children show in the drawer
-  return `<div class="cov-cell">${tops.map(covPill).join('')}</div>`;
+  return `<div class="cov-cell" data-prov="${esc(provider)}">${tops.map(covPill).join('')}</div>`;
 }
 function viewOverview(){
   const offerings = prods.filter(p=>p.status!=='absent').length;

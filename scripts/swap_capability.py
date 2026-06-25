@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import sys
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,6 +19,19 @@ sys.path.insert(0, str(ROOT))
 from taxonomy.provider_scan import CAPABILITY_CONFIG  # noqa: E402
 from taxonomy.schema import DEFAULT_DATA_PATH  # noqa: E402
 from taxonomy.validate import validate  # noqa: E402
+
+# The grounding judge over-reads "deprecating…" mentions on a page and mis-flags current features as
+# deprecated. A feature is only kept 'deprecated' if its OWN name/scope shows a deprecation signal;
+# otherwise it reverts to 'active' (false-deprecated is far more damaging than a missed deprecation,
+# which the audit/triangulation catches separately).
+_DEPR_KW = re.compile(r'deprecat|sunset|discontinu|legacy|retir|no longer|removed|end[- ]of[- ]life|'
+                      r'shutting down|merged into|replaced by', re.I)
+
+
+def _sane_status(rec: dict) -> dict:
+    if rec.get("status") == "deprecated" and not _DEPR_KW.search(f"{rec.get('name','')} {rec.get('scope_note','')}"):
+        rec["status"] = "active"
+    return rec
 
 
 def _descendants(products: list[dict], roots: set[str]) -> set[str]:
@@ -49,7 +63,7 @@ def main() -> int:
     old = _descendants(cat["products"], product_ids)   # existing feature layer for this capability
     kept = [p for p in cat["products"] if p["id"] not in old]
     kept_ids = {p["id"] for p in kept}
-    added = [r for r in staged if r["id"] not in kept_ids]
+    added = [_sane_status(r) for r in staged if r["id"] not in kept_ids]
     cat["products"] = kept + added
     if as_of:
         cat.setdefault("_meta", {})["as_of"] = as_of

@@ -19061,7 +19061,7 @@
       "surfaces": [
         "web"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "A visual canvas for building multi-step agent workflows that coordinate multiple agents, tools, and control-flow logic.",
       "lifecycle": [
@@ -24427,7 +24427,7 @@
       "surfaces": [
         "terminal"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "Allows agents to run shell commands locally on a machine the user provides, executing commands inside the user's own runtime.",
       "lifecycle": [
@@ -26826,7 +26826,7 @@
         "web",
         "api"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "A platform for running evaluations at scale asynchronously, supporting API and dashboard interaction and monitoring performance across model outputs.",
       "lifecycle": [
@@ -27003,7 +27003,7 @@
       "surfaces": [
         "api"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "Programmatic API for creating and managing evaluations of model outputs against defined criteria.",
       "lifecycle": [
@@ -27115,7 +27115,7 @@
         "api",
         "cloud"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "Automated evaluation assessments that score or label model outputs at scale using multiple grader types, including LLM-as-a-judge.",
       "lifecycle": [
@@ -27314,7 +27314,7 @@
       "surfaces": [
         "web"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "A platform feature that provides a visual interface for creating and managing evaluation datasets to test model outputs.",
       "lifecycle": [
@@ -27360,7 +27360,7 @@
         "api",
         "web"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "The OpenAI Evaluations platform supports running evals against third-party and custom external models, not just OpenAI's.",
       "lifecycle": [
@@ -31790,7 +31790,7 @@
         "api",
         "cloud"
       ],
-      "status": "deprecated",
+      "status": "active",
       "review_status": "confirmed",
       "scope_note": "Google's high-fidelity text-to-image generation model that produces realistic and high quality images from text prompts.",
       "lifecycle": [
