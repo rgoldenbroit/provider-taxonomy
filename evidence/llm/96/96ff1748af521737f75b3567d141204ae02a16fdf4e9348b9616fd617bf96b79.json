@@ -1,0 +1,12 @@
+{
+  "key": "96ff1748af521737f75b3567d141204ae02a16fdf4e9348b9616fd617bf96b79",
+  "label": "judge:matrix-anthropic-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Run on your machine, in the [cloud](#run-long-running-tasks-remotely), or over [SSH](#ssh-sessions)... The integrated terminal lets you run commands alongside your session without switching to another app... [sending tasks from your phone](#sessions-from-dispatch)... Open it from the **Views** menu or press **Ctrl+\\`** on macOS or Windows.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Claude Code as accessible via multiple surfaces: terminal (integrated terminal and CLI), IDE/desktop app (Claude Desktop with a Code tab), web (embedded browser preview), cloud (Remote/Anthropic-hosted cloud sessions), and mobile (Dispatch sessions from your phone). These collectively substantiate the claim about access surfaces including terminal, IDE, web, cloud, and mobile. The page is a documentation page for the Desktop application (which serves as the IDE-like surface), explicitly mentions the terminal-based CLI, cloud sessions, and phone-based Dispatch sessions.",
+    "supported": true
+  }
+}

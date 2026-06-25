@@ -1,0 +1,12 @@
+{
+  "key": "ea7b6014e4fe04960149ffbd3fa938fa675b336e5dfbbd3b0bf75b66d7a9e312",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about the \"Record & Replay\" feature in OpenAI's Codex product, which allows users to demonstrate a workflow on a Mac and turn it into a reusable skill. The page contains no mention whatsoever of cost tracking, usage tracking, token spend tracking, spending caps, or any related billing/usage management features. Therefore, the claim that OpenAI offers \"Cost & usage tracking (Track and cap token spend / usage)\" is not substantiated by this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "0e7624f396447a7ed67dca6935265b04253a56c2396ac7a5477a190b4622a02a",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about the Antigravity CLI installation and authentication workflows (macOS, Linux, Windows installation, SSH OAuth flow, session management). It contains no mention of a \"Remote control (mobile / web)\" feature for steering or approving agent runs from a phone or remote client. The closest topic is a Remote SSH OAuth flow, but that is purely about authenticating the CLI over SSH, not about remotely controlling or approving agent runs from a mobile or web interface.",
+    "supported": false
+  }
+}

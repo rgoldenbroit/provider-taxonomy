@@ -1,0 +1,12 @@
+{
+  "key": "37414a1626b9929b6ded58bb6f0a2e4c2407ff1f16cd1a7ce2da0f8144408917",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes \"Build with Google\" bundles (Firebase, Android CLI, Chrome DevTools, Modern Web Guidance, Google Antigravity SDK, Science) and their capabilities, but nowhere does it mention an Evals or testing harness feature for running evaluations or test suites against an agent's behavior. The closest reference is Android CLI mentioning \"creating a testing framework\" and \"Test your app using natural language instructions,\" but this refers to Android app testing, not an agent evaluation/evals harness. The claim is not substantiated by the page content.",
+    "supported": false
+  }
+}

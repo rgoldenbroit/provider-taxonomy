@@ -1,0 +1,12 @@
+{
+  "key": "35ad4cf4acb5b9445c11ce06b8ed2caa7e8276adf406f09524c2f357137f941a",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does mention \"Evals\" in the navigation menu (under Research) and references evaluation methodology URLs, but it does not describe or offer an \"Evals / testing harness\" product or feature that allows users to \"run evaluations / test suites against the agent's behavior.\" The \"Evals\" link in the nav appears to point to Google DeepMind's own internal benchmark evaluations/publications, not a developer tool or harness for testing agents. There is no description on the page of a product or service enabling customers to run evaluations or test suites against agent behavior.",
+    "supported": false
+  }
+}

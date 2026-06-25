@@ -1,0 +1,12 @@
+{
+  "key": "f05258fec9fc3df1d4c57f664ad17a4cdf97f3d1d08f272345570f369edb3b8e",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about the Settings architecture of \"Antigravity 2.0\" \u2014 covering global settings, project settings, permissions, appearance, telemetry, etc. There is no mention anywhere on the page of an Evals / testing harness feature, running evaluations, or test suites against agent behavior. The word \"evaluating\" does appear once (\"Antigravity collects interactions for use in evaluating, developing, and improving Antigravity\"), but this refers to Google's internal use of telemetry data \u2014 not a user-facing Evals or testing harness product offering. The claim is not substantiated by the page.",
+    "supported": false
+  }
+}

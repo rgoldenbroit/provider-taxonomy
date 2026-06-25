@@ -1,0 +1,12 @@
+{
+  "key": "4ea8e114dfa3f382552652e15068ed0963dc9bfb94610654ad57969667ec4cb9",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about the Antigravity CLI's Permissions system \u2014 covering fine-grained permission rules, allow/deny/ask policies, supported actions (read_file, write_file, command, mcp, etc.), and configuration examples. There is no mention anywhere on the page of an Evals feature, a testing harness, running evaluations, or test suites against an agent's behavior. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

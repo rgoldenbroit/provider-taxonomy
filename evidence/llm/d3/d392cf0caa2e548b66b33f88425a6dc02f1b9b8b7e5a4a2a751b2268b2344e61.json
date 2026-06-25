@@ -1,0 +1,12 @@
+{
+  "key": "d392cf0caa2e548b66b33f88425a6dc02f1b9b8b7e5a4a2a751b2268b2344e61",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is documentation for the Antigravity CLI's status line customization feature. It does not mention or describe a \"Prompt / context caching\" offering (i.e., a feature to cache repeated context to cut latency and cost). While the JSON payload example does include fields like `cache_creation_input_tokens` and `cache_read_input_tokens` within the `current_usage` object, these are merely metadata fields in a status line payload and do not constitute a description or announcement of a context caching product or feature. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

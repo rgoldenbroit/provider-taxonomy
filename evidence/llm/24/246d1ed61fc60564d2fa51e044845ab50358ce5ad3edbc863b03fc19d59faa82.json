@@ -1,0 +1,12 @@
+{
+  "key": "246d1ed61fc60564d2fa51e044845ab50358ce5ad3edbc863b03fc19d59faa82",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does not describe a Google-offered \"Remote control (mobile / web)\" feature. Instead, it documents a third-party, community-built open-source tool called \"Porta\" (and a separate project \"Levitation\") created by individual developers to enable mobile check-in and approval of Antigravity agent runs. These are unofficial companion apps, not a Google-provided offering. The page explicitly notes the tool \"talks to your local Antigravity Language Server directly\" and was built by a user who \"kept wanting a way to check in on progress and approve actions from my phone.\" There is no mention of Google officially offering or announcing such a feature.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "b4341293f8b429db6becc744a1fb83bf37c1dfd5039e6e883c99598ee0794404",
+  "label": "judge:matrix-openai-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page covers Codex CLI features in detail \u2014 interactive mode, resuming conversations, models, image inputs, approval modes, web search, subagents, and more \u2014 but there is no mention anywhere of a \"Checkpoint / rewind\" feature, save points, or the ability to roll back and undo agent changes. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "0e9a2493fb93f0604fbd8879d4f88ad9b1a2fb1acf0fa726b5f39f87f9fd0ba0",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The user types a request in the GE chat. GE calls your agent's A2A endpoint and sends along GE's own A2UI catalog \u2014 the list of UI components GE knows how to render.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes integration between agents and Gemini Enterprise (GE) via the A2UI/A2A protocol, rendering rich UI within GE's own chat surface. However, the page makes no mention of driving agents from third-party chat or issue-tracking tools such as Slack, Linear, or other external channels. The chat surface discussed is exclusively Gemini Enterprise's own chat interface. The specific claim of \"Chat-surface integration (Drive the agent from chat/issue tools (Slack, Linear, channels))\" is not substantiated anywhere on this page.",
+    "supported": false
+  }
+}

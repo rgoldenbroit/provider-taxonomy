@@ -1,0 +1,12 @@
+{
+  "key": "99a896931e8bb062cbfcbee96decd2a028edf15bc9ade96a444917d7bc38d5d8",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is a paginated list of community forum topics from the OpenAI Developer Community. It contains no mention whatsoever of \"dev-container integration,\" \"dev container,\" or any isolated runtime feature for running agents. The page does not substantiate the claim in any way.",
+    "supported": false
+  }
+}

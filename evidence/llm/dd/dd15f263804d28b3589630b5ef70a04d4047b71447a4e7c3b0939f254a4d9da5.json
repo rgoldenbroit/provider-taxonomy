@@ -1,0 +1,12 @@
+{
+  "key": "dd15f263804d28b3589630b5ef70a04d4047b71447a4e7c3b0939f254a4d9da5",
+  "label": "judge:matrix-google-cloud-execution-environment",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Antigravity agent is a general-purpose managed agent on the Gemini API. A single API call gives you an agent that reasons, executes code, manages files, and browses the web inside your own secure Linux sandbox, hosted by Google.",
+    "lifecycle_status": "preview",
+    "rationale": "The page clearly describes a cloud/managed execution environment for running agents. The Antigravity agent runs inside a \"secure Linux sandbox, hosted by Google\" \u2014 a managed cloud container environment. The `environment: \"remote\"` parameter provisions a fresh sandbox in this managed cloud infrastructure. The page also explicitly states \"Antigravity agent is available in preview through the Interactions API in Google AI Studio and the Gemini API,\" confirming it is in preview status.",
+    "supported": true
+  }
+}

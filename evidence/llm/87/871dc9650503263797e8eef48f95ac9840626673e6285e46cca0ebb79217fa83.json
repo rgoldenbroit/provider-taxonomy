@@ -1,0 +1,12 @@
+{
+  "key": "871dc9650503263797e8eef48f95ac9840626673e6285e46cca0ebb79217fa83",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Context caching allows you to save and reuse precomputed input tokens that you wish to use repeatedly, for example when asking different questions about the same media file. This can lead to cost and speed savings, depending on the usage.",
+    "lifecycle_status": "active",
+    "rationale": "The page is Google's official Gemini API reference for context caching. It explicitly describes a feature that allows saving and reusing precomputed input tokens (i.e., caching repeated context) to achieve cost and speed savings \u2014 directly matching the claim. The page provides full API documentation, multiple code examples across languages, and endpoint definitions, indicating this is a generally available, active feature.",
+    "supported": true
+  }
+}

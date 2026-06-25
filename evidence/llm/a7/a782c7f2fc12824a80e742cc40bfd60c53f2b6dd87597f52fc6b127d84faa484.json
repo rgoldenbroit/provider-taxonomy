@@ -1,0 +1,12 @@
+{
+  "key": "a782c7f2fc12824a80e742cc40bfd60c53f2b6dd87597f52fc6b127d84faa484",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Context compaction: Automatic context compaction (triggered at ~135k tokens) to support long-running, multi-turn sessions without losing context or hitting token limits.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly lists \"Context compaction\" as a capability of the Antigravity agent, describing it as automatic compaction triggered at ~135k tokens to support long-running, multi-turn sessions. However, the page only mentions *automatic* context compaction \u2014 it does not mention a *manual* option. The claim states \"manual + auto,\" but the page only substantiates the automatic variant. The agent itself is in preview status (\"Antigravity agent is available in preview through the Interactions API\").",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "22003f61b711ffa722efd5468e5b7388622e3834748acb1bcf55629900862c73",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is from \"https://antigravity.google/blog/introducing-google-antigravity,\" which is not a real or recognized Google domain, and the page content provided contains only the title \"Google Antigravity\" with no substantive text. There is no mention of Evals, testing harnesses, evaluation suites, or any agent behavior testing capabilities anywhere on the page. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

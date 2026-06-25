@@ -1,0 +1,12 @@
+{
+  "key": "07ec13be13e72a6f319d5521d33c4de7f762180f01834382edf04052e74edc83",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Four Surfaces of Antigravity: 1. Antigravity 2.0 (Desktop App), 2. Antigravity CLI (Terminal), 3. Antigravity IDE (Desktop App), 4. Antigravity SDK (Python Code)",
+    "lifecycle_status": "active",
+    "rationale": "The page does describe \"Access surfaces\" for Google's Antigravity product (terminal via CLI, IDE, desktop app via Antigravity 2.0, and SDK/cloud via Python library). However, the claim specifically attributes this to a product called \"Access\" with surfaces including \"web,\" \"cloud,\" and \"mobile\" \u2014 none of which appear on this page. The page discusses Antigravity surfaces, not an \"Access\" product. Furthermore, the page does not mention \"web,\" \"cloud,\" or \"mobile\" as surfaces. The surfaces listed are Desktop App, Terminal (TUI), and Python Code \u2014 not the exact set claimed. The claim's framing of \"Access surfaces\" does not match the page's content about \"Antigravity surfaces.\"",
+    "supported": false
+  }
+}

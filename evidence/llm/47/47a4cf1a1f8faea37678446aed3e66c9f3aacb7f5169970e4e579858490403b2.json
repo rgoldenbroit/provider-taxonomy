@@ -1,0 +1,12 @@
+{
+  "key": "47a4cf1a1f8faea37678446aed3e66c9f3aacb7f5169970e4e579858490403b2",
+  "label": "judge:matrix-google-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes conversation resumption, session scoping to workspaces, forking/branching conversations, and importing conversations from Antigravity 2.0. It does not describe or mention \"persistent agent memory\" \u2014 a durable memory capability that the agent retains autonomously across turns or sessions (e.g., remembering user preferences, facts, or context without explicit session resumption). The page's features are about session management (resuming prior sessions, branching), not about an agent maintaining its own persistent memory store across interactions. The claim is not substantiated by the page.",
+    "supported": false
+  }
+}

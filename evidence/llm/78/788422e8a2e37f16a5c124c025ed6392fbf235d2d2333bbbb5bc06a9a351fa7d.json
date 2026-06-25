@@ -1,0 +1,12 @@
+{
+  "key": "788422e8a2e37f16a5c124c025ed6392fbf235d2d2333bbbb5bc06a9a351fa7d",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Claude Console features an Evaluation tool that allows you to test your prompts under various scenarios... If you update your original prompt text, you can re-run the entire eval suite against the new prompt to see how changes affect performance across all test cases.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's Evaluation Tool available in the Claude Console, which allows users to run evaluations and test suites (test cases) against prompt/agent behavior. Features described include creating test cases, running eval suites, side-by-side comparison of prompt outputs, quality grading, and prompt versioning \u2014 all of which constitute a testing harness for evaluating agent behavior. The page presents this as a currently available, active feature with no indication of preview or deprecation.",
+    "supported": true
+  }
+}

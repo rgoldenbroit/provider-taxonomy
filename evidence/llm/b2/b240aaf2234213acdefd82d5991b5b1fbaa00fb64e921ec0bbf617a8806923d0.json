@@ -1,0 +1,12 @@
+{
+  "key": "b240aaf2234213acdefd82d5991b5b1fbaa00fb64e921ec0bbf617a8806923d0",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is a binary PDF file rendered as garbled, unreadable binary/encoded content. No human-readable text about Anthropic offering \"Evals / testing harness\" or any related functionality can be extracted or substantiated from this page. The page does not mention the claimed offering at all in any discernible way.",
+    "supported": false
+  }
+}

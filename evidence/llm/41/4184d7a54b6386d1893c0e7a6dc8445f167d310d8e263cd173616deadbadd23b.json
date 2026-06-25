@@ -1,0 +1,12 @@
+{
+  "key": "4184d7a54b6386d1893c0e7a6dc8445f167d310d8e263cd173616deadbadd23b",
+  "label": "judge:matrix-google-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about the Antigravity CLI's status line customization feature \u2014 how to toggle status line components, configure custom scripts, and interpret the JSON payload piped to those scripts. It makes no mention of cost and usage tracking, capping token spend, or any billing/budget controls. While it does expose token usage metrics (e.g., `total_input_tokens`, `total_output_tokens`) for display purposes in the status line, this is purely a UI/monitoring feature and does not constitute tracking or capping token spend/usage costs as claimed.",
+    "supported": false
+  }
+}

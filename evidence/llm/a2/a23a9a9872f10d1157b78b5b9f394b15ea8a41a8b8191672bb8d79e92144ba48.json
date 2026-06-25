@@ -1,0 +1,12 @@
+{
+  "key": "a23a9a9872f10d1157b78b5b9f394b15ea8a41a8b8191672bb8d79e92144ba48",
+  "label": "judge:matrix-google-model-selection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a model selection feature, listing multiple underlying models (e.g., Gemini 3.5 Flash, Claude Sonnet 4.6, GPT-OSS-120b) that users can choose between via a \"model selector dropdown.\" This directly substantiates the claim that Google (via Antigravity) offers model selection so users can choose which underlying model the agent runs on. The feature is described as currently available with no preview/beta/deprecated language.",
+    "supported": true
+  }
+}

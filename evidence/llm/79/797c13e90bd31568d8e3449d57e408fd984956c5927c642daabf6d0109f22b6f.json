@@ -1,0 +1,12 @@
+{
+  "key": "797c13e90bd31568d8e3449d57e408fd984956c5927c642daabf6d0109f22b6f",
+  "label": "judge:matrix-anthropic-model-selection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For the `model` setting in Claude Code, you can configure either: A model alias or A model name... You can configure your model in several ways, listed in order of priority: 1. During session - Use `/model <alias|name>` to switch immediately, or run `/model` with no argument to open the picker.",
+    "lifecycle_status": "active",
+    "rationale": "The page extensively documents model selection/configuration in Claude Code (an agent product), describing how users can choose which underlying model the agent runs on via model aliases (e.g., sonnet, opus, haiku, fable, best), full model names, environment variables, startup flags, and in-session commands. This directly substantiates the claim that Anthropic offers model selection allowing users to choose which underlying model the agent runs on.",
+    "supported": true
+  }
+}

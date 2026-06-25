@@ -1,0 +1,12 @@
+{
+  "key": "3ed50739d0c11d250c2763eb517fcd4b9d7582f5ef283635cb7bb6698a304afd",
+  "label": "judge:matrix-anthropic-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When Claude writes a workflow for a task you'll repeat, you can save that run's script as a command. A process like a review you run on every branch then runs the same orchestration each time... Press Enter to save. The workflow runs as `/<name>` in future sessions from either location.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Workflows\" feature in Claude Code that allows users to define repeatable, named multi-step task sequences. Specifically, it covers: (1) workflows as scripts that orchestrate multi-step agent tasks, (2) the ability to save a workflow run's script as a named command (e.g., `/<name>`) for reuse, (3) these saved workflows appear in autocomplete and can be rerun in future sessions. This directly substantiates the claim of \"Workflows / saved automations\" that define \"repeatable, named multi-step task sequences.\" The feature is described as generally available on all paid plans (Pro, Max, Team, Enterprise) and requires Claude Code v2.1.154 or later, indicating active/GA status.",
+    "supported": true
+  }
+}

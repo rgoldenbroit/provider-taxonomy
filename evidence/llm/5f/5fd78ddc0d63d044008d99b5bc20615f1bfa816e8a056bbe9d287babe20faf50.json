@@ -1,0 +1,12 @@
+{
+  "key": "5fd78ddc0d63d044008d99b5bc20615f1bfa816e8a056bbe9d287babe20faf50",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Google Cloud's Gemini Enterprise Agent Platform and its many features (Agent Studio, Agent Registry, Agent Gateway, Inbox, Projects, etc.) in detail. However, nowhere does the page mention \"Chat-surface integration\" \u2014 the ability to drive agents from chat or issue-tracking tools such as Slack, Linear, or channels. The closest references are ecosystem integrations with partners like Atlassian (which makes Jira/Linear-like tools) and connectors for Asana, but there is no explicit mention of chat-surface integration or driving agents from Slack, Linear, or similar chat/issue tools.",
+    "supported": false
+  }
+}

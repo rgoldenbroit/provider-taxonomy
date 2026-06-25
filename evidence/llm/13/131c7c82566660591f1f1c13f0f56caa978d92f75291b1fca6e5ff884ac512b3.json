@@ -1,0 +1,12 @@
+{
+  "key": "131c7c82566660591f1f1c13f0f56caa978d92f75291b1fca6e5ff884ac512b3",
+  "label": "judge:matrix-google-code-review",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When starting a new Agent conversation, you can choose between two primary execution modes that determine how changes are proposed and reviewed... The Artifact Review Policy controls how you interact with and approve these plans before changes are made to your codebase.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes \"Artifact Review,\" which is a human-in-the-loop review workflow where a human user approves or proceeds with agent-generated implementation plans before they are applied to the codebase. This is NOT automated code review where an agent autonomously reviews diffs/PRs for issues. In fact, the page describes the opposite: the agent produces plans/diffs and then *pauses* for a human to review them. There is no mention of an agent reviewing pull requests or diffs on behalf of the developer to catch issues before they land.",
+    "supported": false
+  }
+}

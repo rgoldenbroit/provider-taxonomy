@@ -1,0 +1,12 @@
+{
+  "key": "4e9a1e9c3a24f3611bd4ea33166e8604df987551b06a557e43a7f1555f80e469",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is about Google's Gemma open models (ai.google.dev/gemma). It contains no mention of \"security scanning,\" \"threat model,\" or scanning code/agent actions for security issues. The page focuses on Gemma model variants, integrations, and use cases. There is no content that substantiates the claim about a security scanning / threat model offering.",
+    "supported": false
+  }
+}

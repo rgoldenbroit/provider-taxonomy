@@ -1,0 +1,12 @@
+{
+  "key": "2bfaec1a4b8b5b7144fdc0c751c71acd10ed03ea24867130df3e87fcf69ccfbb",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page does not mention \"dev container\" integration or the concept of running an agent inside a defined dev container / isolated runtime in that specific sense. The page discusses Codex cloud environments, sandboxing, and configuring environments (repo, setup steps, tools), but there is no mention of dev containers (e.g., devcontainer.json or Docker-based dev container specifications) as a named feature or integration. Therefore, the claim is not substantiated by this page.",
+    "supported": false
+  }
+}

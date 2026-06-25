@@ -1,0 +1,12 @@
+{
+  "key": "9bc8c58a5a84f055710256500c182a69c2aa64bb24873a90b2395432653a6539",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is about Codex web (OpenAI's coding agent) and covers topics like environments, GitHub integration, internet access, and IDE extensions. There is no mention anywhere on the page of cost & usage tracking, token spend tracking, or usage caps. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "b4a14730d86554cb78efecf98915f25697ff43506ed29be7c98f5678a0b54e93",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about Antigravity 2.0's agent permission system (deny/ask/allow lists, supported actions like read_file, write_file, read_url, execute_url, command, mcp, etc.). There is no mention anywhere of a \"remote control\" feature that allows steering or approving agent runs from a phone or remote client. The interactive permission prompts described are editor-based (in-editor cards), not mobile/remote client interfaces.",
+    "supported": false
+  }
+}

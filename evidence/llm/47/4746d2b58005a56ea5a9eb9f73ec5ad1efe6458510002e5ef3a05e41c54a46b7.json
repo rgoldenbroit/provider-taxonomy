@@ -1,0 +1,12 @@
+{
+  "key": "4746d2b58005a56ea5a9eb9f73ec5ad1efe6458510002e5ef3a05e41c54a46b7",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "In a typical AI workflow, you might pass the same input tokens over and over to a model. The Gemini API offers implicit caching to optimize performance and costs.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Google's context caching feature for the Gemini API, which caches repeated context (input tokens) to reduce costs and optimize performance \u2014 directly matching the claim. It states that implicit caching is \"enabled by default for all Gemini 2.5 and newer models,\" confirming it is generally available (active). The page also mentions explicit caching exists (though not supported in the Interactions API), further substantiating the broader offering.",
+    "supported": true
+  }
+}

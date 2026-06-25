@@ -1,0 +1,12 @@
+{
+  "key": "0b509a45a9aba103c7b47723de8fd76376567ab4b8ba6aef13b157e626e217c7",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "AI Threat Defense operationalizes this process by deploying AI security agents to help you actively hunt for deep vulnerabilities. These agents draw on multiple industry-leading frontier models via the Gemini Enterprise Agent Platform... Frontier models can uncover complex logic flaws, risky trust boundaries, vulnerable dependencies, exposed APIs, and chains of lower-severity issues that combine into exploitable paths... Wiz's AI, context-aware, pen-testing agent simulates attacks to identify and validate complex exploitable paths, including application-layer and identity-driven risks traditional testing often misses.",
+    "lifecycle_status": "active",
+    "rationale": "The page substantiates the claim that Google offers security scanning/threat model capabilities that scan code and agent actions for security issues. The page describes Google AI Threat Defense as a platform that uses AI agents and frontier models to scan code repositories, CI/CD pipelines, AI platforms and models, and agent actions for deep vulnerabilities (logic flaws, risky trust boundaries, vulnerable dependencies, exposed APIs), and validates exploitability against real-world threat context \u2014 which directly maps to \"scanning code/agent actions for security issues against a threat model.\" The offering is presented as a current announcement (introduced May 27, 2026), indicating active/general availability status.",
+    "supported": true
+  }
+}

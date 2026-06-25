@@ -1,0 +1,12 @@
+{
+  "key": "70b85f71d0719b2225ef5242e8f4345016208beccc75f090ce7ff9070ed72490",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page (https://antigravity.google/product) contains only the text \"Google Antigravity\" and provides no information whatsoever about Evals, testing harnesses, evaluation suites, agent behavior testing, or any related offering. The page does not substantiate the claim in any way.",
+    "supported": false
+  }
+}

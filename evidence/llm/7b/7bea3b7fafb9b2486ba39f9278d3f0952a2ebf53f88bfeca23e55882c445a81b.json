@@ -1,0 +1,12 @@
+{
+  "key": "7bea3b7fafb9b2486ba39f9278d3f0952a2ebf53f88bfeca23e55882c445a81b",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is the Codex CLI documentation page. It covers installation, usage, features like subagents, web search, image generation, MCP, approval modes, and scripting \u2014 but contains no mention of cost & usage tracking, token spend tracking, or any capability to cap or monitor token usage. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

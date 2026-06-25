@@ -1,0 +1,12 @@
+{
+  "key": "dca131a6ab75a3db004029b26bd8f7a33060721958c91e1b663ba375a25f7064",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page discusses Google Workspace developer tools including the Google Chat REST API, Chat apps, and integrations with partners like Atlassian (Jira), Asana, PagerDuty, and Zendesk. However, the page does not mention any \"Chat-surface integration\" in the specific sense of driving an agent from chat/issue tools like Slack or Linear. The page is focused on Google's own Workspace surfaces (Google Chat, Docs, Meet, Calendar, etc.) and does not describe any offering that allows external tools like Slack or Linear to drive a Google agent. The claim's specific framing \u2014 \"Drive the agent from chat/issue tools (Slack, Linear, channels)\" \u2014 finds no substantiation anywhere on the page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "8345fa2e095db5bb632701426bde8b60a9f4e4150ad7d168647dd21467c857e2",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is documentation for the \"Antigravity CLI\" and covers features such as Plugins, Terminal Sandbox, Slash Commands, and Subagents. There is no mention anywhere on the page of prompt/context caching, caching repeated context, or any related functionality to cut latency and cost. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

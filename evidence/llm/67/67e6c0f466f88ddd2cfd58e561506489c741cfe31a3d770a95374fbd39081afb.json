@@ -1,0 +1,12 @@
+{
+  "key": "67e6c0f466f88ddd2cfd58e561506489c741cfe31a3d770a95374fbd39081afb",
+  "label": "judge:matrix-openai-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Today, we're introducing Prompt Caching, allowing developers to reduce costs and latency. By reusing recently seen input tokens, developers can get a 50% discount and faster prompt processing times.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's Prompt Caching feature in the API, which caches repeated/recently seen context (input tokens) to reduce both cost (50% discount on cached input tokens) and latency. It was launched on October 1, 2024, is automatically applied to supported models, and is described as generally available \u2014 matching the claim of \"Prompt / context caching (Cache repeated context to cut latency and cost.)\"",
+    "supported": true
+  }
+}

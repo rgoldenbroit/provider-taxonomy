@@ -1,0 +1,12 @@
+{
+  "key": "95d1936d479758b38079e2e93b6c2db69a48894866633071e6224b0468375e70",
+  "label": "judge:matrix-anthropic-resume-session",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Branching creates a copy of the conversation so far and switches you into it, leaving the original intact. Use it to try a different approach without losing the path you were on... From the command line, combine `--continue` or `--resume` with `--fork-session`",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents both resuming and branching (forking) previous sessions. The \"Resume a session\" section covers continuing a previous session via `--continue`, `--resume`, and `/resume` commands. The \"Branch a session\" section covers forking/branching a previous conversation to try a different approach. These together substantiate the claim of \"Resume / fork session (Continue or branch a previous session.)\" as active, generally available features of Claude Code.",
+    "supported": true
+  }
+}

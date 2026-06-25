@@ -1,0 +1,114 @@
+{
+  "key": "0099ba547927b85103e6481b40fa6a2a96c68f1b347468383d5ac402ff139cc4",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "Workspace Rules are stored in .agents/rules at the workspace or git root, directly serving as a repo/project-scoped instruction file giving the agent standing instructions and context."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Plugins are described as namespaced bundles grouping skills, rules, MCP servers, and hooks into a single package \u2014 directly matching the capability of bundling reusable capabilities/instructions the agent can load."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "Lifecycle Hooks explicitly run custom local shell scripts or commands at specific lifecycle points during execution, directly realizing the capability of running custom logic on agent events."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Rules provide persistent, reusable constraints/context but are not described as shaping the system prompt, persona, or output style specifically. The capability targets system-prompt and output customization; rules are closer to behavioral constraints, not output/persona shaping."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "MCP Integration directly supports the Model Context Protocol to connect external tools, databases, and services \u2014 a direct realization of the external tool/connector protocol capability."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "MCP Store is a built-in store to browse, install, and authenticate MCP servers directly in the editor, directly covering the install, configure, and discover aspects of MCP server management."
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "realizes": true,
+        "reason": "MCP Store explicitly includes authentication of supported MCP servers, directly realizing the MCP authentication capability."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "Per-Tool MCP Permission grants agent access to a single named tool on a specific MCP server, directly realizing fine-grained allow-listing/governance of which MCP tools the agent may use."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "Subagents feature explicitly describes delegation of long-running operations to parallel autonomous subagents, directly matching the capability of spawning focused sub-agents to handle parts of a task."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Multi-Agent Orchestration is an advanced framework coordinating multiple agents with error recovery, retries, and coordination logic, directly realizing the capability of multi-agent teams that share work and communicate."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Workflows are saved markdown files defining a repeatable series of steps to guide the agent through tasks, directly matching the capability of defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "Request Review Mode pauses at milestones for user approval but does not explicitly produce a reviewable plan before any edits occur. The capability requires producing a plan first and then executing \u2014 this is a checkpoint/approval mechanism, not a plan-then-execute mode."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Always Proceed Mode means the agent never pauses and executes changes immediately, but it does not describe setting a verifiable 'done' condition and looping autonomously until that condition is met. It is an execution-style setting, not a goal-directed iteration mechanism."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Support has agents operating in dedicated Git worktrees to isolate parallel work within a project, directly realizing the capability of parallel isolated workspaces without collisions."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Tasks explicitly run tracked, long-running operations asynchronously without blocking the primary agent, directly matching the capability."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Scheduled Tasks allow users to schedule messages to agents with repeatable time-based triggers, directly realizing the capability of scheduled/triggered runs."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Terminal Sandboxing provides kernel-level/native OS isolation for terminal commands executed by the agent, directly realizing sandboxed execution to limit blast radius."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "Fine-Grained Permissions Engine represents every sensitive agent operation as a permission resource in a unified engine, directly realizing the capability of approving/denying what the agent is allowed to do."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Independent Network Access Control explicitly controls network connectivity for sandboxed commands independently, directly realizing the capability of restricting the agent's outbound network access."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "Inspect Hooks are read-only, non-blocking hooks explicitly for logging, audit trails, and metrics collection, directly realizing the audit logging/telemetry capability."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "Observability tracks per-turn and cumulative token usage and provides thinking traces, but does not mention cost tracking or the ability to cap token spend. Tracking usage is close, but capping/cost management is absent from the description, making this only a partial match \u2014 and partial matches do not count."
+      }
+    ]
+  }
+}

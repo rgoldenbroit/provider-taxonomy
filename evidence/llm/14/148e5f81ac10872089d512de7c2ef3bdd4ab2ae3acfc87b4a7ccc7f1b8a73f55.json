@@ -1,0 +1,12 @@
+{
+  "key": "148e5f81ac10872089d512de7c2ef3bdd4ab2ae3acfc87b4a7ccc7f1b8a73f55",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about managing conversations in the Antigravity CLI \u2014 covering workspace scoping, resuming sessions, importing conversations, and forking/branching. There is no mention anywhere of \"context compaction,\" \"auto compaction,\" \"manual compaction,\" or any feature that compresses conversation/context to extend effective working memory. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

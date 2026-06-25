@@ -1,0 +1,12 @@
+{
+  "key": "b920b74a6591570c28037c9e033484af765b9a6d9f2eaf7d45403fbca1c564f7",
+  "label": "judge:matrix-google-goal-directed-iteration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs automatically.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a workflow where a verifiable \"done\" condition (e.g., passing tests via a command like `npm test`) is set, and the agent autonomously loops \u2014 executing the verification command and iterating on outputs \u2014 until the condition is met. This matches the claim of \"goal-directed autonomous iteration.\" The page does not use those exact words, but the described behavior (agent runs a test command, watches outputs, and iterates automatically) is substantively equivalent. Confidence is medium rather than high because the description is implicit/instructional rather than a direct feature declaration.",
+    "supported": true
+  }
+}

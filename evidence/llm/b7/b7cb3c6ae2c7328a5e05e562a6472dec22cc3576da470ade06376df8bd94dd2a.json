@@ -1,0 +1,12 @@
+{
+  "key": "b7cb3c6ae2c7328a5e05e562a6472dec22cc3576da470ade06376df8bd94dd2a",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about the Antigravity CLI's fine-grained permissions engine \u2014 covering allow/deny/ask policies, supported actions (read_file, write_file, read_url, execute_url, command, unsandboxed, mcp), interactive TUI prompts, and configuration examples. There is no mention anywhere of a \"Remote control\" feature (mobile or web) that would allow steering or approving agent runs from a phone or remote client. The interactive approval mechanism described is local TUI-based, not remote/mobile.",
+    "supported": false
+  }
+}

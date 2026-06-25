@@ -1,0 +1,12 @@
+{
+  "key": "f3a65ac962ac79b4256911da8ec4ff1da838cca5020394d55914adf6675782b4",
+  "label": "judge:matrix-openai-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "CLI: Add /rewind checkpoint restore that reverts both chat context and Codex-applied code edits ... Add a native `/rewind` checkpoint flow that restores both: - conversation state - Codex-applied workspace edits ... Current behavior: Esc rewind only rewinds conversation/history (fork point), but does not revert code changes made after that point.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does not substantiate the claim that OpenAI offers a \"Checkpoint / rewind\" feature as an existing, available offering. To the contrary, the page is a community feature-request thread asking for this capability to be added. The GitHub issue quoted describes it as a *requested* behavior, explicitly noting the \"current behavior\" lacks it. One community member (EricGT) states \"IIRC Codex had this feature and it was removed.\" The thread makes clear that as of April 2026, the feature does not exist in a usable, integrated form \u2014 users are directed to workarounds like Git, and the referenced GitHub issue is an open enhancement request. There is no statement on the page that OpenAI currently offers checkpoint/rewind as a shipped product feature.",
+    "supported": false
+  }
+}

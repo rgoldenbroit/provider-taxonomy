@@ -1,0 +1,12 @@
+{
+  "key": "baf947cf1da8bb38d24846c85dc8770a4122eb4e3d8d39844d5298db828a3319",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page content contains only the text \"Google Antigravity\" and provides no information whatsoever about any product offerings, features, or integrations \u2014 including Chat-surface integration with tools like Slack, Linear, or channels. There is nothing on the page to substantiate the claim.",
+    "supported": false
+  }
+}

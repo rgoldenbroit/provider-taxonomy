@@ -1,0 +1,12 @@
+{
+  "key": "8e6bc7ae9bbc0b5fe5f11c5034b00d07976ce6a82a5d8dac693443dd24a1a474",
+  "label": "judge:matrix-google-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about \"Hooks\" in Antigravity 2.0 \u2014 a mechanism for running custom scripts at specific points in an agent's execution loop. It makes no mention of persistent agent memory, durable memory across turns or sessions, or any related memory feature. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

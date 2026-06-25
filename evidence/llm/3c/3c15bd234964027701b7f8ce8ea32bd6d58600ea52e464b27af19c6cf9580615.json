@@ -1,0 +1,12 @@
+{
+  "key": "3c15bd234964027701b7f8ce8ea32bd6d58600ea52e464b27af19c6cf9580615",
+  "label": "judge:matrix-openai-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "I believe this approach may be relevant to OpenAI's work on persistent memory, agent orchestration, tool use, context reconstruction and long-running autonomous workflows.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a community forum post from a third-party developer (Jeffrey Cellauro) requesting a confidential discussion with OpenAI about his own proprietary graph-native memory architecture. The post does not describe or assert that OpenAI itself offers persistent agent memory as a product or feature. The only reference to OpenAI's work on persistent memory is speculative and vague (\"may be relevant to OpenAI's work on persistent memory\"), which is the user's assumption about OpenAI's direction, not a substantiation of an existing OpenAI offering. The page does not describe any OpenAI product, announcement, or capability related to persistent agent memory.",
+    "supported": false
+  }
+}

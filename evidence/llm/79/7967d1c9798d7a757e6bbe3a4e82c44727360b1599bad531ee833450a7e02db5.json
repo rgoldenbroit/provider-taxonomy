@@ -1,0 +1,12 @@
+{
+  "key": "7967d1c9798d7a757e6bbe3a4e82c44727360b1599bad531ee833450a7e02db5",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is Google Cloud Storage documentation about Access Control Lists (ACLs) \u2014 a permissions mechanism for buckets and objects. It does not mention anything about \"Access surfaces\" in the context of where an agent can be used (terminal, IDE, web, cloud, mobile). The claim refers to a feature of an AI agent or similar product, which is entirely unrelated to the content of this page.",
+    "supported": false
+  }
+}

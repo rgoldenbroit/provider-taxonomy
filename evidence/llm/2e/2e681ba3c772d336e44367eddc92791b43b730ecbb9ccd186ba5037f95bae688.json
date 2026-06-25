@@ -1,0 +1,12 @@
+{
+  "key": "2e681ba3c772d336e44367eddc92791b43b730ecbb9ccd186ba5037f95bae688",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is an announcement about Claude Opus 4.5 and covers topics like model capabilities, safety evaluations, developer platform updates, and product updates. It does not mention or describe an \"Evals / testing harness\" offering that allows developers to run evaluations or test suites against agent behavior as a distinct product or service. While the page references internal evaluations and mentions \"Petri\" (an open-source automated evaluation tool used by Anthropic internally), it does not describe a dedicated evals/testing harness product offered to users. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

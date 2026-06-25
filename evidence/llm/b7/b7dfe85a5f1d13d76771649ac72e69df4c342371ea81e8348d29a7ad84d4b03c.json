@@ -1,0 +1,12 @@
+{
+  "key": "b7dfe85a5f1d13d76771649ac72e69df4c342371ea81e8348d29a7ad84d4b03c",
+  "label": "judge:matrix-google-cloud-execution-environment",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Automatically deploy, scale, and manage containers with Google Kubernetes Engine or Cloud Run",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Cloud Run as a \"Fully managed environment for running containerized apps,\" and mentions it alongside Google Kubernetes Engine for deploying and scaling containers. The page also describes Agent Platform as a \"fully-managed AI development platform to build and manage AI applications and agents.\" These offerings collectively substantiate the claim that Google provides a cloud execution environment for running agents in a managed cloud/container environment.",
+    "supported": true
+  }
+}

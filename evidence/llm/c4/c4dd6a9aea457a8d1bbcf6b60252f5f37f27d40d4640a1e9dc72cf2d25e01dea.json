@@ -1,0 +1,12 @@
+{
+  "key": "c4dd6a9aea457a8d1bbcf6b60252f5f37f27d40d4640a1e9dc72cf2d25e01dea",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes multiple integration patterns for Google's Conversational Analytics API (Looker iframe embed, Looker API/SDKs, Direct API, ADK toolsets, MCP, A2A). While it briefly mentions \"Google Chat\" as one surface in a note (\"If you must share the same agent across multiple platforms, such as a custom web app and Google Chat, use the Conversational Analytics API with a Looker data source\"), the page does not describe or substantiate a \"Chat-surface integration\" pattern that specifically allows driving the agent from chat/issue tools like Slack or Linear. There is no mention of Slack, Linear, or a dedicated chat-surface integration pattern anywhere on the page.",
+    "supported": false
+  }
+}

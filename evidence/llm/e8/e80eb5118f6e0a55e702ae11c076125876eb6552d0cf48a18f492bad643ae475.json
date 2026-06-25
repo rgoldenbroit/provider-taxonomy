@@ -1,0 +1,268 @@
+{
+  "key": "e80eb5118f6e0a55e702ae11c076125876eb6552d0cf48a18f492bad643ae475",
+  "label": "matrixmap:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "mappings": [
+      {
+        "capability_id": "project-instruction-file",
+        "confidence": "high",
+        "feature_index": 106,
+        "implementation": "Project-Level AGENTS.md",
+        "matched": true
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "confidence": "high",
+        "feature_index": 102,
+        "implementation": "Plugins",
+        "matched": true
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "output-customization",
+        "confidence": "medium",
+        "feature_index": 7,
+        "implementation": "AGENTS.md Instruction Files",
+        "matched": true
+      },
+      {
+        "capability_id": "model-selection",
+        "confidence": "high",
+        "feature_index": 94,
+        "implementation": "Per-Agent Model Selection",
+        "matched": true
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "confidence": "high",
+        "feature_index": 77,
+        "implementation": "MCP (Model Context Protocol)",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "confidence": "high",
+        "feature_index": 80,
+        "implementation": "MCP Server CLI Management",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "confidence": "high",
+        "feature_index": 92,
+        "implementation": "OAuth MCP Login",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "confidence": "low",
+        "feature_index": 83,
+        "implementation": "MCP Tool Exposure",
+        "matched": true
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "confidence": "low",
+        "feature_index": 123,
+        "implementation": "Skills",
+        "matched": true
+      },
+      {
+        "capability_id": "context-compaction",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "prompt-caching",
+        "confidence": "low",
+        "feature_index": 38,
+        "implementation": "Container Caching",
+        "matched": true
+      },
+      {
+        "capability_id": "subagents",
+        "confidence": "high",
+        "feature_index": 133,
+        "implementation": "Subagent Workflows",
+        "matched": true
+      },
+      {
+        "capability_id": "agent-teams",
+        "confidence": "high",
+        "feature_index": 105,
+        "implementation": "Project Manager Multi-Agent Workflow",
+        "matched": true
+      },
+      {
+        "capability_id": "workflows",
+        "confidence": "high",
+        "feature_index": 21,
+        "implementation": "Automations",
+        "matched": true
+      },
+      {
+        "capability_id": "plan-mode",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "confidence": "high",
+        "feature_index": 64,
+        "implementation": "Git Worktree Isolation",
+        "matched": true
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "confidence": "high",
+        "feature_index": 28,
+        "implementation": "Cloud Environments",
+        "matched": true
+      },
+      {
+        "capability_id": "background-execution",
+        "confidence": "high",
+        "feature_index": 126,
+        "implementation": "Standalone Automations",
+        "matched": true
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "confidence": "high",
+        "feature_index": 136,
+        "implementation": "Thread Automations",
+        "matched": true
+      },
+      {
+        "capability_id": "sandboxing",
+        "confidence": "high",
+        "feature_index": 117,
+        "implementation": "Sandbox",
+        "matched": true
+      },
+      {
+        "capability_id": "permission-controls",
+        "confidence": "high",
+        "feature_index": 11,
+        "implementation": "Approval Policy",
+        "matched": true
+      },
+      {
+        "capability_id": "network-egress-control",
+        "confidence": "high",
+        "feature_index": 88,
+        "implementation": "Network Access Control",
+        "matched": true
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "security-scanning",
+        "confidence": "high",
+        "feature_index": 33,
+        "implementation": "Codex Security",
+        "matched": true
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "confidence": "medium",
+        "feature_index": 45,
+        "implementation": "Custom Setup Script",
+        "matched": true
+      },
+      {
+        "capability_id": "audit-logging",
+        "confidence": "high",
+        "feature_index": 26,
+        "implementation": "Built-in Run Tracing",
+        "matched": true
+      },
+      {
+        "capability_id": "code-review",
+        "confidence": "high",
+        "feature_index": 9,
+        "implementation": "AI Code Review",
+        "matched": true
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "evals-testing",
+        "confidence": "high",
+        "feature_index": 58,
+        "implementation": "Evals API",
+        "matched": true
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "confidence": "low",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "resume-session",
+        "confidence": "high",
+        "feature_index": 86,
+        "implementation": "Multi-Device Session Handoff",
+        "matched": true
+      },
+      {
+        "capability_id": "remote-control",
+        "confidence": "high",
+        "feature_index": 111,
+        "implementation": "Remote Action Approval",
+        "matched": true
+      },
+      {
+        "capability_id": "notifications",
+        "confidence": "high",
+        "feature_index": 134,
+        "implementation": "Task Completion Notifications",
+        "matched": true
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "confidence": "high",
+        "feature_index": 30,
+        "implementation": "Codex for Linear",
+        "matched": true
+      },
+      {
+        "capability_id": "access-surfaces",
+        "confidence": "medium",
+        "feature_index": 65,
+        "implementation": "GitHub Integration",
+        "matched": true
+      }
+    ]
+  }
+}

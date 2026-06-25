@@ -1,0 +1,12 @@
+{
+  "key": "84039c2b52e3cf697a1031fe82cae173452c29dd0e4205dbbf5c09ffcf7fcd90",
+  "label": "judge:matrix-google-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "There is currently no support for: Bring-your-own-key or bring-your-own-endpoint for additional rate limits; Organizational tiers via contract",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does not mention any feature for tracking or capping token spend or usage costs. While it describes quota/rate limits and AI credit overages, there is no mention of a dedicated \"Cost & usage tracking\" feature that allows users to track or cap token spend. The page explicitly lists unsupported features, and cost/spend tracking is not described anywhere as an available offering.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "84697b0dac77485f611e6b232d0642226766156e211d7f2d85961200ecccc944",
+  "label": "judge:matrix-google-code-review",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "name: code-review\ndescription: Reviews code changes for bugs, style issues, and best practices. Use when reviewing PRs or checking code quality.",
+    "lifecycle_status": "active",
+    "rationale": "The page includes a concrete example of a \"code-review\" skill for the Antigravity 2.0 agent, with a description explicitly mentioning reviewing PRs and checking code quality (bugs, style issues, best practices). This directly substantiates that the agent can perform automated code review of diffs/PRs for issues before they land, via the Skills system. The lifecycle status appears active as the page presents this as current, production documentation with no deprecation notices. Note: the page is for \"Antigravity 2.0\" (a Google product), and the example is presented as a real, usable skill pattern \u2014 not merely hypothetical \u2014 though the skill itself is user-created rather than a built-in automated feature, which introduces some nuance.",
+    "supported": true
+  }
+}

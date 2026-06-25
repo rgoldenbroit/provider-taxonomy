@@ -1,0 +1,12 @@
+{
+  "key": "ceafc24e0c7347b6311c6c9430a69a910990b0ab64eec5ba0f26a25e003e4ee4",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is the OpenAI Developers Community page, which contains navigation links, community posts, meetup listings, and social media quotes. It does not mention any \"Cost & usage tracking,\" \"token spend,\" or \"cap\" functionality anywhere on the page. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "c4d940a5273e710ad29e9037d67f22d56713d35bf17957548f61295590c7567f",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is a Google Threat Intelligence Group (GTIG) blog post about adversarial/threat actor use of AI tools (distillation attacks, phishing augmentation, malware development, etc.). It does not mention, describe, or substantiate any Google offering for \"Security scanning / threat model\" that scans code or agent actions for security issues against a threat model. The page contains no reference to such a product or feature.",
+    "supported": false
+  }
+}

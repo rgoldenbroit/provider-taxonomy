@@ -1,0 +1,12 @@
+{
+  "key": "bd0d87501f1171b2f1ec8b24fd9c30502921eef63aaedb2af00942864d58dcd4",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes the Antigravity IDE's MCP integration, which connects the editor to external tools and services. It does not mention any \"Chat-surface integration\" \u2014 meaning the ability to drive the agent from chat or issue tools like Slack, Linear channels, or similar interfaces. While Linear is listed as a supported MCP server (allowing the editor to create Linear issues), the page makes no mention of driving the agent from within Slack, Linear, or other chat/issue tool channels. The claim of a dedicated \"chat-surface integration\" where those tools act as the control surface for the agent is not substantiated anywhere on the page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "72b05d0a6f01220f3dc5c4786b5166f3c4d8e2aeabe03a3934ae33f17f9b14b8",
+  "label": "judge:matrix-google-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Use `/rewind` or `/undo` to rewind the conversation history",
+    "lifecycle_status": "active",
+    "rationale": "The page does describe `/rewind` and `/undo` commands for rewinding conversation history, but the claim specifically refers to \"Checkpoint / rewind (Save points you can roll back to, and undo agent changes.)\" \u2014 a feature involving saved checkpoints or save points that preserve agent state for rollback. The page only mentions rewinding/undoing conversation history, with no mention of \"checkpoints,\" \"save points,\" or the ability to undo agent-made changes to files or the environment. The described functionality is limited to conversation history navigation, not the broader checkpoint/rollback of agent actions as claimed.",
+    "supported": false
+  }
+}

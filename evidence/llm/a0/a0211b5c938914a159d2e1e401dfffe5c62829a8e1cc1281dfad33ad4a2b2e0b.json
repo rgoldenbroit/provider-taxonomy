@@ -1,0 +1,12 @@
+{
+  "key": "a0211b5c938914a159d2e1e401dfffe5c62829a8e1cc1281dfad33ad4a2b2e0b",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page contains only the text \"Google Antigravity\" and provides no information whatsoever about access surfaces, agents, terminals, IDEs, web, cloud, or mobile offerings. There is nothing on the page to substantiate the claim.",
+    "supported": false
+  }
+}

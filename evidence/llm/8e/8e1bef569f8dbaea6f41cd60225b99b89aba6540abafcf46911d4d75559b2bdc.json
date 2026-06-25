@@ -1,0 +1,12 @@
+{
+  "key": "8e1bef569f8dbaea6f41cd60225b99b89aba6540abafcf46911d4d75559b2bdc",
+  "label": "judge:matrix-openai-lifecycle-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "`PreToolUse`, `PermissionRequest`, `PostToolUse`, `PreCompact`, `PostCompact`, `UserPromptSubmit`, `SubagentStop`, and `Stop` run at turn scope. `SessionStart` and `SubagentStart` run at thread or subagent-start scope.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a full \"Hooks\" extensibility framework for OpenAI's Codex that allows users to inject custom scripts into the agentic loop at specific lifecycle events. The supported events include PreToolUse (before a tool call), PostToolUse (after a tool call), and Stop (on stop), which directly match the claim's examples of \"before/after a tool call, on stop.\" The page provides detailed configuration examples, input/output schemas, and runtime behavior notes, indicating this is an active, generally available feature (hooks are enabled by default).",
+    "supported": true
+  }
+}

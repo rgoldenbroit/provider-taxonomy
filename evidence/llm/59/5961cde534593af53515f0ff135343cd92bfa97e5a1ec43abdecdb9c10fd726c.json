@@ -1,0 +1,169 @@
+{
+  "key": "5961cde534593af53515f0ff135343cd92bfa97e5a1ec43abdecdb9c10fd726c",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "CLAUDE.md Project Memory directly describes markdown files that give Claude persistent instructions and project context loaded at session start \u2014 exactly what a project-scoped instruction file provides."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": false,
+        "reason": "Bundled Orchestration Skills are pre-built prompt playbooks for orchestrating tasks and spawning agents, not a general mechanism for bundling and loading reusable capabilities/instructions as extensions."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "Agent Lifecycle Hooks directly trigger custom logic on agent idle, task creation, and task completion events \u2014 matching the capability of running custom logic on agent lifecycle events."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "Output Styles are saved markdown configurations that explicitly modify Claude's system prompt and can be reused, directly realizing the capability of shaping the system prompt and output style."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "Model Context Protocol (MCP) is explicitly described as an open-source standard for connecting Claude to external tools and data sources, directly realizing the external tool/connector protocol capability."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": false,
+        "reason": "MCP Installation Scopes only describes configuration scoping (local/project/user) for MCP servers. It does not cover installation, discovery, or a full registry \u2014 only partial configuration management."
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "realizes": true,
+        "reason": "MCP Auth Methods directly describes authentication mechanisms (env-var, HTTP header, OAuth 2/2.1) for connecting to MCP servers, fully realizing the MCP authentication capability."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "MCP Tool Allow-listing directly provides granular permission control over which MCP tools an agent may invoke, including wildcard rules \u2014 a direct realization of MCP tool governance."
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": true,
+        "reason": "Auto Memory (MEMORY.md) describes notes Claude writes itself that persist per git repository and are auto-loaded into future sessions, directly realizing durable cross-session agent memory."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "Subagents are explicitly described as specialized AI assistants running in isolated context windows that handle delegated tasks and return results \u2014 a direct realization of the subagents capability."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Agent Teams directly describes coordinating multiple independent Claude Code sessions working together as a team with a lead and shared task management, realizing multi-agent team coordination."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Routines are saved configurations that run on a schedule or via API trigger on cloud infrastructure. While they are repeatable automations, they emphasize scheduled/triggered cloud runs rather than named multi-step task sequences with defined steps \u2014 closer to scheduled runs than general workflow definition."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": true,
+        "reason": "Plan Mode explicitly researches and proposes changes without executing or modifying anything \u2014 a direct realization of the plan-then-execute capability."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Dynamic Workflows describes JavaScript scripts that orchestrate subagents at scale in the background. While related to autonomous iteration, it does not directly describe a verifiable 'done' condition with the agent looping until that condition is met."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Isolation explicitly runs agents in separate git worktrees/checkouts so parallel agents don't overwrite each other's work, directly realizing parallel isolated workspaces."
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "realizes": true,
+        "reason": "Claude Code on the Web explicitly runs Claude Code tasks on Anthropic-managed cloud infrastructure accessible from browser or phone, directly realizing a managed cloud execution environment."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Agent Execution directly describes running a subagent as a non-blocking background task alongside other operations, realizing the background/async execution capability."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Schedule Trigger explicitly runs routines on a recurring cadence or at a specific future time without supervision, directly realizing the scheduled/triggered runs capability."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Sandbox Runtime wraps the entire Claude Code process in Seatbelt/bubblewrap isolation to constrain its actions, directly realizing sandboxed execution to limit blast radius."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "Permission System is a tiered system that classifies tools by approval requirements and governs whether Claude Code may use them \u2014 a direct realization of tool permission controls."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Egress Firewall Control uses a firewall script to restrict outbound network traffic to only explicitly allowed domains, directly realizing network/egress control."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": true,
+        "reason": "Prompt Injection Protection explicitly describes safeguards against attempts to override Claude's instructions via malicious text, directly realizing prompt-injection protection."
+      },
+      {
+        "capability_id": "security-scanning",
+        "realizes": true,
+        "reason": "Security Guidance Plugin makes Claude review its own code changes for vulnerabilities using both deterministic and model-based checks, directly realizing security scanning of agent actions."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": true,
+        "reason": "Dev Container Integration explicitly describes running Claude Code inside a Docker container managed by VS Code with the project mounted, so commands execute in an isolated runtime \u2014 a direct match."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "OpenTelemetry Monitoring exports metrics, events, and traces via OpenTelemetry to configurable backends, directly realizing audit logging and telemetry for agent action review and compliance."
+      },
+      {
+        "capability_id": "code-review",
+        "realizes": true,
+        "reason": "Automated PR Code Review is an automated service using multi-agent analysis to flag logic errors, security vulnerabilities, and regressions in PRs \u2014 a direct realization of automated code review."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": true,
+        "reason": "Cost Tracking explicitly tracks spend and per-session token accounting for agent runs, directly realizing cost and usage tracking."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": false,
+        "reason": "Mid-Session Workflow Resume describes resuming a paused workflow within the same session reusing cached results. The capability requires continuing or forking a previous (past) session, while this feature only covers resuming within an ongoing session \u2014 not resuming a prior completed session or forking."
+      },
+      {
+        "capability_id": "remote-control",
+        "realizes": true,
+        "reason": "Remote Control explicitly lets you continue a local Claude Code session from a phone, tablet, or browser \u2014 directly realizing remote control of agent runs."
+      },
+      {
+        "capability_id": "notifications",
+        "realizes": true,
+        "reason": "Mobile Push Notifications sends push alerts to mobile devices for remote session events and updates, directly realizing the notifications capability."
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "realizes": true,
+        "reason": "Claude Code in Slack lets users delegate coding tasks from Slack by mentioning @Claude with async execution, directly realizing chat-surface integration for driving the agent from a chat tool."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "Multi-Surface Connector Support describes connectors available across desktop, VS Code, web, and Claude.ai surfaces. 'Connectors' are not the same as the agent access surfaces (terminal, IDE, web, cloud, mobile) themselves \u2014 this describes connector availability, not the surfaces where the agent can be used."
+      }
+    ]
+  }
+}

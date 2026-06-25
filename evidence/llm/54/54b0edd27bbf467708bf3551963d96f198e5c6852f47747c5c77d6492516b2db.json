@@ -1,0 +1,12 @@
+{
+  "key": "54b0edd27bbf467708bf3551963d96f198e5c6852f47747c5c77d6492516b2db",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a year-end roundup of OpenAI's developer offerings in 2025. It covers reasoning models, multimodality, Codex, the Responses API, the Agents SDK, tools (web search, file search, code interpreter, computer use), background mode, webhooks, open-weight models, evals, and fine-tuning. Nowhere on the page is there any mention of \"dev-container integration\" or running an agent inside a defined dev container or isolated runtime in that specific sense. The page does mention sandboxing (e.g., \"sandboxed containers\" for Code Interpreter, and \"sandboxing\" for Codex), but this is not the same as a dev-container integration feature as described in the claim.",
+    "supported": false
+  }
+}

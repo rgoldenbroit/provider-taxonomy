@@ -1,0 +1,12 @@
+{
+  "key": "bd23f824ee29504975a386bcc8965de65eba61352057aa9f044a85d7acbf7a25",
+  "label": "judge:matrix-google-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about \"Build with Google\" integration bundles for the Antigravity 2.0 platform (Firebase, Android CLI, Chrome DevTools, etc.). It makes no mention whatsoever of persistent agent memory, durable memory across turns/sessions, or any related memory feature. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

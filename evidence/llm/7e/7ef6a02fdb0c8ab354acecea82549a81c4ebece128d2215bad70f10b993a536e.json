@@ -1,0 +1,12 @@
+{
+  "key": "7ef6a02fdb0c8ab354acecea82549a81c4ebece128d2215bad70f10b993a536e",
+  "label": "judge:matrix-anthropic-packaged-extensions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A **plugin** is a self-contained directory of components that extends Claude Code with custom functionality. Plugin components include skills, agents, hooks, MCP servers, LSP servers, and monitors.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a \"plugin\" system in Claude Code (by Anthropic) that is explicitly a packaged, reusable extension mechanism. Plugins are self-contained, installable bundles of capabilities (skills, agents, hooks, MCP servers, LSP servers, monitors) that the agent can load \u2014 matching the claim of \"packaged reusable extensions\" that bundle \"reusable capabilities/instructions the agent can load.\" The page provides a full technical reference, CLI commands, and schemas, indicating this is an active, generally available feature.",
+    "supported": true
+  }
+}

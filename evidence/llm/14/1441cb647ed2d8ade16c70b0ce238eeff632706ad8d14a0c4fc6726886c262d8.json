@@ -1,0 +1,12 @@
+{
+  "key": "1441cb647ed2d8ade16c70b0ce238eeff632706ad8d14a0c4fc6726886c262d8",
+  "label": "judge:matrix-google-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page does not mention any \"Cost & usage tracking,\" token spend tracking, usage caps, or any feature related to monitoring or capping token/spend usage. The page covers enterprise setup steps (project creation, billing verification, API enablement, VPC Service Controls, logging, and consumption options) but contains no description of a cost and usage tracking feature that would allow users to track or cap token spend or usage.",
+    "supported": false
+  }
+}

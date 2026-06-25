@@ -1,0 +1,12 @@
+{
+  "key": "a993566db5343d0ca65fef689cc42c2bd446efe1d06694dc922390bf39547280",
+  "label": "judge:matrix-openai-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Context management\nCompaction\nCounting tokens\nPrompt caching",
+    "lifecycle_status": "active",
+    "rationale": "The page's navigation/sidebar includes a \"Context management\" section with a \"Compaction\" subsection listed under it, directly indicating that OpenAI offers a context compaction feature. While the page does not elaborate on manual vs. auto modes or describe it as compressing conversation/context to extend working memory, it does explicitly list \"Compaction\" as a feature within context management, substantiating the existence of the offering. The lifecycle status appears active as it is listed as a current feature without any preview or deprecation markers.",
+    "supported": true
+  }
+}

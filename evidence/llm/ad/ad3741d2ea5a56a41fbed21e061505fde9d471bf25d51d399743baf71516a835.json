@@ -1,0 +1,12 @@
+{
+  "key": "ad3741d2ea5a56a41fbed21e061505fde9d471bf25d51d399743baf71516a835",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Google's Gemini API safety settings, which cover content filtering categories (harassment, hate speech, sexually explicit, dangerous content) with adjustable probability thresholds. There is no mention anywhere on the page of security scanning or threat modeling \u2014 specifically, scanning code or agent actions for security issues against a threat model. The page is entirely about content moderation/safety filters for LLM outputs, not security vulnerability scanning or threat model-based analysis of code or agent actions.",
+    "supported": false
+  }
+}

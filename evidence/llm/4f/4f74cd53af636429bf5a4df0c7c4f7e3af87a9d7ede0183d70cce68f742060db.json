@@ -1,0 +1,12 @@
+{
+  "key": "4f74cd53af636429bf5a4df0c7c4f7e3af87a9d7ede0183d70cce68f742060db",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Auto-compression at 100-200k tokens on models with 1M context. No toggle, no threshold setting. Long sessions lose all accumulated context. Let users control this.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes an auto-compression feature in Google Antigravity that automatically compresses conversation context at 100\u2013200k tokens. This substantiates the existence of auto context compaction in Google's offering. However, the page does not mention a *manual* compaction option \u2014 in fact, a linked related topic titled \"[Bug/Feedback] Antigravity IDE lacks basic context compaction\" suggests manual compaction may be absent or insufficient. The claim of both manual + auto compaction is only partially supported: auto-compaction is clearly described, but manual compaction is not confirmed. Confidence is medium because the page is a user forum complaint, not official documentation, and only auto-compaction (not manual) is clearly evidenced.",
+    "supported": true
+  }
+}

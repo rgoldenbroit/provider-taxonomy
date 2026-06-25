@@ -1,8 +1,19 @@
 # Plan — Matrix as a grounded projection (scalable, no manual cell-fixes)
 
-**Status: PLAN — approved in principle (decisions below locked); awaiting "implement" for P1.**
-Supersedes the hand-curated matrix: the current `data/agentic-matrix.json` becomes the *seed /
-validation gold* for the mapper, then a generated output.
+**Status: IMPLEMENTED (P1–P5).** The matrix is now a generated, grounded projection.
+Pipeline: `matrix/capabilities.yaml` (rows) → `scripts/build_matrix.py` (Stage A catalog projection
++ adversarial confirmation → Stage B official-doc grounding → Stage C domain-restricted Tavily) →
+canonical `data/agentic-matrix.json` → `scripts/render_matrix_md.py` (renders the `.md`) →
+`scripts/validate_matrix.py` (gate). CI render-diffs the `.md`; `maintain.yml` re-grounds every run.
+Result: **100/111 cells grounded, 11 honest `unverified`** — all grounded cells on first-party doc
+hosts; the pipeline recovered 10 cells the hand-build had missed (e.g. Anthropic eval-tool, Codex
+memories/plan-mode). Obsolete `scripts/matrix_to_json.py` (reverse direction) removed.
+
+**Known follow-ups:** (1) `openai checkpoint-rewind` stays `unverified` — its `features.undo` flag is
+buried in the config reference and the doc-surface keyword filter doesn't surface it (honest gap, not
+chased). (2) Byte-identical replay-verify (a `taxo verify` analogue for the matrix) is not yet wired —
+Stage C's Tavily *search* results aren't ledgered, so full replay needs a search-ledger space first.
+Current gates (schema validate + render-drift) prevent corruption/drift; full replay is the gold standard.
 
 ## Problem
 The matrix is hand-curated and its `unverified` cells came from a brittle keyword-miner over the

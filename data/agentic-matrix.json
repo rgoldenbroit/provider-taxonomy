@@ -13,27 +13,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "CLAUDE.md (+ imports, local/org scopes)",
+              "implementation": "CLAUDE.md Project Memory",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/memory.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"CLAUDE.md Project Memory\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Rules / Global Rules (.md)",
+              "implementation": "Workspace Rules (.agents/rules)",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Workspace Rules\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "AGENTS.md (+ overrides, global defaults)",
+              "implementation": "Project-Level AGENTS.md",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/guides/agents-md.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Project-Level AGENTS.md\"."
             }
           }
         },
@@ -45,27 +45,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Skills (+ plugins)",
+              "implementation": "Packaged reusable extensions",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/sub-agents.md",
-              "last_verified": "2026-06-22",
-              "notes": "Grounded via skill preloading; Skills + plugins both supported."
+              "evidence_url": "https://code.claude.com/docs/en/plugins-reference.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “A **plugin** is a self-contained directory of components that extends Claude Code with custom functionality. Plugin components include skills, agents, hooks, MC”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Plugins",
+              "implementation": "Plugins — namespaced bundles grouping skills, rules, MCP servers, and hooks",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/plugins.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Plugins\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Plugins / Skills",
+              "implementation": "Plugins",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/plugins.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Plugins\"."
             }
           }
         },
@@ -77,27 +77,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Hooks (PreToolUse, etc.)",
-              "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/permissions.md",
+              "implementation": "Agent Lifecycle Hooks",
+              "status": "preview",
+              "evidence_url": "https://code.claude.com/docs/en/agent-teams.md",
               "last_verified": "2026-06-22",
-              "notes": "Grounded on the permissions page; agent lifecycle hooks are in preview."
+              "notes": "Catalog-grounded via \"Agent Lifecycle Hooks\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Lifecycle hooks (Pre/PostToolUse, Stop)",
+              "implementation": "Lifecycle Hooks — custom local shell scripts at specific lifecycle points",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/hooks.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Lifecycle Hooks\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Hooks (PreToolUse, SessionStart, Pre/PostCompact, Stop, …)",
+              "implementation": "Lifecycle event hooks",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/hooks.md",
               "last_verified": "2026-06-25",
-              "notes": "Full hooks framework: SessionStart, PreToolUse, PostToolUse, PermissionRequest, Pre/PostCompact, UserPromptSubmit, SubagentStop, Stop."
+              "notes": "Grounded against official docs: “`PreToolUse`, `PermissionRequest`, `PostToolUse`, `PreCompact`, `PostCompact`, `UserPromptSubmit`, `SubagentStop`, and `Stop` run at turn scope. `SessionStart` ”"
             }
           }
         },
@@ -109,27 +109,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Output styles + tailored system prompts",
+              "implementation": "Output Styles",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Output Styles\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Rules (guide behavior + style)",
+              "implementation": "Output & system-prompt customization",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md",
+              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
               "last_verified": "2026-06-25",
-              "notes": "Steered via Rules (the instruction mechanism), which guide agent behavior and style; no separate output-style preset."
+              "notes": "Grounded against official docs: “Configuration: Define a custom system prompt and specific toolsets for read-only, write (including running terminal commands), and subagent delegation capabilit”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "personality / /personality + model_verbosity + instructions",
+              "implementation": "Output & system-prompt customization",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/config-reference.md",
+              "evidence_url": "https://developers.openai.com/codex/guides/agents-md.md",
               "last_verified": "2026-06-25",
-              "notes": "Dedicated 'personality' setting (per-thread or /personality) + model_verbosity override + model_instructions_file."
+              "notes": "Grounded against official docs: “Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expect”"
             }
           }
         },
@@ -141,27 +141,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "/model (aliases + Sonnet / Opus / Haiku / Fable)",
+              "implementation": "Model selection",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/model-config.md",
               "last_verified": "2026-06-25",
-              "notes": "Switch mid-session with /model, or set a default via the model setting in settings.json."
+              "notes": "Grounded against official docs: “For the `model` setting in Claude Code, you can configure either: A model alias or A model name... You can configure your model in several ways, listed in order”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Reasoning-model selector (+ /model)",
+              "implementation": "Model selection",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md",
               "last_verified": "2026-06-25",
-              "notes": "Model-selector dropdown (Gemini + Claude + GPT-OSS options); also the /model CLI command."
+              "notes": "Grounded against official docs: “Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Per-agent model selection",
+              "implementation": "Per-Agent Model Selection",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/subagents.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Per-Agent Model Selection\"."
             }
           }
         }
@@ -179,27 +179,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "MCP (Model Context Protocol)",
+              "implementation": "Model Context Protocol (MCP)",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/mcp.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Model Context Protocol (MCP)\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "MCP integration",
+              "implementation": "MCP Integration — Model Context Protocol support",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"MCP Integration\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "MCP (client + server modes)",
+              "implementation": "MCP (Model Context Protocol)",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/mcp.md",
+              "evidence_url": "https://developers.openai.com/codex/concepts/customization.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"MCP (Model Context Protocol)\"."
             }
           }
         },
@@ -211,27 +211,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Managed MCP config, install scopes, desktop connectors",
+              "implementation": "MCP server management & registry",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/managed-mcp.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "evidence_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Configure MCP servers to extend your agent with external tools. Covers transport types, tool search for large tool sets, authentication, and error handling. ...”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "MCP Store + transport modes",
+              "implementation": "MCP Store — built-in store to browse, install, and authenticate MCP servers",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"MCP Store\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "MCP server CLI management + transports",
+              "implementation": "MCP Server CLI Management",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/mcp.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "evidence_url": "https://developers.openai.com/codex/concepts/customization.md",
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"MCP Server CLI Management\"."
             }
           }
         },
@@ -243,27 +243,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "MCP auth methods",
+              "implementation": "MCP Auth Methods",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"MCP Auth Methods\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No MCP-authentication-specific node grounded for Antigravity — verify."
+              "implementation": "MCP Store — browse, install, and authenticate supported MCP servers",
+              "status": "active",
+              "evidence_url": "https://antigravity.google/assets/docs/editor/ide-mcp.md",
+              "last_verified": "2026-06-24",
+              "notes": "Catalog-grounded via \"MCP Store\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "OAuth + bearer-token MCP login",
+              "implementation": "OAuth MCP Login",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/mcp.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"OAuth MCP Login\"."
             }
           }
         },
@@ -275,27 +275,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "MCP tool allow-listing + connector suppression",
+              "implementation": "MCP Tool Allow-listing",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/agent-sdk/mcp.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"MCP Tool Allow-listing\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Per-tool / wildcard MCP permissions",
+              "implementation": "Per-Tool MCP Permission — grants access to a single named tool on a specific MCP server",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Per-Tool MCP Permission\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "MCP tool/resource exposure controls",
+              "implementation": "MCP tool governance / allow-listing",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/concepts/customization.md",
-              "last_verified": "2026-06-22",
-              "notes": ""
+              "evidence_url": "https://developers.openai.com/codex/config-reference",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “apps.<id>.tools.<tool>.enabled\nboolean\nPer-tool enabled override for an app tool (for example repos/list).”"
             }
           }
         },
@@ -307,11 +307,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Auto memory (MEMORY.md) + per-agent memory",
+              "implementation": "Auto Memory (MEMORY.md)",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/glossary.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Auto Memory (MEMORY.md)\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -319,15 +319,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No persistent agent-memory node grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No persistent agent-memory node grounded for Codex — verify."
+              "implementation": "Persistent agent memory",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/memories",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Memories let Codex carry useful context from earlier threads into future work. After you enable memories, Codex can remember stable preferences, recurring workf”"
             }
           }
         },
@@ -339,27 +339,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "/compact + automatic compaction",
+              "implementation": "Context compaction (manual + auto)",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/context-window.md",
               "last_verified": "2026-06-25",
-              "notes": "Manual /compact at task breaks + auto-compaction as the context window fills."
+              "notes": "Grounded against official docs: “kind: 'compact', label: '/compact', tokens: 0, color: '#D97757', vis: 'brief', desc: 'Replaces the conversation with a structured summary. You see a \"Conversati”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No official Antigravity doc describes context compaction/auto-summarization (checked the CLI slash-command reference, SDK lifecycle hooks, and IDE/CLI hook events) — genuine gap."
+              "implementation": "Context compaction (manual + auto)",
+              "status": "preview",
+              "evidence_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Context compaction: Automatic context compaction (triggered at ~135k tokens) to support long-running, multi-turn sessions without losing context or hitting toke”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "/compact + auto-compaction (model_auto_compact_token_limit)",
+              "implementation": "Context compaction (manual + auto)",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/cli/slash-commands.md",
+              "evidence_url": "https://developers.openai.com/codex/cli",
               "last_verified": "2026-06-25",
-              "notes": "Manual /compact; automatic compaction via the model_auto_compact_token_limit config key."
+              "notes": "Grounded against official docs: “Context management\nCompaction\nCounting tokens\nPrompt caching”"
             }
           }
         },
@@ -371,27 +371,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Automatic prompt caching",
+              "implementation": "Prompt / context caching",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/prompt-caching.md",
               "last_verified": "2026-06-25",
-              "notes": "Claude Code manages server-side prefix caching automatically; no user config required."
+              "notes": "Grounded against official docs: “Prompt caching makes Claude Code faster and more cost-efficient. Without caching, the API would reprocess your full history on every turn. With caching, it reus”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Context caching (via the Gemini API)",
+              "implementation": "Prompt / context caching",
               "status": "active",
               "evidence_url": "https://ai.google.dev/gemini-api/docs/caching",
               "last_verified": "2026-06-25",
-              "notes": "A Gemini model-API feature Antigravity inherits; no Antigravity-specific caching doc page."
+              "notes": "Grounded against official docs: “In a typical AI workflow, you might pass the same input tokens over and over to a model. The Gemini API offers implicit caching to optimize performance and cost”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Automatic prompt caching (OpenAI API)",
+              "implementation": "Prompt / context caching",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+              "evidence_url": "https://developers.openai.com/cookbook/examples/prompt_caching_201",
               "last_verified": "2026-06-25",
-              "notes": "An OpenAI API platform feature (automatic prefix caching) that Codex inherits; not Codex-specific config."
+              "notes": "Grounded against official docs: “Prompt Caching can reduce time-to-first-token latency by up to 80% and input token costs by up to 90%. It works automatically on all API requests and has no add”"
             }
           }
         }
@@ -409,27 +409,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Subagents (+ Agent Teams)",
+              "implementation": "Subagents",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/sub-agents.md",
               "last_verified": "2026-06-24",
-              "notes": "Agent Teams in preview."
+              "notes": "Catalog-grounded via \"Subagents\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Subagents (sync + async)",
+              "implementation": "Subagents — multi-threaded async architecture delegating operations to parallel autonomous subagents",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/cli/cli-subagents.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Subagents\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Subagents / custom agents",
+              "implementation": "Subagent Workflows",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/subagents.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Subagent Workflows\"."
             }
           }
         },
@@ -441,27 +441,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Agent Teams + peer-to-peer messaging",
-              "status": "active",
+              "implementation": "Agent Teams",
+              "status": "preview",
               "evidence_url": "https://code.claude.com/docs/en/agent-teams.md",
               "last_verified": "2026-06-24",
-              "notes": "Agent Teams in preview; dispatch/monitor active."
+              "notes": "Catalog-grounded via \"Agent Teams\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Multi-agent teamwork + inter-agent messaging",
-              "status": "active",
+              "implementation": "Multi-Agent Orchestration — advanced orchestration with coordination, error recovery, and retries",
+              "status": "preview",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
               "last_verified": "2026-06-24",
-              "notes": "Multi-agent teamwork in preview; inter-agent messaging active."
+              "notes": "Catalog-grounded via \"Multi-Agent Orchestration\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Multi-agent workflows + agent hand-offs",
+              "implementation": "Project Manager Multi-Agent Workflow",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Project Manager Multi-Agent Workflow\"."
             }
           }
         },
@@ -473,27 +473,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Workflows (NL authoring, saved slash commands)",
+              "implementation": "Workflows / saved automations",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/workflows.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “When Claude writes a workflow for a task you'll repeat, you can save that run's script as a command. A process like a review you run on every branch then runs t”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Workflows (agent-generated)",
+              "implementation": "Workflows — saved markdown files defining repeatable series of steps",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Workflows\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Agent SDK workflows",
+              "implementation": "Workflows / saved automations",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/guides/agents-sdk.md",
-              "last_verified": "2026-06-24",
-              "notes": "Workflow orchestration via the Agents SDK."
+              "evidence_url": "https://developers.openai.com/codex/record-and-replay.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Record & Replay lets you demonstrate a workflow on your Mac and turn it into a reusable skill. Use it when the workflow is repetitive, depends on your preferenc”"
             }
           }
         },
@@ -505,11 +505,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Plan Mode (+ Ultraplan, plan-approval gate)",
+              "implementation": "Plan Mode",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/permission-modes.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Plan Mode\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -517,15 +517,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No distinct plan-then-execute mode grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No distinct plan-mode node grounded for Codex (read-only sandbox mode exists, but that's not a plan gate) — verify."
+              "implementation": "Plan-then-execute mode",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/cli",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Choose the approval mode that matches your comfort level before Codex edits or runs commands.”"
             }
           }
         },
@@ -537,27 +537,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "/goal, /loop, Auto Mode, Routines",
+              "implementation": "Goal-directed autonomous iteration",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/routines.md",
-              "last_verified": "2026-06-24",
-              "notes": "Auto Mode + Routines in preview; /goal + /loop run in the CLI (this matrix was built with /goal)."
+              "evidence_url": "https://code.claude.com/docs/en/goal.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Set a completion condition with /goal and Claude keeps working across turns until the condition is met... The /goal command sets a completion condition and Clau”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Always-Proceed / autonomy levels",
+              "implementation": "Goal-directed autonomous iteration",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
-              "last_verified": "2026-06-22",
-              "notes": "An autonomy control, not a verifiable-goal loop — partial fit."
+              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs ”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Full-access / workspace-write autonomy",
+              "implementation": "Goal-directed autonomous iteration",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/concepts/sandboxing.md",
-              "last_verified": "2026-06-24",
-              "notes": "An autonomy/approval mode, not a named goal-condition loop — partial fit."
+              "evidence_url": "https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “A Goal gives Codex a completion condition: what should be true, how success should be checked, and what constraints must stay intact. ... With a Goal, Codex can”"
             }
           }
         },
@@ -569,27 +569,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Worktree isolation",
+              "implementation": "Worktree Isolation",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/glossary.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Worktree Isolation\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Worktree support",
+              "implementation": "Worktree Support — agents operate in dedicated Git worktrees to isolate parallel work",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Worktree Support\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Git worktree isolation",
+              "implementation": "Git Worktree Isolation",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/app/automations.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Git Worktree Isolation\"."
             }
           }
         }
@@ -607,27 +607,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Cloud sessions (Claude Code on the Web) + SDK containers",
+              "implementation": "Claude Code on the Web",
               "status": "preview",
               "evidence_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
               "last_verified": "2026-06-24",
-              "notes": "Web cloud sessions in preview; Agent SDK container deployment is active."
+              "notes": "Catalog-grounded via \"Claude Code on the Web\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No managed cloud-execution environment grounded for Antigravity (a desktop/CLI tool) — verify."
+              "implementation": "Cloud execution environment",
+              "status": "preview",
+              "evidence_url": "https://ai.google.dev/gemini-api/docs/antigravity-agent",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “The Antigravity agent is a general-purpose managed agent on the Gemini API. A single API call gives you an agent that reasons, executes code, manages files, and”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Cloud environments (+ base image, container caching)",
+              "implementation": "Cloud Environments",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/cloud/environments.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Cloud Environments\"."
             }
           }
         },
@@ -639,27 +639,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Background agent execution",
+              "implementation": "Background Agent Execution",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/sub-agents.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Background Agent Execution\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Asynchronous execution model",
+              "implementation": "Background Tasks — long-running operations asynchronously without blocking the primary agent",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/subagents.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-subagents.md",
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Background Tasks\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Delegated async cloud runs",
+              "implementation": "Standalone Automations",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/cloud/environments.md",
-              "last_verified": "2026-06-24",
-              "notes": "Codex delegates long tasks to async cloud runs."
+              "evidence_url": "https://developers.openai.com/codex/app/automations.md",
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Standalone Automations\"."
             }
           }
         },
@@ -671,27 +671,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Scheduled tasks / Routines (+ GitHub Actions)",
-              "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
-              "last_verified": "2026-06-24",
-              "notes": "Routines in preview."
+              "implementation": "Schedule Trigger",
+              "status": "preview",
+              "evidence_url": "https://code.claude.com/docs/en/routines.md",
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Schedule Trigger\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Scheduled / background tasks",
+              "implementation": "Scheduled Tasks — schedule messages to agents with repeatable time-based triggers",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/features.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Scheduled Tasks\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Automations (scheduled / triggered)",
+              "implementation": "Thread Automations",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/app/automations.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Thread Automations\"."
             }
           }
         }
@@ -709,27 +709,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "OS + container sandbox",
-              "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/sandboxing.md",
-              "last_verified": "2026-06-22",
-              "notes": "Sandbox Runtime in beta."
+              "implementation": "Sandbox Runtime",
+              "status": "preview",
+              "evidence_url": "https://code.claude.com/docs/en/sandbox-environments.md",
+              "last_verified": "2026-06-24",
+              "notes": "Catalog-grounded via \"Sandbox Runtime\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Terminal / CLI sandbox",
+              "implementation": "Terminal Sandboxing — kernel-level / native OS isolation for terminal commands",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-sandbox.md",
+              "evidence_url": "https://antigravity.google/assets/docs/settings/ide-settings.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Terminal Sandboxing\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Seatbelt / Bubblewrap / Windows sandbox",
+              "implementation": "Sandbox",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/concepts/sandboxing.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Sandbox\"."
             }
           }
         },
@@ -741,27 +741,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Permission system (allow / ask / deny)",
+              "implementation": "Permission System",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/permissions.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Permission System\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Fine-grained permissions engine",
+              "implementation": "Fine-Grained Permissions Engine — unified permission engine for every sensitive agent operation",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/permissions.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Fine-Grained Permissions Engine\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Approval policy (+ permission profiles)",
+              "implementation": "Approval Policy",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/agent-approvals-security.md",
               "last_verified": "2026-06-24",
-              "notes": "Permission profiles in beta."
+              "notes": "Catalog-grounded via \"Approval Policy\"."
             }
           }
         },
@@ -773,27 +773,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Network isolation proxy + egress firewall",
+              "implementation": "Egress Firewall Control",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/sandboxing.md",
+              "evidence_url": "https://code.claude.com/docs/en/devcontainer.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Egress Firewall Control\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Independent network access control",
+              "implementation": "Independent Network Access Control — controls network connectivity for sandboxed commands",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/settings/ide-settings.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Independent Network Access Control\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Network access control (+ sandbox proxy)",
+              "implementation": "Network Access Control",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/agent-approvals-security.md",
-              "last_verified": "2026-06-24",
-              "notes": "Network rules / sandbox proxy in beta."
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Network Access Control\"."
             }
           }
         },
@@ -805,11 +805,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Prompt-injection protection + input sanitization",
+              "implementation": "Prompt Injection Protection",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/security.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Prompt Injection Protection\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -817,15 +817,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No prompt-injection-specific defense node grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No prompt-injection-specific defense node grounded for Codex (code security scanning exists, which is distinct) — verify."
+              "implementation": "Prompt-injection protection",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/cloud/internet-access",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Prompt injection from untrusted web content... Prompt injection can happen when the agent retrieves and follows instructions from untrusted content (for example”"
             }
           }
         },
@@ -837,11 +837,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Security guidance plugin + custom scan rules",
+              "implementation": "Security Guidance Plugin",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/security-guidance.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Security Guidance Plugin\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -849,15 +849,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No security-scanning node grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Codex security (scanning, threat model)",
-              "status": "active",
+              "implementation": "Codex Security",
+              "status": "preview",
               "evidence_url": "https://developers.openai.com/codex/security.md",
               "last_verified": "2026-06-24",
-              "notes": "Cloud commit scanning in preview."
+              "notes": "Catalog-grounded via \"Codex Security\"."
             }
           }
         },
@@ -869,19 +869,19 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Dev container + reference template",
+              "implementation": "Dev Container Integration",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/devcontainer.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Dev Container Integration\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Sidecars (per-agent runtime containers)",
-              "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/sidecars.md",
-              "last_verified": "2026-06-24",
-              "notes": "Sidecars are Antigravity's per-agent container-runtime equivalent."
+              "implementation": "unverified",
+              "status": "unverified",
+              "evidence_url": "",
+              "last_verified": "",
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
@@ -889,7 +889,7 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "Codex uses managed cloud container envs (see cloud-execution-environment); no local dev-container integration grounded — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             }
           }
         }
@@ -907,27 +907,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "OpenTelemetry + per-user attribution",
+              "implementation": "OpenTelemetry Monitoring",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/monitoring-usage.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"OpenTelemetry Monitoring\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Observability (SDK)",
+              "implementation": "Inspect Hooks — read-only, non-blocking hooks for logging, audit trails, and metrics",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/sdk/sdk-overview.md",
-              "last_verified": "2026-06-24",
-              "notes": "SDK-level observability; dedicated admin audit-log specifics unverified."
+              "last_verified": "2026-06-22",
+              "notes": "Catalog-grounded via \"Inspect Hooks\"."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Run tracing / traces dashboard",
+              "implementation": "Built-in Run Tracing",
               "status": "active",
               "evidence_url": "https://developers.openai.com/api/docs/guides/agents/integrations-observability.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Built-in Run Tracing\"."
             }
           }
         },
@@ -939,27 +939,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Automated PR code review (+ /security-review)",
+              "implementation": "Automated PR Code Review",
               "status": "preview",
               "evidence_url": "https://code.claude.com/docs/en/code-review.md",
               "last_verified": "2026-06-24",
-              "notes": "In preview."
+              "notes": "Catalog-grounded via \"Automated PR Code Review\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Artifact review policy",
+              "implementation": "Automated code review",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/artifact-review.md",
-              "last_verified": "2026-06-24",
-              "notes": "Reviews agent-produced artifacts before they land."
+              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/skills.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “name: code-review\ndescription: Reviews code changes for bugs, style issues, and best practices. Use when reviewing PRs or checking code quality.”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Automatic PR reviews (GitHub)",
+              "implementation": "AI Code Review",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/integrations/github.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"AI Code Review\"."
             }
           }
         },
@@ -971,27 +971,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Cost tracking + spend dashboard / limits",
+              "implementation": "Cost Tracking",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/admin-setup.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Cost Tracking\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No cost/usage-tracking node grounded for Antigravity — verify."
+              "implementation": "Cost & usage tracking",
+              "status": "active",
+              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-credits.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “You can monitor your active quota and credit consumption directly inside the CLI: Statusline Indicator: The right side of the CLI statusline displays your remai”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No Codex-specific cost/usage-tracking node grounded (platform usage exists separately) — verify."
+              "implementation": "Cost & usage tracking",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/enterprise/governance",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Workspace and personal usage breakdowns, including credit and token usage by product surface or model”"
             }
           }
         },
@@ -1003,11 +1003,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No agentic-coding eval-harness node grounded for Claude Code (code-review verification exists, which is distinct) — verify."
+              "implementation": "Evals / testing harness",
+              "status": "active",
+              "evidence_url": "https://docs.anthropic.com/en/docs/test-and-evaluate/eval-tool",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “The Claude Console features an Evaluation tool that allows you to test your prompts under various scenarios... If you update your original prompt text, you can ”"
             },
             "google": {
               "offering": "Antigravity",
@@ -1015,15 +1015,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No evals/testing-harness node grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Evals (datasets, eval runs, testing criteria)",
-              "status": "active",
-              "evidence_url": "https://developers.openai.com/api/docs/guides/agent-evals.md",
+              "implementation": "Evals API",
+              "status": "sunset",
+              "evidence_url": "https://developers.openai.com/api/docs/guides/evals.md",
               "last_verified": "2026-06-24",
-              "notes": "OpenAI's evals harness, used with Codex/Agents SDK."
+              "notes": "Catalog-grounded via \"Evals API\"."
             }
           }
         },
@@ -1035,27 +1035,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "/rewind + checkpointing (Esc-Esc)",
+              "implementation": "Checkpoint / rewind",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/checkpointing.md",
+              "evidence_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md",
               "last_verified": "2026-06-25",
-              "notes": "Auto-tracks file edits; /rewind or Esc-Esc restores conversation and/or code; checkpoints persist across sessions."
+              "notes": "Grounded against official docs: “File checkpointing tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, allowing you to rewind files to any p”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "/rewind (alias /undo)",
+              "implementation": "Checkpoint / rewind",
               "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
               "last_verified": "2026-06-25",
-              "notes": "Rolls back the conversation thread to a previous message (CLI)."
+              "notes": "Grounded against official docs: “Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout.”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Undo support (features.undo config flag)",
-              "status": "preview",
-              "evidence_url": "https://developers.openai.com/codex/config-reference.md",
-              "last_verified": "2026-06-25",
-              "notes": "Opt-in (documented 'stable; off by default'); narrower than a full checkpoint/rewind UI. Not Codex Sites version-saving."
+              "implementation": "unverified",
+              "status": "unverified",
+              "evidence_url": "",
+              "last_verified": "",
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             }
           }
         },
@@ -1067,27 +1067,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Conversation fork / resume",
+              "implementation": "Resume / fork session",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/agents.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "evidence_url": "https://code.claude.com/docs/en/sessions.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Branching creates a copy of the conversation so far and switches you into it, leaving the original intact. Use it to try a different approach without losing the”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "/resume + /fork (alias /branch)",
+              "implementation": "Resume / fork session",
               "status": "active",
               "evidence_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
               "last_verified": "2026-06-25",
-              "notes": "/resume loads a previous thread; /fork clones history into a new session; can also import desktop conversations."
+              "notes": "Grounded against official docs: “Resume prior development threads, scope active histories to local workspaces, and fork conversations to experiment with alternate architectures. ... You can ret”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Multi-device session handoff / codex-reply",
+              "implementation": "Multi-Device Session Handoff",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/remote-connections.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Multi-Device Session Handoff\"."
             }
           }
         }
@@ -1105,11 +1105,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Remote control (Claude mobile app, web)",
+              "implementation": "Remote Control",
               "status": "preview",
               "evidence_url": "https://code.claude.com/docs/en/remote-control.md",
               "last_verified": "2026-06-24",
-              "notes": "Steer/approve runs from the Claude mobile app; in preview."
+              "notes": "Catalog-grounded via \"Remote Control\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -1117,15 +1117,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No remote-control / mobile node grounded for Antigravity (a desktop/CLI tool) — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Remote connections (mobile, multi-host)",
+              "implementation": "Remote Action Approval",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/remote-connections.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Remote Action Approval\"."
             }
           }
         },
@@ -1137,27 +1137,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Mobile push notifications",
+              "implementation": "Mobile Push Notifications",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/remote-control.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Mobile Push Notifications\"."
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No notifications node grounded for Antigravity — verify."
+              "implementation": "Notifications",
+              "status": "active",
+              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “**`notifications`**           | boolean    | `false`             | Emits system desktop and terminal bell chime notifications upon task completions.”"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Task-completion notifications",
+              "implementation": "Task Completion Notifications",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/remote-connections.md",
               "last_verified": "2026-06-22",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Task Completion Notifications\"."
             }
           }
         },
@@ -1169,11 +1169,11 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Claude Code in Slack (+ channels)",
+              "implementation": "Claude Code in Slack",
               "status": "active",
               "evidence_url": "https://code.claude.com/docs/en/slack.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Claude Code in Slack\"."
             },
             "google": {
               "offering": "Antigravity",
@@ -1181,15 +1181,15 @@
               "status": "unverified",
               "evidence_url": "",
               "last_verified": "",
-              "notes": "No chat-surface (Slack/Linear/channels) integration grounded for Antigravity — verify."
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "Codex for Linear + app integrations",
+              "implementation": "Codex for Linear",
               "status": "active",
               "evidence_url": "https://developers.openai.com/codex/integrations/linear.md",
               "last_verified": "2026-06-24",
-              "notes": ""
+              "notes": "Catalog-grounded via \"Codex for Linear\"."
             }
           }
         },
@@ -1201,27 +1201,27 @@
           "providers": {
             "anthropic": {
               "offering": "Claude Code",
-              "implementation": "Terminal · IDE · web · Slack · mobile",
+              "implementation": "Access surfaces",
               "status": "active",
-              "evidence_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
-              "last_verified": "2026-06-24",
-              "notes": "Web surface + web↔terminal handoff in preview; terminal/IDE/Slack active."
+              "evidence_url": "https://code.claude.com/docs/en/desktop.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “Run on your machine, in the [cloud](#run-long-running-tasks-remotely), or over [SSH](#ssh-sessions)... The integrated terminal lets you run commands alongside y”"
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "Agent-Manager IDE + CLI / terminal",
-              "status": "active",
-              "evidence_url": "https://antigravity.google/assets/docs/cli/cli-features.md",
-              "last_verified": "2026-06-22",
-              "notes": ""
+              "implementation": "unverified",
+              "status": "unverified",
+              "evidence_url": "",
+              "last_verified": "",
+              "notes": "(Stage A: no catalog match — pending official-doc / Tavily grounding)"
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "CLI · IDE · web/cloud · GitHub · mobile",
+              "implementation": "Access surfaces",
               "status": "active",
-              "evidence_url": "https://developers.openai.com/codex/remote-connections.md",
-              "last_verified": "2026-06-24",
-              "notes": ""
+              "evidence_url": "https://developers.openai.com/codex/cli/reference.md",
+              "last_verified": "2026-06-25",
+              "notes": "Grounded against official docs: “codex app: Launch the Codex desktop app on macOS or Windows. On macOS, Codex can open a workspace path; on Windows, Codex prints the path to open. ... codex: La”"
             }
           }
         }

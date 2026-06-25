@@ -1,0 +1,12 @@
+{
+  "key": "c56cbd46bdf956a9e29d0d62b46a78fbecf696e72e17dec17fd094b50479c088",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is the Google Cloud Threat Horizons H2 2025 report, which covers cloud threat intelligence, attack trends, and security mitigations. It does not mention or describe any offering related to \"Security scanning / threat model\" that scans code or agent actions for security issues against a threat model. The page discusses topics such as credential compromise, ransomware, backup infrastructure, social engineering, and MFA bypass, but contains no reference to the specific claimed offering.",
+    "supported": false
+  }
+}

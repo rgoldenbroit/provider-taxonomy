@@ -1,0 +1,12 @@
+{
+  "key": "7ca2b0bee825e8fbf799fad7b8f2a9b42f52d4b0634e61a7db916dd92cafd419",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "We're also adding tighter controls on system prompt changes. We will run a broad suite of per-model evals for every system prompt change to Claude Code, continuing ablations to understand the impact of each line, and we have built new tooling to make prompt changes easier to review and audit.",
+    "lifecycle_status": "active",
+    "rationale": "The page does reference Anthropic using evals/evaluations and a testing harness in the context of Claude Code development and quality assurance. It mentions running \"a broad suite of per-model evals,\" \"automated verification,\" \"unit tests,\" \"end-to-end tests,\" and \"a broader eval suite\" against agent behavior (Claude Code). However, this is in the context of Anthropic's internal engineering practices, not a standalone product offering marketed to customers as an \"Evals / testing harness\" tool. The page also references a \"Code Review\" tool shipped to customers. The evidence is partial \u2014 it confirms evals/testing infrastructure exists and is being improved/shipped, but does not explicitly frame it as a standalone customer-facing \"Evals / testing harness\" product. The match is medium confidence given the indirect nature of the substantiation.",
+    "supported": true
+  }
+}

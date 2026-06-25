@@ -1,0 +1,12 @@
+{
+  "key": "6614333e39829a42576dac8daf6c90f0e032334e24605c930cb77b3f6017dc1e",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about Codex workflows (explaining codebases, fixing bugs, writing tests, prototyping, UI iteration, refactoring, code review, and documentation updates). There is no mention whatsoever of cost & usage tracking, token spend tracking, or usage caps. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

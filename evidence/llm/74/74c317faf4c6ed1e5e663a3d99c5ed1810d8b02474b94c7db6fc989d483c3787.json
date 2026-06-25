@@ -1,0 +1,12 @@
+{
+  "key": "74c317faf4c6ed1e5e663a3d99c5ed1810d8b02474b94c7db6fc989d483c3787",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a CLI reference for \"Antigravity CLI\" \u2014 a terminal-based tool. It contains no mention of \"access surfaces,\" IDEs, web interfaces, cloud interfaces, or mobile interfaces. The page exclusively documents terminal/TUI slash commands, keyboard shortcuts, and JSON configuration settings. There is no content that substantiates the claim that Google offers access surfaces (terminal, IDE, web, cloud, mobile) for any agent.",
+    "supported": false
+  }
+}

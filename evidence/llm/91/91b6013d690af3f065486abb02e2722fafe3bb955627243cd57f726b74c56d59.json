@@ -1,0 +1,12 @@
+{
+  "key": "91b6013d690af3f065486abb02e2722fafe3bb955627243cd57f726b74c56d59",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is a CLI troubleshooting guide for the Antigravity CLI tool. It covers topics such as shell PATH configuration, keyring permissions, clipboard forwarding, and self-updater locks. There is no mention anywhere on the page of a \"Chat-surface integration\" or the ability to drive an agent from chat/issue tools such as Slack, Linear, or channels. The claim is not substantiated by the page content.",
+    "supported": false
+  }
+}

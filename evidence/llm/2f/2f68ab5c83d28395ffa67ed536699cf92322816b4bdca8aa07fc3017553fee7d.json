@@ -1,0 +1,12 @@
+{
+  "key": "2f68ab5c83d28395ffa67ed536699cf92322816b4bdca8aa07fc3017553fee7d",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is exclusively about the Antigravity CLI's settings, rendering modes, and keybindings configuration. It makes no mention whatsoever of \"Access surfaces\" (terminal, IDE, web, cloud, mobile) or any concept describing where an agent can be used across multiple surface types. The claim is not substantiated by the page.",
+    "supported": false
+  }
+}

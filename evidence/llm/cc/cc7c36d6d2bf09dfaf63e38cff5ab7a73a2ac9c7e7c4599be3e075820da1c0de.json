@@ -1,0 +1,12 @@
+{
+  "key": "cc7c36d6d2bf09dfaf63e38cff5ab7a73a2ac9c7e7c4599be3e075820da1c0de",
+  "label": "judge:matrix-openai-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt Caching can reduce time-to-first-token latency by up to 80% and input token costs by up to 90%. It works automatically on all API requests and has no additional fees.",
+    "lifecycle_status": "active",
+    "rationale": "The page is a detailed OpenAI developer cookbook titled \"Prompt Caching 201\" that thoroughly documents OpenAI's prompt/context caching feature. It explicitly states that prompt caching reduces latency by up to 80% and input token costs by up to 90%, works automatically on all API requests, and is available for all recent models (gpt-4o and newer). The page covers caching mechanics, cost impact, latency impact, and optimization strategies \u2014 fully substantiating the claim that OpenAI offers prompt/context caching to cut latency and cost.",
+    "supported": true
+  }
+}

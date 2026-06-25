@@ -1,0 +1,12 @@
+{
+  "key": "f187e70a92303f5a078ad9cfb8a464a62e7e026c74aba280df9bd997d991a21f",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about \"Sidecars\" \u2014 background processes that run alongside a product called \"Antigravity 2.0.\" It contains no mention whatsoever of \"Access surfaces,\" agent deployment locations (terminal, IDE, web, cloud, mobile), or any related concept. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

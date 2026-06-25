@@ -1,0 +1,12 @@
+{
+  "key": "86530c4c06c046b0f1357142a5234cf3d1040fb9d9fda14361c6abdadb522e97",
+  "label": "judge:matrix-anthropic-goal-directed-iteration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Set a completion condition with /goal and Claude keeps working across turns until the condition is met... The /goal command sets a completion condition and Claude keeps working toward it without you prompting each step. After each turn, a small fast model checks whether the condition holds. If not, Claude starts another turn instead of returning control to you. The goal clears automatically once the condition is met.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a feature called `/goal` in Claude Code that allows users to set a verifiable \"done\" condition (the completion condition), after which Claude autonomously loops across turns until the condition is met \u2014 confirmed by a separate evaluator model after each turn. This directly substantiates the claim of \"Goal-directed autonomous iteration.\" The page presents the feature as generally available (with a version requirement of Claude Code v2.1.139 or later), indicating active status.",
+    "supported": true
+  }
+}

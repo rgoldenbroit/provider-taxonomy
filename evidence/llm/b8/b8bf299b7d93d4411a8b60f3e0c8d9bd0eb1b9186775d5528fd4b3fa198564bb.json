@@ -1,0 +1,12 @@
+{
+  "key": "b8bf299b7d93d4411a8b60f3e0c8d9bd0eb1b9186775d5528fd4b3fa198564bb",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is from \"Google Antigravity\" \u2014 an implausible/non-existent Google domain (antigravity.google). The page content provided contains only the title \"Google Antigravity\" and nothing else. There is no mention whatsoever of Chat-surface integration, Slack, Linear, channels, or any agent/chat tooling. The page does not substantiate the claim in any way.",
+    "supported": false
+  }
+}

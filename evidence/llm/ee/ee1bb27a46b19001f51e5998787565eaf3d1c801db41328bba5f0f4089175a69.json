@@ -1,0 +1,12 @@
+{
+  "key": "ee1bb27a46b19001f51e5998787565eaf3d1c801db41328bba5f0f4089175a69",
+  "label": "judge:matrix-openai-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "IIRC Codex had this feature and it was removed because not many used it and it was causing the OpenAI Codex staff some hardship to maintain and work correctly.",
+    "lifecycle_status": "sunset",
+    "rationale": "The page does not substantiate the claim that OpenAI currently offers a Checkpoint / rewind feature. On the contrary, a community member explicitly states that Codex *had* this feature but it was **removed**. The GitHub issue linked on the page is a **feature request** asking for a `/rewind` checkpoint restore to be added, with the current behavior noted as lacking full checkpoint/rewind support. This confirms the feature is not currently offered \u2014 it was discontinued and is now being requested again.",
+    "supported": false
+  }
+}

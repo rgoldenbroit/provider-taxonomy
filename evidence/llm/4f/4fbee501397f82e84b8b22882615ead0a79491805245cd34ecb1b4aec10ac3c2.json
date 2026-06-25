@@ -1,0 +1,12 @@
+{
+  "key": "4fbee501397f82e84b8b22882615ead0a79491805245cd34ecb1b4aec10ac3c2",
+  "label": "judge:matrix-openai-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "codex app: Launch the Codex desktop app on macOS or Windows. On macOS, Codex can open a workspace path; on Windows, Codex prints the path to open. ... codex: Launch the terminal UI. ... codex cloud: Browse or execute Codex Cloud tasks from the terminal without opening the TUI.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes multiple access surfaces for Codex: a terminal UI (via `codex` command), a desktop app for macOS/Windows (via `codex app`), cloud tasks (via `codex cloud`), remote WebSocket/Unix socket connections (via `--remote`), and an app-server (via `codex app-server`). This substantiates access surfaces including terminal, desktop/web-like app, and cloud. While the page doesn't explicitly enumerate \"terminal, IDE, web, cloud, mobile\" as a named feature list, it clearly describes the agent being usable across multiple surfaces including terminal, desktop app (macOS/Windows), and cloud environments.",
+    "supported": true
+  }
+}

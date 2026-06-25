@@ -1,0 +1,268 @@
+{
+  "key": "b6a8f794653fb4752c6b3182414277c7ab7a92dd9b098fc9299581c9f963bcea",
+  "label": "matrixmap:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "mappings": [
+      {
+        "capability_id": "project-instruction-file",
+        "confidence": "high",
+        "feature_index": 39,
+        "implementation": "CLAUDE.md Project Memory",
+        "matched": true
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "confidence": "medium",
+        "feature_index": 27,
+        "implementation": "Bundled Orchestration Skills",
+        "matched": true
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "confidence": "high",
+        "feature_index": 4,
+        "implementation": "Agent Lifecycle Hooks",
+        "matched": true
+      },
+      {
+        "capability_id": "output-customization",
+        "confidence": "high",
+        "feature_index": 134,
+        "implementation": "Output Styles",
+        "matched": true
+      },
+      {
+        "capability_id": "model-selection",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "confidence": "high",
+        "feature_index": 119,
+        "implementation": "Model Context Protocol (MCP)",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "confidence": "high",
+        "feature_index": 113,
+        "implementation": "MCP Installation Scopes",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "confidence": "high",
+        "feature_index": 109,
+        "implementation": "MCP Auth Methods",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "confidence": "high",
+        "feature_index": 114,
+        "implementation": "MCP Tool Allow-listing",
+        "matched": true
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "confidence": "high",
+        "feature_index": 15,
+        "implementation": "Auto Memory (MEMORY.md)",
+        "matched": true
+      },
+      {
+        "capability_id": "context-compaction",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "prompt-caching",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "subagents",
+        "confidence": "high",
+        "feature_index": 193,
+        "implementation": "Subagents",
+        "matched": true
+      },
+      {
+        "capability_id": "agent-teams",
+        "confidence": "high",
+        "feature_index": 8,
+        "implementation": "Agent Teams",
+        "matched": true
+      },
+      {
+        "capability_id": "workflows",
+        "confidence": "high",
+        "feature_index": 169,
+        "implementation": "Routines",
+        "matched": true
+      },
+      {
+        "capability_id": "plan-mode",
+        "confidence": "high",
+        "feature_index": 150,
+        "implementation": "Plan Mode",
+        "matched": true
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "confidence": "medium",
+        "feature_index": 79,
+        "implementation": "Dynamic Workflows",
+        "matched": true
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "confidence": "high",
+        "feature_index": 208,
+        "implementation": "Worktree Isolation",
+        "matched": true
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "confidence": "high",
+        "feature_index": 32,
+        "implementation": "Claude Code on the Web",
+        "matched": true
+      },
+      {
+        "capability_id": "background-execution",
+        "confidence": "high",
+        "feature_index": 20,
+        "implementation": "Background Agent Execution",
+        "matched": true
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "confidence": "high",
+        "feature_index": 175,
+        "implementation": "Schedule Trigger",
+        "matched": true
+      },
+      {
+        "capability_id": "sandboxing",
+        "confidence": "high",
+        "feature_index": 173,
+        "implementation": "Sandbox Runtime",
+        "matched": true
+      },
+      {
+        "capability_id": "permission-controls",
+        "confidence": "high",
+        "feature_index": 145,
+        "implementation": "Permission System",
+        "matched": true
+      },
+      {
+        "capability_id": "network-egress-control",
+        "confidence": "high",
+        "feature_index": 80,
+        "implementation": "Egress Firewall Control",
+        "matched": true
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "confidence": "high",
+        "feature_index": 159,
+        "implementation": "Prompt Injection Protection",
+        "matched": true
+      },
+      {
+        "capability_id": "security-scanning",
+        "confidence": "high",
+        "feature_index": 178,
+        "implementation": "Security Guidance Plugin",
+        "matched": true
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "confidence": "high",
+        "feature_index": 70,
+        "implementation": "Dev Container Integration",
+        "matched": true
+      },
+      {
+        "capability_id": "audit-logging",
+        "confidence": "high",
+        "feature_index": 129,
+        "implementation": "OpenTelemetry Monitoring",
+        "matched": true
+      },
+      {
+        "capability_id": "code-review",
+        "confidence": "high",
+        "feature_index": 18,
+        "implementation": "Automated PR Code Review",
+        "matched": true
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "confidence": "high",
+        "feature_index": 58,
+        "implementation": "Cost Tracking",
+        "matched": true
+      },
+      {
+        "capability_id": "evals-testing",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "resume-session",
+        "confidence": "high",
+        "feature_index": 117,
+        "implementation": "Mid-Session Workflow Resume",
+        "matched": true
+      },
+      {
+        "capability_id": "remote-control",
+        "confidence": "high",
+        "feature_index": 162,
+        "implementation": "Remote Control",
+        "matched": true
+      },
+      {
+        "capability_id": "notifications",
+        "confidence": "high",
+        "feature_index": 118,
+        "implementation": "Mobile Push Notifications",
+        "matched": true
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "confidence": "high",
+        "feature_index": 31,
+        "implementation": "Claude Code in Slack",
+        "matched": true
+      },
+      {
+        "capability_id": "access-surfaces",
+        "confidence": "high",
+        "feature_index": 122,
+        "implementation": "Multi-Surface Connector Support",
+        "matched": true
+      }
+    ]
+  }
+}

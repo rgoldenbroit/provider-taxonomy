@@ -1,0 +1,12 @@
+{
+  "key": "026536d20519271eed909f4ff14078fe3e657a5262385228bbfa0aee539863d6",
+  "label": "judge:matrix-openai-output-customization",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expectations, no matter which repository you open.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes OpenAI's Codex agent system supporting custom instructions via AGENTS.md files, which allow users to shape the agent's behavior, persona, and output style through system-level guidance. Users can define global defaults (e.g., preferred tools, working agreements, behavioral rules) and project-specific overrides that are injected into the agent's instruction chain before any work begins. This directly substantiates the claim of \"Output & system-prompt customization\" \u2014 the ability to shape the agent's system prompt, persona, or output style. The feature is described as generally available (active), with no mention of preview or deprecation status.",
+    "supported": true
+  }
+}

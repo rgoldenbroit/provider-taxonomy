@@ -1,0 +1,12 @@
+{
+  "key": "6eadb220c2c2dd79a0c6119997becb0c54394d4de073713ce3f63d88a4b228e8",
+  "label": "judge:matrix-openai-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To support long-running interactions, you can use compaction to reduce context size while preserving state needed for subsequent turns. Compaction helps you balance quality, cost, and latency as conversations grow. Server-side compaction... For explicit control, use the standalone compact endpoint for stateless compaction in long-running workflows.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents both manual (standalone compact endpoint via /responses/compact) and automatic (server-side compaction via context_management with compact_threshold) compaction features offered by OpenAI. These are described as mechanisms to compress conversation/context to extend effective working memory in long-running interactions, directly matching the claim. The page presents these as current, available features with code examples and no indication of preview or deprecated status.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "352f50e4671ca56c08e7fa9b50123d8947ca1bc1bda8833e66ac6b3d151993af",
+  "label": "judge:matrix-google-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page describes Google Antigravity's various product surfaces (Antigravity 2.0, CLI, SDK, IDE) and core agent capabilities, but makes no mention whatsoever of dev-container integration or running agents inside a defined dev container or isolated runtime. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

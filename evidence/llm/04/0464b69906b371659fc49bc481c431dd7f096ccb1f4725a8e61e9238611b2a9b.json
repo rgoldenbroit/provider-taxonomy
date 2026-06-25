@@ -1,0 +1,12 @@
+{
+  "key": "0464b69906b371659fc49bc481c431dd7f096ccb1f4725a8e61e9238611b2a9b",
+  "label": "judge:matrix-openai-plan-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "One workflow that's been working great for me is doing a final Plan mode pass before I let Codex execute. ... But in Plan mode, after Codex produces the plan, the UI only lets me click Approve/Implement Plan (or deny).",
+    "lifecycle_status": "active",
+    "rationale": "The page, a community forum thread about OpenAI's Codex (VS Code extension), clearly describes a \"Plan mode\" feature where Codex produces a plan for the user to review before execution (Approve/Implement Plan or deny). Multiple users discuss using this feature in their workflows, confirming it is an active, available feature. This directly substantiates the claim that OpenAI offers a plan-then-execute mode that produces a reviewable plan before the agent edits anything.",
+    "supported": true
+  }
+}

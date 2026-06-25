@@ -1,0 +1,12 @@
+{
+  "key": "1cb52a2dc7565020d8c551f02c575a40ec680013c35a9cb59d5d2afd2944dec8",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page (https://antigravity.google/blog/introducing-google-antigravity-2) contains only the text \"Google Antigravity\" and provides no information whatsoever about Google offering an Evals/testing harness or any capability to run evaluations/test suites against agent behavior. The page does not substantiate the claim in any way.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "6c2430e785da180221c1c82dc006600cbab4482dcabd644f75dbb86727344808",
+  "label": "judge:matrix-anthropic-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt caching makes Claude Code faster and more cost-efficient. Without caching, the API would reprocess your full history on every turn. With caching, it reuses what it already processed and only does new work for what changed.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Anthropic's prompt/context caching feature as an active, generally available capability. It explains that caching reduces latency (\"faster\") and cost (\"more cost-efficient\") by reusing previously processed context rather than reprocessing it on every turn. The page covers the feature in depth, including how it works, what invalidates it, and how to optimize it \u2014 all consistent with a generally available offering.",
+    "supported": true
+  }
+}

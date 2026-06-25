@@ -1,0 +1,12 @@
+{
+  "key": "4eb35759d99b78bcdcc917e2707095b71e2d0edb90efa61c8968f4bb841dfb62",
+  "label": "judge:matrix-google-prompt-injection-protection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is documentation about \"Hooks\" in the Antigravity IDE \u2014 a system for running custom scripts at specific points during execution. It covers hook configuration, supported events (PreToolUse, PostToolUse, PreInvocation, PostInvocation, Stop), and their input/output contracts. There is no mention anywhere on the page of \"prompt-injection protection\" or defenses against malicious instructions in tool or web content. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

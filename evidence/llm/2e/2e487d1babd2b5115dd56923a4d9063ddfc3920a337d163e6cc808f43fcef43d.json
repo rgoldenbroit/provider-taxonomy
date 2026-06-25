@@ -1,0 +1,12 @@
+{
+  "key": "2e487d1babd2b5115dd56923a4d9063ddfc3920a337d163e6cc808f43fcef43d",
+  "label": "judge:matrix-google-cloud-execution-environment",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes the Antigravity integration with Gemini Enterprise Agent Platform, covering topics such as Google Cloud project setup, billing, API enablement, VPC Service Controls, logging, and deployment endpoints. It does not mention or describe a \"Cloud execution environment\" feature that allows running an agent in a managed cloud/container environment. There is no quote on the page that substantiates this specific claim.",
+    "supported": false
+  }
+}

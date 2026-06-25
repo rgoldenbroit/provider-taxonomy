@@ -1,0 +1,12 @@
+{
+  "key": "7da31954f372823a2a26d326f4d0f71bb46c091aeccf5f7c99a96cdf5685e46e",
+  "label": "judge:matrix-openai-prompt-injection-protection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt injection from untrusted web content... Prompt injection can happen when the agent retrieves and follows instructions from untrusted content (for example, a web page or dependency README).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly acknowledges prompt injection as a risk when agent internet access is enabled and describes defenses against it: blocking internet access by default, allowing domain allowlists, restricting HTTP methods (GET/HEAD/OPTIONS only), and advising users to point Codex only to trusted resources. These are described as active mitigations/controls against malicious instructions in web content, which substantiates the claim of OpenAI offering prompt-injection protection in the context of Codex cloud agents.",
+    "supported": true
+  }
+}

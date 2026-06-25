@@ -1,0 +1,12 @@
+{
+  "key": "f57fc16ecf55ede14d4b23288a01520f3c62b7724d182f9e92f8bed2cb014387",
+  "label": "judge:matrix-openai-goal-directed-iteration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "A Goal gives Codex a completion condition: what should be true, how success should be checked, and what constraints must stay intact. ... With a Goal, Codex can keep the objective in view, evaluate whether the work is done, and choose the next useful action without you restating the target after every intermediate result.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Goals\" in Codex as a mechanism where the user sets a verifiable \"done\" condition (a measurable outcome with a verification surface), and the agent autonomously loops \u2014 running tools, checking evidence, and continuing turns \u2014 until that condition is met or a stopping condition is reached (success, budget limit, pause, etc.). This directly substantiates the claim of goal-directed autonomous iteration. The feature is described as available starting in Codex 0.128.0 with no indication it is in preview or deprecated.",
+    "supported": true
+  }
+}

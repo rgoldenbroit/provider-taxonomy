@@ -1,0 +1,12 @@
+{
+  "key": "2d5162ecad578ab4ded9225f31a5f77abc9acd701ca0c263b499d3d1cc40ae99",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "containers.create(...) -> ContainerCreateResponse ... Status of the container (e.g., active, deleted).",
+    "lifecycle_status": "active",
+    "rationale": "The page describes OpenAI's Containers API \u2014 a general-purpose container management API for creating, retrieving, listing, and deleting containers, along with managing files within them. However, there is no mention anywhere on the page of \"dev-container integration,\" running an agent \"inside a defined dev container,\" or any concept of a \"dev container\" as a defined, isolated development runtime specification (e.g., VS Code devcontainer format). The containers described here are OpenAI-managed runtime containers (with memory limits, network policies, expiry settings), not a dev-container integration feature as claimed. The specific claim \u2014 that OpenAI offers \"Dev-container integration (Run the agent inside a defined dev container / isolated runtime)\" \u2014 is not substantiated by this page.",
+    "supported": false
+  }
+}

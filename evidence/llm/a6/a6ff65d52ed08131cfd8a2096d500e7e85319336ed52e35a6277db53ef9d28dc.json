@@ -1,0 +1,12 @@
+{
+  "key": "a6ff65d52ed08131cfd8a2096d500e7e85319336ed52e35a6277db53ef9d28dc",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Thank you for the feedback! We appreciate you taking the time to share these thoughts\u2014we'll be filing a formal feature request for a mobile remote control/companion app for Antigravity.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a community forum thread where users are *requesting* a mobile/remote control feature for Google Antigravity. Google's own representative (Thatipamula_Namratha) responds by saying they will \"file a formal feature request\" \u2014 confirming this feature does NOT exist yet as a first-party Google offering. All the remote control solutions discussed on the page are third-party, community-built open-source projects (porta, Levitation, AG2R, etc.), not official Google offerings. The page does not substantiate that Google itself offers a Remote Control (mobile/web) feature for steering or approving agent runs.",
+    "supported": false
+  }
+}

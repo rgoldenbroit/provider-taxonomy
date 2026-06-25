@@ -1,0 +1,12 @@
+{
+  "key": "ad2e8b3405b14b5d298e63b21d6b60d0c8399c331752f203ad268f7b5592da3e",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is documentation for \"Antigravity 2.0 Hooks\" \u2014 a feature for running custom scripts at specific points during an agent's execution loop. The page contains no mention of prompt/context caching, repeated context caching, latency reduction, or cost reduction through caching. The claim about Google offering \"Prompt / context caching\" is not substantiated anywhere on this page.",
+    "supported": false
+  }
+}

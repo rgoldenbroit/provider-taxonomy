@@ -1,0 +1,268 @@
+{
+  "key": "60815ec08a57f0a28fd270d6a8cf949e841cad668f753f3c89cb22bb84f8e077",
+  "label": "matrixmap:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "mappings": [
+      {
+        "capability_id": "project-instruction-file",
+        "confidence": "high",
+        "feature_index": 103,
+        "implementation": "Workspace Rules \u2014 project-scoped rules stored in .agents/rules at the workspace or git root",
+        "matched": true
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "confidence": "high",
+        "feature_index": 66,
+        "implementation": "Plugins \u2014 namespaced bundles grouping skills, rules, MCP servers, and hooks",
+        "matched": true
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "confidence": "high",
+        "feature_index": 46,
+        "implementation": "Lifecycle Hooks \u2014 run custom local shell scripts/commands at specific lifecycle points",
+        "matched": true
+      },
+      {
+        "capability_id": "output-customization",
+        "confidence": "medium",
+        "feature_index": 72,
+        "implementation": "Rules \u2014 manually defined constraints providing persistent, reusable context for the Agent",
+        "matched": true
+      },
+      {
+        "capability_id": "model-selection",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "confidence": "high",
+        "feature_index": 50,
+        "implementation": "MCP Integration \u2014 supports Model Context Protocol to connect editor to local tools, databases, and external services",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "confidence": "high",
+        "feature_index": 53,
+        "implementation": "MCP Store \u2014 built-in store to browse, install, and authenticate supported MCP servers",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "confidence": "medium",
+        "feature_index": 53,
+        "implementation": "MCP Store \u2014 browse, install, and authenticate supported MCP servers directly in the editor",
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "confidence": "high",
+        "feature_index": 63,
+        "implementation": "Per-Tool MCP Permission \u2014 grants agent access to a single named tool on a specific MCP server",
+        "matched": true
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "context-compaction",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "prompt-caching",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "subagents",
+        "confidence": "high",
+        "feature_index": 92,
+        "implementation": "Subagents \u2014 primary agent delegates long-running operations to parallel autonomous subagents",
+        "matched": true
+      },
+      {
+        "capability_id": "agent-teams",
+        "confidence": "high",
+        "feature_index": 56,
+        "implementation": "Multi-Agent Teamwork \u2014 collaborative multi-agent framework with user-defined high-level goals",
+        "matched": true
+      },
+      {
+        "capability_id": "workflows",
+        "confidence": "high",
+        "feature_index": 102,
+        "implementation": "Workflows \u2014 saved markdown files defining repeatable series of steps across sessions",
+        "matched": true
+      },
+      {
+        "capability_id": "plan-mode",
+        "confidence": "high",
+        "feature_index": 7,
+        "implementation": "Artifact Review Policy \u2014 controls how a user reviews and approves agent-proposed plans and artifacts before changes",
+        "matched": true
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "confidence": "medium",
+        "feature_index": 55,
+        "implementation": "Multi-Agent Orchestration \u2014 advanced orchestration with built-in error recovery, retries, and coordination logic",
+        "matched": true
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "confidence": "high",
+        "feature_index": 105,
+        "implementation": "Worktree Support \u2014 agents operate in dedicated Git worktrees to isolate parallel work",
+        "matched": true
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "background-execution",
+        "confidence": "high",
+        "feature_index": 11,
+        "implementation": "Background Tasks \u2014 run tracked, long-running operations asynchronously without blocking the primary agent",
+        "matched": true
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "confidence": "high",
+        "feature_index": 75,
+        "implementation": "Scheduled Tasks \u2014 schedule messages to be sent to agents with repeatable time-based triggers",
+        "matched": true
+      },
+      {
+        "capability_id": "sandboxing",
+        "confidence": "high",
+        "feature_index": 96,
+        "implementation": "Terminal Sandboxing \u2014 kernel-level/native OS isolation for terminal commands executed by the Agent",
+        "matched": true
+      },
+      {
+        "capability_id": "permission-controls",
+        "confidence": "high",
+        "feature_index": 32,
+        "implementation": "Fine-Grained Permissions Engine \u2014 unified permission engine representing every sensitive agent operation as a permission resource",
+        "matched": true
+      },
+      {
+        "capability_id": "network-egress-control",
+        "confidence": "high",
+        "feature_index": 38,
+        "implementation": "Independent Network Access Control \u2014 controls network connectivity for sandboxed commands independently of filesystem restrictions",
+        "matched": true
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "confidence": "low",
+        "feature_index": 84,
+        "implementation": "Strict Mode \u2014 enhanced security controls restricting agent's access to external resources and sensitive operations",
+        "matched": true
+      },
+      {
+        "capability_id": "security-scanning",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "confidence": "low",
+        "feature_index": 20,
+        "implementation": "Cross-Platform Sandbox Backends \u2014 leverages nsjail, sandbox-exec, or AppContainer per OS",
+        "matched": true
+      },
+      {
+        "capability_id": "audit-logging",
+        "confidence": "high",
+        "feature_index": 39,
+        "implementation": "Inspect Hooks \u2014 read-only, non-blocking hooks for logging, audit trails, and metrics collection",
+        "matched": true
+      },
+      {
+        "capability_id": "code-review",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "confidence": "high",
+        "feature_index": 59,
+        "implementation": "Observability \u2014 tracks per-turn and cumulative token usage and provides access to thinking traces",
+        "matched": true
+      },
+      {
+        "capability_id": "evals-testing",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "resume-session",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "remote-control",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "notifications",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "confidence": "high",
+        "feature_index": 0,
+        "implementation": "",
+        "matched": false
+      },
+      {
+        "capability_id": "access-surfaces",
+        "confidence": "low",
+        "feature_index": 70,
+        "implementation": "Projects \u2014 agents work in Projects defining folder and repository boundaries with scoped settings",
+        "matched": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "3246b6c9203337daa5ab1e78bd6c1d8973305ac43f0054a8a5384e7ae66b439a",
+  "label": "judge:matrix-google-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Devcontainers are working in Antigravity but the browser tool can not setup the chrome extension... I managed to get devcontainers working... With this the agent can now execute commands inside the container and take control.",
+    "lifecycle_status": "beta",
+    "rationale": "The page is a feature request thread on Google's AI Developers Forum for \"Antigravity\" (Google's IDE/agent tool). While the original post requests native devcontainer support, multiple user replies confirm that devcontainer integration does exist in some form \u2014 users report it partially works (e.g., \"Devcontainers are working in Antigravity,\" \"I managed to get devcontainers working,\" \"With this the agent can now execute commands inside the container and take control\"). However, the support is clearly incomplete/buggy: there are known issues with the wget install script, rebuild support, remote server connection stalls, and browser agent connectivity. Google staff acknowledge the feedback and reference existing guidance for devcontainer usage. This confirms the offering exists but is in an early/incomplete state, consistent with a beta/preview lifecycle.",
+    "supported": true
+  }
+}

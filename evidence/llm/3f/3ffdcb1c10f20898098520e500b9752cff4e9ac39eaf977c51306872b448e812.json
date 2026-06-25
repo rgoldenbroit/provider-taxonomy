@@ -1,0 +1,12 @@
+{
+  "key": "3ffdcb1c10f20898098520e500b9752cff4e9ac39eaf977c51306872b448e812",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Google DeepMind Evals : Multiple standardized benchmarking tools for different types on models ... Gemini Evaluations Playbook : Recipes for experimenting and evaluating generative AI models with Vertex AI. ... Gen AI evaluation service and API",
+    "lifecycle_status": "active",
+    "rationale": "The page, published by Google (Chrome for Developers), explicitly references multiple Google-offered evals/testing tools: \"Google DeepMind Evals\" (standardized benchmarking tools for models), \"Gemini Evaluations Playbook\" (for evaluating generative AI models with Vertex AI), and a \"Gen AI evaluation service and API\" listed among eval tools. These substantiate that Google offers evals/testing harness capabilities for evaluating AI model behavior. The confidence is medium rather than high because the page is a resource/links page for a course rather than a dedicated product page, and it does not explicitly describe running test suites against an \"agent's\" behavior specifically \u2014 though the overall context of the evals course covers evaluation of AI systems.",
+    "supported": true
+  }
+}

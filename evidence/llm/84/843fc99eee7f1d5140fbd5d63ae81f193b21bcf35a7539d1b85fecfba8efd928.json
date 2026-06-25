@@ -1,0 +1,12 @@
+{
+  "key": "843fc99eee7f1d5140fbd5d63ae81f193b21bcf35a7539d1b85fecfba8efd928",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a Codex pricing page that covers plan tiers, usage limits, credits, and token-based rates. It does not mention any feature for tracking or capping token spend/usage in the sense of a cost & usage tracking dashboard with spend caps. While it references a \"Codex usage dashboard\" to view current limits, it does not describe any capability to set or cap token spend. There is no substantiation of \"Cost & usage tracking (Track and cap token spend / usage.)\" as a named offering.",
+    "supported": false
+  }
+}

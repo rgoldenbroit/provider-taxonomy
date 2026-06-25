@@ -1,0 +1,12 @@
+{
+  "key": "4372b668289e1f8c62b19f663de97e21d7e30ea38797aae00cfb1aea4e429422",
+  "label": "judge:matrix-google-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is exclusively about the Antigravity 2.0 agent permissions system \u2014 covering permission resources, access lists (Deny/Ask/Allow), supported actions (read_file, write_file, read_url, execute_url, command, unsandboxed, mcp), terminal sandboxing, and configuration examples. There is no mention whatsoever of an Evals/testing harness feature, running evaluations, or test suites against agent behavior. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

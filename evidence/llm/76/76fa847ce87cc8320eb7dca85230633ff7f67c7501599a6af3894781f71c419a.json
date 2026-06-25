@@ -1,0 +1,12 @@
+{
+  "key": "76fa847ce87cc8320eb7dca85230633ff7f67c7501599a6af3894781f71c419a",
+  "label": "judge:matrix-openai-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Custom prompts are deprecated. Use skills for reusable instructions that Codex can invoke explicitly or implicitly.",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is about \"Custom Prompts\" in Codex (a deprecated feature for reusable slash-command prompts in the CLI/IDE extension). It does not mention or describe prompt/context caching \u2014 the feature of caching repeated context to cut latency and cost. While \"prompt caching\" appears in the navigation sidebar as a suggested search term/link, the page itself contains no substantive content about that offering. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

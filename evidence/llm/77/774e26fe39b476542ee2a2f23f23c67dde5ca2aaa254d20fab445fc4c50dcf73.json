@@ -1,0 +1,12 @@
+{
+  "key": "774e26fe39b476542ee2a2f23f23c67dde5ca2aaa254d20fab445fc4c50dcf73",
+  "label": "judge:matrix-anthropic-goal-directed-iteration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The prompt is the most important part: the routine runs autonomously, so the prompt must be self-contained and explicit about what to do and what success looks like.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Claude Code Routines \u2014 automated, autonomous sessions triggered by schedules, API calls, or GitHub events. While the page mentions that prompts should be \"explicit about what to do and what success looks like,\" it does not describe a feature where the user sets a verifiable \"done\" condition and the agent autonomously loops until that condition is met. The page describes single runs per trigger event, not an iterative looping mechanism driven by a verifiable termination condition. The claim of \"goal-directed autonomous iteration\" with a loop-until-done mechanic is not substantiated by the page content.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "19e3282f63ec11a0b6921d3a8cd2a4cb1f0e30cd4d9f56814359110fd54ecfdb",
+  "label": "judge:matrix-google-notifications",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "**`notifications`**           | boolean    | `false`             | Emits system desktop and terminal bell chime notifications upon task completions.",
+    "lifecycle_status": "active",
+    "rationale": "The page documents a `notifications` configuration key that \"Emits system desktop and terminal bell chime notifications upon task completions,\" which substantiates the claim that Google offers a notifications feature tied to run progress/completion. However, the page describes desktop/bell chime notifications rather than explicitly \"push notifications,\" and the feature is off by default (`false`). The claim's characterization of \"push notifications on run progress / completion\" is directionally supported but the page specifies desktop and terminal bell notifications on task *completion* (not mid-run progress updates). The lifecycle status appears active as it is listed as a standard configuration option without any preview or deprecation language.",
+    "supported": true
+  }
+}

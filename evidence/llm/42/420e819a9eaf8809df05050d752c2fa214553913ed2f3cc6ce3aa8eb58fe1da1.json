@@ -1,0 +1,12 @@
+{
+  "key": "420e819a9eaf8809df05050d752c2fa214553913ed2f3cc6ce3aa8eb58fe1da1",
+  "label": "judge:matrix-openai-plan-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Choose the approval mode that matches your comfort level before Codex edits or runs commands.",
+    "lifecycle_status": "active",
+    "rationale": "The page references \"Approval modes\" \u2014 a feature that lets users choose how much control they have before Codex edits or runs commands. This aligns with the concept of a \"Plan-then-execute\" mode where the agent produces a reviewable plan before making changes. While the page does not use the exact phrase \"Plan-then-execute,\" the description of approval modes (choosing a mode \"before Codex edits or runs commands\") directly substantiates the existence of a mode in which users can review what Codex intends to do before it acts. The feature appears to be generally available (active).",
+    "supported": true
+  }
+}

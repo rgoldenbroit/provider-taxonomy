@@ -1,0 +1,12 @@
+{
+  "key": "a7ab7290aacbd1e7b589e71be06be0b4cae77616ea1a03b9c393a604471be2f0",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is the Codex overview/landing page at developers.openai.com/codex. It describes Codex's general capabilities (writing code, reviewing code, debugging, automating tasks, etc.) and lists navigation links for various features and concepts. There is no mention anywhere on this page of \"dev-container integration,\" running the agent inside a defined dev container, or any isolated runtime container configuration feature. The claim is not substantiated by the page content.",
+    "supported": false
+  }
+}

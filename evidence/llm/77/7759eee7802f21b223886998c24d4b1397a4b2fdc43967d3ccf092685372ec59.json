@@ -1,0 +1,12 @@
+{
+  "key": "7759eee7802f21b223886998c24d4b1397a4b2fdc43967d3ccf092685372ec59",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt injection detection: opt-in screenshot scanning to detect hidden adversarial instructions.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does not describe a \"Security scanning / threat model\" feature that scans code or agent actions against a defined threat model. The closest related feature mentioned is \"Prompt injection detection\" \u2014 opt-in screenshot scanning to detect hidden adversarial instructions \u2014 which is about detecting prompt injection attacks, not scanning code/agent actions against a security threat model. The page also mentions configurable safety policies and a safety decision system, but none of these constitute scanning code or agent actions against a threat model as described in the claim.",
+    "supported": false
+  }
+}

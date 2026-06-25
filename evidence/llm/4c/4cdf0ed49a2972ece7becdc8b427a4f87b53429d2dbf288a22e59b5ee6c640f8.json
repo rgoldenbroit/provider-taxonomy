@@ -1,0 +1,12 @@
+{
+  "key": "4cdf0ed49a2972ece7becdc8b427a4f87b53429d2dbf288a22e59b5ee6c640f8",
+  "label": "judge:matrix-anthropic-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "File checkpointing tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, allowing you to rewind files to any previous state.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents Anthropic's \"File Checkpointing\" feature in the Claude Agent SDK, which allows users to save checkpoint/restore points (via checkpoint UUIDs) and rewind/roll back file changes made by the agent to any previous state. This directly substantiates the claim of \"Checkpoint / rewind (Save points you can roll back to, and undo agent changes.)\". The feature is documented as a fully implemented capability with code examples in both Python and TypeScript, indicating it is generally available (active).",
+    "supported": true
+  }
+}

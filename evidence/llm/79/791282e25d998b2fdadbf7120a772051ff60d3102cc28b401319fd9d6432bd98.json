@@ -1,0 +1,12 @@
+{
+  "key": "791282e25d998b2fdadbf7120a772051ff60d3102cc28b401319fd9d6432bd98",
+  "label": "judge:matrix-google-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Rewind history with `/rewind`\" feature under \"Manage TUI sessions proactively,\" explaining that if an agent has made several successive changes that introduce build errors, the user can type `/rewind` (or `/undo`) to roll back the conversation thread to a previous stable checkpoint. This directly substantiates the claim about a Checkpoint/rewind feature allowing users to save points they can roll back to and undo agent changes. The page presents this as a current, active feature with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

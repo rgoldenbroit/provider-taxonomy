@@ -1,0 +1,12 @@
+{
+  "key": "0eec645ce196670b95a239a227076a3b33418e500e84819da3322b621181bd29",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about \"Antigravity 2.0\" subagents \u2014 covering asynchronous subagent invocation, lifecycle states, inter-agent communication, built-in vs. custom subagents, delegation hierarchy, permissions, and multi-agent teamwork. There is no mention anywhere on the page of \"context compaction,\" \"manual + auto\" context compression, or any feature that compresses conversation/context to extend effective working memory. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

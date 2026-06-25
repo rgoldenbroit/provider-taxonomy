@@ -1,0 +1,12 @@
+{
+  "key": "299d028a04e526871d762aa0882c296dd79dd3e0ede6a7f968ab1f831ed1870e",
+  "label": "judge:matrix-google-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "projects.locations.reasoningEngines.memories\nOverview\ncreate\ndelete\ngenerate\nget\ningestEvents\nlist\npatch\nretrieve\nretrieveProfiles",
+    "lifecycle_status": "preview",
+    "rationale": "The page lists a `memories` resource under `projects.locations.reasoningEngines` in the v1beta1 REST API, with operations including `create`, `delete`, `generate`, `get`, `ingestEvents`, `list`, `patch`, `retrieve`, and `retrieveProfiles`. Additionally, the page also lists `projects.locations.reasoningEngines.sessions` (for tracking conversation turns/events), and together these strongly indicate a persistent agent memory capability \u2014 the agent can store, retrieve, and manage memories across sessions. Furthermore, the page is explicitly labeled as \"Preview,\" confirming the offering exists but is in an early-access stage.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "6a9251da3eebdca1e9922dbd74ba977f32c2f6907fc2ad16cc91ac6450314253",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is exclusively about the Antigravity CLI's Plugins & Skills system, covering plugin manifests, skill creation, hooks, and Model Context Protocol (MCP) configuration. There is no mention anywhere on the page of a \"Remote control (mobile / web)\" feature or any capability to steer or approve agent runs from a phone or remote client. The claim is not substantiated by the page's content.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "a67e6da04d4a06c9ce1d53d1a1d05506cfcf0e85bf8256bdc518a7efe6672411",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page describes Google Antigravity and its various surfaces (desktop app, CLI, SDK, IDE) and core agent capabilities. There is no mention anywhere on the page of \"context compaction,\" \"manual + auto\" context compression, or any feature related to compressing conversation/context to extend effective working memory. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "198d70b3774e32feddb2a765d2330338d192bc5faee8eb2a1fe8ef0e0f75d7cf",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a general safety and factuality guidance document for the Gemini API. It covers topics like safety settings, adversarial testing, content filtering, and mitigating risks, but it does not mention any specific offering described as \"Security scanning / threat model\" that scans code or agent actions for security issues against a threat model. No such feature or product is referenced anywhere on the page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "40fce24c5b5087846145675a280602e080538514f298bc6b0b9eda64a09aab78",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is an announcement about Claude Opus 4.7 and does not describe or mention any Anthropic-offered Evals / testing harness product (i.e., a tool that lets developers run evaluations or test suites against an agent's behavior). While the page references \"evals\" in the context of third-party partners running their own internal evaluations of Claude Opus 4.7, and mentions things like \"harnesses\" only in passing (e.g., \"prompts written for earlier models can sometimes now produce unexpected results ... Users should re-tune their prompts and harnesses accordingly\"), there is no mention of Anthropic offering an Evals or testing harness product/service for developers to run evaluations against agent behavior.",
+    "supported": false
+  }
+}

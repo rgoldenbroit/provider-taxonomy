@@ -1,0 +1,12 @@
+{
+  "key": "fc80091f193b87599b34a2351ddf7fdfcfcb3fb50cc6e527d84e1a910a2b8d12",
+  "label": "judge:matrix-openai-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Memories let Codex carry useful context from earlier threads into future work. After you enable memories, Codex can remember stable preferences, recurring workflows, tech stacks, project conventions, and known pitfalls so you don't need to repeat the same context in every thread.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Memories\" feature for OpenAI's Codex agent that stores durable context across threads/sessions. It explains how memories persist from prior threads into future work, covering stable preferences, workflows, tech stacks, and project conventions \u2014 which matches the claim of \"persistent agent memory\" that is \"durable memory the agent keeps across turns/sessions.\" The feature is described as generally available (configurable via settings or config.toml), indicating it is active, though it is off by default.",
+    "supported": true
+  }
+}

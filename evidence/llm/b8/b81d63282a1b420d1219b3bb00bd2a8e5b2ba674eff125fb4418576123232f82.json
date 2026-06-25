@@ -1,0 +1,12 @@
+{
+  "key": "b81d63282a1b420d1219b3bb00bd2a8e5b2ba674eff125fb4418576123232f82",
+  "label": "judge:matrix-openai-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about using Codex CLI as an MCP server and orchestrating multi-agent workflows with the OpenAI Agents SDK. It does not mention any \"Workflows\" feature defined as saved automations or repeatable, named multi-step task sequences in the sense of a product offering. While the page discusses creating multi-agent workflows programmatically via code, it does not describe a dedicated \"Workflows\" product feature that allows users to define, save, and name repeatable task sequences. The claim refers to a specific product capability, which is entirely absent from the page.",
+    "supported": false
+  }
+}

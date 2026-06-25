@@ -1,0 +1,12 @@
+{
+  "key": "a88d9385fa7e74ba34ebb55c1886854abad8cfe0652bfb738f5a1bdf5f0e6c56",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes OpenAI Codex's cloud environment system, which uses a default container image called \"universal\" (codex-universal) with setup scripts, caching, and environment variables. However, there is no mention anywhere on the page of \"dev-container\" integration, running the agent inside a \"defined dev container,\" or any reference to the Dev Container specification/standard. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

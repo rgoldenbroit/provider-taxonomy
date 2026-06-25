@@ -25,12 +25,13 @@ jobs:
       - name: Verify reproducible build (replay the evidence ledger)
         run: python -m taxonomy.cli verify
 
-      # Capability-matrix gate: the agentic-coding matrix (.md) must pass the schema +
-      # definition-of-done validator, and the committed data/agentic-matrix.json must be
-      # exactly what the .md regenerates (no drift between source-of-truth and viewer input).
-      - name: Validate capability matrix
+      # Capability-matrix gate (offline — no Vertex): the matrix must pass the schema +
+      # definition-of-done validator, and the rendered .md must be in sync with the canonical
+      # data/agentic-matrix.json (re-render and assert no drift). Re-grounding the cells needs
+      # live Vertex and happens in the self-maintain loop, not here.
+      - name: Validate capability matrix (schema + render drift)
         run: |
           python -m pip install --quiet "pyyaml>=6"
           python scripts/validate_matrix.py
-          python scripts/matrix_to_json.py
-          git diff --exit-code data/agentic-matrix.json
+          python scripts/render_matrix_md.py
+          git diff --exit-code ai-provider-capability-taxonomy.md

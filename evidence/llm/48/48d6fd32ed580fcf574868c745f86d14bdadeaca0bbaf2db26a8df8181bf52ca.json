@@ -1,0 +1,12 @@
+{
+  "key": "48d6fd32ed580fcf574868c745f86d14bdadeaca0bbaf2db26a8df8181bf52ca",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Built exactly this! Levitation is an open-source mobile interface for Antigravity. You can start new tasks, chat with agents, and approve decisions from your phone. No cloud relay \u2014 runs a local client that bridges to a web dashboard.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes a third-party, community-built open-source tool called \"Levitation\" created by a forum user (ggarber), not an official Google offering. The claim is that *Google* offers remote control (mobile/web) for steering or approving agent runs. The page does not describe any official Google product or feature providing this capability \u2014 it is a user-created project posted in a community forum. Therefore, the page does not substantiate the claim that Google itself offers this feature.",
+    "supported": false
+  }
+}

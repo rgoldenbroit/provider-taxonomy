@@ -1,0 +1,12 @@
+{
+  "key": "785bf15d301e94c39000847586263372ecfec3a1772c02f0c6f24040949cf6bc",
+  "label": "judge:matrix-google-prompt-injection-protection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google has taken a layered security approach introducing security measures designed for each stage of the prompt lifecycle. From Gemini 2.5 model hardening, to purpose-built machine learning (ML) models detecting malicious instructions, to system-level safeguards, we are meaningfully elevating the difficulty, expense, and complexity faced by an attacker.",
+    "lifecycle_status": "active",
+    "rationale": "The page is a Google Security blog post explicitly describing Google's prompt-injection protection offering for Gemini. It details a layered defense strategy specifically targeting malicious instructions in external/tool/web content (emails, documents, calendar invites, files, URLs), including content classifiers, security thought reinforcement, markdown sanitization, suspicious URL redaction, and a user confirmation framework. These are all active defenses being rolled out, with some already deployed and others in the process of being rolled out, indicating an active lifecycle status.",
+    "supported": true
+  }
+}

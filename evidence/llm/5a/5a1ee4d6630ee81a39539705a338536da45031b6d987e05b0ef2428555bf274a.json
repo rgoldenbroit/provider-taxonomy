@@ -1,0 +1,12 @@
+{
+  "key": "5a1ee4d6630ee81a39539705a338536da45031b6d987e05b0ef2428555bf274a",
+  "label": "judge:matrix-google-prompt-injection-protection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is documentation for \"Antigravity 2.0 Hooks\" \u2014 a system for running custom scripts at specific points during an agent's execution loop. It covers PreToolUse, PostToolUse, PreInvocation, PostInvocation, and Stop events. There is no mention anywhere on the page of prompt-injection protection or defenses against malicious instructions in tool/web content. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

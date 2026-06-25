@@ -1,0 +1,12 @@
+{
+  "key": "67253c7168ce0bde61476fef0d4cc67fb62bf4058ed9936dcd92ff27cb35b76e",
+  "label": "judge:matrix-anthropic-mcp-server-management",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Configure MCP servers to extend your agent with external tools. Covers transport types, tool search for large tool sets, authentication, and error handling. ... You can configure MCP servers in code when calling `query()`, or in a `.mcp.json` file loaded via [`settingSources`](#from-a-config-file). ... To add MCP servers to the Claude Code CLI so they load in every project, see [MCP installation scopes](/en/mcp#mcp-installation-scopes). ... To see what tools an MCP server provides, check the server's documentation or connect to the server and inspect the `system` init message",
+    "lifecycle_status": "active",
+    "rationale": "The page substantiates most elements of the claim. It describes: (1) installing/configuring MCP servers (via code or .mcp.json config file), (2) scoping \u2014 referencing \"MCP installation scopes\" for the Claude Code CLI, and (3) discovering MCP servers and their tools. The page does not describe a formal \"registry\" for MCP servers, but it does cover install, configure, scope, and discover functionality as described in the claim. The lifecycle status is active as the documentation presents these as current, generally available features.",
+    "supported": true
+  }
+}

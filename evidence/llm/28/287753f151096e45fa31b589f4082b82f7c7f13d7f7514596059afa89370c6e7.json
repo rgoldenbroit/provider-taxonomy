@@ -1,0 +1,12 @@
+{
+  "key": "287753f151096e45fa31b589f4082b82f7c7f13d7f7514596059afa89370c6e7",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is an enterprise setup guide for Antigravity and Gemini Enterprise Agent Platform. It covers topics such as Google Cloud project setup, billing, enabling the Agent Platform API, VPC Service Controls, and deployment endpoints. At no point does the page mention \"Access surfaces\" or describe where an agent can be used (terminal, IDE, web, cloud, mobile). There is no content on the page that substantiates the claim.",
+    "supported": false
+  }
+}

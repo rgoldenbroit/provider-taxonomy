@@ -1,0 +1,12 @@
+{
+  "key": "4d21f2bdb6f05cdd986de561742abd843568345263ea3738512a3d44ceade87c",
+  "label": "judge:matrix-google-chat-surface-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The MCP Store currently features integrations for: Airweave, Arize, AlloyDB for PostgreSQL, Atlassian, BigQuery... Linear... GitHub...",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes Antigravity's MCP integration, which allows the editor/agent to interact with tools like Linear and GitHub (e.g., \"Create a Linear issue for this TODO\" or \"Search Notion or GitHub for authentication patterns\"). However, this is about the Antigravity editor agent connecting to external services via MCP \u2014 it is not about driving the agent from chat/issue tools (i.e., Slack, Linear, channels as a chat surface that initiates or controls the agent). The claim specifically describes a \"Chat-surface integration\" where the agent is driven *from* chat or issue tools. The page contains no mention of Slack, no mention of chat surfaces, and no description of the agent being controlled or triggered from within those tools. The direction of integration described on the page is the opposite: the agent uses MCP to act *on* those tools, not be driven *by* them.",
+    "supported": false
+  }
+}

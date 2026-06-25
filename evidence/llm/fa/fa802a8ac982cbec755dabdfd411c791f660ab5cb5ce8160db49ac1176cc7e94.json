@@ -1,0 +1,12 @@
+{
+  "key": "fa802a8ac982cbec755dabdfd411c791f660ab5cb5ce8160db49ac1176cc7e94",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "This notebook demonstrates how to retrieve and visualize usage data from the OpenAI Completions Usage API and Costs API. We'll: Call the API to get completions usage data. Parse the JSON response into a pandas DataFrame. Visualize token usage over time using matplotlib. Use grouping by model to analyze token usage across different models.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's Usage API and Cost API, which allow users to monitor and track token usage and costs over time. The cookbook demonstrates retrieving completions usage data (input_tokens, output_tokens, num_model_requests, etc.) and cost data via API endpoints, supporting the claim that OpenAI offers cost and usage tracking to track token spend/usage. The page presents this as a currently active, generally available feature with a live API endpoint (https://api.openai.com/v1/organization/usage/completions).",
+    "supported": true
+  }
+}

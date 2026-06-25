@@ -1,0 +1,12 @@
+{
+  "key": "bbd3405f3ebe12d179f108ddc673574b189c192298df2d9dd7f2b9d50af18039",
+  "label": "judge:matrix-openai-checkpoint-rewind",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Is there any way to get the old stuff back?",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a community forum thread where multiple users are complaining about losing chat history due to accidental edits, and asking if there is any way to roll back or recover previous conversation states. The thread explicitly highlights the absence of a checkpoint/rewind/save-point feature \u2014 users are desperate to recover lost data and resorting to workarounds like exporting JSON files. Nowhere on the page does OpenAI describe or announce a \"Checkpoint / rewind\" feature that lets users save points to roll back to or undo agent changes.",
+    "supported": false
+  }
+}

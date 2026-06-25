@@ -1,0 +1,12 @@
+{
+  "key": "0f5a589a0855c1684fb894280473ebd7bfcd0042446dd14bc4f78a0a6cc0858d",
+  "label": "judge:matrix-openai-prompt-injection-protection",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Defending against prompt injection is a challenge across the AI industry and a core focus at OpenAI. While we expect adversaries to continue developing such attacks, we're building layered defenses designed to carry out the user's intended task even when someone is trying to mislead them.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes OpenAI's prompt-injection protection offering in detail, including multiple active defense layers: model training to distinguish trusted from untrusted instructions, real-time automated monitoring, security protections (link checks, sandboxing), red-teaming, a bug bounty program, and user education/controls. The page also matches the claim's specific framing of \"defenses against malicious instructions in tool/web content,\" with concrete examples such as malicious instructions hidden in apartment listings (web content) and references to MCP risks (tool content). All described defenses are presented as current and active.",
+    "supported": true
+  }
+}

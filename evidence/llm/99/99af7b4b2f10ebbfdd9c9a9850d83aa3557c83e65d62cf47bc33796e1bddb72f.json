@@ -1,0 +1,12 @@
+{
+  "key": "99af7b4b2f10ebbfdd9c9a9850d83aa3557c83e65d62cf47bc33796e1bddb72f",
+  "label": "judge:matrix-google-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is exclusively about the Antigravity CLI's Terminal Sandbox feature \u2014 covering OS-level process isolation, sandbox configuration, and interactive approval prompts. There is no mention whatsoever of persistent agent memory, durable memory across turns or sessions, or any related memory capability. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

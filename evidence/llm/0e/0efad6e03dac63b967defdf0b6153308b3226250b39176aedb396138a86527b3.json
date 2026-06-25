@@ -1,0 +1,12 @@
+{
+  "key": "0efad6e03dac63b967defdf0b6153308b3226250b39176aedb396138a86527b3",
+  "label": "judge:matrix-openai-goal-directed-iteration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about the Codex app's \"Review\" pane \u2014 covering Git diffs, inline comments, pull request reviews, and staging/reverting files. It contains no mention whatsoever of a \"goal-directed autonomous iteration\" feature, a verifiable \"done\" condition, or an agent looping autonomously until a condition is met. The claim is not substantiated by anything on this page.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "169255e21daca9400f2b6bd1dc51aac234e31e0b2f3840911af3f81354ddc9b3",
+  "label": "judge:matrix-google-access-surfaces",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Google Antigravity 2.0 is a new, standalone desktop application that acts as a central home for agent interaction... Antigravity CLI is for those who prefer to stay in the terminal. It's a lightweight, high-velocity product surface that lets you create new agents instantly without a graphical user interface... Antigravity SDK gives you programmatic access to the same agent harness powering Google's products... We're also launching native voice support for Gemini audio models, as well as integration with many surfaces and platforms, like Android, Firebase and Google AI Studio.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes Google Antigravity as an \"agent-first development platform\" offering multiple access surfaces: a terminal surface (Antigravity CLI \u2014 \"for those who prefer to stay in the terminal\"), a desktop/web application (Antigravity 2.0 \u2014 \"a new, standalone desktop application\"), cloud integration (Google Cloud projects, Firebase), and mobile surfaces (Android). This directly substantiates the claim that Google offers \"Access surfaces (Where the agent can be used: terminal, IDE, web, cloud, mobile.)\" across those dimensions. Antigravity is described as generally available or actively launching.",
+    "supported": true
+  }
+}

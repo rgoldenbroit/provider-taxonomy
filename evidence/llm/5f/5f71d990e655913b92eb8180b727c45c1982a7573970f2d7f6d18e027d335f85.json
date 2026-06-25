@@ -1,0 +1,12 @@
+{
+  "key": "5f71d990e655913b92eb8180b727c45c1982a7573970f2d7f6d18e027d335f85",
+  "label": "judge:matrix-openai-persistent-agent-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ChatGPT would become significantly more effective for complex, long-running tasks if users could define persistent rules and structured state that the model maintains and updates across sessions\u2014without requiring repeated manual context injection.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a feature request post on the OpenAI Developer Community forum, written by a user (S.Lee) asking OpenAI to *build* persistent agent memory. The OpenAI support response says \"I don't have a timeline to share, but I'll make sure this gets passed along internally.\" This confirms the feature does not currently exist as an offering \u2014 it is being requested. The page does not substantiate that OpenAI offers persistent agent memory (durable memory the agent keeps across turns/sessions); rather, it explicitly describes its absence as a problem to be solved.",
+    "supported": false
+  }
+}

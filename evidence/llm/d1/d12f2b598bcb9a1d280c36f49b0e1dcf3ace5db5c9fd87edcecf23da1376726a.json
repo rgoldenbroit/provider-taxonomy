@@ -1,0 +1,12 @@
+{
+  "key": "d12f2b598bcb9a1d280c36f49b0e1dcf3ace5db5c9fd87edcecf23da1376726a",
+  "label": "judge:matrix-google-plan-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "I realized that when I asked the Agent to generate a new plan when there was already a plan in my dialog history, the Agent would modify the existing old data and immediately enter the execution state. (without displaying the implementation_plan.md Open combinations in the dialog).",
+    "lifecycle_status": "active",
+    "rationale": "The page is a Google AI Developers Forum thread discussing \"Plan Mode\" in Google Antigravity (a Google AI coding agent product). The thread presupposes the existence of a plan-then-execute mode \u2014 users describe the agent being expected to first produce a plan (implementation_plan.md) before executing edits, and the bug report is precisely that it skips the planning step and goes straight to execution. Related topics such as \"Planning-Mode outbreak\" and \"Model not planning, just going ahead\" further confirm this feature exists. The page does not explicitly define the feature in marketing terms, hence medium confidence, but it clearly substantiates that such a mode exists and is expected to produce a reviewable plan before the agent edits anything.",
+    "supported": true
+  }
+}

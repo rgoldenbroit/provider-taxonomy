@@ -1,0 +1,12 @@
+{
+  "key": "71766b278533c4ff9917dda459808a172b673f9a584fdc68fce60c257f18699c",
+  "label": "judge:matrix-anthropic-evals-testing",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page does not mention any \"Evals\" or dedicated testing harness feature for running evaluations or test suites against an agent's behavior. While the page does cover working with tests (generating unit tests, running tests for refactored code, etc.), this refers to standard software development testing workflows \u2014 not an evaluations/evals framework for assessing agent behavior. There is no mention of an evals product, evaluation harness, or test suites for agent behavior assessment anywhere on the page.",
+    "supported": false
+  }
+}

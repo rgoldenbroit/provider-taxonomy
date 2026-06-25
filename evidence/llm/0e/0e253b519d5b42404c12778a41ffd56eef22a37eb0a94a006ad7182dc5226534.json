@@ -1,0 +1,12 @@
+{
+  "key": "0e253b519d5b42404c12778a41ffd56eef22a37eb0a94a006ad7182dc5226534",
+  "label": "judge:matrix-openai-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Record & Replay lets you demonstrate a workflow on your Mac and turn it into a reusable skill. Use it when the workflow is repetitive, depends on your preferences, or is easier to show than to describe in a prompt.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes OpenAI's \"Record & Replay\" feature in the Codex app, which allows users to demonstrate and record multi-step workflows on their Mac and convert them into named, reusable \"skills\" that can be replayed later. This directly substantiates the claim of \"Workflows / saved automations\" \u2014 i.e., defining repeatable, named multi-step task sequences. The feature is described as currently available (on macOS, with noted geographic exclusions), indicating active status.",
+    "supported": true
+  }
+}

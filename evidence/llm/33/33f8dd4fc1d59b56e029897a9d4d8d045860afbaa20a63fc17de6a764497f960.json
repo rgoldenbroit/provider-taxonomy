@@ -1,0 +1,12 @@
+{
+  "key": "33f8dd4fc1d59b56e029897a9d4d8d045860afbaa20a63fc17de6a764497f960",
+  "label": "judge:matrix-google-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "You can monitor your active quota and credit consumption directly inside the CLI: Statusline Indicator: The right side of the CLI statusline displays your remaining credit count (e.g., AI Credits: 42). Low Quota Alert: When your remaining AI credits drop below the warning threshold, the statusline indicator highlights to warn you that your limits are near.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes tracking of AI credit/token usage (quota tracking, a statusline indicator showing remaining credits, low quota alerts, and a /credits command for detailed usage statistics). This substantiates the \"track\" portion of the claim. The \"cap\" portion is partially supported via the \"Use G1 Credits\" toggle, which allows restricting fallback billing when plan quotas are exhausted, effectively capping spend. The page does not use the word \"cap\" explicitly, but the toggle to restrict further billing when quotas run out is functionally equivalent. Overall, the page does substantiate cost & usage tracking with spend/usage controls, though it is within a product called \"Antigravity CLI\" rather than a mainstream Google product. The page is presented as fetched from a Google domain, so it is treated as substantiating the claim.",
+    "supported": true
+  }
+}

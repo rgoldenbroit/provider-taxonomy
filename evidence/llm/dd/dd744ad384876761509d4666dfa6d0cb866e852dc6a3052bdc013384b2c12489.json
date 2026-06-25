@@ -1,0 +1,12 @@
+{
+  "key": "dd744ad384876761509d4666dfa6d0cb866e852dc6a3052bdc013384b2c12489",
+  "label": "judge:matrix-google-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about \"Sidecars\" \u2014 background processes that run alongside Antigravity (a Google product). There is no mention anywhere on the page of dev-container integration, running an agent inside a defined dev container, or any isolated runtime container concept. The page covers sidecar configuration, scheduling, lifecycle management, and the agentapi CLI, but nothing related to dev containers.",
+    "supported": false
+  }
+}

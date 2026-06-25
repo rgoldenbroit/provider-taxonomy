@@ -1,0 +1,12 @@
+{
+  "key": "e04f954c81b2f93cc76216563e70b35e9f3a98dbd435fb58749aa9da13682789",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page describes many Codex app features including Local, Worktree, and Cloud modes, sandboxing, integrated terminal, MCP support, Git tools, automations, and more. However, there is no mention anywhere on the page of \"dev container\" integration or running the agent inside a defined dev container or isolated runtime of that kind. The page does not substantiate the claim.",
+    "supported": false
+  }
+}

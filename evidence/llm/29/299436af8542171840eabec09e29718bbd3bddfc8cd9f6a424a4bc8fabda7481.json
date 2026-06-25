@@ -1,0 +1,12 @@
+{
+  "key": "299436af8542171840eabec09e29718bbd3bddfc8cd9f6a424a4bc8fabda7481",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is about Google Unified Security and covers topics such as threat intelligence, exposure management, multicloud/AI security, secure enterprise browser, threat detection and response, and incident response. There is no mention anywhere on the page of \"security scanning,\" \"threat model,\" or scanning code/agent actions for security issues against a threat model. The specific offering described in the claim is not substantiated by the page content.",
+    "supported": false
+  }
+}

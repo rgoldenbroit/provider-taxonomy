@@ -61,17 +61,20 @@ jobs:
           TAXO_LEDGER=record TAXO_AS_OF="$(date +%F)" python scripts/reverify.py
           python -m taxonomy.cli verify                       # reproducible: replay == catalog
           TAXO_OFFLINE=1 python -m taxonomy.cli eval          # gold-set + adversarial gates
+          TAXO_LEDGER=record python scripts/build_matrix.py   # re-ground the capability matrix (catalog → docs → Tavily)
+          python scripts/render_matrix_md.py                  # re-render the .md section from the canonical JSON
+          python scripts/validate_matrix.py                   # gate: schema + definition of done
           python -m taxonomy.cli changelog --old /tmp/old.json
           python -m taxonomy.cli build
 
       - name: Commit the refreshed catalog + evidence (if anything changed)
         if: steps.guard.outputs.go == 'true'
         run: |
-          if [ -n "$(git status --porcelain data/ evidence/ viewer/taxonomy.html CHANGELOG.md)" ]; then
+          if [ -n "$(git status --porcelain data/ evidence/ viewer/taxonomy.html CHANGELOG.md ai-provider-capability-taxonomy.md)" ]; then
             git config user.name  "provider-taxonomy-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add data/ evidence/ viewer/taxonomy.html CHANGELOG.md
-            git commit -m "self-maintain: re-verified catalog ($(date +%F))"
+            git add data/ evidence/ viewer/taxonomy.html CHANGELOG.md ai-provider-capability-taxonomy.md
+            git commit -m "self-maintain: re-verified catalog + matrix ($(date +%F))"
             git push
           else
             echo "no changes this run"

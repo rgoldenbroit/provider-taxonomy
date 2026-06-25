@@ -1,0 +1,12 @@
+{
+  "key": "78ced14256b393387fdc0db56cfa52dc483c24fcc46b5a4a09a5b3aa7469e31d",
+  "label": "judge:matrix-google-output-customization",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Configuration: Define a custom system prompt and specific toolsets for read-only, write (including running terminal commands), and subagent delegation capabilities.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes \"Custom Subagents\" via the `define_subagent` tool, which allows users to define a custom system prompt and specific toolsets for subagents. This directly substantiates the claim that Google's Antigravity offering supports output and system-prompt customization \u2014 shaping an agent's system prompt, persona, or output style. The feature appears to be generally available (not marked as preview or beta) within the conversation scope.",
+    "supported": true
+  }
+}

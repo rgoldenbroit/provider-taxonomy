@@ -369,6 +369,9 @@ capability_groups:
     - rollback
     - restore
     - revert
+    - features.undo
+    - undo support
+    - config reference
   - id: resume-session
     name: Resume / fork session
     what: Continue or branch a previous session.

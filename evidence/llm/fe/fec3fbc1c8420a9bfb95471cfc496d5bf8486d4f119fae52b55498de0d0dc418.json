@@ -1,0 +1,12 @@
+{
+  "key": "fec3fbc1c8420a9bfb95471cfc496d5bf8486d4f119fae52b55498de0d0dc418",
+  "label": "judge:matrix-google-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "I would like to suggest your team consider designing a native Android application that directly integrates with Antigravity on your PC.",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is a user feature request thread asking Google to build a native Android/mobile remote control for Antigravity \u2014 it does not describe or confirm that Google offers such a feature. The post describes a workaround using Chrome Remote Desktop and explicitly requests a native solution that does not yet exist. The Google forum moderator's response only acknowledges filing the feature request, not confirming any existing offering. Therefore, the claim that Google offers remote control (mobile/web) for steering or approving agent runs is not substantiated by this page.",
+    "supported": false
+  }
+}

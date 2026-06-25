@@ -1,0 +1,12 @@
+{
+  "key": "2940fef7994da71b9d6324722e51b1f95c480768a80bc0f739bbe30a571b3461",
+  "label": "judge:matrix-openai-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about Codex's \"Workflows\" documentation, which describes end-to-end workflow examples (explain a codebase, fix a bug, write a test, etc.) for the Codex IDE extension, CLI, and cloud. These are instructional guides and usage patterns \u2014 not a product feature for defining \"saved automations\" or \"repeatable, named multi-step task sequences\" that a user can create and store. The page does not describe any feature that allows users to define, name, save, or reuse automated task sequences. The claim's concept of \"Workflows / saved automations\" as a distinct product offering is not substantiated by this page.",
+    "supported": false
+  }
+}

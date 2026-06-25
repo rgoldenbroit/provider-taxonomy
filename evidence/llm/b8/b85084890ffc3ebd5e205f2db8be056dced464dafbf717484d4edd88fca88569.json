@@ -1,0 +1,12 @@
+{
+  "key": "b85084890ffc3ebd5e205f2db8be056dced464dafbf717484d4edd88fca88569",
+  "label": "judge:matrix-openai-cost-usage-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Workspace and personal usage breakdowns, including credit and token usage by product surface or model",
+    "lifecycle_status": "active",
+    "rationale": "The page describes analytics and governance features for Codex that include tracking token and credit usage via the Analytics Dashboard, Analytics API, and Compliance API. The dashboard provides \"credit and token usage by product surface or model,\" the Analytics API returns \"threads, turns, credits\" metrics, and the Compliance API exports \"Token usage and related request metadata.\" The page also explicitly lists \"Usage governance and cost monitoring\" as a common use case. This substantiates the claim that OpenAI offers cost & usage tracking to track token spend/usage, presented as a generally available enterprise feature.",
+    "supported": true
+  }
+}

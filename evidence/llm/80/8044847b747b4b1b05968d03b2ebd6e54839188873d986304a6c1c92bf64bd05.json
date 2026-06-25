@@ -1,0 +1,12 @@
+{
+  "key": "8044847b747b4b1b05968d03b2ebd6e54839188873d986304a6c1c92bf64bd05",
+  "label": "judge:matrix-openai-mcp-tool-governance",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "apps.<id>.tools.<tool>.enabled\nboolean\nPer-tool enabled override for an app tool (for example repos/list).",
+    "lifecycle_status": "active",
+    "rationale": "The page's configuration reference for Codex explicitly describes per-tool allow/deny controls for MCP tools and apps. Specifically, `apps.<id>.tools.<tool>.enabled` provides a per-tool enabled override (allow-listing), `apps.<id>.enabled` enables/disables an entire app/connector, `apps.<id>.default_tools_enabled` sets the default enabled state for all tools in an app, and `apps.<id>.tools.<tool>.approval_mode` controls approval behavior per tool. Additionally, `apps._default.destructive_enabled` and `apps._default.open_world_enabled` further control which categories of MCP tools are permitted. These config keys collectively implement MCP tool governance and allow-listing \u2014 controlling which MCP tools/resources the agent may use. The configuration appears to be generally available (active) with no preview/beta markers on these specific keys.",
+    "supported": true
+  }
+}

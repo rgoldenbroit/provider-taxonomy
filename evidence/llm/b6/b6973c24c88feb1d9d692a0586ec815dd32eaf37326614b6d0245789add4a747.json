@@ -1,0 +1,12 @@
+{
+  "key": "b6973c24c88feb1d9d692a0586ec815dd32eaf37326614b6d0245789add4a747",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is entirely about managing conversations in the Antigravity CLI \u2014 covering workspace scoping, resuming sessions, importing conversations, and forking/branching. It makes no mention whatsoever of prompt/context caching, caching repeated context, latency reduction, or cost reduction. The claim cannot be substantiated from this page.",
+    "supported": false
+  }
+}

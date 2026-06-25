@@ -1,0 +1,12 @@
+{
+  "key": "575dcbc3baf6fe992cda5941e89eeaa6a8d4d1c316beb27ffd7fb253e6cc25f4",
+  "label": "judge:matrix-anthropic-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "kind: 'compact', label: '/compact', tokens: 0, color: '#D97757', vis: 'brief', desc: 'Replaces the conversation with a structured summary. You see a \"Conversation compacted\" message. The summarization happens without appearing in your terminal.', link: '/en/how-claude-code-works#the-context-window'",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a `/compact` command that \"Replaces the conversation with a structured summary,\" which corresponds to manual context compaction. The page also describes automatic compaction behavior (the conversation summary block that survives compaction), demonstrating both manual and auto compaction features. The description explains that this compresses conversation history to extend effective working memory by condensing it into a structured summary while preserving key information.",
+    "supported": true
+  }
+}

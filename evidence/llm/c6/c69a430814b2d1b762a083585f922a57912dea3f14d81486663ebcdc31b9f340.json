@@ -1,0 +1,12 @@
+{
+  "key": "c69a430814b2d1b762a083585f922a57912dea3f14d81486663ebcdc31b9f340",
+  "label": "judge:matrix-google-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about \"Status Line Customization\" for the Antigravity CLI \u2014 covering interactive toggling of status line components, custom scripting configurations, and the JSON payload fields available to status line scripts. It makes no mention whatsoever of \"context compaction,\" whether manual or automatic, nor any feature described as compressing conversation/context to extend effective working memory. Therefore, the page does not substantiate the claim.",
+    "supported": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "9d0fdbc40b6a2ed0fb210600efa54ae5cc7414c34fc3b7569f0eed8c0df24d2b",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is entirely about Authentication for Codex \u2014 covering sign-in methods (ChatGPT login, API keys, access tokens), credential storage, login on headless devices, and custom model provider authentication. There is no mention anywhere on this page of a \"dev container\" integration or running an agent inside a defined dev container or isolated runtime. The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

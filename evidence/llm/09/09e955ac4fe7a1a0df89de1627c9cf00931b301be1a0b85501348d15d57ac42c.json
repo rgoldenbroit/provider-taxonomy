@@ -1,0 +1,12 @@
+{
+  "key": "09e955ac4fe7a1a0df89de1627c9cf00931b301be1a0b85501348d15d57ac42c",
+  "label": "judge:matrix-google-resume-session",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Resume prior development threads, scope active histories to local workspaces, and fork conversations to experiment with alternate architectures. ... You can return to a prior conversation to continue an implementation or refine an existing solution. ... The `/fork` command clones your entire conversation history up to the current turn into a new, independent session.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents both \"Resuming sessions\" (continuing a previous session via `/resume`, `--continue`, or `--conversation`) and \"Branching with `/fork`\" (forking/branching a previous session into a new independent session). This directly substantiates the claim that the offering includes resume/fork session functionality. The page presents these as current, available features with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

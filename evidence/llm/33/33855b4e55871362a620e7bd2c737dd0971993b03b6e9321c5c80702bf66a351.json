@@ -1,0 +1,12 @@
+{
+  "key": "33855b4e55871362a620e7bd2c737dd0971993b03b6e9321c5c80702bf66a351",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page describes the Codex SDK (TypeScript and Python libraries for programmatically controlling local Codex agents), sandbox presets (read_only, workspace_write, full_access), and thread/run concepts. There is no mention anywhere on the page of a \"dev container\" integration or running the agent inside a defined dev container or isolated dev-container runtime. The sandbox presets described are filesystem-level access controls, not dev container definitions. The claim is not substantiated by the page.",
+    "supported": false
+  }
+}
