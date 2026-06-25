@@ -91,7 +91,7 @@ catalog didn't cover were verified directly against each vendor's docs. Each `ev
 documentation page that supports the cell, and `last_verified` is the date it was checked. Status is
 mapped into this file's enum (`beta` → `preview`, `deprecated` → `sunset`).
 
-**91/111 cells are grounded; 20 are honestly `unverified`** — where a provider has no
+**93/111 cells are grounded; 18 are honestly `unverified`** — where a provider has no
 first-party doc for a capability (e.g. Antigravity, a desktop/CLI tool, has no grounded remote-control,
 evals, or cost-tracking node). Those are left blank rather than guessed — honesty over false
 completeness, per the engine's own pitch. (`implementation` may still name a likely in-product feature
@@ -199,18 +199,18 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        notes: No output-style / system-prompt-customization node grounded for Antigravity (behavior is steered via Rules) — verify.
+        implementation: Rules (guide behavior + style)
+        status: active
+        evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md
+        last_verified: '2026-06-25'
+        notes: Steered via Rules (the instruction mechanism), which guide agent behavior and style; no separate output-style preset.
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        notes: No output-style node grounded for Codex beyond custom instruction filenames — verify.
+        implementation: personality / /personality + model_verbosity + instructions
+        status: active
+        evidence_url: https://developers.openai.com/codex/config-reference.md
+        last_verified: '2026-06-25'
+        notes: Dedicated 'personality' setting (per-thread or /personality) + model_verbosity override + model_instructions_file.
   - id: model-selection
     name: Model selection
     what: Choose which underlying model the agent runs on.

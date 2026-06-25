@@ -117,19 +117,19 @@
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No output-style / system-prompt-customization node grounded for Antigravity (behavior is steered via Rules) — verify."
+              "implementation": "Rules (guide behavior + style)",
+              "status": "active",
+              "evidence_url": "https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md",
+              "last_verified": "2026-06-25",
+              "notes": "Steered via Rules (the instruction mechanism), which guide agent behavior and style; no separate output-style preset."
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "notes": "No output-style node grounded for Codex beyond custom instruction filenames — verify."
+              "implementation": "personality / /personality + model_verbosity + instructions",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/config-reference.md",
+              "last_verified": "2026-06-25",
+              "notes": "Dedicated 'personality' setting (per-thread or /personality) + model_verbosity override + model_instructions_file."
             }
           }
         },
