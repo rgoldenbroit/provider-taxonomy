@@ -1,0 +1,426 @@
+# Curated capability taxonomy for the agentic-coding matrix (the "what").
+# Source of truth for ROWS only — provider cells (the "how") are grounded automatically by
+# scripts/build_matrix.py (catalog projection -> official docs -> Tavily). Add a capability
+# here and the pipeline grounds all three provider cells. `hints` feed doc-page filtering +
+# Tavily queries during grounding.
+
+product_category: agentic-coding
+capability_groups:
+- name: Setup & extensibility
+  layer: platform
+  capabilities:
+  - id: project-instruction-file
+    name: Project-scoped instruction file
+    what: A repo file giving the agent standing instructions and context.
+    tier: core
+    hints:
+    - instruction file
+    - CLAUDE.md
+    - AGENTS.md
+    - GEMINI.md
+    - rules
+    - global rules
+    - project memory
+    - context file
+  - id: packaged-extensions
+    name: Packaged reusable extensions
+    what: A way to bundle reusable capabilities/instructions the agent can load.
+    tier: core
+    hints:
+    - skill
+    - plugin
+    - extension
+    - reusable package
+  - id: lifecycle-hooks
+    name: Lifecycle event hooks
+    what: Run custom logic on agent events (e.g. before/after a tool call, on stop).
+    tier: advanced
+    hints:
+    - hook
+    - PreToolUse
+    - PostToolUse
+    - lifecycle hook
+    - stop hook
+    - event hook
+  - id: output-customization
+    name: Output & system-prompt customization
+    what: Shape the agent's system prompt, persona, or output style.
+    tier: advanced
+    hints:
+    - output style
+    - system prompt
+    - personality
+    - tailored system prompt
+    - verbosity
+    - custom instructions
+  - id: model-selection
+    name: Model selection
+    what: Choose which underlying model the agent runs on.
+    tier: core
+    hints:
+    - model selection
+    - /model
+    - choose model
+    - model picker
+    - reasoning model
+    - per-agent model
+- name: Connectors & context
+  layer: platform
+  capabilities:
+  - id: tool-server-protocol
+    name: External tool/connector protocol (MCP)
+    what: A standard way to connect external tools, data, and services.
+    tier: core
+    hints:
+    - MCP
+    - Model Context Protocol
+    - connector
+    - tool server
+    - external tool
+  - id: mcp-server-management
+    name: MCP server management & registry
+    what: Install, configure, scope, and discover MCP servers.
+    tier: core
+    hints:
+    - MCP server
+    - MCP config
+    - MCP installation
+    - MCP scopes
+    - MCP registry
+    - MCP store
+    - MCP transport
+    - managed MCP
+  - id: mcp-authentication
+    name: MCP authentication
+    what: Authenticate to MCP servers (OAuth, tokens).
+    tier: advanced
+    hints:
+    - MCP auth
+    - OAuth MCP
+    - bearer token
+    - MCP login
+    - authentication
+  - id: mcp-tool-governance
+    name: MCP tool governance / allow-listing
+    what: Control which MCP tools/resources the agent may use.
+    tier: advanced
+    hints:
+    - MCP tool allow-listing
+    - server allowlist
+    - denylist
+    - disable MCP
+    - per-tool MCP permission
+    - tool exposure
+  - id: persistent-agent-memory
+    name: Persistent agent memory
+    what: Durable memory the agent keeps across turns/sessions.
+    tier: advanced
+    hints:
+    - memory
+    - MEMORY.md
+    - persistent memory
+    - auto memory
+    - agent memory
+    - remember
+  - id: context-compaction
+    name: Context compaction (manual + auto)
+    what: Compress conversation/context to extend effective working memory.
+    tier: core
+    hints:
+    - compact
+    - compaction
+    - auto-compact
+    - summarize context
+    - context window
+    - token limit
+  - id: prompt-caching
+    name: Prompt / context caching
+    what: Cache repeated context to cut latency and cost.
+    tier: advanced
+    hints:
+    - prompt caching
+    - context caching
+    - cache
+    - prefix cache
+- name: Agents & orchestration
+  layer: user
+  capabilities:
+  - id: subagents
+    name: Subagents / delegated agents
+    what: Spawn focused sub-agents to handle parts of a task.
+    tier: core
+    hints:
+    - subagent
+    - sub-agent
+    - delegate
+    - spawn agent
+    - custom agent
+  - id: agent-teams
+    name: Multi-agent teams & messaging
+    what: Coordinate multiple agents that share work and communicate.
+    tier: advanced
+    hints:
+    - agent team
+    - multi-agent
+    - inter-agent
+    - peer-to-peer
+    - orchestration
+    - hand-off
+    - cross-agent
+  - id: workflows
+    name: Workflows / saved automations
+    what: Define repeatable, named multi-step task sequences.
+    tier: advanced
+    hints:
+    - workflow
+    - saved automation
+    - dynamic workflow
+    - natural-language workflow
+  - id: plan-mode
+    name: Plan-then-execute mode
+    what: Produce a reviewable plan before the agent edits anything.
+    tier: advanced
+    hints:
+    - plan mode
+    - plan approval
+    - plan-then-execute
+    - ultraplan
+    - read-only plan
+  - id: goal-directed-iteration
+    name: Goal-directed autonomous iteration
+    what: Set a verifiable "done" condition; the agent loops on its own until met.
+    tier: core
+    hints:
+    - goal
+    - loop
+    - autonomous
+    - auto mode
+    - routine
+    - iterate
+    - unattended
+  - id: parallel-workspaces
+    name: Parallel isolated workspaces
+    what: Work on multiple branches/copies in parallel without collisions.
+    tier: advanced
+    hints:
+    - worktree
+    - parallel workspace
+    - isolated workspace
+    - git worktree
+- name: Runtime & background
+  layer: platform
+  capabilities:
+  - id: cloud-execution-environment
+    name: Cloud execution environment
+    what: Run the agent in a managed cloud/container environment.
+    tier: advanced
+    hints:
+    - cloud environment
+    - cloud sandbox
+    - hosted runtime
+    - container environment
+    - base image
+    - cloud session
+  - id: background-execution
+    name: Background / async execution
+    what: Run tasks in the background or asynchronously without blocking.
+    tier: advanced
+    hints:
+    - background
+    - async execution
+    - background agent
+    - asynchronous
+    - background task
+  - id: scheduled-runs
+    name: Scheduled / triggered runs
+    what: Run the agent on a schedule or trigger without supervision.
+    tier: advanced
+    hints:
+    - schedule
+    - cron
+    - scheduled task
+    - automation
+    - trigger
+    - routine
+- name: Execution & safety
+  layer: governance
+  capabilities:
+  - id: sandboxing
+    name: Sandboxed execution
+    what: Run agent actions in an isolated environment to limit blast radius.
+    tier: core
+    hints:
+    - sandbox
+    - isolation
+    - container
+    - seatbelt
+    - bubblewrap
+    - sandboxed execution
+  - id: permission-controls
+    name: Tool permission controls
+    what: Approve/deny what the agent is allowed to do.
+    tier: core
+    hints:
+    - permission
+    - allow
+    - ask
+    - deny
+    - approval
+    - approval policy
+    - permission profile
+  - id: network-egress-control
+    name: Network / egress control
+    what: Restrict the agent's outbound network access.
+    tier: advanced
+    hints:
+    - network access
+    - egress
+    - firewall
+    - network isolation
+    - proxy
+    - network rules
+  - id: prompt-injection-protection
+    name: Prompt-injection protection
+    what: Defenses against malicious instructions in tool/web content.
+    tier: advanced
+    hints:
+    - prompt injection
+    - injection
+    - input sanitization
+    - untrusted content
+    - injection flagging
+  - id: security-scanning
+    name: Security scanning / threat model
+    what: Scan code/agent actions for security issues against a threat model.
+    tier: advanced
+    hints:
+    - security scan
+    - threat model
+    - vulnerability
+    - security review
+    - scan rules
+    - commit scanning
+  - id: dev-container-integration
+    name: Dev-container integration
+    what: Run the agent inside a defined dev container / isolated runtime.
+    tier: advanced
+    hints:
+    - dev container
+    - devcontainer
+    - container template
+    - sidecar
+    - reference container
+- name: Quality & ops
+  layer: governance
+  capabilities:
+  - id: audit-logging
+    name: Audit logging / telemetry
+    what: A record of agent actions for review/compliance.
+    tier: advanced
+    hints:
+    - audit
+    - logging
+    - telemetry
+    - OpenTelemetry
+    - tracing
+    - observability
+    - monitoring
+  - id: code-review
+    name: Automated code review
+    what: The agent reviews diffs / PRs for issues before they land.
+    tier: core
+    hints:
+    - code review
+    - PR review
+    - pull request review
+    - AI code review
+    - artifact review
+  - id: cost-usage-tracking
+    name: Cost & usage tracking
+    what: Track and cap token spend / usage.
+    tier: advanced
+    hints:
+    - cost
+    - spend
+    - usage
+    - token accounting
+    - budget
+    - rate limit
+    - spend dashboard
+  - id: evals-testing
+    name: Evals / testing harness
+    what: Run evaluations / test suites against the agent's behavior.
+    tier: advanced
+    hints:
+    - eval
+    - evaluation
+    - testing
+    - test suite
+    - dataset
+    - testing criteria
+  - id: checkpoint-rewind
+    name: Checkpoint / rewind
+    what: Save points you can roll back to, and undo agent changes.
+    tier: core
+    hints:
+    - checkpoint
+    - rewind
+    - undo
+    - rollback
+    - restore
+    - revert
+  - id: resume-session
+    name: Resume / fork session
+    what: Continue or branch a previous session.
+    tier: advanced
+    hints:
+    - resume
+    - fork session
+    - continue session
+    - session handoff
+    - conversation fork
+- name: Remote control & surfaces
+  layer: user
+  capabilities:
+  - id: remote-control
+    name: Remote control (mobile / web)
+    what: Steer or approve agent runs from a phone or remote client.
+    tier: advanced
+    hints:
+    - remote control
+    - mobile app
+    - remote connection
+    - multi-device
+    - QR code
+  - id: notifications
+    name: Notifications
+    what: Push notifications on run progress / completion.
+    tier: advanced
+    hints:
+    - notification
+    - push notification
+    - alert
+    - task completion notification
+  - id: chat-surface-integration
+    name: Chat-surface integration
+    what: Drive the agent from chat/issue tools (Slack, Linear, channels).
+    tier: advanced
+    hints:
+    - Slack
+    - Linear
+    - channel
+    - chat integration
+    - messaging
+    - app integration
+  - id: access-surfaces
+    name: Access surfaces
+    what: 'Where the agent can be used: terminal, IDE, web, cloud, mobile.'
+    tier: advanced
+    hints:
+    - terminal
+    - IDE
+    - web
+    - cloud
+    - mobile
+    - desktop
+    - CLI surface
