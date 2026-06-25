@@ -289,7 +289,6 @@
     <a href="https://github.com/rgoldenbroit/provider-taxonomy" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
     <a href="https://www.linkedin.com/in/russell-goldenbroit" target="_blank" rel="noopener">LinkedIn &#8599;</a>
     <a onclick="selectView('How it works')">How it works</a>
-    <a onclick="selectView('Under the hood')">Under the hood</a>
   </div>
 </footer>
 
@@ -342,7 +341,7 @@ const FLUX_EVENTS = new Set(["consolidation_announced","scope_expanded","related
 const esc = s => (s==null?"":String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const provVar = pr => `var(--${(pr||'').toLowerCase()}, var(--line))`;
 
-/* ---------- header validity (operator metrics now live under "Under the hood") ---------- */
+/* ---------- header validity badge ---------- */
 document.getElementById('asof').textContent = "as of " + (D._meta?.as_of || today);
 if (V.valid) {
   document.getElementById('validpill').innerHTML = `<span class="pill ok">&#10003; valid</span>`;
@@ -472,87 +471,7 @@ function viewExplore(){
   <div id="explore-results">${exploreResultsHtml()}</div>`;
 }
 
-function viewLineage(){
-  const chains = prods.filter(p=>p.successor_id).map(p=>{
-    const seq=[p]; let cur=p; const seen=new Set([p.id]);
-    while(cur.successor_id && prodById[cur.successor_id] && !seen.has(cur.successor_id)){ cur=prodById[cur.successor_id]; seq.push(cur); seen.add(cur.id);} return seq;
-  });
-  let html = `<h3>Rename / sunset / merge lineage</h3><div class="muted small">Old names still resolve to their successor.</div>`;
-  if (!chains.length) html += `<p class="faint small">No rename/merge chains in the current catalog.</p>`;
-  for (const seq of chains){
-    html += `<div class="lineage">` + seq.map((p,i)=>`${i?'<span class="arrow">&rarr;</span>':''}<span class="node" onclick="openDrawer('${p.id}')">${esc(p.name)} ${statusBadge(p)}</span>`).join('') + `</div>`;
-  }
-  const flux = prods.filter(isFlux);
-  html += `<h3 style="margin-top:18px">In flux <span class="faint small">${flux.length}</span></h3>`;
-  html += `<div class="tablewrap"><table><tr><th>product</th><th>provider</th><th>status</th><th>why</th></tr>` +
-    flux.map(p=>{ const why = FLUX_STATUS.has(p.status)?`status ${p.status}`:((p.lifecycle||[]).find(e=>e.date>today)?`future event ${(p.lifecycle.find(e=>e.date>today)).date}`:`event ${(p.lifecycle.find(e=>FLUX_EVENTS.has(e.event))||{}).event}`);
-      return `<tr class="clickable" onclick="openDrawer('${p.id}')"><td>${esc(p.name)}</td><td>${esc(p.provider)}</td><td>${statusBadge(p)}</td><td class="muted small">${esc(why)}</td></tr>`; }).join('') + `</table></div>`;
-  return html;
-}
 
-function viewStaleness(){
-  const all = prods.map(p=>({p, o:stale[p.id]})).filter(r=>r.o!=null).sort((a,b)=>b.o-a.o);
-  const rows = all.slice(0, 25);   // cap: this is a queue, not a dump — show the 25 most-due
-  let html = `<h3>Re-verify queue &mdash; soonest first</h3><div class="muted small">Top 25 of ${all.length} tracked offerings. Re-verify intervals by confidence: high ${APP.intervals.high}d &middot; medium ${APP.intervals.medium}d &middot; low ${APP.intervals.low}d. "today" = ${today}.</div>`;
-  html += `<div class="tablewrap"><table><tr><th>overdue</th><th>offering</th><th>provider</th><th>confidence</th><th>last verified</th></tr>` +
-    rows.map(({p,o})=>`<tr class="clickable" onclick="openDrawer('${p.id}')">
-      <td class="${o>0?'stale':'faint'}">${o>0?('+'+o+'d'):o+'d'}</td>
-      <td>${esc(p.name)}</td><td>${esc(p.provider)}</td>
-      <td>${confDot(p)}${(p.source||{}).confidence||''}</td>
-      <td class="muted small">${esc((p.source||{}).last_verified)}</td></tr>`).join('') + `</table></div>`;
-  return html;
-}
-
-function viewIntake(){
-  const order = ['candidate','needs_review','rejected'];
-  const groups = {}; prods.forEach(p=>{ const r=p.review_status; if(order.includes(r)) (groups[r] ||= []).push(p); });
-  let html = `<h3>Discovery intake</h3><div class="muted small">Discovery lands items here. Triage assigns a capability, sets the scope relation, and promotes to confirmed once the trust gates pass.</div>`;
-  if (!Object.keys(groups).length) html += `<p class="faint small">No items awaiting review.</p>`;
-  for (const r of order){
-    if (!groups[r]) continue;
-    html += `<div class="muted small" style="margin-top:12px">${r.replace('_',' ')} <span class="faint">${groups[r].length}</span></div>`;
-    html += `<div class="tablewrap"><table><tr><th>product</th><th>provider</th><th>primary capability</th><th>confidence</th><th>source</th></tr>` +
-      groups[r].map(p=>`<tr class="clickable" onclick="openDrawer('${p.id}')"><td>${esc(p.name)}</td><td>${esc(p.provider)}</td>
-        <td>${esc(capById[p.primary_capability_id]?.name||p.primary_capability_id)}</td>
-        <td>${confDot(p)}${(p.source||{}).confidence||''}</td>
-        <td><a href="${esc((p.source||{}).url)}" target="_blank" rel="noopener">link</a></td></tr>`).join('') + `</table></div>`;
-  }
-  return html;
-}
-
-function metricsHtml(){
-  return `<div class="metrics">` + [
-    ['schema conformance', M.schema_conformance.toFixed(2)],
-    ['provenance', M.provenance_completeness.toFixed(2)],
-    ['fresh (staleness)', M.staleness_coverage.toFixed(2)],
-    ['stale', M.stale_count],
-    ['review', Object.entries(M.review_status).map(([k,v])=>`${k}:${v}`).join(' ')],
-  ].map(([k,v])=>`<span>${k} <b>${esc(v)}</b></span>`).join('') + `</div>`;
-}
-
-function changelogHtml(){
-  const c = APP.changelog || {};
-  if (!c.date) return '';
-  const total = (c.added||[]).length + (c.removed||[]).length + (c.changed||[]).length;
-  let rows = '';
-  (c.added||[]).forEach(a=>rows+=`<div class="small">&#10133; ${esc(a.name)} <span class="muted">(${esc(a.provider)})</span></div>`);
-  (c.removed||[]).forEach(r=>rows+=`<div class="small">&#10134; ${esc(r.name)} <span class="muted">(${esc(r.provider)})</span></div>`);
-  (c.changed||[]).forEach(ch=>{ const f=Object.entries(ch.fields||{}).map(([k,v])=>`${esc(k)} ${esc(v[0])}&rarr;${esc(v[1])}`).join(', ');
-     rows+=`<div class="small">&#9999;&#65039; ${esc(ch.name)} <span class="muted">(${esc(ch.provider)}) — ${f}</span></div>`; });
-  return `<h3>Last update — ${esc(c.date)} <span class="faint small">${total} change${total===1?'':'s'}</span></h3>
-    <div class="muted small" style="margin-bottom:6px">What the maintenance pass changed since the prior build.</div>
-    <div style="display:grid;gap:3px">${rows || '<div class="faint small">No changes in the last run.</div>'}</div>`;
-}
-
-/* "Under the hood" — operator/trust views consolidated, reframed as proof of rigor */
-function viewUnderHood(){
-  return `<div class="section-intro">How the catalog keeps itself honest. The same trust machinery described in <a onclick="showAbout(event)">How it works</a>, shown live — quantitative metrics, the re-verify queue, the discovery intake, and lifecycle changes.</div>`
-    + changelogHtml()
-    + `<h3 style="margin-top:22px">Trust metrics</h3>` + metricsHtml()
-    + `<div style="margin-top:18px">` + viewStaleness() + `</div>`
-    + `<div style="margin-top:22px">` + viewIntake() + `</div>`
-    + `<div style="margin-top:22px">` + viewLineage() + `</div>`;
-}
 
 /* ---------- Overview: hero + signature coverage matrix ---------- */
 function statusColor(s){
@@ -816,7 +735,7 @@ function openCapability(capId){
 }
 
 /* ---------- nav: four intent-driven sections ---------- */
-const VIEWS = [['Overview',viewOverview],['Explore',viewExplore],['How it works',viewAbout],['Under the hood',viewUnderHood]];
+const VIEWS = [['Overview',viewOverview],['Explore',viewExplore],['How it works',viewAbout]];
 const nav = document.getElementById('nav');
 const navButtons = {};
 VIEWS.forEach(([label,fn])=>{ const btn=document.createElement('button'); btn.textContent=label;
