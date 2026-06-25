@@ -58,6 +58,16 @@ MATRIX_DOC_HOSTS = {
 _BAD_SUBDOMAINS = {"discuss", "community", "blog", "forum", "support", "status"}
 
 
+_BINARY_EXT = (".pdf", ".zip", ".gz", ".tar", ".png", ".jpg", ".jpeg", ".gif", ".svg",
+               ".mp4", ".mov", ".woff", ".woff2", ".ico", ".webp", ".bin")
+MAX_PAGE_CHARS = 1_000_000  # never ground against (or cache) a page bigger than this — guards against PDF/asset blobs
+
+
+def _texty(url):
+    u = (url or "").lower().split("?")[0].split("#")[0]
+    return not u.endswith(_BINARY_EXT)
+
+
 def _is_doc_host(url, pkey):
     from urllib.parse import urlparse
     u = urlparse(url or "")
@@ -214,6 +224,8 @@ def stage_b(llm, pkey, product, hints, cap_id, cap_name, cap_what):
         pages = relevant_doc_pages(doc_cfg, hints, limit=8)
     except Exception:  # doc surface fetch failed — let Stage C try
         return None
+    # never ground against binary (PDF/asset) or oversized pages — they bloat the ledger and aren't doc text
+    pages = [p for p in (pages or []) if _texty(p.url) and len(p.text or "") <= MAX_PAGE_CHARS]
     if not pages:
         return None
     cached = CachedPages(pages)
@@ -235,7 +247,7 @@ def stage_c(llm, retrieval, pkey, product, cap_id, cap_name, cap_what):
     except (NotImplementedError, Exception):
         return None
     for r in results[:6]:
-        if not _is_doc_host(r.url, pkey):   # first-party doc hosts only — no forums/blogs/other products
+        if not _is_doc_host(r.url, pkey) or not _texty(r.url):   # first-party doc hosts only; no binary blobs
             continue
         try:
             judge = _ground_url(llm, retrieval, pkey, cap_id, cap_name, cap_what, r.url)
