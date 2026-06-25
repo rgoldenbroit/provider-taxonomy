@@ -13,7 +13,7 @@ dependencies = []
 # Live Vertex AI Claude + source fetching. AnthropicVertex needs only google-auth
 # (bundled in anthropic[vertex]); the heavy google-cloud-aiplatform isn't required.
 vertex = ["anthropic[vertex]>=0.40", "httpx>=0.27"]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "pyyaml>=6"]   # pyyaml: used only by scripts/validate_matrix.py
 
 [project.scripts]
 taxo = "taxonomy.cli:main"
