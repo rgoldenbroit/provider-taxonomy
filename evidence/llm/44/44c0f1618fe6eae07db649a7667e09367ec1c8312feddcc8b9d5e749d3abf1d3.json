@@ -1,0 +1,9 @@
+{
+  "key": "44c0f1618fe6eae07db649a7667e09367ec1c8312feddcc8b9d5e749d3abf1d3",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Enables or disables outbound network access for an agent, with the option to restrict it to a specific allowlist of domains. Configured as a setting on the agent to control what external endpoints it can reach during execution.",
+    "label": "Network Access Control"
+  }
+}

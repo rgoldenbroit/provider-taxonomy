@@ -1,0 +1,12 @@
+{
+  "key": "5eb2649fcef3e38bfe5eabdecc951af015073561fb90fadc25986821e1701388",
+  "label": "judge:matrix-google-security-scanning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Prompt injection detection: opt-in screenshot scanning to detect hidden adversarial instructions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page describes Google's Computer Use tool for the Gemini API, which includes \"Prompt injection detection\" (opt-in screenshot scanning to detect hidden adversarial instructions) and \"Configurable safety policies\" with built-in policy categories. However, the claim specifically describes \"Security scanning / threat model (Scan code/agent actions for security issues against a threat model)\" \u2014 this is a distinct concept involving scanning code or agent actions against a defined threat model. The page does not mention anything about scanning code or agent actions against a threat model. The closest feature is prompt injection detection (scanning screenshots for adversarial instructions), which is materially different from threat-model-based security scanning of code/agent actions. Therefore, the specific claim is not substantiated by the page.",
+    "supported": false
+  }
+}

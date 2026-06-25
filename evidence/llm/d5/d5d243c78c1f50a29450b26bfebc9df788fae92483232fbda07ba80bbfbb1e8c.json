@@ -1,0 +1,9 @@
+{
+  "key": "d5d243c78c1f50a29450b26bfebc9df788fae92483232fbda07ba80bbfbb1e8c",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code exports metrics, events, and traces via OpenTelemetry to any OTLP-compatible backend (e.g. Jaeger, Datadog, Honeycomb). Developers configure the target endpoint to capture a full record of agent actions for observability and compliance review.",
+    "label": "OpenTelemetry Monitoring"
+  }
+}

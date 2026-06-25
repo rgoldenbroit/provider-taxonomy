@@ -1,0 +1,9 @@
+{
+  "key": "e5011088e9be6864efca2bd357421d9566a286a2e51f4a43f9d93e4e30df27af",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI's Evals API lets you programmatically define evaluation criteria, run test suites against model outputs at scale, and score results using external models as graders. You configure eval runs via API calls, making it easy to integrate automated testing into CI pipelines or batch workflows.",
+    "label": "Evals API"
+  }
+}

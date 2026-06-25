@@ -1,0 +1,9 @@
+{
+  "key": "9c178655151aa257e5792fb22103776db0778b7a9f20de85e83bf103c5a3e316",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The Antigravity CLI tracks AI credit consumption in real time via a statusline indicator showing remaining credits, and alerts you when quota runs low. You can view detailed usage stats with `/credits`, and use `/config` or `/settings` to toggle whether personal credits are used as a fallback once plan quotas are exhausted.",
+    "label": "/credits"
+  }
+}

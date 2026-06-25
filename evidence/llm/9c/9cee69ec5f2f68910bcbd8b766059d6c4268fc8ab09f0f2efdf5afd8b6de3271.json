@@ -1,0 +1,9 @@
+{
+  "key": "9cee69ec5f2f68910bcbd8b766059d6c4268fc8ab09f0f2efdf5afd8b6de3271",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code defends against malicious text embedded in tool outputs or web content attempting to override its instructions, using context-aware analysis, input sanitization, and isolated execution contexts. These safeguards are built into Claude Code specifically to prevent hijacking via untrusted external content.",
+    "label": "Prompt Injection Protection"
+  }
+}

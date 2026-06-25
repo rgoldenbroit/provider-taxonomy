@@ -1,0 +1,9 @@
+{
+  "key": "3d51d238a5c7348aefb80d9b3e6f2c20031d2beafaab8e433fa97975339c87fb",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A designated orchestrator agent (e.g., a Project Manager agent) breaks work into subtasks and hands them off to specialized sub-agents using the Agents SDK. Agents communicate via handoffs, with the orchestrator routing results and coordinating the overall workflow.",
+    "label": "Multi-agent orchestration"
+  }
+}

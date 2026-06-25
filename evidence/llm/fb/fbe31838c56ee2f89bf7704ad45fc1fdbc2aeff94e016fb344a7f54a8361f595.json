@@ -1,0 +1,9 @@
+{
+  "key": "fbe31838c56ee2f89bf7704ad45fc1fdbc2aeff94e016fb344a7f54a8361f595",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic's Agent Lifecycle Hooks let you register custom logic that fires on specific agent events: when the agent goes idle, when a task is created, or when a task completes. This is typically used for quality-gate checks or side-effects tied to agent state transitions.",
+    "label": "Agent Lifecycle Hooks"
+  }
+}

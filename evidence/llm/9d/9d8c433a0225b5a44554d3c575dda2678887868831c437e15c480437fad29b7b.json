@@ -1,0 +1,9 @@
+{
+  "key": "9d8c433a0225b5a44554d3c575dda2678887868831c437e15c480437fad29b7b",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code tasks run on Anthropic-managed cloud infrastructure in isolated, fresh VMs per session, launchable from a browser or phone. Sessions continue running after disconnection and can be monitored remotely.",
+    "label": "Claude Code on the Web"
+  }
+}

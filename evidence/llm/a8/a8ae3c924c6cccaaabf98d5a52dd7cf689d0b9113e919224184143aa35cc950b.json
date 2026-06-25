@@ -1,0 +1,9 @@
+{
+  "key": "a8ae3c924c6cccaaabf98d5a52dd7cf689d0b9113e919224184143aa35cc950b",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Antigravity (Google's editor) supports the Model Context Protocol, letting you connect the editor to local tools, databases, and external services. Both local process and remote host configurations are supported for secure tool connectivity.",
+    "label": "MCP Integration"
+  }
+}

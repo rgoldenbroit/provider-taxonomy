@@ -132,6 +132,30 @@ CONFIRM_SCHEMA = {
         "properties": {"capability_id": {"type": "string"}, "realizes": {"type": "boolean"},
                        "reason": {"type": "string"}}}}}}
 
+DESCRIBE_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["label", "description"],
+    "properties": {"label": {"type": "string"}, "description": {"type": "string"}}}
+DESCRIBE_SYSTEM = (
+    "You fill one cell of a capability-comparison matrix from a provider's OWN documentation. Given a "
+    "neutral capability and evidence quoted from the provider's official docs, return:\n"
+    "• label — the provider's ACTUAL name for the feature, as a user would say it (e.g. '/goal', "
+    "'Plugins', 'Agent Teams', 'AGENTS.md', 'Sandbox modes'). Short: a name or command, not a sentence. "
+    "If the docs describe the behaviour but name no specific feature, give a short plain label.\n"
+    "• description — 1-2 plain, concrete sentences on what THIS provider's feature does and how you use "
+    "it, for a developer skimming a comparison. No marketing, no meta-talk about docs/grounding, no "
+    "verbatim quoting. Specific to this provider."
+)
+
+
+def describe(llm, pkey, cap_name, cap_what, evidence):
+    """Return (short vendor label, plain-language description) for a grounded cell, from its evidence."""
+    out = llm.structured(
+        system=DESCRIBE_SYSTEM,
+        prompt=(f"PROVIDER: {PNAME[pkey]}\nCAPABILITY (neutral): {cap_name} — {cap_what}\n\n"
+                f"EVIDENCE FROM {PNAME[pkey]}'S OFFICIAL DOCS:\n{(evidence or '')[:4000]}"),
+        schema=DESCRIBE_SCHEMA, label=f"matrixdesc:{pkey}")
+    return (out.get("label") or "").strip(), (out.get("description") or "").strip()
+
 
 def descendants(products_by_parent, root):
     out, stack = [], list(products_by_parent.get(root, []))
@@ -186,35 +210,46 @@ def confirm_provider(llm, pkey, pname, pairs):
     return {c["capability_id"]: bool(c["realizes"]) for c in out.get("confirmations", [])}
 
 
-def build_cell(pkey, pname, product, mapping, feats):
+def _unverified_cell(product):
+    return {"offering": product, "implementation": "unverified", "status": "unverified",
+            "evidence_url": "", "last_verified": "",
+            "description": "No first-party documentation found for this capability — left unverified rather than guessed.",
+            "notes": ""}
+
+
+def build_cell(llm, pkey, product, cap, mapping, feats):
+    """Stage A: a cell projected from a grounded catalog feature, with a vendor label + plain description."""
     if not mapping or not mapping.get("matched") or not (1 <= mapping.get("feature_index", 0) <= len(feats)):
-        return {"offering": product, "implementation": "unverified", "status": "unverified",
-                "evidence_url": "", "last_verified": "",
-                "notes": "No first-party documentation found for this capability — left unverified rather than guessed."}
+        return _unverified_cell(product)
     f = feats[mapping["feature_index"] - 1]
     src = f.get("source") or {}
+    label, desc = describe(llm, pkey, cap["name"], cap["what"], f["name"] + " — " + (f.get("scope_note") or ""))
     return {"offering": product,
-            "implementation": (mapping.get("implementation") or f["name"])[:120],
+            "implementation": (label or f["name"])[:80],
             "status": STATUS_MAP.get(f.get("status", "active"), "active"),
             "evidence_url": src.get("url", ""),
             "last_verified": src.get("last_verified", ""),
-            "notes": f"Catalog-grounded via \"{f['name']}\"."}
+            "description": desc, "notes": ""}
 
 
 def _ground_url(llm, retrieval, pkey, cap_id, cap_name, cap_what, url):
-    """Judge whether the page at `url` supports '<provider> offers <capability>'. Returns judge dict or None."""
+    """Judge whether the page at `url` supports '<provider> offers <capability>'. Returns (judge, page_text) or (None, '')."""
     rec = {"id": f"matrix-{pkey}-{_slug(cap_id)}", "provider": PNAME[pkey], "name": cap_name,
            "scope_note": cap_what, "source": {"url": url}}
     page, judge = _judge_grounding(rec, retrieval, llm)
-    return judge if (judge and grounding_gate(rec, page, judge).passed) else None
+    if judge and grounding_gate(rec, page, judge).passed:
+        return judge, (page.text if page else "")
+    return None, ""
 
 
-def _cell_from_judge(pkey, product, url, judge):
+def _grounded_cell(llm, pkey, product, cap_name, cap_what, url, judge, page_text):
+    """A Stage B/C cell: ground + describe (vendor label + plain description) from the doc page."""
+    label, desc = describe(llm, pkey, cap_name, cap_what, page_text or judge.get("found_quote", ""))
     return {"offering": product,
+            "implementation": (label or cap_name)[:80],
             "status": LIFECYCLE_MAP.get(judge.get("lifecycle_status", "active"), "active"),
             "evidence_url": url, "last_verified": AS_OF,
-            "confidence": derive_confidence(source_tier(url, PNAME[pkey])),
-            "quote": (judge.get("found_quote") or "")[:160]}
+            "description": desc, "notes": ""}
 
 
 def stage_b(llm, pkey, product, hints, cap_id, cap_name, cap_what):
@@ -231,11 +266,11 @@ def stage_b(llm, pkey, product, hints, cap_id, cap_name, cap_what):
     cached = CachedPages(pages)
     for pg in pages[:4]:
         try:
-            judge = _ground_url(llm, cached, pkey, cap_id, cap_name, cap_what, pg.url)
+            judge, ptext = _ground_url(llm, cached, pkey, cap_id, cap_name, cap_what, pg.url)
         except Exception:  # one bad page must not abort the cell
             continue
         if judge:
-            return _cell_from_judge(pkey, product, pg.url, judge)
+            return _grounded_cell(llm, pkey, product, cap_name, cap_what, pg.url, judge, ptext)
     return None
 
 
@@ -250,11 +285,11 @@ def stage_c(llm, retrieval, pkey, product, cap_id, cap_name, cap_what):
         if not _is_doc_host(r.url, pkey) or not _texty(r.url):   # first-party doc hosts only; no binary blobs
             continue
         try:
-            judge = _ground_url(llm, retrieval, pkey, cap_id, cap_name, cap_what, r.url)
+            judge, ptext = _ground_url(llm, retrieval, pkey, cap_id, cap_name, cap_what, r.url)
         except Exception:
             continue
         if judge:
-            return _cell_from_judge(pkey, product, r.url, judge)
+            return _grounded_cell(llm, pkey, product, cap_name, cap_what, r.url, judge, ptext)
     return None
 
 
@@ -298,7 +333,7 @@ def main() -> int:
             cell_providers = {}
             for pkey, pname, product, _ in PROVIDERS:
                 mp, feats = mappings[pkey]
-                cell = build_cell(pkey, pname, product, mp.get(c["id"]), feats)
+                cell = build_cell(llm, pkey, product, c, mp.get(c["id"]), feats)
                 if cell["status"] != "unverified":
                     by_stage["A"] += 1
                 else:
@@ -314,10 +349,7 @@ def main() -> int:
                     except Exception as exc:  # one cell's grounding must not abort the build
                         print(f"    grounding error {c['id']}/{pkey}: {type(exc).__name__}", file=sys.stderr)
                     if bc:
-                        cell = {"offering": product, "implementation": c["name"], "status": bc["status"],
-                                "evidence_url": bc["evidence_url"], "last_verified": bc["last_verified"],
-                                "notes": (f"Grounded against official docs: “{bc['quote']}”"
-                                          if bc.get("quote") else "Grounded against official docs.")}
+                        cell = bc            # already a full cell (vendor label + plain description)
                         by_stage[stg] += 1
                     else:
                         by_stage["unverified"] += 1

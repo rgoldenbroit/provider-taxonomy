@@ -1,0 +1,9 @@
+{
+  "key": "a87832f36a2564db7e2c5e5875c4517fa23aff00b9a2ef338f63fd9dff09360d",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code saves every conversation as a local transcript, letting you resume the most recent session with `--continue`, pick any past session via `--resume` (opens an interactive picker), or resume by name, session ID, or linked PR number with `--resume <name|id>` or `--from-pr <number>`. From inside an active session, `/resume` lets you switch to a different conversation or branch it to try a different approach.",
+    "label": "--continue / --resume / /resume"
+  }
+}

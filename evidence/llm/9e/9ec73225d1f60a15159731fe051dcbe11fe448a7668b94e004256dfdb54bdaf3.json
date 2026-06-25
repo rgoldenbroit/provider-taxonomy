@@ -1,0 +1,9 @@
+{
+  "key": "9ec73225d1f60a15159731fe051dcbe11fe448a7668b94e004256dfdb54bdaf3",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Google's Background Tasks let agents run long-running operations asynchronously without blocking the primary agent flow. Tasks are tracked, so the agent can monitor their status and retrieve results when complete.",
+    "label": "Background Tasks"
+  }
+}

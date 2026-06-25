@@ -1,0 +1,9 @@
+{
+  "key": "abbd99231e93dc6053d24665f910316b2b71fd213a02ba7a7f2943fc9660cf31",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude agents can be run in separate Git worktrees so each parallel agent operates on its own checkout of the repository. This prevents file conflicts when multiple agents work simultaneously on different tasks or branches.",
+    "label": "Worktree Isolation"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "9eebf84ceb409c42ade504046d60f13824833a761b93c6653dc966897d725cb1",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "In Google's Gemini CLI (Agentspace/Antigravity), Lifecycle Hooks let you run custom local shell scripts or commands at specific points in the agent's execution loop (e.g., before/after tool calls). Hooks communicate with the agent via a JSON stdin/stdout contract, allowing custom logic to inspect or influence agent behavior at each lifecycle stage.",
+    "label": "Lifecycle Hooks"
+  }
+}

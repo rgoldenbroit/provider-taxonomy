@@ -1,0 +1,9 @@
+{
+  "key": "cba98fb0e3adc8bec48fb184d2931f246db3c39226c2eede8a34325b397bc312",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The Agents SDK automatically records every model call, tool call, handoff, guardrail check, and custom span for each agent run as a structured trace. These traces are viewable in the OpenAI traces dashboard for debugging, review, and compliance purposes.",
+    "label": "Built-in Tracing"
+  }
+}

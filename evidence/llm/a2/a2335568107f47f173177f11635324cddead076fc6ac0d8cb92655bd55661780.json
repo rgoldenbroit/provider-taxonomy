@@ -1,0 +1,9 @@
+{
+  "key": "a2335568107f47f173177f11635324cddead076fc6ac0d8cb92655bd55661780",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A security-review plugin and cloud service that scans repositories for vulnerabilities, validates findings, and delivers remediation guidance. It integrates with Codex to automatically audit code changes and agent-generated output against known security issues.",
+    "label": "Codex Security"
+  }
+}

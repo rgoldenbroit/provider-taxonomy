@@ -1,0 +1,9 @@
+{
+  "key": "01a3834bcf5092d0a4bdb07fd2975bbaaff6bbd862ab597160725593042234b7",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code generates a JavaScript script that orchestrates dozens to hundreds of subagents for a described task; the script is saved and can be rerun independently of any conversation. The orchestration logic (loops, branching, intermediate results) lives in the script rather than Claude's context, making it suitable for large-scale repeatable tasks like codebase migrations or multi-source research.",
+    "label": "Dynamic Workflows"
+  }
+}

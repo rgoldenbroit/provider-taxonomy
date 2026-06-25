@@ -1,0 +1,9 @@
+{
+  "key": "f894b5f4e18707fc81c303c63f0fc62e5f2223cfccc249896da8632b754cb140",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude's Plan Mode lets the agent research a task and propose a set of changes without writing, editing, or executing anything. The developer reviews the plan and chooses whether to proceed before any modifications are made.",
+    "label": "Plan Mode"
+  }
+}

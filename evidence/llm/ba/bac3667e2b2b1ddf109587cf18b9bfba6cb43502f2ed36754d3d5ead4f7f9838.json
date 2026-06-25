@@ -1,0 +1,9 @@
+{
+  "key": "bac3667e2b2b1ddf109587cf18b9bfba6cb43502f2ed36754d3d5ead4f7f9838",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Separately controls outbound network connectivity for sandboxed commands, independent of any filesystem restrictions in place. This lets developers lock down or permit egress on a per-sandbox basis without affecting file access policies.",
+    "label": "Independent Network Access Control"
+  }
+}

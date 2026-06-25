@@ -1,0 +1,9 @@
+{
+  "key": "b0efaf74a722ddd19d27fcfefad8bb25edfcb7bf5e1febc78685c536e44f9d93",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Allows resuming an active Codex session from any signed-in device, so work can continue seamlessly across machines. The session state is preserved and picked up where it left off on the new device.",
+    "label": "Multi-Device Session Handoff"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "20ab4345e98358b0b3c9a81df21180a8f0516159b3bee5c69c6e0a8841a3ab9e",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A firewall script restricts the agent's outbound network traffic to only explicitly allow-listed domains, blocking all other egress by default. Developers configure the allowed domains in the script to control what external endpoints the agent can reach.",
+    "label": "Egress Firewall Control"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "fae52dc7aed9d96eb523ec659efefaa44531d8f8b96442c78945d21e35521ae4",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "An in-session plugin that instructs Claude to review its own generated code changes for security vulnerabilities across both deterministic (rule-based) and model-backed analysis layers. Identified issues are fixed within the same session, without requiring a separate scanning step.",
+    "label": "Security Guidance Plugin"
+  }
+}

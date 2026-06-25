@@ -1,0 +1,9 @@
+{
+  "key": "f055b5a2d08c07d58f7655e653bf3910ef947848f2a2c4b312f0a4a38a23e5a1",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "In Claude Code, you set the `model` config to either a convenient alias (e.g. `best`, `sonnet`, `opus`, `haiku`, `opusplan`) or a full model name/ARN/deployment depending on your provider. Aliases like `opusplan` can even switch models mid-task\u2014using Opus during planning and Sonnet during execution\u2014and automatically track the recommended version over time, or you can pin to an exact version.",
+    "label": "Model aliases / `model` setting"
+  }
+}

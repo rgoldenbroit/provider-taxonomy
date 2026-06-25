@@ -1,0 +1,9 @@
+{
+  "key": "97fe33a476b5505fbca59bc407d1f7536b9d73fcda11132b170bfe6adc09c5ca",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI supports standalone automations that run on a schedule independently of any conversation thread. Users define a task with a schedule, and it executes in the background without requiring an active session or user prompt.",
+    "label": "Scheduled Tasks"
+  }
+}

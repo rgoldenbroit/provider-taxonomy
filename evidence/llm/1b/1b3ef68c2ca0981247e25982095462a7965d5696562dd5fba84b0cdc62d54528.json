@@ -1,0 +1,9 @@
+{
+  "key": "1b3ef68c2ca0981247e25982095462a7965d5696562dd5fba84b0cdc62d54528",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI's Agents SDK includes a Guardrails system that lets developers define checks on inputs and outputs to defend against prompt injection and other malicious content from tools or web sources. Guardrails run alongside agent execution and can block or flag unsafe instructions before they influence agent behavior.",
+    "label": "Guardrails"
+  }
+}

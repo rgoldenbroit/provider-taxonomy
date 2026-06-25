@@ -1,0 +1,9 @@
+{
+  "key": "841d165410b1db024b9dc62cb5efc1d3218c8bbf3aa07527bd3cf17cc9bf7a59",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Saved Markdown configuration files that modify Claude's system prompt to adjust its persona, tone, or response format. Styles can be defined once and reapplied across multiple sessions without re-entering instructions each time.",
+    "label": "Output Styles"
+  }
+}

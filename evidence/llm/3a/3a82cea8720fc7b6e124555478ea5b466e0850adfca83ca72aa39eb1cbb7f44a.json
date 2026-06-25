@@ -1,0 +1,9 @@
+{
+  "key": "3a82cea8720fc7b6e124555478ea5b466e0850adfca83ca72aa39eb1cbb7f44a",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Approval Policy lets you define when Codex must pause and request user confirmation before performing actions that cross sandbox boundaries, such as making network requests or writing outside the sandbox. You configure this policy to automatically allow, deny, or prompt for specific categories of actions.",
+    "label": "Approval Policy"
+  }
+}

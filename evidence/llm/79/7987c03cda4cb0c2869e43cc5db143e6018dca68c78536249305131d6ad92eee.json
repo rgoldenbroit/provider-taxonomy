@@ -1,0 +1,9 @@
+{
+  "key": "7987c03cda4cb0c2869e43cc5db143e6018dca68c78536249305131d6ad92eee",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic lets you define granular permission rules controlling exactly which MCP tools a Claude agent is allowed to invoke, including wildcard patterns to cover groups of tools. Permissions are specified per MCP server/tool, restricting the agent from calling anything not explicitly permitted.",
+    "label": "MCP Tool Allow-listing"
+  }
+}

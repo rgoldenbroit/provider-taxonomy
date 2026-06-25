@@ -1,0 +1,9 @@
+{
+  "key": "86fd4098295ec7fec4e7098eb6ff675c30ca2d370bf028ddff2d81e8f64e3e95",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Plugins are namespaced bundles that package together skills, rules, MCP servers, and hooks into a single reusable unit. You load them into an agent to extend its capabilities without rebuilding those components from scratch.",
+    "label": "Plugins"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "3e09031a682984127156a5c053f52cb26deb04fb52a31553fc65827a3d96a4d4",
+  "label": "judge:matrix-openai-plan-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "These plans are thorough design documents, and \"living documents\". As a user of Codex, you can use these documents to verify the approach that Codex will take before it begins a long implementation process.",
+    "lifecycle_status": "active",
+    "rationale": "The page describes a \"Plan-then-execute\" mode under the name \"ExecPlan\" (Execution Plans) within OpenAI's Codex. It explicitly instructs users to create a thorough design/plan document (PLANS.md) that Codex will follow, and states that users can \"verify the approach that Codex will take before it begins a long implementation process.\" This directly substantiates the claim that OpenAI offers a mode where a reviewable plan is produced before the agent edits anything. The feature appears to be actively documented and available.",
+    "supported": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "c1cb1dd93d70e663f03533dd281ea0c0ac1aaca05549ef87df530b36e1bff895",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex provides a CLI command (`codex mcp add`) to install and configure MCP servers for use within the Codex agent. Servers are managed locally via the CLI, scoping them to the Codex environment without a separate GUI registry.",
+    "label": "codex mcp add"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "db461e94c949153f06ba248ba087975950417fffa648459865c6ab4a44241d3a",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code connects to external tools, data sources, and services using the open-source MCP standard. You configure MCP servers that run locally or as hosted services, and Claude can then invoke them during a session.",
+    "label": "Model Context Protocol (MCP)"
+  }
+}

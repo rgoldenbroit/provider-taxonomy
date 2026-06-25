@@ -1,0 +1,9 @@
+{
+  "key": "456d03cc40ea061d2ba98097d3e12482910aa0f978aa83dd10e702572152811c",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A markdown file placed in a repository that gives the Codex agent standing instructions, project-specific conventions, and context scoped to that repo. It layers on top of any global AGENTS.md defaults, letting teams encode norms like coding style, test commands, or workflow rules directly in the codebase.",
+    "label": "AGENTS.md"
+  }
+}

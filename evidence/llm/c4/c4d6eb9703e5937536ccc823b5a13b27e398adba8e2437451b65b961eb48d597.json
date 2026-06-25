@@ -1,0 +1,9 @@
+{
+  "key": "c4d6eb9703e5937536ccc823b5a13b27e398adba8e2437451b65b961eb48d597",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "In Claude Code, `/goal` sets a verifiable completion condition for the current session; after each turn, a separate lightweight model checks whether the condition is met, and if not, Claude automatically starts the next turn without user input. The goal clears itself once satisfied, and can be combined with auto mode (which handles per-tool approvals) for fully autonomous multi-turn execution.",
+    "label": "/goal"
+  }
+}

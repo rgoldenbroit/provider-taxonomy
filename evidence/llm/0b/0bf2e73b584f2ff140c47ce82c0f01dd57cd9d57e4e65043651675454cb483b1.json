@@ -1,0 +1,9 @@
+{
+  "key": "0bf2e73b584f2ff140c47ce82c0f01dd57cd9d57e4e65043651675454cb483b1",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code's Remote Control feature lets you connect to an active agent session running on your local machine from a phone, tablet, or browser. From the remote client you can monitor progress and steer the session in real time without being physically at the machine.",
+    "label": "Remote Control"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "b65556e805f75cd63fed57eb441ec8332db3ae612bfe89e89280038e4a182841",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The provided Google/Antigravity CLI documentation contains no mention of push notifications for run progress or completion. No such feature is described in the official docs.",
+    "label": "Not supported"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "d5052eae6f7cf6016dc65f1d7ef5c842c2a463327d18c62f541c9be55516b826",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Agents are granted access to individual, named tools on a specific MCP server rather than the entire server, letting developers explicitly allow-list only the tools an agent may call. This is configured per-agent by specifying the MCP server and the exact tool name to permit.",
+    "label": "Per-Tool MCP Permission"
+  }
+}

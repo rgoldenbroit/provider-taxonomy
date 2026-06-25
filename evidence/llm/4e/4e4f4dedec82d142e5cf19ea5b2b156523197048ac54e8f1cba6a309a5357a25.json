@@ -1,0 +1,9 @@
+{
+  "key": "4e4f4dedec82d142e5cf19ea5b2b156523197048ac54e8f1cba6a309a5357a25",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code uses a tiered permission system that classifies tools into categories requiring different levels of approval (allow/ask/deny), evaluated in deny-then-ask-then-allow order. Developers configure rules per tool to either auto-approve safe actions, prompt the user for confirmation, or block tools entirely.",
+    "label": "Permission System"
+  }
+}

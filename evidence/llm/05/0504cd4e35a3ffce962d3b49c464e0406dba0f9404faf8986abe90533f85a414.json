@@ -1,0 +1,9 @@
+{
+  "key": "0504cd4e35a3ffce962d3b49c464e0406dba0f9404faf8986abe90533f85a414",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Each agent can be assigned its own specific model (e.g., GPT-4o, o3-mini) at creation time, either letting the SDK auto-select or explicitly pinning a model. Different agents in the same workflow can run on different underlying models simultaneously.",
+    "label": "Per-Agent Model Selection"
+  }
+}

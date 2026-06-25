@@ -1,0 +1,9 @@
+{
+  "key": "138e68767feb58421c17ff934c3824b02b120d1adb723499f39fde1d933e54d4",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Markdown files saved in the project that define a named, repeatable sequence of steps for the agent to follow. The agent executes these steps consistently across sessions, enabling reusable automation of multi-step tasks.",
+    "label": "Workflows"
+  }
+}

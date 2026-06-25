@@ -1,0 +1,9 @@
+{
+  "key": "177f927e2bedf08323533ee818df71f4188ed4ec6ab5125dc4157b786b3946e5",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code's `/compact` command summarizes the current conversation into a compressed form to free up context window space, allowing longer sessions without hitting the 200K token limit. It can be run manually at any time, and certain startup content (like skill descriptions) is selectively re-injected or dropped after compaction based on what was actually used.",
+    "label": "/compact"
+  }
+}

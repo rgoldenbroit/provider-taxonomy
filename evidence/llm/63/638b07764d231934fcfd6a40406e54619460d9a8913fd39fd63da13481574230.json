@@ -1,0 +1,9 @@
+{
+  "key": "638b07764d231934fcfd6a40406e54619460d9a8913fd39fd63da13481574230",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex runs agent commands inside an OS-native constrained environment that restricts machine access, supported on macOS, Linux, WSL2, and Windows. This limits what the agent can affect on the host system while still allowing autonomous local command execution.",
+    "label": "Sandbox"
+  }
+}

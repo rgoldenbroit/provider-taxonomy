@@ -1,0 +1,9 @@
+{
+  "key": "e1a2cc528871a996302239f928d10f93c9c0cf4b4bd72f42da5d57639c5b5951",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Agent terminal commands run inside a kernel-level, OS-isolated sandbox that restricts what the agent can access or modify on the host. Access beyond the sandbox boundary requires explicit permission grants from the user.",
+    "label": "Terminal Sandboxing"
+  }
+}

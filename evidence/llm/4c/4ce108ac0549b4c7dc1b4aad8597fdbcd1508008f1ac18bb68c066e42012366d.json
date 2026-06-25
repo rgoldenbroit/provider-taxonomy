@@ -1,0 +1,9 @@
+{
+  "key": "4ce108ac0549b4c7dc1b4aad8597fdbcd1508008f1ac18bb68c066e42012366d",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI's Codex/Agents SDK provides a dedicated \"Compaction\" feature under Context Management that compresses conversation history to extend the effective working memory within a session. Developers access it via the Context Management section of the SDK/CLI to manage and reduce token usage when conversations grow long.",
+    "label": "Compaction"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "f6a66221797452a89462a18aa8a5485933d326f4b727efd69786c0aa3aa7635d",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A plugin is a self-contained directory bundling reusable components\u2014skills (slash-command shortcuts), subagents, hooks, MCP servers, and more\u2014that extend Claude Code. You install a plugin and its components are automatically discovered; skills become invokable via `/name` commands, and agents appear in the `/agents` interface for manual or automatic invocation.",
+    "label": "Plugins"
+  }
+}

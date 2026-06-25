@@ -1,0 +1,9 @@
+{
+  "key": "378d78da1439aa94b3ee5c2d97f58838441f6e664659526f416d663810acedad",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code automatically caches the full request prefix (system prompt, project context, conversation history) between turns so only new content is reprocessed each turn, reducing latency and cost. The cache uses exact prefix matching, so actions like switching models, running `/compact`, or editing CLAUDE.md mid-session invalidate the cache and trigger a full reprocess on the next turn.",
+    "label": "Prompt Caching (automatic)"
+  }
+}

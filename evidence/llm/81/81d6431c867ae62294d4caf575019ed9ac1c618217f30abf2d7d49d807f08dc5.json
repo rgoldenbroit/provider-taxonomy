@@ -1,0 +1,9 @@
+{
+  "key": "81d6431c867ae62294d4caf575019ed9ac1c618217f30abf2d7d49d807f08dc5",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A multi-agent pipeline that analyzes pull request diffs to surface logic errors, security vulnerabilities, and regressions before merging. Behavior is configurable through per-repository instruction files.",
+    "label": "Automated PR Code Review"
+  }
+}

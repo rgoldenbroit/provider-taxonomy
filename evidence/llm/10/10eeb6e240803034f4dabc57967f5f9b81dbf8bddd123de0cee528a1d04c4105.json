@@ -1,0 +1,9 @@
+{
+  "key": "10eeb6e240803034f4dabc57967f5f9b81dbf8bddd123de0cee528a1d04c4105",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "In Codex, you define a \"Goal\" as a verifiable done condition; the agent autonomously iterates\u2014writing code, running tests, fixing errors\u2014until that condition is satisfied. Goals are set via the Codex interface or CLI and drive the agent's loop without requiring manual step-by-step intervention.",
+    "label": "Goals (Codex)"
+  }
+}

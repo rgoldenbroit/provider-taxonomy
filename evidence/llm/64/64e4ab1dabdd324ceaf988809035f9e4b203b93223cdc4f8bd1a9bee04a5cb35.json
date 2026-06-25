@@ -1,0 +1,9 @@
+{
+  "key": "64e4ab1dabdd324ceaf988809035f9e4b203b93223cdc4f8bd1a9bee04a5cb35",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Authenticates to remote MCP servers using OAuth via the `codex mcp login` command. Once authenticated, Codex stores credentials and uses them automatically when connecting to that MCP server in subsequent sessions.",
+    "label": "codex mcp login"
+  }
+}

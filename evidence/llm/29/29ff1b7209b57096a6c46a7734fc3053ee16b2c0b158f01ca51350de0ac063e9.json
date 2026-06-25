@@ -1,0 +1,9 @@
+{
+  "key": "29ff1b7209b57096a6c46a7734fc3053ee16b2c0b158f01ca51350de0ac063e9",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "In the Agents SDK, you can restrict which MCP tools an agent is permitted to call by specifying an allow-list of tool names at the MCP server or agent configuration level. Tools not on the list are invisible to the agent and cannot be invoked, giving developers fine-grained control over MCP tool exposure.",
+    "label": "MCP allow-list (`allowed_tools`)"
+  }
+}

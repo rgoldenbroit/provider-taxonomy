@@ -1,0 +1,9 @@
+{
+  "key": "12d7f1cd14044718cd09f19d855888869e1b8850728c3f33be04bacb297c3272",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex automatically reviews GitHub pull request diffs and posts a native GitHub code review comment, flagging serious issues. It follows repository-specific review guidelines you configure, keeping feedback focused and relevant.",
+    "label": "AI Code Review"
+  }
+}

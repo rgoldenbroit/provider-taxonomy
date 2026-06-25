@@ -1,0 +1,9 @@
+{
+  "key": "3f2b45586733cf84dbdca73539591287def345dacf432a3e20e88b14e7343465",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex can pause and surface pending commands or actions for a human to review and approve from a remote device (e.g. phone or web client). This lets developers stay in control of agent runs without being at their workstation.",
+    "label": "Remote Action Approval"
+  }
+}

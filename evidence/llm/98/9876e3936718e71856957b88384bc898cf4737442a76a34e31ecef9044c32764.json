@@ -1,0 +1,9 @@
+{
+  "key": "9876e3936718e71856957b88384bc898cf4737442a76a34e31ecef9044c32764",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI Codex runs as a command-line tool (TUI/CLI) in the terminal, invoked via the `codex` command. It can also connect to a remote app-server over WebSocket or Unix socket via `--remote`, but there is no evidence of an IDE plugin, web UI, or mobile surface in these docs.",
+    "label": "Codex CLI (terminal)"
+  }
+}

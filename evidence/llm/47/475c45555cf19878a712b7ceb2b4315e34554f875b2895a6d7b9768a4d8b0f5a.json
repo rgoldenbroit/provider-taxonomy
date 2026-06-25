@@ -1,0 +1,9 @@
+{
+  "key": "475c45555cf19878a712b7ceb2b4315e34554f875b2895a6d7b9768a4d8b0f5a",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude automatically writes and updates a MEMORY.md file per git repository to record user corrections and preferences. This file is auto-loaded into context at the start of every session, giving Claude durable, project-scoped memory across conversations without manual intervention.",
+    "label": "MEMORY.md"
+  }
+}

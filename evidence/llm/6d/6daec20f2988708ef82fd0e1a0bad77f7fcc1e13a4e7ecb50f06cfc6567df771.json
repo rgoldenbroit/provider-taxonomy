@@ -1,0 +1,9 @@
+{
+  "key": "6daec20f2988708ef82fd0e1a0bad77f7fcc1e13a4e7ecb50f06cfc6567df771",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI provides a \"Managing costs\" section in its developer docs covering token counting, prompt caching, batch processing, and flex processing to reduce spend. Developers can set usage limits and monitor consumption via the API dashboard to cap and track token-level costs.",
+    "label": "Usage limits & cost management"
+  }
+}

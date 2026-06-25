@@ -1,0 +1,9 @@
+{
+  "key": "53ff5a9a952f91fd86d4f31a0357f30172ed2ee2d7abe94830f8c122b33c68b9",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex uses a PLANS.md file to outline its intended approach before making any edits, letting developers review and adjust the plan for multi-hour or complex tasks. The agent writes the plan to this file first, waits for approval or feedback, then proceeds with execution.",
+    "label": "PLANS.md"
+  }
+}

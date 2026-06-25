@@ -1,0 +1,9 @@
+{
+  "key": "c1442b6580ccb8f36f1ead25b8e82c06466fdfe3158662de1e00dd3e785599c9",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Google's Gemini API offers context caching to reuse repeated prompt content across requests, reducing cost and latency. Developers configure it via the API to cache large or frequently reused context (e.g., system instructions or documents) so it isn't reprocessed on every call.",
+    "label": "Context Caching"
+  }
+}

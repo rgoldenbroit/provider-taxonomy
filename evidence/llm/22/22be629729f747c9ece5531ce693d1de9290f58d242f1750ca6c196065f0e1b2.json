@@ -1,0 +1,9 @@
+{
+  "key": "22be629729f747c9ece5531ce693d1de9290f58d242f1750ca6c196065f0e1b2",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code supports running multiple independent Claude sessions as a coordinated team, with one session acting as a team lead and others as peers. Agents share a task list and communicate directly with each other via peer-to-peer messaging to divide and complete work collaboratively.",
+    "label": "Agent Teams"
+  }
+}

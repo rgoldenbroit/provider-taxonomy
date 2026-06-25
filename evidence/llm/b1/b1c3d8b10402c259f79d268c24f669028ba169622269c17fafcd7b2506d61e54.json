@@ -1,0 +1,9 @@
+{
+  "key": "b1c3d8b10402c259f79d268c24f669028ba169622269c17fafcd7b2506d61e54",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A native connector that lets you delegate coding tasks to Codex directly from Linear issues by assigning the issue to @Codex or mentioning it. Codex can also connect to the Linear MCP server to work on tasks locally.",
+    "label": "Codex for Linear"
+  }
+}

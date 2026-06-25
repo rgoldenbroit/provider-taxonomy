@@ -1,0 +1,9 @@
+{
+  "key": "a1804527ae691ad4d6f7cd99a5daa8a664a833eefb60c4a6cc101956398a6e06",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "You demonstrate a workflow once on your Mac and Codex records your actions, then packages them into a named, reusable \"skill\" \u2014 capturing steps, required inputs, and success criteria. To reuse it, start a new thread in the Codex app and ask Codex to run the skill, supplying any values that differ this time; Codex executes it using Computer Use, browser actions, or plugins.",
+    "label": "Record & Replay"
+  }
+}

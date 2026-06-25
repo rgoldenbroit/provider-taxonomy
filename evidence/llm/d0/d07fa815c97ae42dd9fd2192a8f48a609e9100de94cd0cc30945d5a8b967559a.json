@@ -1,0 +1,9 @@
+{
+  "key": "d07fa815c97ae42dd9fd2192a8f48a609e9100de94cd0cc30945d5a8b967559a",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Thread Automations let you schedule or trigger recurring agent tasks tied to a specific conversation thread, running them automatically without user supervision. They are configured and fired within the context of an existing thread.",
+    "label": "Thread Automations"
+  }
+}

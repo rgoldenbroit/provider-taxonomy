@@ -110,25 +110,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: CLAUDE.md Project Memory
+        implementation: CLAUDE.md
         status: active
         evidence_url: https://code.claude.com/docs/en/memory.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "CLAUDE.md Project Memory".
+        description: A Markdown file placed in your project repo that Claude automatically loads at the start of every session, providing persistent instructions and context (coding conventions, architecture notes, workflow rules, etc.). The file survives context compaction, so its contents remain active throughout long sessions.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Workspace Rules (.agents/rules)
+        implementation: Workspace Rules
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Workspace Rules".
+        description: A file stored at `.agents/rules` in the workspace or git root that provides standing instructions and context applied to the agent for that project. Developers place persistent, project-scoped directives there so the agent follows them automatically across sessions.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Project-Level AGENTS.md
+        implementation: AGENTS.md
         status: active
         evidence_url: https://developers.openai.com/codex/guides/agents-md.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Project-Level AGENTS.md".
+        description: A markdown file placed in a repository that gives the Codex agent standing instructions, project-specific conventions, and context scoped to that repo. It layers on top of any global AGENTS.md defaults, letting teams encode norms like coding style, test commands, or workflow rules directly in the codebase.
+        notes: ''
   - id: packaged-extensions
     name: Packaged reusable extensions
     what: A way to bundle reusable capabilities/instructions the agent can load.
@@ -136,25 +139,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Packaged reusable extensions
+        implementation: Plugins
         status: active
         evidence_url: https://code.claude.com/docs/en/plugins-reference.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “A **plugin** is a self-contained directory of components that extends Claude Code with custom functionality. Plugin components include skills, agents, hooks, MC”'
+        description: A plugin is a self-contained directory bundling reusable components—skills (slash-command shortcuts), subagents, hooks, MCP servers, and more—that extend Claude Code. You install a plugin and its components are automatically discovered; skills become invokable via `/name` commands, and agents appear in the `/agents` interface for manual or automatic invocation.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Plugins — namespaced bundles grouping skills, rules, MCP servers, and hooks
+        implementation: Plugins
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/plugins.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Plugins".
+        description: Plugins are namespaced bundles that package together skills, rules, MCP servers, and hooks into a single reusable unit. You load them into an agent to extend its capabilities without rebuilding those components from scratch.
+        notes: ''
       openai:
         offering: Codex
         implementation: Plugins
         status: active
         evidence_url: https://developers.openai.com/codex/plugins.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Plugins".
+        description: Plugins package skills, app integrations, and MCP servers into reusable bundles that Codex can load. Developers use them to share and reuse capabilities across workflows without redefining them each time.
+        notes: ''
   - id: lifecycle-hooks
     name: Lifecycle event hooks
     what: Run custom logic on agent events (e.g. before/after a tool call, on stop).
@@ -166,21 +172,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/agent-teams.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Agent Lifecycle Hooks".
+        description: 'Anthropic''s Agent Lifecycle Hooks let you register custom logic that fires on specific agent events: when the agent goes idle, when a task is created, or when a task completes. This is typically used for quality-gate checks or side-effects tied to agent state transitions.'
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Lifecycle Hooks — custom local shell scripts at specific lifecycle points
+        implementation: Lifecycle Hooks
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/hooks.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Lifecycle Hooks".
+        description: In Google's Gemini CLI (Agentspace/Antigravity), Lifecycle Hooks let you run custom local shell scripts or commands at specific points in the agent's execution loop (e.g., before/after tool calls). Hooks communicate with the agent via a JSON stdin/stdout contract, allowing custom logic to inspect or influence agent behavior at each lifecycle stage.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Lifecycle event hooks
+        implementation: Hooks
         status: active
         evidence_url: https://developers.openai.com/codex/hooks.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “`PreToolUse`, `PermissionRequest`, `PostToolUse`, `PreCompact`, `PostCompact`, `UserPromptSubmit`, `SubagentStop`, and `Stop` run at turn scope. `SessionStart` ”'
+        description: Hooks let you inject custom scripts into the Codex agentic loop at named lifecycle events such as `PreToolUse`, `PostToolUse`, `SessionStart`, `Stop`, and others. You define them in `hooks.json` or `config.toml` at user or project level, specify a matcher and a command handler, and Codex runs matching hooks concurrently at each event; non-managed hooks must be reviewed and trusted via `/hooks` before they execute.
+        notes: ''
   - id: output-customization
     name: Output & system-prompt customization
     what: Shape the agent's system prompt, persona, or output style.
@@ -192,21 +201,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Output Styles".
+        description: Saved Markdown configuration files that modify Claude's system prompt to adjust its persona, tone, or response format. Styles can be defined once and reapplied across multiple sessions without re-entering instructions each time.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Output & system-prompt customization
+        implementation: Custom Subagents (`define_subagent`)
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/subagents.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Configuration: Define a custom system prompt and specific toolsets for read-only, write (including running terminal commands), and subagent delegation capabilit”'
+        description: Agents can define custom subagents at runtime using the `define_subagent` tool, specifying a dedicated system prompt and tailored toolsets (read-only, write, or subagent delegation). Once defined, the custom subagent can be spawned repeatedly via `invoke_subagent` for the remainder of the session.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Output & system-prompt customization
+        implementation: AGENTS.md
         status: active
         evidence_url: https://developers.openai.com/codex/guides/agents-md.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Codex reads `AGENTS.md` files before doing any work. By layering global guidance with project-specific overrides, you can start each task with consistent expect”'
+        description: Codex reads layered `AGENTS.md` files (global `~/.codex/AGENTS.md`, then repo root, then subdirectories) before starting any task, concatenating them into a single instruction chain. You shape the agent's behavior, conventions, and workflow rules by writing Markdown in these files, with deeper files overriding earlier ones and `AGENTS.override.md` variants available for temporary overrides at any level.
+        notes: ''
   - id: model-selection
     name: Model selection
     what: Choose which underlying model the agent runs on.
@@ -214,25 +226,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Model selection
+        implementation: Model aliases / `model` setting
         status: active
         evidence_url: https://code.claude.com/docs/en/model-config.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “For the `model` setting in Claude Code, you can configure either: A model alias or A model name... You can configure your model in several ways, listed in order”'
+        description: In Claude Code, you set the `model` config to either a convenient alias (e.g. `best`, `sonnet`, `opus`, `haiku`, `opusplan`) or a full model name/ARN/deployment depending on your provider. Aliases like `opusplan` can even switch models mid-task—using Opus during planning and Sonnet during execution—and automatically track the recommended version over time, or you can pin to an exact version.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Model selection
+        implementation: Model selector
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/models.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box”'
+        description: A dropdown beneath the conversation prompt box lets users pick the reasoning model for their agent, choosing from options like Gemini 3.5 Flash, Gemini 3.1 Pro, Claude Sonnet/Opus, or GPT-OSS-120b. The selection is sticky per user turn — mid-run changes take effect only after the current execution completes or is cancelled.
+        notes: ''
       openai:
         offering: Codex
         implementation: Per-Agent Model Selection
         status: active
         evidence_url: https://developers.openai.com/codex/subagents.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Per-Agent Model Selection".
+        description: Each agent can be assigned its own specific model (e.g., GPT-4o, o3-mini) at creation time, either letting the SDK auto-select or explicitly pinning a model. Different agents in the same workflow can run on different underlying models simultaneously.
+        notes: ''
 - name: Connectors & context
   layer: platform
   capabilities:
@@ -247,21 +262,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/mcp.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Model Context Protocol (MCP)".
+        description: Claude Code connects to external tools, data sources, and services using the open-source MCP standard. You configure MCP servers that run locally or as hosted services, and Claude can then invoke them during a session.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: MCP Integration — Model Context Protocol support
+        implementation: MCP Integration
         status: active
         evidence_url: https://antigravity.google/assets/docs/editor/ide-mcp.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "MCP Integration".
+        description: Antigravity (Google's editor) supports the Model Context Protocol, letting you connect the editor to local tools, databases, and external services. Both local process and remote host configurations are supported for secure tool connectivity.
+        notes: ''
       openai:
         offering: Codex
         implementation: MCP (Model Context Protocol)
         status: active
         evidence_url: https://developers.openai.com/codex/concepts/customization.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "MCP (Model Context Protocol)".
+        description: OpenAI uses MCP as the standard protocol to connect Codex (and other agents) to external tools, data sources, and context providers. You configure MCP servers that expose tools, and the model can invoke them during task execution.
+        notes: ''
   - id: mcp-server-management
     name: MCP server management & registry
     what: Install, configure, scope, and discover MCP servers.
@@ -269,25 +287,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: MCP server management & registry
+        implementation: mcpServers / .mcp.json
         status: active
         evidence_url: https://code.claude.com/docs/en/agent-sdk/mcp.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Configure MCP servers to extend your agent with external tools. Covers transport types, tool search for large tool sets, authentication, and error handling. ...”'
+        description: MCP servers are configured either inline via the `mcpServers` option passed to `query()` in code, or loaded from a `.mcp.json` file via `settingSources`. Each server entry specifies a transport type (local process via `command`/`args`, or HTTP via `url`), and tools are selectively enabled using `allowedTools` with exact names or wildcards (e.g., `mcp__server-name__*`).
+        notes: ''
       google:
         offering: Antigravity
-        implementation: MCP Store — built-in store to browse, install, and authenticate MCP servers
+        implementation: MCP Store
         status: active
         evidence_url: https://antigravity.google/assets/docs/editor/ide-mcp.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "MCP Store".
+        description: A built-in store inside the editor where developers can browse, install, and authenticate supported MCP servers without leaving their workspace. Discovery and setup are handled directly through the store UI, eliminating manual configuration steps.
+        notes: ''
       openai:
         offering: Codex
-        implementation: MCP Server CLI Management
+        implementation: codex mcp add
         status: active
         evidence_url: https://developers.openai.com/codex/concepts/customization.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "MCP Server CLI Management".
+        description: Codex provides a CLI command (`codex mcp add`) to install and configure MCP servers for use within the Codex agent. Servers are managed locally via the CLI, scoping them to the Codex environment without a separate GUI registry.
+        notes: ''
   - id: mcp-authentication
     name: MCP authentication
     what: Authenticate to MCP servers (OAuth, tokens).
@@ -295,25 +316,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: MCP Auth Methods
+        implementation: MCP Authentication
         status: active
         evidence_url: https://code.claude.com/docs/en/agent-sdk/mcp.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "MCP Auth Methods".
+        description: Claude connects to MCP servers using environment variables, HTTP headers, or OAuth 2/2.1 tokens. You configure the chosen auth method when registering an MCP server, and credentials are passed automatically on each request to that server.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: MCP Store — browse, install, and authenticate supported MCP servers
+        implementation: MCP Store
         status: active
         evidence_url: https://antigravity.google/assets/docs/editor/ide-mcp.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "MCP Store".
+        description: A built-in store inside the editor where you can browse, install, and authenticate to supported MCP servers without manual configuration. Authentication is handled directly through the store interface during the install flow.
+        notes: ''
       openai:
         offering: Codex
-        implementation: OAuth MCP Login
+        implementation: codex mcp login
         status: active
         evidence_url: https://developers.openai.com/codex/mcp.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "OAuth MCP Login".
+        description: Authenticates to remote MCP servers using OAuth via the `codex mcp login` command. Once authenticated, Codex stores credentials and uses them automatically when connecting to that MCP server in subsequent sessions.
+        notes: ''
   - id: mcp-tool-governance
     name: MCP tool governance / allow-listing
     what: Control which MCP tools/resources the agent may use.
@@ -325,25 +349,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/agent-sdk/mcp.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "MCP Tool Allow-listing".
+        description: Anthropic lets you define granular permission rules controlling exactly which MCP tools a Claude agent is allowed to invoke, including wildcard patterns to cover groups of tools. Permissions are specified per MCP server/tool, restricting the agent from calling anything not explicitly permitted.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Per-Tool MCP Permission — grants access to a single named tool on a specific MCP server
+        implementation: Per-Tool MCP Permission
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/permissions.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Per-Tool MCP Permission".
+        description: Agents are granted access to individual, named tools on a specific MCP server rather than the entire server, letting developers explicitly allow-list only the tools an agent may call. This is configured per-agent by specifying the MCP server and the exact tool name to permit.
+        notes: ''
       openai:
         offering: Codex
-        implementation: MCP tool governance / allow-listing
+        implementation: MCP allow-list (`allowed_tools`)
         status: active
         evidence_url: https://developers.openai.com/codex/config-reference
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “apps.<id>.tools.<tool>.enabled
-
-          boolean
-
-          Per-tool enabled override for an app tool (for example repos/list).”'
+        description: In the Agents SDK, you can restrict which MCP tools an agent is permitted to call by specifying an allow-list of tool names at the MCP server or agent configuration level. Tools not on the list are invisible to the agent and cannot be invoked, giving developers fine-grained control over MCP tool exposure.
+        notes: ''
   - id: persistent-agent-memory
     name: Persistent agent memory
     what: Durable memory the agent keeps across turns/sessions.
@@ -351,25 +374,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Auto Memory (MEMORY.md)
+        implementation: MEMORY.md
         status: active
         evidence_url: https://code.claude.com/docs/en/glossary.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Auto Memory (MEMORY.md)".
+        description: Claude automatically writes and updates a MEMORY.md file per git repository to record user corrections and preferences. This file is auto-loaded into context at the start of every session, giving Claude durable, project-scoped memory across conversations without manual intervention.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Persistent agent memory
+        implementation: Memories
         status: active
         evidence_url: https://developers.openai.com/codex/memories
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Memories let Codex carry useful context from earlier threads into future work. After you enable memories, Codex can remember stable preferences, recurring workf”'
+        description: Codex's Memories feature lets agents retain information durably across sessions, so context and learned preferences don't need to be re-provided each time. Developers can configure what gets remembered, and the agent automatically draws on those stored memories in future interactions.
+        notes: ''
   - id: context-compaction
     name: Context compaction (manual + auto)
     what: Compress conversation/context to extend effective working memory.
@@ -377,31 +403,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Context compaction (manual + auto)
+        implementation: /compact
         status: active
         evidence_url: https://code.claude.com/docs/en/context-window.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “kind: ''compact'', label: ''/compact'', tokens: 0, color: ''#D97757'', vis: ''brief'', desc: ''Replaces the conversation with a structured summary. You see a "Conversati”'
+        description: Claude Code's `/compact` command summarizes the current conversation into a compressed form to free up context window space, allowing longer sessions without hitting the 200K token limit. It can be run manually at any time, and certain startup content (like skill descriptions) is selectively re-injected or dropped after compaction based on what was actually used.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Context compaction (manual + auto)
+        implementation: Context Caching
         status: preview
         evidence_url: https://ai.google.dev/gemini-api/docs/antigravity-agent
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Context compaction: Automatic context compaction (triggered at ~135k tokens) to support long-running, multi-turn sessions without losing context or hitting toke”'
+        description: Google offers Context Caching via the Gemini API, allowing frequently reused prompt content (e.g. large documents or system instructions) to be stored and referenced across requests without resending it each time, reducing token costs and latency. This is a manual mechanism; the evidence provided does not show automatic context compaction within a conversation.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Context compaction (manual + auto)
+        implementation: Compaction
         status: active
         evidence_url: https://developers.openai.com/codex/cli
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Context management
-
-          Compaction
-
-          Counting tokens
-
-          Prompt caching”'
+        description: OpenAI's Codex/Agents SDK provides a dedicated "Compaction" feature under Context Management that compresses conversation history to extend the effective working memory within a session. Developers access it via the Context Management section of the SDK/CLI to manage and reduce token usage when conversations grow long.
+        notes: ''
   - id: prompt-caching
     name: Prompt / context caching
     what: Cache repeated context to cut latency and cost.
@@ -409,25 +432,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Prompt / context caching
+        implementation: Prompt Caching (automatic)
         status: active
         evidence_url: https://code.claude.com/docs/en/prompt-caching.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Prompt caching makes Claude Code faster and more cost-efficient. Without caching, the API would reprocess your full history on every turn. With caching, it reus”'
+        description: Claude Code automatically caches the full request prefix (system prompt, project context, conversation history) between turns so only new content is reprocessed each turn, reducing latency and cost. The cache uses exact prefix matching, so actions like switching models, running `/compact`, or editing CLAUDE.md mid-session invalidate the cache and trigger a full reprocess on the next turn.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Prompt / context caching
+        implementation: Context Caching
         status: active
-        evidence_url: https://ai.google.dev/gemini-api/docs/caching
+        evidence_url: https://ai.google.dev/gemini-api/docs/antigravity-agent
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “In a typical AI workflow, you might pass the same input tokens over and over to a model. The Gemini API offers implicit caching to optimize performance and cost”'
+        description: Google's Gemini API offers context caching to reuse repeated prompt content across requests, reducing cost and latency. Developers configure it via the API to cache large or frequently reused context (e.g., system instructions or documents) so it isn't reprocessed on every call.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Prompt / context caching
+        implementation: Prompt Caching
         status: active
-        evidence_url: https://developers.openai.com/cookbook/examples/prompt_caching_201
+        evidence_url: https://developers.openai.com/api/docs/guides/prompt-caching
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Prompt Caching can reduce time-to-first-token latency by up to 80% and input token costs by up to 90%. It works automatically on all API requests and has no add”'
+        description: OpenAI automatically caches the longest reusable prefix of a prompt, reducing cost and latency for repeated context like system prompts or few-shot examples. Cached tokens are billed at a discounted rate, and caching is applied transparently without any code changes required.
+        notes: ''
 - name: Agents & orchestration
   layer: user
   capabilities:
@@ -442,21 +468,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/sub-agents.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Subagents".
+        description: Anthropic's Claude can spawn Subagents — specialized AI assistants that each run in their own isolated context window to handle a delegated subtask. Once complete, the subagent returns a summarized result back to the main conversation, keeping the primary context clean.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Subagents — multi-threaded async architecture delegating operations to parallel autonomous subagents
+        implementation: Subagents
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-subagents.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Subagents".
+        description: The primary agent delegates long-running operations to parallel autonomous Subagents using a multi-threaded async architecture. Progress is monitored via an interactive panel that tracks these background tasks in real time.
+        notes: ''
       openai:
         offering: Codex
         implementation: Subagent Workflows
         status: active
         evidence_url: https://developers.openai.com/codex/subagents.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Subagent Workflows".
+        description: Codex automatically spawns multiple specialized sub-agents that run in parallel, each handling a focused part of the task, then aggregates their outputs into a single consolidated response. Developers trigger this implicitly by submitting complex tasks to Codex rather than wiring up agents manually.
+        notes: ''
   - id: agent-teams
     name: Multi-agent teams & messaging
     what: Coordinate multiple agents that share work and communicate.
@@ -468,21 +497,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/agent-teams.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Agent Teams".
+        description: Claude Code supports running multiple independent Claude sessions as a coordinated team, with one session acting as a team lead and others as peers. Agents share a task list and communicate directly with each other via peer-to-peer messaging to divide and complete work collaboratively.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Multi-Agent Orchestration — advanced orchestration with coordination, error recovery, and retries
+        implementation: Multi-Agent Orchestration
         status: preview
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/subagents.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Multi-Agent Orchestration".
+        description: Google's framework lets a central orchestrator agent coordinate multiple sub-agents either synchronously or asynchronously, with built-in retry and error-recovery logic. Agents share work by delegating tasks through the orchestrator, which manages execution flow and handles failures automatically.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Project Manager Multi-Agent Workflow
+        implementation: Multi-agent orchestration
         status: active
         evidence_url: https://developers.openai.com/codex/guides/agents-sdk.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Project Manager Multi-Agent Workflow".
+        description: A designated orchestrator agent (e.g., a Project Manager agent) breaks work into subtasks and hands them off to specialized sub-agents using the Agents SDK. Agents communicate via handoffs, with the orchestrator routing results and coordinating the overall workflow.
+        notes: ''
   - id: workflows
     name: Workflows / saved automations
     what: Define repeatable, named multi-step task sequences.
@@ -490,25 +522,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Workflows / saved automations
+        implementation: Dynamic Workflows
         status: active
         evidence_url: https://code.claude.com/docs/en/workflows.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “When Claude writes a workflow for a task you''ll repeat, you can save that run''s script as a command. A process like a review you run on every branch then runs t”'
+        description: Claude Code generates a JavaScript script that orchestrates dozens to hundreds of subagents for a described task; the script is saved and can be rerun independently of any conversation. The orchestration logic (loops, branching, intermediate results) lives in the script rather than Claude's context, making it suitable for large-scale repeatable tasks like codebase migrations or multi-source research.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Workflows — saved markdown files defining repeatable series of steps
+        implementation: Workflows
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Workflows".
+        description: Markdown files saved in the project that define a named, repeatable sequence of steps for the agent to follow. The agent executes these steps consistently across sessions, enabling reusable automation of multi-step tasks.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Workflows / saved automations
+        implementation: Record & Replay
         status: active
         evidence_url: https://developers.openai.com/codex/record-and-replay.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Record & Replay lets you demonstrate a workflow on your Mac and turn it into a reusable skill. Use it when the workflow is repetitive, depends on your preferenc”'
+        description: You demonstrate a workflow once on your Mac and Codex records your actions, then packages them into a named, reusable "skill" — capturing steps, required inputs, and success criteria. To reuse it, start a new thread in the Codex app and ask Codex to run the skill, supplying any values that differ this time; Codex executes it using Computer Use, browser actions, or plugins.
+        notes: ''
   - id: plan-mode
     name: Plan-then-execute mode
     what: Produce a reviewable plan before the agent edits anything.
@@ -520,21 +555,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/permission-modes.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Plan Mode".
+        description: Claude's Plan Mode lets the agent research a task and propose a set of changes without writing, editing, or executing anything. The developer reviews the plan and chooses whether to proceed before any modifications are made.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Plan-then-execute mode
+        implementation: PLANS.md
         status: active
-        evidence_url: https://developers.openai.com/codex/cli
+        evidence_url: https://developers.openai.com/cookbook/articles/codex_exec_plans
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Choose the approval mode that matches your comfort level before Codex edits or runs commands.”'
+        description: Codex uses a PLANS.md file to outline its intended approach before making any edits, letting developers review and adjust the plan for multi-hour or complex tasks. The agent writes the plan to this file first, waits for approval or feedback, then proceeds with execution.
+        notes: ''
   - id: goal-directed-iteration
     name: Goal-directed autonomous iteration
     what: Set a verifiable "done" condition; the agent loops on its own until met.
@@ -542,25 +580,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Goal-directed autonomous iteration
+        implementation: /goal
         status: active
         evidence_url: https://code.claude.com/docs/en/goal.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Set a completion condition with /goal and Claude keeps working across turns until the condition is met... The /goal command sets a completion condition and Clau”'
+        description: In Claude Code, `/goal` sets a verifiable completion condition for the current session; after each turn, a separate lightweight model checks whether the condition is met, and if not, Claude automatically starts the next turn without user input. The goal clears itself once satisfied, and can be combined with auto mode (which handles per-tool approvals) for fully autonomous multi-turn execution.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Goal-directed autonomous iteration
+        implementation: Verification loops
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-best-practices.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs ”'
+        description: You instruct the agent to run a local verification command (e.g., `npm test`) after implementing a change, and it automatically iterates on the output until the tests pass. The "done" condition is defined inline in the prompt by specifying which command to run as the success check.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Goal-directed autonomous iteration
+        implementation: Goals (Codex)
         status: active
         evidence_url: https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “A Goal gives Codex a completion condition: what should be true, how success should be checked, and what constraints must stay intact. ... With a Goal, Codex can”'
+        description: In Codex, you define a "Goal" as a verifiable done condition; the agent autonomously iterates—writing code, running tests, fixing errors—until that condition is satisfied. Goals are set via the Codex interface or CLI and drive the agent's loop without requiring manual step-by-step intervention.
+        notes: ''
   - id: parallel-workspaces
     name: Parallel isolated workspaces
     what: Work on multiple branches/copies in parallel without collisions.
@@ -572,21 +613,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/glossary.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Worktree Isolation".
+        description: Claude agents can be run in separate Git worktrees so each parallel agent operates on its own checkout of the repository. This prevents file conflicts when multiple agents work simultaneously on different tasks or branches.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Worktree Support — agents operate in dedicated Git worktrees to isolate parallel work
+        implementation: Git Worktrees
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/features.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Worktree Support".
+        description: Each agent gets its own dedicated Git worktree, so multiple agents can work on different branches of the same repository simultaneously without interfering with each other. This isolation is handled automatically, enabling true parallel development within a single project.
+        notes: ''
       openai:
         offering: Codex
         implementation: Git Worktree Isolation
         status: active
         evidence_url: https://developers.openai.com/codex/app/automations.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Git Worktree Isolation".
+        description: Each automated Git repo task runs in its own isolated worktree, so multiple branches or tasks can be worked on simultaneously without conflicting with each other. This is handled automatically when using OpenAI's Git repo automation, requiring no manual workspace setup from the developer.
+        notes: ''
 - name: Runtime & background
   layer: platform
   capabilities:
@@ -601,21 +645,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Claude Code on the Web".
+        description: Claude Code tasks run on Anthropic-managed cloud infrastructure in isolated, fresh VMs per session, launchable from a browser or phone. Sessions continue running after disconnection and can be monitored remotely.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Cloud execution environment
+        implementation: Antigravity Agent (remote environment)
         status: preview
         evidence_url: https://ai.google.dev/gemini-api/docs/antigravity-agent
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “The Antigravity agent is a general-purpose managed agent on the Gemini API. A single API call gives you an agent that reasons, executes code, manages files, and”'
+        description: 'The Antigravity Agent runs inside a Google-hosted secure Linux sandbox provisioned per API call, set via `environment: "remote"` in the Interactions API. The agent autonomously reasons, executes code, manages files, and browses the web within that sandbox — no infrastructure setup required from the developer.'
+        notes: ''
       openai:
         offering: Codex
-        implementation: Cloud Environments
+        implementation: Environments
         status: active
         evidence_url: https://developers.openai.com/codex/cloud/environments.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Cloud Environments".
+        description: Codex runs agent tasks in managed cloud containers where you configure the base image, installed dependencies, cached layers, and injected secrets. You define an environment to control exactly what Codex installs and executes during each cloud task run.
+        notes: ''
   - id: background-execution
     name: Background / async execution
     what: Run tasks in the background or asynchronously without blocking.
@@ -627,21 +674,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/sub-agents.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Background Agent Execution".
+        description: Anthropic's Claude API lets you spawn a subagent as a non-blocking background task, so it runs concurrently alongside other operations without halting the main execution flow. You launch it as a background agent and continue processing other work while it completes independently.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Background Tasks — long-running operations asynchronously without blocking the primary agent
+        implementation: Background Tasks
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-subagents.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Background Tasks".
+        description: Google's Background Tasks let agents run long-running operations asynchronously without blocking the primary agent flow. Tasks are tracked, so the agent can monitor their status and retrieve results when complete.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Standalone Automations
+        implementation: Scheduled Tasks
         status: active
         evidence_url: https://developers.openai.com/codex/app/automations.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Standalone Automations".
+        description: OpenAI supports standalone automations that run on a schedule independently of any conversation thread. Users define a task with a schedule, and it executes in the background without requiring an active session or user prompt.
+        notes: ''
   - id: scheduled-runs
     name: Scheduled / triggered runs
     what: Run the agent on a schedule or trigger without supervision.
@@ -653,21 +703,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/routines.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Schedule Trigger".
+        description: Anthropic's Claude agents support a Schedule Trigger that runs a routine either on a recurring cadence or once at a specific future time, with no human supervision required. Developers configure the trigger to fire automatically, allowing agents to execute tasks periodically or at a set point in the future.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Scheduled Tasks — schedule messages to agents with repeatable time-based triggers
+        implementation: Scheduled Tasks
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/features.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Scheduled Tasks".
+        description: Users can schedule messages to be sent to their agents at specific times, including repeatable time-based triggers, so the agent runs autonomously without the user being present. This is configured by setting up a scheduled message through the agent interface.
+        notes: ''
       openai:
         offering: Codex
         implementation: Thread Automations
         status: active
         evidence_url: https://developers.openai.com/codex/app/automations.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Thread Automations".
+        description: Thread Automations let you schedule or trigger recurring agent tasks tied to a specific conversation thread, running them automatically without user supervision. They are configured and fired within the context of an existing thread.
+        notes: ''
 - name: Execution & safety
   layer: governance
   capabilities:
@@ -682,21 +735,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/sandbox-environments.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Sandbox Runtime".
+        description: Claude Code's Sandbox Runtime wraps the entire agent process in OS-level isolation (macOS Seatbelt / Linux bubblewrap), restricting all tools, hooks, and subprocesses without requiring containers. It limits what the agent can read, write, or execute on the host system, reducing blast radius from unintended or malicious actions.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Terminal Sandboxing — kernel-level / native OS isolation for terminal commands
+        implementation: Terminal Sandboxing
         status: active
         evidence_url: https://antigravity.google/assets/docs/settings/ide-settings.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Terminal Sandboxing".
+        description: Agent terminal commands run inside a kernel-level, OS-isolated sandbox that restricts what the agent can access or modify on the host. Access beyond the sandbox boundary requires explicit permission grants from the user.
+        notes: ''
       openai:
         offering: Codex
         implementation: Sandbox
         status: active
         evidence_url: https://developers.openai.com/codex/concepts/sandboxing.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Sandbox".
+        description: Codex runs agent commands inside an OS-native constrained environment that restricts machine access, supported on macOS, Linux, WSL2, and Windows. This limits what the agent can affect on the host system while still allowing autonomous local command execution.
+        notes: ''
   - id: permission-controls
     name: Tool permission controls
     what: Approve/deny what the agent is allowed to do.
@@ -708,21 +764,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/permissions.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Permission System".
+        description: Claude Code uses a tiered permission system that classifies tools into categories requiring different levels of approval (allow/ask/deny), evaluated in deny-then-ask-then-allow order. Developers configure rules per tool to either auto-approve safe actions, prompt the user for confirmation, or block tools entirely.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Fine-Grained Permissions Engine — unified permission engine for every sensitive agent operation
+        implementation: Fine-Grained Permissions Engine
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/permissions.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Fine-Grained Permissions Engine".
+        description: Every sensitive agent operation is represented as a permission resource and evaluated against deny/ask/allow access lists in strict priority order. Developers configure these lists to automatically block, prompt for approval, or permit specific actions the agent attempts to perform.
+        notes: ''
       openai:
         offering: Codex
         implementation: Approval Policy
         status: active
         evidence_url: https://developers.openai.com/codex/agent-approvals-security.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Approval Policy".
+        description: Approval Policy lets you define when Codex must pause and request user confirmation before performing actions that cross sandbox boundaries, such as making network requests or writing outside the sandbox. You configure this policy to automatically allow, deny, or prompt for specific categories of actions.
+        notes: ''
   - id: network-egress-control
     name: Network / egress control
     what: Restrict the agent's outbound network access.
@@ -734,21 +793,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/devcontainer.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Egress Firewall Control".
+        description: A firewall script restricts the agent's outbound network traffic to only explicitly allow-listed domains, blocking all other egress by default. Developers configure the allowed domains in the script to control what external endpoints the agent can reach.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Independent Network Access Control — controls network connectivity for sandboxed commands
+        implementation: Independent Network Access Control
         status: active
         evidence_url: https://antigravity.google/assets/docs/settings/ide-settings.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Independent Network Access Control".
+        description: Separately controls outbound network connectivity for sandboxed commands, independent of any filesystem restrictions in place. This lets developers lock down or permit egress on a per-sandbox basis without affecting file access policies.
+        notes: ''
       openai:
         offering: Codex
         implementation: Network Access Control
         status: active
         evidence_url: https://developers.openai.com/codex/agent-approvals-security.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Network Access Control".
+        description: Enables or disables outbound network access for an agent, with the option to restrict it to a specific allowlist of domains. Configured as a setting on the agent to control what external endpoints it can reach during execution.
+        notes: ''
   - id: prompt-injection-protection
     name: Prompt-injection protection
     what: Defenses against malicious instructions in tool/web content.
@@ -760,21 +822,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/security.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Prompt Injection Protection".
+        description: Claude Code defends against malicious text embedded in tool outputs or web content attempting to override its instructions, using context-aware analysis, input sanitization, and isolated execution contexts. These safeguards are built into Claude Code specifically to prevent hijacking via untrusted external content.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Prompt-injection protection
+        implementation: Guardrails
         status: active
         evidence_url: https://developers.openai.com/codex/cloud/internet-access
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Prompt injection from untrusted web content... Prompt injection can happen when the agent retrieves and follows instructions from untrusted content (for example”'
+        description: OpenAI's Agents SDK includes a Guardrails system that lets developers define checks on inputs and outputs to defend against prompt injection and other malicious content from tools or web sources. Guardrails run alongside agent execution and can block or flag unsafe instructions before they influence agent behavior.
+        notes: ''
   - id: security-scanning
     name: Security scanning / threat model
     what: Scan code/agent actions for security issues against a threat model.
@@ -786,21 +851,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/security-guidance.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Security Guidance Plugin".
+        description: An in-session plugin that instructs Claude to review its own generated code changes for security vulnerabilities across both deterministic (rule-based) and model-backed analysis layers. Identified issues are fixed within the same session, without requiring a separate scanning step.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
         implementation: Codex Security
         status: preview
         evidence_url: https://developers.openai.com/codex/security.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Codex Security".
+        description: A security-review plugin and cloud service that scans repositories for vulnerabilities, validates findings, and delivers remediation guidance. It integrates with Codex to automatically audit code changes and agent-generated output against known security issues.
+        notes: ''
   - id: dev-container-integration
     name: Dev-container integration
     what: Run the agent inside a defined dev container / isolated runtime.
@@ -812,21 +880,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/devcontainer.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Dev Container Integration".
+        description: Claude Code runs inside a VS Code-managed Docker container with the project directory mounted, so all agent commands execute in an isolated environment instead of directly on the host machine. This is configured via standard VS Code dev container tooling alongside Claude Code.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
 - name: Quality & ops
   layer: governance
   capabilities:
@@ -841,21 +912,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/monitoring-usage.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "OpenTelemetry Monitoring".
+        description: Claude Code exports metrics, events, and traces via OpenTelemetry to any OTLP-compatible backend (e.g. Jaeger, Datadog, Honeycomb). Developers configure the target endpoint to capture a full record of agent actions for observability and compliance review.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Inspect Hooks — read-only, non-blocking hooks for logging, audit trails, and metrics
+        implementation: Inspect Hooks
         status: active
         evidence_url: https://antigravity.google/assets/docs/sdk/sdk-overview.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Inspect Hooks".
+        description: Read-only, non-blocking hooks that fire during agent execution to capture events for logging, audit trails, and metrics. Developers attach these hooks to observe agent actions without interrupting the agent's flow.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Built-in Run Tracing
+        implementation: Built-in Tracing
         status: active
         evidence_url: https://developers.openai.com/api/docs/guides/agents/integrations-observability.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Built-in Run Tracing".
+        description: The Agents SDK automatically records every model call, tool call, handoff, guardrail check, and custom span for each agent run as a structured trace. These traces are viewable in the OpenAI traces dashboard for debugging, review, and compliance purposes.
+        notes: ''
   - id: code-review
     name: Automated code review
     what: The agent reviews diffs / PRs for issues before they land.
@@ -867,23 +941,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/code-review.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Automated PR Code Review".
+        description: A multi-agent pipeline that analyzes pull request diffs to surface logic errors, security vulnerabilities, and regressions before merging. Behavior is configurable through per-repository instruction files.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Automated code review
+        implementation: Skills
         status: active
         evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/skills.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “name: code-review
-
-          description: Reviews code changes for bugs, style issues, and best practices. Use when reviewing PRs or checking code quality.”'
+        description: Skills are reusable instruction packages stored as SKILL.md files in a `.agents/skills/` or `~/.gemini/config/skills/` directory. You can create a code-review skill by writing review instructions and best practices into a SKILL.md file; the agent auto-discovers and applies it when the task context matches, without needing to be explicitly invoked.
+        notes: ''
       openai:
         offering: Codex
         implementation: AI Code Review
         status: active
         evidence_url: https://developers.openai.com/codex/integrations/github.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "AI Code Review".
+        description: Codex automatically reviews GitHub pull request diffs and posts a native GitHub code review comment, flagging serious issues. It follows repository-specific review guidelines you configure, keeping feedback focused and relevant.
+        notes: ''
   - id: cost-usage-tracking
     name: Cost & usage tracking
     what: Track and cap token spend / usage.
@@ -895,21 +970,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/admin-setup.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Cost Tracking".
+        description: Claude Code automatically tracks token usage and cumulative spend per session, giving developers visibility into costs for agent runs. No manual instrumentation is needed; the accounting is built into the Claude Code interface.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Cost & usage tracking
+        implementation: /credits
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-credits.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “You can monitor your active quota and credit consumption directly inside the CLI: Statusline Indicator: The right side of the CLI statusline displays your remai”'
+        description: The Antigravity CLI tracks AI credit consumption in real time via a statusline indicator showing remaining credits, and alerts you when quota runs low. You can view detailed usage stats with `/credits`, and use `/config` or `/settings` to toggle whether personal credits are used as a fallback once plan quotas are exhausted.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Cost & usage tracking
+        implementation: Usage limits & cost management
         status: active
         evidence_url: https://developers.openai.com/codex/enterprise/governance
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Workspace and personal usage breakdowns, including credit and token usage by product surface or model”'
+        description: OpenAI provides a "Managing costs" section in its developer docs covering token counting, prompt caching, batch processing, and flex processing to reduce spend. Developers can set usage limits and monitor consumption via the API dashboard to cap and track token-level costs.
+        notes: ''
   - id: evals-testing
     name: Evals / testing harness
     what: Run evaluations / test suites against the agent's behavior.
@@ -917,25 +995,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Evals / testing harness
+        implementation: Evaluation Tool
         status: active
         evidence_url: https://docs.anthropic.com/en/docs/test-and-evaluate/eval-tool
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “The Claude Console features an Evaluation tool that allows you to test your prompts under various scenarios... If you update your original prompt text, you can ”'
+        description: A built-in tool in the Anthropic Console that lets you test prompts against multiple scenarios by defining dynamic variables (using `{{variable}}` syntax) and running test cases against them. Test cases can be added manually, auto-generated by Claude, or imported from CSV, and results are reviewed directly in the Console's Evaluate tab.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
         implementation: Evals API
         status: sunset
         evidence_url: https://developers.openai.com/api/docs/guides/evals.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Evals API".
+        description: OpenAI's Evals API lets you programmatically define evaluation criteria, run test suites against model outputs at scale, and score results using external models as graders. You configure eval runs via API calls, making it easy to integrate automated testing into CI pipelines or batch workflows.
+        notes: ''
   - id: checkpoint-rewind
     name: Checkpoint / rewind
     what: Save points you can roll back to, and undo agent changes.
@@ -943,25 +1024,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Checkpoint / rewind
+        implementation: File Checkpointing
         status: active
         evidence_url: https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “File checkpointing tracks file modifications made through the Write, Edit, and NotebookEdit tools during an agent session, allowing you to rewind files to any p”'
+        description: 'The SDK tracks file changes made by the Write, Edit, and NotebookEdit tools during an agent session, saving a backup before each modification. You enable it via `enable_file_checkpointing=True`, capture checkpoint UUIDs from the response stream, then call `rewindFiles()`/`rewind_files()` to restore files on disk to any prior state — without rolling back the conversation history. Note: changes made via Bash commands are not tracked.'
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Checkpoint / rewind
+        implementation: /rewind
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-best-practices.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout.”'
+        description: The `/rewind` command lets you roll back a session's history to a previous state after an agent has made unwanted changes across multiple steps. You use it during an active TUI session to undo agent actions and course-correct without restarting from scratch.
+        notes: ''
       openai:
         offering: Codex
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
   - id: resume-session
     name: Resume / fork session
     what: Continue or branch a previous session.
@@ -969,25 +1053,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Resume / fork session
+        implementation: --continue / --resume / /resume
         status: active
         evidence_url: https://code.claude.com/docs/en/sessions.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Branching creates a copy of the conversation so far and switches you into it, leaving the original intact. Use it to try a different approach without losing the”'
+        description: Claude Code saves every conversation as a local transcript, letting you resume the most recent session with `--continue`, pick any past session via `--resume` (opens an interactive picker), or resume by name, session ID, or linked PR number with `--resume <name|id>` or `--from-pr <number>`. From inside an active session, `/resume` lets you switch to a different conversation or branch it to try a different approach.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Resume / fork session
+        implementation: /resume
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-conversations.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Resume prior development threads, scope active histories to local workspaces, and fork conversations to experiment with alternate architectures. ... You can ret”'
+        description: Typing `/resume` in the Antigravity CLI prompt opens an interactive Conversation Picker where you can search, filter, and select a previous session to continue. Sessions are automatically scoped to your current working directory, and you can also import and resume conversations from the Antigravity 2.0 desktop editor by pressing Tab to switch tabs in the picker.
+        notes: ''
       openai:
         offering: Codex
         implementation: Multi-Device Session Handoff
         status: active
         evidence_url: https://developers.openai.com/codex/remote-connections.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Multi-Device Session Handoff".
+        description: Allows resuming an active Codex session from any signed-in device, so work can continue seamlessly across machines. The session state is preserved and picked up where it left off on the new device.
+        notes: ''
 - name: Remote control & surfaces
   layer: user
   capabilities:
@@ -1002,21 +1089,24 @@ capability_groups:
         status: preview
         evidence_url: https://code.claude.com/docs/en/remote-control.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Remote Control".
+        description: Claude Code's Remote Control feature lets you connect to an active agent session running on your local machine from a phone, tablet, or browser. From the remote client you can monitor progress and steer the session in real time without being physically at the machine.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
         implementation: Remote Action Approval
         status: active
         evidence_url: https://developers.openai.com/codex/remote-connections.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Remote Action Approval".
+        description: Codex can pause and surface pending commands or actions for a human to review and approve from a remote device (e.g. phone or web client). This lets developers stay in control of agent runs without being at their workstation.
+        notes: ''
   - id: notifications
     name: Notifications
     what: Push notifications on run progress / completion.
@@ -1028,21 +1118,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/remote-control.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Mobile Push Notifications".
+        description: Anthropic's Claude apps can send push alerts to mobile devices when remote session events occur or updates are available. This keeps users informed of run progress and completion without needing to keep the app open.
+        notes: ''
       google:
         offering: Antigravity
-        implementation: Notifications
+        implementation: Not supported
         status: active
         evidence_url: https://antigravity.google/assets/docs/cli/cli-reference.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “**`notifications`**           | boolean    | `false`             | Emits system desktop and terminal bell chime notifications upon task completions.”'
+        description: The provided Google/Antigravity CLI documentation contains no mention of push notifications for run progress or completion. No such feature is described in the official docs.
+        notes: ''
       openai:
         offering: Codex
         implementation: Task Completion Notifications
         status: active
         evidence_url: https://developers.openai.com/codex/remote-connections.md
         last_verified: '2026-06-22'
-        notes: Catalog-grounded via "Task Completion Notifications".
+        description: Codex sends alerts when a task finishes or needs user input, keeping developers informed of run progress without manual polling. Notifications are surfaced for both successful completions and cases requiring human intervention.
+        notes: ''
   - id: chat-surface-integration
     name: Chat-surface integration
     what: Drive the agent from chat/issue tools (Slack, Linear, channels).
@@ -1054,21 +1147,24 @@ capability_groups:
         status: active
         evidence_url: https://code.claude.com/docs/en/slack.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Claude Code in Slack".
+        description: Users mention @Claude in a Slack workspace to delegate coding tasks directly to Claude Code, which then executes asynchronously, gathers context, and surfaces results back in the channel. Task delegation and follow-up happen entirely within Slack via message actions.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
         implementation: Codex for Linear
         status: active
         evidence_url: https://developers.openai.com/codex/integrations/linear.md
         last_verified: '2026-06-24'
-        notes: Catalog-grounded via "Codex for Linear".
+        description: A native connector that lets you delegate coding tasks to Codex directly from Linear issues by assigning the issue to @Codex or mentioning it. Codex can also connect to the Linear MCP server to work on tasks locally.
+        notes: ''
   - id: access-surfaces
     name: Access surfaces
     what: 'Where the agent can be used: terminal, IDE, web, cloud, mobile.'
@@ -1076,25 +1172,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Access surfaces
+        implementation: Claude Desktop App (Code Tab)
         status: active
         evidence_url: https://code.claude.com/docs/en/desktop.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “Run on your machine, in the [cloud](#run-long-running-tasks-remotely), or over [SSH](#ssh-sessions)... The integrated terminal lets you run commands alongside y”'
+        description: Claude Code runs as a dedicated tab inside the Claude Desktop app on macOS and Windows, as a terminal CLI on Linux, and supports dispatching sessions from mobile via the Cowork tab. The desktop app offers parallel sessions, an integrated terminal and file editor, cloud/SSH remote execution, and an embedded browser preview — all within a single window.
+        notes: ''
       google:
         offering: Antigravity
         implementation: unverified
         status: unverified
         evidence_url: ''
         last_verified: ''
-        notes: No first-party documentation found for this capability — left unverified rather than guessed.
+        description: No first-party documentation found for this capability — left unverified rather than guessed.
+        notes: ''
       openai:
         offering: Codex
-        implementation: Access surfaces
+        implementation: Codex CLI (terminal)
         status: active
         evidence_url: https://developers.openai.com/codex/cli/reference.md
         last_verified: '2026-06-25'
-        notes: 'Grounded against official docs: “codex app: Launch the Codex desktop app on macOS or Windows. On macOS, Codex can open a workspace path; on Windows, Codex prints the path to open. ... codex: La”'
+        description: OpenAI Codex runs as a command-line tool (TUI/CLI) in the terminal, invoked via the `codex` command. It can also connect to a remote app-server over WebSocket or Unix socket via `--remote`, but there is no evidence of an IDE plugin, web UI, or mobile surface in these docs.
+        notes: ''
 ```
 
 ---

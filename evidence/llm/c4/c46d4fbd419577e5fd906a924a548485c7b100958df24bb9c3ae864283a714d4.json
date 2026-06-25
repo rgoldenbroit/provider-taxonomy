@@ -1,0 +1,9 @@
+{
+  "key": "c46d4fbd419577e5fd906a924a548485c7b100958df24bb9c3ae864283a714d4",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code runs as a dedicated tab inside the Claude Desktop app on macOS and Windows, as a terminal CLI on Linux, and supports dispatching sessions from mobile via the Cowork tab. The desktop app offers parallel sessions, an integrated terminal and file editor, cloud/SSH remote execution, and an embedded browser preview \u2014 all within a single window.",
+    "label": "Claude Desktop App (Code Tab)"
+  }
+}

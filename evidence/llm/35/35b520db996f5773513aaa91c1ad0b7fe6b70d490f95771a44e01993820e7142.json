@@ -1,0 +1,9 @@
+{
+  "key": "35b520db996f5773513aaa91c1ad0b7fe6b70d490f95771a44e01993820e7142",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic's Claude API lets you spawn a subagent as a non-blocking background task, so it runs concurrently alongside other operations without halting the main execution flow. You launch it as a background agent and continue processing other work while it completes independently.",
+    "label": "Background Agent Execution"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "f7a5bf5078bc9f445b08ef27fe2c94fa5fc34a872294491adf4cccbca0fed6a3",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Agents can define custom subagents at runtime using the `define_subagent` tool, specifying a dedicated system prompt and tailored toolsets (read-only, write, or subagent delegation). Once defined, the custom subagent can be spawned repeatedly via `invoke_subagent` for the remainder of the session.",
+    "label": "Custom Subagents (`define_subagent`)"
+  }
+}

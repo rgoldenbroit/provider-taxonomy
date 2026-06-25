@@ -1,0 +1,9 @@
+{
+  "key": "9fe781303ba93966468219678c49383eeb815d1613c78227356a46006700665c",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "You instruct the agent to run a local verification command (e.g., `npm test`) after implementing a change, and it automatically iterates on the output until the tests pass. The \"done\" condition is defined inline in the prompt by specifying which command to run as the success check.",
+    "label": "Verification loops"
+  }
+}

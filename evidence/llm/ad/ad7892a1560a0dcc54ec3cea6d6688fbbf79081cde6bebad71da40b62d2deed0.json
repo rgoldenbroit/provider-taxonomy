@@ -1,0 +1,9 @@
+{
+  "key": "ad7892a1560a0dcc54ec3cea6d6688fbbf79081cde6bebad71da40b62d2deed0",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude connects to MCP servers using environment variables, HTTP headers, or OAuth 2/2.1 tokens. You configure the chosen auth method when registering an MCP server, and credentials are passed automatically on each request to that server.",
+    "label": "MCP Authentication"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "31804b0bdc8629058af765322af73ff0a5b23b87e6172b71c9357b34307c2510",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A dropdown beneath the conversation prompt box lets users pick the reasoning model for their agent, choosing from options like Gemini 3.5 Flash, Gemini 3.1 Pro, Claude Sonnet/Opus, or GPT-OSS-120b. The selection is sticky per user turn \u2014 mid-run changes take effect only after the current execution completes or is cancelled.",
+    "label": "Model selector"
+  }
+}

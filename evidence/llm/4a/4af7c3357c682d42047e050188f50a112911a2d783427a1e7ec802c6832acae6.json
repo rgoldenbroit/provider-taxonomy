@@ -1,0 +1,12 @@
+{
+  "key": "4af7c3357c682d42047e050188f50a112911a2d783427a1e7ec802c6832acae6",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page (Config basics \u2013 Codex) covers configuration options such as model selection, approval policies, sandbox modes, permission profiles, web search, reasoning effort, feature flags, and more. There is no mention anywhere on the page of a \"dev container\" integration or running the agent inside a defined dev container or isolated runtime in the dev-container sense. The sandbox_mode options described are Codex-specific sandbox levels, not dev containers (e.g., Docker/VS Code devcontainer spec). The claim is not substantiated by this page.",
+    "supported": false
+  }
+}

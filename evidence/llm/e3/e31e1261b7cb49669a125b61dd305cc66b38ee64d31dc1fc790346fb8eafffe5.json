@@ -1,0 +1,9 @@
+{
+  "key": "e31e1261b7cb49669a125b61dd305cc66b38ee64d31dc1fc790346fb8eafffe5",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code's Sandbox Runtime wraps the entire agent process in OS-level isolation (macOS Seatbelt / Linux bubblewrap), restricting all tools, hooks, and subprocesses without requiring containers. It limits what the agent can read, write, or execute on the host system, reducing blast radius from unintended or malicious actions.",
+    "label": "Sandbox Runtime"
+  }
+}

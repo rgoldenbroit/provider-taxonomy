@@ -1,0 +1,9 @@
+{
+  "key": "03f8406962fba5a24bee4bdbc3ed684674a8fcb50b7da263834fe717318e42d4",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Plugins package skills, app integrations, and MCP servers into reusable bundles that Codex can load. Developers use them to share and reuse capabilities across workflows without redefining them each time.",
+    "label": "Plugins"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "0342b5a7b085dd97eaed632856db5db5c755ae11c0c745a400d08f531620cae2",
+  "label": "judge:matrix-google-prompt-caching",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Context caching",
+    "lifecycle_status": "active",
+    "rationale": "The page's left-hand navigation menu includes \"Context caching\" as a listed item under the \"Optimization\" section, confirming that Google's Gemini API offers a context caching feature. Additionally, the pricing/cost section states \"50\u201370% of input tokens are typically cached,\" further corroborating that context caching is an active feature. However, the page itself (the Antigravity Agent page) does not provide a detailed description of context caching as a standalone offering for cutting latency and cost \u2014 it only appears as a navigation link and an incidental mention in pricing. The claim is substantiated by the menu entry, though the specific description (\"Cache repeated context to cut latency and cost\") is not verbatim on this page.",
+    "supported": true
+  }
+}

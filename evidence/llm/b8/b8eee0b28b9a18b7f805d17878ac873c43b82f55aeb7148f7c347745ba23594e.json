@@ -1,0 +1,12 @@
+{
+  "key": "b8eee0b28b9a18b7f805d17878ac873c43b82f55aeb7148f7c347745ba23594e",
+  "label": "judge:matrix-google-plan-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The fetched page is from \"antigravity.google/blog/introducing-google-antigravity\" and contains only the text \"Google Antigravity.\" There is no mention whatsoever of a \"Plan-then-execute mode,\" producing a reviewable plan before an agent edits anything, or any related offering. The page provides no content that substantiates the claim.",
+    "supported": false
+  }
+}

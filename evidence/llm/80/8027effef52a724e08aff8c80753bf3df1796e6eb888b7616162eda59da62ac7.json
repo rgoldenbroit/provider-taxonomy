@@ -1,0 +1,9 @@
+{
+  "key": "8027effef52a724e08aff8c80753bf3df1796e6eb888b7616162eda59da62ac7",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Hooks let you inject custom scripts into the Codex agentic loop at named lifecycle events such as `PreToolUse`, `PostToolUse`, `SessionStart`, `Stop`, and others. You define them in `hooks.json` or `config.toml` at user or project level, specify a matcher and a command handler, and Codex runs matching hooks concurrently at each event; non-managed hooks must be reviewed and trusted via `/hooks` before they execute.",
+    "label": "Hooks"
+  }
+}

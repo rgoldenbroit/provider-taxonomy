@@ -1,0 +1,9 @@
+{
+  "key": "7c4b22d59041f066f4335056ccf56014609136dd790a95622f7962b11d64262f",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Every sensitive agent operation is represented as a permission resource and evaluated against deny/ask/allow access lists in strict priority order. Developers configure these lists to automatically block, prompt for approval, or permit specific actions the agent attempts to perform.",
+    "label": "Fine-Grained Permissions Engine"
+  }
+}

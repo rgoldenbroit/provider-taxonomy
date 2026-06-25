@@ -1,0 +1,9 @@
+{
+  "key": "0f3f7fc304b64859d593939cc5a27a043235679a758b98a3248ca1751153878f",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI uses MCP as the standard protocol to connect Codex (and other agents) to external tools, data sources, and context providers. You configure MCP servers that expose tools, and the model can invoke them during task execution.",
+    "label": "MCP (Model Context Protocol)"
+  }
+}

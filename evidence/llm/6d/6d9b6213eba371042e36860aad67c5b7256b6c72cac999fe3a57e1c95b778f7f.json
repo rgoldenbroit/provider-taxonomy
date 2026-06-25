@@ -1,0 +1,9 @@
+{
+  "key": "6d9b6213eba371042e36860aad67c5b7256b6c72cac999fe3a57e1c95b778f7f",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The SDK tracks file changes made by the Write, Edit, and NotebookEdit tools during an agent session, saving a backup before each modification. You enable it via `enable_file_checkpointing=True`, capture checkpoint UUIDs from the response stream, then call `rewindFiles()`/`rewind_files()` to restore files on disk to any prior state \u2014 without rolling back the conversation history. Note: changes made via Bash commands are not tracked.",
+    "label": "File Checkpointing"
+  }
+}

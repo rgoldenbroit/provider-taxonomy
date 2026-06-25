@@ -1,0 +1,9 @@
+{
+  "key": "073634557266acf7070d130bf6d9e3f107f29611949a626ea8f042c19e6397ab",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex automatically spawns multiple specialized sub-agents that run in parallel, each handling a focused part of the task, then aggregates their outputs into a single consolidated response. Developers trigger this implicitly by submitting complex tasks to Codex rather than wiring up agents manually.",
+    "label": "Subagent Workflows"
+  }
+}

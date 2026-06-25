@@ -1,0 +1,9 @@
+{
+  "key": "e53f393f15d1c37c515fe76e4f90302d34f86bfcbd5f6f89febefa88a9418824",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Each automated Git repo task runs in its own isolated worktree, so multiple branches or tasks can be worked on simultaneously without conflicting with each other. This is handled automatically when using OpenAI's Git repo automation, requiring no manual workspace setup from the developer.",
+    "label": "Git Worktree Isolation"
+  }
+}

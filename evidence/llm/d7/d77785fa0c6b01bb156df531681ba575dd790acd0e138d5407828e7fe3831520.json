@@ -1,0 +1,9 @@
+{
+  "key": "d77785fa0c6b01bb156df531681ba575dd790acd0e138d5407828e7fe3831520",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "MCP servers are configured either inline via the `mcpServers` option passed to `query()` in code, or loaded from a `.mcp.json` file via `settingSources`. Each server entry specifies a transport type (local process via `command`/`args`, or HTTP via `url`), and tools are selectively enabled using `allowedTools` with exact names or wildcards (e.g., `mcp__server-name__*`).",
+    "label": "mcpServers / .mcp.json"
+  }
+}

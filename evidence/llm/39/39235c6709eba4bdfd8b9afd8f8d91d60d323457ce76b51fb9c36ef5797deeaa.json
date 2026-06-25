@@ -1,0 +1,9 @@
+{
+  "key": "39235c6709eba4bdfd8b9afd8f8d91d60d323457ce76b51fb9c36ef5797deeaa",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Skills are reusable instruction packages stored as SKILL.md files in a `.agents/skills/` or `~/.gemini/config/skills/` directory. You can create a code-review skill by writing review instructions and best practices into a SKILL.md file; the agent auto-discovers and applies it when the task context matches, without needing to be explicitly invoked.",
+    "label": "Skills"
+  }
+}

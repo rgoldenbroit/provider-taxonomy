@@ -1,0 +1,9 @@
+{
+  "key": "969d1bf4fb908baadc9528d895112c50b9f548eb5bce06ff967e04d4293794e4",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Users mention @Claude in a Slack workspace to delegate coding tasks directly to Claude Code, which then executes asynchronously, gathers context, and surfaces results back in the channel. Task delegation and follow-up happen entirely within Slack via message actions.",
+    "label": "Claude Code in Slack"
+  }
+}

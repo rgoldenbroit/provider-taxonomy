@@ -1,0 +1,9 @@
+{
+  "key": "39adf0e767208258ec63679e81977c6c0afc5c192713b964de4fb3e137e8a35a",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex sends alerts when a task finishes or needs user input, keeping developers informed of run progress without manual polling. Notifications are surfaced for both successful completions and cases requiring human intervention.",
+    "label": "Task Completion Notifications"
+  }
+}

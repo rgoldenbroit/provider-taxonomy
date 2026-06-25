@@ -1,0 +1,9 @@
+{
+  "key": "2e2e91e4f02954ae3e28cdd5305cc66712d1b95c603805dd1e0229eb60fb123e",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Google's framework lets a central orchestrator agent coordinate multiple sub-agents either synchronously or asynchronously, with built-in retry and error-recovery logic. Agents share work by delegating tasks through the orchestrator, which manages execution flow and handles failures automatically.",
+    "label": "Multi-Agent Orchestration"
+  }
+}

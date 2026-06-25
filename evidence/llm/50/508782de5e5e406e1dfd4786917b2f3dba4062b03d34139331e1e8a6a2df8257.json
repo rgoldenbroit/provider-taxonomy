@@ -1,0 +1,9 @@
+{
+  "key": "508782de5e5e406e1dfd4786917b2f3dba4062b03d34139331e1e8a6a2df8257",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code runs inside a VS Code-managed Docker container with the project directory mounted, so all agent commands execute in an isolated environment instead of directly on the host machine. This is configured via standard VS Code dev container tooling alongside Claude Code.",
+    "label": "Dev Container Integration"
+  }
+}

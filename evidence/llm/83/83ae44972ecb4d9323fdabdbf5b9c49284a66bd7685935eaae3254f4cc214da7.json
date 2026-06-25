@@ -1,0 +1,9 @@
+{
+  "key": "83ae44972ecb4d9323fdabdbf5b9c49284a66bd7685935eaae3254f4cc214da7",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Each agent gets its own dedicated Git worktree, so multiple agents can work on different branches of the same repository simultaneously without interfering with each other. This isolation is handled automatically, enabling true parallel development within a single project.",
+    "label": "Git Worktrees"
+  }
+}

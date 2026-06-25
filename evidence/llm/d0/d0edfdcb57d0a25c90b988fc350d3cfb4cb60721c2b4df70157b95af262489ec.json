@@ -1,0 +1,9 @@
+{
+  "key": "d0edfdcb57d0a25c90b988fc350d3cfb4cb60721c2b4df70157b95af262489ec",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex reads layered `AGENTS.md` files (global `~/.codex/AGENTS.md`, then repo root, then subdirectories) before starting any task, concatenating them into a single instruction chain. You shape the agent's behavior, conventions, and workflow rules by writing Markdown in these files, with deeper files overriding earlier ones and `AGENTS.override.md` variants available for temporary overrides at any level.",
+    "label": "AGENTS.md"
+  }
+}

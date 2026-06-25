@@ -1,0 +1,9 @@
+{
+  "key": "7044a7d84f06bcb0b0b381364cdd909cc5e053baf17758ecb5a64f56dd7d9ac9",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A Markdown file placed in your project repo that Claude automatically loads at the start of every session, providing persistent instructions and context (coding conventions, architecture notes, workflow rules, etc.). The file survives context compaction, so its contents remain active throughout long sessions.",
+    "label": "CLAUDE.md"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "01a51553293a192bcb73f3c5e1d763080f2236f8a46a8df0f87cc9053e58e7a2",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Users can schedule messages to be sent to their agents at specific times, including repeatable time-based triggers, so the agent runs autonomously without the user being present. This is configured by setting up a scheduled message through the agent interface.",
+    "label": "Scheduled Tasks"
+  }
+}

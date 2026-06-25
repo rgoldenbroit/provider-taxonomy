@@ -1,0 +1,9 @@
+{
+  "key": "6f88bc5f8a2e1dd8179945b3aeca0b29de1ddbeb3da4daa75a6423426d09a281",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Typing `/resume` in the Antigravity CLI prompt opens an interactive Conversation Picker where you can search, filter, and select a previous session to continue. Sessions are automatically scoped to your current working directory, and you can also import and resume conversations from the Antigravity 2.0 desktop editor by pressing Tab to switch tabs in the picker.",
+    "label": "/resume"
+  }
+}

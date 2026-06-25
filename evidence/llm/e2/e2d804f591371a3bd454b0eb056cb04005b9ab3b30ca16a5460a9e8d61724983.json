@@ -1,0 +1,9 @@
+{
+  "key": "e2d804f591371a3bd454b0eb056cb04005b9ab3b30ca16a5460a9e8d61724983",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Google offers Context Caching via the Gemini API, allowing frequently reused prompt content (e.g. large documents or system instructions) to be stored and referenced across requests without resending it each time, reducing token costs and latency. This is a manual mechanism; the evidence provided does not show automatic context compaction within a conversation.",
+    "label": "Context Caching"
+  }
+}

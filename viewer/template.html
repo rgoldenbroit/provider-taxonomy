@@ -780,14 +780,15 @@ const MXBY = {};                              // `${capId}|${prov}` -> cell, for
 const matrixState = { tier:'', gaps:false };  // toolbar filters
 const mxSlug = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const mxBadge = s => `<span class="badge b-${esc(s)}">${esc(s)}</span>`;
+const mxDocUrl = u => (u||'').replace(/\.md(\.txt)?($|[?#])/,'$2');  // link the human doc page, not the .md
 function mxCell(capId, prov, cell){
   if (!cell) return `<div class="mx-cell unverified" data-prov="${esc(prov)}"><span class="muted small">&mdash;</span></div>`;
   MXBY[capId+'|'+prov] = cell;
   const impl = (cell.implementation && cell.implementation!=='unverified')
     ? esc(cell.implementation) : `<span class="muted">not documented</span>`;
   const ev = (cell.evidence_url||'').trim();
-  const evLink = ev ? `<a class="mxev" href="${esc(ev)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">docs &#8599;</a>` : '';
-  const more = cell.notes ? `<span class="mxmore">details &rsaquo;</span>` : '';
+  const evLink = ev ? `<a class="mxev" href="${esc(mxDocUrl(ev))}" target="_blank" rel="noopener" onclick="event.stopPropagation()">docs &#8599;</a>` : '';
+  const more = cell.description ? `<span class="mxmore">details &rsaquo;</span>` : '';
   return `<div class="mx-cell${cell.status==='unverified'?' unverified':''}" data-prov="${esc(prov)}" tabindex="0" role="button"
        style="border-left-color:${provVar(prov)}" onclick="openMatrixCell('${capId}','${prov}')"
        onkeydown="if(event.key==='Enter')openMatrixCell('${capId}','${prov}')">
@@ -800,16 +801,14 @@ function openMatrixCell(capId, prov){
   let cap=null, group=null;
   for (const g of MX.capability_groups) for (const c of g.capabilities) if (c.id===capId){ cap=c; group=g; }
   const label = (MX_PROVIDERS.find(p=>p[0]===prov)||[prov,prov])[1];
-  const ev = (cell.evidence_url||'').trim();
-  const impl = (cell.implementation && cell.implementation!=='unverified')
-    ? esc(cell.implementation) : `<span class="muted">No first-party documentation found for this capability.</span>`;
+  const ev = mxDocUrl((cell.evidence_url||'').trim());
+  const feat = (cell.implementation && cell.implementation!=='unverified') ? cell.implementation : null;
+  const desc = cell.description || (cap ? cap.what : '');
   openModal(`
     <h2>${esc(cap?cap.name:capId)}</h2>
-    <div class="row small muted" style="gap:7px;align-items:center;flex-wrap:wrap">${esc(label)}${cell.offering?` <span class="faint">&middot; ${esc(cell.offering)}</span>`:''} <span class="faint">&middot;</span> ${mxBadge(cell.status)}${group?` <span class="faint">&middot; ${esc(group.name)}</span>`:''}</div>
-    ${cap?`<div class="lede">${esc(cap.what)}</div>`:''}
-    <div class="sec"><h3 class="small muted">${esc(label)}&rsquo;s implementation</h3>
-      <div class="cmp-feats" style="font-size:14px">${impl}</div>
-      ${cell.notes?`<div class="note" style="margin-top:8px">${esc(cell.notes)}</div>`:''}</div>
+    <div class="row small muted" style="gap:7px;align-items:center;flex-wrap:wrap">${esc(label)}${cell.offering?` <span class="faint">&middot; ${esc(cell.offering)}</span>`:''}${feat?` <span class="faint">&middot;</span> <strong style="color:var(--ink)">${esc(feat)}</strong>`:''} <span class="faint">&middot;</span> ${mxBadge(cell.status)}${group?` <span class="faint">&middot; ${esc(group.name)}</span>`:''}</div>
+    <div class="lede">${esc(desc)}</div>
+    ${cap?`<div class="includes"><b>Capability:</b> ${esc(cap.what)}</div>`:''}
     ${ev?`<a class="docs" href="${esc(ev)}" target="_blank" rel="noopener">Official docs &#8599;</a>`:''}
   `);
 }

@@ -1,0 +1,9 @@
+{
+  "key": "1738a68e1e921653aea220ec3b628857c92edf5a25200d12908a68e02b8376d0",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The Antigravity Agent runs inside a Google-hosted secure Linux sandbox provisioned per API call, set via `environment: \"remote\"` in the Interactions API. The agent autonomously reasons, executes code, manages files, and browses the web within that sandbox \u2014 no infrastructure setup required from the developer.",
+    "label": "Antigravity Agent (remote environment)"
+  }
+}

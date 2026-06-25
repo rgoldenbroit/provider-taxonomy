@@ -1,0 +1,12 @@
+{
+  "key": "7e679b30f4329000796d667c65175685da31bcb1a9ea685d4adf4f81973c9ae1",
+  "label": "judge:matrix-openai-dev-container-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "",
+    "lifecycle_status": "unknown",
+    "rationale": "The page is about Codex permission profiles (filesystem and network access configuration). While it briefly mentions \".devcontainer\" as an example path in a config snippet (kept read-only under workspace roots), this is not describing a \"Dev-container integration\" feature that runs the agent inside a defined dev container or isolated runtime. The page does not describe, announce, or document any feature for running the Codex agent inside a dev container as an isolated runtime environment. The claim is not substantiated by the page content.",
+    "supported": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "802715bfb153bfd23dd44595211f77353e7813710293938928013a4dbbe556a7",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex's Memories feature lets agents retain information durably across sessions, so context and learned preferences don't need to be re-provided each time. Developers can configure what gets remembered, and the agent automatically draws on those stored memories in future interactions.",
+    "label": "Memories"
+  }
+}

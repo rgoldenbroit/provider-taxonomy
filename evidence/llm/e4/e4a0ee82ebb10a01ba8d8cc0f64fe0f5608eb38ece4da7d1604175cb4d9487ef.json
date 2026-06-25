@@ -1,0 +1,9 @@
+{
+  "key": "e4a0ee82ebb10a01ba8d8cc0f64fe0f5608eb38ece4da7d1604175cb4d9487ef",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "OpenAI automatically caches the longest reusable prefix of a prompt, reducing cost and latency for repeated context like system prompts or few-shot examples. Cached tokens are billed at a discounted rate, and caching is applied transparently without any code changes required.",
+    "label": "Prompt Caching"
+  }
+}

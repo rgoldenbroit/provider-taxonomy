@@ -1,0 +1,9 @@
+{
+  "key": "cff08c582606b9aafaa7a969543120cf70daa94ed7f072cc6f1d5e89ca8e6acc",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic's Claude apps can send push alerts to mobile devices when remote session events occur or updates are available. This keeps users informed of run progress and completion without needing to keep the app open.",
+    "label": "Mobile Push Notifications"
+  }
+}

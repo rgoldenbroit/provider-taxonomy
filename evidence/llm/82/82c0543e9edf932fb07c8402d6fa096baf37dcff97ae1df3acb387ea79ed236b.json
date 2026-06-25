@@ -1,0 +1,9 @@
+{
+  "key": "82c0543e9edf932fb07c8402d6fa096baf37dcff97ae1df3acb387ea79ed236b",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The `/rewind` command lets you roll back a session's history to a previous state after an agent has made unwanted changes across multiple steps. You use it during an active TUI session to undo agent actions and course-correct without restarting from scratch.",
+    "label": "/rewind"
+  }
+}

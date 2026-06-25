@@ -1,0 +1,9 @@
+{
+  "key": "447728a792064891ec6861e348f98449e396d9b734a00511236ed837de2eea52",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Read-only, non-blocking hooks that fire during agent execution to capture events for logging, audit trails, and metrics. Developers attach these hooks to observe agent actions without interrupting the agent's flow.",
+    "label": "Inspect Hooks"
+  }
+}

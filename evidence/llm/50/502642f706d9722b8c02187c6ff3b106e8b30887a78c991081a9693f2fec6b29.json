@@ -1,0 +1,9 @@
+{
+  "key": "502642f706d9722b8c02187c6ff3b106e8b30887a78c991081a9693f2fec6b29",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic's Claude can spawn Subagents \u2014 specialized AI assistants that each run in their own isolated context window to handle a delegated subtask. Once complete, the subagent returns a summarized result back to the main conversation, keeping the primary context clean.",
+    "label": "Subagents"
+  }
+}

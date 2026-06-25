@@ -1,0 +1,9 @@
+{
+  "key": "9e81a826da43a9e075415008763ecbf4be2b0969875ee7c83840d10794491b25",
+  "label": "matrixdesc:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Codex runs agent tasks in managed cloud containers where you configure the base image, installed dependencies, cached layers, and injected secrets. You define an environment to control exactly what Codex installs and executes during each cloud task run.",
+    "label": "Environments"
+  }
+}

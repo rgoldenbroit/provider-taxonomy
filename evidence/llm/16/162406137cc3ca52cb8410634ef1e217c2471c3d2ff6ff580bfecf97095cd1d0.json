@@ -1,0 +1,9 @@
+{
+  "key": "162406137cc3ca52cb8410634ef1e217c2471c3d2ff6ff580bfecf97095cd1d0",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A file stored at `.agents/rules` in the workspace or git root that provides standing instructions and context applied to the agent for that project. Developers place persistent, project-scoped directives there so the agent follows them automatically across sessions.",
+    "label": "Workspace Rules"
+  }
+}

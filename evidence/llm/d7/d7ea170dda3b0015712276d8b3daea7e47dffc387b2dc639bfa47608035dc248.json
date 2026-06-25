@@ -1,0 +1,9 @@
+{
+  "key": "d7ea170dda3b0015712276d8b3daea7e47dffc387b2dc639bfa47608035dc248",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "A built-in store inside the editor where you can browse, install, and authenticate to supported MCP servers without manual configuration. Authentication is handled directly through the store interface during the install flow.",
+    "label": "MCP Store"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "key": "94d62b9f402fb8a1bf79e8479215b5dc13dc346697375e498bc44ae6f888af2b",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Anthropic's Claude agents support a Schedule Trigger that runs a routine either on a recurring cadence or once at a specific future time, with no human supervision required. Developers configure the trigger to fire automatically, allowing agents to execute tasks periodically or at a set point in the future.",
+    "label": "Schedule Trigger"
+  }
+}

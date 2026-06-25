@@ -1,0 +1,9 @@
+{
+  "key": "033082c6c6e7361ae786c39913a28b688388e503f4d201482217c8aa4abeb64e",
+  "label": "matrixdesc:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "The primary agent delegates long-running operations to parallel autonomous Subagents using a multi-threaded async architecture. Progress is monitored via an interactive panel that tracks these background tasks in real time.",
+    "label": "Subagents"
+  }
+}

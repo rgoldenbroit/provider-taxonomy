@@ -1,0 +1,9 @@
+{
+  "key": "4eb1e788efeff274dc23e58d23948c3fc38572849aca434d4533291b09db6448",
+  "label": "matrixdesc:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description": "Claude Code automatically tracks token usage and cumulative spend per session, giving developers visibility into costs for agent runs. No manual instrumentation is needed; the accounting is built into the Claude Code interface.",
+    "label": "Cost Tracking"
+  }
+}
