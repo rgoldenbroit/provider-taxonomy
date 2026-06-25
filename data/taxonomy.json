@@ -14,7 +14,8 @@
         "frontier model",
         "top model",
         "best model"
-      ]
+      ],
+      "comparison_note": "All three field a frontier general-purpose model and build their agentic and chat products on it: Anthropic's Claude Fable 5 and OpenAI's GPT-5.5 Pro are generally available, while Google's Gemini 3.5 Pro is in preview. (Detailed context-window/pricing/modality comparison is on the roadmap.)"
     },
     {
       "id": "consumer-chat-assistant",

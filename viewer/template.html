@@ -491,9 +491,10 @@ function viewLineage(){
 }
 
 function viewStaleness(){
-  const rows = prods.map(p=>({p, o:stale[p.id]})).filter(r=>r.o!=null).sort((a,b)=>b.o-a.o);
-  let html = `<h3>Re-verify soonest first</h3><div class="muted small">Re-verify intervals by confidence: high ${APP.intervals.high}d &middot; medium ${APP.intervals.medium}d &middot; low ${APP.intervals.low}d. "today" = ${today}.</div>`;
-  html += `<div class="tablewrap"><table><tr><th>overdue</th><th>product</th><th>provider</th><th>confidence</th><th>last verified</th></tr>` +
+  const all = prods.map(p=>({p, o:stale[p.id]})).filter(r=>r.o!=null).sort((a,b)=>b.o-a.o);
+  const rows = all.slice(0, 25);   // cap: this is a queue, not a dump — show the 25 most-due
+  let html = `<h3>Re-verify queue &mdash; soonest first</h3><div class="muted small">Top 25 of ${all.length} tracked offerings. Re-verify intervals by confidence: high ${APP.intervals.high}d &middot; medium ${APP.intervals.medium}d &middot; low ${APP.intervals.low}d. "today" = ${today}.</div>`;
+  html += `<div class="tablewrap"><table><tr><th>overdue</th><th>offering</th><th>provider</th><th>confidence</th><th>last verified</th></tr>` +
     rows.map(({p,o})=>`<tr class="clickable" onclick="openDrawer('${p.id}')">
       <td class="${o>0?'stale':'faint'}">${o>0?('+'+o+'d'):o+'d'}</td>
       <td>${esc(p.name)}</td><td>${esc(p.provider)}</td>
@@ -574,8 +575,8 @@ function covCell(cap, provider){
   return `<div class="cov-cell" data-prov="${esc(provider)}">${tops.map(covPill).join('')}</div>`;
 }
 function viewOverview(){
-  const offerings = prods.filter(p=>p.status!=='absent').length;
-  const capCount = caps.filter(c=>c.id!=='unclassified').length;
+  const productCaps = caps.filter(c=>c.id!=='unclassified' && !axisIds.has(c.id)).length;
+  const topFeatures = prods.filter(p=>p.kind==='feature' && (prodById[p.parent_id]||{}).kind!=='feature').length;
   const grounded = Math.round((M.provenance_completeness||0)*100);
   const tiers = [...new Set(caps.map(c=>c.tier))];
   const cols = `210px ${providers.map(()=>'1fr').join(' ')}`;
@@ -603,7 +604,7 @@ function viewOverview(){
       <button class="btn" onclick="exploreFunction('agentic-coding')">Agentic Coding breakdown &rarr;</button>
       <button class="btn" onclick="showAbout()">How it works</button>
     </div>
-    <div class="hero-stats"><b>${offerings}</b> offerings &middot; <b>${capCount}</b> capabilities &middot; <b>${providers.length}</b> providers &middot; <b>${grounded}%</b> source-grounded</div>
+    <div class="hero-stats"><b>${providers.length}</b> providers &middot; <b>${productCaps}</b> capabilities &middot; <b>${topFeatures}</b> grounded features &middot; <b>${grounded}%</b> first-party-sourced</div>
   </section>
   <div class="cov-head">
     <h3 style="margin:0">Coverage at a glance</h3>
@@ -645,11 +646,17 @@ function viewAbout(){
     `</div>
     <h3>By the numbers</h3>
     <div class="metrics">
-      <span><b>${caps.length}</b> capabilities</span>
-      <span><b>${prods.length}</b> products</span>
       <span><b>${providers.length}</b> providers</span>
+      <span><b>${caps.filter(c=>c.id!=='unclassified' && !axisIds.has(c.id)).length}</b> capabilities</span>
+      <span><b>${prods.filter(p=>p.kind==='feature' && (prodById[p.parent_id]||{}).kind!=='feature').length}</b> grounded features</span>
+      <span><b>${prods.filter(p=>p.kind==='feature' && (prodById[p.parent_id]||{}).kind==='feature').length}</b> sub-features</span>
       <span>schema conformance <b>${M.schema_conformance.toFixed(2)}</b></span>
       <span>provenance <b>${M.provenance_completeness.toFixed(2)}</b></span>
+    </div>
+    <h3>Work in progress</h3>
+    <div class="muted small" style="line-height:1.6;max-width:75ch">
+      <b style="color:var(--ink)">Done:</b> agentic-coding, enterprise agent platform &amp; agent-building SDK are deep and balanced across all three providers; every node is first-party-sourced and reproducible.<br>
+      <b style="color:var(--ink)">Next:</b> deepen the focused capabilities (browser/computer-use, consumer chat, image/video), tighten Google ADK grounding precision, and add a model-attribute comparison for flagship models. Some cells are intentionally lopsided — they reflect where a provider has (or hasn't) shipped, not gaps in the data.
     </div>
     <p class="muted small" style="margin-top:16px">Python engine on Vertex AI Claude · single-file zero-dependency viewer · grounded, evaluated against gold-set + adversarial suites, and gated before every deploy.</p>
   </div>`;
