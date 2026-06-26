@@ -1,0 +1,11 @@
+{
+  "key": "d6ec84fd4f133abf7b12db55b703556cfd2dced542b83ae53e9bcbd6e9857715",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page documents \"Remote connections\" \u2014 a feature that lets users control a Codex host machine from another device (phone, another PC) via a secure relay. This is a remote-control / multi-device access feature, not a \"Resume / fork session\" capability. The capability under audit is specifically about continuing OR BRANCHING a previous session (i.e., picking up from a saved state or creating an alternate branch of prior work), which is distinct from and must not be confused with adjacent capabilities like \"Checkpoint / rewind.\" The page does mention \"continue existing threads,\" but the core feature being documented is remote device pairing and control, not session resumption or forking as a standalone capability. The cell label \"Multi-Device Session Handoff\" and its description (\"resuming an active Codex session from any signed-in device\") describe the remote connections feature, not the Resume/fork session capability (which implies persisted session state that can be branched or rewound). Therefore, the page does not specifically document the \"Resume / fork session\" capability as defined, and both the label and description mismatch the target capability."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "cd6fcca1c7eef6bf3185fb75232b5c2de09375f84645de724014765705fceae8",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "correct_label": "CLAUDE.md",
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents CLAUDE.md as the mechanism for giving Claude persistent project-scoped instructions \u2014 covering what it is, where to place it, and how it is loaded at the start of every session. The label \"CLAUDE.md\" matches the feature name used throughout the page. The description accurately reflects the page: it is a Markdown file placed in the project repo, automatically loaded at session start, and used for persistent instructions and context (coding conventions, architecture, workflow rules). The one claim worth scrutinising \u2014 that \"the file survives context compaction\" \u2014 is consistent with the page's statement that CLAUDE.md is loaded at the start of every session (implying it is re-injected after compaction), so it is not a fabricated claim. The page clearly distinguishes CLAUDE.md from adjacent capabilities: auto memory (Claude-written notes), hooks (PreToolUse), skills/rules (path-scoped reusable extensions), and the extension overview \u2014 confirming the capability is distinct from the listed adjacent ones."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "2108be84f8909c8117647ade26508806382538e95ca40258995001e619e0a7b2",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents the \"Agent Teams\" capability for Claude Code, confirming the label is accurate. However, the description contains an inaccuracy: it states agents \"communicate directly with each other via peer-to-peer messaging,\" which misrepresents the architecture. According to the page, the team has one session acting as the \"team lead\" that coordinates work, assigns tasks, and synthesizes results \u2014 not a flat peer-to-peer structure. While teammates can message each other directly (distinct from subagents), the page emphasizes a lead-and-teammates hierarchy with a shared task list, not equal peer-to-peer communication. The description also omits that Agent Teams are experimental and disabled by default, which is a significant qualifier on the page. The phrase \"peers\" is also misleading given the explicit lead/teammate distinction drawn in the documentation."
+  }
+}

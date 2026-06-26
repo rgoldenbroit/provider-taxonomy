@@ -1,0 +1,11 @@
+{
+  "key": "505ab8f256a42aa2b2b2dfb6c7b5f4753c10ea1d5e8866ad01439c848283cda0",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly includes \"Restrict network egress\" as a configuration topic under dev containers, confirming this capability is documented as a shipped feature for Anthropic's Claude Code. The page also references \"a fuller hardened example with a firewall and persistent volumes,\" directly corroborating the cell's description of a firewall script that restricts outbound network traffic to allow-listed domains. The label \"Egress Firewall Control\" accurately reflects the \"Restrict network egress\" section using firewall methodology described on the page. The description's claims \u2014 firewall script, allow-listed domains, default-block posture, developer configuration \u2014 are all consistent with the page's framing. While the page text provided is truncated before the full \"Restrict network egress\" section body, the table of contents and the firewall reference confirm the capability is documented here and is distinct from the adjacent capabilities (sandboxed execution, tool permissions, etc.)."
+  }
+}

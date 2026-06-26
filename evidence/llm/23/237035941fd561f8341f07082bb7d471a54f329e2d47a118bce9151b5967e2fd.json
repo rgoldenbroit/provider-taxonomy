@@ -1,0 +1,11 @@
+{
+  "key": "237035941fd561f8341f07082bb7d471a54f329e2d47a118bce9151b5967e2fd",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents MCP Integration as a shipped feature in the Antigravity IDE \u2014 it covers the core protocol, how to connect servers, configuration, and supported integrations. The label \"MCP Integration\" matches the page's own heading (\"Antigravity Editor: MCP Integration\"). However, the description contains an inaccuracy: it states \"Both local process and remote host configurations are supported,\" which is correct, but it also says connections are managed through local process and remote host configurations, omitting the primary method described on the page \u2014 the built-in MCP Store \u2014 which is the first and main way to connect servers. More critically, the description does not mention the MCP Store at all, creating a misleading picture of how connectivity works. The page does not frame the feature as being primarily about local/remote config; the MCP Store is the primary interface. The description is therefore not fully faithful to the page's portrayal of the feature."
+  }
+}

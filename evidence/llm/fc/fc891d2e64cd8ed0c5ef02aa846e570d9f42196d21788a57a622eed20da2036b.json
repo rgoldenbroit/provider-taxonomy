@@ -1,0 +1,11 @@
+{
+  "key": "fc891d2e64cd8ed0c5ef02aa846e570d9f42196d21788a57a622eed20da2036b",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents \"Built-in Tracing\" as a shipped feature of the OpenAI Agents SDK under the \"Tracing\" section. It confirms that tracing is enabled by default and records model calls, tool calls, handoffs, guardrails, and custom spans \u2014 exactly as the cell description states. The Traces dashboard reference (platform.openai.com/traces) supports the claim about viewability for debugging, review, and compliance. The label \"Built-in Tracing\" is directly used in the page's comparison table (\"Built-in tracing\" row). The description faithfully reflects the page content without invented claims. This is clearly an audit logging/telemetry capability and is distinct from the adjacent capabilities listed (no confusion with code review, cost tracking, evals, checkpoint/rewind, or session forking)."
+  }
+}

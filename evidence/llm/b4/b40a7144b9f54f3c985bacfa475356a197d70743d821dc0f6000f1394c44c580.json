@@ -1,0 +1,11 @@
+{
+  "key": "b40a7144b9f54f3c985bacfa475356a197d70743d821dc0f6000f1394c44c580",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly and specifically about the `/goal` command in Claude Code \u2014 exactly the capability under review (goal-directed autonomous iteration). It is not about any adjacent capability (subagents, multi-agent teams, workflows, plan-then-execute, or parallel workspaces). The label `/goal` matches the command documented throughout the page. The description accurately reflects the page: `/goal` sets a verifiable completion condition, a separate lightweight/fast model checks after each turn whether the condition is met, Claude automatically starts the next turn if not met, the goal clears once satisfied, and it is complementary to auto mode (which handles per-tool approvals) for fully autonomous multi-turn execution. All claims in the description are directly supported by the page text."
+  }
+}

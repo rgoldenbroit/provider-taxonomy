@@ -1,0 +1,11 @@
+{
+  "key": "0d920d18c8fc8bbc9d11024ee1812dc2e2c290ee794f6071dc25cfcc8eb60d16",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Hooks\" under the Antigravity 2.0/Customizations section and documents exactly this capability: running custom scripts/shell commands at specific points in the agent's execution loop (PreToolUse, PostToolUse, PreInvocation, PostInvocation, Stop). The label \"Lifecycle Hooks\" accurately reflects the feature. The description correctly states that hooks run custom local shell scripts/commands at specific agent lifecycle events (before/after tool calls, etc.) and references the JSON-based configuration contract (hooks.json), consistent with what the page documents. The description's mention of \"JSON stdin/stdout contract\" is the only claim not explicitly confirmed by the page text shown (the page describes hooks.json configuration but does not explicitly mention a stdin/stdout communication protocol), which is a minor unsupported addition, but the core description is otherwise faithful and accurate."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "ff3fd09e16508638d8e6bb5cb89b22138b29568f6ae255405add50fb6ff67e9e",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page has a dedicated \"Protect against prompt injection\" section that explicitly documents this capability for Claude Code, confirming the label is accurate. However, the cell description claims \"isolated execution contexts\" as a prompt-injection safeguard, which conflates two distinct features: the page lists \"Isolated context windows\" (specifically scoped to web fetch using a separate context window) under \"Additional safeguards,\" not as a core prompt-injection protection mechanism, and \"Sandboxed bash tool\" is listed under \"Built-in protections\" rather than prompt-injection defenses. The cell description's phrasing \"isolated execution contexts\" blurs these into a single prompt-injection defense in a misleading way. Additionally, the description omits key listed protections such as \"Network command approval,\" \"Command injection detection,\" \"Fail-closed matching,\" and \"Trust verification,\" while inventing the framing that these safeguards are \"built into Claude Code specifically to prevent hijacking via untrusted external content\" as a unified system \u2014 a characterization not directly supported by the page. The core protections documented (permission system, context-aware analysis, input sanitization) are accurately reflected, but the inclusion of \"isolated execution contexts\" as a prompt-injection mechanism (rather than a privacy/fetch safeguard) is a misrepresentation of the page's content."
+  }
+}

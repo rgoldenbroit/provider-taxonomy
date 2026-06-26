@@ -1,0 +1,11 @@
+{
+  "key": "1e88431a697fb7f9e8603ef7941ce2b2ab4a37a63e143615192faef4986b8d99",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents \"Thread automations\" as a distinct feature within OpenAI's Codex Automations system. The page defines them as \"heartbeat-style recurring wake-up calls attached to the current thread,\" used \"when you want Codex to keep returning to the same conversation on a schedule\" and when \"the scheduled work should preserve the thread's context instead of starting from a new prompt each time.\" This directly matches both the cell label (\"Thread Automations\") and the cell description (scheduling/triggering recurring agent tasks tied to a specific conversation thread, running automatically without user supervision, configured within an existing thread). The page also clearly distinguishes thread automations from standalone/project automations, confirming this is a specific named sub-feature. The description's claims are all faithful to the page with no invented content."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "3c8e49268e1c732acdfd95825cc605d08d65d88b46636c38ef74af03339b9d78",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is a navigation/sitemap page for the OpenAI/Codex documentation. It contains no substantive content about a \"Goals\" feature in Codex \u2014 no definition of a \"Goal\" as a verifiable done condition, no description of an autonomous iteration loop, and no explanation of how such a feature works. The page is purely a navigation shell listing doc sections (e.g., Concepts, Chronicle, Sandboxing, Subagents, Workflows, etc.) without documenting any specific capability. There is no evidence on this page that Codex has a shipped \"Goals\" feature matching the described capability, nor does it support the label \"Goals (Codex)\" or the description provided. The page cannot confirm or deny the cell's claims."
+  }
+}

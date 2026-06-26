@@ -1,0 +1,12 @@
+{
+  "key": "9e4f3fe5a83b43aad2b05de378dcedac78702cda7fe64c6233a1b9d9e5cde9cc",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "correct_label": "Evals API",
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is specifically about OpenAI's Evals API \u2014 a shipped feature for programmatically defining evaluations, running test suites against model outputs, and scoring results with graders (including model-based graders). The page explicitly covers configuring eval runs via API calls and integrating them into batch or automated workflows. The cell label \"Evals API\" matches the page's own terminology. The description accurately reflects the page content: programmatic definition of evaluation criteria, running test suites at scale, scoring with external model graders, and API-driven integration into CI/batch workflows. No claims are invented or inaccurate relative to the page. The page is clearly distinct from adjacent capabilities like audit logging, cost tracking, or session management."
+  }
+}

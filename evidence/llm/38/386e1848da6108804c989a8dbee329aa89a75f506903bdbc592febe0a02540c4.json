@@ -1,0 +1,11 @@
+{
+  "key": "386e1848da6108804c989a8dbee329aa89a75f506903bdbc592febe0a02540c4",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page explicitly documents \"Establish verification loops\" as a named best practice for the Antigravity CLI. It describes the agent running a local verification command (e.g., `npm test`) after implementing a change and automatically iterating on test outputs \u2014 exactly matching the cell's label \"Verification loops\" and its description. The label is drawn directly from the page's section heading. The description accurately reflects the page content: specifying a command inline in the prompt (e.g., \"Run npm test afterward to verify the build\") as the done condition, with the agent iterating automatically on outputs. This is distinct from the adjacent capabilities (subagents, multi-agent teams, workflows, plan-then-execute, parallel workspaces), all of which are covered in separate sections of the same page without being conflated with verification loops."
+  }
+}

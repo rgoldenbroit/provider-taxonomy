@@ -1,0 +1,11 @@
+{
+  "key": "55a004c9da0954a1331bf7472c05eb9d6f5e3e34d0b6b2b865368edc1fc915ca",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page explicitly documents \"Terminal Sandboxing\" as a shipped feature under that exact heading, confirming the label is correct. The page confirms kernel-level OS isolation (macOS Seatbelt/sandbox-exec, Linux nsjail) and file system restrictions \u2014 so those parts of the description are accurate. However, the description claims \"Access beyond the sandbox boundary requires explicit permission grants from the user,\" which is not supported by the page. According to the page, network access is controlled via a separate toggle (\"Sandbox Allow Network\") in settings, not through explicit per-action permission grants from the user; file system restrictions are enforced absolutely (writes limited to workspace and essential system locations) with no mention of a permission-grant mechanism to cross the boundary. This is an invented claim not found in the cited page."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "key": "e0efede8d9f93b84cb05e2c402879f2788e30ef609884b818a33679eaf45c665",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "Workspace Rules are project-scoped instruction files stored at the workspace or git root (.agents/rules), directly matching the capability of a repo file giving the agent standing instructions and context."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Plugins are namespaced bundles grouping skills, rules, MCP servers, and hooks into a single package \u2014 directly realizing the capability of bundling reusable capabilities/instructions the agent can load."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "Lifecycle Hooks run custom local shell scripts or commands at specific lifecycle points during execution, directly matching the capability of running custom logic on agent events."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Rules provide persistent, reusable constraints/context but do not specifically shape the system prompt, persona, or output style. The capability calls for system-prompt or output style customization; rules are general-purpose constraints, making this an adjacent but not direct match."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "MCP Integration directly supports the Model Context Protocol as a standard way to connect external tools, databases, and services \u2014 a direct match."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "MCP Store is a built-in store to browse, install, and authenticate MCP servers directly in the editor, directly realizing install, configure, and discover aspects of MCP server management."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "Per-Tool MCP Permission grants access to a single named tool on a specific MCP server, directly realizing fine-grained allow-listing control over which MCP tools the agent may use."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "Subagents feature explicitly delegates long-running operations to parallel autonomous agents, directly matching the capability of spawning focused sub-agents to handle parts of a task."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Multi-Agent Orchestration provides a framework for coordinating multiple agents with error recovery, retries, and coordination logic, directly realizing the capability of multi-agent teams sharing and coordinating work."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Workflows are saved markdown files defining a repeatable series of steps to guide the agent through tasks across sessions \u2014 a direct match for defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "Request Review Mode pauses at milestones for user approval but does not specifically produce a reviewable plan before any edits occur. Plan-then-execute implies a distinct planning phase with no edits; pausing at milestones is a related but different control mechanism."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Support has agents operate in dedicated Git worktrees to isolate parallel work within a project, directly realizing the capability of parallel isolated workspaces without collisions."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Tasks run tracked, long-running operations asynchronously without blocking the primary agent \u2014 a direct match for background/async execution."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Scheduled Tasks allow users to schedule messages to agents with repeatable time-based triggers, directly realizing the capability of scheduled or triggered runs without supervision."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Terminal Sandboxing provides kernel-level/native OS isolation for terminal commands executed by the agent, directly realizing sandboxed execution to limit blast radius."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "The Fine-Grained Permissions Engine represents every sensitive agent operation as a permission, directly realizing tool permission controls to approve/deny what the agent is allowed to do."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Independent Network Access Control explicitly controls network connectivity for sandboxed commands independently of filesystem restrictions, directly realizing the capability to restrict the agent's outbound network access."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "Inspect Hooks are read-only, non-blocking hooks specifically for logging, audit trails, and metrics collection \u2014 a direct match for audit logging and telemetry."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": true,
+        "reason": "Observability tracks per-turn and cumulative token usage and provides access to thinking traces, directly realizing cost and usage tracking for token spend monitoring."
+      }
+    ]
+  }
+}

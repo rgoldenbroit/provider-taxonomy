@@ -1,0 +1,11 @@
+{
+  "key": "2ef2ecb23b13cd18f5cc5966605d9471961d791eedb6b1d6fdef6dad7f62ac58",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents the \"Skills\" feature for this provider (Google / Antigravity / Gemini CLI), including the exact directory paths (.agents/skills/ and ~/.gemini/config/skills/), the SKILL.md file format, and the progressive-discovery mechanism by which the agent auto-applies a skill when context matches without explicit invocation. The page even provides a worked example of a code-review skill, directly tying the feature to the capability being evaluated. The label \"Skills\" matches the page's own heading and feature name. The description accurately reflects the page: skills are reusable instruction packages stored as SKILL.md files in the two documented directories, the agent auto-discovers and applies them based on context, and no explicit invocation is required. No material claims in the description are invented or contradict the page."
+  }
+}

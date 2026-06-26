@@ -1,0 +1,11 @@
+{
+  "key": "035bc9826aa9217588804131ce485573321fe30db857a429290115f0c1d17560",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Plugins\" and documents OpenAI Codex's Plugins feature \u2014 a mechanism for bundling skills, app integrations, and MCP servers into reusable workflows. This directly matches the capability under review (packaged reusable extensions). The cell label \"Plugins\" is the exact name used throughout the page. The description accurately reflects the page content: plugins bundle skills, app integrations, and MCP servers; they are reusable across workflows; and developers can share/reuse them without redefining capabilities each time. No claims in the description are invented or contradicted by the page. The feature is clearly distinct from the adjacent capabilities listed (project-scoped instruction files, lifecycle hooks, output customization, model selection)."
+  }
+}

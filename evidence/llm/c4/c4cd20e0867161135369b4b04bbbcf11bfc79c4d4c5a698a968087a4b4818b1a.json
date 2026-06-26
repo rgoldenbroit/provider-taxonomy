@@ -1,0 +1,11 @@
+{
+  "key": "c4cd20e0867161135369b4b04bbbcf11bfc79c4d4c5a698a968087a4b4818b1a",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Codex Security\" and documents this exact capability \u2014 scanning repositories for security vulnerabilities using a repo-specific threat model, validating findings, and providing remediation guidance. It is clearly distinct from the adjacent capabilities (sandboxed execution, tool permissions, network/egress control, prompt-injection protection, dev-container integration), which the page explicitly redirects readers away from (\"For Codex sandboxing, approvals, network controls, and admin settings, see Agent approvals & security\"). The label \"Codex Security\" matches the page title and OpenAI's real product name. The description accurately reflects the page: it describes a security-review plugin and cloud service that scans repositories for vulnerabilities, validates findings, and delivers remediation guidance, integrating with Codex to audit code changes and agent-generated output \u2014 all of which are supported by the page content (plugin use cases include scanning repos, reviewing code changes, triaging backlogs, fixing/verifying findings; the cloud service uses a repo-specific threat model and validation). No invented claims are present."
+  }
+}

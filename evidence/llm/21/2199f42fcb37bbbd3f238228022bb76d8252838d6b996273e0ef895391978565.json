@@ -1,0 +1,11 @@
+{
+  "key": "2199f42fcb37bbbd3f238228022bb76d8252838d6b996273e0ef895391978565",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents the `allowedTools` / `allowed_tools` option in Anthropic's Agent SDK as a mechanism to define which MCP tools a Claude agent may invoke. It covers: (1) per-server and per-tool granular permissions (e.g., `mcp__github__*`, `mcp__db__query`), (2) wildcard patterns to cover groups of tools, and (3) the requirement that MCP tools need explicit permission before Claude can use them. This directly matches the capability definition of \"MCP tool governance / allow-listing.\" The label \"MCP Tool Allow-listing\" accurately reflects the page's `allowedTools` feature name and the \"Allow MCP tools\" section heading. The description's claims \u2014 granular permission rules, wildcard patterns, per-server/tool specification, and restriction to explicitly permitted tools \u2014 are all faithfully supported by the page text. The page is clearly distinct from adjacent capabilities: it is not about the MCP protocol itself, server management/registry, MCP authentication, persistent agent memory, context compaction, or prompt caching."
+  }
+}

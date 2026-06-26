@@ -1,0 +1,11 @@
+{
+  "key": "c8bc26f3fb98542c762928decb603b0d97bfac719d68f3005ac7ba9737ef5284",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is specifically about \"Codex for Linear,\" a native connector that lets users delegate coding tasks from Linear issues by assigning issues to @Codex or mentioning it in comments \u2014 exactly the chat-surface integration capability described. The label \"Codex for Linear\" matches the official name used throughout the page. The description accurately reflects the page: assigning an issue to @Codex or mentioning it triggers a cloud task, and Codex can also connect to the Linear MCP server for local tasks. No invented claims are present, and the page is clearly about this specific chat/issue-tool integration, not an adjacent capability like mobile/web remote control, notifications, or other access surfaces."
+  }
+}

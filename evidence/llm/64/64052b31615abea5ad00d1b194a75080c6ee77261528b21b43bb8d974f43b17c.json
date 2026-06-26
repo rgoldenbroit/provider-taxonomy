@@ -1,0 +1,11 @@
+{
+  "key": "64052b31615abea5ad00d1b194a75080c6ee77261528b21b43bb8d974f43b17c",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is titled \"Using PLANS.md for multi-hour problem solving\" within the Codex documentation, which directly documents the Plan-then-execute mode capability for OpenAI's Codex. The label \"PLANS.md\" accurately reflects the provider's own naming (PLANS.md file) for this feature. The description correctly captures the core behavior: Codex writes its intended approach to a PLANS.md file before making any edits, enabling developer review and adjustment for complex or multi-hour tasks, and then proceeds with execution after approval or feedback. This is distinct from the adjacent capabilities (subagents, multi-agent teams, workflows/automations, goal-directed autonomous iteration, parallel workspaces), as it specifically concerns a plan-first, human-reviewable step before edits."
+  }
+}

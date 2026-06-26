@@ -1,0 +1,11 @@
+{
+  "key": "fa4131de36ad540fb4496a1ef03ee213571f3ee45c063a69149a0bab959d4f2b",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page exclusively documents Anthropic's \"Remote Control\" feature \u2014 the ability to continue a local Claude Code session from a phone, tablet, or browser. It contains no mention whatsoever of push notifications (mobile or otherwise) for run progress or completion. The cell's label (\"Mobile Push Notifications\") and description (push alerts to mobile devices when remote session events occur) are not supported by this page. The page is squarely about the adjacent \"Remote control (mobile/web)\" capability, which is explicitly listed as a capability this cell must NOT be confused with. There is no evidence on this page that Anthropic has shipped a push-notification feature for run progress/completion."
+  }
+}

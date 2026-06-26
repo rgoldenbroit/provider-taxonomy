@@ -1,0 +1,11 @@
+{
+  "key": "1a7458bf81b1bf091e7a6be4d4e29dd1d6189f7ec6cc59c8a79cf9d99914ca8a",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents MCP authentication (OAuth with dynamic client registration, manual OAuth credentials, Google ADC/Application Default Credentials, and custom headers/bearer tokens), so documents_capability=true. The label \"MCP Store\" is supported by the page, which repeatedly references the built-in \"MCP Store\" as the interface for browsing and installing MCP servers. However, the description is only partially faithful: it correctly describes the store's browse/install/authenticate flow, but it overstates authentication handling by claiming it is handled \"directly through the store interface during the install flow.\" The page shows that OAuth authentication is actually done through Agent Settings (Cmd+,), not the store install flow itself \u2014 users click an \"Authenticate\" button in the Customizations tab, then complete a browser-based OAuth flow and paste an authorization code back into the settings panel. The description conflates the store's install UX with the separate authentication flow, making it inaccurate."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "d90e0d11ebc15746470af2fde48cd608f8495d79d5a0092d11df33a5b9e93d8b",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents the `/rewind` (or `/undo`) command under \"Rewind history with `/rewind`\", describing it as a way to roll back a conversation thread to a previous stable checkpoint after an agent has made successive unwanted changes \u2014 without discarding the session. This directly matches the Checkpoint/rewind capability and is distinct from adjacent capabilities (no audit logging, code review, cost tracking, evals, or resume/fork conflation). The cell label `/rewind` is the exact command name used on the page, and the description accurately captures the feature: rolling back session history after unwanted multi-step agent changes during an active TUI session to course-correct without restarting."
+  }
+}

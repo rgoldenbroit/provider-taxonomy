@@ -1,0 +1,11 @@
+{
+  "key": "264565ea5fd749b09626929bc4f114735c851c5c4c11208de87fb9454fbb7ced",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The page explicitly documents a \"Sandbox Allow Network\" / \"Sandbox Network Access\" toggle that independently controls outbound network connectivity for sandboxed terminal commands, separate from file-system restrictions \u2014 exactly the capability being assessed. However, the provider's own name for this feature (per the page) is \"Sandbox Network Access\" (or \"Sandbox Allow Network\"), not \"Independent Network Access Control.\" The label in the cell is invented/paraphrased rather than the provider's real name. The description is substantively faithful to the page: it correctly states that network access is independently controllable within the sandbox without affecting filesystem policies, which matches \"Network connectivity can be independently controlled\u2026 allow or deny network access while maintaining file system restrictions.\""
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "0110b6adcb9031c9c2995cb102e3c5795bd14e6036ef585f67ff9fede63533aa",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page (\"Configure permissions\") directly documents Claude Code's tool permission controls as a shipped feature. It describes the tiered permission system (Read-only/Bash/File modification), the allow/ask/deny rule types, and the deny-then-ask-then-allow evaluation order \u2014 all of which match the cell's label (\"Permission System\") and description exactly. The description's claims about tool categories, approval levels, and rule evaluation order are all faithfully supported by the page text. No confusion with adjacent capabilities (sandboxed execution, network/egress control, etc.) is present."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "73a6a68f815f8a23fa97f93ef94fa4e2a9b731040f55fae33e47ba32f0b399b9",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly and specifically about Claude Code's \"Remote Control\" feature \u2014 it is titled \"Continue local sessions from any device with Remote Control\" and covers exactly this capability. The cell label \"Remote Control\" matches the feature's official name used throughout the page. The description accurately reflects the page's content: it correctly states that users can connect to an active agent session running on their local machine from a phone, tablet, or browser; that they can monitor progress and steer the session in real time; and that the agent keeps running locally. All claims in the description are supported by the page and are not confused with adjacent capabilities (Notifications, Chat-surface integration, or Access surfaces)."
+  }
+}

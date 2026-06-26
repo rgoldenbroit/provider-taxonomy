@@ -1,0 +1,11 @@
+{
+  "key": "fbb2a117a254bd91096673e105df55e4d7abda2cff9abd4be287c47bf79351c0",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": false,
+    "label_ok": true,
+    "reason": "The cited page is a CLI reference for the Antigravity CLI, documenting TUI slash commands, keyboard shortcuts, and JSON configuration parameters. It contains no mention of push notifications for run progress or completion. While the description's claim that the page is absent of push notification documentation is accurate, the page does not document this capability (or its absence as a deliberate \"not supported\" decision) \u2014 it simply doesn't address it at all. The page is a CLI reference, not a feature-support matrix or notifications documentation. Therefore, documents_capability is false because the page does not specifically document push notifications as a shipped or unsupported feature. The label \"Not supported\" is a reasonable conclusion, and the description accurately reflects the page content, so those are acceptable."
+  }
+}

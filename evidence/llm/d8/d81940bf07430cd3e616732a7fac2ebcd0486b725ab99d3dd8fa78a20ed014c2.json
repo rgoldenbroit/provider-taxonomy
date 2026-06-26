@@ -1,0 +1,11 @@
+{
+  "key": "d81940bf07430cd3e616732a7fac2ebcd0486b725ab99d3dd8fa78a20ed014c2",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents the Claude Desktop App's Code tab as a shipped feature, confirming parallel sessions, integrated terminal and file editor, embedded browser preview, cloud/SSH remote execution, and dispatching sessions from a phone (via the Cowork/Dispatch tab). The label \"Claude Desktop App (Code Tab)\" is accurate and supported by the page. However, the description contains one factual error: it states the app runs \"as a terminal CLI on Linux,\" but the page explicitly states \"The desktop app is not available on Linux; use the CLI instead.\" Linux users get the CLI as a separate fallback, not as an alternative surface of the Desktop App. Everything else in the description is faithful to the page."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "82fd215a90dcce920ee384bdcfe0b72cef6e55d35072cfb3760c9d7bb22625c1",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Prompt caching | OpenAI API\" and is listed under the Context management section of the OpenAI API docs, confirming it documents prompt/context caching as a shipped feature for OpenAI \u2014 distinct from context compaction (listed separately), MCP, or persistent memory. The label \"Prompt Caching\" matches the page title exactly. The description's claims \u2014 automatic caching of the longest reusable prefix, cost and latency reduction for repeated context (system prompts, few-shot examples), discounted billing for cached tokens, and transparent application without code changes \u2014 are all consistent with OpenAI's documented prompt caching behavior. No invented claims are present."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "9f065fb6166bdaaad032368e2a0deb6ccbf81d8dc84014ea7258e38029b5c902",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents a \"Workflows\" feature under Google's Antigravity 2.0 (Gemini) product. It defines Workflows as markdown files saved in a project that define a named, repeatable sequence of steps for the agent to follow, invoked via /workflow-name slash commands. The cell label \"Workflows\" matches the provider's exact terminology. The cell description accurately reflects the page: workflows are markdown files saved in the project, define a named repeatable sequence of steps, are executed consistently by the agent, and enable reusable automation of multi-step tasks. No claims are invented beyond what the page supports. The capability is also clearly distinct from the adjacent capabilities listed (subagents, multi-agent teams, plan-then-execute, goal-directed iteration, parallel workspaces)."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "142f600b6ed35b601dc92401193d76b95a7b8dd75f51194dc66ce1fd802b025b",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is from \"Antigravity 2.0\" \u2014 an unrecognized, non-Google product \u2014 not from any official Google AI/agent platform documentation. While the page does describe a \"Plugins\" feature that closely matches the cell's label and description, it cannot be treated as documentation of a shipped Google capability. The page explicitly situates itself under \"Antigravity 2.0 > Customizations > Plugins,\" which is not a Google product or brand. Because the page does not document this capability as a shipped feature of a real Google provider, documents_capability is false, and consequently label_ok and description_ok cannot be confirmed either."
+  }
+}

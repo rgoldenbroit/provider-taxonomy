@@ -1,0 +1,11 @@
+{
+  "key": "ecc0b805867a3fecb5fbe2dc24e577f0dffbb30f3a1b2457a653c486bc49a61e",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents \"Claude Code on the web\" as a shipped feature running on Anthropic-managed cloud infrastructure with isolated, fresh VMs per session, launchable from a browser or mobile app \u2014 all matching the label and most of the description. However, the description claims \"isolated, fresh VMs per session,\" which is accurate per the page (\"Each session runs in a fresh Anthropic-managed VM\"). The description also states sessions \"continue running after disconnection and can be monitored remotely,\" which is supported (\"Sessions persist even if you close your browser, and you can monitor them from the Claude mobile app\"). The one problematic claim is \"launchable from a browser or phone\": the page says it runs at claude.ai/code (browser) and can be *monitored* from the mobile app, but does not say tasks can be *launched* from a phone \u2014 only monitored. This is a meaningful inaccuracy in the description. Everything else is accurate."
+  }
+}

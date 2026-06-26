@@ -1,0 +1,11 @@
+{
+  "key": "964e641ffb273655294019d8f8573d0ce06a1edc3b4137a92577f4d207057705",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents \"Workspace Rules\" as a feature: rules stored in the `.agents/rules` folder of a workspace or git root, applied as standing instructions to the agent for that project. The cell label \"Workspace Rules\" matches the page's own heading and terminology exactly. The description accurately reflects the page's content \u2014 the correct file path (`.agents/rules` in the workspace or git root), the purpose (standing instructions and context for the agent), and the persistent, project-scoped nature of the directives. No claims are invented. The page also clearly distinguishes Workspace Rules from adjacent capabilities: Workflows (lifecycle/step sequences), Global Rules (cross-workspace), and other customizations \u2014 so there is no confusion with adjacent capabilities."
+  }
+}

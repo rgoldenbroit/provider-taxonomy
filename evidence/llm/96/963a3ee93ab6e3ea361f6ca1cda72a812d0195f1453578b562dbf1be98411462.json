@@ -1,0 +1,11 @@
+{
+  "key": "963a3ee93ab6e3ea361f6ca1cda72a812d0195f1453578b562dbf1be98411462",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents multi-agent orchestration using the OpenAI Agents SDK with Codex CLI as an MCP server. It describes creating \"a multi-agent team with hand-offs, guardrails, and full traces\" \u2014 directly matching the capability of coordinating multiple agents that share work and communicate. The cell label \"Multi-agent orchestration\" and the description referencing an orchestrator agent breaking work into subtasks, handing off to specialized sub-agents via the Agents SDK, and routing results via handoffs are all faithfully supported by the page content. The page is not about context caching, subagents in isolation, workflows/saved automations, plan-then-execute mode, or parallel isolated workspaces specifically \u2014 it is about multi-agent teams with handoffs, which is exactly the capability being evaluated."
+  }
+}

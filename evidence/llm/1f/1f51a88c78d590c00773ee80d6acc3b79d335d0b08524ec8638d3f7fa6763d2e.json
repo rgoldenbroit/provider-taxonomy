@@ -1,0 +1,11 @@
+{
+  "key": "1f51a88c78d590c00773ee80d6acc3b79d335d0b08524ec8638d3f7fa6763d2e",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly the \"Plugins reference\" for Claude Code, which directly documents the plugin system as a shipped feature. The label \"Plugins\" matches the page's terminology exactly. The description accurately reflects the page's content: plugins are self-contained directories bundling reusable components (skills, subagents/agents, hooks, MCP servers, etc.), skills become invokable via `/name` commands (automatically discovered on install), and agents appear in the `/agents` interface for manual or automatic invocation \u2014 all of which are confirmed verbatim in the page text. The description does not conflate plugins with any adjacent capabilities (project-scoped instruction files, lifecycle hooks standalone, output customization, or model selection)."
+  }
+}

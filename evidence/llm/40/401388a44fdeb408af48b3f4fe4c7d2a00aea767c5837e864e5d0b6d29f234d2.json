@@ -1,0 +1,11 @@
+{
+  "key": "401388a44fdeb408af48b3f4fe4c7d2a00aea767c5837e864e5d0b6d29f234d2",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Sandbox\" and describes exactly this capability: Codex runs agent commands inside a constrained (OS-native) environment that limits machine access. The page confirms support on macOS (Seatbelt), Linux (bubblewrap), WSL2, and Windows (native Windows Sandbox or Linux implementation), matching the description's platform list. The label \"Sandbox\" matches the page title and OpenAI's own terminology. The description accurately reflects the page's content \u2014 constrained OS-native environment, restricting machine access, supporting autonomous local command execution within limits \u2014 without inventing any claims. The page also clearly distinguishes sandboxing from approval/permission controls (an adjacent capability), keeping the boundary clean."
+  }
+}

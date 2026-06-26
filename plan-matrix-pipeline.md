@@ -1,13 +1,22 @@
 # Plan — Matrix as a grounded projection (scalable, no manual cell-fixes)
 
-**Status: IMPLEMENTED (P1–P5).** The matrix is now a generated, grounded projection.
-Pipeline: `matrix/capabilities.yaml` (rows) → `scripts/build_matrix.py` (Stage A catalog projection
-+ adversarial confirmation → Stage B official-doc grounding → Stage C domain-restricted Tavily) →
-canonical `data/agentic-matrix.json` → `scripts/render_matrix_md.py` (renders the `.md`) →
-`scripts/validate_matrix.py` (gate). CI render-diffs the `.md`; `maintain.yml` re-grounds every run.
-Result: **100/111 cells grounded, 11 honest `unverified`** — all grounded cells on first-party doc
-hosts; the pipeline recovered 10 cells the hand-build had missed (e.g. Anthropic eval-tool, Codex
-memories/plan-mode). Obsolete `scripts/matrix_to_json.py` (reverse direction) removed.
+**Status: REARCHITECTED — the matrix is now a pure PROJECTION of the grounded catalog.**
+The earlier Stage A/B/C + `describe` pipeline was a weaker parallel re-implementation of the catalog
+engine and produced confident-wrong cells (see plan-matrix-verification.md for the audit that exposed
+it). It has been **removed**. The matrix is now: `matrix/capabilities.yaml` (rows = the neutral schema)
+→ `scripts/build_matrix.py`, which for each (capability × provider) uses an LLM to **select the single
+best, most-canonical feature from the provider's REAL grounded catalog features** (it can only pick a
+real node — never invent or re-ground), with an **adversarial confirm pass** that rejects weak/adjacent
+picks. The cell then carries that feature's REAL fields — name (the "how"), lifecycle status, first-party
+`source.url`, and grounded `scope_note` as the description. **No new grounding, no Stage B/C, no generated
+prose.** Every grounded cell is a real catalog node that already passed the catalog's full verification.
+→ `render_matrix_md.py` renders the `.md`; `validate_matrix.py` gates; `maintain.yml` rebuilds each run.
+
+Result: **68/111 grounded, 43 honest `unverified` ("not yet covered")** — the confirm pass deliberately
+errs toward gaps over wrong cells (precision-first). Capabilities the catalog doesn't model stay
+`unverified`; close them by deepening the CATALOG via `taxo discover` (Tier-1/Tier-2 in
+plan-matrix-verification.md), after which they populate here automatically. Obsolete `matrix_to_json.py`
+(reverse direction) and the read-only `audit_matrix.py` (its job is now structural) were removed.
 
 **Known follow-ups:** (1) `openai checkpoint-rewind` stays `unverified` — its `features.undo` flag is
 buried in the config reference and the doc-surface keyword filter doesn't surface it (honest gap, not

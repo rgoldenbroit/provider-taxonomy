@@ -1,0 +1,11 @@
+{
+  "key": "7b4c4470adeff1e504c2ad9e54482cf64766a2e5ad37be81e7cc721affd61ac6",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly about \"Dynamic workflows\" in Claude Code \u2014 matching the cell label exactly. The page describes dynamic workflows as JavaScript scripts that orchestrate dozens to hundreds of subagents, written by Claude for a described task, saved and rerunnable independently of a conversation, with orchestration logic (loops, branching, intermediate results) living in the script rather than Claude's context \u2014 all of which aligns faithfully with the cell description. The page distinguishes workflows from subagents, skills, and agent teams (the adjacent capabilities), confirming this is the correct, distinct capability. No claims in the description are invented; all are supported by the page."
+  }
+}

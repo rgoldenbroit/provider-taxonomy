@@ -1,0 +1,11 @@
+{
+  "key": "e87f1251f40b206865bb7f9faa0a3f501a5d555578d65e57fd147cec0970c5a2",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page text is a general Codex Customization overview page. While it mentions MCP as one of several customization layers, the page text provided is cut off before any MCP-specific content and contains no documentation of a `codex mcp add` CLI command, server installation, configuration scoping, or a registry. The page primarily covers AGENTS.md, Skills, Memories, and Subagents. There is no evidence in the provided text that this page specifically documents the \"MCP server management & registry\" capability (install, configure, scope, discover MCP servers via `codex mcp add`). It merely references MCP as a concept linking to a separate MCP page. Therefore, the page does not document this specific capability as a shipped feature, the label `codex mcp add` is not supported by the page text, and the description's claims about the CLI command and local management are not substantiated by this page."
+  }
+}

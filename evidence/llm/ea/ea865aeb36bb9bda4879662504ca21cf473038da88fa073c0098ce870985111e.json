@@ -1,0 +1,11 @@
+{
+  "key": "ea865aeb36bb9bda4879662504ca21cf473038da88fa073c0098ce870985111e",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page documents the AGENTS.md feature as a **project-scoped instruction file** mechanism \u2014 a layered file-discovery system that feeds instructions into Codex before each task. This is precisely the **adjacent capability** labeled \"Project-scoped instruction file,\" not the target capability of \"Output & system-prompt customization.\" While AGENTS.md files do influence agent behavior, the page's entire focus is on the file-discovery hierarchy, layering, and project/global scoping \u2014 not on shaping a persona, output style, or system prompt in a general-purpose way. The feature documented is a structured instruction-file pipeline tied to directory scope (git root, subdirectories, global home), which matches the \"Project-scoped instruction file\" adjacent capability that the target capability must be distinct from. Therefore: documents_capability = false (page covers an adjacent capability, not the target one), label_ok = false (AGENTS.md is the name of the project-scoped instruction file feature, not an output/system-prompt customization feature), and description_ok = false (the description accurately describes AGENTS.md's mechanics but misattributes it to the wrong capability category)."
+  }
+}

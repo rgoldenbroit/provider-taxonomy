@@ -1,0 +1,11 @@
+{
+  "key": "dbd27c28c204020ed10bc7c5f3554ed9017e000ffc9d725c7b353b193698e99c",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page explicitly documents \"output styles\" as one of the methods to customize agent behavior and system prompts, confirming the label is real and correct. However, the cell description is inaccurate in a key way: it calls output styles \"Saved Markdown configuration files,\" conflating them with CLAUDE.md files. The page clearly distinguishes these as separate mechanisms \u2014 CLAUDE.md files are for project-level instructions (injected as project context, not into the system prompt), while output styles are a distinct customization method that modifies the system prompt directly. The description's claim that they are \"Markdown configuration files\" is not supported by the page, and the mechanism described (injected as context, not system prompt) actually matches CLAUDE.md, not output styles. Additionally, the description's framing around \"saving\" and \"reapplying across sessions\" is not substantiated by the cited page text."
+  }
+}

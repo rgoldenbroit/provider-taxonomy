@@ -1,0 +1,11 @@
+{
+  "key": "26dabdb4fdd9179dc9e5f90c513ecf4a7736c2f72cd35e83e3e81b73e4e0b1ec",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents MCP (Model Context Protocol) as a distinct customization layer in Codex, describing it as the mechanism for connecting Codex (and other agents) to external tools and shared systems outside the local workspace. The page lists MCP under the \"MCP\" heading as one of the core customization layers, states it provides \"access to external tools and shared systems,\" and further clarifies that \"MCP connects Codex to systems outside the local workspace.\" The cell label \"MCP (Model Context Protocol)\" matches the provider's own terminology used on the page. The cell description accurately reflects the page's content \u2014 that OpenAI uses MCP as the standard protocol for connecting Codex (and other agents) to external tools, data sources, and context providers via configured MCP servers. The page does not conflate this with adjacent capabilities such as MCP server management/registry, authentication, tool governance, persistent memory, context compaction, or prompt caching."
+  }
+}

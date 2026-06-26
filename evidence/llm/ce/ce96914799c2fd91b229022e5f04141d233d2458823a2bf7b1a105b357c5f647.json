@@ -1,0 +1,11 @@
+{
+  "key": "ce96914799c2fd91b229022e5f04141d233d2458823a2bf7b1a105b357c5f647",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is specifically about **Automations** (scheduled/recurring background tasks) in OpenAI Codex, and worktrees are mentioned only as an *option within automations* to isolate automation changes from local work. The page does not document a general-purpose \"parallel isolated workspaces\" capability for working on multiple branches/copies simultaneously without collisions \u2014 it documents worktrees purely in the context of scheduled automation runs. The capability being audited (parallel isolated workspaces for simultaneous multi-branch work) is adjacent to but distinct from what this page covers (Workflows/saved automations). Furthermore, the description claims this is handled automatically for \"any Git repo automation\" requiring \"no manual workspace setup,\" but the page explicitly states that worktree use is a *user choice* (\"you can choose whether an automation runs in your local project or on a new worktree\"), not automatic. The label \"Git Worktree Isolation\" partially reflects page content but only in the narrower automation context, not as a standalone parallel-workspace capability. Because the page is fundamentally about the Automations feature (an adjacent capability this cell must be distinct from), documents_capability is false."
+  }
+}

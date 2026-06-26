@@ -1,0 +1,11 @@
+{
+  "key": "5f954657f918d89d407b85133aa5b6e878efade51014849ffba2e0c2145c7124",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly and specifically about \"How Claude Code uses prompt caching\" \u2014 the exact capability being evaluated, not an adjacent one. The page confirms: (1) Claude Code manages prompt caching automatically (supporting the \"automatic\" label); (2) it re-sends and caches the full prefix \u2014 system prompt, project context, conversation history \u2014 and only reprocesses new content each turn (matching the description's claim about caching the full request prefix); (3) the cache uses exact prefix matching (confirmed verbatim in the page); (4) switching models, running /compact, or editing CLAUDE.md mid-session are all listed as cache-invalidating actions that trigger a full reprocess (confirmed in the \"Actions that invalidate the cache\" section and the layer table). All material claims in the label and description are directly supported by the page with no invented details."
+  }
+}

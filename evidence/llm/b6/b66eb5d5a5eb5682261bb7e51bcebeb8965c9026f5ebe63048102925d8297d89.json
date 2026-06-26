@@ -1,0 +1,11 @@
+{
+  "key": "b66eb5d5a5eb5682261bb7e51bcebeb8965c9026f5ebe63048102925d8297d89",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is documentation for \"Antigravity CLI,\" a product that has no connection to Google. Google does not make or publish the Antigravity CLI. The page describes background tasks and subagents within the Antigravity CLI tool, not any Google product or service. Because the page does not document a shipped Google feature at all, documents_capability is false. Consequently, neither the label nor the description can be validated against a legitimate Google source, so both label_ok and description_ok are also false."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "d8504ffc740f5f9416fe5ce2427686b6dd8503d394b54c1392d444924243cef0",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents a \"Scheduled\" trigger type for Claude Code Routines: \"Scheduled: run on a recurring cadence like hourly, nightly, or weekly, or once at a specific future time.\" This matches the cell's label (\"Schedule Trigger\") and description (recurring cadence or once at a specific future time, no human supervision). The page is about Routines broadly, but it specifically and clearly documents the scheduled/triggered run capability as a shipped (research preview) feature. The description's claim of \"no human supervision required\" is confirmed by the page: \"Routines execute on Anthropic-managed cloud infrastructure\" and \"Routines run autonomously as full Claude Code cloud sessions: there is no permission-mode picker and no approval prompts during a run.\" The cell is also distinct from the adjacent capabilities: the cloud execution environment and background/async execution are documented on the same page but the cell specifically targets the scheduling/trigger mechanism, which is what the page primarily describes under the \"Scheduled\" trigger bullet. No invented claims are present."
+  }
+}

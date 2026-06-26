@@ -1,0 +1,11 @@
+{
+  "key": "044571d730fed75c6171c9b013eb9ade6c174b526a844caa1c70e620bc24ecb3",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents the \"security-guidance plugin\" for Claude Code, which is precisely the capability being evaluated (scanning code/agent actions for security issues). The page confirms it is a shipped feature (installable via `/plugin install security-guidance@claude-plugins-official`). The cell label \"Security Guidance Plugin\" matches the page's official name exactly. The description accurately reflects the page: it is an in-session plugin that instructs Claude to review its own generated code changes for security vulnerabilities, it uses both deterministic (pattern-based, no model call) and model-backed (end-of-turn background model review, agentic commit review) analysis layers, and identified issues are fixed within the same session without requiring a separate scanning step. No claims in the description are invented or contradict the page. The capability is also clearly distinct from the adjacent capabilities listed (sandboxed execution, tool permission controls, network/egress control, prompt-injection protection, dev-container integration)."
+  }
+}

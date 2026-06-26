@@ -1,0 +1,11 @@
+{
+  "key": "aaed2f5ce34fca8a61ca813ebbbae8e3407c9418e096ece5818e9c7e4cba0f43",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents outbound network access control for OpenAI Codex agents as a shipped feature. It covers: (1) enabling/disabling network access via `sandbox_workspace_write.network_access`, (2) configuring domain allowlists via `features.network_proxy.domains`, and (3) applying these settings per environment (cloud, CLI, IDE extension). The cell label \"Network Access Control\" accurately reflects the feature name used throughout the page (sections titled \"Network access\" and \"Network isolation\"). The description is faithful: the page confirms network access can be turned on or off (default off), and that a domain allowlist can be configured (e.g., `\"api.openai.com\" = \"allow\"`). The description's claim that it is \"configured as a setting on the agent\" is broadly consistent with how the page presents it (TOML config settings applied to the agent's sandbox environment). The page is distinct from the adjacent capabilities: while sandboxed execution is mentioned as context, the specific feature being documented is network/egress control, not sandboxing itself."
+  }
+}

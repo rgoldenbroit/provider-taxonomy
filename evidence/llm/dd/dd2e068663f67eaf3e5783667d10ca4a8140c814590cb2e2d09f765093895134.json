@@ -1,0 +1,11 @@
+{
+  "key": "dd2e068663f67eaf3e5783667d10ca4a8140c814590cb2e2d09f765093895134",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is specifically about \"Codex code review in GitHub,\" which directly documents the automated code review capability \u2014 distinct from adjacent capabilities like audit logging, evals, or session management. The label \"AI Code Review\" accurately reflects the feature (OpenAI calls it \"Codex code review\"). The description faithfully captures all key claims from the page: reviewing GitHub PR diffs, posting a native GitHub code review comment, flagging serious issues (P0/P1), and following repository-specific guidelines via AGENTS.md. No invented claims are present."
+  }
+}

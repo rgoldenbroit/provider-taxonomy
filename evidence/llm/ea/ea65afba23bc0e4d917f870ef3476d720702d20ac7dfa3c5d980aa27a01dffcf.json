@@ -1,0 +1,11 @@
+{
+  "key": "ea65afba23bc0e4d917f870ef3476d720702d20ac7dfa3c5d980aa27a01dffcf",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents a built-in \"MCP Store\" panel inside the Antigravity editor (Google's IDE), covering browsing, installing, and authenticating supported MCP servers without leaving the workspace. The label \"MCP Store\" matches the page's own term verbatim. The description accurately reflects the page: developers can browse and install servers from a store UI, authenticate via on-screen prompts, and setup is handled directly through the store \u2014 eliminating manual configuration steps for supported servers. This is clearly the MCP server management & registry capability (not adjacent capabilities like caching, compaction, or tool governance)."
+  }
+}

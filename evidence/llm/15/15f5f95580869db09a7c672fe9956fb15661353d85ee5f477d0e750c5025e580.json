@@ -1,0 +1,11 @@
+{
+  "key": "15f5f95580869db09a7c672fe9956fb15661353d85ee5f477d0e750c5025e580",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page is a CLI reference for OpenAI Codex, clearly documenting it as a terminal/CLI tool (TUI launched via the `codex` command). The label \"Codex CLI (terminal)\" is directly supported by the page content (e.g., \"Launch the terminal UI\", TUI flags, the `codex` command). The description's claims are all accurate: it runs as a CLI/TUI in the terminal via the `codex` command; the `--remote` flag supports connecting to a remote app-server over WebSocket or Unix socket; and there is indeed no mention of an IDE plugin, web UI, or mobile surface in this page. The `--remote` mention in the description correctly reflects the page without overstating it as a separate \"remote control\" surface. The page documents this specific access-surface capability (terminal/CLI) rather than any of the adjacent capabilities listed."
+  }
+}

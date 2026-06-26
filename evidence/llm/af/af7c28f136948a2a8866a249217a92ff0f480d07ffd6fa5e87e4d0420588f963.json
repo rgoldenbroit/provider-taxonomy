@@ -1,0 +1,11 @@
+{
+  "key": "af7c28f136948a2a8866a249217a92ff0f480d07ffd6fa5e87e4d0420588f963",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The cited page (Antigravity Agent) explicitly documents \"Context compaction: Automatic context compaction (triggered at ~135k tokens) to support long-running, multi-turn sessions without losing context or hitting token limits.\" This is precisely the capability being evaluated (context compaction, automatic). However, the cell label says \"Context Caching\" and the cell description describes Google's Context Caching feature (storing/reusing prompt content across requests to reduce token costs and latency) \u2014 which is a completely different, adjacent capability. The page does not describe context caching at all; it describes automatic context compaction within a conversation. Therefore, the label is wrong (it names the wrong feature) and the description is wrong (it describes context caching, not context compaction, and even notes the evidence does not show automatic compaction \u2014 contradicting the page which explicitly shows automatic compaction)."
+  }
+}

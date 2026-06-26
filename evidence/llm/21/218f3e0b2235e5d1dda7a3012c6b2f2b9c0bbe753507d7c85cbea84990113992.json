@@ -1,0 +1,11 @@
+{
+  "key": "218f3e0b2235e5d1dda7a3012c6b2f2b9c0bbe753507d7c85cbea84990113992",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is from \"Antigravity 2.0\" \u2014 a fictional or third-party product \u2014 not from Google. There is no mention of Google, any Google product (e.g., Gemini, Vertex AI, Google Cloud, etc.), or any Google-branded agent framework anywhere in the page text. The capability being evaluated is for the provider \"Google,\" but this documentation does not represent Google's shipped features. Therefore, the page does not document this capability for Google, and both the label and description cannot be validated as accurate for Google's offering."
+  }
+}

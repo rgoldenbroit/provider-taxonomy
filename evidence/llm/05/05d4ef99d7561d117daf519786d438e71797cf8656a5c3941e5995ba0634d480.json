@@ -1,0 +1,11 @@
+{
+  "key": "05d4ef99d7561d117daf519786d438e71797cf8656a5c3941e5995ba0634d480",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Record & Replay\" and documents exactly this capability: demonstrating a workflow on a Mac so Codex can package it into a named, reusable skill. The cell label \"Record & Replay\" matches the page's own heading and OpenAI's name for the feature. The cell description accurately reflects the page's content \u2014 recording a workflow, Codex packaging it into a skill (with steps, required inputs, and success criteria), then replaying it in a new thread by supplying differing values, using Computer Use, browser actions, or plugins. All key details in the description are directly supported by the page text, with no invented claims. The capability is also clearly distinct from the adjacent capabilities listed (subagents, multi-agent teams, plan-then-execute, goal-directed iteration, parallel workspaces)."
+  }
+}

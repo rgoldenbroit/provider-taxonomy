@@ -1,0 +1,11 @@
+{
+  "key": "dc6e207895a89f021783b5fa8bbc2e25a061289a9ab591c2063899c769694deb",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The page documents model selection within the context of Codex's custom subagent configuration (the optional `model` field in TOML agent files), not a general SDK-level \"Per-Agent Model Selection\" feature for building agents in a workflow. The cell label implies a generic Agents SDK construct (referencing \"GPT-4o, o3-mini\" and \"SDK auto-select\"), but the page is specifically about Codex CLI/app subagent workflows and TOML-based custom agent files \u2014 a distinct product surface. The description's claims about \"SDK auto-select\" and pinning a model \"at creation time\" in a multi-agent workflow SDK are not supported by the page, which only mentions `model` as an optional field in a Codex TOML agent file that \"inherits from the parent session when omitted.\" The label \"Per-Agent Model Selection\" is also not a term used on this page."
+  }
+}

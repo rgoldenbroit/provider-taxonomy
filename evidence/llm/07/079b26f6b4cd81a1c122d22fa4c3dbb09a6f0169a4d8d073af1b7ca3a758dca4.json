@@ -1,0 +1,11 @@
+{
+  "key": "079b26f6b4cd81a1c122d22fa4c3dbb09a6f0169a4d8d073af1b7ca3a758dca4",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The page does document MCP tool governance/allow-listing as a shipped feature: the `mcp` action with `mcp(server/tool)`, `mcp(server/*)`, or `mcp(*)` syntax is clearly described in the permissions table, supporting the concept of controlling which MCP tools an agent may use. However, two issues exist. First, the label \"Per-Tool MCP Permission\" is not the provider's real name for this feature \u2014 the page calls it the `mcp` action/permission within a broader \"Agent Permissions\" system (product: Antigravity 2.0), not \"Per-Tool MCP Permission.\" Second, the description claims this is configured \"per-agent by specifying the MCP server and the exact tool name to permit,\" which is a partial/misleading characterization: the page shows three syntactic forms \u2014 `mcp(server/tool)` (exact tool), `mcp(server/*)` (all tools on a server), and `mcp(*)` (all tools everywhere) \u2014 evaluated across Deny/Ask/Allow lists, not simply an allow-list of named tools per agent. The description omits the Deny and Ask modes entirely and incorrectly implies only exact tool-name grants exist, when wildcard grants are equally supported and prominent."
+  }
+}

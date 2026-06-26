@@ -1,0 +1,11 @@
+{
+  "key": "8f1e80f2d95bfc0e9e9b7290221916ca57d215f8455984bb6d6f1e635bbb38b6",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is specifically and explicitly about Anthropic's \"Code Review\" feature for Claude Code \u2014 a shipped (research preview) capability that uses multi-agent analysis of GitHub pull request diffs to surface logic errors, security vulnerabilities, and regressions. This matches the capability under audit exactly and is distinct from all adjacent capabilities listed. The cell label \"Automated PR Code Review\" accurately reflects the feature name. The description's claims \u2014 multi-agent pipeline, analysis of PR diffs, surfacing logic errors/security vulnerabilities/regressions, and configurability via per-repository instruction files (CLAUDE.md / REVIEW.md) \u2014 are all directly supported by the page text."
+  }
+}

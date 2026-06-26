@@ -1,0 +1,11 @@
+{
+  "key": "1741f40757d2b437a2369a1a494d194974458771da1390ab41a6dbe6d1babb5e",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents the Antigravity Agent as a shipped feature on the Gemini API, including its remote environment provisioned per API call via `environment: \"remote\"` in the Interactions API. The label \"Antigravity Agent (remote environment)\" matches the product name and the specific parameter shown in the page's code samples. The description accurately reflects the page's content: a Google-hosted secure Linux sandbox provisioned per API call, set via `environment: \"remote\"`, where the agent autonomously reasons, executes code, manages files, and browses the web \u2014 with no infrastructure setup required from the developer. All claims in the description are directly supported by the page text."
+  }
+}

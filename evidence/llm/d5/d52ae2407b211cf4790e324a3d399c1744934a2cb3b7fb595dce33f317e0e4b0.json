@@ -1,0 +1,11 @@
+{
+  "key": "d52ae2407b211cf4790e324a3d399c1744934a2cb3b7fb595dce33f317e0e4b0",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The page explicitly documents Codex's remote connections feature, which includes the ability to \"Approve commands and other actions\" and \"steer active work\" from a remote device such as a phone \u2014 directly matching the capability being audited. The description is faithful: the page confirms users can pause/approve commands and actions from a remote device (phone or web client) and stay in control without being at their workstation. However, the label \"Remote Action Approval\" is not the provider's real name for this feature. The page calls it \"Remote connections\" (or \"Remote Control\" in one reference), not \"Remote Action Approval.\" Action approval is only one bullet point within the broader remote connections feature, so the label over-narrows and misnames it relative to what OpenAI actually calls it."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "c03eab8d76e8758078508c5650ae1edab15d1510699b00b1a0d69ef2a9c05293",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": true,
+    "reason": "The cited page is about asynchronous subagents in \"Antigravity 2.0\" \u2014 a feature for parallelizing tasks by spawning dedicated subagent sessions. While the page does document `define_subagent` (custom subagents) and `invoke_subagent`, this capability is about multi-agent delegation and parallelization, NOT about \"Output & system-prompt customization\" (i.e., shaping the agent's own system prompt, persona, or output style). The system-prompt parameter in `define_subagent` is incidental to defining a new subagent's role, not a mechanism for customizing the parent agent's own output style or persona. The page does not document any feature that shapes the main agent's system prompt, persona, or output style \u2014 making `documents_capability` false. Consequently, the description (though accurate to the page's content about `define_subagent`) is describing the wrong capability category entirely and is not faithful to \"Output & system-prompt customization.\" The label `Custom Subagents (define_subagent)` is supported by the page but maps to an adjacent capability (multi-agent delegation), not the target capability."
+  }
+}

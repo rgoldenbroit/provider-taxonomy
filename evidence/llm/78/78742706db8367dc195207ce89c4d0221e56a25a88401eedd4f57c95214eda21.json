@@ -1,0 +1,11 @@
+{
+  "key": "78742706db8367dc195207ce89c4d0221e56a25a88401eedd4f57c95214eda21",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly and entirely about the \"Hooks\" feature for OpenAI Codex \u2014 an extensibility framework that injects custom scripts into the agentic loop at named lifecycle events. This matches the capability under audit exactly and is distinct from adjacent capabilities (project-scoped instruction files, packaged plugins, output/prompt customization, model selection). The label \"Hooks\" is the canonical name used throughout the page. The description accurately reflects the page: lifecycle event names (PreToolUse, PostToolUse, SessionStart, Stop, etc.) are all confirmed; configuration via hooks.json or config.toml at user or project level is confirmed; the matcher + command handler structure is confirmed; concurrent execution of matching hooks is confirmed; and the trust/review requirement via /hooks for non-managed hooks is confirmed. No invented claims are present."
+  }
+}

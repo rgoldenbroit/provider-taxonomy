@@ -1,0 +1,11 @@
+{
+  "key": "0b814ad0b358383486ac8cb9baf81cce5ad90dd941a3bda8cef7940cbc0d3fd1",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is the Governance/Codex documentation page for OpenAI, which is a broad navigation/index page covering Codex, ChatGPT, Agents SDK, and many other topics. While \"Managing costs\" appears as a navigation menu item in the sidebar, the page itself does not actually document the cost & usage tracking capability as a shipped feature \u2014 it is merely a navigation/landing page. There is no substantive content on the page about token counting, usage limits, prompt caching for cost reduction, batch processing, flex processing, or API dashboard consumption monitoring. The page text is dominated by navigation links and section headers, not actual documentation of the cost & usage tracking feature. Therefore, this page does not specifically document the claimed capability, making documents_capability false. Consequently, neither the label nor the description can be validated as supported by the page content."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "de4b1daae907c4c52cbfce202367ebd7ca88fcae59da7c83b364f31f6d3f5f59",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents Claude Code's OpenTelemetry monitoring feature, covering metrics, events/logs, and traces exported via OTLP to compatible backends (Jaeger, Datadog, Honeycomb are common OTLP backends). The page is clearly about audit logging/telemetry \u2014 recording agent actions (tool activity, usage, costs) for observability and compliance \u2014 distinct from the adjacent capabilities listed. The label \"OpenTelemetry Monitoring\" matches the page's feature name and heading. The description accurately reflects the page: OTLP export of metrics, events, and traces; configurable endpoint; captures agent actions for observability and compliance review. The mention of cost/usage tracking in the page is secondary context and does not make this a 'Cost & usage tracking' capability \u2014 the primary feature documented is the OTel telemetry pipeline for agent-action recording."
+  }
+}

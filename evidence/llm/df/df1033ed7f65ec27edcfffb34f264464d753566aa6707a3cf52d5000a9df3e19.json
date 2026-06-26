@@ -1,0 +1,11 @@
+{
+  "key": "df1033ed7f65ec27edcfffb34f264464d753566aa6707a3cf52d5000a9df3e19",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is from \"Antigravity 2.0\" \u2014 not Google \u2014 so it cannot validate any Google capability at all. Additionally, the page primarily documents a \"Subagents\" feature (the `invoke_subagent` tool, async delegation, lifecycle states, inter-agent messaging), which is the ADJACENT capability the cell must be distinct from. The multi-agent teamwork feature described at the bottom of the page (`/teamwork-preview`) is real but is a tiny sub-section of a subagents page from a non-Google provider. The cell label \"Multi-Agent Orchestration\" and its description (central orchestrator, synchronous/asynchronous coordination, retry/error-recovery) loosely match the `/teamwork-preview` blurb, but since the provider is wrong (Antigravity, not Google) and the page is fundamentally about subagent delegation \u2014 the adjacent capability \u2014 documents_capability, label_ok, and description_ok all fail."
+  }
+}

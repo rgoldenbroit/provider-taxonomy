@@ -1,0 +1,11 @@
+{
+  "key": "d469a624f9a9c2a4b34c00fe841a6ad4c3b13d4225a5cd12f837888354ea19ec",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is a navigation/index page for the OpenAI developer documentation (specifically the Codex web/internet access page) and does not contain any substantive content about a Guardrails system for prompt-injection protection. While the left-hand navigation menu does list \"Guardrails\" as a section under the Agents SDK, the actual page content shown is entirely about Codex internet access and site navigation \u2014 there is no documentation of Guardrails functionality, how it works, or that it defends against prompt injection from tools or web sources. The page therefore does not document the prompt-injection protection capability as a shipped feature, and neither the label nor the description can be validated from this page's content."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "a609b2c3a82d86583dcaa470f4e670afda81219a17af29cc2a26922b34ed49dd",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents the subagent / delegated-agent capability for OpenAI's Codex, so documents_capability=true and the label \"Subagent Workflows\" is supported by the page's own heading and terminology. However, the description contains one materially inaccurate claim: it states that \"Developers trigger this implicitly by submitting complex tasks to Codex rather than wiring up agents manually.\" The page explicitly and repeatedly states the opposite \u2014 \"Codex only spawns subagents when you explicitly ask it to\" and \"Codex only spawns a new agent when you explicitly ask it to do so.\" The implicit/automatic triggering claim is directly contradicted by the documentation, making description_ok=false."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "0cdc4871a2202dedc76212b2a1f08f26a0b67cf6f6cc3ea9b34e496be3e92f6d",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly about \"Background Tasks & Subagents\" in the Antigravity CLI, directly documenting the capability of spawning focused sub-agents to handle parts of a task. The label \"Subagents\" matches the provider's own terminology used throughout the page. The description accurately reflects the page's content: the primary agent delegates long-running operations to parallel autonomous Subagents via a multi-threaded async architecture, and progress is monitored via an interactive panel (/agents) that tracks background agents in real time. No claims in the description are invented or contradicted by the page."
+  }
+}

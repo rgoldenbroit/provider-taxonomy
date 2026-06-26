@@ -1,0 +1,11 @@
+{
+  "key": "d2d4f20c8aa0a25cd9c489f765e95bbf1651ecf8549d547c0a81b5847e0a0724",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is about \"Agent Teams\" \u2014 coordinating multiple Claude Code sessions \u2014 not about lifecycle event hooks. While the page briefly mentions hook payload fields (TaskCreated, TaskCompleted, TeammateIdle) in passing as deprecated context for a version change, it does not document a \"lifecycle event hooks\" feature as a shipped capability. The page's subject matter is agent team orchestration (spawning teammates, task assignment, communication between agents), which is a different capability entirely. The cell's label (\"Agent Lifecycle Hooks\") and description (registering custom logic on agent events like idle, task created, task completed) cannot be validated from this page, which never describes how to register hooks, what events are available, or how hook logic is invoked. Any hook-related mentions are incidental references to deprecated payload fields, not documentation of the hooks feature itself."
+  }
+}

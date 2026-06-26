@@ -1,0 +1,11 @@
+{
+  "key": "640fd004ebc6cdc6ba933e6960b6aad5fbcb7e2e0d4c3b5c6265b9dc1d107382",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page explicitly documents \"Inspect\" hooks as a named, shipped feature under the \"Lifecycle Hooks\" pillar of the Google Antigravity SDK. The page states: \"Inspect (Read-Only, Non-Blocking): For logging, audit trails, and metrics.\" This directly matches the cell label \"Inspect Hooks\" and the cell description, which faithfully reproduces the page's characterization: read-only, non-blocking hooks that fire during agent execution to capture events for logging, audit trails, and metrics, without interrupting the agent's flow. The capability is clearly distinct from the adjacent capabilities listed (code review, cost tracking, evals, checkpoint/rewind, session fork), and the page is specifically about this SDK feature rather than any of those adjacent concerns."
+  }
+}

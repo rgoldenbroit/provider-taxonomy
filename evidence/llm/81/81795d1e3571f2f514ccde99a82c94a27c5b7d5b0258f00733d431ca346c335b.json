@@ -1,0 +1,11 @@
+{
+  "key": "81795d1e3571f2f514ccde99a82c94a27c5b7d5b0258f00733d431ca346c335b",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page does document Git worktree support as a shipped feature under \"Worktree Support\" within Projects, so the capability is genuinely covered and the label \"Git Worktrees\" is accurate. However, the cell description invents details not found on the page: the page says nothing about \"each agent gets its own dedicated Git worktree\" being assigned automatically per agent, nor does it mention \"multiple agents working on different branches simultaneously\" or \"true parallel development.\" The page simply states that projects \"natively support Git worktrees, allowing agents to operate in isolated background folders\" \u2014 it does not describe automatic assignment, multi-agent parallelism, or branch-level isolation as described in the cell. These are invented claims beyond what the cited page supports."
+  }
+}

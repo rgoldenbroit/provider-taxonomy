@@ -1,0 +1,11 @@
+{
+  "key": "e9377d643a81d1b4fd65f9e330d75487388bdbc868bcd3752ccac5c54b43a844",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is about \"Remote connections\" \u2014 specifically the Remote Control capability (mobile/web access to a Codex host), which is explicitly listed as an ADJACENT capability that must be distinct from Notifications. While the page does contain one bullet point mentioning \"Get notified when Codex completes a task or needs your attention,\" this appears only as a sub-feature of the Remote Control workflow, not as a standalone Notifications capability. The page's primary subject is setting up and using remote connections (mobile app pairing, QR codes, SSH hosts, host settings, etc.). It does not document a dedicated Push Notifications feature as a shipped, standalone capability. The cell's label (\"Task Completion Notifications\") and description (framing alerts/push notifications as a distinct, independent capability) are not supported by this page, which is fundamentally about remote control access surfaces \u2014 the very adjacent capability the Notifications cell must be distinguished from."
+  }
+}

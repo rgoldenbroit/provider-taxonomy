@@ -1,0 +1,11 @@
+{
+  "key": "a120447a6229ec64e4f8764ee764fd894341470aee60f2ecc6585a9b54c089cb",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents OAuth authentication for Streamable HTTP MCP servers via the `codex mcp login` command, which is precisely the MCP authentication capability described. The label \"codex mcp login\" matches the command name shown in the page. The description accurately reflects the page's content: OAuth is supported for remote/Streamable HTTP servers, the `codex mcp login` command is used, and the page implies credentials are stored (e.g., `mcp_oauth_callback_port` and related config are persisted in `config.toml`) for subsequent connections. No claims in the description contradict or exceed what the page states. The page is clearly about MCP connectivity broadly, but it specifically and prominently documents the authentication sub-feature (bearer token + OAuth via `codex mcp login`), making it distinct from mere server management, tool governance, or other adjacent capabilities."
+  }
+}

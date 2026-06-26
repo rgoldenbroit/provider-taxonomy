@@ -1,0 +1,11 @@
+{
+  "key": "7ef5ff91db196e9e050a187f7790bad22a66b7dded0c242b88302bf405d4f757",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page does reference a \"Set up usage visibility\" section that links to Analytics, Monitoring, and Costs pages \u2014 confirming that cost/usage tracking is a real, shipped capability for Claude Code. So documents_capability = true and the label \"Cost Tracking\" is broadly consistent with what the page calls out (the \"Costs\" reference link). However, the cell description makes specific claims that are NOT supported by the page text: (1) that Claude Code \"automatically tracks token usage and cumulative spend per session,\" (2) that it gives \"visibility into costs for agent runs,\" and (3) that \"no manual instrumentation is needed; the accounting is built into the Claude Code interface.\" The cited page only contains a high-level decision-map entry (\"Set up usage visibility \u2014 How you track spend and adoption\") pointing to separate reference pages (Analytics, Monitoring, Costs). The actual page text does not describe any of the per-session, automatic, or no-instrumentation-needed details the description asserts. Those claims are invented relative to the cited page."
+  }
+}

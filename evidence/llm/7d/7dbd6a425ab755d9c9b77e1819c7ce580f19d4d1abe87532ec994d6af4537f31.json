@@ -1,0 +1,11 @@
+{
+  "key": "7dbd6a425ab755d9c9b77e1819c7ce580f19d4d1abe87532ec994d6af4537f31",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is the official Codex documentation and explicitly lists \"Memories\" as a distinct section under Codex Concepts (visible in the navigation: Concepts > Memories). The cell label \"Memories\" matches the documented feature name exactly. The description accurately captures that this is Codex's feature for durable, cross-session memory retention, which aligns with the page's positioning of Memories as a Codex concept distinct from context compaction, prompt caching, and MCP-related capabilities. No invented claims are present."
+  }
+}

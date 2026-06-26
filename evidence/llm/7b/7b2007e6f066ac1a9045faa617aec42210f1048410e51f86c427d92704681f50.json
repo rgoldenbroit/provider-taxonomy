@@ -1,0 +1,11 @@
+{
+  "key": "7b2007e6f066ac1a9045faa617aec42210f1048410e51f86c427d92704681f50",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is about \"Create custom subagents\" in Claude Code \u2014 a feature for spawning specialized AI assistants within a single session to manage context. It explicitly distinguishes subagents from background agents: \"Subagents work within a single session. To run many independent sessions in parallel and monitor them from one place, see background agents.\" The capability being evaluated is Background/async execution (non-blocking, concurrent background tasks), which the page itself points to as a *different* feature (\"background agents\" at /en/agent-view). The page does not document background/async execution as a shipped feature \u2014 it only documents synchronous subagents within a session and explicitly redirects users elsewhere for background execution. Therefore the page does not document the claimed capability, the label is not supported by this page, and the description's claims about \"non-blocking background tasks\" running \"concurrently\" are not substantiated by this page's content."
+  }
+}

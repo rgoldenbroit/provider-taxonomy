@@ -1,0 +1,11 @@
+{
+  "key": "5e31fa36c32586c07c93b9893307861a089bf9284756995ad5faa13e703bf5a0",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents a `plan` permission mode for Claude Code (labeled \"Plan mode\" in the VS Code UI), described as allowing only reads \u2014 no file edits, shell commands, or executions \u2014 so the agent can research/explore before any changes are made. The cell label \"Plan Mode\" matches the provider's own UI label exactly. The cell description accurately captures the feature: Claude can research a task and propose changes without writing, editing, or executing anything, and the developer reviews before proceeding. This is distinct from the adjacent capabilities (subagents, multi-agent, workflows, autonomous iteration, parallel workspaces) \u2014 it is purely a permission/oversight mode. No invented claims are present."
+  }
+}

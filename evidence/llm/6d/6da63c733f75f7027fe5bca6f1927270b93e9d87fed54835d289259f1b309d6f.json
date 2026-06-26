@@ -1,0 +1,11 @@
+{
+  "key": "6da63c733f75f7027fe5bca6f1927270b93e9d87fed54835d289259f1b309d6f",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents OpenAI Codex's \"Cloud environments\" feature \u2014 a managed cloud container execution environment \u2014 which matches the capability being assessed and is distinct from background/async execution or scheduled/triggered runs. The label \"Environments\" is supported by the page (the feature is called \"environments\" and configured in \"Codex settings > environments\"). However, the description contains one inaccurate claim: it states users can configure the \"base image,\" but the page indicates that the container image is a fixed default called `universal` (users can only pin versions via \"Set package versions\" or install additional packages via setup scripts \u2014 they cannot choose or configure a custom base image). The description also says \"cached layers\" can be configured, which is somewhat misleading; the page describes container caching as an automatic Codex behavior with limited user control (reset cache, maintenance script), not something users freely configure as \"cached layers.\" Additionally, the page specifies that secrets are only available during the setup script phase and are removed before the agent phase \u2014 the description implies secrets are simply \"injected\" without this important security distinction. These are materially inaccurate or invented claims relative to what the page actually states."
+  }
+}

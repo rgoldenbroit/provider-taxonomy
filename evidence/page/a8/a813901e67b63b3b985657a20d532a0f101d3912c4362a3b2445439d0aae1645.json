@@ -1,0 +1,9 @@
+{
+  "key": "a813901e67b63b3b985657a20d532a0f101d3912c4362a3b2445439d0aae1645",
+  "url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md",
+  "value": {
+    "status": 200,
+    "text": "---\nslug: models\nsection: Antigravity 2.0\ntitle: Models\npath:\n  - Antigravity 2.0\n  - Models\n---\n\n# Models\n\n## Reasoning Model\n\nFor the core reasoning model, Antigravity offers leading frontier models from the Gemini Enterprise Agent Platform:\n\n* Gemini 3.5 Flash  \n* Gemini 3.1 Pro (high)  \n* Gemini 3.1 Pro (low)  \n* Gemini 3 Flash  \n* Claude Sonnet 4.6 (thinking)  \n* Claude Opus 4.6 (thinking)  \n* GPT-OSS-120b\n\nUsers can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box:\n\n![Model Selector Drop Down](/assets/image/docs/model-selector.png)\n\nThe choice of reasoning model is sticky between user messages within a conversation, so if you change the reasoning model while the Agent is running, it will continue to use the previously selected reasoning model until it has completed its steps for that user turn (or until you cancel the current execution).\n\nLearn more about reasoning model rate limits in [our plans page](/docs/plans).\n\n## Additional Models\n\nAntigravity uses a number of other models for various parts of the stack that are not customizable:\n\n* **Nano Banana 2**: Used by the generative image tool when the Agent wants to produce a UI mockup, needs images to populate a web page or application, generate system or architecture diagrams, or other generative image tasks.",
+    "url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "2de20d95aac12c05200674e91952bb75fb4ff3537f6ecc7da9f5fa9796e6202c",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents the model selection capability, and the label \"Model selector\" matches the page's own term (\"model selector dropdown\"). However, the description contains two inaccuracies: (1) It says the dropdown is \"beneath the conversation prompt box\" \u2014 the page says it is \"under the conversation prompt box,\" which is fine \u2014 but more critically, (2) it lists \"Gemini 3.5 Flash, Gemini 3.1 Pro, Claude Sonnet/Opus, or GPT-OSS-120b\" as the options, omitting \"Gemini 3.1 Pro (low)\" and \"Gemini 3 Flash\" while also misrepresenting the model names (e.g., the page lists \"Claude Sonnet 4.6 (thinking)\" and \"Claude Opus 4.6 (thinking)\", not \"Claude Sonnet/Opus\"). (3) The description states the selection is \"sticky per user turn \u2014 mid-run changes take effect only after the current execution completes or is cancelled,\" which is accurate per the page. The material error is the incomplete and partly incorrect model list, which misrepresents the actual options documented on the page."
+  }
+}

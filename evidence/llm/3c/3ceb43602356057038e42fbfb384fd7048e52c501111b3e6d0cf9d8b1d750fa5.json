@@ -1,0 +1,11 @@
+{
+  "key": "3ceb43602356057038e42fbfb384fd7048e52c501111b3e6d0cf9d8b1d750fa5",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is a Claude Code glossary that does not specifically document \"parallel isolated workspaces via Git worktrees\" as a shipped, named feature. The only mention of \"worktrees\" in the page text is a passing reference inside the \"Auto memory\" entry (\"All worktrees of the same repository share one auto memory directory\"), which is about memory behavior, not about a parallel workspace isolation capability. There is no glossary entry, dedicated section, or substantive documentation on the page covering the ability to run multiple agents in separate Git worktrees to prevent file collisions. Because the page does not document this specific capability as a shipped feature, the label (\"Worktree Isolation\") and description (agents run in separate Git worktrees to prevent conflicts) cannot be validated from this source."
+  }
+}

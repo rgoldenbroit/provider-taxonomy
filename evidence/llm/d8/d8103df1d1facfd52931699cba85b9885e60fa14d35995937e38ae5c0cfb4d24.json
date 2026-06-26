@@ -1,0 +1,11 @@
+{
+  "key": "d8103df1d1facfd52931699cba85b9885e60fa14d35995937e38ae5c0cfb4d24",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Create custom subagents\" and documents Anthropic Claude Code's subagent feature in detail \u2014 matching the capability being evaluated. The label \"Subagents\" is the exact term used throughout the page. The description is faithful: it correctly states that subagents are specialized AI assistants, that each runs in its own context window with a custom system prompt, that they handle delegated subtasks, and that they return only a summary back to the main conversation to keep the primary context clean. All of these claims are directly supported by the page (\"the subagent does that work in its own context and returns only the summary,\" \"Each subagent runs in its own context window with a custom system prompt, specific tool access, and independent permissions\"). The description does not confuse this with adjacent capabilities (e.g., agent teams/messaging, background parallel agents, plan mode, etc.)."
+  }
+}

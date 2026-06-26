@@ -1,0 +1,11 @@
+{
+  "key": "3f7821b686f07bf7c04ca3914025bdea7f401b8433fa8fee99ea1908e260d246",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents \"Rewind file changes with checkpointing\" as a shipped feature of Anthropic's Claude Agent SDK. The label \"File Checkpointing\" is consistent with the page's own terminology (\"file checkpointing,\" \"checkpoint system\"). The description accurately reflects all key details from the page: tracking of Write, Edit, and NotebookEdit tool changes; the `enable_file_checkpointing=True` option; capturing checkpoint UUIDs from the response stream; calling `rewindFiles()`/`rewind_files()` to restore files on disk; the conversation history remaining intact (not rolled back); and the explicit caveat that Bash command changes are not tracked. No claims in the description are invented or contradicted by the page."
+  }
+}

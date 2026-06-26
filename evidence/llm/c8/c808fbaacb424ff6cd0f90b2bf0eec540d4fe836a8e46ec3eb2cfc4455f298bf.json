@@ -1,0 +1,11 @@
+{
+  "key": "c808fbaacb424ff6cd0f90b2bf0eec540d4fe836a8e46ec3eb2cfc4455f298bf",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": false,
+    "reason": "The page does document this capability \u2014 the glossary entry \"Auto memory\" describes Claude writing notes to a MEMORY.md file per git repository, stored under ~/.claude/projects/, with the first 200 lines/25 KB loading at session start. However, the cell label \"MEMORY.md\" is inaccurate: the provider's real name for this feature is \"Auto memory\" (as explicitly labeled in the glossary). The description is also partially inaccurate: it says the file is stored \"per git repository\" and implies it's stored at the repository root, but the page states it's stored under ~/.claude/projects/ (not in the repo itself). The description also says \"without manual intervention\" and frames MEMORY.md as the sole mechanism, whereas the page clarifies it is the Claude-written counterpart to the user-written CLAUDE.md. The core functional claim (Claude writes notes based on corrections/preferences, file auto-loads at session start) is broadly correct, but the label is wrong (should be \"Auto memory\") and the storage location detail is misleading."
+  }
+}

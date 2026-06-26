@@ -1,0 +1,11 @@
+{
+  "key": "876bec7a32b197d92afeeae1e07ea8663e070bcd71a3c01a5e9dbf22cca9a3a2",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is an interactive visualization of Claude Code's context window, and it explicitly documents context compaction behavior. Specifically, the 'Skill descriptions' event entry states: \"Unlike the rest of the startup content, this listing is not re-injected after `/compact`. Only skills you actually invoked get preserved.\" This directly confirms the `/compact` command exists, that it compresses/summarizes the conversation to free context window space, and that certain startup content (skill descriptions) is selectively re-injected or dropped based on usage \u2014 exactly what the cell description claims. The label `/compact` is the real command name used in the page. The description accurately reflects the page's content: manual compaction command, freeing context window space to enable longer sessions within the 200K token limit, with selective re-injection behavior for skill descriptions. No adjacent capabilities (MCP, persistent memory, prompt caching) are confused here."
+  }
+}

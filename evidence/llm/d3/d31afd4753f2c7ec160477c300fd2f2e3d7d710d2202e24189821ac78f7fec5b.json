@@ -1,0 +1,11 @@
+{
+  "key": "d31afd4753f2c7ec160477c300fd2f2e3d7d710d2202e24189821ac78f7fec5b",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page documents OpenAI Codex \"Automations\" \u2014 a scheduled/triggered runs feature, not background/async execution as a distinct capability. The page explicitly describes standalone automations that \"start fresh runs on a schedule\" and thread automations that run \"on a schedule\" or at intervals \u2014 this maps directly to the ADJACENT capability \"Scheduled / triggered runs,\" not to the target capability of background/async execution (i.e., running tasks asynchronously without blocking). While the page mentions that automations \"run in the background,\" that phrasing describes the execution mode of scheduled automations, not a standalone async/background execution capability. The cell label \"Scheduled Tasks\" and description (\"run on a schedule independently of any conversation thread\") further confirm this is describing the adjacent scheduled-runs capability rather than the target background/async execution capability. The page does not document a general-purpose async or non-blocking task execution API or feature distinct from scheduling."
+  }
+}

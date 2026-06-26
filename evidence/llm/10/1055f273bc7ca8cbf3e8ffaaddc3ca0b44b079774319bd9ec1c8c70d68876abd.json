@@ -1,0 +1,11 @@
+{
+  "key": "1055f273bc7ca8cbf3e8ffaaddc3ca0b44b079774319bd9ec1c8c70d68876abd",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Custom instructions with AGENTS.md\" and documents exactly this capability: a markdown file (AGENTS.md) placed in a repository that gives the Codex agent standing instructions and project-specific context. The page confirms the label \"AGENTS.md\" as the canonical filename for this feature. The description accurately reflects the page's content \u2014 it correctly describes the file as giving standing instructions and project-specific conventions, notes that it layers on top of global AGENTS.md defaults, and correctly cites use cases like coding style, test commands, and workflow rules. No adjacent capabilities (packaged extensions, lifecycle hooks, output/system-prompt customization, or model selection) are conflated."
+  }
+}

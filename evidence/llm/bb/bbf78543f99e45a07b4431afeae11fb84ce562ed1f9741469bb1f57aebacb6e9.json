@@ -1,0 +1,11 @@
+{
+  "key": "bbf78543f99e45a07b4431afeae11fb84ce562ed1f9741469bb1f57aebacb6e9",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is specifically about Anthropic's \"Evaluation Tool\" in the Claude Console \u2014 a shipped feature for testing prompts against multiple scenarios. This directly matches the capability (Evals / testing harness) and is clearly distinct from adjacent capabilities like audit logging, cost tracking, or session management. The label \"Evaluation Tool\" matches the page's own terminology (\"Evaluation tool,\" \"Evaluation screen\"). The description accurately reflects all key details from the page: it is a built-in Console tool, uses `{{variable}}` double-brace syntax for dynamic variables, supports manual addition of test cases, auto-generation by Claude, and CSV import, and results are reviewed in the Console's Evaluate tab. No claims are invented or contradicted by the page."
+  }
+}

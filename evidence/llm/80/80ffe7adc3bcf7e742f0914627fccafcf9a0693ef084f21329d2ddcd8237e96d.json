@@ -1,0 +1,11 @@
+{
+  "key": "80ffe7adc3bcf7e742f0914627fccafcf9a0693ef084f21329d2ddcd8237e96d",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly defines \"Approval policy\" as one of two security control layers, describing it as \"when Codex must ask you before it executes an action (for example, leaving the sandbox, using the network, or running commands outside a trusted set).\" The cell label \"Approval Policy\" matches the page's own term exactly. The cell description accurately reflects the page: it correctly states that the approval policy controls when Codex must pause and request confirmation before crossing sandbox boundaries (network requests, writing outside sandbox), and that it can be configured to automatically allow, deny, or prompt \u2014 consistent with the page's mention of the `Auto` preset using `--ask-for-approval on-request` and the ability to configure sandbox, approval policy, and network settings. The description is careful to distinguish the approval policy from the sandbox mode itself, which aligns with the page's two-layer model. No invented claims are present."
+  }
+}

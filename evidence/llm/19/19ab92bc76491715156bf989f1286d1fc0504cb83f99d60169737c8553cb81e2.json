@@ -1,0 +1,11 @@
+{
+  "key": "19ab92bc76491715156bf989f1286d1fc0504cb83f99d60169737c8553cb81e2",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents MCP server management and configuration for the Anthropic Agent SDK. It covers: (1) inline configuration via `mcpServers` passed to `query()`, (2) file-based configuration via `.mcp.json` loaded through `settingSources`, (3) transport types including local process (`command`/`args`) and HTTP (`url`/`type: \"http\"`), and (4) tool allow-listing via `allowedTools` with exact names and wildcards like `mcp__server-name__*`. The cell label `mcpServers / .mcp.json` accurately reflects the two primary configuration mechanisms documented on the page. The description faithfully captures all key aspects: inline vs file-based config, transport types (local process via `command`/`args`, HTTP via `url`), and selective tool enabling with `allowedTools` and wildcards. No claims are invented beyond what the page documents. This is clearly about MCP server management/configuration, not about the MCP protocol itself, MCP authentication, tool governance enforcement, persistent memory, context compaction, or prompt caching."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "c89e0290881141f196215c00011bd5ef857f65e674e7454c4c2d0d3e6d142e5d",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly about \"Manage sessions\" in Claude Code, covering --continue, --resume, --from-pr, /resume, session naming, branching, and transcript storage \u2014 exactly the \"Resume / fork session\" capability. The cell label accurately names the key CLI entry points (--continue, --resume, /resume) as documented in the command table. The description faithfully reflects the page: local transcript storage, --continue for most recent session, --resume for the interactive picker, --resume <name|id> for direct resumption, --from-pr for PR-linked sessions, and /resume for switching or branching from inside an active session. No invented claims are present."
+  }
+}

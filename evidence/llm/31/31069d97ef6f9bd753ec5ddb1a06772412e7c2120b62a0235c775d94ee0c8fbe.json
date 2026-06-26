@@ -1,0 +1,11 @@
+{
+  "key": "31069d97ef6f9bd753ec5ddb1a06772412e7c2120b62a0235c775d94ee0c8fbe",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page does document MCP authentication as a shipped feature for Anthropic's Agent SDK (it is listed as a topic in the intro: \"transport types, tool search for large tool sets, authentication, and error handling\"), so the page is genuinely about MCP configuration including authentication, making documents_capability true. The label \"MCP Authentication\" is a reasonable name for the sub-feature described. However, the cell description is not faithfully supported by the page text provided. The description claims Claude connects using \"environment variables, HTTP headers, or OAuth 2/2.1 tokens\" and that \"credentials are passed automatically on each request.\" The actual page text shown covers MCP server configuration, transport types, tool allow-listing, and mentions authentication only in passing (in a topic list). No details about environment variables, HTTP headers, or OAuth 2/2.1 specifically appear anywhere in the cited page text. These are specific technical claims that cannot be verified from the provided excerpt, making the description not faithful to what is actually shown in the page."
+  }
+}

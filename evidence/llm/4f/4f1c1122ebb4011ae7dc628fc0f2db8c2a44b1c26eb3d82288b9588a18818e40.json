@@ -1,0 +1,11 @@
+{
+  "key": "4f1c1122ebb4011ae7dc628fc0f2db8c2a44b1c26eb3d82288b9588a18818e40",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents \"Sandbox runtime\" as a distinct Claude Code isolation approach. The comparison table confirms: it isolates \"the whole Claude Code process, including file tools, MCP servers, and hooks,\" requires no Docker, and has low setup effort \u2014 all matching the cell's claims. The cell's description correctly notes OS-level isolation (macOS Seatbelt / Linux bubblewrap is referenced in the broader sandboxing docs and is consistent with the \"runs on the host operating system without containers\" framing), restricts tools/hooks/subprocesses, and characterizes the goal as reducing blast radius from unintended or malicious actions \u2014 all faithful to the page. The label \"Sandbox Runtime\" matches the page's heading and table entry exactly. The capability is clearly distinct from the adjacent ones: dev-container integration is a separate row, network/egress control is noted as a limitation (not the feature itself), and tool permission controls / prompt-injection protection / security scanning are not what this feature does."
+  }
+}

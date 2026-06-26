@@ -1,0 +1,11 @@
+{
+  "key": "e9525c140ea2c8fbc669e69528b57abb6043bc726a888b2815ec75993492e84c",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page's navigation tree explicitly lists \"Compaction\" as a named subsection under \"Context management\" within the Agents SDK/CLI documentation (visible in the left-hand nav: \"Context management > Compaction > Counting tokens > Prompt caching\"). This confirms that \"Compaction\" is a real, shipped feature under Context Management in OpenAI's Agents SDK/CLI. The cell label \"Compaction\" matches the exact feature name shown in the nav. The description accurately states it is part of the Agents SDK, sits under Context Management, and is used to compress conversation history to manage token usage in long sessions. The page is clearly about this capability and not about any of the adjacent capabilities (MCP, caching, persistent memory, etc.), which appear separately in the navigation."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "key": "bd24411120ec72ee000680554070e432b8aa6eb3546e89387782148edf6def63",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page explicitly documents a \"Scheduled Tasks\" feature under that exact name, describing how users can schedule messages to be sent to their agents while away, with repeatable time-based triggers. The cell label \"Scheduled Tasks\" matches the page heading exactly. The description accurately reflects the page content: scheduling messages to agents at specific times, repeatable time-based triggers, and autonomous agent runs without user presence. The description's claim about configuration via \"the agent interface\" is a reasonable characterization, though the page doesn't detail the exact UI steps \u2014 nothing in the description contradicts or invents claims beyond what the page states. This capability is clearly distinct from cloud execution environment and background/async execution as described on the page."
+  }
+}

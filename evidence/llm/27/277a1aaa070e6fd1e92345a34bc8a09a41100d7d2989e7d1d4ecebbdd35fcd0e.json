@@ -1,0 +1,11 @@
+{
+  "key": "277a1aaa070e6fd1e92345a34bc8a09a41100d7d2989e7d1d4ecebbdd35fcd0e",
+  "label": "matrixaudit:OpenAI",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": false,
+    "label_ok": false,
+    "reason": "The cited page is a navigation/table-of-contents page for OpenAI's Codex documentation and various other product docs. It contains no substantive content about MCP tool governance, allow-listing, or an `allowed_tools` parameter in the Agents SDK. There is no documentation of a shipped feature that lets developers specify an allow-list of MCP tool names at the MCP server or agent configuration level. The page is essentially a site-map/index with no descriptive text about this capability whatsoever, so it cannot support the cell's label or description claims."
+  }
+}

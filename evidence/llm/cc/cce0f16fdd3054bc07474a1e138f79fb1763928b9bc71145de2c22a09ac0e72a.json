@@ -1,0 +1,11 @@
+{
+  "key": "cce0f16fdd3054bc07474a1e138f79fb1763928b9bc71145de2c22a09ac0e72a",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Connect Claude Code to tools via MCP\" and documents the Model Context Protocol as a shipped feature for Anthropic's Claude Code. It confirms MCP is an open-source standard for AI-tool integrations, and that Claude Code connects to external tools, data sources, and services through it. The cell label \"Model Context Protocol (MCP)\" matches the page's terminology exactly. The cell description accurately states that Claude Code connects to external tools/data sources/services via the open-source MCP standard, and that users configure MCP servers (locally or as hosted services) that Claude can invoke during a session \u2014 all of which is directly supported by the page content (local stdio servers, remote HTTP/SSE servers, etc.). The page is clearly about the core MCP connectivity capability, not the adjacent capabilities (server registry, authentication specifics, tool governance, persistent memory, context compaction, or prompt caching)."
+  }
+}

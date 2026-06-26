@@ -1,0 +1,11 @@
+{
+  "key": "f5d33dbec6281d330aba83547dc60272e692a5d3e7bc44228fe1f476e6825b23",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly documents the Resume/fork session capability for this provider (\"Antigravity CLI\"), and `/resume` is the correct label supported by the page. However, the description contains one inaccuracy: it states you can \"import and resume conversations from the Antigravity 2.0 desktop editor by pressing Tab to switch tabs in the picker,\" which is partially correct, but more importantly it claims sessions are \"automatically scoped to your current working directory\" \u2014 this part is accurate. The real issue is the description says the Conversation Picker opens \"where you can search, filter, and select a previous session to continue\" \u2014 this is accurate. However, the description omits that `/resume` also supports branching/forking (via `/fork`) and quick resume via `--continue` or `--conversation` flags, which are part of the same capability. More critically, the description claims the Conversation Picker is opened to \"search, filter, and select a previous session to continue\" and mentions pressing Tab to switch tabs, which are all supported by the page. On closer inspection, the description is largely faithful to the page content. The one subtle inaccuracy is that the description implies the Tab key switches \"tabs in the picker\" for importing from \"Antigravity 2.0 desktop editor\" \u2014 this is correctly described on the page. All core claims check out. The description is actually faithful and accurate to what the page documents. Re-evaluating: the description is correct and consistent with the page."
+  }
+}

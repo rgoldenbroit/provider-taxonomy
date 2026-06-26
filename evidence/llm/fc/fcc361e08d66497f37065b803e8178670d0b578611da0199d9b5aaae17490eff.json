@@ -1,0 +1,11 @@
+{
+  "key": "fcc361e08d66497f37065b803e8178670d0b578611da0199d9b5aaae17490eff",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": false,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The page clearly and specifically documents the Dev Container Integration capability for Claude Code \u2014 running the agent inside a defined dev container for isolated, consistent environments. The label \"Dev Container Integration\" matches the page's heading and feature name exactly. However, the description is partially inaccurate: it states this is specific to \"VS Code-managed Docker containers,\" but the page explicitly states the feature works with any editor supporting the Dev Containers spec (VS Code, GitHub Codespaces, JetBrains IDEs, Cursor, etc.), not exclusively VS Code. The description over-narrows the scope to VS Code only, which contradicts the page's content. The core concept (project directory mounted, commands execute inside container rather than on host, configured via standard dev container tooling) is otherwise accurate."
+  }
+}

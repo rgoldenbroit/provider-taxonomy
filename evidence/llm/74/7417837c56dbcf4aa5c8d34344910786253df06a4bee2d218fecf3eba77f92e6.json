@@ -1,0 +1,11 @@
+{
+  "key": "7417837c56dbcf4aa5c8d34344910786253df06a4bee2d218fecf3eba77f92e6",
+  "label": "matrixaudit:Google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page (slug: cli-credits, title: \"AI Credits\") directly documents cost & usage tracking for the Antigravity CLI, covering real-time statusline credit monitoring, low quota alerts, the `/credits` slash command for detailed usage stats, and `/config`/`settings` to toggle personal credit fallback \u2014 all of which match the cell's label and description faithfully. No adjacent capability is conflated."
+  }
+}

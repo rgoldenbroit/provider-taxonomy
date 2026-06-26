@@ -1,0 +1,11 @@
+{
+  "key": "d5944dfcc2b65e6416ebf8dc45e6d18dde6652f7f6009d2bffa14aaab090cc25",
+  "label": "matrixaudit:Anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "description_ok": true,
+    "documents_capability": true,
+    "label_ok": true,
+    "reason": "The cited page is explicitly titled \"Claude Code in Slack\" and documents this exact chat-surface integration capability. The page confirms users mention @Claude in Slack to delegate coding tasks, Claude Code runs asynchronously (creating sessions on the web), gathers context from threads, and surfaces results back in the channel \u2014 all matching the cell description. The label \"Claude Code in Slack\" is the provider's own name for the feature as shown in the page heading. The description's claims about @mention-driven task delegation, asynchronous execution, context gathering, and results returned in-channel are all directly supported by the page. This is distinct from remote control (mobile/web), notifications, or other access surfaces."
+  }
+}
