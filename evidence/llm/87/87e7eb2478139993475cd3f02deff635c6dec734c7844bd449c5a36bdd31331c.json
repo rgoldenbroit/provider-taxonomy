@@ -1,0 +1,169 @@
+{
+  "key": "87e7eb2478139993475cd3f02deff635c6dec734c7844bd449c5a36bdd31331c",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "CLAUDE.md is exactly a repo/project-scoped markdown file that gives the agent standing instructions and context, loaded automatically \u2014 a direct match."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": false,
+        "reason": "Bundled Orchestration Skills are pre-built prompt playbooks for orchestration/spawning agents, not a general mechanism to bundle and load reusable capabilities/instructions as extensions. This is adjacent (orchestration automation) rather than a packaging/loading system."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "Agent Lifecycle Hooks trigger custom logic on specific agent lifecycle events (idle, task creation, task completion), which directly matches 'run custom logic on agent events before/after a tool call or on stop.'"
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "Output Styles are saved configurations that modify Claude's system prompt and can be reused \u2014 directly shaping the agent's system prompt and output style."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "Model Context Protocol (MCP) is the open-source standard for connecting external tools, data, and services to Claude Code \u2014 an exact match for the external tool/connector protocol capability."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "Managed MCP Configuration directly covers deploying, configuring, and scoping a set of MCP servers with allowlists/denylists \u2014 a direct realization of install/configure/scope/discover MCP servers."
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "realizes": true,
+        "reason": "MCP Auth Methods explicitly supports env-var, HTTP header, and OAuth 2/2.1 token-based authentication to MCP servers \u2014 a direct and specific match."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "MCP Tool Allow-listing provides granular permission control over which MCP tools the agent may invoke, including wildcard rules \u2014 directly realizing MCP tool governance/allow-listing."
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": true,
+        "reason": "Auto Memory (MEMORY.md) persists notes Claude writes itself across sessions, per git repository, and auto-loads them \u2014 directly realizing durable cross-session agent memory."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "The Subagents feature describes specialized AI assistants running in isolated context windows handling delegated tasks and returning results \u2014 a direct match for spawning focused sub-agents."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Agent Teams coordinates multiple independent Claude Code sessions working together with a team lead and shared state \u2014 directly realizing multi-agent teams that share work and communicate."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Dynamic Workflows are JavaScript scripts Claude writes dynamically to orchestrate subagents at scale; they are generated/dynamic, not predefined repeatable named multi-step task sequences the user defines and saves. The capability describes saved/named automations, which is a different concept."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": true,
+        "reason": "Plan Mode researches and proposes changes without executing or modifying anything \u2014 directly matching 'produce a reviewable plan before the agent edits anything.'"
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "The Built-in Maintenance Prompt (/loop command) continues unfinished work and runs cleanup passes, but it is not a goal-directed loop with a verifiable 'done' condition the agent autonomously evaluates. It's a manually-triggered continuation command, not autonomous iteration toward a set goal."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Isolation runs parallel agents in separate git worktrees/checkouts so they don't overwrite each other \u2014 directly realizing parallel isolated workspaces."
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "realizes": true,
+        "reason": "Claude Code on the Web runs tasks on Anthropic-managed cloud infrastructure accessible from browser or phone \u2014 directly realizing a managed cloud execution environment."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Agent Execution runs a subagent as a non-blocking background task alongside other operations \u2014 a direct match for background/async execution."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Routines are saved Claude Code configurations that run automatically on a schedule on Anthropic-managed cloud infrastructure \u2014 directly realizing scheduled/triggered runs."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Sandbox Runtime wraps the Claude Code process in Seatbelt/bubblewrap isolation to limit blast radius \u2014 a direct realization of sandboxed execution."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "The Permission System classifies tools by approval requirements and governs whether Claude Code may use them \u2014 directly realizing tool permission controls (approve/deny what the agent can do)."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Egress Firewall Control restricts outbound network traffic to explicitly allowed domains \u2014 a direct and specific match for network/egress control."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": true,
+        "reason": "Prompt Injection Protection includes safeguards against attempts to override instructions via malicious text \u2014 a direct match for defenses against prompt injection in tool/web content."
+      },
+      {
+        "capability_id": "security-scanning",
+        "realizes": true,
+        "reason": "Security Guidance Plugin makes Claude review its own code changes for vulnerabilities \u2014 directly realizing security scanning of agent/code actions against a threat model."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": true,
+        "reason": "Dev Container Integration runs Claude Code inside a Docker container managed by VS Code with the project mounted \u2014 a direct match for running the agent inside a defined dev container/isolated runtime."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "OpenTelemetry Monitoring exports metrics, events, and traces via OpenTelemetry \u2014 directly realizing audit logging/telemetry for review and compliance."
+      },
+      {
+        "capability_id": "code-review",
+        "realizes": true,
+        "reason": "Automated PR Code Review uses multi-agent analysis to flag logic errors and security vulnerabilities in PRs \u2014 a direct match for automated code review of diffs/PRs before they land."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": true,
+        "reason": "Cost Tracking tracks spend and per-session token accounting \u2014 directly realizing cost and usage tracking."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": false,
+        "reason": "Mid-Session Workflow Resume resumes a paused workflow within the same session reusing cached agent results. This is context caching/continuation within a session, not resuming or forking a previous (ended) session \u2014 the capability specifically targets cross-session resume or branching."
+      },
+      {
+        "capability_id": "remote-control",
+        "realizes": true,
+        "reason": "Remote Control lets you continue a local Claude Code session from a phone, tablet, or browser \u2014 directly realizing remote control from mobile/web clients."
+      },
+      {
+        "capability_id": "notifications",
+        "realizes": true,
+        "reason": "Mobile Push Notifications sends push alerts to mobile devices for remote session events and updates \u2014 a direct match for push notifications on run progress/completion."
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "realizes": true,
+        "reason": "Claude Code in Slack lets users delegate coding tasks from a Slack workspace by mentioning @Claude \u2014 directly realizing driving the agent from a chat surface."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "Multi-Surface Connector Support describes where connectors (integrations) are available, not where the agent itself can be used. The capability is about agent access surfaces (terminal, IDE, web, mobile); connectors being available across surfaces is adjacent/infrastructure, not the same as the agent's own access surface definition."
+      }
+    ]
+  }
+}

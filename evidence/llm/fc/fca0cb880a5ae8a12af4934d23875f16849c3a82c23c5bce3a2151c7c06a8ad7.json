@@ -1,0 +1,19 @@
+{
+  "key": "fca0cb880a5ae8a12af4934d23875f16849c3a82c23c5bce3a2151c7c06a8ad7",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "The capability requires 'repeatable, named multi-step task sequences' \u2014 i.e., saveable, reusable workflow definitions. 'Standalone Automations' describes independent scheduled tasks that run without a conversation thread, which is a scheduling/triggering mechanism. It does not provide named, saveable, multi-step workflow composition. These are adjacent automation concepts, but the feature does not directly realize the capability's core requirement of reusable, named, multi-step sequences."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "The capability requires running the agent *inside a user-defined dev container / isolated runtime* \u2014 i.e., honoring a devcontainer spec or custom container definition. A 'Universal Base Image' is a pre-built default image supplied by the provider, not a mechanism for integrating with a user-specified dev container configuration. It is the fallback environment, not the dev-container integration itself. Providing a default image is adjacent to but does not realize the capability of accepting and running inside a defined dev container."
+      }
+    ]
+  }
+}

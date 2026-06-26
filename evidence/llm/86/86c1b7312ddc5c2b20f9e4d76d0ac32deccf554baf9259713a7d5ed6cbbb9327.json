@@ -1,0 +1,34 @@
+{
+  "key": "86c1b7312ddc5c2b20f9e4d76d0ac32deccf554baf9259713a7d5ed6cbbb9327",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": false,
+        "reason": "Output Styles are saved markdown formatting/prompt configurations that change how Claude responds stylistically. They are not bundled reusable capability/instruction packages that an agent can load as modular extensions \u2014 they are aesthetic/formatting presets, not packaged capabilities."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Routines are scheduled, cloud-executed configurations \u2014 they are closer to cron-style automation triggers than user-defined, named, multi-step task sequences. They lack the defining characteristic of 'workflows': composing repeatable named sequences of discrete steps."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Auto Mode enables autonomous action execution with a classifier reviewing each action for safety. It does not implement a verifiable 'done' condition that the agent checks against to decide whether to keep looping. The autonomy here is about action gating/safety, not goal-directed termination logic."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": false,
+        "reason": "Conversation Fork spawns a subagent by branching the current conversation context \u2014 this is an inter-agent/parallelism mechanism, not a way for the user to resume or branch a previous (past) session. The capability targets session continuity/recovery; forking is about spawning child agents mid-session."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": true,
+        "reason": "Claude Code on the Web directly adds a new access surface (browser/phone) through which users can run Claude Code tasks, fitting squarely within the definition of access surfaces as the places/interfaces where the agent can be used."
+      }
+    ]
+  }
+}

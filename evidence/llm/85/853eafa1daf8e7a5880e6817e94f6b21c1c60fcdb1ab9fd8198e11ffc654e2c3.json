@@ -1,0 +1,29 @@
+{
+  "key": "853eafa1daf8e7a5880e6817e94f6b21c1c60fcdb1ab9fd8198e11ffc654e2c3",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Skill Preloading directly instantiates the capability: it bundles reusable skill definitions and loads them into a subagent via a dedicated configuration field, which is exactly 'bundling reusable capabilities/instructions the agent can load.'"
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Workflow Slash Command Saving persists a generated workflow as a slash command shortcut \u2014 this is a recall/invocation mechanism, not the definition of a repeatable, named multi-step task sequence itself. It addresses how you re-invoke a workflow, not how you define or structure one. The capability asks for authoring/defining repeatable sequences; saving a shortcut to run one is adjacent, not directly realizing it."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Dynamic Interval Selection is about Claude choosing a time delay between repeats \u2014 it concerns scheduling cadence, not verifying a 'done' condition and autonomously looping until a goal is met. There is no goal-condition check or self-directed termination logic described; this is a timing/scheduling feature, not goal-directed autonomous iteration."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": true,
+        "reason": "Web\u2013Terminal Session Transfer directly realizes resume/fork: it lets a user take an existing session and continue it in a different environment (web \u2194 terminal), which is a concrete form of resuming/continuing a previous session across surfaces. The capability does not restrict the mechanism to same-surface resumption, and cross-surface continuity squarely fits 'continue a previous session.'"
+      }
+    ]
+  }
+}

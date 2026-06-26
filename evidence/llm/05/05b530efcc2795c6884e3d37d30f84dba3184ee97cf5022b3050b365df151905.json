@@ -1,0 +1,104 @@
+{
+  "key": "05b530efcc2795c6884e3d37d30f84dba3184ee97cf5022b3050b365df151905",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "Workspace Rules are stored in .agents/rules at the workspace or git root, which is exactly a repo-scoped file giving the agent standing instructions and context \u2014 directly matching the capability."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Plugins are described as namespaced bundles grouping skills, rules, MCP servers, and hooks into a single package \u2014 this directly matches bundling reusable capabilities/instructions the agent can load."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "Lifecycle Hooks explicitly run custom local shell scripts or commands at specific lifecycle points during execution, directly matching the capability of running custom logic on agent events."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Rules provide persistent constraints and context but are not specifically about shaping the system prompt, persona, or output style. They are general instruction/constraint mechanisms, making this a category-adjacent but not direct match for output/system-prompt customization."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "MCP Integration directly implements the Model Context Protocol as a standard way to connect external tools, data, and services \u2014 an exact match."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "The MCP Store is explicitly a built-in store to browse, install, and authenticate MCP servers, directly realizing the capability to install, configure, scope, and discover MCP servers."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "Per-Tool MCP Permission grants agent access to a single named tool on a specific MCP server, which is a direct implementation of allow-listing/governing which MCP tools the agent may use."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "The Subagents feature explicitly delegates long-running operations to parallel autonomous agents, directly matching the capability of spawning focused sub-agents to handle parts of a task."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Multi-Agent Orchestration provides a framework for coordinating multiple agents with error recovery, retries, and coordination logic \u2014 directly realizing multi-agent teams sharing work and communicating."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Workflows are described as saved markdown files defining a repeatable series of steps to guide the Agent through tasks across sessions, which is a direct match for defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "Request Review Mode pauses at milestones for user approval \u2014 this is approval-gating/checkpointing, not the specific plan-then-execute pattern where a full plan is produced upfront for review before any edits begin. Adjacent but not a direct match."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Support has agents operate in dedicated Git worktrees to isolate parallel work within a project, directly realizing the capability of parallel isolated workspaces without collisions."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Tasks explicitly run tracked, long-running operations asynchronously without blocking the primary agent \u2014 a direct match."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Scheduled Tasks allow users to schedule messages to agents with repeatable time-based triggers, directly realizing the capability of running the agent on a schedule without supervision."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Terminal Sandboxing provides kernel-level/native OS isolation for terminal commands executed by the agent, directly realizing sandboxed execution to limit blast radius."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "The Fine-Grained Permissions Engine represents every sensitive agent operation as a permission, providing a unified mechanism to approve/deny what the agent is allowed to do \u2014 a direct match."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Independent Network Access Control explicitly controls network connectivity for sandboxed commands independently of filesystem restrictions, directly realizing the capability to restrict the agent's outbound network access."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "Inspect Hooks are described as read-only, non-blocking hooks for logging, audit trails, and metrics collection \u2014 a direct match for audit logging and telemetry."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "Observability tracks per-turn and cumulative token usage and thinking traces, which relates to usage visibility, but it does not address cost tracking or the ability to cap/limit token spend. Token usage observability is adjacent to but not the same as cost and usage tracking with caps."
+      }
+    ]
+  }
+}

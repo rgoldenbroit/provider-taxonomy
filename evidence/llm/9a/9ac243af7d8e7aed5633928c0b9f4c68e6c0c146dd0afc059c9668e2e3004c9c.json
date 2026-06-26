@@ -1,0 +1,29 @@
+{
+  "key": "9ac243af7d8e7aed5633928c0b9f4c68e6c0c146dd0afc059c9668e2e3004c9c",
+  "label": "matrixrepick:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "packaged-extensions",
+        "feature_index": 134
+      },
+      {
+        "capability_id": "workflows",
+        "feature_index": 169
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 16
+      },
+      {
+        "capability_id": "resume-session",
+        "feature_index": 56
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 32
+      }
+    ]
+  }
+}

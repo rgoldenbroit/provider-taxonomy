@@ -1,0 +1,21 @@
+{
+  "key": "f04a0581706e26de1405e9459e41f6ce32a00db123b7ed8ad35a51185c0ff261",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 33
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 7
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 0
+      }
+    ]
+  }
+}

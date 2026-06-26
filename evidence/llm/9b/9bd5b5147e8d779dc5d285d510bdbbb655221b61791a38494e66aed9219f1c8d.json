@@ -1,0 +1,29 @@
+{
+  "key": "9bd5b5147e8d779dc5d285d510bdbbb655221b61791a38494e66aed9219f1c8d",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "workflows",
+        "feature_index": 136
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 49
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 28
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 84
+      }
+    ]
+  }
+}

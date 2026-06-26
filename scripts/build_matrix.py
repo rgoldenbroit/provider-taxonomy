@@ -18,6 +18,7 @@ doesn't cover are left `unverified` ("not yet covered"); close them by deepening
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -63,7 +64,7 @@ MAP_SYSTEM = (
 CONFIRM_SCHEMA = {
     "type": "object", "additionalProperties": False, "required": ["confirmations"],
     "properties": {"confirmations": {"type": "array", "items": {
-        "type": "object", "additionalProperties": False, "required": ["capability_id", "realizes"],
+        "type": "object", "additionalProperties": False, "required": ["capability_id", "realizes", "reason"],
         "properties": {"capability_id": {"type": "string"}, "realizes": {"type": "boolean"},
                        "reason": {"type": "string"}}}}}}
 CONFIRM_SYSTEM = (
@@ -72,7 +73,7 @@ CONFIRM_SYSTEM = (
     "reject: context CACHING vs context COMPACTION; observability/'loop span' vs goal-directed ITERATION; "
     "inter-agent messaging vs a chat SURFACE like Slack; sandboxing vs access SURFACES. Tangential, partial, "
     "or category-adjacent -> realizes=false. A false rejection is fine (it becomes an honest gap); a false "
-    "acceptance is not."
+    "acceptance is not. Give a brief `reason` for every verdict."
 )
 
 
@@ -113,7 +114,93 @@ def confirm_provider(llm, pkey, pname, pairs):
     out = llm.structured(system=CONFIRM_SYSTEM,
                          prompt=f"PROVIDER: {pname}\nConfirm each feature directly realizes its capability:\n{lines}",
                          schema=CONFIRM_SCHEMA, label=f"matrixconfirm:{pkey}")
-    return {c["capability_id"]: bool(c["realizes"]) for c in out.get("confirmations", [])}
+    return {c["capability_id"]: {"ok": bool(c["realizes"]), "reason": (c.get("reason") or "").strip()}
+            for c in out.get("confirmations", [])}
+
+
+def _hit(hint, text):
+    return re.search(r"(?<![a-z0-9])" + re.escape(hint.lower()) + r"(?![a-z0-9])", text) is not None
+
+
+def top_candidates(feats, hints, n=3):
+    """Hint-matching catalog features (for the gap breakdown) — does an appropriate feature even exist?"""
+    scored = []
+    for f in feats:
+        nm, sc = f["name"].lower(), (f.get("scope_note") or "").lower()
+        nh = sum(1 for h in hints if _hit(h, nm))
+        sh = sum(1 for h in hints if _hit(h, sc))
+        if nh or sh:
+            scored.append(((nh, sh), f))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [f for _, f in scored[:n]]
+
+
+REPICK_SCHEMA = {
+    "type": "object", "additionalProperties": False, "required": ["repicks"],
+    "properties": {"repicks": {"type": "array", "items": {
+        "type": "object", "additionalProperties": False, "required": ["capability_id", "feature_index"],
+        "properties": {"capability_id": {"type": "string"}, "feature_index": {"type": "integer"}}}}}}
+REPICK_SYSTEM = (
+    "You re-select features after a strict reviewer REJECTED your earlier picks. For each capability, "
+    "choose a DIFFERENT numbered feature that DIRECTLY and specifically realizes it — not the rejected "
+    "feature, not an already-tried index, not an adjacent concept. If no remaining feature truly fits, "
+    "return feature_index=0 — a wrong pick is worse than none."
+)
+
+
+def repick(llm, pkey, pname, feats, items, tried):
+    feat_lines = "\n".join(f"  [{i+1}] {f['name']} — {(f.get('scope_note') or '')[:110]}" for i, f in enumerate(feats))
+    item_lines = "\n".join(
+        f"  - {cid}: {name} — {what}\n      rejected \"{rn}\": {rr}; already tried: {sorted(tried.get(cid, set()))}"
+        for cid, name, what, rn, rr in items)
+    out = llm.structured(system=REPICK_SYSTEM,
+                         prompt=f"PROVIDER: {pname}\n\nFEATURES (numbered):\n{feat_lines}\n\nRE-PICK a different index (or 0 if none fits):\n{item_lines}",
+                         schema=REPICK_SCHEMA, label=f"matrixrepick:{pkey}")
+    return {r["capability_id"]: r["feature_index"] for r in out.get("repicks", [])}
+
+
+def select_provider(llm, pkey, pname, product, feats, rows, max_rounds=3):
+    """Map -> confirm -> (on rejection) re-pick a different feature -> re-confirm. A cell is grounded only
+    once a pick PASSES confirm; the re-pick recovers genuine misses without weakening the gate."""
+    mp = map_provider(llm, pkey, pname, product, feats, rows)
+    rowby = {c["id"]: c for c in rows}
+    cur, tried, confirmed, diag = {}, {}, {}, {}
+    for c in rows:
+        m = mp.get(c["id"])
+        if m and m.get("matched") and 1 <= m.get("feature_index", 0) <= len(feats):
+            cur[c["id"]] = m["feature_index"]
+            tried.setdefault(c["id"], set()).add(m["feature_index"])
+        else:
+            diag[c["id"]] = "mapper: no feature selected"
+    for _ in range(max_rounds):
+        pending = {cid: idx for cid, idx in cur.items() if cid not in confirmed}
+        if not pending:
+            break
+        pairs = [(cid, rowby[cid]["name"], rowby[cid]["what"], feats[idx-1]["name"], feats[idx-1].get("scope_note"))
+                 for cid, idx in pending.items()]
+        ok = confirm_provider(llm, pkey, pname, pairs)
+        rejected = []
+        for cid, idx in pending.items():
+            v = ok.get(cid)
+            if v and v["ok"]:
+                confirmed[cid] = feats[idx-1]
+                diag.pop(cid, None)
+            else:
+                rejected.append((cid, rowby[cid]["name"], rowby[cid]["what"], feats[idx-1]["name"], (v or {}).get("reason", "")))
+                diag[cid] = f"confirm rejected \"{feats[idx-1]['name']}\": {(v or {}).get('reason') or '(no reason)'}"
+                cur.pop(cid, None)
+        if not rejected:
+            break
+        rep = repick(llm, pkey, pname, feats, rejected, tried)
+        progressed = False
+        for cid, idx in rep.items():
+            if 1 <= idx <= len(feats) and idx not in tried.get(cid, set()):
+                cur[cid] = idx
+                tried.setdefault(cid, set()).add(idx)
+                progressed = True
+        if not progressed:
+            break
+    return {c["id"]: confirmed.get(c["id"]) for c in rows}, diag
 
 
 def cell_for(product, feat):
@@ -138,28 +225,15 @@ def main() -> int:
     rows = [c for g in caps["capability_groups"] for c in g["capabilities"]]
     llm = get_llm(cfg)
 
-    chosen = {}   # pkey -> {cap_id: feat or None}
+    chosen, featmap, diag = {}, {}, {}   # diag[(pkey, cap_id)] = why a cell ended up a gap
     for pkey, pname, product, root in PROVIDERS:
         feats = provider_features(catalog, root)
-        mp = map_provider(llm, pkey, pname, product, feats, rows)
-        pairs = []
-        for c in rows:
-            m = mp.get(c["id"])
-            if m and m.get("matched") and 1 <= m.get("feature_index", 0) <= len(feats):
-                f = feats[m["feature_index"] - 1]
-                pairs.append((c["id"], c["name"], c["what"], f["name"], f.get("scope_note")))
-        ok = confirm_provider(llm, pkey, pname, pairs)
-        rej = sum(1 for cid in ok if not ok[cid])
-        chosen[pkey] = {}
-        for c in rows:
-            m = mp.get(c["id"])
-            f = None
-            if (m and m.get("matched") and 1 <= m.get("feature_index", 0) <= len(feats)
-                    and ok.get(c["id"], True)):
-                f = feats[m["feature_index"] - 1]
-            chosen[pkey][c["id"]] = f
-        print(f"  {pname}: selected {sum(1 for v in chosen[pkey].values() if v)}/{len(rows)} "
-              f"({rej} rejected by confirm)", file=sys.stderr)
+        featmap[pkey] = feats
+        sel, dg = select_provider(llm, pkey, pname, product, feats, rows)   # map -> confirm -> re-pick
+        chosen[pkey] = sel
+        for cid, reason in dg.items():
+            diag[(pkey, cid)] = reason
+        print(f"  {pname}: selected {sum(1 for x in sel.values() if x)}/{len(rows)}", file=sys.stderr)
 
     doc = {"product_category": caps["product_category"], "capability_groups": []}
     total = covered = 0
@@ -181,10 +255,23 @@ def main() -> int:
 
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"\nprojected {total} cells: {covered} grounded, {total - covered} gaps (not yet in catalog)")
+
     if "--report" in sys.argv:
         print("\ncell -> catalog feature:")
         for cid, pk, fname in mapping:
             print(f"  {pk:9s} {cid:30s} <- {fname}")
+    if "--gaps" in sys.argv:
+        print("\n=== GAP BREAKDOWN — why each gap, + top hint-matching catalog candidates for review ===")
+        for pkey, pname, _, _ in PROVIDERS:
+            for c in rows:
+                if chosen[pkey][c["id"]]:
+                    continue
+                cands = top_candidates(featmap[pkey], c["hints"], 3)
+                tag = "no candidate -> TRUE GAP" if not cands else "candidate(s) exist -> review"
+                print(f"\n  {pname} / {c['id']}  [{tag}]")
+                print(f"      why: {diag.get((pkey, c['id']), '?')}")
+                for f in cands:
+                    print(f"      cand: {f['name']}  ::  {(f.get('scope_note') or '')[:80]}")
     return 0
 
 

@@ -1,0 +1,17 @@
+{
+  "key": "57065b1da63a9034e858a6ef158ae000abeb4294b6020f7e3684191ca1cf0a43",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "workflows",
+        "feature_index": 47
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 38
+      }
+    ]
+  }
+}

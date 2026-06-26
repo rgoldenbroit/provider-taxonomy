@@ -1,0 +1,14 @@
+{
+  "key": "80d2a1a31812e5e41b95566d7c6956e70e59cc97383e29bbc33d44188d367bba",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "The feature 'Mandatory Action Review Policy' gates individual actions (terminal, browser, artifact) behind a human-approval queue at execution time. It does not realize plan-then-execute mode, which requires the agent to produce a holistic, reviewable plan *before* any edits or actions begin. Blocking discrete actions for approval is a per-action safety control, not a pre-execution planning surface \u2014 the agent still acts without first presenting a coherent plan for review."
+      }
+    ]
+  }
+}

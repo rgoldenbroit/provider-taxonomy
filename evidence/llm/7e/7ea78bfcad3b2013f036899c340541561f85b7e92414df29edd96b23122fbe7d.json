@@ -1,0 +1,154 @@
+{
+  "key": "7ea78bfcad3b2013f036899c340541561f85b7e92414df29edd96b23122fbe7d",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "AGENTS.md is explicitly a repository-scoped instruction file that gives the agent project-specific standing instructions and context, directly matching the capability definition."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Plugins explicitly bundle skills, app integrations, and MCP servers into reusable units that Codex can load, directly matching the 'bundle reusable capabilities/instructions' definition."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "Custom Agents via TOML files let users define different model configurations and instructions per agent, which directly shapes persona, system prompt, and output style."
+      },
+      {
+        "capability_id": "model-selection",
+        "realizes": true,
+        "reason": "Per-Agent Model Selection explicitly allows assigning specific models to each agent (auto or pinned), directly realizing the capability to choose the underlying model."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "MCP (Model Context Protocol) is described as the standard protocol for connecting Codex to external tools and context providers, directly matching the capability."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "MCP Server CLI Management provides a CLI command to add and manage MCP servers, directly covering install, configure, and manage aspects of the capability."
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "realizes": true,
+        "reason": "OAuth MCP Login explicitly authenticates to MCP servers via OAuth, directly matching the MCP authentication capability."
+      },
+      {
+        "capability_id": "prompt-caching",
+        "realizes": false,
+        "reason": "Container Caching caches configured containers to accelerate task startup \u2014 this is environment/infrastructure caching, not caching of prompt context or repeated tokens to cut LLM latency and cost. These are categorically distinct."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "Subagent Workflows describes Codex spawning specialized agents in parallel and consolidating results, directly matching the 'spawn focused sub-agents to handle parts of a task' capability."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Multi-Agent Workflows describes coordinating multiple Codex CLI instances via the Agents SDK and MCP, enabling agents to share work and communicate, directly realizing multi-agent team coordination."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Automations describes recurring background tasks scheduled to run unattended \u2014 this is closer to scheduled/async execution than defining repeatable, named multi-step task sequences (workflows/pipelines). It overlaps with scheduled-runs and background-execution more than workflow orchestration."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Git Worktree Isolation explicitly runs each automation in an isolated worktree to prevent interference, directly realizing parallel isolated workspaces without collisions."
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "realizes": true,
+        "reason": "Cloud Environments explicitly describes managed cloud environments controlling what Codex installs and runs during cloud tasks, with caching, secrets, and configuration \u2014 directly matching the capability."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Automations explicitly runs tasks unattended in the background and reports findings, directly matching background/async execution."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Standalone Automations are described as independent scheduled tasks running on their own without a conversation thread, directly realizing scheduled/triggered runs."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "The Sandbox feature is explicitly a constrained environment letting Codex run local commands autonomously without unrestricted access, directly matching isolated execution to limit blast radius."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "Approval Policy controls when Codex must stop and ask before crossing sandbox boundaries, directly realizing tool permission approval/denial controls."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Network Access Control explicitly enables/disables outbound network access with optional domain allowlists, directly matching the network/egress control capability."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "DNS Rebinding Protection prevents a specific network-layer attack (DNS rebinding) within the sandbox. While it is a security measure, it does not address malicious instructions injected via tool/web content into the prompt \u2014 these are categorically different threats. This is a sandboxing/network security feature, not prompt-injection defense."
+      },
+      {
+        "capability_id": "security-scanning",
+        "realizes": true,
+        "reason": "Codex Security is explicitly a security-review plugin that scans repositories for vulnerabilities and validates files, directly matching the automated security scanning capability."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "A Custom Setup Script runs a user-defined script for non-standard environment configuration, but this is not the same as running the agent inside a defined dev container specification (e.g., devcontainer.json). It is adjacent environment customization, not dev-container integration specifically."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "Built-in Run Tracing emits structured records of model calls, tool calls, handoffs, guardrails, and custom spans \u2014 this is a direct realization of audit logging/telemetry for agent actions."
+      },
+      {
+        "capability_id": "code-review",
+        "realizes": true,
+        "reason": "AI Code Review explicitly has Codex review GitHub PR diffs and post standard GitHub code reviews focused on serious issues, directly matching automated code review of PRs."
+      },
+      {
+        "capability_id": "evals-testing",
+        "realizes": true,
+        "reason": "The Evals API lets users configure and run evaluations of model outputs programmatically, directly realizing an evaluations/testing harness for agent behavior."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": true,
+        "reason": "Multi-Device Session Handoff allows resuming an active Codex session from any signed-in device, which directly realizes the 'resume a previous session' capability (the 'fork' aspect is absent but the core resume capability is directly met)."
+      },
+      {
+        "capability_id": "remote-control",
+        "realizes": true,
+        "reason": "Remote Connections explicitly lets users control an agent remotely from another device, including starting/continuing runs, directly matching remote control from mobile or remote clients."
+      },
+      {
+        "capability_id": "notifications",
+        "realizes": true,
+        "reason": "Task Completion Notifications explicitly provides alerts when Codex finishes a task or requires input, directly realizing the notifications capability."
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "realizes": true,
+        "reason": "Codex for Linear is a connector that lets users delegate work from Linear issues by mentioning @Codex, directly realizing integration with a chat/issue tool as a surface to drive the agent."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "GitHub Integration is one specific integration (PR review + async cloud tasks via @codex mention). While GitHub is an access surface, the feature describes a specific integration/workflow rather than defining the range of surfaces (terminal, IDE, web, cloud, mobile) where the agent can be used. Mapping a single integration to the broader 'access surfaces' capability is too broad a conflation."
+      }
+    ]
+  }
+}

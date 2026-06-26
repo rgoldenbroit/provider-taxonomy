@@ -1,0 +1,19 @@
+{
+  "key": "b347082ce3c9f73c49e74883bb30d3f12d107eaa04a5c0e0bdc25ea704d818c5",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "GEMINI.md is a user-authored markdown file placed in ~/.gemini/ that is injected as persistent instructions across all workspaces \u2014 directly acting as a global system prompt / persona / output-style configuration. This is a canonical mechanism for shaping the agent's behavior and output style, which is exactly what the capability describes."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "An 'Artifact Review Policy' describes a general approval/review gate for plans and artifacts, but it does not specifically realize a distinct plan-then-execute mode where the agent first produces a reviewable plan and withholds any edits until the plan is approved. The capability requires a two-phase workflow (plan phase \u2192 user review \u2192 execute phase); a generic review policy is an adjacent governance mechanism, not the plan-mode itself."
+      }
+    ]
+  }
+}

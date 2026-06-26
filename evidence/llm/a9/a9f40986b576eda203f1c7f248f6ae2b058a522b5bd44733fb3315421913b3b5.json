@@ -1,0 +1,29 @@
+{
+  "key": "a9f40986b576eda203f1c7f248f6ae2b058a522b5bd44733fb3315421913b3b5",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "workflows",
+        "realizes": false,
+        "reason": "Thread Automations are recurring tasks scoped to and triggered within a specific conversation thread \u2014 they are thread-local triggers, not reusable, named, multi-step task sequences that can be saved and invoked independently as general-purpose workflows/automations."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "Default Risk Policy detects broad categories of dangerous agent actions (exfiltration, credential probing, destructive actions) as a behavioral guardrail. It is not specifically a defense against malicious instructions injected via tool outputs or web content \u2014 that is prompt-injection protection. The policy addresses what the agent does, not how it resists adversarial content in its context."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Cloud Environments provide configurable cloud-hosted runtimes with caching and secrets, but they are not specifically dev-container integration (i.e., using a defined devcontainer spec/format to run the agent inside a standardized, portable dev container). This is a related but distinct concept \u2014 cloud runtime configuration vs. dev-container standard compliance."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": true,
+        "reason": "Mobile Access via QR Code directly establishes a mobile app (ChatGPT mobile) as an access surface for Codex, which squarely falls within the capability of defining where the agent can be used. Mobile is explicitly one of the enumerated surfaces in the capability definition."
+      }
+    ]
+  }
+}

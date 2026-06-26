@@ -1,0 +1,13 @@
+{
+  "key": "b2ed529abbe07a408009e1c47781579990ef5a07985200ece676e4ef40283c39",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 48
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "8aa006e92499217bb8325e6a81ca253c1752202fb1ecdfac4483f662a37e4bb5",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "workflows",
+        "feature_index": 126
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 139
+      }
+    ]
+  }
+}

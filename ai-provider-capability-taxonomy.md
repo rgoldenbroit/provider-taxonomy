@@ -90,7 +90,7 @@ official-docs-grounded catalog (`data/taxonomy.json`), then escalates to each ve
 doc pages and a domain-restricted live search, leaving a cell `unverified` only when no
 first-party doc supports it. The canonical data is `data/agentic-matrix.json`; this block renders it.
 
-7 capability groups, 37 neutral capabilities. **68/111 cells grounded, 43 honestly `unverified`** (no first-party doc — left
+7 capability groups, 37 neutral capabilities. **72/111 cells grounded, 39 honestly `unverified`** (no first-party doc — left
 blank, not guessed). Every grounded cell links the official page it was verified against.
 
 > Regenerate: `scripts/build_matrix.py` (re-ground, needs Vertex) → `scripts/render_matrix_md.py`
@@ -139,11 +139,11 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Skill Preloading
+        status: active
+        evidence_url: https://code.claude.com/docs/en/sub-agents.md
+        last_verified: '2026-06-22'
+        description: Preload reusable skill definitions into a subagent via a dedicated skills configuration field.
         notes: ''
       google:
         offering: Antigravity
@@ -205,11 +205,11 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Global Rules
+        status: active
+        evidence_url: https://antigravity.google/assets/docs/antigravity-2-0/rules-workflows.md
+        last_verified: '2026-06-22'
+        description: User-defined rules in ~/.gemini/GEMINI.md applied across all workspaces.
         notes: ''
       openai:
         offering: Codex
@@ -974,11 +974,11 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: Observability
-        status: active
-        evidence_url: https://antigravity.google/assets/docs/sdk/sdk-overview.md
-        last_verified: '2026-06-24'
-        description: Tracks per-turn and cumulative token usage and provides access to thinking traces.
+        implementation: unverified
+        status: unverified
+        evidence_url: ''
+        last_verified: ''
+        description: Not yet covered in the grounded catalog.
         notes: ''
       openai:
         offering: Codex
@@ -1053,11 +1053,11 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Web–Terminal Session Transfer
+        status: preview
+        evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
+        last_verified: '2026-06-24'
+        description: Lets you move sessions between the web and your terminal using --remote and --teleport, set up from the terminal via /web-setup.
         notes: ''
       google:
         offering: Antigravity
@@ -1172,11 +1172,11 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Claude Code on the Web
+        status: preview
+        evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
+        last_verified: '2026-06-24'
+        description: Runs Claude Code tasks on Anthropic-managed cloud infrastructure that you can start from the browser or phone and monitor remotely, with each session running in a fresh VM and continuing to run if you disconnect.
         notes: ''
       google:
         offering: Antigravity
@@ -1188,11 +1188,11 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Mobile Access via QR Code
+        status: active
+        evidence_url: https://developers.openai.com/codex/remote-connections.md
+        last_verified: '2026-06-22'
+        description: Connect to Codex from the ChatGPT mobile app by scanning a QR code.
         notes: ''
 ```
 

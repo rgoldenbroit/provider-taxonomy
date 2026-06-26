@@ -1,0 +1,17 @@
+{
+  "key": "e8aeb0c8e3e9aeb9c31696854bea3cc21012701efc8a483baf749eb755ee7459",
+  "label": "matrixrepick:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "workflows",
+        "feature_index": 124
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 0
+      }
+    ]
+  }
+}
