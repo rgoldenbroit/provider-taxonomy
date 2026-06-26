@@ -1,0 +1,21 @@
+{
+  "key": "a6ad3519d5fec1ca9d158c6f40d5d5a378ef70b016cdf90827e53a91b09ffdf6",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 33
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 7
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "feature_index": 0
+      }
+    ]
+  }
+}

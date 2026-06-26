@@ -159,6 +159,23 @@ def repick(llm, pkey, pname, feats, items, tried):
     return {r["capability_id"]: r["feature_index"] for r in out.get("repicks", [])}
 
 
+RECONSIDER_SYSTEM = (
+    "You are re-examining capabilities a first pass left UNMATCHED. For each, look carefully at the "
+    "numbered features and pick the one that DIRECTLY and specifically realizes it (not an adjacent "
+    "concept), or feature_index=0 if no feature truly fits — a wrong pick is worse than none."
+)
+
+
+def reconsider(llm, pkey, pname, feats, skipped):
+    """Give the mapper a second look at cells it left empty (so a clean fit it overlooked isn't lost)."""
+    feat_lines = "\n".join(f"  [{i+1}] {f['name']} — {(f.get('scope_note') or '')[:110]}" for i, f in enumerate(feats))
+    item_lines = "\n".join(f"  - {cid}: {name} — {what}" for cid, name, what in skipped)
+    out = llm.structured(system=RECONSIDER_SYSTEM,
+                         prompt=f"PROVIDER: {pname}\n\nFEATURES (numbered):\n{feat_lines}\n\nUNMATCHED capabilities — pick a feature index or 0:\n{item_lines}",
+                         schema=REPICK_SCHEMA, label=f"matrixreconsider:{pkey}")
+    return {r["capability_id"]: r["feature_index"] for r in out.get("repicks", [])}
+
+
 def select_provider(llm, pkey, pname, product, feats, rows, max_rounds=3):
     """Map -> confirm -> (on rejection) re-pick a different feature -> re-confirm. A cell is grounded only
     once a pick PASSES confirm; the re-pick recovers genuine misses without weakening the gate."""
@@ -172,6 +189,14 @@ def select_provider(llm, pkey, pname, product, feats, rows, max_rounds=3):
             tried.setdefault(c["id"], set()).add(m["feature_index"])
         else:
             diag[c["id"]] = "mapper: no feature selected"
+    # second look at cells the mapper skipped — any pick still has to pass the same strict confirm below
+    skipped = [(c["id"], c["name"], c["what"]) for c in rows if c["id"] not in cur]
+    if skipped:
+        for cid, idx in reconsider(llm, pkey, pname, feats, skipped).items():
+            if 1 <= idx <= len(feats) and idx not in tried.get(cid, set()):
+                cur[cid] = idx
+                tried.setdefault(cid, set()).add(idx)
+                diag.pop(cid, None)
     for _ in range(max_rounds):
         pending = {cid: idx for cid, idx in cur.items() if cid not in confirmed}
         if not pending:

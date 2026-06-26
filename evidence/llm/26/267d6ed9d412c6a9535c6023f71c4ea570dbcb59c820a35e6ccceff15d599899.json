@@ -1,0 +1,41 @@
+{
+  "key": "267d6ed9d412c6a9535c6023f71c4ea570dbcb59c820a35e6ccceff15d599899",
+  "label": "matrixreconsider:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "lifecycle-hooks",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "context-compaction",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      }
+    ]
+  }
+}

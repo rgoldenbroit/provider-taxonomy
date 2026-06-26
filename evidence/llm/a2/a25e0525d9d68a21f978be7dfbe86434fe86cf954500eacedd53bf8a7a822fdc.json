@@ -1,0 +1,29 @@
+{
+  "key": "a25e0525d9d68a21f978be7dfbe86434fe86cf954500eacedd53bf8a7a822fdc",
+  "label": "matrixreconsider:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "model-selection",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "context-compaction",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      }
+    ]
+  }
+}

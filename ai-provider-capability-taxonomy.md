@@ -90,7 +90,7 @@ official-docs-grounded catalog (`data/taxonomy.json`), then escalates to each ve
 doc pages and a domain-restricted live search, leaving a cell `unverified` only when no
 first-party doc supports it. The canonical data is `data/agentic-matrix.json`; this block renders it.
 
-7 capability groups, 37 neutral capabilities. **72/111 cells grounded, 39 honestly `unverified`** (no first-party doc — left
+7 capability groups, 37 neutral capabilities. **73/111 cells grounded, 38 honestly `unverified`** (no first-party doc — left
 blank, not guessed). Every grounded cell links the official page it was verified against.
 
 > Regenerate: `scripts/build_matrix.py` (re-ground, needs Vertex) → `scripts/render_matrix_md.py`
@@ -974,11 +974,11 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Observability
+        status: active
+        evidence_url: https://antigravity.google/assets/docs/sdk/sdk-overview.md
+        last_verified: '2026-06-24'
+        description: Tracks per-turn and cumulative token usage and provides access to thinking traces.
         notes: ''
       openai:
         offering: Codex

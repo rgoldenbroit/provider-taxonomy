@@ -1067,11 +1067,11 @@
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "description": "Not yet covered in the grounded catalog.",
+              "implementation": "Observability",
+              "status": "active",
+              "evidence_url": "https://antigravity.google/assets/docs/sdk/sdk-overview.md",
+              "last_verified": "2026-06-24",
+              "description": "Tracks per-turn and cumulative token usage and provides access to thinking traces.",
               "notes": ""
             },
             "openai": {
