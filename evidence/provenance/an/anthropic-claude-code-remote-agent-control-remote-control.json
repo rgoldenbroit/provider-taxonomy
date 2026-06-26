@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Remote Control",
-    "page_content_hash": "d6cdb51f7bb0bdb6a2da91057b344b390611e361efda95b64cd3fb3b05110f70",
+    "page_content_hash": "f5752adc7f7c4d6f3436efefdf94b00947ae8e29a5b8f85ea44c3cce195ea382",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/remote-control.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

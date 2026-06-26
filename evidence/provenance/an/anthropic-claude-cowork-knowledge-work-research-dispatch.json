@@ -7,7 +7,7 @@
     "lifecycle_status": "beta",
     "model": "claude-opus-4-8",
     "name": "Dispatch",
-    "page_content_hash": "e3481e85005090e4fac281444571895c430bce7ca78cae5462ed338fc09ba1e1",
+    "page_content_hash": "42865bd40ccfe0a17fb1470cc684c171fec7a992e83b105ed02bb809e3e4653f",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

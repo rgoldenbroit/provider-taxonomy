@@ -1,0 +1,56 @@
+{
+  "key": "6e73a5a588c36a1e5132942f25e36491695241519ba2beead44330eeb0bf7a4d",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity lets users run custom scripts or shell commands at specific points during its execution loop to enforce rules, run linters, or capture diagnostics.",
+        "level": "feature",
+        "name": "Hooks",
+        "quote": "Hooks allow you to run custom scripts or shell commands at specific points during Antigravity's execution loop. This is powerful for enforcing custom rules, running linters, or capturing diagnostics automatically.",
+        "status": "unknown"
+      },
+      {
+        "claim": "A hook event that fires before a tool is executed, allowing scripts to gate, block, or prompt the user before any tool call proceeds.",
+        "level": "subfeature",
+        "name": "PreToolUse",
+        "parent_hint": "Hooks",
+        "quote": "PreToolUse | Fires before a tool is executed. | Tool name (e.g., run_command)",
+        "status": "unknown"
+      },
+      {
+        "claim": "A hook event that fires after a tool completes, enabling post-execution scripts such as linters or diagnostic capture.",
+        "level": "subfeature",
+        "name": "PostToolUse",
+        "parent_hint": "Hooks",
+        "quote": "PostToolUse | Fires after a tool completes. | Tool name",
+        "status": "unknown"
+      },
+      {
+        "claim": "A hook event that fires before the model is called, with the ability to inject steps (tool calls, user messages, or ephemeral messages) into the conversation trajectory.",
+        "level": "subfeature",
+        "name": "PreInvocation",
+        "parent_hint": "Hooks",
+        "quote": "PreInvocation | Fires before the model is called. | N/A (matcher ignored)",
+        "status": "unknown"
+      },
+      {
+        "claim": "A hook event that fires after tool calls finish and can inject steps or control execution flow by forcing continuation or termination of the loop.",
+        "level": "subfeature",
+        "name": "PostInvocation",
+        "parent_hint": "Hooks",
+        "quote": "PostInvocation | Fires after tool calls finish. | N/A (matcher ignored)",
+        "status": "unknown"
+      },
+      {
+        "claim": "A hook event that fires when the execution loop terminates, allowing a script to inspect the termination reason and optionally force the agent to re-enter the execution loop.",
+        "level": "subfeature",
+        "name": "Stop",
+        "parent_hint": "Hooks",
+        "quote": "Stop | Fires when execution terminates. | N/A (matcher ignored)",
+        "status": "unknown"
+      }
+    ]
+  }
+}

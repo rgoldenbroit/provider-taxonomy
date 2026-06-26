@@ -1,0 +1,12 @@
+{
+  "key": "7d33881330ae2817dac42be82679e3dd9ed2ec43f7e8a02b5f9c6fd64af71672",
+  "label": "judge:google-antigravity-2-0-disc-verification-loops",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The single most effective way to ensure reliable, correct modifications from an autonomous agent is to provide the agent with a local verification mechanism (such as unit tests, build commands, or formatting scripts)... Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs automatically.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes \"Verification loops\" as a best practice under the heading \"Establish verification loops.\" It details that the agent can run local test commands (e.g., unit tests, build scripts) after making code changes and iterate automatically on test outputs, directly matching the claim. The feature is presented as a current, active best practice with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "bcbd2c18d24cad6ebad2e9291bdaa97a34dce97adbb3652fdf7de2c2a2cb1b1e",
+  "label": "judge:google-gemini-enterprise-agent-platform-guardrails-safety-secure-sandbox-execution",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Secure sandbox execution: Empowering agents to safely solve complex computational problems and automate workflows through dynamic Code Execution and Computer Use, allowing them to run scripts or mimic human-like interactions with graphical interfaces.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes \"Secure sandbox execution\" as one of four critical areas offered by Gemini Enterprise Agent Platform, matching the claim's description of safely executing code and automating workflows in an isolated, sandboxed environment via Code Execution and Computer Use. The page is marked as \"Preview\" (subject to Pre-GA Offerings Terms), so lifecycle_status is 'preview'.",
+    "supported": true
+  }
+}

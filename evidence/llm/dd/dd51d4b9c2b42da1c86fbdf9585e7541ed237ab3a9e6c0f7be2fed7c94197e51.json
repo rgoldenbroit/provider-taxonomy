@@ -1,0 +1,12 @@
+{
+  "key": "dd51d4b9c2b42da1c86fbdf9585e7541ed237ab3a9e6c0f7be2fed7c94197e51",
+  "label": "judge:anthropic-claude-on-third-party-platforms",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Anthropic's Claude models are available through Google Cloud's Agent Platform. ... Claude is also available through Amazon Bedrock, Claude Platform on AWS, and Microsoft Foundry.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that Claude models are available on Google Cloud's Agent Platform (a third-party platform), and also mentions availability on Amazon Bedrock, Claude Platform on AWS, and Microsoft Foundry. This directly substantiates the claim that Anthropic offers Claude on third-party platforms. The page provides detailed documentation on how to deploy and manage Claude models on Google Cloud's Agent Platform, including API usage, model availability, endpoints, and feature support \u2014 all indicative of an active, generally available offering.",
+    "supported": true
+  }
+}

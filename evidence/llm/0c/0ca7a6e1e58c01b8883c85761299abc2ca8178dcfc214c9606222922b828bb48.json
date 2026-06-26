@@ -1,0 +1,12 @@
+{
+  "key": "0ca7a6e1e58c01b8883c85761299abc2ca8178dcfc214c9606222922b828bb48",
+  "label": "judge:google-antigravity-2-0-disc-branching-with-fork",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The `/fork` command clones your entire conversation history up to the current turn into a new, independent session.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes the `/fork` command under the section \"Branching with `/fork`\", confirming that it clones the entire conversation history into a new independent session. The page also notes the alias `/branch` and describes the workflow for parallel experimentation. This directly substantiates the claim that `/fork` clones the entire conversation history into a new independent session for safe parallel experimentation. The page presents this as a current, active feature with no deprecation or preview indicators.",
+    "supported": true
+  }
+}

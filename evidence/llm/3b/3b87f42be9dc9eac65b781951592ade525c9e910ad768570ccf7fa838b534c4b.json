@@ -1,0 +1,21 @@
+{
+  "key": "3b87f42be9dc9eac65b781951592ade525c9e910ad768570ccf7fa838b534c4b",
+  "label": "triage:google-antigravity-2-0-disc-tool-permission-presets",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "guardrails-safety"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "guardrails-safety",
+    "rationale": "This offering describes configurable global safety presets within Google's Antigravity product that control when the agent prompts for approval before using tools. This is a partial slice of guardrails-safety \u2014 specifically the permission/approval-gating mechanism \u2014 rather than the full suite of guardrails. It maps most closely to the existing guardrails-safety capability node, and is a feature of google-antigravity-2-0, analogous to existing nodes like google-antigravity-2-0-guardrails-safety-fine-grained-permissions-engine or google-antigravity-2-0-guardrails-safety-interactive-permission-prompts.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide",
+      "cloud"
+    ]
+  }
+}

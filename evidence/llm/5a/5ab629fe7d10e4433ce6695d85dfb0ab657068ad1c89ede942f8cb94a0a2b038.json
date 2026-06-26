@@ -1,0 +1,19 @@
+{
+  "key": "5ab629fe7d10e4433ce6695d85dfb0ab657068ad1c89ede942f8cb94a0a2b038",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "Global Rules via ~/.gemini/GEMINI.md is a user-defined persistent configuration that shapes the agent's system-level behavior, persona, and output style across all workspaces \u2014 directly realizing the capability of customizing system prompts and output style."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Multi-turn plan generation produces a structured plan for complex tasks but does not itself implement autonomous looping until a verifiable 'done' condition is met. Generating a multi-turn plan is a planning/scaffolding step, not the same as the agent autonomously iterating and self-checking against a goal condition until completion."
+      }
+    ]
+  }
+}

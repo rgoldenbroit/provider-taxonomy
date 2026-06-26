@@ -1,0 +1,19 @@
+{
+  "key": "93332781965e2aac2f1b6e32b32cbc55d6b5af28d246580f2d42b2acf716d31c",
+  "label": "triage:google-antigravity-2-0-disc-managing-credits",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "unclassified"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "unclassified",
+    "rationale": "This offering describes a billing/subscription management feature \u2014 purchasing AI credits or upgrading a subscription from within the CLI. It does not map to any of the defined capability categories (model, chat assistant, agentic coding, agent control, sandbox, memory, MCP, evals, guardrails, etc.). It is a commerce/account management feature and belongs in the unclassified holding bucket pending a billing/account-management capability being added to the taxonomy.",
+    "relation_within_capability": "direct",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

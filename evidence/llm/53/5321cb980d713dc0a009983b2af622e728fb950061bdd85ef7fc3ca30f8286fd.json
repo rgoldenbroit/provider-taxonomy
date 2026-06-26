@@ -1,0 +1,12 @@
+{
+  "key": "5321cb980d713dc0a009983b2af622e728fb950061bdd85ef7fc3ca30f8286fd",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-transport-types",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP servers communicate with your agent using different transport protocols... If the docs give you a command to run (like `npx @modelcontextprotocol/server-github`), use stdio... If the docs give you a URL, use HTTP or SSE... If you're building your own tools in code, use an SDK MCP server",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes three transport types for MCP servers: (1) stdio \u2014 local processes communicating via stdin/stdout, (2) HTTP/SSE \u2014 for cloud-hosted MCP servers and remote APIs, and (3) SDK MCP servers \u2014 custom tools defined directly in application code (SDK-embedded). This directly substantiates all parts of the claim: stdio for local processes, HTTP/SSE for cloud-hosted or remote APIs, and SDK-embedded transports. The page presents these as active, generally available features with working code examples.",
+    "supported": true
+  }
+}

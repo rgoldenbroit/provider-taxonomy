@@ -1,0 +1,12 @@
+{
+  "key": "4b3b4448d0081f44df25d6f34cbaf549c6d02b548febb037a0fa1e10d3a45ab4",
+  "label": "judge:google-antigravity-2-0-disc-tool-permission-presets",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`toolPermission`** | string | `\"request-review\"` | Global safety presets: `\"request-review\"` (prompts for write/bash/web tools), `\"proceed-in-sandbox\"` (auto-proceed inside sandbox), `\"always-proceed\"` (never prompts), or `\"strict\"` (prompts for all non-read tools).",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents a `toolPermission` configuration key described as \"Global safety presets\" with multiple options including `\"request-review\"`, `\"always-proceed\"`, and `\"strict\"`, which controls when the agent prompts for approval before using tools. Additionally, the `/permissions` slash command is documented as: \"Switch between global permission presets (`request-review`, `always-proceed`, `strict`).\" This directly substantiates the claim about configurable global safety presets controlling when the agent prompts for approval before using tools.",
+    "supported": true
+  }
+}

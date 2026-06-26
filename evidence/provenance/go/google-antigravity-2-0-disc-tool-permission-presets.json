@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-tool-permission-presets",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`/permissions`**    | Configurations | \u2014                          | Switch between global permission presets (`request-review`, `always-proceed`, `strict`). |\n\n...\n\n**`toolPermission`**          | string     | `\"request-review\"`  | Global safety presets: `\"request-review\"` (prompts for write/bash/web tools), `\"proceed-in-sandbox\"` (auto-proceed inside sandbox), `\"always-proceed\"` (never prompts), or `\"strict\"` (prompts for all non-read tools).",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Tool permission presets",
+    "page_content_hash": "454294666af08b887bab1f9264bbeb9dd5166c60e2585c2e41770655f7b8c3ff",
+    "primary_capability_id": "guardrails-safety",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-tool-permission-presets",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

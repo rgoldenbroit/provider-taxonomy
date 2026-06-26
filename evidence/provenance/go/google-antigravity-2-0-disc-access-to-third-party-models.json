@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-access-to-third-party-models",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Users on Google AI Ultra receive: ... Access to third-party models",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Access to third-party models",
+    "page_content_hash": "784e37faa88bbfe5d170515f58874c4edd4fc24437f84c65bcda75657d96a7fe",
+    "primary_capability_id": "consumer-chat-assistant",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-access-to-third-party-models",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/plans/plans.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

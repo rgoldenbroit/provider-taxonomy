@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-model-context-protocol-mcp-server-manager",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`/mcp`** | Tools & Tasks | \u2014 | Open the Model Context Protocol (MCP) server manager.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Model Context Protocol (MCP) server manager",
+    "page_content_hash": "454294666af08b887bab1f9264bbeb9dd5166c60e2585c2e41770655f7b8c3ff",
+    "primary_capability_id": "mcp-connectors",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-model-context-protocol-mcp-server-manager",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

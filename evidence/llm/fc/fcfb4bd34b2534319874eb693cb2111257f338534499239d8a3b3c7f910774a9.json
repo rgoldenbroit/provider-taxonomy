@@ -1,0 +1,31 @@
+{
+  "key": "fcfb4bd34b2534319874eb693cb2111257f338534499239d8a3b3c7f910774a9",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity lets users choose from multiple leading frontier reasoning models to power the agent's core reasoning.",
+        "level": "feature",
+        "name": "Reasoning Model",
+        "quote": "For the core reasoning model, Antigravity offers leading frontier models from the Gemini Enterprise Agent Platform",
+        "status": "active"
+      },
+      {
+        "claim": "Users can interactively select which reasoning model the agent uses via a dropdown under the conversation prompt box.",
+        "level": "subfeature",
+        "name": "model selector dropdown",
+        "parent_hint": "Reasoning Model",
+        "quote": "Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box",
+        "status": "active"
+      },
+      {
+        "claim": "Antigravity includes a generative image tool (powered by Nano Banana 2) that the agent uses to produce UI mockups, web page images, and architecture diagrams.",
+        "level": "feature",
+        "name": "generative image tool",
+        "quote": "Nano Banana 2: Used by the generative image tool when the Agent wants to produce a UI mockup, needs images to populate a web page or application, generate system or architecture diagrams, or other generative image tasks.",
+        "status": "active"
+      }
+    ]
+  }
+}

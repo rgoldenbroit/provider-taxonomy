@@ -1,0 +1,12 @@
+{
+  "key": "c46746ef948c38b6769ee76f4fbdde454a0ddb5f23af836913753594310de56b",
+  "label": "judge:google-antigravity-2-0-disc-managing-credits",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Managing Credits: You can easily purchase AI credits or upgrade your subscription, which opens a panel containing direct pricing and subscription portal links.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Managing Credits\" feature under the \"Slash Commands & Managing Balance\" section, stating users can purchase AI credits or upgrade their subscription directly from within the CLI. This directly substantiates the claim that users can purchase additional AI credits or upgrade their subscription from within the CLI.",
+    "supported": true
+  }
+}

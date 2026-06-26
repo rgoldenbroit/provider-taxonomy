@@ -1,0 +1,12 @@
+{
+  "key": "67df05913f8d33038de8f4746d7e8f7aee9674f07d4d413269d8a12603238c03",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-projects",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "With the introduction of projects in Cowork, you can organize related tasks into persistent, self-contained workspaces with their own files, links, instructions, and memory, making Cowork more powerful for recurring or long-running work.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Projects\" feature within Claude Cowork that allows organizing related tasks into persistent, self-contained workspaces with their own files, context, and instructions. The claim closely matches the page's description. The feature is listed under \"Key capabilities\" and described as currently available (not in preview or beta). The wording is nearly identical to the claim, with the page using \"files, links, instructions, and memory\" versus the claim's \"files, context, and instructions.\"",
+    "supported": true
+  }
+}

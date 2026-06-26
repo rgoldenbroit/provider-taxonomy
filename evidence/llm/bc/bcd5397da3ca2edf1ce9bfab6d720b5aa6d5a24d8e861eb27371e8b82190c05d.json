@@ -1,0 +1,12 @@
+{
+  "key": "bcd5397da3ca2edf1ce9bfab6d720b5aa6d5a24d8e861eb27371e8b82190c05d",
+  "label": "judge:openai-codex",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Codex | AI Coding Partner from OpenAI | OpenAI ... A coding agent that helps you build and ship with AI\u2014powered by ChatGPT.",
+    "lifecycle_status": "active",
+    "rationale": "The page is OpenAI's official Codex product page at openai.com/codex/, clearly presenting Codex as an actively available AI coding agent product from OpenAI. It invites users to \"Try Codex today,\" lists it as available on macOS and Windows, and includes real customer testimonials and a promotional offer, all indicating it is generally available and active.",
+    "supported": true
+  }
+}

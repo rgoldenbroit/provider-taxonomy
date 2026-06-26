@@ -1,0 +1,12 @@
+{
+  "key": "8a8395a4ee8510b1fc3407f86db9fef0973972cac5eedcd3eb63445891e3e738",
+  "label": "judge:anthropic-claude-code-agent-evals-observability-cost-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Cost tracking | Spend limits, rate limits, and usage attribution | Anthropic only | [Costs](/en/costs)",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Cost tracking\" as a usage visibility capability under the \"Set up usage visibility\" section, describing it as providing \"Spend limits, rate limits, and usage attribution.\" This substantiates the claim that Claude Code offers cost tracking for monitoring spend. However, the page does not specifically mention \"per-session token accounting for agent runs\" \u2014 it describes cost tracking more broadly as spend limits, rate limits, and usage attribution. The core claim of cost tracking is substantiated, but the specific detail about per-session token accounting for agent runs is not directly confirmed by the page text.",
+    "supported": true
+  }
+}

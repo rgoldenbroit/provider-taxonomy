@@ -1,0 +1,12 @@
+{
+  "key": "cd159511600572f7b521902a73f669c88ee23a9b5a6787a992909fd2b79df815",
+  "label": "judge:anthropic-claude-agent-sdk-mcp-connectors-authentication",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Most MCP servers require authentication to access external services. Pass credentials through environment variables in the server configuration... For HTTP and SSE servers, pass authentication headers directly in the server configuration... The MCP specification supports OAuth 2.1 for authorization. The SDK doesn't handle OAuth flows automatically, but you can pass access tokens via headers after completing the OAuth flow in your application",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents all three authentication mechanisms claimed: (1) environment variables via the `env` field for passing credentials to MCP servers, (2) HTTP headers for remote/SSE servers using the `headers` field (e.g., Authorization Bearer tokens), and (3) OAuth2 access tokens passed via headers after completing an OAuth 2.1 flow. All three are described with working code examples in both TypeScript and Python, confirming the claim is fully substantiated.",
+    "supported": true
+  }
+}

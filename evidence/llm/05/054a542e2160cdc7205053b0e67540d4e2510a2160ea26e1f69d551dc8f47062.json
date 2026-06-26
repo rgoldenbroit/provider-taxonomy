@@ -1,0 +1,8 @@
+{
+  "key": "054a542e2160cdc7205053b0e67540d4e2510a2160ea26e1f69d551dc8f47062",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": []
+  }
+}

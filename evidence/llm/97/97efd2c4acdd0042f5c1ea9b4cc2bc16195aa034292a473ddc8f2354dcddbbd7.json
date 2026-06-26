@@ -1,0 +1,12 @@
+{
+  "key": "97efd2c4acdd0042f5c1ea9b4cc2bc16195aa034292a473ddc8f2354dcddbbd7",
+  "label": "judge:google-antigravity-2-0-disc-scheduled-tasks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Access to all product features, such as the Scheduled Tasks and the CLI",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Scheduled Tasks\" as a product feature under the \"Baseline Quota\" section, stating that all plans receive \"Access to all product features, such as the Scheduled Tasks and the CLI.\" This directly substantiates the claim that Scheduled Tasks is a product feature accessible to all Antigravity users, as the baseline quota applies to every plan tier.",
+    "supported": true
+  }
+}

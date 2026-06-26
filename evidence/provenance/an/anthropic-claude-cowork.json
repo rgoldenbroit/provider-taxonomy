@@ -3,11 +3,11 @@
   "value": {
     "confidence": "low",
     "fetch_ok": true,
-    "found_quote": "Claude Cowork by Anthropic\nClaude Cowork handles tasks autonomously. Give it a goal and Claude works on your computer, local files, and applications to return a finished deliverable.",
+    "found_quote": "Claude Cowork by Anthropic\nClaude Cowork handles tasks autonomously. Give it a goal and Claude works on your computer, local files, and applications to return a finished deliverable. If it's repetitive, messy, or just taking too long, assign it to Claude.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Cowork",
-    "page_content_hash": "f6ce59dec8065a73f74c305c65ca3b20c9c4c17335099dec8ad8bdaf8d6539e2",
+    "page_content_hash": "6c8ca7ec45c90629391b7da125640ebf4f65a4a94acf8e4ba85f3fb425e6416d",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://www.anthropic.com/product/claude-cowork",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

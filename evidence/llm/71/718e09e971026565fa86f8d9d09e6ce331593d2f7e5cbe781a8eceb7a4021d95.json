@@ -1,0 +1,12 @@
+{
+  "key": "718e09e971026565fa86f8d9d09e6ce331593d2f7e5cbe781a8eceb7a4021d95",
+  "label": "judge:anthropic-claude-agent-sdk-agent-evals-observability-safe-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Start with [`claude --safe-mode`](/en/cli-reference#cli-flags), which launches a session with all customizations disabled, including `CLAUDE.md`, skills, plugins, hooks, MCP servers, and custom commands and agents. Authentication, model selection, built-in tools, and permissions work normally. If the problem disappears in safe mode, one of those surfaces is the cause; use the targeted checks above to find which.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes `claude --safe-mode` as a feature that launches a session with all customizations disabled to isolate whether a problem is caused by user configuration. This directly substantiates the claim. The description on the page closely matches the claim: it disables customizations (CLAUDE.md, skills, plugins, hooks, MCP servers, and custom commands/agents) so users can determine if the problem is caused by their configuration. The feature appears to be generally available (active), annotated with a minimum version comment of v2.1.169.",
+    "supported": true
+  }
+}

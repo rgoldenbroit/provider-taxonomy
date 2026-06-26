@@ -1,0 +1,20 @@
+{
+  "key": "7e78c6e0ccc81662f102e03ddee1f32bbc252d6a7fd6e12128b1f1f99b8a63d2",
+  "label": "triage:google-antigravity-2-0-disc-tab-completions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "Tab completions are a specific IDE/editor feature within agentic coding \u2014 they provide inline code suggestions as the user types. This is a partial slice of the broader agentic-coding capability (not autonomous end-to-end coding), and is a feature of the Google Antigravity 2.0 product offered to all plan tiers.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "ide",
+      "terminal"
+    ]
+  }
+}

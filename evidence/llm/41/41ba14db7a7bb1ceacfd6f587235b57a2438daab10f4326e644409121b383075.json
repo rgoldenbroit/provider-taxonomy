@@ -1,0 +1,21 @@
+{
+  "key": "41ba14db7a7bb1ceacfd6f587235b57a2438daab10f4326e644409121b383075",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity supports an open standard for extending agent capabilities via reusable skill packages stored in structured folders.",
+        "name": "Agent Skills",
+        "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/skills.md",
+        "status": "active",
+        "subfeatures": [
+          "Workspace-specific skills",
+          "Global skills",
+          "Progressive disclosure",
+          "Skill folder structure"
+        ]
+      }
+    ]
+  }
+}

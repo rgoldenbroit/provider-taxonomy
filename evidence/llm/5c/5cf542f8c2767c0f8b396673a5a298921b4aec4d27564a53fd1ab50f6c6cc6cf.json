@@ -1,0 +1,36 @@
+{
+  "key": "5cf542f8c2767c0f8b396673a5a298921b4aec4d27564a53fd1ab50f6c6cc6cf",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity provides unlimited Tab completions to all plan tiers.",
+        "name": "Tab completions",
+        "source_url": "https://antigravity.google/assets/docs/plans/plans.md",
+        "status": "active"
+      },
+      {
+        "claim": "Scheduled Tasks is a product feature accessible to all Antigravity users.",
+        "name": "Scheduled Tasks",
+        "source_url": "https://antigravity.google/assets/docs/plans/plans.md",
+        "status": "active"
+      },
+      {
+        "claim": "A command-line interface (CLI) is included as a product feature available to all Antigravity users.",
+        "name": "CLI",
+        "source_url": "https://antigravity.google/assets/docs/plans/plans.md",
+        "status": "active"
+      },
+      {
+        "claim": "Users on Google AI Ultra can use third-party models in addition to Gemini models.",
+        "name": "Access to third-party models",
+        "source_url": "https://antigravity.google/assets/docs/plans/plans.md",
+        "status": "active",
+        "subfeatures": [
+          "AI Credit Overages: a user setting controls whether purchased AI credits are automatically consumed when the baseline quota is exhausted"
+        ]
+      }
+    ]
+  }
+}

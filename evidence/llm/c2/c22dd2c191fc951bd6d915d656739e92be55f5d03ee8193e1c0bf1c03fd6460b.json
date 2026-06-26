@@ -1,0 +1,19 @@
+{
+  "key": "c22dd2c191fc951bd6d915d656739e92be55f5d03ee8193e1c0bf1c03fd6460b",
+  "label": "triage:google-antigravity-2-0-disc-workspace-scoping",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-managed-agent-runtime-projects",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "Workspace scoping in Antigravity CLI is a feature that scopes conversation histories to the current working directory, preventing context pollution across projects. This is a sub-feature of the managed agent runtime projects capability (google-antigravity-2-0-managed-agent-runtime-projects), specifically relating to scoped settings/conversations. It surfaces in the terminal (CLI) and is a partial slice of agentic-coding functionality \u2014 specifically context/session management scoped to project directories, a common agentic coding workflow concern.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

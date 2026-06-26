@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "**`/planning`**       | Configurations | \u2014                          | Enable multi-turn plan generation mode for complex engineering tasks.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Multi-turn plan generation mode",
+    "page_content_hash": "454294666af08b887bab1f9264bbeb9dd5166c60e2585c2e41770655f7b8c3ff",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

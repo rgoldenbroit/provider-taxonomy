@@ -1,0 +1,20 @@
+{
+  "key": "cc1605ff922ea4b6b640dd0935c39eb307216e1b3857cbf9a3bbc05f094a364b",
+  "label": "triage:google-antigravity-2-0-disc-explore-plan-then-execute",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "This offering describes a structured three-phase workflow (explore, plan, execute) within Google's agentic coding product (Antigravity 2.0). It is a feature/sub-capability of the agentic coding surface \u2014 specifically a workflow pattern for handling complex code changes \u2014 rather than a standalone product. It covers only a slice of agentic coding (the structured planning workflow), making the relation 'partial'.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

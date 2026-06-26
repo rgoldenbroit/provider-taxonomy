@@ -1,0 +1,12 @@
+{
+  "key": "7e2bd703af8140ab26f20712bd49d1ed5b16f2b7ff8b4ece205fd7fb4c069984",
+  "label": "judge:google-antigravity-2-0-disc-implementation-plan",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent utilizes the implementation plan artifact to architect changes within your codebase to accomplish a task. These plans contain technical details on what revisions are necessary and are meant to be reviewed by the user... Unless you have you artifact review policy set to \"Always Proceed\" [link to docs on this setting], Agent will typically request your review on the implementation plan before making the changes needed to complete your task... Antigravity supports commenting on these artifacts so you can provide feedback to Agent for any reason, whether it be to decrease scope of changes, use a different tech stack, or correct any Agent discrepancies.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and fully substantiates the claim. It confirms: (1) Antigravity's agent generates an implementation plan artifact detailing technical revisions needed to accomplish a task, (2) users can review the plan, (3) users can comment on the artifact to provide feedback, and (4) users can configure approval policies (the \"Always Proceed\" artifact review policy setting). All key elements of the claim are explicitly described on the page.",
+    "supported": true
+  }
+}

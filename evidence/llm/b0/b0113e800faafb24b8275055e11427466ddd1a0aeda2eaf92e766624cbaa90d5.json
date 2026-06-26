@@ -1,0 +1,12 @@
+{
+  "key": "b0113e800faafb24b8275055e11427466ddd1a0aeda2eaf92e766624cbaa90d5",
+  "label": "judge:anthropic-claude-code-mcp-connectors-agent-sdk-mcp-custom-tools",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "MCP servers can run as local processes, connect over HTTP, or execute directly within your SDK application. ... SDK MCP servers: Define custom tools directly in your application code instead of running a separate server process. See the custom tools guide for implementation details.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents the Agent SDK's MCP support, covering multiple transport types (stdio, HTTP/SSE, and in-process \"SDK MCP servers\"). It confirms that the Agent SDK connects agents to external tools via MCP and that custom tools can be defined directly in application code through an in-process MCP server approach, fully substantiating the claim.",
+    "supported": true
+  }
+}

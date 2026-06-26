@@ -1,0 +1,19 @@
+{
+  "key": "9ebd8873f37c93534ec9982b62368cdafd4bc362406a4475f4b2fe278ed3ded3",
+  "label": "triage:google-antigravity-2-0-disc-mcp-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "mcp-connectors"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "mcp-connectors",
+    "rationale": "This offering is the MCP Integration feature of Google's Antigravity editor product, enabling secure connections to local tools, databases, and external services via the Model Context Protocol. It maps directly to the mcp-connectors capability. It is a feature/sub-product of google-antigravity-2-0, covering a partial slice of the broader MCP connectors capability (focused on the core protocol support rather than a full connector registry or marketplace). The surface is the IDE/editor environment.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "ide"
+    ]
+  }
+}

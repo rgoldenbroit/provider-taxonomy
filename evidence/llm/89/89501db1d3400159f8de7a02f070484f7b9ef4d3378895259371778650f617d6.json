@@ -1,0 +1,28 @@
+{
+  "key": "89501db1d3400159f8de7a02f070484f7b9ef4d3378895259371778650f617d6",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "The CLI lets users monitor their active AI credit quota and consumption directly inside the tool.",
+        "name": "Quota Tracking",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-credits.md",
+        "status": "active",
+        "subfeatures": [
+          "Statusline Indicator: The CLI statusline displays the user's remaining AI credit count in real time.",
+          "Low Quota Alert: The CLI highlights the statusline indicator when remaining AI credits drop below a warning threshold."
+        ]
+      },
+      {
+        "claim": "Users can purchase additional AI credits or upgrade their subscription directly from within the CLI.",
+        "name": "Managing Credits",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-credits.md",
+        "status": "active",
+        "subfeatures": [
+          "Settings Configuration: Users can toggle whether the CLI falls back to personal AI credits when plan quotas are exhausted."
+        ]
+      }
+    ]
+  }
+}

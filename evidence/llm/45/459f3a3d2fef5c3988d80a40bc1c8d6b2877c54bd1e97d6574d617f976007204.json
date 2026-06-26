@@ -1,0 +1,20 @@
+{
+  "key": "459f3a3d2fef5c3988d80a40bc1c8d6b2877c54bd1e97d6574d617f976007204",
+  "label": "triage:google-antigravity-2-0-disc-agent-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "mcp-connectors"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-mcp-connectors-plugins",
+    "primary_capability_id": "mcp-connectors",
+    "rationale": "Agent Skills in Antigravity (Google) is a feature for loading and browsing local and global Agent Skills as plugins within the Antigravity agentic coding environment. This maps directly to the mcp-connectors capability (plugin/skills registry), and is a sub-feature of the existing Antigravity plugins product node. It covers only a slice of MCP connectors (specifically the Agent Skills plugin browsing/loading aspect), hence 'partial'.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

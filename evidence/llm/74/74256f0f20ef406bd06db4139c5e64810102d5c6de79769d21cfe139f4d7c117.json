@@ -1,0 +1,21 @@
+{
+  "key": "74256f0f20ef406bd06db4139c5e64810102d5c6de79769d21cfe139f4d7c117",
+  "label": "triage:google-antigravity-2-0-disc-structured-permissions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "guardrails-safety"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-guardrails-safety-artifact-review-policy",
+    "primary_capability_id": "guardrails-safety",
+    "rationale": "This offering describes configurable permission modes (request-review, proceed-in-sandbox, strict) that control how autonomously a Google agent executes work. This is a slice of the guardrails-safety capability \u2014 specifically structured permission/autonomy-level controls. The closest parent is the artifact-review-policy feature under google-antigravity-2-0-guardrails-safety, which covers request-review and always-proceed policies, and the strict-mode feature also maps directly. It is a partial coverage of guardrails-safety as it focuses only on the permission mode configuration aspect.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide",
+      "cloud"
+    ]
+  }
+}

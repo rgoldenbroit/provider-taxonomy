@@ -1,0 +1,12 @@
+{
+  "key": "3717d60185b1524008a637f5cbb4c22d08ebb5a9a2e43b98dc37fc1b6b8a6c6c",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-evals-observability-evaluation-service",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Leveraging the Example Store and Evaluation Service to test, monitor, and trace agent behavior, creating a continuous feedback loop and data flywheel to iteratively refine agent performance over time.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly names the \"Evaluation Service\" and describes it as testing, monitoring, and tracing agent behavior as part of a continuous feedback loop to iteratively refine agent performance over time \u2014 directly matching the claim. The page is marked as \"Preview\" (Pre-GA), so the lifecycle status is 'preview'.",
+    "supported": true
+  }
+}

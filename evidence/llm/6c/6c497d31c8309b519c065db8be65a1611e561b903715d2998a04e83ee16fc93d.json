@@ -1,0 +1,12 @@
+{
+  "key": "6c497d31c8309b519c065db8be65a1611e561b903715d2998a04e83ee16fc93d",
+  "label": "judge:google-antigravity-2-0-disc-resuming-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "You can return to a prior conversation to continue an implementation or refine an existing solution.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated \"Resuming sessions\" section that uses nearly verbatim language matching the claim. It explicitly states users can return to prior conversations to continue an implementation or refine an existing solution, and provides detailed instructions for doing so via the TUI session picker, command-line flags, and importing from Antigravity 2.0. The feature is described as currently available with no preview or deprecated indicators.",
+    "supported": true
+  }
+}

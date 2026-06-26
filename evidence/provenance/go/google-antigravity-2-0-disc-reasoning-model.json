@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-reasoning-model",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "For the core reasoning model, Antigravity offers leading frontier models from the Gemini Enterprise Agent Platform... Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Reasoning Model",
+    "page_content_hash": "b0177057c4278f8c398aa0d1b50face595acad3dd828a635cecfad247235c3f6",
+    "primary_capability_id": "flagship-model",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-reasoning-model",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

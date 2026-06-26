@@ -1,0 +1,19 @@
+{
+  "key": "14943cd27e2f1a165b61f9182a3b2150ef6c97a3647a729f4630b0ac7be6e76f",
+  "label": "triage:google-antigravity-2-0-disc-generative-image-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "image-video-generation"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "image-video-generation",
+    "rationale": "This is a generative image tool embedded within Google's Antigravity agent product (powered by Nano Banana 2), used specifically to produce UI mockups and web previews. It is a first-party image generation capability, making it a partial/feature-level entry under image-video-generation (images only, no video), and a sub-feature of the google-antigravity-2-0 product rather than a standalone product.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "cloud"
+    ]
+  }
+}

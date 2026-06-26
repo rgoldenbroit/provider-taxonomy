@@ -1,0 +1,12 @@
+{
+  "key": "784cd4beb1667ea2f84bd10f94db56dada06afcdbac7b7e86e74f92a32e29665",
+  "label": "judge:google-antigravity-2-0-disc-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hooks allow you to run custom scripts or shell commands at specific points during Antigravity's execution loop. This is powerful for enforcing custom rules, running linters, or capturing diagnostics automatically.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and verbatim substantiates the claim. It describes Google's Antigravity IDE \"Hooks\" feature, confirming that it allows users to run custom scripts or shell commands at specific points during Antigravity's execution loop, and explicitly mentions enforcing custom rules as a use case. The page presents this as a fully documented, active feature with detailed schema, configuration, and examples.",
+    "supported": true
+  }
+}

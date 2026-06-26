@@ -1,0 +1,19 @@
+{
+  "key": "792700e976f848d3e645c03b571fb8a56105298c5025f586673ef3be9364c751",
+  "label": "triage:google-antigravity-2-0-disc-branching-with-fork",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "The /fork command is a session management feature within Google's agentic coding product (Antigravity 2.0), enabling users to clone the current conversation into a new independent session for parallel experimentation. This is a partial slice of the agentic-coding capability \u2014 specifically a session/context branching mechanism \u2014 not a standalone coding agent product. It maps most closely to the existing forked-subagent pattern seen in similar offerings, and surfaces in the terminal where the agentic coding CLI operates.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

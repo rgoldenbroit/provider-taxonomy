@@ -1,0 +1,12 @@
+{
+  "key": "0efc1acb445745cabd23d3894a1d8cbfcfaebd4cebc3257aa6cd47cb28bac70b",
+  "label": "judge:google-antigravity-2-0-disc-session-management",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout. ... Type `/fork` to spin up a duplicate parallel session. ... To automate quick queries or integrate agents into git hooks, use the one-shot prompt flag `-p`",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes all three components of the claimed session management capability: (1) rewinding via `/rewind` or `/undo` to roll back conversation history, (2) forking via `/fork` to spin up a duplicate parallel session, and (3) non-interactive execution via the `-p` one-shot prompt flag for automating commands in shell pipelines. All three features are documented as available functionality of the Antigravity CLI.",
+    "supported": true
+  }
+}

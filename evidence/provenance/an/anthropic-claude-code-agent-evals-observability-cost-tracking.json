@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Cost Tracking",
-    "page_content_hash": "09e886dff7bd8c3d4b44f1bda6f8e052e871966f6e0aba0dd25f35f41a0e5559",
+    "page_content_hash": "60649764ad99173c36368b13ac0670b968d906322624f55ab525c07a1b166521",
     "primary_capability_id": "agent-evals-observability",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/admin-setup.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

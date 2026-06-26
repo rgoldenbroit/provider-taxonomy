@@ -1,0 +1,20 @@
+{
+  "key": "6a5b4fad2df673203af0da60b570f98fbc7f630bf1db31b6121513fff35b6018",
+  "label": "triage:google-antigravity-2-0-disc-verification-loops",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "Verification loops is a specific feature of Google's agentic coding product (Antigravity 2.0) that enables the agent to run local test commands (unit tests, build scripts) after making code changes and iterate automatically. This is a partial slice of agentic coding \u2014 specifically the test/build feedback loop aspect \u2014 rather than the full agentic coding capability. It surfaces in terminal/IDE contexts where code changes and test runs occur.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

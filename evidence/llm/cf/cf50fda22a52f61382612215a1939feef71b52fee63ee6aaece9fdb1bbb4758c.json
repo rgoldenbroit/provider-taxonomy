@@ -1,0 +1,21 @@
+{
+  "key": "cf50fda22a52f61382612215a1939feef71b52fee63ee6aaece9fdb1bbb4758c",
+  "label": "triage:google-antigravity-2-0-disc-agent-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "mcp-connectors"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-mcp-connectors-plugins",
+    "primary_capability_id": "mcp-connectors",
+    "rationale": "Agent Skills in Google Antigravity is a feature for extending agent capabilities via reusable skill packages stored in structured folders \u2014 this is a plugin/connector extension mechanism within the MCP & connectors capability space. It maps to a partial slice of mcp-connectors (specifically the skills/plugins dimension), and is a sub-feature of the Antigravity plugins product. The closest existing parent is google-antigravity-2-0-mcp-connectors-plugins, which covers namespaced bundles including skills for Antigravity. The offering describes an open standard for skill packages, analogous to how openai-codex-mcp-connectors-plugins-skills-reusable-instructions-codex-loads-for-spe is scoped under OpenAI's plugins. There is also a direct analog in anthropic-claude-on-third-party-platforms-mcp-connectors-agent-skills.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide",
+      "cloud"
+    ]
+  }
+}

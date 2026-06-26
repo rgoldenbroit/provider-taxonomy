@@ -1,0 +1,20 @@
+{
+  "key": "cf875a0ea31cd20aca0db5b0ae83909b971dc26917746d21ad29d73d0c850a9b",
+  "label": "triage:google-antigravity-2-0-disc-reasoning-model",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "flagship-model"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "flagship-model",
+    "rationale": "This offering is a model-selection feature within the Antigravity (Google) agentic coding product, allowing users to choose from multiple frontier reasoning models (e.g., Google's Gemini models) to power the agent's core reasoning. It is a sub-feature of google-antigravity-2-0, not a standalone model product. It maps to flagship-model as a partial capability (it surfaces model choice/selection rather than being a model itself), and is a feature of the Antigravity platform.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

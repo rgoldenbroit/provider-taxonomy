@@ -1,0 +1,12 @@
+{
+  "key": "342d1a57d94ca36d51556b2d8b79e1f4098223ccd8e70d9f207811f4afe1db14",
+  "label": "judge:anthropic-claude-web-desktop-mobile-consumer-chat-assistant-scim-provisioning",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "When you connect your identity provider (IdP) to your Enterprise organization through the WorkOS integration, two things sync from your IdP: Members from your SCIM directory and SCIM groups that you've pushed from your IdP to WorkOS ... Your Enterprise organization receives changes from your IdP automatically whenever your IdP pushes member or group updates (adds, removes, or edits) to WorkOS.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms all key elements of the claim: (1) it is available to Enterprise organizations, (2) membership and groups are synced from an identity provider via SCIM, (3) the integration is through WorkOS, and (4) automatic provisioning (adds) and deprovisioning (removes) are both described. The page is a current support article with no indication of preview or deprecation status.",
+    "supported": true
+  }
+}

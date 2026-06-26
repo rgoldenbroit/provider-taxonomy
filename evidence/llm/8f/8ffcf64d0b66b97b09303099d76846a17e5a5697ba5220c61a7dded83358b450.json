@@ -1,0 +1,12 @@
+{
+  "key": "8ffcf64d0b66b97b09303099d76846a17e5a5697ba5220c61a7dded83358b450",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-evals-observability-set-up-monitoring",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Set up monitoring\nLearn how to use built-in metrics, custom metrics, and alerts to monitor your agents in Agent Platform.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Set up monitoring\" guide that uses \"built-in metrics, custom metrics, and alerts to monitor your agents in Agent Platform,\" which directly matches the claim. The page also carries a \"Preview\" banner at the top indicating the feature is pre-GA.",
+    "supported": true
+  }
+}

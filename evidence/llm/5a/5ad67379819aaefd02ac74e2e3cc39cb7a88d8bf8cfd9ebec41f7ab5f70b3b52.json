@@ -1,0 +1,19 @@
+{
+  "key": "5ad67379819aaefd02ac74e2e3cc39cb7a88d8bf8cfd9ebec41f7ab5f70b3b52",
+  "label": "triage:google-antigravity-2-0-disc-cli",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "A CLI (command-line interface) is a terminal-surface feature of the Google Antigravity agentic coding product. It is not a standalone product or capability in its own right \u2014 it is a product feature (access surface) available to all Antigravity users, directly supporting the agentic coding workflow via the terminal. It covers only a slice of agentic-coding (the terminal access surface), hence 'partial'.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

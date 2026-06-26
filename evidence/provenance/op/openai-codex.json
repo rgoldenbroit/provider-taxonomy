@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Codex",
-    "page_content_hash": "e54427fcf0d60ae463447ec0159a0c32abb8df3b92684a1204d5f21d1a3506ac",
+    "page_content_hash": "a48d7a97a1701838b8a7be3a4d66c8f564575893e80e9f7485d13dc8e011ac4b",
     "primary_capability_id": "agentic-coding",
     "provider": "OpenAI",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://openai.com/codex/",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

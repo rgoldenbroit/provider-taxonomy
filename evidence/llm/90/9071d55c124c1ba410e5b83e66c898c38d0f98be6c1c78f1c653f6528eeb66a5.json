@@ -1,0 +1,12 @@
+{
+  "key": "9071d55c124c1ba410e5b83e66c898c38d0f98be6c1c78f1c653f6528eeb66a5",
+  "label": "judge:google-antigravity-2-0-disc-agent-manager-panel",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`/agents`**         | Tools & Tasks  | \u2014                          | Open the Agent Manager Panel to monitor background subagents.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists the `/agents` slash command in its Core slash commands table, describing it as opening the \"Agent Manager Panel to monitor background subagents.\" This directly substantiates the claim that Antigravity (Google's CLI tool) provides an Agent Manager Panel to monitor background subagents running concurrently. The page presents this as an active, documented feature with no deprecation or preview notices.",
+    "supported": true
+  }
+}

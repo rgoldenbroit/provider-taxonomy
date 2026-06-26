@@ -1,0 +1,12 @@
+{
+  "key": "11a1c4b238efd03d99f212944be11175e4b648df2710a08e1fcf4fb86450530e",
+  "label": "judge:google-antigravity-2-0-disc-explore-plan-then-execute",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Autonomous local agents operate with highest accuracy when complex changes are partitioned into distinct exploration, planning, and execution phases. - **Exploration**: Ask the agent to explain how the target codebase resolves a particular problem or where an interface is defined before writing any changes. - **Planning**: Request an implementation plan. The agent will list targeted files, required dependencies, and logic overrides in an implementation plan artifact. - **Execution**: Once you approve the structured plan, direct the agent to apply the edits.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a three-phase structured workflow under the heading \"Explore, plan, then execute,\" matching the claim precisely. It details Exploration, Planning, and Execution phases for complex code changes, and frames it as a best practice for autonomous local agents. The page presents this as a current, active feature with no deprecation or preview indicators.",
+    "supported": true
+  }
+}

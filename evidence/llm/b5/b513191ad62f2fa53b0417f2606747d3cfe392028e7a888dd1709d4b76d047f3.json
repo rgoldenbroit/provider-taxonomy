@@ -1,0 +1,12 @@
+{
+  "key": "b513191ad62f2fa53b0417f2606747d3cfe392028e7a888dd1709d4b76d047f3",
+  "label": "judge:google-google-managed-agents-managed-agent-runtime",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agents overview\nStay organized with collections\nSave and categorize content based on your preferences.\nBuild, deploy, and manage AI agents that use reasoning and tools to perform complex enterprise tasks, such as automating workflows, discovering information across multiple systems, and generating content.",
+    "lifecycle_status": "preview",
+    "rationale": "The page exactly matches the claimed text, including the \"Agents overview,\" \"Stay organized with collections,\" \"Save and categorize content based on your preferences,\" and the description of building, deploying, and managing AI agents for complex enterprise tasks such as automating workflows and discovering information across multiple systems. The page also explicitly states this feature is in Preview: \"Preview. This feature is subject to the 'Pre-GA Offerings Terms' in the General Service Terms section of the Service Specific Terms.\" Additionally, Google's Managed Agents API on Agent Platform is described as one of the development paths, confirming Google-managed agents exist on this platform.",
+    "supported": true
+  }
+}

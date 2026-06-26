@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Gemini Enterprise Agent Platform",
-    "page_content_hash": "cf4c2166c9b5e0ba0a483041c97f7cbe3dd07bc64de495fbf2a4b2838f73897d",
+    "page_content_hash": "dbb0e91ac16ea83d6121f81f7029016b65cd7a68b86f921c9dabebd04eca2655",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://cloud.google.com/products/agent-builder",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

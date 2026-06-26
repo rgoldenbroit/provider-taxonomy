@@ -1,0 +1,12 @@
+{
+  "key": "8d3728fb3d538fdce1d1233a98e64998355c608a66263fbdbb7e65a33a86b42e",
+  "label": "judge:openai-codex-remote-agent-control-remote-connections",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Remote connections let you use Codex from another device or another machine... Start new threads in projects on the host, or continue existing ones. Send follow-up instructions, answer questions, and steer active work. Approve commands and other actions. Review outputs, diffs, test results, terminal output, and screenshots. Get notified when Codex completes a task or needs your attention. Switch between connected hosts and threads.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It explicitly describes \"Remote Connections\" as a feature of OpenAI's Codex that allows users to control Codex from another device or machine. The page's \"What you can do remotely\" section directly maps to every capability listed in the claim: starting/continuing threads, steering work (send follow-up instructions, answer questions), approving actions (approve commands and other actions), reviewing outputs (review outputs, diffs, test results, terminal output, and screenshots), and notifications (get notified when Codex completes a task or needs your attention). The page is presented as active documentation with no preview/beta or deprecation markers.",
+    "supported": true
+  }
+}

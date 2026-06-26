@@ -1,0 +1,12 @@
+{
+  "key": "f2589508c2b069838c0411d99b79fa4ead9307ae0ac1adeec864209bb8860383",
+  "label": "judge:anthropic-claude-web-desktop-mobile",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Single sign-on is available for Team plans, Enterprise plans, and Console organizations. This guide covers the steps to configure SSO for Team and Enterprise plans, and Claude Console organizations.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that SSO is available for Team plans and Enterprise plans, directly substantiating the claim that Anthropic offers Claude for Team and Enterprise plans. The page provides detailed, active setup instructions for these plans, indicating they are generally available offerings, not in preview or deprecated.",
+    "supported": true
+  }
+}

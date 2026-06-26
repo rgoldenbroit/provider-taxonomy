@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Agent Gateway",
-    "page_content_hash": "7857f1529a999acf0f2d5aa92e9608f70ab718e828a794be0f9457b9f496372c",
+    "page_content_hash": "f69ca2967201d95c9b70dbcd0cff899bc651e4770c795628b102a9af2fa16111",
     "primary_capability_id": "guardrails-safety",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "key": "c03539347f80e22be17718b933cd5f4bea77a93fd7a9b7e5abcba84e08d77ab3",
+  "label": "judge:anthropic-claude-agent-sdk-subagents-orchestration-agent-teams",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent teams let you coordinate multiple Claude Code instances working together. One session acts as the team lead, coordinating work, assigning tasks, and synthesizing results. Teammates work independently, each in its own context window, and communicate directly with each other... Agent teams are experimental and disabled by default. Enable them by adding `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` to your [settings.json](/en/settings) or environment... Shared task list: all agents can see task status and claim available work... Teammates message each other directly... Shared task list with self-coordination",
+    "lifecycle_status": "preview",
+    "rationale": "The page clearly substantiates the claim. It describes Agent teams as coordinating multiple independent Claude Code sessions as a team, with one session acting as team lead, teammates that communicate peer-to-peer (directly with each other, not just through the lead), and a shared task list for self-coordination. The page explicitly states these are \"experimental and disabled by default,\" matching the claim's \"(experimental)\" qualifier. All key elements of the claim are confirmed: team lead role, independent teammates, peer-to-peer communication, and shared task list coordination.",
+    "supported": true
+  }
+}

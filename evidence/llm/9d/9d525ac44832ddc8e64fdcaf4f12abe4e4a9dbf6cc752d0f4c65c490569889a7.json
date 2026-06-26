@@ -1,0 +1,56 @@
+{
+  "key": "9d525ac44832ddc8e64fdcaf4f12abe4e4a9dbf6cc752d0f4c65c490569889a7",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity supports the Model Context Protocol (MCP) to securely connect the editor to local tools, databases, and external services for real-time AI context.",
+        "level": "feature",
+        "name": "MCP Integration",
+        "quote": "Antigravity supports the Model Context Protocol (MCP), a standard that allows the editor to securely connect to your local tools, databases, and external services. This integration provides the AI with real-time context beyond just the files open in your editor.",
+        "status": "active"
+      },
+      {
+        "claim": "The AI can read data from connected MCP servers \u2014 such as live database schemas or build logs \u2014 to inform its code suggestions.",
+        "level": "subfeature",
+        "name": "Context Resources",
+        "parent_hint": "MCP Integration",
+        "quote": "The AI can read data from connected MCP servers to inform its suggestions. When writing a SQL query, Antigravity can inspect your live Neon or Supabase schema to suggest correct table and column names.",
+        "status": "active"
+      },
+      {
+        "claim": "MCP enables Antigravity to execute specific, safe actions defined by connected servers, such as creating issues or searching documentation.",
+        "level": "subfeature",
+        "name": "Custom Tools",
+        "parent_hint": "MCP Integration",
+        "quote": "MCP enables Antigravity to execute specific, safe actions defined by your connected servers. Example: 'Create a Linear issue for this TODO.' Example: 'Search Notion or GitHub for authentication patterns.'",
+        "status": "active"
+      },
+      {
+        "claim": "A built-in MCP Store lets users browse, install, and manage supported MCP server integrations directly within the editor.",
+        "level": "subfeature",
+        "name": "MCP Store",
+        "parent_hint": "MCP Integration",
+        "quote": "Connections are managed directly through the built-in MCP Store. Access the Store: Open the MCP Store panel within the '...' dropdown at the top of the editor's side panel. Browse & Install: Select any of the supported servers from the list and click Install.",
+        "status": "active"
+      },
+      {
+        "claim": "Users can connect arbitrary custom MCP servers by editing a raw JSON configuration file, supporting both stdio and remote HTTP transports.",
+        "level": "subfeature",
+        "name": "Connecting Custom MCP Servers",
+        "parent_hint": "MCP Integration",
+        "quote": "To connect to a custom MCP server: Open the MCP store via the '...' dropdown at the top of the editor's agent panel. Click on 'Manage MCP Servers'... Modify the mcp_config.json with your custom MCP server configuration.",
+        "status": "active"
+      },
+      {
+        "claim": "Antigravity supports multiple authentication methods for MCP servers including Google Application Default Credentials, OAuth (with automatic token refresh), and custom HTTP headers.",
+        "level": "subfeature",
+        "name": "Authentication",
+        "parent_hint": "MCP Integration",
+        "quote": "Antigravity can automatically handle OAuth for servers that support dynamic client registration (DCR)... Access tokens are stored in ~/.gemini/antigravity/mcp_oauth_tokens.json. Expired tokens are refreshed automatically, and invalid tokens are removed.",
+        "status": "active"
+      }
+    ]
+  }
+}

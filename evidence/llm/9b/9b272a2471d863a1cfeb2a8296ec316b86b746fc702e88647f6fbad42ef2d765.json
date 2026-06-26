@@ -1,0 +1,12 @@
+{
+  "key": "9b272a2471d863a1cfeb2a8296ec316b86b746fc702e88647f6fbad42ef2d765",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-claude-code-on-the-web",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Each session runs in a fresh Anthropic-managed VM with your repository cloned. This section covers what's available when a session starts and how to customize it.",
+    "lifecycle_status": "preview",
+    "rationale": "The page confirms all key elements of the claim: (1) Anthropic-managed VMs (\"Each session runs in a fresh Anthropic-managed VM\"), (2) user's repository cloned (\"with your repository cloned\"), (3) common runtimes pre-installed (the \"Installed tools\" table lists Python, Node.js, Ruby, PHP, Java, Go, Rust, C/C++, Docker, Databases, and Utilities), (4) a network proxy enforcing a default allowlist (the page covers \"Network access: levels, proxies, and the default allowlist\" and references \"Trusted defaults\" and \"Default Allowed Domains\"). The page also describes sessions persisting even if the browser is closed (\"Sessions persist even if you close your browser\"), consistent with the claim of \"persistent\" VMs. The offering is described as being in \"research preview\" for Pro, Max, Team, and Enterprise users, making it a preview-stage product. The claim characterizes VMs as \"isolated,\" which is also confirmed by the page's \"Security and isolation\" section heading.",
+    "supported": true
+  }
+}

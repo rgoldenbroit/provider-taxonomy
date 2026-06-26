@@ -1,0 +1,87 @@
+{
+  "key": "25b8f8788d1cf619c73899b1eb504423437cf231f38c3a7b8d33b60f814c8698",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "The agent can run local test commands (e.g. unit tests, build scripts) after making code changes and iterate automatically on the results.",
+        "level": "feature",
+        "name": "Verification loops",
+        "quote": "Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs automatically.",
+        "status": "unknown"
+      },
+      {
+        "claim": "The agent supports a structured three-phase workflow \u2014 exploration, planning, and execution \u2014 for complex code changes, producing an implementation plan artifact before applying edits.",
+        "level": "feature",
+        "name": "Explore, plan, then execute",
+        "quote": "Request an implementation plan. The agent will list targeted files, required dependencies, and logic overrides in an implementation plan artifact.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Typing '@' in the prompt box triggers an overlay that auto-completes workspace file paths directly into the prompt to help the agent target code searches.",
+        "level": "subfeature",
+        "name": "Interactive Path Suggestion",
+        "parent_hint": "Enrich your prompting context",
+        "quote": "Type `@` within your prompt box to trigger the **Interactive Path Suggestion** overlay. Highlighting and selecting a path imports the absolute workspace file path directly into your prompt.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can paste screenshots or video recordings into the prompt box and the agent will consult the media to diagnose visual UI or rendering bugs.",
+        "level": "subfeature",
+        "name": "Attaching visual evidence",
+        "parent_hint": "Enrich your prompting context",
+        "quote": "capture a screenshot or video recording, copy it, and press `ctrl+v` inside the prompt box to attach it. The agent will consult the media file to diagnose the issue.",
+        "status": "unknown"
+      },
+      {
+        "claim": "A GEMINI.md or AGENTS.md file at the workspace root is automatically parsed by the agent on startup to enforce project-specific standards, styling, and test parameters.",
+        "level": "subfeature",
+        "name": "Codebase rule file",
+        "parent_hint": "Configure your workspace environment",
+        "quote": "Create a `GEMINI.md` or `AGENTS.md` file at your workspace root to outline specific directory standards, styling paradigms, test command parameters, and deprecation warnings. The agent automatically parses these rules on startup and consults them before suggesting changes.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Configurable permission modes (request-review, proceed-in-sandbox, strict) control how autonomously the agent executes write operations, bash commands, and network calls.",
+        "level": "subfeature",
+        "name": "Structured permissions",
+        "parent_hint": "Configure your workspace environment",
+        "quote": "Tune your safety barriers in `~/.gemini/antigravity-cli/settings.json` based on your project risk level: **`request-review`** (Default): Prompts you before executing any write operations, bash commands, or remote network calls. **`proceed-in-sandbox`**: Restricts all terminal executions to a secure sandbox containment ring.",
+        "status": "unknown"
+      },
+      {
+        "claim": "The /rewind (or /undo) command rolls back the conversation thread to a previous stable checkpoint without discarding the entire session.",
+        "level": "subfeature",
+        "name": "Session history rewind",
+        "parent_hint": "Manage TUI sessions proactively",
+        "quote": "Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout.",
+        "status": "unknown"
+      },
+      {
+        "claim": "The /fork command spins up a duplicate parallel session so users can test speculative code changes and swap back to the stable main branch if the approach fails.",
+        "level": "subfeature",
+        "name": "Session forking",
+        "parent_hint": "Manage TUI sessions proactively",
+        "quote": "Type `/fork` to spin up a duplicate parallel session. Test your speculative code modifications in the branched session. If the approach fails, run `/resume` to swap back to your stable main branch.",
+        "status": "unknown"
+      },
+      {
+        "claim": "A one-shot prompt flag (-p) lets the CLI run agent queries non-interactively, enabling integration into shell pipelines and git hooks.",
+        "level": "subfeature",
+        "name": "Non-interactive (headless) mode",
+        "parent_hint": "Automate and script",
+        "quote": "To automate quick queries or integrate agents into git hooks, use the one-shot prompt flag `-p`",
+        "status": "unknown"
+      },
+      {
+        "claim": "The primary agent can spawn concurrent background subagents for large-scale, multi-file refactoring tasks, managed autonomously by an agent manager.",
+        "level": "subfeature",
+        "name": "Parallel subagents",
+        "parent_hint": "Automate and script",
+        "quote": "For large-scale sweeps or multi-file refactoring, direct the primary agent to spawn concurrent background subagents. The agent manager handles background threads autonomously while you continue working on your primary screen.",
+        "status": "unknown"
+      }
+    ]
+  }
+}

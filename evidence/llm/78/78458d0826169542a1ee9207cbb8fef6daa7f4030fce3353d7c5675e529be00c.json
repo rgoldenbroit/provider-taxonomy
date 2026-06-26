@@ -1,0 +1,12 @@
+{
+  "key": "78458d0826169542a1ee9207cbb8fef6daa7f4030fce3353d7c5675e529be00c",
+  "label": "judge:google-antigravity-2-0-disc-access-to-third-party-models",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Users on Google AI Ultra receive: ... Access to third-party models",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that Google AI Ultra users receive \"Access to third-party models\" as one of their plan benefits, directly substantiating the claim that users on Google AI Ultra can use third-party models in addition to Gemini models (which are part of the baseline quota available to all plans).",
+    "supported": true
+  }
+}

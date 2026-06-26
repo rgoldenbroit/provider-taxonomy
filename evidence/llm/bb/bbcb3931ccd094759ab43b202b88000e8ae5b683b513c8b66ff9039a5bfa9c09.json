@@ -1,0 +1,12 @@
+{
+  "key": "bbcb3931ccd094759ab43b202b88000e8ae5b683b513c8b66ff9039a5bfa9c09",
+  "label": "judge:google-antigravity-2-0-disc-workspace-scoping",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "To maintain context hygiene, Antigravity CLI scopes conversation histories directly to your current working directory. When you launch `agy` from a specific directory, the agent only displays and resume sessions associated with that specific local repository or subdirectory. This prevents context pollution, ensuring that the agent's semantic memory and token limits remain focused solely on the relevant codebase.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Workspace scoping under its own section heading, stating that Antigravity CLI scopes conversation histories to the current working directory and that this prevents context pollution across projects. This directly substantiates every element of the claim. The page presents this as a current, active feature with no indication of preview, deprecation, or sunset status.",
+    "supported": true
+  }
+}

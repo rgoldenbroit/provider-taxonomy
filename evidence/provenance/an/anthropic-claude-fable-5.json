@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Claude Fable 5 (claude-fable-5) is Anthropic's most capable widely released model. ... Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Vertex AI, and Microsoft Foundry beginning June 9, 2026.",
+    "found_quote": "Claude Fable 5 (claude-fable-5) is Anthropic's most capable widely released model. ... Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry beginning June 9, 2026.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude Fable 5",
-    "page_content_hash": "add3cb4815bb524c9b96bbc5f5ac4297c11966f04cb9761ecfbc55b946c6a5e1",
+    "page_content_hash": "1f9facf9405d847063872f6b5cafea1a61343ad700904a23e493320b3d05142a",
     "primary_capability_id": "flagship-model",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

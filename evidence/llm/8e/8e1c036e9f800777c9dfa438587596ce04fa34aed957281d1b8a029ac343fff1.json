@@ -1,0 +1,22 @@
+{
+  "key": "8e1c036e9f800777c9dfa438587596ce04fa34aed957281d1b8a029ac343fff1",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity supports the Model Context Protocol (MCP) to securely connect the editor to local tools, databases, and external services.",
+        "name": "MCP Integration",
+        "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/mcp.md",
+        "status": "active",
+        "subfeatures": [
+          "Context Resources: The AI can read data from connected MCP servers \u2014 such as live database schemas or build logs \u2014 to inform its code suggestions",
+          "Custom Tools: MCP enables Antigravity to execute specific, safe actions defined by connected servers, such as creating issues or searches",
+          "MCP Store: A built-in MCP Store lets users browse, install, and manage supported MCP server integrations directly within the editor",
+          "Connecting Custom MCP Servers: Users can connect arbitrary custom MCP servers by editing a raw JSON configuration file, supporting both stdio and remote transports",
+          "Authentication: Antigravity supports multiple authentication methods for MCP servers including Google Application Default Credentials and OAuth"
+        ]
+      }
+    ]
+  }
+}

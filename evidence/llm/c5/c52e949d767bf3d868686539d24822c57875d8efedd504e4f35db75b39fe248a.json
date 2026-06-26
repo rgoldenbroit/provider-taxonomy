@@ -1,0 +1,32 @@
+{
+  "key": "c52e949d767bf3d868686539d24822c57875d8efedd504e4f35db75b39fe248a",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity CLI scopes conversation histories to the current working directory, preventing context pollution across projects.",
+        "name": "Workspace scoping",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
+        "status": "active"
+      },
+      {
+        "claim": "Users can return to prior conversations to continue an implementation or refine an existing solution.",
+        "name": "Resuming sessions",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
+        "status": "active",
+        "subfeatures": [
+          "Resuming via the TUI session picker: An interactive Conversation Picker overlay lets users search, filter, and resume prior sessions within the terminal UI.",
+          "Importing conversations from Antigravity 2.0: CLI users can import and resume conversation threads originally started in the Antigravity 2.0 desktop visual editor.",
+          "Quick resume via the command line: Launching with --continue instantly resumes the most recent session, or a specific session can be loaded by passing its ID."
+        ]
+      },
+      {
+        "claim": "The /fork command clones the entire conversation history into a new independent session, enabling safe parallel experimentation.",
+        "name": "Branching with /fork",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
+        "status": "active"
+      }
+    ]
+  }
+}

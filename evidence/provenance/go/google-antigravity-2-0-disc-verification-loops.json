@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-verification-loops",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The single most effective way to ensure reliable, correct modifications from an autonomous agent is to provide the agent with a local verification mechanism (such as unit tests, build commands, or formatting scripts)... Once the agent proposes code, instruct it to run the local test command to verify its work. Watch the agent execute the command and iterate on the test outputs automatically.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Verification loops",
+    "page_content_hash": "edbcbdedfb16f760a8a1851453734671097012b84044dc213b28cc5a9b7a7da6",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-verification-loops",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

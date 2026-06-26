@@ -1,0 +1,12 @@
+{
+  "key": "9e6009dde13a64bc1e03d4e0910bf9bc00f3ff634f8be2afb95dd468022a8c94",
+  "label": "judge:google-antigravity-2-0-disc-prompt-context-inputs",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Type `@` within your prompt box to trigger the **Interactive Path Suggestion** overlay. Highlighting and selecting a path imports the absolute workspace file path directly into your prompt. This helps the agent target its code searches. ... If debugging visual UI issues, rendering bugs, or frontend layout inconsistencies, capture a screenshot or video recording, copy it, and press `ctrl+v` inside the prompt box to attach it. The agent will consult the media file to diagnose the issue.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes both features mentioned in the claim under the \"Enrich your prompting context\" section: (1) workspace file path autocomplete via the `@` trigger and Interactive Path Suggestion overlay, and (2) attaching visual media (screenshots or video recordings) via `ctrl+v` in the prompt box. Both capabilities map directly to the claim about enriching the agent prompt with workspace file path autocomplete and visual media. The page presents these as current, active features with no preview or deprecation language.",
+    "supported": true
+  }
+}

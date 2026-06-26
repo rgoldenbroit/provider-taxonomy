@@ -1,0 +1,12 @@
+{
+  "key": "992ac011d4b4c29b51cc9e0c43a005e9eb93baccb9d44f5c97e4fdb4b80164c0",
+  "label": "judge:google-gemini-enterprise-agent-platform-agent-memory-memory-bank",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Utilizing Agent Platform Sessions and an Agent Platform Memory Bank to maintain the state of continuous conversations and retrieve persistent, long-term memories, enabling highly personalized and natural user interactions.",
+    "lifecycle_status": "preview",
+    "rationale": "The page clearly describes Google's Memory Bank as a managed service under the Gemini Enterprise Agent Platform (on Vertex AI) that stores and retrieves persistent, long-term user preferences and facts as memories that agents can read and write across sessions. The page explicitly states it is in \"Preview\" and \"subject to the 'Pre-GA Offerings Terms'\". Multiple sections reference Memory Bank, including an overview, setup guide, API quickstart, ADK quickstart, and guides for generating memories, ingesting events, fetching memories, and memory profiles \u2014 all consistent with the claim's description of a managed service for persistent, long-term user preferences and facts across sessions.",
+    "supported": true
+  }
+}

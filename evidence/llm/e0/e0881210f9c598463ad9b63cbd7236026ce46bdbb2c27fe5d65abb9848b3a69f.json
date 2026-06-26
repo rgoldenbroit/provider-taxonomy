@@ -1,0 +1,12 @@
+{
+  "key": "e0881210f9c598463ad9b63cbd7236026ce46bdbb2c27fe5d65abb9848b3a69f",
+  "label": "judge:anthropic-claude-cowork-knowledge-work-research-memory",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "medium",
+    "found_quote": "Claude remembers what you've worked on and learns how you work. Context carries across sessions, so you don't have to re-explain your preferences, your projects, or how you like things done.\n\nYou control what Claude remembers. You can view, edit, and delete your memory at any time.",
+    "lifecycle_status": "beta",
+    "rationale": "The page confirms that Claude offers a Memory feature within Claude Cowork that remembers user preferences and past work across sessions, and that users can view, edit, and delete their memory. This matches the core claim. However, the claim also includes the detail that sensitive data is \"automatically excluded,\" which is not mentioned on the page. The overall Cowork capability is described as \"available in beta for Pro and Max plans,\" so the lifecycle status is beta. Confidence is medium because the automatic exclusion of sensitive data is not substantiated by the page.",
+    "supported": true
+  }
+}

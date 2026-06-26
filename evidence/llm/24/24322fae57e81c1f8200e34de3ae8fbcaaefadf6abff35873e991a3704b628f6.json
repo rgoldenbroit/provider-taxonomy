@@ -1,0 +1,19 @@
+{
+  "key": "24322fae57e81c1f8200e34de3ae8fbcaaefadf6abff35873e991a3704b628f6",
+  "label": "triage:google-antigravity-2-0-disc-scheduled-tasks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "managed-agent-runtime"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-managed-agent-runtime-scheduled-tasks",
+    "primary_capability_id": "managed-agent-runtime",
+    "rationale": "Scheduled Tasks is a feature within Google's Antigravity managed agent runtime that allows users to schedule agent runs. It maps directly to the existing product ID google-antigravity-2-0-managed-agent-runtime-scheduled-tasks, which is a sub-feature of the managed-agent-runtime capability. It covers only a slice of the full managed agent runtime (specifically the scheduling/trigger aspect), hence partial relation.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "web"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-explore-plan-then-execute",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Autonomous local agents operate with highest accuracy when complex changes are partitioned into distinct exploration, planning, and execution phases. - **Exploration**: Ask the agent to explain how the target codebase resolves a particular problem or where an interface is defined before writing any changes. - **Planning**: Request an implementation plan. The agent will list targeted files, required dependencies, and logic overrides in an implementation plan artifact. - **Execution**: Once you approve the structured plan, direct the agent to apply the edits.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Explore, plan, then execute",
+    "page_content_hash": "edbcbdedfb16f760a8a1851453734671097012b84044dc213b28cc5a9b7a7da6",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-explore-plan-then-execute",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

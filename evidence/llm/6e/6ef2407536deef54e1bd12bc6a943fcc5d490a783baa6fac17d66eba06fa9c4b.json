@@ -1,0 +1,12 @@
+{
+  "key": "6ef2407536deef54e1bd12bc6a943fcc5d490a783baa6fac17d66eba06fa9c4b",
+  "label": "judge:google-antigravity-2-0-disc-agent-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`/skills`** | Tools & Tasks | \u2014 | Browse loaded local and global Agent Skills.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists a `/skills` command in the Core slash commands table under \"Tools & Tasks\" whose purpose is \"Browse loaded local and global Agent Skills.\" This directly substantiates the claim that Antigravity supports loading and browsing local and global Agent Skills as plugins. Additionally, the \"Next steps\" section links to a \"Plugins & Skills\" page for creating custom skills slash commands, further confirming the feature exists.",
+    "supported": true
+  }
+}

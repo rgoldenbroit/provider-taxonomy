@@ -2,6 +2,23 @@
 
 _What the self-maintaining loop changed, newest first._
 
+## 2026-06-26
+- ➕ **Reasoning Model** (Google) — added
+- ➕ **Agent Skills** (Google) — added
+- ➕ **Implementation Plan** (Google) — added
+- ➕ **Access to third-party models** (Google) — added
+- ➕ **Resuming sessions** (Google) — added
+- ➕ **Branching with /fork** (Google) — added
+- ➕ **Quota Tracking** (Google) — added
+- ➕ **Multi-turn plan generation mode** (Google) — added
+- ➕ **Model Context Protocol (MCP) server manager** (Google) — added
+- ➕ **Tool permission presets** (Google) — added
+- ➕ **Explore, plan, then execute** (Google) — added
+- ➕ **Verification loops** (Google) — added
+- ➕ **Structured permissions** (Google) — added
+- ➕ **Session management** (Google) — added
+- ➕ **Hooks** (Google) — added
+
 ## 2026-06-18
 - ✏️ **Claude Fable 5** (Anthropic) — confidence medium→high
 - ✏️ **Gemini 3.5 Pro** (Google) — review_status confirmed→needs_review, confidence high→low

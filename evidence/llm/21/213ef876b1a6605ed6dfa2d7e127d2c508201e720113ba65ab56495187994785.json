@@ -1,0 +1,12 @@
+{
+  "key": "213ef876b1a6605ed6dfa2d7e127d2c508201e720113ba65ab56495187994785",
+  "label": "judge:google-antigravity-2-0-disc-mcp-integration",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Antigravity supports the Model Context Protocol (MCP), a standard that allows the editor to securely connect to your local tools, databases, and external services.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly and verbatim substantiates the claim. The opening paragraph of the fetched page states exactly that \"Antigravity supports the Model Context Protocol (MCP), a standard that allows the editor to securely connect to your local tools, databases, and external services.\" The page goes on to describe the feature in extensive detail (Core Features, How to Connect, Authentication, Supported Servers, etc.), indicating it is a currently active, generally available offering with no deprecation or preview notices.",
+    "supported": true
+  }
+}

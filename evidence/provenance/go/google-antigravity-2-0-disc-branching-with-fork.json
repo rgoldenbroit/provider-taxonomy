@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-branching-with-fork",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "The `/fork` command clones your entire conversation history up to the current turn into a new, independent session.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Branching with /fork",
+    "page_content_hash": "abe0cfdf61c308c17248449ef0a08ddf3b67e538661dfdddb909e3703c806406",
+    "primary_capability_id": "agentic-coding",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-branching-with-fork",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

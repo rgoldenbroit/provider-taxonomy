@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Projects: Group related tasks into separate workspaces with their own files, context, instructions, and memory.",
+    "found_quote": "With the introduction of projects in Cowork, you can organize related tasks into persistent, self-contained workspaces with their own files, links, instructions, and memory, making Cowork more powerful for recurring or long-running work.",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Projects",
-    "page_content_hash": "b4bbb38208308adea06614dcb13af9174ecbdb4fb748eeab67518bd470553211",
+    "page_content_hash": "55b3af7995cc95e829a539009fc3479e4594432f7121ff95dda7a58ca27d45c2",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

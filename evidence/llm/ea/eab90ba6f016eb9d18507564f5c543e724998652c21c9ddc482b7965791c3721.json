@@ -1,0 +1,12 @@
+{
+  "key": "eab90ba6f016eb9d18507564f5c543e724998652c21c9ddc482b7965791c3721",
+  "label": "judge:google-antigravity-2-0-disc-model-context-protocol-mcp-server-manager",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`/mcp`** | Tools & Tasks | \u2014 | Open the Model Context Protocol (MCP) server manager.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists the `/mcp` slash command in the Core slash commands table, describing it as opening the \"Model Context Protocol (MCP) server manager.\" This directly substantiates the claim that Antigravity includes a built-in MCP server manager. The command is listed among other active CLI commands with no deprecation or preview notice, indicating it is an active feature.",
+    "supported": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "key": "1a360f8c9efd7acb5b386886d68597f1f09fd22e681cf7b303b349e2a361782f",
+  "label": "triage:google-antigravity-2-0-disc-session-management",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agent-memory"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-agent-development-kit-adk-agent-memory-session-state",
+    "primary_capability_id": "agent-memory",
+    "rationale": "Session management featuring rewind, fork, and non-interactive execution maps most closely to agent-memory, specifically the session lifecycle management sub-capability (e.g., sessions, fork, resume, rewind). Google's provider context points toward the google-antigravity-2-0-managed-agent-runtime or ADK lineage. The offering is a partial slice of agent-memory \u2014 it covers session control operations (rewind/fork/non-interactive) rather than full persistent cross-session memory. It is a feature-level offering within session management.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "api"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "c8de7ef61263e56f2adb98f988544b4edd8d565558aef2a2b3d44bc0ac7c4bdc",
+  "label": "judge:google-antigravity-2-0-disc-agent-skills",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Skills are an open standard for extending agent capabilities. A skill is a folder containing a `SKILL.md` file with instructions that the agent can follow when working on specific tasks.",
+    "lifecycle_status": "active",
+    "rationale": "The page directly substantiates all key elements of the claim: (1) Google's Antigravity product offers \"Agent Skills\"; (2) it is described as an \"open standard for extending agent capabilities\"; and (3) skills are reusable packages stored in structured folders (e.g., `.agents/skills/<skill-folder>/`) containing a `SKILL.md` file. The page presents the feature as currently available (no preview/beta language), placing its lifecycle status as active.",
+    "supported": true
+  }
+}

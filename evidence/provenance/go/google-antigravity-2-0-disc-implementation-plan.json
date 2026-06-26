@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-implementation-plan",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "Agent utilizes the implementation plan artifact to architect changes within your codebase to accomplish a task. These plans contain technical details on what revisions are necessary and are meant to be reviewed by the user... Unless you have you artifact review policy set to \"Always Proceed\"... Antigravity supports commenting on these artifacts so you can provide feedback to Agent for any reason, whether it be to decrease scope of changes, use a different tech stack, or correct any Agent discrepancies.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Implementation Plan",
+    "page_content_hash": "886923ac6f62bebdf62c6aa53ccad7bb03768aaa857143b51e313f405f4d6b19",
+    "primary_capability_id": "remote-agent-control",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-implementation-plan",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/implementation-plan.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

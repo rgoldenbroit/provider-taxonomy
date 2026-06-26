@@ -1,0 +1,12 @@
+{
+  "key": "e8b7d6b0e8fd034b5423304b00b1296488e0ba517bcbaa872f6b30dafb269013",
+  "label": "judge:anthropic-claude-code-code-execution-sandbox-sandboxed-bash-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The Bash sandbox lets Claude run most shell commands without stopping to ask permission. Instead of approving each command, you define which files and network domains commands can touch, and the operating system enforces that boundary for every Bash command and its child processes.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly documents a \"sandboxed Bash tool\" that is built into Claude Code. It describes OS-level filesystem and network isolation enforced for every Bash command and its child processes, which directly matches the claim. The page confirms it uses OS-level primitives (macOS Seatbelt, Linux bubblewrap) and provides comprehensive configuration details, indicating it is an active, generally available feature rather than a preview or beta.",
+    "supported": true
+  }
+}

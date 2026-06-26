@@ -1,0 +1,20 @@
+{
+  "key": "6eb43de9d0ee082d6e3b2d40f6ab0b1dcb054c848cff3b9bb4710db637f901de",
+  "label": "triage:google-antigravity-2-0-disc-access-to-third-party-models",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "consumer-chat-assistant"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-gemini-app",
+    "primary_capability_id": "consumer-chat-assistant",
+    "rationale": "This offering is a feature of the Google Gemini App (consumer chat assistant) that allows Google AI Ultra subscribers to access third-party models (from other providers) in addition to the standard Gemini models. It is a partial coverage of the consumer-chat-assistant capability, scoped specifically to model selection/access within the Gemini App, and is a sub-feature of the existing google-gemini-app product.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "web",
+      "mobile"
+    ]
+  }
+}

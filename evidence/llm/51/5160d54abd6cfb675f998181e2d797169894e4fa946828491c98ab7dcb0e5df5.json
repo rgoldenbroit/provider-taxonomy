@@ -1,0 +1,12 @@
+{
+  "key": "5160d54abd6cfb675f998181e2d797169894e4fa946828491c98ab7dcb0e5df5",
+  "label": "judge:google-gemini-enterprise-agent-platform-guardrails-safety-agent-gateway",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Route Agent Runtime traffic through Agent Gateway\nLearn how to route Agent Runtime traffic through Agent Gateway for secure and governed connectivity.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes \"Agent Gateway\" as a feature that routes Agent Runtime traffic through a gateway for \"secure and governed connectivity,\" matching the claim almost verbatim. The page also notes at the top that \"This feature is subject to the 'Pre-GA Offerings Terms',\" indicating it is in Preview status.",
+    "supported": true
+  }
+}

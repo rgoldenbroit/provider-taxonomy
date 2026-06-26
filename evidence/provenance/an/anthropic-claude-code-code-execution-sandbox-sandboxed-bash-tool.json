@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Sandboxed Bash Tool",
-    "page_content_hash": "87140e29704a04dcffa74f2ea3048871204d73b6b22d93dcc156a4772836c36a",
+    "page_content_hash": "0371bc0a8a23df807455a4a5525f61d6a7d5942b677e24b50775d6c8b6909fa7",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/sandboxing.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

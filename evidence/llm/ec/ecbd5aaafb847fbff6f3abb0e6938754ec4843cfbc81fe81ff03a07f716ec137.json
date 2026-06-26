@@ -1,0 +1,13 @@
+{
+  "key": "ecbd5aaafb847fbff6f3abb0e6938754ec4843cfbc81fe81ff03a07f716ec137",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 0
+      }
+    ]
+  }
+}

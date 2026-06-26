@@ -1,0 +1,12 @@
+{
+  "key": "53015a882f7364ae612c4dbd6381ba1ef3dd67471671fce4e958be5e34bde33f",
+  "label": "judge:anthropic-claude-code-guardrails-safety-permission-modes",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Permission modes control how often that pause happens. The mode you pick shapes the flow of a session: default mode has you review each action as it comes, while looser modes let Claude work in longer uninterrupted stretches and report back when done... **As a default**: set `defaultMode` in [settings](/en/settings#settings-files). ```json { \"permissions\": { \"defaultMode\": \"acceptEdits\" } } ```",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes Permission Modes, explaining they \"control how often that pause happens\" when Claude wants to edit a file, run a shell command, or make a network request. It lists six modes (default, acceptEdits, plan, auto, dontAsk, bypassPermissions), explains that they govern how much autonomy Claude has before pausing for approval, and confirms that the `defaultMode` setting in settings files (under `permissions.defaultMode`) is how you set the mode persistently. This directly substantiates the claim that \"Permission modes control how much autonomy Claude has and how often it pauses to ask for approval before editing files, running commands, or making network requests, set via defaultMode.\"",
+    "supported": true
+  }
+}

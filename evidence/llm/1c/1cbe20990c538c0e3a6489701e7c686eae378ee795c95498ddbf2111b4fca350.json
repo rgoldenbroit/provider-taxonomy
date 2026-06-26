@@ -1,0 +1,12 @@
+{
+  "key": "1cbe20990c538c0e3a6489701e7c686eae378ee795c95498ddbf2111b4fca350",
+  "label": "judge:anthropic-claude-computer-use",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Computer use is a beta feature that enables Claude to interact with desktop environments. This tool provides: Screenshot capture: See what's currently displayed on screen, Mouse control: Click, drag, and move the cursor, Keyboard input: Type text and use keyboard shortcuts, Desktop automation: Interact with any application or interface",
+    "lifecycle_status": "beta",
+    "rationale": "The page explicitly documents Anthropic's \"Computer Use\" tool for Claude, describing it as a beta feature that allows Claude to interact with desktop environments via screenshot capture, mouse control, keyboard input, and desktop automation. The page states \"Computer use is in beta\" and provides beta headers required to use it, confirming the offering exists but is in beta/preview stage.",
+    "supported": true
+  }
+}

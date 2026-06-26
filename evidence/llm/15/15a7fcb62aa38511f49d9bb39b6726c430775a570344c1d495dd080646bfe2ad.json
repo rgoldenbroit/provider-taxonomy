@@ -1,0 +1,19 @@
+{
+  "key": "15a7fcb62aa38511f49d9bb39b6726c430775a570344c1d495dd080646bfe2ad",
+  "label": "triage:google-antigravity-2-0-disc-quota-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agent-evals-observability"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-agent-evals-observability-observability",
+    "primary_capability_id": "agent-evals-observability",
+    "rationale": "Quota Tracking in Google's CLI lets users monitor their active AI credit quota and consumption. This is a partial slice of agent-evals-observability \u2014 specifically the cost/usage tracking dimension (analogous to cost tracking features found in other providers' observability offerings). It doesn't cover tracing, evals, or broader monitoring, but fits closest to observability/cost tracking within that capability. The parent product is google-antigravity-2-0 (the Google agentic coding CLI), and the closest existing parent feature is the cost-tracking sub-cluster under agent-evals-observability.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

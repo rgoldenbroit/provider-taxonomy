@@ -7,7 +7,7 @@
     "lifecycle_status": "deprecated",
     "model": "claude-opus-4-8",
     "name": "AgentKit",
-    "page_content_hash": "5ac560112280e4e1e247f026508a05cb31cf5d89821be864a1994d89af43a914",
+    "page_content_hash": "a569a162d7a4d5687ba2f8db34866288bf796ba05ef6f43e2b7dafe89a5f621c",
     "primary_capability_id": "enterprise-agent-platform",
     "provider": "OpenAI",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://openai.com/index/introducing-agentkit",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

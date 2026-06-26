@@ -1,0 +1,12 @@
+{
+  "key": "71ce4215d7b178b89e9a1430ef3a38586dba6eef9e40a8b08040eb8e2015450c",
+  "label": "judge:anthropic-claude-agent-sdk-code-execution-sandbox-sandboxed-bash-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "The sandboxed Bash tool leverages operating system security primitives: macOS: uses Seatbelt for sandbox enforcement. Linux: uses bubblewrap for isolation. WSL2: uses bubblewrap, same as Linux. ... These OS-level restrictions ensure that all child processes spawned by Claude Code's commands inherit the same security boundaries.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a built-in sandboxed Bash tool in Claude Code that enforces OS-level filesystem and network isolation for shell commands. It confirms the use of macOS Seatbelt and Linux bubblewrap as the underlying native OS security primitives, matching the claim precisely. The tool is described as generally available (not preview/beta), running on macOS, Linux, and WSL2.",
+    "supported": true
+  }
+}

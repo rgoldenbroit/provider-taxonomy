@@ -1,0 +1,12 @@
+{
+  "key": "d25c08b53fb2f2a41d4b8b1741defc586efa7f742faffa30dc91864c9a4aa0cd",
+  "label": "judge:anthropic-claude-code-guardrails-safety-code-review",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Code Review analyzes your GitHub pull requests and posts findings as inline comments on the lines of code where it found issues. A fleet of specialized agents examine the code changes in the context of your full codebase, looking for logic errors, security vulnerabilities, broken edge cases, and subtle regressions... You can tune what Claude flags by adding a `CLAUDE.md` or `REVIEW.md` file to your repository.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Anthropic's \"Code Review\" offering as an automated PR review service that uses multi-agent analysis to flag logic errors, security vulnerabilities, and regressions. It is configurable via repository instruction files (CLAUDE.md and REVIEW.md). The page states it is currently \"in research preview, available for Team and Enterprise subscriptions,\" placing it in a preview/beta lifecycle status rather than general availability.",
+    "supported": true
+  }
+}

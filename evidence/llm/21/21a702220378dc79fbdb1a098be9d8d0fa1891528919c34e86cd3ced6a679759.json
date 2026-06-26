@@ -1,0 +1,69 @@
+{
+  "key": "21a702220378dc79fbdb1a098be9d8d0fa1891528919c34e86cd3ced6a679759",
+  "label": "matrixreconsider:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "mcp-authentication",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "context-compaction",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "security-scanning",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "code-review",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "remote-control",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "notifications",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 0
+      }
+    ]
+  }
+}

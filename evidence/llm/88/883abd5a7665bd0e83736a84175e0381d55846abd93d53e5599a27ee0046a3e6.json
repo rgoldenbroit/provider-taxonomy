@@ -1,0 +1,20 @@
+{
+  "key": "883abd5a7665bd0e83736a84175e0381d55846abd93d53e5599a27ee0046a3e6",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity's agent generates an implementation plan artifact that details the technical revisions needed to accomplish the task, which users can review, comment on, and configure approval policies for.",
+        "name": "Implementation Plan",
+        "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/implementation-plan.md",
+        "status": "active",
+        "subfeatures": [
+          "Artifact review policy (e.g. 'Always Proceed') to control whether the agent pauses for approval before executing",
+          "Commenting on artifacts with inline comments to provide feedback such as reducing scope or changing direction",
+          "Review button in the artifact header to consolidate all comments into a single message of feedback to the agent"
+        ]
+      }
+    ]
+  }
+}

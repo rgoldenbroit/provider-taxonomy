@@ -1,0 +1,21 @@
+{
+  "key": "google-antigravity-2-0-disc-resuming-sessions",
+  "value": {
+    "confidence": "high",
+    "fetch_ok": true,
+    "found_quote": "You can return to a prior conversation to continue an implementation or refine an existing solution.",
+    "lifecycle_status": "active",
+    "model": "claude-opus-4-8",
+    "name": "Resuming sessions",
+    "page_content_hash": "abe0cfdf61c308c17248449ef0a08ddf3b67e538661dfdddb909e3703c806406",
+    "primary_capability_id": "agent-memory",
+    "provider": "Google",
+    "reconfirmed": true,
+    "record_id": "google-antigravity-2-0-disc-resuming-sessions",
+    "review_status": "confirmed",
+    "source_tier": "official",
+    "source_url": "https://antigravity.google/assets/docs/cli/cli-conversations.md",
+    "supported": true,
+    "verified_at": "2026-06-26"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "key": "590cd5f55f26a92b48d592f3d173cf0424fd3227f5cb27b2ef2174d3a2144a8e",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Workflows let users define a reusable, markdown-based sequence of steps that guide the Agent through repetitive tasks.",
+        "name": "Workflows",
+        "source_url": "https://antigravity.google/assets/docs/editor/ide-workflows.md",
+        "status": "active",
+        "subfeatures": [
+          "Global and Workspace Workflows",
+          "Workflow Composition (calling Workflows from within Workflows)",
+          "Agent-Generated Workflows"
+        ]
+      }
+    ]
+  }
+}

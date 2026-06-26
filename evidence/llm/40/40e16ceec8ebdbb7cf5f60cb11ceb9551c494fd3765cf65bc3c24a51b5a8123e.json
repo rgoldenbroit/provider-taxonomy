@@ -1,0 +1,12 @@
+{
+  "key": "40e16ceec8ebdbb7cf5f60cb11ceb9551c494fd3765cf65bc3c24a51b5a8123e",
+  "label": "judge:google-gemini-enterprise-agent-platform-managed-agent-runtime-code-execution",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Secure sandbox execution: Empowering agents to safely solve complex computational problems and automate workflows through dynamic Code Execution and Computer Use, allowing them to run scripts or mimic human-like interactions with graphical interfaces.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Code Execution\" offering under its \"Sandbox\" section, with dedicated Overview and Quickstart pages listed. The description matches the claim: it is a sandboxed, provider-hosted environment that lets agents safely run scripts to solve computational problems and automate workflows. The page also carries a top-level \"Preview\" notice indicating the feature is in pre-GA (preview) status.",
+    "supported": true
+  }
+}

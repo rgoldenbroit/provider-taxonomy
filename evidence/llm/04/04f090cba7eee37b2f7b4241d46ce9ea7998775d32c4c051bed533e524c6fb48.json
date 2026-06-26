@@ -1,0 +1,60 @@
+{
+  "key": "04f090cba7eee37b2f7b4241d46ce9ea7998775d32c4c051bed533e524c6fb48",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "The agent supports a structured three-phase workflow \u2014 exploration, planning, and execution \u2014 for complex code changes.",
+        "name": "Explore, plan, then execute",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": [
+          "Parallel subagents: The primary agent can spawn concurrent background subagents for large-scale, multi-file refactoring tasks, managed autonomously."
+        ]
+      },
+      {
+        "claim": "The agent can run local test commands (e.g. unit tests, build scripts) after making code changes and iterate automatically.",
+        "name": "Verification loops",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": []
+      },
+      {
+        "claim": "Configurable permission modes (request-review, proceed-in-sandbox, strict) control how autonomously the agent executes work.",
+        "name": "Structured permissions",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": []
+      },
+      {
+        "claim": "The agent supports rewinding, forking, and non-interactive execution of conversation sessions.",
+        "name": "Session management",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": [
+          "Session history rewind: The /rewind (or /undo) command rolls back the conversation thread to a previous stable checkpoint without discarding the work.",
+          "Session forking: The /fork command spins up a duplicate parallel session so users can test speculative code changes and swap back to the original.",
+          "Non-interactive (headless) mode: A one-shot prompt flag (-p) lets the CLI run agent queries non-interactively, enabling integration into shell pipelines."
+        ]
+      },
+      {
+        "claim": "Users can enrich the agent prompt with workspace file path autocomplete and visual media.",
+        "name": "Prompt context inputs",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": [
+          "Interactive Path Suggestion: Typing '@' in the prompt box triggers an overlay that auto-completes workspace file paths directly into the prompt.",
+          "Attaching visual evidence: Users can paste screenshots or video recordings into the prompt box and the agent will consult the media to diagnose visual issues."
+        ]
+      },
+      {
+        "claim": "A GEMINI.md or AGENTS.md file at the workspace root is automatically parsed by the agent on startup to enforce project-specific rules.",
+        "name": "Codebase rule file",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
+        "status": "active",
+        "subfeatures": []
+      }
+    ]
+  }
+}

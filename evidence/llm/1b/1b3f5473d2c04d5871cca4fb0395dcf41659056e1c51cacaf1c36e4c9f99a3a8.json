@@ -1,0 +1,22 @@
+{
+  "key": "1b3f5473d2c04d5871cca4fb0395dcf41659056e1c51cacaf1c36e4c9f99a3a8",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity lets users run custom scripts or shell commands at specific points during its execution loop to enforce rules.",
+        "name": "Hooks",
+        "source_url": "https://antigravity.google/assets/docs/editor/ide-hooks.md",
+        "status": "active",
+        "subfeatures": [
+          "PreToolUse: A hook event that fires before a tool is executed, allowing scripts to gate, block, or prompt the user before any tool call.",
+          "PostToolUse: A hook event that fires after a tool completes, enabling post-execution scripts such as linters or diagnostic capture.",
+          "PreInvocation: A hook event that fires before the model is called, with the ability to inject steps (tool calls, user messages, or ephemeral context).",
+          "PostInvocation: A hook event that fires after tool calls finish and can inject steps or control execution flow by forcing continuation.",
+          "Stop: A hook event that fires when the execution loop terminates, allowing a script to inspect the termination reason and optionally act."
+        ]
+      }
+    ]
+  }
+}

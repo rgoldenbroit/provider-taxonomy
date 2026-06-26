@@ -1,0 +1,12 @@
+{
+  "key": "012cdf1c219aa5e89263051201edecd7f7695bbb025cdd17c4b28fba2c0fd522",
+  "label": "judge:anthropic-claude-code-subagents-orchestration-agent-teams",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Agent teams let you coordinate multiple Claude Code instances working together. One session acts as the team lead, coordinating work, assigning tasks, and synthesizing results. Teammates work independently, each in its own context window, and communicate directly with each other.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes \"Agent Teams\" as a feature of Claude Code that coordinates multiple independent Claude Code sessions working together, led by a team lead (the main session), with a shared task list and peer-to-peer messaging (mailbox system for inter-agent communication). This matches the claim closely. However, the page notes \"Agent teams are experimental and disabled by default,\" placing the lifecycle status as experimental/preview rather than generally active.",
+    "supported": true
+  }
+}

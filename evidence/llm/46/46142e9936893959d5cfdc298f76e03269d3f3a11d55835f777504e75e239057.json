@@ -1,0 +1,19 @@
+{
+  "key": "46142e9936893959d5cfdc298f76e03269d3f3a11d55835f777504e75e239057",
+  "label": "triage:google-antigravity-2-0-disc-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "guardrails-safety"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-managed-agent-runtime-hooks",
+    "primary_capability_id": "guardrails-safety",
+    "rationale": "Antigravity's Hooks feature lets users run custom scripts or shell commands at specific points in the agent's execution loop to enforce rules. This maps to guardrails-safety as a partial capability \u2014 it provides policy/safety control over the agent's actions by intercepting at lifecycle events. It is a feature/sub-product of the existing google-antigravity-2-0-managed-agent-runtime-hooks product, specifically the overall Hooks offering under Antigravity's managed agent runtime. The parent is the hooks group already identified in the taxonomy.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

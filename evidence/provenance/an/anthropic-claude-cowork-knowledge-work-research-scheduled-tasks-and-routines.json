@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Scheduled tasks and routines",
-    "page_content_hash": "42d77884e8e1c3b9a2955aa1ecef913f1593ddfeaa1c5065f255055f93bd9e5f",
+    "page_content_hash": "d3e7fe9c6e8fe94874cde30d5f2986b37ec64fd2e7593f5351bb6fa4833a27fb",
     "primary_capability_id": "knowledge-work-research",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

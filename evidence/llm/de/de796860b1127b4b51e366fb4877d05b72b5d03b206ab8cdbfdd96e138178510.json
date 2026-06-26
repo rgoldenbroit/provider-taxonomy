@@ -1,0 +1,12 @@
+{
+  "key": "de796860b1127b4b51e366fb4877d05b72b5d03b206ab8cdbfdd96e138178510",
+  "label": "judge:anthropic-claude-web-desktop-mobile-consumer-chat-assistant-single-sign-on-sso",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Single sign-on is available for Team plans, Enterprise plans, and Console organizations. This guide covers the steps to configure SSO for Team and Enterprise plans, and Claude Console organizations.",
+    "lifecycle_status": "active",
+    "rationale": "The page is an official Anthropic support article explicitly confirming that SSO is available for Team and Enterprise plans (as well as Console organizations). It provides detailed setup instructions for configuring SSO with enterprise Identity Providers (Okta, Entra ID/Azure AD, Google SAML, OneLogin, JumpCloud, Duo), covering domain verification, IdP configuration, SSO enforcement, and provisioning \u2014 fully substantiating the claim about centralized authentication via enterprise IdPs on Team and Enterprise plans.",
+    "supported": true
+  }
+}

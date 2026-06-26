@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Claude (Team/Enterprise)",
-    "page_content_hash": "5242986e43636cceebfc2b015640d8f77ebbff168ee55cfc3ddaa12dca9990ab",
+    "page_content_hash": "0de7d1c7f58b96bfab9bf83735ba80950000e49f660b9674f62dfa699fb94b62",
     "primary_capability_id": "consumer-chat-assistant",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://support.claude.com/en/articles/13132885-set-up-single-sign-on-sso.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

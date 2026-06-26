@@ -1,0 +1,48 @@
+{
+  "key": "98192bdf75d3e852d3996cb54feb6b298da4619560f63c79c0059ac70fd336c2",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity supports an open standard for extending agent capabilities via reusable skill packages stored in structured folders.",
+        "level": "feature",
+        "name": "Agent Skills",
+        "quote": "Skills are an open standard for extending agent capabilities. A skill is a folder containing a SKILL.md file with instructions that the agent can follow when working on specific tasks.",
+        "status": "active"
+      },
+      {
+        "claim": "Skills can be scoped to a single workspace, enabling project-specific workflows like team deployment processes or testing conventions.",
+        "level": "subfeature",
+        "name": "Workspace-specific skills",
+        "parent_hint": "Agent Skills",
+        "quote": "Workspace skills are great for project-specific workflows, like your team's deployment process or testing conventions.",
+        "status": "active"
+      },
+      {
+        "claim": "Skills can be defined globally to apply across all workspaces for personal utilities or general-purpose tools.",
+        "level": "subfeature",
+        "name": "Global skills",
+        "parent_hint": "Agent Skills",
+        "quote": "Global skills work across all your projects. Use these for personal utilities or general-purpose tools you want everywhere.",
+        "status": "active"
+      },
+      {
+        "claim": "The agent automatically discovers, activates, and executes skills based on conversational context without requiring explicit user instruction.",
+        "level": "subfeature",
+        "name": "Progressive disclosure",
+        "parent_hint": "Agent Skills",
+        "quote": "Skills follow a progressive disclosure pattern: 1. Discovery... 2. Activation... 3. Execution... You don't need to explicitly tell the agent to use a skill\u2014it decides based on context.",
+        "status": "active"
+      },
+      {
+        "claim": "Skills support optional helper scripts, reference examples, and resource templates alongside the required SKILL.md instructions file.",
+        "level": "subfeature",
+        "name": "Skill folder structure",
+        "parent_hint": "Agent Skills",
+        "quote": "While SKILL.md is the only required file, you can include additional resources: scripts/ Helper scripts (optional), examples/ Reference implementations (optional), resources/ Templates and other assets (optional).",
+        "status": "active"
+      }
+    ]
+  }
+}

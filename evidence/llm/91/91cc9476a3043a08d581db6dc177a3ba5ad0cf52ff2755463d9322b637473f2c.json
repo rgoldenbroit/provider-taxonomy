@@ -1,0 +1,12 @@
+{
+  "key": "91cc9476a3043a08d581db6dc177a3ba5ad0cf52ff2755463d9322b637473f2c",
+  "label": "judge:google-antigravity-2-0-disc-cli",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Access to all product features, such as the Scheduled Tasks and the CLI",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly states that all plans receive \"Access to all product features, such as the Scheduled Tasks and the CLI\" under the Baseline Quota section. This directly substantiates the claim that a CLI is included as a product feature available to all Antigravity users.",
+    "supported": true
+  }
+}

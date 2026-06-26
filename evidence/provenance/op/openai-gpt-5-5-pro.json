@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "GPT-5.5 Pro",
-    "page_content_hash": "98a9ae6dccf15ac7290d06d8c672c136217fb730ee3f95afe28c861a6eb47b21",
+    "page_content_hash": "0f7f176a7a4f4f294c92e733dbca085412bf55ca122cf93bbf8127f76d0d7e23",
     "primary_capability_id": "flagship-model",
     "provider": "OpenAI",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://openai.com/index/introducing-gpt-5-5/",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

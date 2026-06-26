@@ -1,0 +1,12 @@
+{
+  "key": "ce6487e1e49d6232c094d8cb47978f917cf265bb1c3714ffcc3e04f7bd9c6c65",
+  "label": "judge:google-gemini-enterprise-agent-platform-guardrails-safety-manage-agent-access",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Manage agent access: Learn how to manage access to your agents deployed on Agent Platform, such as agent identity, service accounts, API keys, and OAuth clients.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes a \"Manage agent access\" guide under the \"Deploy and manage agents\" section of Agent Runtime, with a description matching the claim almost verbatim \u2014 covering agent identity, service accounts, API keys, and OAuth clients. The page also carries a top-level \"Preview\" banner indicating the feature is in Pre-GA status.",
+    "supported": true
+  }
+}

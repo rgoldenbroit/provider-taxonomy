@@ -1,0 +1,20 @@
+{
+  "key": "e6fcdf9dd68a16c1e6d51ea5e8a6f12b90fd47f26b8945c6da8ceec16b6acbb7",
+  "label": "triage:google-antigravity-2-0-disc-model-context-protocol-mcp-server-manager",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "mcp-connectors"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "mcp-connectors",
+    "rationale": "This offering is a built-in MCP server manager within Google's Antigravity product, enabling integration of external context providers via the Model Context Protocol. It maps directly to the mcp-connectors capability, covering only the server management/integration slice (partial) rather than the full breadth of hosted MCP servers, connector registries, and managed tool connectors. It is a feature/sub-product of google-antigravity-2-0, aligning with existing IDs like google-antigravity-2-0-mcp-connectors-*.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "ide",
+      "terminal"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "key": "001f6406a918cce915730e25b5a98a4fbc19e73b3c1891c9afb94f49c8b45f06",
+  "label": "judge:google-antigravity-2-0-disc-quota-tracking",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "## Quota Tracking\n\nYou can monitor your active quota and credit consumption directly inside the CLI:\n\n- **Statusline Indicator**: The right side of the CLI statusline displays your remaining credit count (e.g., `AI Credits: 42`).\n- **Low Quota Alert**: When your remaining AI credits drop below the warning threshold, the statusline indicator highlights to warn you that your limits are near.",
+    "lifecycle_status": "active",
+    "rationale": "The page contains a dedicated \"Quota Tracking\" section that explicitly states users can \"monitor your active quota and credit consumption directly inside the CLI,\" which directly substantiates the claim. The page describes this as a current, active feature with no indication of preview, deprecation, or sunset status.",
+    "supported": true
+  }
+}

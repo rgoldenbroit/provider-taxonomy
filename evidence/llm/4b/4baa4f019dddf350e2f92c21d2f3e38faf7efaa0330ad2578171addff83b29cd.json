@@ -1,0 +1,18 @@
+{
+  "key": "4baa4f019dddf350e2f92c21d2f3e38faf7efaa0330ad2578171addff83b29cd",
+  "label": "triage:google-antigravity-2-0-disc-resuming-sessions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agent-memory"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "primary_capability_id": "agent-memory",
+    "rationale": "Resuming sessions (returning to prior conversations to continue or refine an implementation) is a session persistence/continuity feature, which falls under agent-memory \u2014 specifically the sessions sub-capability. It is a partial match since it covers only the session resumption slice of agent-memory, not the full breadth of persistent memory capabilities. The provider is Google, and the closest parent product would be the Gemini app or Antigravity, but given the description references \"implementation\" and \"solution\" refinement it likely relates to an agentic coding context (possibly google-antigravity-2-0). The parent is not definitively identifiable from the information given, so no parent_id is set.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "web"
+    ]
+  }
+}

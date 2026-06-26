@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "MCP servers can be configured at three scopes. The scope you choose controls which projects the server loads in and whether the configuration is shared with your team... | Local | Current project only | No | ~/.claude.json | | Project | Current project only | Yes, via version control | .mcp.json in project root | | User | All your projects | No | ~/.claude.json |",
+    "found_quote": "MCP servers can be configured at three scopes. The scope you choose controls which projects the server loads in and whether the configuration is shared with your team... | Scope | Loads in | Shared with team | Stored in | | [Local](#local-scope) | Current project only | No | `~/.claude.json` | | [Project](#project-scope) | Current project only | Yes, via version control | `.mcp.json` in project root | | [User](#user-scope) | All your projects | No | `~/.claude.json` |",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "MCP Installation Scopes",
-    "page_content_hash": "91a5dfa9a35f62309a8e1df4452ec20f86e49ac4acd9fed93b80a18318a67685",
+    "page_content_hash": "2efc48175a939c922b68de7587e719fdeaaf3930a1a46e230bdd929c4bd3eadd",
     "primary_capability_id": "mcp-connectors",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/mcp.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

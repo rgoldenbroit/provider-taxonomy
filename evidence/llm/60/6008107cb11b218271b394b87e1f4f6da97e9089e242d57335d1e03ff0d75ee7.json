@@ -1,0 +1,12 @@
+{
+  "key": "6008107cb11b218271b394b87e1f4f6da97e9089e242d57335d1e03ff0d75ee7",
+  "label": "judge:google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`/planning`**       | Configurations | \u2014                          | Enable multi-turn plan generation mode for complex engineering tasks.",
+    "lifecycle_status": "active",
+    "rationale": "The page's CLI reference table explicitly lists the `/planning` command under the \"Core slash commands\" section, describing its purpose as \"Enable multi-turn plan generation mode for complex engineering tasks.\" This directly substantiates the claim that Antigravity (Google's tool) supports a planning mode that generates multi-turn plans for complex engineering tasks. The feature is listed as a standard command with no preview/beta/deprecated qualifier.",
+    "supported": true
+  }
+}

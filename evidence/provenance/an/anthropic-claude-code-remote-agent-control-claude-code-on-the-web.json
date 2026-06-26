@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Claude Code on the Web",
-    "page_content_hash": "9b8e5e444ead92a7b05447dcd3f43d150bce8229c3d887a97696485c299ebcad",
+    "page_content_hash": "d0e7352c26423adf056c7a6ac246bf358344a03e2c3f5b96a5cbb9be5167e0c2",
     "primary_capability_id": "remote-agent-control",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

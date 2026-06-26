@@ -3,11 +3,11 @@
   "value": {
     "confidence": "high",
     "fetch_ok": true,
-    "found_quote": "Permission modes control how often that pause happens... As a default: set defaultMode in settings.",
+    "found_quote": "Permission modes control how often that pause happens. The mode you pick shapes the flow of a session: default mode has you review each action as it comes, while looser modes let Claude work in longer uninterrupted stretches and report back when done... **As a default**: set `defaultMode` in [settings](/en/settings#settings-files). ```json { \"permissions\": { \"defaultMode\": \"acceptEdits\" } } ```",
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Permission Modes",
-    "page_content_hash": "95cd159b4e21ca06bd81a460f8e7b317f1d29ab3a56d6140c5659917af274f5f",
+    "page_content_hash": "9a937ecc1b623421f057663497251fdb5257223e12d68d4a361676e47458bf18",
     "primary_capability_id": "guardrails-safety",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/permission-modes.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

@@ -1,0 +1,46 @@
+{
+  "key": "0ced41c514a96b8d944c147d0db8c773112f213e7eda047a93d03a57e6b1011b",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "The CLI lets users monitor their active AI credit quota and consumption directly inside the tool.",
+        "level": "feature",
+        "name": "Quota Tracking",
+        "quote": "You can monitor your active quota and credit consumption directly inside the CLI.",
+        "status": "unknown"
+      },
+      {
+        "claim": "The CLI statusline displays the user's remaining AI credit count in real time.",
+        "level": "subfeature",
+        "name": "Statusline Indicator",
+        "parent_hint": "Quota Tracking",
+        "quote": "The right side of the CLI statusline displays your remaining credit count (e.g., `AI Credits: 42`).",
+        "status": "unknown"
+      },
+      {
+        "claim": "The CLI highlights the statusline indicator when remaining AI credits drop below a warning threshold.",
+        "level": "subfeature",
+        "name": "Low Quota Alert",
+        "parent_hint": "Quota Tracking",
+        "quote": "When your remaining AI credits drop below the warning threshold, the statusline indicator highlights to warn you that your limits are near.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can purchase additional AI credits or upgrade their subscription directly from within the CLI.",
+        "level": "feature",
+        "name": "Managing Credits",
+        "quote": "You can easily purchase AI credits or upgrade your subscription, which opens a panel containing direct pricing and subscription portal links.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can toggle whether the CLI falls back to personal AI credits when plan quotas are exhausted.",
+        "level": "feature",
+        "name": "Settings Configuration",
+        "quote": "Set the Use G1 Credits field to on to allow the CLI to use your personal credits when plan quotas are exhausted, or set it to off to restrict fallback billing.",
+        "status": "unknown"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "key": "b22b39b29217c47fdc724784cbce4315194043e8f6ce8117a848def9a887f02b",
+  "label": "triage:google-antigravity-2-0-disc-workflows",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agent-memory"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-agent-memory-workflows",
+    "primary_capability_id": "agent-memory",
+    "rationale": "Workflows in Google's Antigravity 2.0 are reusable, markdown-based sequences of steps stored and retrieved across sessions to guide the agent through repetitive tasks. This is a persistent memory mechanism (stored instructions/playbooks the agent reads across runs), making it a sub-feature of agent-memory. The closest existing parent is `google-antigravity-2-0-agent-memory-workflows`, which describes agent-generated workflows that can be saved for reuse \u2014 directly matching this offering.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "ide",
+      "terminal"
+    ]
+  }
+}

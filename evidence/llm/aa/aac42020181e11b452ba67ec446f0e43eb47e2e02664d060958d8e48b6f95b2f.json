@@ -1,0 +1,12 @@
+{
+  "key": "aac42020181e11b452ba67ec446f0e43eb47e2e02664d060958d8e48b6f95b2f",
+  "label": "judge:google-antigravity-2-0-disc-structured-permissions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Tune your safety barriers in `~/.gemini/antigravity-cli/settings.json` based on your project risk level:\n\n- **`request-review`** (Default): Prompts you before executing any write operations, bash commands, or remote network calls.\n- **`proceed-in-sandbox`**: Restricts all terminal executions to a secure sandbox containment ring. Safe commands execute autonomously, while risky commands prompt for reviews.\n- **`strict`**: Always prompts for all non-read operations, providing complete line-by-line transparency.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Establish structured permissions\" section that outlines three configurable permission modes \u2014 `request-review`, `proceed-in-sandbox`, and `strict` \u2014 which directly correspond to the claim's description of how they control the autonomy of agent execution. The page presents these as current, configurable settings (not preview or deprecated), substantiating the claim fully.",
+    "supported": true
+  }
+}

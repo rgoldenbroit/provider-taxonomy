@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Auto Memory (MEMORY.md)",
-    "page_content_hash": "3841d6d47ecdb7763c65d2841628332c8ee030398284256f7784e102d5970987",
+    "page_content_hash": "6f6715977353c4ba6e3e510c75412ad19344846f57626c6316d28d1168c8eb98",
     "primary_capability_id": "agent-memory",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/glossary.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

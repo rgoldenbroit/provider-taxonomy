@@ -1,0 +1,20 @@
+{
+  "key": "23261e6240297d1ee0799cee29f149c1ab37f8bf3f877a758dfa05ec0e9861c3",
+  "label": "triage:google-antigravity-2-0-disc-prompt-context-inputs",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "This offering describes prompt context enrichment features for an agent \u2014 specifically workspace file path autocomplete and visual media inputs to the agent prompt. These are input/context features that support the agentic coding workflow (Google's Antigravity/agentic coding product), covering only a slice of that capability (prompt context inputs rather than the full coding agent). It is a partial feature of the agentic-coding capability, likely a sub-feature of Google's agentic coding product.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "ide",
+      "terminal"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "6da01e9e481bf304e0ce12e70d587d86013b123e4c7bf0de7925c7f5a24a2130",
+  "label": "triage:google-antigravity-2-0-disc-agent-manager-panel",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "managed-agent-runtime",
+      "remote-agent-control"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0-managed-agent-runtime-subagents",
+    "primary_capability_id": "managed-agent-runtime",
+    "rationale": "The Agent Manager Panel is a UI panel within Google Antigravity that allows users to monitor and inspect background subagents running concurrently. It is a sub-feature of the managed agent runtime's subagents capability, specifically mapped to the existing product ID `google-antigravity-2-0-managed-agent-runtime-subagents-agent-manager-panel`. It primarily belongs to managed-agent-runtime (monitoring/managing the agent runtime's subagent execution), with a secondary touch on remote-agent-control (monitoring/directing agents asynchronously). The relation is partial since it covers only the monitoring/panel slice of the runtime, not the full runtime capability.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

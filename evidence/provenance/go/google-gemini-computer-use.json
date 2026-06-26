@@ -7,7 +7,7 @@
     "lifecycle_status": "preview",
     "model": "claude-opus-4-8",
     "name": "Gemini Computer Use",
-    "page_content_hash": "13dc57fb44d48bb4bef3051d3818d82c88a2cc6daad57e2a7d76a8f070c4bde2",
+    "page_content_hash": "0841e1e8aa1275a3b57e3003348f834709785eca35fcc649386b2b90c80b1353",
     "primary_capability_id": "browser-computer-use-agent",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://ai.google.dev/gemini-api/docs/computer-use",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

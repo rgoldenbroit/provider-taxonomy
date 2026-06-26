@@ -1,0 +1,54 @@
+{
+  "key": "e7d88c1b153ffba77c0885113fbc442c81fb5e4431fe17d0ffda8bd60f53c09a",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity CLI scopes conversation histories to the current working directory, preventing context pollution across projects.",
+        "level": "feature",
+        "name": "Workspace scoping",
+        "quote": "Antigravity CLI scopes conversation histories directly to your current working directory. When you launch `agy` from a specific directory, the agent only displays and resume sessions associated with that specific local repository or subdirectory.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can return to prior conversations to continue an implementation or refine an existing solution.",
+        "level": "feature",
+        "name": "Resuming sessions",
+        "quote": "You can return to a prior conversation to continue an implementation or refine an existing solution.",
+        "status": "unknown"
+      },
+      {
+        "claim": "An interactive Conversation Picker overlay lets users search, filter, and resume prior sessions within the terminal UI.",
+        "level": "subfeature",
+        "name": "Resuming via the TUI session picker",
+        "parent_hint": "Resuming sessions",
+        "quote": "Type `/resume` in the prompt box and press `Enter`. The interactive Conversation Picker overlay opens. Start typing keyword terms to filter conversations by description or ID.",
+        "status": "unknown"
+      },
+      {
+        "claim": "CLI users can import and resume conversation threads originally started in the Antigravity 2.0 desktop visual editor.",
+        "level": "subfeature",
+        "name": "Importing conversations from Antigravity 2.0",
+        "parent_hint": "Resuming sessions",
+        "quote": "If you are utilizing the public version of Antigravity CLI, you can import and resume active threads initiated within the Antigravity 2.0 desktop visual editor.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Launching with --continue instantly resumes the most recent session, or a specific session can be loaded by passing its UUID.",
+        "level": "subfeature",
+        "name": "Quick resume via the command line",
+        "parent_hint": "Resuming sessions",
+        "quote": "To instantly resume the single most recent session in your active workspace without entering the picker, launch the executable with the `--continue` flag.",
+        "status": "unknown"
+      },
+      {
+        "claim": "The /fork command clones the entire conversation history into a new independent session, enabling safe parallel experimentation with alternate approaches.",
+        "level": "feature",
+        "name": "Branching with `/fork`",
+        "quote": "The `/fork` command clones your entire conversation history up to the current turn into a new, independent session.",
+        "status": "unknown"
+      }
+    ]
+  }
+}

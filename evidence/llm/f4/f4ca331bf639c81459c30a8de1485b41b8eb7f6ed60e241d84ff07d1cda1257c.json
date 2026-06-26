@@ -1,0 +1,12 @@
+{
+  "key": "f4ca331bf639c81459c30a8de1485b41b8eb7f6ed60e241d84ff07d1cda1257c",
+  "label": "judge:google-antigravity-2-0-disc-reasoning-model",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "For the core reasoning model, Antigravity offers leading frontier models from the Gemini Enterprise Agent Platform... Users can select which reasoning model they want to use within the model selector dropdown under the conversation prompt box",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly describes a \"Reasoning Model\" section confirming that Antigravity offers multiple leading frontier reasoning models (Gemini 3.5 Flash, Gemini 3.1 Pro variants, Gemini 3 Flash, Claude Sonnet 4.6, Claude Opus 4.6, and GPT-OSS-120b) and that users can select which reasoning model they want to use via a model selector dropdown. This directly substantiates the claim that \"Antigravity lets users choose from multiple leading frontier reasoning models to power the agent's core reasoning.\" The page presents this as a current, active feature with no deprecation or preview language.",
+    "supported": true
+  }
+}

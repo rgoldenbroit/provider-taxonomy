@@ -1,0 +1,12 @@
+{
+  "key": "710cc13f6d816309d5a8cd833049b6bf223a6d7c3e25b23d53cc5363d66f279d",
+  "label": "judge:google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**`/planning`**       | Configurations | \u2014                          | Enable multi-turn plan generation mode for complex engineering tasks.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists the `/planning` command in the Core slash commands table, describing it as enabling \"multi-turn plan generation mode for complex engineering tasks,\" which directly matches the claim. The page presents this as a current, active CLI feature with no indication of preview, deprecation, or sunset status.",
+    "supported": true
+  }
+}

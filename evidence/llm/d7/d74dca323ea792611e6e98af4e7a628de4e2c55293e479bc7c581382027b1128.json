@@ -1,0 +1,58 @@
+{
+  "key": "d74dca323ea792611e6e98af4e7a628de4e2c55293e479bc7c581382027b1128",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity provides a panel to monitor background subagents running concurrently.",
+        "name": "Agent Manager Panel",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": [
+          "Background subagents",
+          "Conversation forking"
+        ]
+      },
+      {
+        "claim": "Antigravity supports a planning mode that generates multi-turn plans for complex engineering tasks.",
+        "name": "Multi-turn plan generation mode",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": []
+      },
+      {
+        "claim": "Antigravity supports loading and browsing local and global Agent Skills as plugins.",
+        "name": "Agent Skills",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": [
+          "Script hooks"
+        ]
+      },
+      {
+        "claim": "Antigravity includes a built-in MCP server manager for integrating external context providers.",
+        "name": "Model Context Protocol (MCP) server manager",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": []
+      },
+      {
+        "claim": "Antigravity offers configurable global safety presets controlling when the agent prompts for approval before using tools.",
+        "name": "Tool permission presets",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": [
+          "Terminal sandbox"
+        ]
+      },
+      {
+        "claim": "Antigravity provides a dedicated panel for reviewing and approving code artifacts before they are written.",
+        "name": "Artifact Review Panel",
+        "source_url": "https://antigravity.google/assets/docs/cli/cli-reference.md",
+        "status": "active",
+        "subfeatures": []
+      }
+    ]
+  }
+}

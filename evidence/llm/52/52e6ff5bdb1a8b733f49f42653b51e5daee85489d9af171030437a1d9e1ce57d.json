@@ -1,0 +1,24 @@
+{
+  "key": "52e6ff5bdb1a8b733f49f42653b51e5daee85489d9af171030437a1d9e1ce57d",
+  "label": "consolidate:Google:Agentic coding capabilities",
+  "model": "claude-opus-4-8",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity lets users choose from multiple leading frontier reasoning models to power the agent's core reasoning.",
+        "name": "Reasoning Model",
+        "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md",
+        "status": "active",
+        "subfeatures": [
+          "model selector dropdown"
+        ]
+      },
+      {
+        "claim": "Antigravity includes a generative image tool (powered by Nano Banana 2) that the agent uses to produce UI mockups and web previews.",
+        "name": "Generative Image Tool",
+        "source_url": "https://antigravity.google/assets/docs/antigravity-2-0/models.md",
+        "status": "active"
+      }
+    ]
+  }
+}

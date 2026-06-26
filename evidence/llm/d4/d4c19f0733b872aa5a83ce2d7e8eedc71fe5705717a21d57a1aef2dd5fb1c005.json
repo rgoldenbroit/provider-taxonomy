@@ -1,0 +1,12 @@
+{
+  "key": "d4c19f0733b872aa5a83ce2d7e8eedc71fe5705717a21d57a1aef2dd5fb1c005",
+  "label": "judge:anthropic-claude-code-remote-agent-control-remote-control",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Continue a local Claude Code session from your phone, tablet, or any browser using Remote Control. Works with claude.ai/code and the Claude mobile app.",
+    "lifecycle_status": "preview",
+    "rationale": "The page explicitly describes Remote Control as a feature that lets users continue a local Claude Code session running on their machine from a phone, tablet, or browser \u2014 exactly matching the claim. The page also states \"Remote Control is in research preview and available on all plans,\" indicating it is in an early/preview stage rather than fully generally available.",
+    "supported": true
+  }
+}

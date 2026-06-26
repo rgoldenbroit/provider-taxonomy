@@ -1,0 +1,12 @@
+{
+  "key": "4bfae04d8afa1fc66236723f1eda41abd4dba56d3129a0f1f3ccca29b472aead",
+  "label": "judge:google-antigravity-2-0-disc-generative-image-tool",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "**Nano Banana 2**: Used by the generative image tool when the Agent wants to produce a UI mockup, needs images to populate a web page or application, generate system or architecture diagrams, or other generative image tasks.",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly confirms that Antigravity includes a generative image tool powered by Nano Banana 2, and that this tool is used by the Agent to produce UI mockups and web previews (images to populate a web page or application), directly substantiating the claim.",
+    "supported": true
+  }
+}

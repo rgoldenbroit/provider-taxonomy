@@ -1,0 +1,20 @@
+{
+  "key": "a2c8c0d5cd6d2c002c9946387f40420929f3c9985af23d170d46ccecfb83c20a",
+  "label": "triage:google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "This is a planning mode feature within Antigravity (Google's agentic coding product) that generates multi-turn plans for complex engineering tasks. It is a partial slice of the agentic-coding capability \u2014 specifically the plan/research phase before execution \u2014 rather than a full autonomous coding agent. It is a sub-feature of the google-antigravity-2-0 product.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide"
+    ]
+  }
+}

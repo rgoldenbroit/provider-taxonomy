@@ -1,6 +1,82 @@
 {
-  "date": "2026-06-22",
-  "added": [],
+  "date": "2026-06-26",
+  "added": [
+    {
+      "id": "google-antigravity-2-0-disc-reasoning-model",
+      "name": "Reasoning Model",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-agent-skills",
+      "name": "Agent Skills",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-implementation-plan",
+      "name": "Implementation Plan",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-access-to-third-party-models",
+      "name": "Access to third-party models",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-resuming-sessions",
+      "name": "Resuming sessions",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-branching-with-fork",
+      "name": "Branching with /fork",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-quota-tracking",
+      "name": "Quota Tracking",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-multi-turn-plan-generation-mode",
+      "name": "Multi-turn plan generation mode",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-model-context-protocol-mcp-server-manager",
+      "name": "Model Context Protocol (MCP) server manager",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-tool-permission-presets",
+      "name": "Tool permission presets",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-explore-plan-then-execute",
+      "name": "Explore, plan, then execute",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-verification-loops",
+      "name": "Verification loops",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-structured-permissions",
+      "name": "Structured permissions",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-session-management",
+      "name": "Session management",
+      "provider": "Google"
+    },
+    {
+      "id": "google-antigravity-2-0-disc-hooks",
+      "name": "Hooks",
+      "provider": "Google"
+    }
+  ],
   "removed": [],
   "changed": []
 }

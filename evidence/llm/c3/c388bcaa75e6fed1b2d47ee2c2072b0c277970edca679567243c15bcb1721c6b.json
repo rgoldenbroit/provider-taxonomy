@@ -1,0 +1,40 @@
+{
+  "key": "c388bcaa75e6fed1b2d47ee2c2072b0c277970edca679567243c15bcb1721c6b",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity's agent generates an implementation plan artifact that details the technical revisions needed to accomplish a coding task, for user review before changes are made.",
+        "level": "feature",
+        "name": "Implementation Plan",
+        "quote": "Agent utilizes the implementation plan artifact to architect changes within your codebase to accomplish a task. These plans contain technical details on what revisions are necessary and are meant to be reviewed by the user.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can configure a review policy (e.g. 'Always Proceed') to control whether the agent pauses for approval before executing a plan.",
+        "level": "subfeature",
+        "name": "artifact review policy",
+        "parent_hint": "Implementation Plan",
+        "quote": "Unless you have your artifact review policy set to \"Always Proceed\", Agent will typically request your review on the implementation plan before making the changes needed to complete your task.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Users can leave inline comments on an implementation plan artifact to provide feedback \u2014 such as reducing scope, changing tech stack, or correcting discrepancies \u2014 before the agent proceeds.",
+        "level": "subfeature",
+        "name": "commenting on artifacts",
+        "parent_hint": "Implementation Plan",
+        "quote": "Antigravity supports commenting on these artifacts so you can provide feedback to Agent for any reason, whether it be to decrease scope of changes, use a different tech stack, or correct any Agent discrepancies.",
+        "status": "unknown"
+      },
+      {
+        "claim": "A 'Review' button in the artifact header lets users consolidate all comments into a message as feedback to the agent instead of directly proceeding with the plan.",
+        "level": "subfeature",
+        "name": "Review button",
+        "parent_hint": "Implementation Plan",
+        "quote": "You can also toggle the \"Review\" button in the artifact header, where you can examine all comments and leave a message as feedback instead of directly proceeding, if needed.",
+        "status": "unknown"
+      }
+    ]
+  }
+}

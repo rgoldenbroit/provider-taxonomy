@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Prebuilt Connectors",
-    "page_content_hash": "633ed5ee70542384ef032cc705e44705b2c95242ccb061ec81a80ae5788c4368",
+    "page_content_hash": "8d3ed43f2c2abfcf109061ab9f147e8bc75ba335493eb180e8ad85fd9d78d6ec",
     "primary_capability_id": "mcp-connectors",
     "provider": "Google",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://cloud.google.com/gemini-enterprise/docs/overview",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }

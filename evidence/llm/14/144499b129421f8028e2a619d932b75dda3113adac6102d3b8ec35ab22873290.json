@@ -1,0 +1,12 @@
+{
+  "key": "144499b129421f8028e2a619d932b75dda3113adac6102d3b8ec35ab22873290",
+  "label": "judge:google-antigravity-2-0-disc-tab-completions",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "All plans receive a baseline of: ... Unlimited Tab completions",
+    "lifecycle_status": "active",
+    "rationale": "The page explicitly lists \"Unlimited Tab completions\" under the \"Baseline Quota\" section, which applies to all plans. This directly substantiates the claim that Google Antigravity provides unlimited Tab completions to all plan tiers.",
+    "supported": true
+  }
+}

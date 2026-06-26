@@ -1,0 +1,81 @@
+{
+  "key": "ca9e10ba49b1eb0d09616e882983600fbcdeb67c9f38d9df1473d497eea187ba",
+  "label": "extract:Google:Agentic coding capabilities",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "features": [
+      {
+        "claim": "Antigravity provides a panel to monitor background subagents running concurrently.",
+        "level": "feature",
+        "name": "Agent Manager Panel",
+        "quote": "Open the Agent Manager Panel to monitor background subagents.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity supports spawning and managing multiple subagents running in the background.",
+        "level": "subfeature",
+        "name": "Background subagents",
+        "parent_hint": "Agent Manager Panel",
+        "quote": "Instantly switches focus to the next subagent awaiting confirmation.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity supports a planning mode that generates multi-turn plans for complex engineering tasks.",
+        "level": "feature",
+        "name": "Multi-turn plan generation mode",
+        "quote": "Enable multi-turn plan generation mode for complex engineering tasks.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity allows cloning the current conversation thread into a new parallel session.",
+        "level": "feature",
+        "name": "Conversation forking",
+        "quote": "Clone the current conversation thread into a new parallel session.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity supports loading and browsing local and global Agent Skills as plugins.",
+        "level": "feature",
+        "name": "Agent Skills",
+        "quote": "Browse loaded local and global Agent Skills.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity includes a built-in MCP server manager for integrating external context providers.",
+        "level": "feature",
+        "name": "Model Context Protocol (MCP) server manager",
+        "quote": "Open the Model Context Protocol (MCP) server manager.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity offers configurable global safety presets controlling when the agent prompts for approval before using tools.",
+        "level": "feature",
+        "name": "Tool permission presets",
+        "quote": "Global safety presets: \"request-review\" (prompts for write/bash/web tools), \"proceed-in-sandbox\" (auto-proceed inside sandbox), \"always-proceed\" (never prompts), or \"strict\" (prompts for all non-read tools).",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity can restrict all agent-launched local execution commands to OS containment rings.",
+        "level": "subfeature",
+        "name": "Terminal sandbox",
+        "parent_hint": "Tool permission presets",
+        "quote": "Restricts all local execution commands launched by agents to OS containment rings.",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity provides a dedicated panel for reviewing and approving code artifacts before they are written.",
+        "level": "feature",
+        "name": "Artifact Review Panel",
+        "quote": "Code review policy: \"asks-for-review\" (always prompts before writing code), \"agent-decides\" (prompts dynamically), or \"always-proceed\" (never prompts).",
+        "status": "unknown"
+      },
+      {
+        "claim": "Antigravity supports pre-flight and post-format script hooks for customizing agent task execution.",
+        "level": "feature",
+        "name": "Script hooks",
+        "quote": "Browse active pre-flight/post-format script hooks.",
+        "status": "unknown"
+      }
+    ]
+  }
+}

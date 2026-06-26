@@ -7,7 +7,7 @@
     "lifecycle_status": "active",
     "model": "claude-opus-4-8",
     "name": "Hooks",
-    "page_content_hash": "d4f44b2409c949853328fe69808172bc0deb40d767b9242a60e3fb1f679d8015",
+    "page_content_hash": "a1dcf23ad30bda41ce934b91c94e7256f431d392994bafc989fcc6c45dfae6b9",
     "primary_capability_id": "code-execution-sandbox",
     "provider": "Anthropic",
     "reconfirmed": true,
@@ -16,6 +16,6 @@
     "source_tier": "official",
     "source_url": "https://code.claude.com/docs/en/hooks-guide.md",
     "supported": true,
-    "verified_at": "2026-06-24"
+    "verified_at": "2026-06-26"
   }
 }
