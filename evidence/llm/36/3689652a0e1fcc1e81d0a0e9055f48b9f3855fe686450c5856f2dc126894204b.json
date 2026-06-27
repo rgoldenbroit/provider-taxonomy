@@ -1,0 +1,49 @@
+{
+  "key": "3689652a0e1fcc1e81d0a0e9055f48b9f3855fe686450c5856f2dc126894204b",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "Custom Agents via TOML files let users define model configurations and instructions (system prompt, persona, behavior), which directly shapes the agent's system prompt and output style \u2014 a precise match for this capability."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "The feature explicitly describes toggling individual MCP tools on/off and refreshing tool definitions, which is exactly the allow-listing / governance control over which MCP tools the agent may use."
+      },
+      {
+        "capability_id": "prompt-caching",
+        "realizes": false,
+        "reason": "Compaction addresses context-window management by summarizing/compacting accumulated history \u2014 this is context compaction, not prompt/context caching. Caching reuses stored context to cut latency and cost; compaction discards or summarizes old context to stay within limits. These are distinct mechanisms."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Agent Builder is described as a visual canvas for building multi-step agent workflows coordinating multiple agents, tools, and control flow \u2014 this directly realizes the capability of defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": true,
+        "reason": "The Guardrails feature explicitly sanitizes inputs, validates/redacts outputs, and checks tool calls to block harmful content \u2014 this directly targets the kind of malicious instruction injection the capability describes."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Sandbox Agents provide an isolated Unix-like execution environment (filesystem, shell, packages), but this is a general sandboxed runtime \u2014 not specifically a dev-container integration (e.g., devcontainer.json / Docker-based defined dev environments). The capability is about a defined dev container standard; the feature is a proprietary sandbox surface."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": true,
+        "reason": "Mobile Access via QR Code directly adds mobile (ChatGPT mobile app) as an access surface for the agent, which is precisely one of the surfaces enumerated by this capability."
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": false,
+        "reason": "SQLiteSession persists conversation history (messages/turns) across agent runs \u2014 this is durable session/history storage, not agent memory in the capability sense (i.e., semantic, summarized, or fact-based memory the agent actively recalls and updates). Persisting a conversation log is adjacent but not the same as persistent agent memory."
+      }
+    ]
+  }
+}

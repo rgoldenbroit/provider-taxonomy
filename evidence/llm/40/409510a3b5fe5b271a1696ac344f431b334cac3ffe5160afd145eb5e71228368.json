@@ -1,0 +1,21 @@
+{
+  "key": "409510a3b5fe5b271a1696ac344f431b334cac3ffe5160afd145eb5e71228368",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 36
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 31
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 237
+      }
+    ]
+  }
+}

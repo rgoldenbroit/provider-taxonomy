@@ -1,0 +1,37 @@
+{
+  "key": "0416a2a2765be257b5be7ff84b4eb2dba555e729488124e76d7480d9ab247f9e",
+  "label": "matrixdisprove:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "lifecycle-hooks",
+        "feature_index": 199
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 272
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 250
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 11
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 174
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 239
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 249
+      }
+    ]
+  }
+}

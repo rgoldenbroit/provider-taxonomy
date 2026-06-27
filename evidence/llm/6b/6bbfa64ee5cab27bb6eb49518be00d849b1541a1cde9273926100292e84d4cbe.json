@@ -1,0 +1,29 @@
+{
+  "key": "6bbfa64ee5cab27bb6eb49518be00d849b1541a1cde9273926100292e84d4cbe",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": false,
+        "reason": "Guardrails are a validation/filtering mechanism (sanitizing inputs, redacting outputs, blocking tool calls) \u2014 they fire as a safety layer, not as general-purpose hooks that let developers inject custom logic at arbitrary agent lifecycle events (before/after tool calls, on stop, etc.). The capability asks for extensible event callbacks; guardrails are a fixed safety gate. Adjacent but not the same."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "An Approval Policy governs when the agent must pause and seek human permission before crossing sandbox boundaries (e.g., network egress). This is a permission/gating mechanism, not a plan-then-execute mode where the agent first produces a reviewable plan of intended edits before taking any action. The two concepts both involve human checkpoints but at entirely different stages and for different purposes."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "Organization and project-level access scoping is an identity/authorization feature that controls who or what can access resources \u2014 it does not track token consumption, report spend, or enforce usage caps. These are categorically different capabilities (access control vs. cost observability)."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": false,
+        "reason": "Resumable run state means the ability to pause and later continue an agent run from where it left off \u2014 it is about continuity/persistence of execution. Checkpoint/rewind requires the ability to save discrete snapshots and roll back to a prior state, undoing changes made since that point. Resumability is a necessary but not sufficient condition for rewind; it does not imply rollback or undo semantics."
+      }
+    ]
+  }
+}

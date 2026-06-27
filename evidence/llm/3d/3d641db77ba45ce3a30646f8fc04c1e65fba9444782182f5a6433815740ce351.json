@@ -1,0 +1,24 @@
+{
+  "key": "3d641db77ba45ce3a30646f8fc04c1e65fba9444782182f5a6433815740ce351",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "prompt-caching",
+        "realizes": false,
+        "reason": "Reusing a container across requests is an infrastructure/runtime concern \u2014 it keeps a process warm to avoid cold-start overhead. It does not directly cache prompt tokens or repeated context at the model/API level to reduce latency and cost, which is what prompt/context caching specifically means (e.g., OpenAI's cached prompt tokens feature). These are adjacent optimizations, not the same capability."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "'Containers' as a bare noun is far too generic. Dev-container integration specifically means running an agent inside a *defined* dev container (e.g., a devcontainer.json / Dev Containers spec environment) for a reproducible, isolated runtime. A generic 'Containers' feature could refer to Docker, sandboxing, code execution environments, or anything container-shaped \u2014 it does not specifically realize the dev-container integration capability without that specificity."
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": false,
+        "reason": "MemorySession is explicitly described as an *in-process* session store that holds history *within the same process*. Persistent agent memory requires durability *across* turns and sessions \u2014 meaning it survives process restarts and is stored externally (database, file, etc.). An in-process, ephemeral store is the direct opposite of 'persistent': it is lost when the process ends, making this a fundamental mismatch."
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "0264364234f5a9f835230fa047eaf4b0fa1bc872654c164c7ea7484b7f30728f",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "'Strict Mode' restricts the agent's access to external resources and sensitive operations as a general security lockdown, but it does not specifically defend against malicious instructions injected via tool outputs or web content. Access restriction and prompt-injection defense are distinct mechanisms; the former is access surface control, the latter is input sanitization/detection."
+      },
+      {
+        "capability_id": "security-scanning",
+        "realizes": false,
+        "reason": "A 'Fine-Grained Permissions Engine' governs what the agent is allowed to do by gating operations behind permission checks. This is authorization/access control, not scanning of code or agent actions against a threat model for security vulnerabilities. The two are category-adjacent but distinct."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Building a Docker image from source is part of a containerization workflow, but 'dev-container integration' specifically means running the agent inside a pre-defined dev container spec (e.g. devcontainer.json) as an isolated runtime environment. Image-build capability does not confirm the agent runs inside a defined dev container for its own execution context."
+      },
+      {
+        "capability_id": "code-review",
+        "realizes": false,
+        "reason": "'Artifact Review Policy' controls how a user reviews and approves agent-proposed plans and artifacts before changes are committed \u2014 this is a human approval gate, not the agent autonomously reviewing diffs/PRs for issues. Automated code review requires the agent to analyze and report on code quality/issues, which is the inverse of what is described."
+      },
+      {
+        "capability_id": "evals-testing",
+        "realizes": false,
+        "reason": "'Verification loops' describe the agent running local test commands (unit tests, build scripts) as part of its own iterative coding workflow to validate its own changes. This is self-verification during code generation, not a harness for running structured evaluations against the agent's behavior as a subject under test."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": true,
+        "reason": "'Session management' explicitly supports rewinding and forking conversation sessions, which directly maps to the checkpoint/rewind capability of saving state and rolling back to prior points. This is a direct match."
+      },
+      {
+        "capability_id": "remote-control",
+        "realizes": false,
+        "reason": "'Scheduled Tasks' allows users to schedule messages to agents on a time-based trigger. This is asynchronous task scheduling, not remote control/steering of an active agent run from a mobile or remote client. The capability requires interactive remote oversight; scheduling is a different interaction model."
+      },
+      {
+        "capability_id": "notifications",
+        "realizes": false,
+        "reason": "'Scheduled Tasks' sends scheduled messages to agents, not push notifications to users about run progress or completion. The direction of communication is inverted: notifications push status to the user, whereas scheduled tasks push inputs to the agent."
+      }
+    ]
+  }
+}

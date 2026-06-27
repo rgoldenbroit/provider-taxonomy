@@ -1,0 +1,21 @@
+{
+  "key": "098d57ae22e0176cdae9122e95dfaad6a6c9197cc102620757089e9785b68ee6",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 260
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 183
+      }
+    ]
+  }
+}

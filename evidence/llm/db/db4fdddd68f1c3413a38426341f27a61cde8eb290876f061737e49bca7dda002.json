@@ -1,0 +1,29 @@
+{
+  "key": "db4fdddd68f1c3413a38426341f27a61cde8eb290876f061737e49bca7dda002",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Saving a generated workflow as a reusable slash command directly implements the capability of defining repeatable, named multi-step task sequences \u2014 the slash command is the named handle, and the saved workflow is the multi-step sequence that can be invoked repeatedly."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "A /loop command that continues unfinished work and runs cleanup passes is a manual, user-triggered continuation mechanism \u2014 not autonomous goal-directed iteration. The capability requires the agent to set a verifiable 'done' condition and loop on its own until that condition is met, without repeated user invocation. This feature is a convenience command, not autonomous self-looping toward a verifiable goal."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": false,
+        "reason": "Forking a conversation by spawning a subagent branches the current context into a new child agent, which is an inter-agent delegation pattern \u2014 not resuming or branching a previous (past) session. The capability targets continuity with an earlier session; this feature operates on the live current context to create a parallel subagent, which is adjacent but distinct."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "The capability is specifically about the surfaces (terminal, IDE, web, cloud, mobile) where the agent can be accessed and used as an interface. The described feature emphasizes cloud infrastructure execution (compute/runtime) that can be triggered from a browser or phone \u2014 this conflates the execution/sandboxing backend with the access surface. While there is a browser/phone entry point implied, the feature's definition centers on Anthropic-managed cloud infrastructure rather than directly defining a distinct access surface. This makes it at best partial and risks confusing sandboxing/execution environment with an access surface."
+      }
+    ]
+  }
+}

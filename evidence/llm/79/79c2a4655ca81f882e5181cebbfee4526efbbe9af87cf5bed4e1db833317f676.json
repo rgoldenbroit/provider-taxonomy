@@ -1,0 +1,21 @@
+{
+  "key": "79c2a4655ca81f882e5181cebbfee4526efbbe9af87cf5bed4e1db833317f676",
+  "label": "matrixrepick:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 221
+      },
+      {
+        "capability_id": "resume-session",
+        "feature_index": 346
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 162
+      }
+    ]
+  }
+}

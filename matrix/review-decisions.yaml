@@ -1,0 +1,92 @@
+# Human review decisions — the adjudication layer over the grounded projection.
+#
+# build_matrix.py applies these AFTER its automated map -> confirm -> disprove pass. The disprover is
+# deliberately generous (it casts a wide net to avoid false gaps); `confirm` keeps wrong picks out of
+# `grounded`; whatever lands in `needs_review` is a human call recorded HERE so it stays settled across
+# re-runs. This is the "review the diff, not the catalog" loop: adjudicate a cell once, and future
+# projections re-apply the verdict instead of re-litigating it.
+#
+# Verdicts (keyed by capability x provider):
+#   reject  -> force an honest gap (status `unverified`); the `reason` is shown in the cell + drawer.
+#   confirm -> promote the named candidate to grounded — but ONLY if it's still the surfaced feature
+#              (if the projection later picks a different candidate, the cell returns to needs_review
+#              for fresh review rather than silently confirming something a human never saw).
+#
+# Every entry carries the feature it was judged against + a one-line reason + the review date.
+
+decisions:
+  # --- confirmed: a real match the confirm gate was too strict on ---
+  - cap: goal-directed-iteration
+    provider: google
+    verdict: confirm
+    feature: Verification loops
+    reason: Runs tests after each change and iterates automatically — genuine goal-directed iteration.
+    date: 2026-06-27
+
+  # --- rejected: keyword/semantic false-friends -> honest gaps ---
+  - cap: persistent-agent-memory
+    provider: openai
+    verdict: reject
+    feature: Configurable memory limits
+    reason: A code-interpreter resource cap, not durable agent memory across sessions.
+    date: 2026-06-27
+  - cap: prompt-caching
+    provider: anthropic
+    verdict: reject
+    feature: Environment Caching
+    reason: Prompt caching exists at the API/platform level, outside the coding-agent lineup.
+    date: 2026-06-27
+  - cap: prompt-caching
+    provider: openai
+    verdict: reject
+    feature: Container Caching
+    reason: Prompt caching exists at the API/platform level, outside the coding-agent lineup.
+    date: 2026-06-27
+  - cap: dev-container-integration
+    provider: google
+    verdict: reject
+    feature: Per-Sidecar Runtime Data
+    reason: Stores sidecar metadata; not running the agent inside a defined dev container.
+    date: 2026-06-27
+  - cap: code-review
+    provider: google
+    verdict: reject
+    feature: Artifact Review Policy
+    reason: A human approving the agent's proposed changes — the inverse of the agent reviewing diffs.
+    date: 2026-06-27
+  - cap: evals-testing
+    provider: anthropic
+    verdict: reject
+    feature: Hooks
+    reason: Permission-evaluation hooks; "evaluation" here is a keyword collision, not an evals harness.
+    date: 2026-06-27
+  - cap: evals-testing
+    provider: google
+    verdict: reject
+    feature: Agent Routing
+    reason: Runtime agent routing; an "A/B testing" mention is not an evals/testing harness.
+    date: 2026-06-27
+  - cap: notifications
+    provider: google
+    verdict: reject
+    feature: Tool Confirmations & Approvals
+    reason: Permission prompts, not push notifications on run progress/completion.
+    date: 2026-06-27
+  - cap: chat-surface-integration
+    provider: google
+    verdict: reject
+    feature: Inter-Agent Messaging
+    reason: Agent-to-agent messaging, not driving the agent from Slack/Linear/issue tools.
+    date: 2026-06-27
+  - cap: access-surfaces
+    provider: anthropic
+    verdict: reject
+    feature: Web–Terminal Session Transfer
+    reason: A session-transfer mechanism, not a clean enumeration of access surfaces.
+    date: 2026-06-27
+  - cap: access-surfaces
+    provider: google
+    verdict: reject
+    feature: Terminal Sandboxing
+    reason: Sandboxing/isolation, not where the agent can be used.
+    date: 2026-06-27

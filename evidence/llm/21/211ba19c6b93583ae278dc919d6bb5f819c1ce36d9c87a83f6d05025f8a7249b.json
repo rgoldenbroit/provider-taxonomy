@@ -1,0 +1,21 @@
+{
+  "key": "211ba19c6b93583ae278dc919d6bb5f819c1ce36d9c87a83f6d05025f8a7249b",
+  "label": "matrixdisprove:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 32
+      }
+    ]
+  }
+}

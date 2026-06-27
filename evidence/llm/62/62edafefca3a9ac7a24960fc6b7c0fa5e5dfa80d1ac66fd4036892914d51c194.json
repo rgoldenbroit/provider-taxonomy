@@ -1,0 +1,17 @@
+{
+  "key": "62edafefca3a9ac7a24960fc6b7c0fa5e5dfa80d1ac66fd4036892914d51c194",
+  "label": "matrixreconsider:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      }
+    ]
+  }
+}

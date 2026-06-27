@@ -1,0 +1,24 @@
+{
+  "key": "3e648b80f9ab1f955d20c36faaebe8b54025dce5aba1f26af7f47af447e4d709",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "GEMINI.md in ~/.gemini/ is a user-defined global system-prompt/rules file that directly shapes the agent's behavior, persona, and output style across all workspaces \u2014 this is a classic mechanism for system-prompt customization."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "A structured three-phase workflow (explore \u2192 plan \u2192 execute) is a fixed sequential methodology, not autonomous looping until a verifiable 'done' condition is met. It describes how the agent structures a single pass of work, not self-directed iteration with a termination criterion."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "A bundled optional web front-end is one specific surface (web UI), but the capability 'access surfaces' asks whether the feature enumerates or covers the set of surfaces (terminal, IDE, web, cloud, mobile) where the agent can be used. A single optional UI component does not directly realize the broader access-surfaces capability; it is at best a partial contributor to one surface."
+      }
+    ]
+  }
+}

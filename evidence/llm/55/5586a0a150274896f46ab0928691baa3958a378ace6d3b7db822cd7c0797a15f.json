@@ -1,0 +1,61 @@
+{
+  "key": "5586a0a150274896f46ab0928691baa3958a378ace6d3b7db822cd7c0797a15f",
+  "label": "matrixdisprove:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "context-compaction",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 112
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 94
+      },
+      {
+        "capability_id": "security-scanning",
+        "feature_index": 35
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 154
+      },
+      {
+        "capability_id": "code-review",
+        "feature_index": 8
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 112
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 219
+      },
+      {
+        "capability_id": "remote-control",
+        "feature_index": 85
+      },
+      {
+        "capability_id": "notifications",
+        "feature_index": 85
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 237
+      }
+    ]
+  }
+}

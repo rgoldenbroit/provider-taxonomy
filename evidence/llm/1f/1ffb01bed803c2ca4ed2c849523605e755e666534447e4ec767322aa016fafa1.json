@@ -1,0 +1,14 @@
+{
+  "key": "1ffb01bed803c2ca4ed2c849523605e755e666534447e4ec767322aa016fafa1",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Resuming a stopped/interrupted agent is about workflow continuity and fault tolerance \u2014 it restarts from a checkpoint rather than actively looping toward a verifiable 'done' condition. Goal-directed iteration requires the agent to autonomously evaluate progress against a target condition and repeat its loop until that condition is met. Resume functionality addresses interruption recovery, not autonomous condition-driven iteration."
+      }
+    ]
+  }
+}

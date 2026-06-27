@@ -90,7 +90,7 @@ official-docs-grounded catalog (`data/taxonomy.json`), then escalates to each ve
 doc pages and a domain-restricted live search, leaving a cell `unverified` only when no
 first-party doc supports it. The canonical data is `data/agentic-matrix.json`; this block renders it.
 
-7 capability groups, 37 neutral capabilities. **76/111 cells grounded, 35 honestly `unverified`** (no first-party doc — left
+7 capability groups, 37 neutral capabilities. **90/111 cells grounded, 21 honestly `unverified`** (no first-party doc — left
 blank, not guessed). Every grounded cell links the official page it was verified against.
 
 > Regenerate: `scripts/build_matrix.py` (re-ground, needs Vertex) → `scripts/render_matrix_md.py`
@@ -139,12 +139,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Skill Preloading
+        implementation: Skills
         status: active
-        evidence_url: https://code.claude.com/docs/en/sub-agents.md
-        last_verified: '2026-06-22'
-        description: Preload reusable skill definitions into a subagent via a dedicated skills configuration field.
-        notes: ''
+        evidence_url: https://code.claude.com/docs/en/claude-directory.md
+        last_verified: '2026-06-26'
+        description: Reusable, named prompt bundles packaging multi-step workflows (with supporting files) that both the user and Claude can invoke by name, with support for spawning subagents.
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
         implementation: Plugins
@@ -168,12 +168,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Agent Lifecycle Hooks
-        status: preview
-        evidence_url: https://code.claude.com/docs/en/agent-teams.md
-        last_verified: '2026-06-22'
-        description: Trigger custom quality-gate logic on agent idle, task creation, or task completion events.
-        notes: ''
+        implementation: Hooks
+        status: active
+        evidence_url: https://code.claude.com/docs/en/hooks-guide.md
+        last_verified: '2026-06-26'
+        description: User-defined shell commands that execute automatically at specific lifecycle points in Claude Code, providing deterministic control over tool execution.
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
         implementation: Lifecycle Hooks
@@ -226,12 +226,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Per-subagent model selection (Haiku, Sonnet, Opus)
+        status: active
+        evidence_url: https://code.claude.com/docs/en/sub-agents.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
         implementation: Reasoning Model
@@ -324,12 +324,12 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: OAuth authentication for MCP servers with browser/console authorization flows
+        status: active
+        evidence_url: https://adk.dev/integrations/asana/index.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
         implementation: OAuth MCP Login
@@ -361,12 +361,12 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Manage tools (toggle individual MCP tools on/off and refresh tool definitions)
+        status: active
+        evidence_url: https://developers.openai.com/api/docs/guides/developer-mode.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via OpenAI Agents SDK
   - id: persistent-agent-memory
     name: Persistent agent memory
     what: Durable memory the agent keeps across turns/sessions.
@@ -382,12 +382,12 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Memory
+        status: active
+        evidence_url: https://adk.dev/sessions/index.md
+        last_verified: '2026-06-26'
+        description: A searchable, cross-session knowledge store that agents can query to recall information beyond the current conversation.
+        notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
         implementation: unverified
@@ -395,7 +395,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: A code-interpreter resource cap, not durable agent memory across sessions.'
   - id: context-compaction
     name: Context compaction (manual + auto)
     what: Compress conversation/context to extend effective working memory.
@@ -403,12 +403,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Automatic context-window compaction during long sessions
+        status: active
+        evidence_url: https://code.claude.com/docs/en/agent-sdk/agent-loop.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
         implementation: unverified
@@ -419,12 +419,12 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Compaction
+        status: active
+        evidence_url: https://developers.openai.com/api/docs/guides/conversation-state.md
+        last_verified: '2026-06-26'
+        description: Manages context window limits in long-running conversations by compacting accumulated history, available server-side or client-side.
+        notes: via OpenAI Agents SDK
   - id: prompt-caching
     name: Prompt / context caching
     what: Cache repeated context to cut latency and cost.
@@ -437,7 +437,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Prompt caching exists at the API/platform level, outside the coding-agent lineup.'
       google:
         offering: Antigravity
         implementation: unverified
@@ -453,7 +453,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Prompt caching exists at the API/platform level, outside the coding-agent lineup.'
 - name: Agents & orchestration
   layer: user
   capabilities:
@@ -522,11 +522,11 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Workflow Slash Command Saving
+        status: active
+        evidence_url: https://code.claude.com/docs/en/workflows.md
+        last_verified: '2026-06-22'
+        description: Persist a generated workflow as a reusable slash command for future invocations.
         notes: ''
       google:
         offering: Antigravity
@@ -538,12 +538,12 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Agent Builder
+        status: active
+        evidence_url: https://developers.openai.com/api/docs/guides/agent-builder.md
+        last_verified: '2026-06-26'
+        description: A visual canvas for building multi-step agent workflows that coordinate multiple agents, tools, and control-flow logic.
+        notes: via OpenAI Agents SDK
   - id: plan-mode
     name: Plan-then-execute mode
     what: Produce a reviewable plan before the agent edits anything.
@@ -580,28 +580,28 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Auto mode (autonomous execution with background safety checks, research preview)
+        status: active
+        evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Verification loops
+        status: active
+        evidence_url: https://antigravity.google/assets/docs/cli/cli-best-practices.md
+        last_verified: '2026-06-26'
+        description: The agent can run local test commands (e.g. unit tests, build scripts) after making code changes and iterate automatically.
+        notes: human-confirmed 2026-06-27
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: The agent loop
+        status: active
+        evidence_url: https://developers.openai.com/api/docs/guides/agents/running-agents.md
+        last_verified: '2026-06-26'
+        description: The SDK self-hosts the agent execution loop, automatically iterating through model calls, tool execution, handoffs, with streaming and deliberate pause/resume support.
+        notes: via OpenAI Agents SDK
   - id: parallel-workspaces
     name: Parallel isolated workspaces
     what: Work on multiple branches/copies in parallel without collisions.
@@ -649,12 +649,12 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Agent Runtime
+        status: active
+        evidence_url: https://adk.dev/deploy/agent-runtime/test/index.md
+        last_verified: '2026-06-26'
+        description: Google Cloud-hosted, fully managed auto-scaling runtime that executes deployed ADK agents in the cloud, managing the agent loop on behalf of the user.
+        notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
         implementation: Cloud Environments
@@ -699,11 +699,11 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Routines
+        implementation: Schedule Trigger
         status: preview
         evidence_url: https://code.claude.com/docs/en/routines.md
-        last_verified: '2026-06-26'
-        description: Saved Claude Code configurations that run automatically on Anthropic-managed cloud infrastructure on a schedule, via API call, or on GitHub events.
+        last_verified: '2026-06-22'
+        description: Runs a routine on a recurring cadence or once at a specific future time.
         notes: ''
       google:
         offering: Antigravity
@@ -834,12 +834,12 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Guardrails
+        status: active
+        evidence_url: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals.md
+        last_verified: '2026-06-26'
+        description: Built-in guardrail validation that sanitizes inputs, validates or redacts outputs, and checks tool calls to block disallowed requests, redact PII, and detect jailbreak/prompt-injection attempts.
+        notes: via OpenAI Agents SDK
   - id: security-scanning
     name: Security scanning / threat model
     what: Scan code/agent actions for security issues against a threat model.
@@ -889,7 +889,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Stores sidecar metadata; not running the agent inside a defined dev container.'
       openai:
         offering: Codex
         implementation: unverified
@@ -916,12 +916,12 @@ capability_groups:
         notes: ''
       google:
         offering: Antigravity
-        implementation: Inspect Hooks
+        implementation: Agent activity logging
         status: active
-        evidence_url: https://antigravity.google/assets/docs/sdk/sdk-overview.md
-        last_verified: '2026-06-22'
-        description: Read-only, non-blocking hooks for logging, audit trails, and metrics collection.
-        notes: ''
+        evidence_url: https://adk.dev/observability/logging/index.md
+        last_verified: '2026-06-26'
+        description: ADK provides structured, configurable logging of agent behavior using standard library facilities and OpenTelemetry.
+        notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
         implementation: Built-in Run Tracing
@@ -950,7 +950,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: A human approving the agent''s proposed changes — the inverse of the agent reviewing diffs.'
       openai:
         offering: Codex
         implementation: AI Code Review
@@ -1000,7 +1000,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Permission-evaluation hooks; "evaluation" here is a keyword collision, not an evals harness.'
       google:
         offering: Antigravity
         implementation: unverified
@@ -1008,7 +1008,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Runtime agent routing; an "A/B testing" mention is not an evals/testing harness.'
       openai:
         offering: Codex
         implementation: Evals API
@@ -1024,20 +1024,20 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: File checkpointing
+        status: active
+        evidence_url: https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md
+        last_verified: '2026-06-26'
+        description: Tracks file modifications made through Write, Edit, and NotebookEdit tools during an agent session, allowing files to be restored to earlier states.
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Session management
+        status: active
+        evidence_url: https://antigravity.google/assets/docs/cli/cli-best-practices.md
+        last_verified: '2026-06-15'
+        description: The agent supports rewinding, forking, and non-interactive execution of conversation sessions.
+        notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
         implementation: unverified
@@ -1053,12 +1053,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Web–Terminal Session Transfer
-        status: preview
-        evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
-        last_verified: '2026-06-26'
-        description: Lets you move sessions between the web and your terminal using --remote and --teleport, set up from the terminal via /web-setup.
-        notes: ''
+        implementation: Session resume
+        status: active
+        evidence_url: https://code.claude.com/docs/en/agent-sdk/sessions.md
+        last_verified: '2026-06-24'
+        description: ''
+        notes: via Claude Agent SDK
       google:
         offering: Antigravity
         implementation: Resuming sessions
@@ -1127,7 +1127,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Permission prompts, not push notifications on run progress/completion.'
       openai:
         offering: Codex
         implementation: Task Completion Notifications
@@ -1156,7 +1156,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Agent-to-agent messaging, not driving the agent from Slack/Linear/issue tools.'
       openai:
         offering: Codex
         implementation: Codex for Linear
@@ -1172,12 +1172,12 @@ capability_groups:
     providers:
       anthropic:
         offering: Claude Code
-        implementation: Claude Code on the Web
-        status: preview
-        evidence_url: https://code.claude.com/docs/en/claude-code-on-the-web.md
-        last_verified: '2026-06-26'
-        description: Runs Claude Code tasks on Anthropic-managed cloud infrastructure that you can start from the browser or phone and monitor remotely, with each session running in a fresh VM and continuing to run if you disconnect.
-        notes: ''
+        implementation: unverified
+        status: unverified
+        evidence_url: ''
+        last_verified: ''
+        description: Not yet covered in the grounded catalog.
+        notes: 'Reviewed → gap: A session-transfer mechanism, not a clean enumeration of access surfaces.'
       google:
         offering: Antigravity
         implementation: unverified
@@ -1185,7 +1185,7 @@ capability_groups:
         evidence_url: ''
         last_verified: ''
         description: Not yet covered in the grounded catalog.
-        notes: ''
+        notes: 'Reviewed → gap: Sandboxing/isolation, not where the agent can be used.'
       openai:
         offering: Codex
         implementation: Mobile Access via QR Code

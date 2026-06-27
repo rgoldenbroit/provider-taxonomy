@@ -1,0 +1,13 @@
+{
+  "key": "d714c9483615193065c1fc76b158c466538acaaa7919f84d06cc4a7001e16e06",
+  "label": "matrixrepick:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 206
+      }
+    ]
+  }
+}

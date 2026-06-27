@@ -25,7 +25,9 @@ MD_PATH = Path(__file__).resolve().parent.parent / "ai-provider-capability-taxon
 PROVIDERS = ("anthropic", "google", "openai")
 LAYERS = {"user", "platform", "governance"}
 TIERS = {"core", "advanced"}
-STATUSES = {"active", "preview", "sunset", "none", "unverified"}
+# `needs_review` = the lineup holds a candidate the confirm gate hasn't admitted; shown, but not claimed
+# as grounded. It still must cite a real source (enforced below) — it is never a bare, sourceless claim.
+STATUSES = {"active", "preview", "sunset", "none", "unverified", "needs_review"}
 CELL_KEYS = ("offering", "implementation", "status", "evidence_url", "last_verified")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 KEBAB_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
@@ -53,7 +55,7 @@ def validate(doc: dict) -> tuple[list[str], dict]:
     stats = {
         "groups": 0, "capabilities": 0, "cells": 0,
         "by_status": {s: 0 for s in STATUSES}, "filled": 0, "unverified": 0,
-        "bad_status": 0,
+        "needs_review": 0, "bad_status": 0,
     }
 
     if not isinstance(doc.get("product_category"), str) or not doc["product_category"].strip():
@@ -140,7 +142,9 @@ def validate(doc: dict) -> tuple[list[str], dict]:
                 if status == "unverified":
                     stats["unverified"] += 1
                 else:
-                    stats["filled"] += 1
+                    # `needs_review` is bucketed apart from grounded, but — like grounded — must cite a
+                    # real source + date. That requirement is what keeps it honest rather than a free gap.
+                    stats["needs_review" if status == "needs_review" else "filled"] += 1
                     ev = (cell.get("evidence_url") or "").strip()
                     lv = (cell.get("last_verified") or "").strip()
                     if not ev:
@@ -179,10 +183,11 @@ def main() -> int:
     print(f"  capability groups : {stats['groups']}")
     print(f"  capabilities      : {stats['capabilities']}")
     print(f"  provider cells    : {stats['cells']}  (expected {stats['capabilities'] * 3})")
-    print(f"  grounded (status!=unverified) : {stats['filled']}")
-    print(f"  unverified                     : {stats['unverified']}")
+    print(f"  grounded (confirmed)           : {stats['filled']}")
+    print(f"  needs_review (candidate exists): {stats['needs_review']}")
+    print(f"  unverified (earned gap)        : {stats['unverified']}")
     print("  status breakdown  : " + ", ".join(
-        f"{s}={stats['by_status'][s]}" for s in ("active", "preview", "sunset", "none", "unverified")
+        f"{s}={stats['by_status'][s]}" for s in ("active", "preview", "sunset", "none", "needs_review", "unverified")
     ))
     if stats["cells"] != stats["capabilities"] * 3:
         # already reported per-capability as missing providers; surfaced here too.

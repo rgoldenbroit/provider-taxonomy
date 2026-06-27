@@ -1,0 +1,24 @@
+{
+  "key": "c02422af47d8135988f745b0562902190ddb365fa000517fc0767e97c8da633a",
+  "label": "matrixconfirm:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": true,
+        "reason": "Auto mode explicitly enables autonomous execution where the agent runs continuously without step-by-step human approval, which directly maps to looping until a done condition is met. Background safety checks are the guardrails on that loop, not a distraction from it."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": true,
+        "reason": "Session resume directly and specifically allows continuing a previous session, which is the core of this capability. No ambiguity here."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "Remote Control is about remotely accessing/monitoring a *locally running* Claude Code session from another device (phone, tablet, browser). This is inter-device session bridging/continuity, not a definition of where the agent can natively operate (terminal, IDE, web, cloud, mobile as first-class surfaces). It is closer to a remote-access or session-continuity feature than a declaration of supported access surfaces."
+      }
+    ]
+  }
+}
