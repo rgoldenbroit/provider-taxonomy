@@ -276,6 +276,15 @@
   .mx-cell.unverified { border-style:dashed; box-shadow:none; }
   .mx-cell.needs_review { background:color-mix(in srgb,var(--blue) 6%,var(--panel)); }
   .mx-cell .mxrev { color:var(--blue); font-size:11px; font-weight:600; margin-top:4px; }
+  .mxreview { margin-top:12px; padding-top:11px; border-top:1px solid var(--line); }
+  .mxbtn { cursor:pointer; border:1px solid var(--line); border-radius:8px; padding:6px 12px;
+    font-size:13px; font-weight:600; background:var(--panel); color:var(--ink); }
+  .mxbtn.ok:hover { border-color:var(--green); color:var(--green); }
+  .mxbtn.no:hover { border-color:var(--red); color:var(--red); }
+  #mxtoast { position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(12px);
+    background:var(--ink); color:var(--bg); padding:9px 16px; border-radius:8px; font-size:13px;
+    font-weight:600; box-shadow:var(--shadow-lift); opacity:0; pointer-events:none; transition:.18s; z-index:50; }
+  #mxtoast.show { opacity:1; transform:translateX(-50%) translateY(0); }
   .mx-cell .impl { font-weight:600; letter-spacing:-.01em; }
   .mx-cell .mxev { font-size:12px; white-space:nowrap; }
   .mx-cell .mxmore { color:var(--accent); font-size:12px; margin-left:auto; }
@@ -781,7 +790,7 @@ function openCapability(capId){
 const MX = APP.matrix || null;
 const MX_PROVIDERS = [['anthropic','Anthropic'],['google','Google'],['openai','OpenAI']];
 const MXBY = {};                              // `${capId}|${prov}` -> cell, for click-to-expand
-const matrixState = { tier:'', gaps:false };  // toolbar filters
+const matrixState = { tier:'', gaps:false, review:false };  // toolbar filters
 const mxSlug = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const MX_STATUS_LABEL = { needs_review:'review' };
 const mxBadge = s => `<span class="badge b-${esc(s)}">${esc(MX_STATUS_LABEL[s]||s)}</span>`;
@@ -824,7 +833,23 @@ function openMatrixCell(capId, prov){
     ${cap?`<div class="includes"><b>Capability:</b> ${esc(cap.what)}</div>`:''}
     ${cell.notes&&(cell.status==='needs_review'||cell.status==='unverified')?`<div class="note">${cell.status==='needs_review'?'<b>Why “review”:</b> ':''}${esc(cell.notes)}</div>`:''}
     ${ev?`<a class="docs" href="${esc(ev)}" target="_blank" rel="noopener">Official docs &#8599;</a>`:''}
+    ${cell.status==='needs_review'?`<div class="mxreview"><div class="row" style="gap:8px;flex-wrap:wrap">
+      <button class="mxbtn ok" onclick="mxCopyDecision('${capId}','${prov}','confirm')">✓ Confirm — copy decision</button>
+      <button class="mxbtn no" onclick="mxCopyDecision('${capId}','${prov}','reject')">✕ Reject — copy decision</button></div>
+      <div class="muted small" style="margin-top:6px">Copies a <code>review-decisions.yaml</code> entry to your clipboard — paste it in, commit, and the next build applies it.</div></div>`:''}
   `);
+}
+function mxCopyDecision(capId, prov, verdict){
+  const cell = MXBY[capId+'|'+prov]; if(!cell) return;
+  const date = new Date().toISOString().slice(0,10);
+  const y = `  - cap: ${capId}\n    provider: ${prov}\n    verdict: ${verdict}\n    feature: ${(cell.implementation||'').replace(/"/g,'')}\n    reason: ""\n    date: ${date}`;
+  navigator.clipboard.writeText(y).then(()=>mxToast(`${verdict} decision copied — paste into matrix/review-decisions.yaml`),
+                                       ()=>mxToast('copy failed — select & copy manually'));
+}
+function mxToast(msg){
+  let t=document.getElementById('mxtoast');
+  if(!t){ t=document.createElement('div'); t.id='mxtoast'; document.body.appendChild(t); }
+  t.textContent=msg; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),2600);
 }
 function setMatrixFilter(k,v){ matrixState[k]=v; selectView('Capability Matrix'); }
 function viewMatrix(){
@@ -842,13 +867,15 @@ function viewMatrix(){
   })));
   const ncap = Math.round(total/3);
   const hasGap = c => MX_PROVIDERS.some(([k])=>(c.providers[k]||{}).status==='unverified');
-  const vis = c => (!matrixState.tier || c.tier===matrixState.tier) && (!matrixState.gaps || hasGap(c));
+  const hasReview = c => MX_PROVIDERS.some(([k])=>(c.providers[k]||{}).status==='needs_review');
+  const vis = c => (!matrixState.tier || c.tier===matrixState.tier) && (!matrixState.gaps || hasGap(c)) && (!matrixState.review || hasReview(c));
   const chip = (lbl,on,act) => `<span class="mxchip${on?' on':''}" onclick="${act}">${esc(lbl)}</span>`;
   const bar = `<div class="mxbar"><span class="faint">Tier</span>`
     + chip('all',!matrixState.tier,"setMatrixFilter('tier','')")
     + chip('core',matrixState.tier==='core',"setMatrixFilter('tier','core')")
     + chip('advanced',matrixState.tier==='advanced',"setMatrixFilter('tier','advanced')")
     + chip(matrixState.gaps?'✓ gaps only':'gaps only',matrixState.gaps,"setMatrixFilter('gaps',"+(!matrixState.gaps)+")")
+    + (needs?chip(matrixState.review?'✓ review queue':'review queue ('+needs+')',matrixState.review,"setMatrixFilter('review',"+(!matrixState.review)+")"):'')
     + `<span class="mxjump faint">Jump</span>`
     + groups.map(g=>`<a class="mxchip" href="#mxg-${mxSlug(g.name)}">${esc(g.name)}</a>`).join('')
     + `</div>`;

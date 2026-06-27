@@ -33684,6 +33684,70 @@
         "last_verified": "2026-06-26",
         "confidence": "high"
       }
+    },
+    {
+      "id": "google-antigravity-2-0-context-compaction",
+      "parent_id": "google-antigravity-2-0",
+      "name": "Context Compaction",
+      "kind": "feature",
+      "provider": "Google",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "ide",
+        "cloud",
+        "api"
+      ],
+      "status": "active",
+      "review_status": "candidate",
+      "scope_note": "ADK Context Compaction reduces running context as the agent works by summarizing older session history \u2014 instructions, inputs, and model responses.",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 needs_review (grounding 1.00, classification 1.00). Context Compaction is a feature within Google's agentic coding product (Antigravity 2.0) that automatically manages the context window during long agent runs by compacting conversation history to stay within token "
+        }
+      ],
+      "source": {
+        "url": "https://adk.dev/context/compaction",
+        "last_verified": "2026-06-26",
+        "confidence": "low"
+      }
+    },
+    {
+      "id": "openai-codex-memories",
+      "parent_id": "openai-codex",
+      "name": "Memories",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "agentic-coding"
+      ],
+      "primary_capability_id": "agentic-coding",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal",
+        "cloud"
+      ],
+      "status": "active",
+      "review_status": "candidate",
+      "scope_note": "Codex's durable, cross-session memory of user preferences and project context.",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Memories is a durable, cross-session memory feature within OpenAI Codex (the agentic coding product), storing user preferences and project context across sessions. It is a sub-feature of openai-codex that directly map"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex/memories",
+        "last_verified": "2026-06-26",
+        "confidence": "high"
+      }
     }
   ],
   "categories": [

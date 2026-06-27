@@ -1,0 +1,9 @@
+{
+  "key": "5fdf8c44685b21b95a51f4fd398a7f19869f7f8e320b07b0ac44874bd3f1e568",
+  "label": "scoutextract:persistent-agent-memory:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "Memories",
+    "realizes": true
+  }
+}

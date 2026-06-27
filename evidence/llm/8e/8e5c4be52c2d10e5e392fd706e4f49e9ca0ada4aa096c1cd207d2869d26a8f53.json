@@ -1,0 +1,9 @@
+{
+  "key": "8e5c4be52c2d10e5e392fd706e4f49e9ca0ada4aa096c1cd207d2869d26a8f53",
+  "label": "scoutextract:prompt-caching:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "Context caching",
+    "realizes": true
+  }
+}

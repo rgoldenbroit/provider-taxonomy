@@ -1,0 +1,90 @@
+name: Scout gaps (weekly)
+
+# Scope-B self-heal: discover features for the matrix's open gaps from each provider's official docs,
+# ground them into the catalog as `candidate`s (→ rendered `needs_review`), and open a PR for review.
+# It NEVER pushes to main — a human reviews the proposed cells (Review queue in the viewer), then
+# confirms/rejects via matrix/review-decisions.yaml. No-ops cleanly until WIF + Tavily secrets exist.
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"     # weekly, Mondays 10:00 UTC (after self-maintain at 09:00)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "max gaps to scout this run"
+        default: "8"
+
+permissions:
+  contents: write            # push the scout/<date> branch
+  pull-requests: write       # open the review PR
+  id-token: write            # GCP Workload Identity Federation (keyless)
+
+env:
+  ANTHROPIC_VERTEX_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+  CLOUD_ML_REGION: ${{ vars.CLOUD_ML_REGION }}
+  VERTEX_MODEL: ${{ vars.VERTEX_MODEL }}
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: guard
+        run: |
+          if [ -n "${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}" ] && [ -n "${{ secrets.TAVILY_API_KEY }}" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Scout not configured (missing WIF/Tavily secrets) — skipping. See OPERATIONS.md."
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Authenticate to GCP (Workload Identity Federation — keyless)
+        if: steps.guard.outputs.go == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Install live dependencies
+        if: steps.guard.outputs.go == 'true'
+        run: pip install -e '.[vertex]'
+
+      - name: Scout gaps → ground candidates → re-project → validate → verify → build
+        if: steps.guard.outputs.go == 'true'
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          TAXO_OFFLINE: "0"
+        run: |
+          set -euo pipefail
+          python scripts/scout_gaps.py --limit "${{ inputs.limit || '8' }}"
+          TAXO_LEDGER=record python scripts/build_matrix.py   # re-project: new candidates → needs_review (sticky keeps the rest)
+          python scripts/render_matrix_md.py
+          python scripts/validate_matrix.py                   # gate: schema + definition of done
+          python -m taxonomy.cli verify                       # gate: every new record is replay-reproducible
+          python -m taxonomy.cli build                         # rebuild the viewer (with the review queue)
+
+      - name: Open a review PR with the discoveries (no direct push to main)
+        if: steps.guard.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data/ evidence/ viewer/taxonomy.html ai-provider-capability-taxonomy.md)" ]; then
+            echo "no new discoveries this run"; exit 0
+          fi
+          BRANCH="scout/$(date +%F)"
+          git config user.name  "provider-taxonomy-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/ evidence/ viewer/taxonomy.html ai-provider-capability-taxonomy.md
+          git commit -m "scout: candidate discoveries for review ($(date +%F))"
+          git push -u origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title "Scout: candidate discoveries for review ($(date +%F))" \
+            --body "Autonomous gap discovery admitted new \`needs_review\` candidates (verify-reproducible). Review each in the deployed matrix → **Review queue**, then Confirm/Reject via \`matrix/review-decisions.yaml\`. Merge to publish them to the review queue. Audit trail: \`data/scout-log.jsonl\`."

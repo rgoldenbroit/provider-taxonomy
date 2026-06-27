@@ -1,0 +1,154 @@
+{
+  "key": "0e34d1073289e059df987f1155ab8e06d448925e765c3fb6ac7995ba4b977b8a",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "project-instruction-file",
+        "realizes": true,
+        "reason": "Workspace Rules are stored in .agents/rules at the workspace or git root \u2014 a project-scoped file giving the agent standing instructions and context. This directly matches the capability."
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "realizes": true,
+        "reason": "Plugins are described as namespaced bundles grouping skills, rules, MCP servers, and hooks into a single package \u2014 directly matching the capability of bundling reusable capabilities/instructions the agent can load."
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "realizes": true,
+        "reason": "The feature explicitly describes hooks that run custom local shell scripts or commands at specific lifecycle points during execution, directly matching the capability of running custom logic on agent events."
+      },
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Rules provide persistent constraints and reusable context, but they do not specifically shape the system prompt, persona, or output style. Rules are behavioral constraints, not output/system-prompt customization mechanisms."
+      },
+      {
+        "capability_id": "model-selection",
+        "realizes": true,
+        "reason": "The feature explicitly lets users choose from multiple leading frontier reasoning models to power the agent's core reasoning, directly realizing model selection."
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "realizes": true,
+        "reason": "MCP Integration describes support for the Model Context Protocol to connect the editor to local tools, databases, and services \u2014 directly realizing the external tool/connector protocol capability."
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "realizes": true,
+        "reason": "The built-in MCP server manager for integrating external context providers directly matches the capability of installing, configuring, scoping, and discovering MCP servers."
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "realizes": true,
+        "reason": "The feature explicitly describes OAuth authentication for MCP servers with browser/console authorization flows, directly realizing MCP authentication."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "MCP Permission is described as a permission action governing agent access to MCP tools across local and remote MCP servers, directly matching tool allow-listing/governance for MCP."
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": true,
+        "reason": "The Memory feature is described as a searchable, cross-session knowledge store that agents can query to recall information beyond the current context \u2014 directly realizing persistent agent memory."
+      },
+      {
+        "capability_id": "context-compaction",
+        "realizes": true,
+        "reason": "Context Compaction is explicitly described as reducing running context by summarizing older session history, directly realizing the context compaction capability."
+      },
+      {
+        "capability_id": "subagents",
+        "realizes": true,
+        "reason": "Subagents are described as autonomous agents to which the primary agent delegates long-running operations in parallel \u2014 directly matching the spawn-focused sub-agents capability."
+      },
+      {
+        "capability_id": "agent-teams",
+        "realizes": true,
+        "reason": "Multi-Agent Teamwork launches a collaborative multi-agent framework where a high-level goal is managed across multiple agents, directly realizing coordination of multiple communicating agents."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Workflows are described as saved markdown files defining a repeatable series of steps to guide the Agent through tasks across sessions \u2014 directly matching the capability of repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "An Implementation Plan artifact details technical revisions needed, but the capability requires a reviewable plan produced *before* the agent edits anything (plan-then-execute gating). The feature description does not indicate the agent withholds edits pending plan approval \u2014 it's an artifact, not an execution gate."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Verification loops describe running test commands after changes and iterating, but the capability requires a verifiable 'done' condition set by the user that the agent loops on autonomously until met. The feature is about test-driven iteration, not user-defined goal-directed autonomous looping \u2014 adjacent but not the same."
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "realizes": true,
+        "reason": "Worktree Support explicitly has agents operate in dedicated Git worktrees to isolate parallel work within a project, directly realizing parallel isolated workspaces."
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "realizes": true,
+        "reason": "Agent Runtime is described as a Google Cloud-hosted, fully managed auto-scaling runtime that executes deployed ADK agents in the cloud \u2014 directly realizing the cloud execution environment capability."
+      },
+      {
+        "capability_id": "background-execution",
+        "realizes": true,
+        "reason": "Background Tasks are explicitly described as tracked, long-running operations run asynchronously without blocking the primary agent \u2014 directly realizing the background/async execution capability."
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "realizes": true,
+        "reason": "Scheduled Tasks allow users to schedule messages to agents with repeatable time-based triggers, directly realizing scheduled/triggered runs."
+      },
+      {
+        "capability_id": "sandboxing",
+        "realizes": true,
+        "reason": "Terminal Sandboxing provides kernel-level/native OS isolation for terminal commands executed by the Agent in a restricted environment, directly realizing sandboxed execution."
+      },
+      {
+        "capability_id": "permission-controls",
+        "realizes": true,
+        "reason": "The Fine-Grained Permissions Engine represents every sensitive agent operation as a permission, enabling approve/deny control over what the agent is allowed to do \u2014 directly realizing tool permission controls."
+      },
+      {
+        "capability_id": "network-egress-control",
+        "realizes": true,
+        "reason": "Independent Network Access Control explicitly controls network connectivity for sandboxed commands independently of filesystem restrictions, directly realizing network/egress control."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Building a Docker image from source (containerization) is not the same as dev-container integration, which means running the agent inside a defined dev container runtime (e.g., devcontainer.json). Building images is a precursor or adjacent concept, not the integration surface itself."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "Agent activity logging provides structured, configurable logging of agent behavior using standard library facilities and OpenTelemetry \u2014 directly realizing audit logging/telemetry."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "Quota Tracking monitors AI credit quota and consumption, which is closer to credit/quota management than cost and token-spend tracking with capping. It is adjacent but does not specifically realize tracking and capping token spend."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": false,
+        "reason": "The /fork command clones conversation history into a new independent session, which is session branching/forking \u2014 not checkpointing or rewinding/undoing agent changes. This is the resume/fork capability, not checkpoint-rewind."
+      },
+      {
+        "capability_id": "resume-session",
+        "realizes": true,
+        "reason": "Resuming sessions allows users to return to prior conversations to continue an implementation or refine an existing solution, directly realizing the ability to resume a previous session."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "An optional bundled web front-end is one specific access surface (web UI), not the capability of defining or enumerating access surfaces broadly (terminal, IDE, web, cloud, mobile). A single surface instance does not realize the general access-surfaces capability."
+      }
+    ]
+  }
+}

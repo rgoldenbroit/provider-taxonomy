@@ -1,0 +1,39 @@
+{
+  "key": "8fc952303ca57971e2848b97ca0fc300f7184f87977bb1b02e96b66512c081da",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "'Strict Mode' restricts the agent's access to external resources and sensitive operations \u2014 this is an access-control/sandboxing mechanism. Prompt-injection protection specifically means defending against malicious instructions embedded in tool outputs or web content. Restricting access is adjacent but does not directly detect or neutralize injected instructions."
+      },
+      {
+        "capability_id": "security-scanning",
+        "realizes": false,
+        "reason": "A 'Fine-Grained Permissions Engine' governs what operations the agent is allowed to perform (access control / authorization). Security scanning requires actively inspecting code or agent actions against a threat model for vulnerabilities. Permissions enforcement and threat-model scanning are distinct; the former prevents unauthorized actions but does not scan for security issues."
+      },
+      {
+        "capability_id": "code-review",
+        "realizes": false,
+        "reason": "'Artifact Review Policy' controls how a human user reviews and approves agent-proposed plans/artifacts before changes land \u2014 this is a human-approval gate, not an automated agent review of diffs/PRs for issues. The capability requires the agent to perform the review; this feature puts a human in the loop instead."
+      },
+      {
+        "capability_id": "evals-testing",
+        "realizes": false,
+        "reason": "'Verification loops' describe the agent running local test commands (unit tests, build scripts) after making changes and iterating \u2014 this is an agentic self-correction loop during task execution. Evals/testing harness means running structured evaluations against the agent's own behavior (benchmarks, regression suites). These are related but distinct: one is in-task iteration, the other is systematic behavioral evaluation of the agent itself."
+      },
+      {
+        "capability_id": "remote-control",
+        "realizes": false,
+        "reason": "'Scheduled Tasks' let users schedule time-based messages to agents while away. Remote control means actively steering, monitoring, or approving agent runs from a remote client (mobile/web) in real time. Scheduling is a fire-and-forget trigger mechanism, not an interactive remote control surface."
+      },
+      {
+        "capability_id": "notifications",
+        "realizes": false,
+        "reason": "'Scheduled Tasks' is about sending pre-configured messages to agents on a time-based schedule. Notifications means the system proactively pushing updates (progress, completion alerts) to the user. These are opposite directions of communication: scheduled tasks push from user to agent on a timer, while notifications push from agent/system to user."
+      }
+    ]
+  }
+}

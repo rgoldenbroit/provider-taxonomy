@@ -1,0 +1,29 @@
+{
+  "key": "1604a3f6ec6836ad6a3024a5b88e5a775848efce00649785f709c240b299c40f",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "prompt-caching",
+        "realizes": false,
+        "reason": "The feature described is 'Compaction', which manages context window limits by summarizing/compacting long conversation history \u2014 this is context compaction, not context caching. Prompt/context caching refers to storing and reusing repeated prompt prefixes to reduce latency and cost. These are distinct mechanisms; compaction does not realize the caching capability."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "The 'Approval Policy' feature controls when the agent must pause and seek user approval before crossing sandbox boundaries (e.g., network access, file writes). This is an approval/safety gate, not a plan-then-execute mode. Plan-then-execute requires the agent to produce a reviewable plan before making any edits \u2014 a fundamentally different workflow than interrupt-on-policy-violation."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "'Organization and project-level access scoping' governs who can access what resources \u2014 it is an authorization/permissions feature. It does not provide token spend tracking, usage dashboards, or cost caps, which are what the cost & usage tracking capability requires."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": false,
+        "reason": "'Saved state' is too vague to confirm a direct realization without more detail, but as described it does not explicitly provide save points with the ability to roll back or undo agent changes. Checkpoint/rewind requires explicit snapshotting of agent state and the ability to restore a prior state \u2014 a generic 'saved state' label does not confirm this specific rollback/undo mechanic is present."
+      }
+    ]
+  }
+}

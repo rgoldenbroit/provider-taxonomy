@@ -1,0 +1,12 @@
+{
+  "key": "435e68da0ee98a6f5e44b0fce2cdce2408ef0c479468c380632e3c979f11ad21",
+  "label": "judge:google-antigravity-2-0-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "ADK Context Compaction feature is designed to reduce the size of context as an agent is running by summarizing older session history\u2014including instructions, inputs, and model responses. By maintaining a compact context window, this process optimizes latency and reduces costs while ensuring the agent retains access to essential recent interactions.",
+    "lifecycle_status": "active",
+    "rationale": "The fetched page is the official ADK documentation page explicitly dedicated to \"Context compression / Context compaction.\" It clearly describes Google's ADK Context Compaction feature, its strategies (token-based and sliding window), configuration options, and code examples across multiple languages (Python, Java, TypeScript). The page also notes it is \"Supported in ADK Python v1.16.0, Java v0.2.0, TypeScript v0.6.0,\" indicating it is generally available (active), not in preview or deprecated.",
+    "supported": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "key": "7672bed26e61f659eea4590e12b954f9523400be0aacce420cd49fc8298fdd76",
+  "label": "matrixreconsider:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "security-scanning",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "code-review",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "remote-control",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "notifications",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "feature_index": 0
+      }
+    ]
+  }
+}

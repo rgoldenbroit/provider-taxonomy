@@ -1,0 +1,29 @@
+{
+  "key": "4e35b018518cf08e574f237b3961dfbc3c89346efa6a6a197d399fca5bea50a0",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "The feature describes a structured three-phase workflow (explore \u2192 plan \u2192 execute), which is a sequential methodology for tackling complex tasks. It does not specifically realize autonomous looping against a verifiable 'done' condition \u2014 there is no described mechanism where the agent sets a success criterion and iterates on its own until that criterion is met."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "The feature describes process-level sandboxing for security isolation, which is a generic sandboxing mechanism. Dev-container integration specifically means running the agent inside a defined, user-configured dev container (e.g., Docker-based devcontainer.json spec). Process-level sandboxing is a sibling/adjacent concept to dev containers but does not constitute running inside a defined dev container runtime."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": true,
+        "reason": "The feature explicitly mentions 'rewinding' and 'forking' of conversation sessions under session management, which directly maps to the checkpoint/rewind capability of saving state and rolling back or branching agent changes."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "REST API access is one specific programmatic access mechanism, not a surface in the sense of terminal, IDE, web UI, cloud, or mobile interfaces. The capability concerns the range of environments/surfaces where the agent can be used; a REST API is a backend integration channel, not a named access surface category."
+      }
+    ]
+  }
+}

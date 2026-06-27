@@ -22,14 +22,20 @@ decisions:
     feature: Verification loops
     reason: Runs tests after each change and iterates automatically — genuine goal-directed iteration.
     date: 2026-06-27
-
-  # --- rejected: keyword/semantic false-friends -> honest gaps ---
+  - cap: context-compaction
+    provider: google
+    verdict: confirm
+    feature: Context Compaction
+    reason: ADK Context Compaction summarizes older session history to shrink running context — direct fit (scout discovery).
+    date: 2026-06-27
   - cap: persistent-agent-memory
     provider: openai
-    verdict: reject
-    feature: Configurable memory limits
-    reason: A code-interpreter resource cap, not durable agent memory across sessions.
+    verdict: confirm
+    feature: Memories
+    reason: Codex durable cross-session memory (codex/memories) — real feature; supersedes the earlier wrong-candidate reject (scout discovery).
     date: 2026-06-27
+
+  # --- rejected: keyword/semantic false-friends -> honest gaps ---
   - cap: prompt-caching
     provider: anthropic
     verdict: reject

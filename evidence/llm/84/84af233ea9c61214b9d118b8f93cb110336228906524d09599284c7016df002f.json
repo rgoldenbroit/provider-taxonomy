@@ -1,0 +1,194 @@
+{
+  "key": "84af233ea9c61214b9d118b8f93cb110336228906524d09599284c7016df002f",
+  "label": "matrixmap:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "mappings": [
+      {
+        "capability_id": "project-instruction-file",
+        "feature_index": 117,
+        "matched": true
+      },
+      {
+        "capability_id": "packaged-extensions",
+        "feature_index": 74,
+        "matched": true
+      },
+      {
+        "capability_id": "lifecycle-hooks",
+        "feature_index": 52,
+        "matched": true
+      },
+      {
+        "capability_id": "output-customization",
+        "feature_index": 83,
+        "matched": true
+      },
+      {
+        "capability_id": "model-selection",
+        "feature_index": 80,
+        "matched": true
+      },
+      {
+        "capability_id": "tool-server-protocol",
+        "feature_index": 56,
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-server-management",
+        "feature_index": 61,
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-authentication",
+        "feature_index": 201,
+        "matched": true
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "feature_index": 71,
+        "matched": true
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 195,
+        "matched": true
+      },
+      {
+        "capability_id": "context-compaction",
+        "feature_index": 20,
+        "matched": true
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "subagents",
+        "feature_index": 104,
+        "matched": true
+      },
+      {
+        "capability_id": "agent-teams",
+        "feature_index": 63,
+        "matched": true
+      },
+      {
+        "capability_id": "workflows",
+        "feature_index": 116,
+        "matched": true
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 42,
+        "matched": true
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 113,
+        "matched": true
+      },
+      {
+        "capability_id": "parallel-workspaces",
+        "feature_index": 119,
+        "matched": true
+      },
+      {
+        "capability_id": "cloud-execution-environment",
+        "feature_index": 128,
+        "matched": true
+      },
+      {
+        "capability_id": "background-execution",
+        "feature_index": 12,
+        "matched": true
+      },
+      {
+        "capability_id": "scheduled-runs",
+        "feature_index": 86,
+        "matched": true
+      },
+      {
+        "capability_id": "sandboxing",
+        "feature_index": 108,
+        "matched": true
+      },
+      {
+        "capability_id": "permission-controls",
+        "feature_index": 36,
+        "matched": true
+      },
+      {
+        "capability_id": "network-egress-control",
+        "feature_index": 44,
+        "matched": true
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "security-scanning",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "audit-logging",
+        "feature_index": 124,
+        "matched": true
+      },
+      {
+        "capability_id": "code-review",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 79,
+        "matched": true
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "resume-session",
+        "feature_index": 82,
+        "matched": true
+      },
+      {
+        "capability_id": "remote-control",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "notifications",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "feature_index": 0,
+        "matched": false
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 78,
+        "matched": true
+      }
+    ]
+  }
+}

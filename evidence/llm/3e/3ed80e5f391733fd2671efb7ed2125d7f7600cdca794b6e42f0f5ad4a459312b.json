@@ -1,0 +1,44 @@
+{
+  "key": "3ed80e5f391733fd2671efb7ed2125d7f7600cdca794b6e42f0f5ad4a459312b",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": true,
+        "reason": "GEMINI.md is a user-defined file that injects persistent instructions (persona, rules, output style) into the agent's system prompt across all workspaces \u2014 directly realizing the ability to shape system prompt and output behavior."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": true,
+        "reason": "The feature explicitly describes a 'planning mode that generates multi-turn plans for complex engineering tasks,' which directly matches the capability of producing a reviewable plan before the agent edits anything. However, note this is attributed to 'Antigravity,' not Google Gemini \u2014 the provider mismatch is a concern, but taken at face value the feature description directly maps to the capability."
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "'Always Proceed Mode' means the agent skips confirmation prompts and executes changes immediately \u2014 it is about removing user interruptions, not about setting a verifiable 'done' condition and autonomously looping until it is met. It addresses execution flow, not goal-directed iteration logic."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Terminal Sandbox via native OS process isolation is a sandboxing/security surface, not dev-container integration. Dev-container integration specifically means running the agent inside a defined container runtime (e.g., Docker/devcontainer spec). Native OS process isolation is a sandboxing mechanism, not a container environment."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": true,
+        "reason": "The feature name 'LLM Cost and Latency Tracking' directly matches the capability of tracking token spend and usage, even though the description is empty. Cost tracking is explicitly named."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": false,
+        "reason": "'Resuming sessions' means returning to a prior conversation to continue work \u2014 it is session persistence/continuity, not a checkpoint/rewind system. It does not provide save points, rollback, or the ability to undo agent changes."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "'Agent Platform express mode (API key access)' describes an authentication/access method (API key) to reach the platform, not an access surface such as a terminal, IDE, web UI, cloud, or mobile client. Authenticating via API key is orthogonal to the surfaces where the agent can be used."
+      }
+    ]
+  }
+}

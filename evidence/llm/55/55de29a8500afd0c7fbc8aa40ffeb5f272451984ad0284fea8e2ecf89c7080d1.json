@@ -1,0 +1,9 @@
+{
+  "key": "55de29a8500afd0c7fbc8aa40ffeb5f272451984ad0284fea8e2ecf89c7080d1",
+  "label": "scoutextract:context-compaction:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "Context Compaction",
+    "realizes": true
+  }
+}

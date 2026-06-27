@@ -1,0 +1,9 @@
+{
+  "key": "26da7de960aa44fdfa1488bb685f35ec9546b3838ac71469f0700de0ea389749",
+  "label": "scoutextract:prompt-caching:anthropic",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "Prompt caching",
+    "realizes": true
+  }
+}

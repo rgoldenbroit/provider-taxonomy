@@ -1,0 +1,9 @@
+{
+  "key": "89ebbac460b54af364e88d6804398eaac586db93c39f2e6bbd35f010a5b321c3",
+  "label": "scoutextract:cost-usage-tracking:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "",
+    "realizes": false
+  }
+}

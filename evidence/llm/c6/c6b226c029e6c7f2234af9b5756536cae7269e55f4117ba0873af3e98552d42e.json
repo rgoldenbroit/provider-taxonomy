@@ -1,0 +1,49 @@
+{
+  "key": "c6b226c029e6c7f2234af9b5756536cae7269e55f4117ba0873af3e98552d42e",
+  "label": "matrixreconsider:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "security-scanning",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "code-review",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "evals-testing",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "remote-control",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "notifications",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "chat-surface-integration",
+        "feature_index": 0
+      }
+    ]
+  }
+}

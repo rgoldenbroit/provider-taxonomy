@@ -1,0 +1,12 @@
+{
+  "key": "4662f8dd0a44d0e1bc5f551f07ec93dd953df929724249af08c66dba640c0621",
+  "label": "judge:openai-codex-memories",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Memories let Codex carry useful context from earlier threads into future work. After you enable memories, Codex can remember stable preferences, recurring workflows, tech stacks, project conventions, and known pitfalls so you don't need to repeat the same context in every thread.",
+    "lifecycle_status": "active",
+    "rationale": "The page is the official Codex \"Memories\" documentation at developers.openai.com/codex/memories. It clearly describes a feature called \"Memories\" that provides durable, cross-session memory of user preferences and project context (stable preferences, recurring workflows, tech stacks, project conventions, known pitfalls) carried across threads. The feature is configurable and generally available (opt-in, with regional defaults), and the page describes it as an active product feature with detailed configuration options and storage details.",
+    "supported": true
+  }
+}

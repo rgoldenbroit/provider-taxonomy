@@ -1,75 +1,82 @@
-# Plan — Catalog credibility + coverage cleanup (phased)
+# Plan — Scope-B: weekly self-healing gap discovery (A1 · B1+B2 · C1 · D2)
 
-Sequence chosen so credibility lands first, the catalog is clean before it grows, and each phase ends
-verify-green + deployed. Every data phase: edit → `reverify(record)` → `taxo verify` byte-identical →
-prune ledger → build → test → render-check → deploy → commit.
+Build a matrix-gap-driven autonomous discoverer that feeds the **catalog** (never the matrix build),
+reusing Tavily(include_domains) + `ground_gap`'s verify-safe admit + sticky + the overlay. Search stays
+un-ledgered (proven safe — see research.md). Each phase ends green: `validate` + `verify` + tests.
 
-## Phase 1 — Re-ground to first-party sources (credibility)
-- Add a small driver `scripts/reground.py`: for each mis-sourced top-level node, search/confirm a
-  first-party page (using `is_official` + the known doc roots), set `source.url`, and re-ground
-  (HttpFetch + judge) so confidence is earned from an official page.
-- Nodes: Antigravity→`antigravity.google`, Gemini app→`gemini.google`/`support.google.com/gemini`,
-  NotebookLM→`notebooklm.google`, Gemini Computer Use→`ai.google.dev/.../computer-use`,
-  Gemini 3.5 Pro→`ai.google.dev`/`blog.google` (verify), Claude Cowork→search `anthropic.com`/`claude.com`.
-- **Any node with no official page → drop it** (or set `absent`/unverified) — never confirmed-on-a-blog.
-- Sweep the whole catalog for other non-official sources (Wikipedia/blog hosts) and re-ground or flag.
-- Out: an `is_official` gate in the maintenance loop so this can't regress.
+## Core design decision (C1 done right)
+A *well-grounded* discovered record would otherwise project straight to `active`, skipping human review.
+To keep "machine proposes, human disposes": autonomous discoveries are admitted with
+`review_status: "candidate"` (not `confirmed`), and the matrix renders a cell grounded on a
+non-`confirmed` feature as **`needs_review`** until a human promotes it via `review-decisions.yaml`
+(confirm) — or rejects it. Existing pipeline records are all `confirmed`, so nothing changes for them.
 
-## Phase 2 — Dedup + cleanup pass (clean before growing)
-- **Deterministic dedup** (`scripts/dedupe_features.py`): for each (provider, normalized-name) group,
-  keep the instance on the best-fit axis (most sub-features / highest grounding score; tie → keyword
-  match), drop the rest; re-point any orphaned sub-features.
-- **LLM cleanup pass** (`scripts/clean_features.py`, Sonnet, ledgered): per top-level feature, return
-  `{keep: bool, name: <=6-word clean name, reason}`. Drops non-node-worthy API minutiae (refusal/
-  stop_details/fallback/rate-limiting), normalizes sentence-names. Apply: rename keeps, remove drops
-  (+ their sub-features). Cheap (~150 features).
-- **Sub-feature descriptions**: where a sub-feature has no scope_note, the cleanup pass also returns a
-  one-line plain description so the pop-out stops falling back to the parent's generic text.
-- Re-gen `comparison` for features whose name changed (names feed the candidate matching).
+## Phase 1 — Reusable verify-safe admit + official domains
+- Extract `ground_gap`'s admit core into `admit_grounded(provider, root, name, kind, cap, url, *, as_of,
+  review_status="candidate", audit=None)` (fetch → `triage_one` → `reverify_record` at `as_of` →
+  re-pin id/parent → append). `ground_gap.py` keeps working via this shared function.
+- `PROVIDER_DOMAINS = {provider: [official doc hosts]}` (Anthropic: code/docs.claude.com, claude.com;
+  OpenAI: developers/platform.openai.com, openai.github.io; Google: antigravity.google, ai.google.dev,
+  adk.dev, google.github.io). Reuse `sources.py` host knowledge if it already encodes this.
+- *Done when:* `ground_gap` still grounds hooks + `verify` PASS (no behavior change), unit test for the
+  refactor.
 
-## Phase 3 — Overview level-mixing fix (viewer-only, fast)
-- `viewer/template.html`: the Overview "coverage at a glance" matrix lists only **product capabilities**
-  (those NOT in any `categories.feature_axis_ids`); developer-platform **axes** drop out of the matrix
-  and remain reachable only inside product pop-outs / Explore. Removes the 100+-feature pill-clouds and
-  the double-appearance.
-- Re-tier `remote-agent-control` → `developer_platform` (data one-liner; it's an axis).
-- Optionally: a compact "developer-platform axes" strip below the matrix that opens the axis pop-outs,
-  so the axes are still discoverable without being giant rows.
+## Phase 2 — The scout driver (`scripts/scout_gaps.py`)
+- Read `data/agentic-matrix.json` → the `unverified` cells, each carrying (cap_id, provider, lineup root,
+  `hints` from `matrix/capabilities.yaml`).
+- Per gap: `tavily.search(query=hints-join, include_domains=PROVIDER_DOMAINS[provider], max_results=…)` →
+  top first-party hits.
+- Per top hit: a slim LLM extraction (ledgered) — "name the feature on this page that realizes
+  `<capability what>`; quote it verbatim or return none" → candidate (name + supporting quote).
+- `admit_grounded(..., url=hit.url, review_status="candidate", audit={query, result_url, snippet})`.
+  The grounding gate still requires the verbatim quote on the page, so nothing ungrounded enters.
+- **B2:** the `audit` dict is written into the provenance receipt (`discovered_via`) — safe for `verify`
+  (it hashes catalog records, not receipts).
+- Offline/keys guard: needs `TAXO_OFFLINE=0` + `TAVILY_API_KEY` (set). Caps per run (e.g. 1–2 URLs/gap).
+- *Done when:* a dry run on the current 20 gaps admits ≥1 real feature as `candidate`; `verify` PASS.
 
-## Phase 4 — Fill the hollow capabilities (coverage)
-Reuse the per-capability registry + pipeline (`CAPABILITY_CONFIG`, `repopulate_agentic.py --capability`,
-`swap_capability.py`, `gen_comparison.py`). Order by tractability:
-1. **agent-building-sdk** — cleanest (3 llms-full/clean docs). The original cheap-path proof.
-2. **browser-computer-use-agent** — Claude/OpenAI/Gemini computer-use dev docs.
-3. **image-video-generation** — OpenAI + Google (Anthropic absent, shown honestly).
-4. **knowledge-work-research** — Deep Research + NotebookLM (mixed; partial acceptable).
-5. **consumer-chat-assistant** — Anthropic `support.anthropic.com` clean; OpenAI/Google need the
-   Tavily-content retriever (separate sub-task) or stay partial-with-a-note.
-- **flagship-model**: deferred unless you want a model-attribute comparison (different shape) — flag.
-- Define axes + categories per new capability (or reuse cross-cutting axes); generate comparisons.
+## Phase 3 — Matrix renders candidate discoveries as `needs_review` + UI review queue
+- In `build_matrix.py` cell loop: when a chosen/sticky feature has `review_status != "confirmed"`, emit a
+  `needs_review` cell (carrying its real fields) unless the overlay has a `confirm` verdict for it. A
+  `confirm` verdict promotes it to grounded (existing path); a human can also bump the catalog record to
+  `confirmed`. Sticky doesn't protect a `needs_review` cell (so it re-decides until confirmed) — correct.
+- **UI review mechanism (static viewer, no backend):**
+  - A **"Review queue"** affordance in the matrix toolbar: a chip + count badge that filters to only
+    `needs_review` cells, so the pending queue is one click to scan.
+  - In the cell drawer for a `needs_review` cell: **Confirm** / **Reject** buttons that **copy a
+    ready-to-paste `review-decisions.yaml` entry** to the clipboard (cap, provider, verdict, feature,
+    `reason: ""` placeholder, date). The static page can't persist, so the workflow is: review in the UI →
+    click → paste the snippet into `matrix/review-decisions.yaml` → commit → next build applies it.
+  - The cell already shows the candidate, its first-party `docs ↗` link, and the "why" — enough to decide.
+- *Done when:* a scouted `candidate` shows `needs_review`; the review-queue chip filters to it; Confirm/Reject
+  copy a valid YAML decision; pasting a `confirm` + rebuild flips it to grounded; `validate` PASS.
 
-## Phase 5 — Status spotchecks
-- Script: sample `deprecated`/`preview` records, re-judge lifecycle against the cited page; list any not
-  supported by the source; correct them (deliberate, not auto). Sora confirmed correct already.
+## Phase 4 — Tests + reproducibility
+- Tests (offline `StubLLM` + a stub Tavily poster): scout picks the official-domain hit; extraction→admit
+  produces a `candidate`; `admit_grounded` writes a reproducible record (reverify-normalized); the
+  `review_status!=confirmed → needs_review` rule; overlay `confirm` promotion.
+- Full suite + `verify` PASS. Confirm the only catalog delta is the newly-admitted candidate(s).
 
-## Cost / time (Sonnet cheap-path, sequential)
-- P1 re-ground: minutes, ~$0–1. P2 cleanup: ~150 calls, ~15 min, ~$2. P3: viewer-only, no run.
-- P4 per capability: ~$2–5 / ~20–45 min each (the measured rate). P5: minutes.
+## Phase 5 — Weekly self-heal in `maintain.yml` (D2)
+- Add a step (gated on the `TAVILY_API_KEY` secret + Vertex WIF): `scout_gaps` → re-project (sticky) →
+  render `.md` → `validate` → `verify` → write changelog.
+- **Safety rollout:** land it as a **PR-opening** step (or a `scout/<date>` branch), NOT a direct push to
+  `main` — so a human reviews the proposed `needs_review` cells before they're published, and adjudicates
+  via `review-decisions.yaml`. (maintain.yml already commits; we scope the scout output to a branch/PR.)
+- Document the loop in OPERATIONS.md: weekly → scout proposes `needs_review` → human confirms/rejects in
+  the overlay → next run is stable (sticky).
+- *Done when:* a manual `workflow_dispatch` produces a reviewable PR with new `needs_review` cells +
+  committed evidence, CI (tests + verify + matrix-validate) green on it.
 
-## Risks
-- Dropping blog-sourced nodes removes content — but they're unverifiable; honesty > count.
-- Cleanup could over-drop — LLM pass returns a reason + is reviewable; spot-check before committing.
-- consumer-chat retrieval is genuinely hard — scoped as partial / Tavily-later, not a blocker.
-- Each data phase re-grounds → re-baseline + prune (the established loop); verify stays the gate.
+## Risks / mitigations
+- **Wrong page grounded** → grounding gate (verbatim quote) + `include_domains` + lands as `needs_review`
+  for human confirm. Nothing auto-activates.
+- **Reproducibility** → every admit goes through `admit_grounded`'s reverify-at-`as_of` (the trap from last
+  round, now centralized). Tests assert `verify` byte-identical.
+- **Cost** → ~20 searches + slim extractions + groundings/run, judge tier; replay makes CI free.
+- **Recall ceiling** → A1 only chases *known* gaps; a completeness-critic sweep (A2) is a later add.
+- **Auto-commit safety** → PR/branch, not direct-to-main (Phase 5), so a human is always the gate to publish.
 
-## Decisions (approved)
-- **flagship-model: DEFER** — leave as model cards; model-attribute comparison is its own later task.
-- **consumer-chat + knowledge-work: ENTERPRISE-EDITION lens** — don't chase the blocked consumer help
-  centers; represent these via the enterprise editions (Claude Enterprise, ChatGPT Enterprise, Gemini
-  Enterprise / Gemini for Workspace), whose admin/enterprise docs are official + reachable. Verify each
-  surface in Phase 4; any provider whose enterprise docs are still blocked → partial + honest note.
-- **Execution: RUN ALL FIVE THROUGH** — P1→P5 end-to-end, deploy, then report (no mid-pause).
-
-## Execution order
-P1 (credibility) → P2 (clean) → P3 (viewer fix) → P4 (grow: agent-SDK, browser-use, image-video,
-then knowledge-work + consumer-chat via enterprise editions) → P5 (spotcheck). Deploy + report at end.
+## Sequencing
+P1 (refactor, no behavior change) → P2 (scout, dry-run) → P3 (needs_review rendering) → P4 (tests/verify)
+→ P5 (weekly, PR-gated). Stop after each for review; deploy only after a human adjudicates the first batch.

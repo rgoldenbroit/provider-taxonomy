@@ -1,0 +1,37 @@
+{
+  "key": "ee06f997bd53db69a47503caf053c8206bb26321af5580c8ef0eef0cf750cbd8",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 116
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "feature_index": 222
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "workflows",
+        "feature_index": 150
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 201
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 28
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 114
+      }
+    ]
+  }
+}

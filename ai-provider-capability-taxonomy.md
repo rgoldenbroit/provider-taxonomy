@@ -90,7 +90,7 @@ official-docs-grounded catalog (`data/taxonomy.json`), then escalates to each ve
 doc pages and a domain-restricted live search, leaving a cell `unverified` only when no
 first-party doc supports it. The canonical data is `data/agentic-matrix.json`; this block renders it.
 
-7 capability groups, 37 neutral capabilities. **91/111 cells grounded, 20 honestly `unverified`** (no first-party doc — left
+7 capability groups, 37 neutral capabilities. **93/111 cells grounded, 18 honestly `unverified`** (no first-party doc — left
 blank, not guessed). Every grounded cell links the official page it was verified against.
 
 > Regenerate: `scripts/build_matrix.py` (re-ground, needs Vertex) → `scripts/render_matrix_md.py`
@@ -390,12 +390,12 @@ capability_groups:
         notes: via Agent Development Kit (ADK)
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: 'Reviewed → gap: A code-interpreter resource cap, not durable agent memory across sessions.'
+        implementation: Memories
+        status: active
+        evidence_url: https://developers.openai.com/codex/memories
+        last_verified: '2026-06-26'
+        description: Codex's durable, cross-session memory of user preferences and project context.
+        notes: human-confirmed 2026-06-27
   - id: context-compaction
     name: Context compaction (manual + auto)
     what: Compress conversation/context to extend effective working memory.
@@ -411,12 +411,12 @@ capability_groups:
         notes: via Claude Agent SDK
       google:
         offering: Antigravity
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
-        notes: ''
+        implementation: Context Compaction
+        status: active
+        evidence_url: https://adk.dev/context/compaction
+        last_verified: '2026-06-26'
+        description: ADK Context Compaction reduces running context as the agent works by summarizing older session history — instructions, inputs, and model responses.
+        notes: human-confirmed 2026-06-27
       openai:
         offering: Codex
         implementation: Compaction

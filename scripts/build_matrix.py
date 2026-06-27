@@ -327,6 +327,21 @@ def review_cell(product, feat, primary_root=None, root_label=None):
 GROUNDED_STATUSES = {"active", "preview", "sunset", "none"}
 
 
+def _grounded_or_review(product, feat, primary, root_label, dec):
+    """A grounded feature renders as its lifecycle status — UNLESS it's an unconfirmed (autonomously
+    discovered, ``review_status != 'confirmed'``) feature with no human ``confirm`` verdict, in which case
+    it's ``needs_review`` until a human promotes it via review-decisions.yaml. Returns (cell, is_review)."""
+    human_confirm = bool(dec and dec.get("verdict") == "confirm"
+                         and (not dec.get("feature") or dec["feature"] == feat["name"]))
+    if feat.get("review_status") == "confirmed" or human_confirm:
+        cell = cell_for(product, feat, primary, root_label)
+        if human_confirm:
+            note = cell.get("notes", "")
+            cell["notes"] = (note + "; " if note else "") + f"human-confirmed {dec.get('date', '')}".strip()
+        return cell, False
+    return review_cell(product, feat, primary, root_label), True
+
+
 def _incumbent_feature(feats, name, url):
     """Find the catalog feature a previously-grounded cell pointed at — matched by name, url as tiebreak.
     Returns None if it's gone (removed/renamed), which is what lets a real change re-decide the cell."""
@@ -394,14 +409,16 @@ def main() -> int:
                     cell["notes"] = f"Reviewed → gap: {dec.get('reason', '').strip()}"
                     provs[pkey] = cell
                     mapping.append((cid, pkey, "— (reviewed)"))
-                elif sticky is not None:               # incumbent still in the catalog -> keep it, refreshed
+                elif sticky is not None:               # already-published grounding -> keep it stable (no churn)
                     covered += 1
                     provs[pkey] = cell_for(product, sticky, primary, root_label)
                     mapping.append((cid, pkey, f"{sticky['name']} (sticky)"))
-                elif f:                                # confirmed pick — grounded
-                    covered += 1
-                    provs[pkey] = cell_for(product, f, primary, root_label)
-                    mapping.append((cid, pkey, f["name"]))
+                elif f:                                # fresh grounding -> needs_review if an unconfirmed candidate
+                    cell, is_review = _grounded_or_review(product, f, primary, root_label, dec)
+                    provs[pkey] = cell
+                    review += int(is_review)
+                    covered += int(not is_review)
+                    mapping.append((cid, pkey, f"{f['name']} ({'needs_review' if is_review else 'grounded'})"))
                 else:
                     cand = top_candidates(featmap[pkey], c.get("hints", []), 1)
                     # human confirm promotes a needs_review candidate -> grounded, but only if it's still

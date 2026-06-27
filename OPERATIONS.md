@@ -51,12 +51,31 @@ python -m taxonomy.cli build     # data/taxonomy.json → viewer/taxonomy.html
 gcloud run deploy provider-seed-viewer --source viewer --region us-east5 --allow-unauthenticated --quiet
 ```
 
+## Weekly gap-scout (`.github/workflows/scout.yml`) — scope-B self-heal
+
+A second weekly job closes *discovery* gaps (a feature the catalog never ingested, so the matrix can't
+project it). For each `unverified` matrix cell it Tavily-searches the provider's **own lineup docs**
+(coding agent + agent SDK), extracts the feature, and grounds it into the catalog as a `candidate` —
+rendered **`needs_review`**, never auto-`active`. It **opens a PR** (branch `scout/<date>`), never pushes
+to main, so a human is always the gate to publish. Search is a discovery aid (not ledgered — `verify`
+replays grounding, not search); every admitted record is replay-reproducible (`admit_grounded` → reverify).
+
+**Review cadence (the human-in-the-loop):**
+1. Scout opens a PR with new `needs_review` candidates (audit trail in `data/scout-log.jsonl`).
+2. Open the deployed viewer → Capability Matrix → **Review queue** chip to see the pending cells.
+3. In a cell's drawer, **Confirm** or **Reject** copies a `matrix/review-decisions.yaml` entry; paste it in,
+   set a one-line `reason`, commit. The next build applies it (confirm → grounded; reject → honest gap),
+   and the sticky projection keeps it settled thereafter — the scout won't re-propose an adjudicated cell.
+
+Manual run: Actions → "Scout gaps (weekly)" → Run (or `TAXO_OFFLINE=0 TAVILY_API_KEY=… python scripts/scout_gaps.py --dry-run`).
+
 ## Enabling the self-maintaining loop (`.github/workflows/maintain.yml`)
 
 The loop re-verifies every record against its source weekly (and on demand), captures fresh
 evidence, proves the rebuild is reproducible (`verify`), writes a changelog, commits the diff,
 and optionally redeploys. It runs **keyless** via GCP Workload Identity Federation — no
 service-account JSON in the repo. Until the secrets below exist it **skips cleanly** (no red CI).
+The scout (above) shares the same WIF + Tavily secrets.
 
 One-time setup (`PROJECT`, `REPO=rgoldenbroit/provider-taxonomy`):
 

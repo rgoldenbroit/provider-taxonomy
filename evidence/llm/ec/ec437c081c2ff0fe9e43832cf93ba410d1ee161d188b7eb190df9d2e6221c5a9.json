@@ -1,0 +1,25 @@
+{
+  "key": "ec437c081c2ff0fe9e43832cf93ba410d1ee161d188b7eb190df9d2e6221c5a9",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 32
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 228
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 220
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 212
+      }
+    ]
+  }
+}

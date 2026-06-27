@@ -1,0 +1,39 @@
+{
+  "key": "a63f5618114ec557d06dc41cc088cba7ef4e53b0369c7003c006567ea787dc59",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "The feature configures review scope and focus (what to review, how to prioritize PR feedback) via AGENTS.md, which is a task-scoping/behavioral directive mechanism. It does not directly shape the agent's system prompt, persona, or output style in the sense of customizing tone, format, or presentation \u2014 it's closer to task configuration than output/persona customization."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "The feature explicitly allows toggling individual MCP tools on/off and refreshing tool definitions, which is a direct realization of controlling which MCP tools/resources the agent may use \u2014 the core of MCP tool governance and allow-listing."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Agent Builder is described as a visual canvas for building multi-step agent workflows coordinating multiple agents, tools, and control flow \u2014 this directly realizes the capability of defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "The Guardrails feature covers input sanitization, output validation/redaction, and tool call blocking \u2014 these are content moderation and safety controls, not defenses specifically targeted at prompt-injection attacks from malicious instructions embedded in tool/web content. Guardrails is a broader safety category; prompt-injection protection is a specific threat-model defense. The match is category-adjacent but not specifically realized."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Cloud Environments provision and configure cloud-hosted runtime environments (with installs, secrets, caching), but this is not the same as dev-container integration (e.g., running inside a devcontainer.json-defined container). The capability refers to a specific dev-container standard/isolated local runtime, while the feature is a proprietary cloud environment \u2014 adjacent but not the same thing."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "Remote Connections allow using Codex from another device to control an agent remotely, which is a connectivity/remoting feature. Access surfaces refer to the set of surfaces (terminal, IDE, web, cloud, mobile) where the agent can be used. Remote access is related but is not itself a definition of access surfaces \u2014 it describes a connectivity mode, not a surface enumeration or surface-specific integration."
+      }
+    ]
+  }
+}

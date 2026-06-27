@@ -1,0 +1,9 @@
+{
+  "key": "77160a1ddf65b2983858670e16638639dfac07118056924c92c4ca664fce3329",
+  "label": "scoutextract:checkpoint-rewind:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "",
+    "realizes": false
+  }
+}

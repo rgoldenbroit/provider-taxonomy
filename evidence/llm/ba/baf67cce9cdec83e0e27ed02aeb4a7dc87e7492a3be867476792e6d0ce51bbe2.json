@@ -1,0 +1,23 @@
+{
+  "key": "baf67cce9cdec83e0e27ed02aeb4a7dc87e7492a3be867476792e6d0ce51bbe2",
+  "label": "triage:google-antigravity-2-0-context-compaction",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding",
+      "agent-memory"
+    ],
+    "confidence": "medium",
+    "kind": "feature",
+    "parent_id": "google-antigravity-2-0",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "Context Compaction is a feature within Google's agentic coding product (Antigravity 2.0) that automatically manages the context window during long agent runs by compacting conversation history to stay within token limits. This is a partial capability within agentic-coding (it handles only one aspect \u2014 context window management) and also relates to agent-memory in that it governs how prior session content is retained and summarized across turns. The parent product is google-antigravity-2-0 based on provider (Google) and capability context.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "ide",
+      "cloud",
+      "api"
+    ]
+  }
+}

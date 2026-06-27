@@ -1,0 +1,21 @@
+{
+  "key": "a870866dd271f411016ef100f40036cd036d20d2ab0edcf7515465b35a414410",
+  "label": "matrixreconsider:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      }
+    ]
+  }
+}

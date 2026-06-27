@@ -352,12 +352,12 @@
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "description": "Not yet covered in the grounded catalog.",
-              "notes": "Reviewed → gap: A code-interpreter resource cap, not durable agent memory across sessions."
+              "implementation": "Memories",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/memories",
+              "last_verified": "2026-06-26",
+              "description": "Codex's durable, cross-session memory of user preferences and project context.",
+              "notes": "human-confirmed 2026-06-27"
             }
           }
         },
@@ -378,12 +378,12 @@
             },
             "google": {
               "offering": "Antigravity",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "description": "Not yet covered in the grounded catalog.",
-              "notes": ""
+              "implementation": "Context Compaction",
+              "status": "active",
+              "evidence_url": "https://adk.dev/context/compaction",
+              "last_verified": "2026-06-26",
+              "description": "ADK Context Compaction reduces running context as the agent works by summarizing older session history — instructions, inputs, and model responses.",
+              "notes": "human-confirmed 2026-06-27"
             },
             "openai": {
               "offering": "Codex",

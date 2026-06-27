@@ -1,0 +1,29 @@
+{
+  "key": "1484228792ecfb4a0a122e3832ea3d115bd6e22c36a7e723750a5d064fe14a8c",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Memories provides durable cross-session recall of user preferences and project context, which *informs* future outputs but does not directly let the user shape the system prompt, persona, or output style. It is a persistence/recall mechanism, not an output-customization surface. The capability calls for explicit control over system prompt or style; memory is an adjacent, passive influence."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "The Default Risk Policy detects and blocks dangerous *agent actions* (exfiltration, credential probing, destructive ops), which is a behavioral safety guardrail. Prompt-injection protection specifically means defending against malicious instructions embedded in external tool outputs or web content hijacking the agent's behavior. These are related security concerns but distinct: one targets action-level risk policy, the other targets instruction-manipulation attacks. Not a direct match."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "The feature 'Containers' with no description is too underspecified to confirm a direct realization. Dev-container integration specifically means running the agent inside a *defined* dev container (e.g., devcontainer.json) with a controlled runtime environment. A generic 'Containers' feature could mean isolated sandboxing, cloud execution environments, or something else entirely. Without evidence it refers to dev-container spec support, this cannot be confirmed."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": true,
+        "reason": "Mobile Access via QR Code directly adds a specific access surface \u2014 the ChatGPT mobile app \u2014 to the set of places where the agent can be used. This is a textbook example of an access-surface feature: it extends where (and how) the user can reach the agent."
+      }
+    ]
+  }
+}

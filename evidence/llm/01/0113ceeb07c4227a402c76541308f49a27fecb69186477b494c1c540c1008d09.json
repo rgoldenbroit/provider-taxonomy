@@ -1,0 +1,21 @@
+{
+  "key": "0113ceeb07c4227a402c76541308f49a27fecb69186477b494c1c540c1008d09",
+  "label": "triage:openai-codex-memories",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "agentic-coding",
+      "agent-memory"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "openai-codex",
+    "primary_capability_id": "agentic-coding",
+    "rationale": "Memories is a durable, cross-session memory feature within OpenAI Codex (the agentic coding product), storing user preferences and project context across sessions. It is a sub-feature of openai-codex that directly maps to the agent-memory capability. As a feature of agentic-coding it covers only a slice of that capability (the memory/persistence aspect), and it is also a genuine instance of the agent-memory capability in its own right.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal",
+      "cloud"
+    ]
+  }
+}

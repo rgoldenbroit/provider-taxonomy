@@ -1,0 +1,37 @@
+{
+  "key": "45326b0feaef2b5ee10b5d4e17083797df502a821dbd515a7765698a8f7b5b79",
+  "label": "matrixdisprove:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 42
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 172
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 11
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 201
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 28
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 241
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 264
+      }
+    ]
+  }
+}

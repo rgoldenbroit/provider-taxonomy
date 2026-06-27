@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.build_matrix import select_provider, _incumbent_feature  # noqa: E402
+from scripts.build_matrix import select_provider, _incumbent_feature, _grounded_or_review  # noqa: E402
 from taxonomy.vertex_client import StubLLM  # noqa: E402
 
 FEATS = [
@@ -90,3 +90,34 @@ def test_sticky_url_breaks_ties_but_name_is_enough():
 def test_sticky_vanished_incumbent_returns_none():
     # renamed/removed feature -> no match -> None, which lets the cell re-decide (a real change flows through).
     assert _incumbent_feature(_LINEUP, "Personas (was Custom Agents)", "") is None
+
+
+# --- C1: autonomously-discovered (review_status != confirmed) features land as needs_review ----------
+_CONFIRMED = {"name": "Hooks", "review_status": "confirmed", "status": "active",
+              "source": {"url": "https://x/hooks", "last_verified": "2026-06-27"}}
+_CANDIDATE = {"name": "Context Compaction", "review_status": "candidate", "status": "active",
+              "source": {"url": "https://x/compaction", "last_verified": "2026-06-27"}}
+
+
+def test_confirmed_feature_grounds():
+    cell, is_review = _grounded_or_review("Antigravity", _CONFIRMED, "root", {}, None)
+    assert is_review is False and cell["status"] == "active"
+
+
+def test_unconfirmed_candidate_is_needs_review():
+    # a scout discovery (review_status='candidate') with no human verdict -> needs_review, not active.
+    cell, is_review = _grounded_or_review("Antigravity", _CANDIDATE, "root", {}, None)
+    assert is_review is True and cell["status"] == "needs_review"
+
+
+def test_human_confirm_promotes_candidate():
+    dec = {"verdict": "confirm", "feature": "Context Compaction", "date": "2026-06-27"}
+    cell, is_review = _grounded_or_review("Antigravity", _CANDIDATE, "root", {}, dec)
+    assert is_review is False and cell["status"] == "active"
+
+
+def test_confirm_for_a_different_feature_does_not_promote():
+    # the verdict names another feature -> the candidate stays in review (the surfaced pick changed).
+    dec = {"verdict": "confirm", "feature": "Some Other Feature"}
+    _, is_review = _grounded_or_review("Antigravity", _CANDIDATE, "root", {}, dec)
+    assert is_review is True

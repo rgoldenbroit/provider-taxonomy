@@ -1,0 +1,37 @@
+{
+  "key": "8712d557bfc3c189243a8f0a9df7f2539c8affb1fd94e44e83e11a454a5d6672",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 37
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 64
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 6
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 107
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 189
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 82
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 126
+      }
+    ]
+  }
+}

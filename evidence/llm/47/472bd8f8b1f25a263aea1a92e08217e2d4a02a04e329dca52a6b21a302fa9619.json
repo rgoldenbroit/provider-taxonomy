@@ -1,0 +1,19 @@
+{
+  "key": "472bd8f8b1f25a263aea1a92e08217e2d4a02a04e329dca52a6b21a302fa9619",
+  "label": "matrixconfirm:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "realizes": false,
+        "reason": "Multi-Agent Teamwork describes orchestrating multiple agents collaboratively toward a high-level goal, which is a coordination/decomposition pattern \u2014 not the same as a single agent autonomously looping against a verifiable 'done' condition. The looping-until-completion criterion is not what is being described; instead, the feature is about inter-agent collaboration and task delegation, which is a sibling capability at best."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "REST API access is an integration/connectivity mechanism that allows programmatic calls to the agent, but it is not itself an access surface in the defined sense (terminal, IDE, web, cloud, mobile). A REST API is a protocol endpoint, not a named surface where end-users or developers interact with the agent directly. This is a category-adjacent feature, not a direct realization of the access-surfaces capability."
+      }
+    ]
+  }
+}

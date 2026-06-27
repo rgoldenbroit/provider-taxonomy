@@ -1,0 +1,9 @@
+{
+  "key": "b112ceb211ec7f138530757659b628d98768680a6b034beb6cfcb94f18f44cb4",
+  "label": "scoutextract:plan-mode:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "",
+    "realizes": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "c7f314a88fef47b6af936f20967c43c981b4f0df59d7b0e7bb694e2d6d2653b2",
+  "label": "matrixrepick:google",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 154
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 133
+      }
+    ]
+  }
+}

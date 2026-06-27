@@ -1,0 +1,9 @@
+{
+  "key": "36a616009edd38ba48d3b162fadd89d6920dabbd28ab079d449c3700ca5b7cbe",
+  "label": "scoutextract:prompt-caching:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "feature_name": "Prompt Caching",
+    "realizes": true
+  }
+}
