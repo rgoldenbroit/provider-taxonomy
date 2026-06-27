@@ -1,0 +1,29 @@
+{
+  "key": "6138aa14c86a63bf95b08f4bc60105aa30a5e26fd6aeda841378e16d8b6add94",
+  "label": "matrixreconsider:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "goal-directed-iteration",
+        "feature_index": 158
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 0
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 0
+      }
+    ]
+  }
+}

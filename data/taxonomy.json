@@ -33654,6 +33654,36 @@
         "last_verified": "2026-06-15",
         "confidence": "high"
       }
+    },
+    {
+      "id": "openai-codex-hooks",
+      "parent_id": "openai-codex",
+      "name": "Hooks",
+      "kind": "feature",
+      "provider": "OpenAI",
+      "capability_ids": [
+        "guardrails-safety"
+      ],
+      "primary_capability_id": "guardrails-safety",
+      "relation_within_capability": "partial",
+      "surfaces": [
+        "terminal"
+      ],
+      "status": "active",
+      "review_status": "confirmed",
+      "scope_note": "An extensibility framework that injects user scripts into Codex's agentic loop on lifecycle events \u2014 SessionStart, SubagentStart, PreToolUse, PermissionRequest, PostToolUse, PreCompact/PostCompact, UserPromptSubmit, SubagentStop, Stop \u2014 configured via hooks.json or config.toml. Enabled by default.",
+      "lifecycle": [
+        {
+          "date": "2026-06-15",
+          "event": "triaged",
+          "note": "Auto-triage \u2192 confirmed (grounding 1.00, classification 1.00). Hooks is an extensibility/policy framework embedded in OpenAI Codex's agentic loop that fires user-defined scripts at lifecycle events (PreToolUse, PermissionRequest, PostToolUse, etc.). Within guardrails-safety it co"
+        }
+      ],
+      "source": {
+        "url": "https://developers.openai.com/codex/hooks",
+        "last_verified": "2026-06-26",
+        "confidence": "high"
+      }
     }
   ],
   "categories": [

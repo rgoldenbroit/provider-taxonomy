@@ -323,6 +323,21 @@ def review_cell(product, feat, primary_root=None, root_label=None):
             "notes": f"{prov}; {note}" if prov else note}
 
 
+# A grounded incumbent cell points at one of these statuses (not a gap/review). Used by the sticky rule.
+GROUNDED_STATUSES = {"active", "preview", "sunset", "none"}
+
+
+def _incumbent_feature(feats, name, url):
+    """Find the catalog feature a previously-grounded cell pointed at — matched by name, url as tiebreak.
+    Returns None if it's gone (removed/renamed), which is what lets a real change re-decide the cell."""
+    matches = [f for f in feats if f["name"] == name]
+    if url:
+        for f in matches:
+            if (f.get("source") or {}).get("url", "") == url:
+                return f
+    return matches[0] if matches else None
+
+
 def main() -> int:
     cfg = settings()
     if cfg.offline:
@@ -337,6 +352,15 @@ def main() -> int:
         rdoc = yaml.safe_load(REVIEW_YAML.read_text(encoding="utf-8")) or {}
         for d in rdoc.get("decisions", []):
             reviews[(d["cap"], d["provider"])] = d
+    incumbent = {}   # (cap_id, provider) -> last published cell; the sticky rule keeps a still-valid one
+    if OUT.exists():
+        try:
+            for g in json.loads(OUT.read_text(encoding="utf-8")).get("capability_groups", []):
+                for c in g.get("capabilities", []):
+                    for pk, cell in (c.get("providers") or {}).items():
+                        incumbent[(c["id"], pk)] = cell
+        except (json.JSONDecodeError, KeyError):
+            incumbent = {}   # malformed prior matrix → re-decide everything (no false stability)
     llm = get_llm(cfg)
 
     chosen, featmap, diag = {}, {}, {}   # diag[(pkey, cap_id)] = why a cell ended up a gap
@@ -362,11 +386,18 @@ def main() -> int:
                 dec = reviews.get((cid, pkey))
                 f = chosen[pkey][cid]
                 total += 1
+                inc = incumbent.get((cid, pkey))
+                sticky = (_incumbent_feature(featmap[pkey], inc.get("implementation", ""), inc.get("evidence_url", ""))
+                          if inc and inc.get("status") in GROUNDED_STATUSES else None)
                 if dec and dec.get("verdict") == "reject":   # human override -> honest gap (even over a pick)
                     cell = cell_for(product, None, primary, root_label)
                     cell["notes"] = f"Reviewed → gap: {dec.get('reason', '').strip()}"
                     provs[pkey] = cell
                     mapping.append((cid, pkey, "— (reviewed)"))
+                elif sticky is not None:               # incumbent still in the catalog -> keep it, refreshed
+                    covered += 1
+                    provs[pkey] = cell_for(product, sticky, primary, root_label)
+                    mapping.append((cid, pkey, f"{sticky['name']} (sticky)"))
                 elif f:                                # confirmed pick — grounded
                     covered += 1
                     provs[pkey] = cell_for(product, f, primary, root_label)

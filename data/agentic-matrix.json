@@ -101,11 +101,11 @@
             },
             "openai": {
               "offering": "Codex",
-              "implementation": "unverified",
-              "status": "unverified",
-              "evidence_url": "",
-              "last_verified": "",
-              "description": "Not yet covered in the grounded catalog.",
+              "implementation": "Hooks",
+              "status": "active",
+              "evidence_url": "https://developers.openai.com/codex/hooks",
+              "last_verified": "2026-06-26",
+              "description": "An extensibility framework that injects user scripts into Codex's agentic loop on lifecycle events — SessionStart, SubagentStart, PreToolUse, PermissionRequest, PostToolUse, PreCompact/PostCompact, UserPromptSubmit, SubagentStop, Stop — configured via hooks.json or config.toml. Enabled by default.",
               "notes": ""
             }
           }
@@ -599,7 +599,7 @@
               "evidence_url": "https://antigravity.google/assets/docs/cli/cli-best-practices.md",
               "last_verified": "2026-06-26",
               "description": "The agent can run local test commands (e.g. unit tests, build scripts) after making code changes and iterate automatically.",
-              "notes": "human-confirmed 2026-06-27"
+              "notes": ""
             },
             "openai": {
               "offering": "Codex",

@@ -1,0 +1,21 @@
+{
+  "key": "a5234f7e85b4ce3268e0aa612f833c856d4b906f8c429f128097db8956bbf7be",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 42
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 256
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 203
+      }
+    ]
+  }
+}

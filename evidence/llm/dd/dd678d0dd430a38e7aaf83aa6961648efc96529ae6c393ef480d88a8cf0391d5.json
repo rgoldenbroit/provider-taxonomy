@@ -1,0 +1,29 @@
+{
+  "key": "dd678d0dd430a38e7aaf83aa6961648efc96529ae6c393ef480d88a8cf0391d5",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "Skills are reusable instruction sets that tell Codex *how to handle specific task types*, not mechanisms to shape a system prompt, persona, or output style. They are closer to task-routing or procedural knowledge templates, not output/style customization controls."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "The Default Risk Policy detects dangerous *agent actions* (exfiltration, credential probing, destructive commands) \u2014 it is a behavioral safety guardrail, not a defense against malicious instructions injected via tool outputs or web content. These are adjacent security concerns but not the same capability."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "Cloud Environments control what Codex installs and runs in remote/cloud tasks (with caching and secrets), but dev-container integration specifically means running the agent *inside a defined dev container spec* (e.g., devcontainer.json). Cloud Environments are a proprietary cloud runtime concept, not a dev-container standard integration."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": true,
+        "reason": "Mobile Access via QR Code directly establishes the ChatGPT mobile app as an access surface for Codex, which squarely falls under the capability of defining *where* the agent can be used. This is a specific, concrete instantiation of an access surface (mobile)."
+      }
+    ]
+  }
+}

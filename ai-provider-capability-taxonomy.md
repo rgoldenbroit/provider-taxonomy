@@ -90,7 +90,7 @@ official-docs-grounded catalog (`data/taxonomy.json`), then escalates to each ve
 doc pages and a domain-restricted live search, leaving a cell `unverified` only when no
 first-party doc supports it. The canonical data is `data/agentic-matrix.json`; this block renders it.
 
-7 capability groups, 37 neutral capabilities. **90/111 cells grounded, 21 honestly `unverified`** (no first-party doc — left
+7 capability groups, 37 neutral capabilities. **91/111 cells grounded, 20 honestly `unverified`** (no first-party doc — left
 blank, not guessed). Every grounded cell links the official page it was verified against.
 
 > Regenerate: `scripts/build_matrix.py` (re-ground, needs Vertex) → `scripts/render_matrix_md.py`
@@ -184,11 +184,11 @@ capability_groups:
         notes: ''
       openai:
         offering: Codex
-        implementation: unverified
-        status: unverified
-        evidence_url: ''
-        last_verified: ''
-        description: Not yet covered in the grounded catalog.
+        implementation: Hooks
+        status: active
+        evidence_url: https://developers.openai.com/codex/hooks
+        last_verified: '2026-06-26'
+        description: An extensibility framework that injects user scripts into Codex's agentic loop on lifecycle events — SessionStart, SubagentStart, PreToolUse, PermissionRequest, PostToolUse, PreCompact/PostCompact, UserPromptSubmit, SubagentStop, Stop — configured via hooks.json or config.toml. Enabled by default.
         notes: ''
   - id: output-customization
     name: Output & system-prompt customization
@@ -593,7 +593,7 @@ capability_groups:
         evidence_url: https://antigravity.google/assets/docs/cli/cli-best-practices.md
         last_verified: '2026-06-26'
         description: The agent can run local test commands (e.g. unit tests, build scripts) after making code changes and iterate automatically.
-        notes: human-confirmed 2026-06-27
+        notes: ''
       openai:
         offering: Codex
         implementation: The agent loop

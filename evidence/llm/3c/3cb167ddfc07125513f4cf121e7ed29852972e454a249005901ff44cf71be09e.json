@@ -1,0 +1,44 @@
+{
+  "key": "3cb167ddfc07125513f4cf121e7ed29852972e454a249005901ff44cf71be09e",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "output-customization",
+        "realizes": false,
+        "reason": "The feature configures *review scope and focus* (what the agent looks at during code review) via AGENTS.md and PR instructions. This is task/behavior scoping, not shaping a system prompt, persona, or output style. Adjacent to agent configuration, but does not directly realize output/persona customization."
+      },
+      {
+        "capability_id": "mcp-tool-governance",
+        "realizes": true,
+        "reason": "The feature explicitly allows toggling individual MCP tools on/off and refreshing tool definitions \u2014 this is a direct, specific implementation of controlling which MCP tools the agent may use (allow-listing/governance)."
+      },
+      {
+        "capability_id": "workflows",
+        "realizes": true,
+        "reason": "Agent Builder is described as a visual canvas for building multi-step agent workflows coordinating agents, tools, and control flow \u2014 this directly realizes the capability of defining repeatable, named multi-step task sequences."
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "realizes": false,
+        "reason": "The Guardrails feature covers input sanitization, output validation/redaction, and tool call checks \u2014 these are broadly safety/content controls. While input sanitization could overlap, there is no specific mention of defenses against malicious instructions injected via tool or web content. The feature is a category-adjacent safety mechanism, not a direct, specific prompt-injection defense."
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "realizes": false,
+        "reason": "The feature name 'Containers' alone provides no evidence that it means running the agent inside a *defined dev container / isolated runtime* in the dev-container spec sense. It is too vague to confirm a direct realization of dev-container integration without further description."
+      },
+      {
+        "capability_id": "audit-logging",
+        "realizes": true,
+        "reason": "The Workflow Tracing Dashboard records and displays prompts, tool calls, and hand-offs in a Traces dashboard \u2014 this is a direct implementation of a record of agent actions for review/compliance, which is exactly what audit logging/telemetry requires."
+      },
+      {
+        "capability_id": "access-surfaces",
+        "realizes": false,
+        "reason": "Remote Connections describes accessing Codex from another device or machine \u2014 this is a remote access mechanism/transport layer, not a definition of the distinct surfaces (terminal, IDE, web, cloud, mobile) where the agent can be used. It is adjacent to access surfaces but does not enumerate or govern which surfaces are supported."
+      }
+    ]
+  }
+}

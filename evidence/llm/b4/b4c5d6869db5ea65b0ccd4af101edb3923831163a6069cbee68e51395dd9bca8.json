@@ -1,0 +1,34 @@
+{
+  "key": "b4c5d6869db5ea65b0ccd4af101edb3923831163a6069cbee68e51395dd9bca8",
+  "label": "matrixconfirm:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confirmations": [
+      {
+        "capability_id": "persistent-agent-memory",
+        "realizes": false,
+        "reason": "The 'Sessions' feature persists multi-turn conversation state within a session controlled by the application, but this is session-scoped state management, not durable agent memory that persists across independent sessions or turns in the way an agent 'remembers' things long-term. It is closer to stateful conversation handling than a persistent memory store the agent draws upon across separate interactions."
+      },
+      {
+        "capability_id": "prompt-caching",
+        "realizes": false,
+        "reason": "'Compaction' addresses context window management by summarizing or truncating accumulated history when limits are approached \u2014 this is context COMPACTION, not context CACHING. Caching reuses stored prompt prefixes to reduce latency/cost; compaction discards or summarizes old context to make room. These are categorically different mechanisms."
+      },
+      {
+        "capability_id": "plan-mode",
+        "realizes": false,
+        "reason": "The 'Approval Policy' controls when the agent must pause and seek permission before crossing sandbox boundaries (e.g., network/file system access). This is a sandboxing/permission gating mechanism, not a plan-then-execute mode where the agent produces a reviewable plan before making any edits. The capability requires an explicit planning step for review; the feature is about access control checkpoints."
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "realizes": false,
+        "reason": "'Organization and project-level access scoping' is an authorization/access-control feature that limits who can use which resources. It does not track, report, or cap token spend or usage. These are adjacent administrative features but access scoping is not cost or usage tracking."
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "realizes": false,
+        "reason": "Without a detailed description, 'Saved state' is ambiguous, but even taken at face value it most naturally refers to persisting session or application state rather than a checkpoint-and-rewind mechanism that lets users roll back agent changes to a prior snapshot. The capability requires explicit rollback/undo semantics; 'Saved state' alone does not imply that."
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "key": "d794cf840c1d6daa7fb39e37ec4ee16bff78bde4168933fddcd0b542ad9ff69c",
+  "label": "matrixdisprove:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 124
+      },
+      {
+        "capability_id": "persistent-agent-memory",
+        "feature_index": 267
+      },
+      {
+        "capability_id": "prompt-caching",
+        "feature_index": 171
+      },
+      {
+        "capability_id": "plan-mode",
+        "feature_index": 11
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 200
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 28
+      },
+      {
+        "capability_id": "cost-usage-tracking",
+        "feature_index": 240
+      },
+      {
+        "capability_id": "checkpoint-rewind",
+        "feature_index": 263
+      }
+    ]
+  }
+}

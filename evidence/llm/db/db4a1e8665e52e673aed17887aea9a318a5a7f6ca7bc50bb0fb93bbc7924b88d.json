@@ -1,0 +1,12 @@
+{
+  "key": "db4a1e8665e52e673aed17887aea9a318a5a7f6ca7bc50bb0fb93bbc7924b88d",
+  "label": "judge:openai-codex-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "confidence": "high",
+    "found_quote": "Hooks are an extensibility framework for Codex. They allow you to inject your own scripts into the agentic loop... Hooks are enabled by default. If you need to turn them off in config.toml, set: [features] hooks = false... Codex discovers hooks next to active config layers in either of these forms: hooks.json inline [hooks] tables inside config.toml... PreToolUse, PermissionRequest, PostToolUse, PreCompact, PostCompact, UserPromptSubmit, SubagentStop, and Stop run at turn scope. SessionStart and SubagentStart run at thread or subagent-start scope.",
+    "lifecycle_status": "active",
+    "rationale": "The page fully substantiates the claim. It describes Hooks as \"an extensibility framework for Codex\" that injects user scripts into the agentic loop. It explicitly lists all the lifecycle events named in the claim: SessionStart, SubagentStart, PreToolUse, PermissionRequest, PostToolUse, PreCompact/PostCompact, UserPromptSubmit, SubagentStop, and Stop. It confirms configuration via hooks.json or config.toml. It confirms hooks are \"enabled by default\" (with instructions to set hooks = false in config.toml to disable them). The page is on the official OpenAI Codex developer docs site and presents this as a currently active, generally available feature.",
+    "supported": true
+  }
+}

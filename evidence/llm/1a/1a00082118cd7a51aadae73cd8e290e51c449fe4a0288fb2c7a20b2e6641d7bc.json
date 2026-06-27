@@ -1,0 +1,20 @@
+{
+  "key": "1a00082118cd7a51aadae73cd8e290e51c449fe4a0288fb2c7a20b2e6641d7bc",
+  "label": "triage:openai-codex-hooks",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "capability_ids": [
+      "guardrails-safety",
+      "agentic-coding"
+    ],
+    "confidence": "high",
+    "kind": "feature",
+    "parent_id": "openai-codex",
+    "primary_capability_id": "guardrails-safety",
+    "rationale": "Hooks is an extensibility/policy framework embedded in OpenAI Codex's agentic loop that fires user-defined scripts at lifecycle events (PreToolUse, PermissionRequest, PostToolUse, etc.). Within guardrails-safety it covers only a slice \u2014 it is a hook/interception mechanism enabling custom policy enforcement, validation, and blocking at tool boundaries, but it is not a full guardrails system (no built-in classifiers, no output filtering, no RBAC). It also lives squarely within agentic-coding (Codex CLI). It is a feature/sub-product of openai-codex, configured via hooks.json or config.toml and enabled by default.",
+    "relation_within_capability": "partial",
+    "surfaces": [
+      "terminal"
+    ]
+  }
+}

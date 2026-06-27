@@ -1,0 +1,25 @@
+{
+  "key": "8ae8fed5573775c03cfe4fc4a838d8c7853ce5c07acbfd5b3889e90ed10b30b8",
+  "label": "matrixrepick:openai",
+  "model": "claude-sonnet-4-6",
+  "value": {
+    "repicks": [
+      {
+        "capability_id": "output-customization",
+        "feature_index": 124
+      },
+      {
+        "capability_id": "prompt-injection-protection",
+        "feature_index": 49
+      },
+      {
+        "capability_id": "dev-container-integration",
+        "feature_index": 28
+      },
+      {
+        "capability_id": "access-surfaces",
+        "feature_index": 85
+      }
+    ]
+  }
+}
